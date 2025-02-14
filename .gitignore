@@ -39,3 +39,4 @@ yarn.lock
 .vite/deps/react.js.map
 
 
+.vercel
