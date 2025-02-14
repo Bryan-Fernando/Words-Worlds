@@ -1,0 +1,183 @@
+import React, { useState } from 'react';
+
+import styles from './pagina41.module.css';
+
+import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import pagina41_imagem1 from '../assets/images/pagina41_imagem1.webp';
+import pagina41_imagem2 from '../assets/images/pagina41_imagem2.webp';
+
+import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
+import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
+import pg41_audio1e from '../assets/audios/pg41_audio1e.mp3';
+import pg41_audio1p from '../assets/audios/pg41_audio1p.mp3';
+import Pagina41_audioA from '../assets/audios/pagina41_audioA.mp3';
+import Pagina41_audioB from '../assets/audios/pagina41_audioB.mp3';
+import Pagina41_audioC from '../assets/audios/pagina41_audioC.mp3';
+import Pagina41_audioD from '../assets/audios/pagina41_audioD.mp3';
+import Pagina41_audioE from '../assets/audios/pagina41_audioE.mp3';
+import Pagina41_audioF from '../assets/audios/pagina41_audioF.mp3';
+import Pagina41_audioG from '../assets/audios/pagina41_audioG.mp3';
+import Pagina41_audioH from '../assets/audios/pagina41_audioH.mp3';
+import Pagina41_audioI from '../assets/audios/pagina41_audioI.mp3';
+import Pagina41_audioJ from '../assets/audios/pagina41_audioJ.mp3';
+
+const audioFiles = [
+    Pagina41_audioA,
+    Pagina41_audioB,
+    Pagina41_audioC,
+    Pagina41_audioD,
+    Pagina41_audioE,
+    Pagina41_audioF,
+    Pagina41_audioG,
+    Pagina41_audioH,
+    Pagina41_audioI,
+    Pagina41_audioJ
+];
+
+const Pagina41 = () => {
+    const [inputValues, setInputValues] = useState(Array(10).fill(''));
+    const [results, setResults] = useState(Array(10).fill(null));
+    const [isSpeedReduced, setIsSpeedReduced] = useState(Array(10).fill(false));
+
+    const correctAnswers = [
+        'is', 'go', 'meets', 'plays', 'is',
+        'drive', 'rises', 'sing', 'is', 'are'
+    ];
+
+    const handleCheckClick = () => {
+        const newResults = inputValues.map((value, index) => value.toLowerCase() === correctAnswers[index]);
+        setResults(newResults);
+    };
+
+    const handleInputChange = (value, index) => {
+        const newValues = [...inputValues];
+        newValues[index] = value;
+        setInputValues(newValues);
+    };
+
+    const playHeaderAudio = (audioFile) => {
+        const audio = new Audio(audioFile);
+        audio.play();
+    };
+
+
+    const playAudio = (index) => {
+        const audio = new Audio(audioFiles[index]);
+        audio.playbackRate = isSpeedReduced[index] ? 0.60 : 1;
+        audio.play();
+    };
+
+    const toggleSpeedReduction = (index) => {
+        const newSpeedState = [...isSpeedReduced];
+        newSpeedState[index] = !newSpeedState[index];
+        setIsSpeedReduced(newSpeedState);
+    };
+
+    return (
+        <div className={styles.pg41Container}>
+            <h1 className={styles.pg41Title} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                Learning Language Exercises
+                <span>
+                    <img
+                        src={eng_audio_icon}
+                        alt="English Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(global_learning_le_e)}
+                    />
+                    <img
+                        src={ptbr_audio_icon}
+                        alt="Portuguese Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(global_learning_le_p)}
+                    />
+                </span>
+            </h1>
+
+            <h2 className={styles.pg41ExerciseTitle} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+                Fill in the blanks in the Present Simple with the verbs in parentheses.
+                <span>
+                    <img
+                        src={eng_audio_icon}
+                        alt="English Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(pg41_audio1e)}
+                    />
+                    <img
+                        src={ptbr_audio_icon}
+                        alt="Portuguese Audio"
+                        style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                        onClick={() => playHeaderAudio(pg41_audio1p)}
+                    />
+                </span>
+            </h2>
+
+            <div className={styles.pg41QuestionsContainer}>
+                {[
+                    "My favorite color ____ blue. (be)",
+                    "They ____ to the movies every Friday. (go)",
+                    "She ____ her friends at the mall on weekends. (meet)",
+                    "He ____ basketball every morning. (play)",
+                    "The dog ____ very friendly. (be)",
+                    "We ____ to school. (drive)",
+                    "The sun ____ in the east. (rise)",
+                    "I ____ in the choir at church. (sing)",
+                    "It ____ rainy today. (be)",
+                    "My parents ____ doctors. (be)"
+                ].map((question, index) => {
+                    const parts = question.split('____');
+                    return (
+                        <div key={index} className={styles.pg41Question}>
+                            <span>
+                                <em>
+                                    <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
+                                </em>
+                            </span>
+                            <div className={styles.pg41InputContainer}>
+                                <input
+                                    type="text"
+                                    value={inputValues[index]}
+                                    onChange={(e) => handleInputChange(e.target.value, index)}
+                                    className={styles.pg41InputBox}
+                                />
+                                {results[index] !== null && (
+                                    <img
+                                        src={results[index] ? correct_icon : wrong_icon}
+                                        alt={results[index] ? "Correct" : "Incorrect"}
+                                        className={styles.pg41CheckmarkImage}
+                                    />
+                                )}
+                            </div>
+                            <span><em>{parts[1]}</em></span>
+                            <div className={styles.pg41IconsContainer}>
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Audio Icon"
+                                    className={styles.pg41AdditionalIcon}
+                                    onClick={() => playAudio(index)}
+                                />
+                                <img
+                                    src={slow_audio_icon}
+                                    alt="Volume Reduced Icon"
+                                    className={`${styles.pg41AdditionalIcon} ${isSpeedReduced[index] ? styles.pg41Pulsing : ''}`}
+                                    onClick={() => toggleSpeedReduction(index)}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
+            <button className={styles.pg41CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            <div className={styles.pg41ImagesContainer}>
+                <img src={pagina41_imagem1} alt="Basketball" className={styles.pg41ImageBasketball} />
+                <img src={pagina41_imagem2} alt="Choir" className={styles.pg41ImageChoir} />
+            </div>
+        </div>
+    );
+};
+
+export default Pagina41;

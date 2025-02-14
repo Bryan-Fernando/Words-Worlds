@@ -1,0 +1,157 @@
+.pg31Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg31Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg31HeaderH2 {
+    color: black;
+}
+
+.pg31Main {
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.pg31TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.pg31StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+    table-layout: fixed;
+}
+
+.pg31StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.pg31StyledTable th,
+.pg31StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.pg31StyledTable tbody tr {
+    background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
+}
+
+.pg31StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.pg31InputCell {
+    width: 100%;
+    height: calc(8vh * 0.85);
+    border: none;
+    padding: .8rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-size: 1.8rem;
+}
+
+.pg31InputCell:focus {
+    outline: none;
+    border: .1rem solid #F2F2F2;
+    background-color: white;
+}
+
+.pg31InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.pg31Sujeito {
+    width: calc(10vw * 0.85);
+}
+
+.pg31verbo_auxiliar {
+    width: calc(10vw * 0.85)
+}
+
+.pg31Adverbio {
+    width: calc(12vw * 0.85)
+}
+
+.pg31Verbo {
+    width: calc(12vw * 0.85)
+}
+
+.pg31ObjetivoComplemento {
+    width: calc(18vw * 0.85)
+}
+
+.pg31Traducao {
+    width: (18vw * 0.85);
+}
+
+.pg31Icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg31Icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 42%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .pg31StyledTable {
+        margin-bottom: 15%;
+    }
+
+    .pg31StyledTable th,
+    .pg31StyledTable td {
+        padding: .5rem;
+
+    }
+
+    .pg31InputCell {
+        height: calc(6vw * 0.85);
+    }
+}

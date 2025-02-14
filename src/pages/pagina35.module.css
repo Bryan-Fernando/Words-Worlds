@@ -1,0 +1,157 @@
+.pg35Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pg35Header {
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.pg35HeaderH2 {
+    color: black;
+}
+
+.pg35Main {
+    width: 100%;
+    text-align: center;
+}
+
+/* Este é um comentário */
+
+.pg35TableHeader {
+    background-color: #A61C28;
+    color: white;
+    text-align: center !important;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: .5rem;
+    font-size: 2rem;
+}
+
+.pg35StyledTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+    table-layout: fixed;
+}
+
+.pg35StyledTable thead tr {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+
+.pg35StyledTable th,
+.pg35StyledTable td {
+    border: .1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.pg35StyledTable tbody tr {
+    background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
+}
+
+.pg35StyledTable tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.pg35InputCell {
+    width: 100%;
+    height: calc(8vh * 0.85);
+    border: none;
+    padding: .8rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-size: 1.8rem;
+}
+
+.pg35InputCell:focus {
+    outline: none;
+    border: .1rem solid #F2F2F2;
+    background-color: white;
+}
+
+.pg35InputCell::-webkit-scrollbar {
+    display: none;
+}
+
+.pg35Sujeito {
+    width: calc(10vw * 0.85);
+}
+
+.pg35verbo_auxiliar {
+    width: calc(10vw * 0.85)
+}
+
+.pg35Adverbio {
+    width: calc(12vw * 0.85)
+}
+
+.pg35Verbo {
+    width: calc(12vw * 0.85)
+}
+
+.pg35ObjetivoComplemento {
+    width: calc(18vw * 0.85)
+}
+
+.pg35Traducao {
+    width: (18vw * 0.85);
+}
+
+.pg35Icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.pg35Icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 42%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .pg35StyledTable {
+        margin-bottom: 15%;
+    }
+
+    .pg35StyledTable th,
+    .pg35StyledTable td {
+        padding: .5rem;
+
+    }
+
+    .pg35InputCell {
+        height: calc(6vw * 0.85);
+    }
+}

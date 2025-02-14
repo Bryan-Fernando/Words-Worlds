@@ -1,0 +1,139 @@
+.page4__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page4__table {
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+
+.page4__table-header,
+.page4__table-cell {
+    border: 0.1rem solid #ddd;
+    padding: 1.2rem;
+    text-align: center;
+    width: 0;
+}
+
+.page4__table-header {
+    background-color: #e7f3f9;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black !important;
+}
+
+.page4__table-cell {
+    background-color: #f9fbfc;
+    font-size: 2.5rem;
+}
+
+.page4__table tr:nth-child(even) td {
+    background-color: #f3f8fc;
+    font-size: 2.5rem;
+}
+
+.page4__divider {
+    border: 0.3rem solid #b30000;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.page4__table-highlight {
+    font-weight: bold;
+    color: #b30000;
+}
+
+.page4__header {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    color: #a61c28;
+}
+
+.page4__header-title,
+.page4__header-subtitle {
+    color: inherit;
+}
+
+.page4__main {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.page4__aside {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+.page4__aside-affirmative,
+.page4__aside-negative {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.page4__aside-title {
+    font-size: 3rem;
+    color: #a61c28;
+}
+
+.page4__clickable {
+    cursor: pointer;
+}
+
+.page4__icon {
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page4__icon:hover {
+    transform: scale(1.1);
+}
+
+.page4__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page4__icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1080px) {
+    .page4__table-header,
+    .page4__table-cell {
+        font-size: 2vw;
+        padding: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page4__table-header,
+    .page4__table-cell {
+        padding: 0.8rem;
+    }
+
+    .page4__divider {
+        margin: 0.5rem 0;
+    }
+}

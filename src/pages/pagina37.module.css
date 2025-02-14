@@ -1,0 +1,139 @@
+.pg37Container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 20px;
+}
+
+.pg37Header {
+    width: 100%;
+    text-align: left;
+}
+
+.pg37Title {
+    color: #a61c28;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.pg37Instruction {
+    color: #a61c28;
+    font-weight: bold;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.pg37Main {
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pg37ListaRespostas {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.pg37RespostaItem {
+    display: flex;
+    align-items: center;
+    gap: 1%;
+    padding-bottom: 3%;
+    border-radius: 5px;
+    color: black;
+    width: 100%;
+}
+
+.pg37Input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(19, 19, 19, 0.5);
+}
+
+.pg37StatusCorreto {
+    color: green;
+    font-weight: bold;
+}
+
+.pg37StatusErrado {
+    color: red;
+    font-weight: bold;
+}
+
+.pg37AudioIcon {
+    width: auto;
+    height: calc(8px + 1.9vw);
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.pg37Volumeng_audio_icon {
+    width: auto;
+    height: calc(8px + 1.9vw);
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.pg37Status {
+    width: auto;
+    height: calc(8px + 1.9vw);
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.pg37Input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    background-color: #f9f9f9;
+    color: #000;
+    font-weight: bold;
+    max-width: 73%;
+    height: auto;
+}
+
+.pg37PercentualAcertos {
+    width: 30%;
+    height: 26.1%;
+    border: 2px dotted #a61c28;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #a61c28;
+    border-radius: 8px;
+    margin-left: 1%;
+    font-size: 3rem;
+}
+
+@media (max-width: 1440px) {
+
+    .pg37Main {
+        flex-direction: column;
+    }
+
+    .pg37ListaRespostas {
+        width: 100%;
+    }
+
+    .pg37PercentualAcertos {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .pg37Instruction {
+        display: block;
+    }
+
+    .pg37SpeedContainer {
+        display: inline-block;
+    }
+
+    .pg37Volumeng_audio_icon {
+        vertical-align: middle;
+    }
+}

@@ -1,0 +1,217 @@
+.page__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page__header {
+    width: 100%;
+    text-align: left;
+    color: #a61c28;
+}
+
+.page__header__subtitle {
+    color: black;
+}
+
+.page__main {
+    width: 100%;
+    text-align: center;
+}
+
+.page__aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page__table__header {
+    background-color: #a61c28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.page__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5%;
+    table-layout: fixed;
+}
+
+.page__table thead tr {
+    background-color: #888a8c;
+    color: white;
+    font-weight: bold;
+}
+
+.page__table th,
+.page__table td {
+    border: 0.1rem solid #a61c28;
+    padding: 1rem;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+}
+
+.page__table tbody tr {
+    background-color: white;
+    max-width: 100%;
+    height: calc(7vw * 0.85);
+}
+
+.page__table tbody tr:nth-child(even) {
+    background-color: white;
+}
+
+.page__table__input {
+    width: 100%;
+    height: calc(8vh * 0.85);
+    border: none;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    font-size: 1.8rem;
+}
+
+.page__table__input:focus {
+    outline: none;
+    border: 0.1rem solid #f2f2f2;
+    background-color: white;
+}
+
+.page__table__input::-webkit-scrollbar {
+    display: none;
+}
+
+.page__table__subject {
+    width: calc(10vw * 0.85);
+}
+
+.page__table__auxiliary {
+    width: calc(10vw * 0.85);
+}
+
+.page__table__adverb {
+    width: calc(12vw * 0.85);
+}
+
+.page__table__verb {
+    width: calc(12vw * 0.85);
+}
+
+.page__table__complement {
+    width: calc(18vw * 0.85);
+}
+
+.page__table__translation {
+    width: calc(18vw * 0.85);
+}
+
+.page__aside__notes1 {
+    width: 50%;
+    height: 4.5rem;
+    border: 0.4rem solid #a61c28;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    background-color: #a61c28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.page__aside__notes1 p {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.page__aside__img {
+    height: calc(10px + 0.8vw);
+    width: 2rem;
+    padding-right: 0.5rem;
+}
+
+.page__aside__notes2 {
+    width: 50%;
+    height: 100%;
+    border: 0.4rem solid #a61c28;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+    background-color: white;
+    text-align: left;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.page__aside__notes2 p {
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.page__icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 0.3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon:hover {
+    transform: scale(1.2);
+}
+
+.page__icon__left {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    position: relative;
+    right: 42%;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page__icon__left:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .page__table {
+        margin-bottom: 15%;
+    }
+
+    .page__table th,
+    .page__table td {
+        padding: 0.5rem;
+    }
+
+    .page__table__input {
+        height: calc(6vw * 0.85);
+        padding: 0;
+    }
+
+    .page__aside__notes1,
+    .page__aside__notes2 {
+        width: 100%;
+    }
+
+    .page__aside__notes1 p,
+    .page__aside__notes2 p {
+        padding: 1rem;
+        font-size: 2.75rem;
+    }
+}

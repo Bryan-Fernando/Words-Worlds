@@ -1,0 +1,169 @@
+.pg36Container {
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem; 
+}
+
+.pg36Header {
+    width: 100%;
+}
+
+.pg36MainContainer {
+    flex: 3; 
+    display: flex;
+    flex-direction: column;
+}
+
+.pg36MainAsideContainer {
+    display: flex; 
+    justify-content: space-between; 
+    gap: 2rem;
+}
+
+.pg36pageTitle,
+.pg36questionText {
+    text-align: left;
+    padding-left: 0;
+    margin: 0; 
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.pg36fraseContainer {
+    margin-bottom: 1rem;
+}
+
+.pg36frase {
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.pg36word {
+    font-size: 1.5rem;
+    background-color: #d3d3d3;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.pg36word.pg36disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.pg36inputFrase {
+    display: flex;
+    padding: 0.25rem; 
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 0.25rem;
+    min-height: 4rem; 
+    width: 100%; 
+    background-color: whitesmoke;
+    overflow-x: auto;
+    margin-top: 2%;
+}
+
+.pg36chip {
+    font-size: 1.5rem;
+    display: inline-flex; 
+    background-color: #d3d3d3;
+    padding: 0.5rem 0.75rem; 
+    border-radius: 0.5rem;
+    font-weight: bold; 
+    color: black; 
+    margin-right: 0.5rem;
+    min-width: 1rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.pg36AsideContainer {
+    flex: 1; 
+    display: block;
+}
+
+.pg36checkButton {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    font-size: 2rem;
+    width: 25%;
+}
+
+.pg36checkButton:hover {
+    background-color: #821a22;
+}
+
+.pg36tabelaAfirmativaContainer,
+.pg36tabelaNegativaContainer {
+    display: block;
+    width: 37rem;
+    margin-left: auto;
+}
+
+.pg36tabelaNegativaContainer {
+    margin-top: 5.8rem;
+}
+
+.pg36tableHeaderAfirmativa,
+.pg36tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg36styledTableAfirmativa,
+.pg36styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg36styledTableAfirmativa th,
+.pg36styledTableNegativa th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}
+
+.pg36ImagensContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 37rem;
+    margin-top: 4.2rem;
+    margin-left: auto;
+}
+
+.pg36Imagem {
+    border-radius: 5%;
+}
+
+.pg36Icon {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .pg36Icon:hover {
+    transform: scale(1.2);
+  }
