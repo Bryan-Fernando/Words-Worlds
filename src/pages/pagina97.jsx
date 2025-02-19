@@ -130,34 +130,34 @@ const Pagina97 = () => {
                 <div className={styles.pg97tabelaAfirmativaContainer}>
                     <div className={styles.pg97tableHeaderAfirmativa}>AFIRMATIVA</div>
                     <table className={styles.pg97styledTableAfirmativa}>
-                        <thead>
+                        <thead className={styles.pg97Thead}>
                             <tr className={styles.pg97celulatable}>
+                                <th>Introdução</th>
                                 <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th>Adverb</th>
+                                <th>Verbo <br /> Auxiliar</th>
+                                <th>Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
-
                 <div className={styles.pg97PrimeirasQuestoes}>
                     <div className={styles.pg97ContainerQuestoes}>
                         <div className={styles.pg97Questions1}>
                             <p className={styles.pg97ATituloQuestion}>Complete the sentences with the correct form of the verbs in parentheses:
-                            <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles.pg97HeaderIcon}
-                        onClick={() => playAudio("pg97_audio1e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles.pg97HeaderIcon}
-                        onClick={() => playAudio("pg97_audio1p")}
-                    />
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles.pg97HeaderIcon}
+                                    onClick={() => playAudio("pg97_audio1e")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese audio"
+                                    className={styles.pg97HeaderIcon}
+                                    onClick={() => playAudio("pg97_audio1p")}
+                                />
                             </p>
                             <p className={styles.pg97NumeroQuestion}>1.</p>
                             {["He ____  (work) at a restaurant as a waiter.",
@@ -272,18 +272,17 @@ const Pagina97 = () => {
                         <div className={styles.pg97ContainerImagem}> <img className={styles.pg97imagem} src={Pagina97_imagem2} alt="" /></div>
                     </div>
                 </div>
-                <div className={styles.pg97tabelaInterrogativaContainer}>
-                    <div className={styles.pg97tableHeaderInterrogativa}>INTERROGATIVA</div>
-                    <table className={styles.pg97styledTableInterrogativa}>
-                        <thead>
-                            <tr className={styles.pg97celulatable}>
-                                <th>verbo_auxiliar</th>
+                <div className={styles["page97__table-interrogative-container"]}>
+                    <div className={styles["page97__table-header-interrogative"]}>INTERROGATIVA</div>
+                    <table className={styles["page97__styled-table-interrogative"]}>
+                        <thead className={styles["page97__thead"]}>
+                            <tr className={styles["page97__table-row"]}>
+                                <th>Palavras <br /> Interrogativas</th>
+                                <th>Verbo <br /> Auxiliar</th>
                                 <th>Sujeito</th>
-                                <th>
-                                    <span style={{ color: 'red' }}>Not</span> <br /> Adverb
-                                </th>
+                                <th><span className={styles["highlight"]}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>

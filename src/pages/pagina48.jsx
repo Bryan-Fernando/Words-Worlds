@@ -69,12 +69,10 @@ const Pagina48 = () => {
                     {/* Primeiro bloco de exemplo */}
                     <div className={styles.pg48Exemplo}>
                         <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
-                        <div className={styles.pg48ContainerAsidetexto}>
+                        <div className={styles.pg48ExemploImg}>
                             <div className={styles.pg48AsideTexto1} onClick={() => playAudio('pg48_audio1e')} style={{ cursor: 'pointer' }}>
                                 <p>John: I love this city. <strong>Its</strong> architecture is stunning.</p>
                             </div>
-                        </div>
-                        <div className={styles.pg48ExemploImg}>
                             <img
                                 className={styles.pg48AsideImg1}
                                 src={pagina48_imagem1}
@@ -92,15 +90,13 @@ const Pagina48 = () => {
                     {/* Segundo bloco de exemplo */}
                     <div className={styles.pg48Exemplo}>
                         <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
-                        <div className={styles.pg48ContainerAsidetexto}>
+                        <div className={styles.pg48ExemploImg}>
                             <div className={styles.pg48AsideTexto2} onClick={() => playAudio('pg48_audio2e')} style={{ cursor: 'pointer' }}>
                                 <p>Paulo: Are these <strong>our</strong> books?</p>
                             </div>
                             <div className={styles.pg48AsideTexto3} onClick={() => playAudio('pg48_audio3e')} style={{ cursor: 'pointer' }}>
                                 <p>Maria: No, they aren’t. <strong>Our</strong> books are on the teacher’s desk.</p>
                             </div>
-                        </div>
-                        <div className={styles.pg48ExemploImg}>
                             <img
                                 className={styles.pg48AsideImg2}
                                 src={pagina48_imagem2}

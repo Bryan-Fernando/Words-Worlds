@@ -118,15 +118,13 @@ const Pagina45 = () => {
                 <aside className={styles.pg45Aside}>
                     <div className={styles.pg45Exemplo}>
                         <p> <strong>Exemplo:</strong></p>
-                        <div className={styles.pg45ContainerAsidetexto}>
+                        <div className={styles.pg45ExemploImg}>
                             <div className={styles.pg45AsideTexto1} onClick={() => playAudio('pg45_audio2e')} style={{ cursor: 'pointer' }}>
                                 <p>Laura: I know, it's hard to concentrate with <br /> all that noise. I'll talk to them about it.</p>
                             </div>
                             <div className={styles.pg45AsideTexto2} onClick={() => playAudio('pg45_audio1e')} style={{ cursor: 'pointer' }}>
                                 <p>Mark: The neighbors are having a party. <br /> <strong>Their</strong> music is so loud!</p>
                             </div>
-                        </div>
-                        <div className={styles.pg45ExemploImg}>
                             <img className={styles.pg45AsideImg1} src={pagina45_imagem1} alt="" />
                             <img className={styles.pg45AsideImg2} src={pagina45_imagem2} alt="" />
                         </div>

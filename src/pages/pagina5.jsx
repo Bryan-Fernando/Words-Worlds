@@ -201,8 +201,8 @@ const Pagina5 = () => {
                         </table>
                     </div>
                 </main>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 
 };

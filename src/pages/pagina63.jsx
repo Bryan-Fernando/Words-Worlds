@@ -102,37 +102,37 @@ const Pagina63 = () => {
                             alt="Relógio com setas indicando o horário"
                             className={styles["page63__image"]}
                         />
-                        <p className={styles["page63__text"]} style={{ top: '24%', right: '100%' }} onClick={() => playAudio('pg62_audio3')}>
+                        <p className={styles["page63__text"]} style={{ top: '24%', right: '86%' }} onClick={() => playAudio('pg62_audio3')}>
                             It’s five <span className={styles["page63__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '33%', right: '100%' }} onClick={() => playAudio('pg62_audio4')}>
+                        <p className={styles["page63__text"]} style={{ top: '33%', right: '86%' }} onClick={() => playAudio('pg62_audio4')}>
                             It’s ten <span className={styles["page63__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '46%', right: '100%' }} onClick={() => playAudio('pg62_audio5')}>
+                        <p className={styles["page63__text"]} style={{ top: '46%', right: '86%' }} onClick={() => playAudio('pg62_audio5')}>
                             It’s (a) quarter <span className={styles["page63__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '58%', right: '100%' }} onClick={() => playAudio('pg62_audio6')}>
+                        <p className={styles["page63__text"]} style={{ top: '58%', right: '86%' }} onClick={() => playAudio('pg62_audio6')}>
                             It’s twenty <span className={styles["page63__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '68%', right: '100%' }} onClick={() => playAudio('pg62_audio7')}>
+                        <p className={styles["page63__text"]} style={{ top: '68%', right: '86%' }} onClick={() => playAudio('pg62_audio7')}>
                             It’s twenty-five <span className={styles["page63__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '24%', left: '100%' }} onClick={() => playAudio('pg62_audio8')}>
+                        <p className={styles["page63__text"]} style={{ top: '24%', left: '86%' }} onClick={() => playAudio('pg62_audio8')}>
                             It’s five <span className={styles["page63__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '34%', left: '100%' }} onClick={() => playAudio('pg62_audio9')}>
+                        <p className={styles["page63__text"]} style={{ top: '34%', left: '86%' }} onClick={() => playAudio('pg62_audio9')}>
                             It’s ten <span className={styles["page63__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '46%', left: '100%' }} onClick={() => playAudio('pg62_audio10')}>
+                        <p className={styles["page63__text"]} style={{ top: '46%', left: '86%' }} onClick={() => playAudio('pg62_audio10')}>
                             It’s (a) quarter <span className={styles["page63__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '59%', left: '100%' }} onClick={() => playAudio('pg62_audio11')}>
+                        <p className={styles["page63__text"]} style={{ top: '59%', left: '86%' }} onClick={() => playAudio('pg62_audio11')}>
                             It’s twenty <span className={styles["page63__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '68%', left: '100%' }} onClick={() => playAudio('pg62_audio12')}>
+                        <p className={styles["page63__text"]} style={{ top: '68%', left: '86%' }} onClick={() => playAudio('pg62_audio12')}>
                             It’s twenty-five <span className={styles["page63__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page63__text"]} style={{ top: '-15%', left: '45%' }} onClick={() => playAudio('pg62_audio14')}>
+                        <p className={styles["page63__text"]} style={{ top: '-19%', left: '45%' }} onClick={() => playAudio('pg62_audio14')}>
                             It is <br /> <span className={styles["page63__highlight"]}>...o’clock</span>
                         </p>
                     </div>

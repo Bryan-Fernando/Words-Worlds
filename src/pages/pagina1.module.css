@@ -18,9 +18,8 @@
     justify-content: center;
     align-items: center;
     width: 12%;
-    height: 2%;
+    height: fit-content;
     border-radius: 1.5rem;
-    cursor: pointer;
 }
 
 .page1__unit p {
@@ -34,7 +33,6 @@
     top: 15%;
     left: 3%;
     color: white;
-    cursor: pointer;
 }
 
 .page1__title h1 {

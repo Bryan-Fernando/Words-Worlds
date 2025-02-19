@@ -1,5 +1,4 @@
 .pg110Container {
-    margin-bottom: 20%;
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -24,6 +23,7 @@
 
 .pg110ContainerImagemA,
 .pg110ContainerImagemB {
+    position: relative;
     width: 100%;
 }
 
@@ -53,15 +53,19 @@
     transform: translate(-50%, -50%);
 }
 
+.pg110Label p {
+    font-size: 1.5rem;
+}
+
 .pg110AudioIcon {
     width: 2rem;
     height: 2rem;
-    margin-left: 10px; 
-    cursor: pointer; 
+    margin-left: 10px;
+    cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
 .pg110AudioIcon:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
     opacity: 0.8;
 }

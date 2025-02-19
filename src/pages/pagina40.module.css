@@ -1,4 +1,4 @@
-.pg40Container {
+.page40__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -6,24 +6,24 @@
     align-items: stretch;
 }
 
-.pg40ExerciseTitle {
+.page40__exercise--title {
     font-weight: bold;
     text-align: left;
     color: black;
     margin-bottom: 1%;
 }
 
-.pg40ExerciseQuestion {
+.page40__exercise--question {
     text-align: left;
     color: black;
     font-weight: 700;
 }
 
-.pg40Main {
+.page40__main {
     flex-direction: column;
 }
 
-.pg40Title {
+.page40__title {
     font-weight: bold;
     text-align: center;
     font-size: 2.8rem;
@@ -31,7 +31,7 @@
     margin-bottom: 2rem;
 }
 
-.pg40ImagesContainer {
+.page40__images--container {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -39,7 +39,7 @@
     flex-wrap: wrap;
 }
 
-.pg40ImageBox {
+.page40__image--box {
     margin: 1rem;
     padding: 1rem;
     position: relative;
@@ -48,14 +48,14 @@
     align-items: center;
 }
 
-.pg40ImageBox img {
+.page40__image--box img {
     border: 0.4rem solid #A61C28;
     border-radius: 0.8rem;
     width: 30rem;
     height: 18rem;
 }
 
-.pg40InputBoxContainer {
+.page40__input--box--container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@
     margin-top: 1rem;
 }
 
-.pg40InputBox {
+.page40__input--box {
     border: 0.2rem solid #A61C28;
     border-radius: 0.8rem;
     padding: 1rem;
@@ -76,13 +76,13 @@
     text-align: center;
 }
 
-.pg40InputBox::placeholder {
+.page40__input--box::placeholder {
     color: rgb(119, 116, 116);
     text-align: center;
     font-size: 2rem;
 }
 
-.pg40CheckmarkImage {
+.page40__checkmark--image {
     position: absolute;
     top: 1.5rem;
     right: -2.5rem;
@@ -91,14 +91,14 @@
     border: none !important;
 }
 
-.pg40SentencesContainer {
+.page40__sentences--container {
     margin-top: 3rem;
     text-align: left;
     color: black;
     font-weight: 600;
 }
 
-.pg40Sentence {
+.page40__sentence {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -106,7 +106,7 @@
     position: relative;
 }
 
-.pg40Sentence p {
+.page40__sentence p {
     display: contents;
     margin: 0;
     font-weight: bold;
@@ -116,29 +116,29 @@
     width: 50%;
 }
 
-.pg40IconsContainer {
+.page40__icons--container {
     display: contents;
     align-items: left;
     gap: 1rem;
 }
 
-.pg40AudioIcon,
-.pg40Portugueseng_audio_icon,
-.pg40Volumeng_audio_icon {
+.page40__audio--icon,
+.page40__portuguese--audio--icon,
+.page40__volume--audio--icon {
     margin: 0 0.5%;
     width: auto;
     height: 2.5rem;
     cursor: pointer;
 }
 
-.pg40AudioIcon.pg40Pulsing,
-.pg40Portugueseng_audio_icon.pg40Pulsing,
-.pg40Volumeng_audio_icon.pg40Pulsing {
+.page40__audio--icon.page40__pulsing,
+.page40__portuguese--audio--icon.page40__pulsing,
+.page40__volume--audio--icon.page40__pulsing {
     animation: pulse 1s infinite;
     filter: brightness(1.2) saturate(1.5);
 }
 
-.pg40CheckButton {
+.page40__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -153,16 +153,16 @@
     font-size: 2rem;
 }
 
-.pg40CheckButton:hover {
+.page40__check--button:hover {
     background-color: #8a1720;
 }
 
-.pg40Volumeng_audio_icon {
+.page40__volume--audio--icon {
     position: relative;
     top: 0;
 }
 
-.pg40Portugueseng_audio_icon {
+.page40__portuguese--audio--icon {
     position: relative;
     top: 0;
 }
@@ -181,31 +181,38 @@
     }
 }
 
-.pg40Volumeng_audio_icon.pg40Active {
+.page40__volume--audio--icon.page40__active {
     animation: pulse 1s infinite;
     filter: brightness(1.5) saturate(1.5);
     color: #A61C28;
 }
 
-.pg40AudioText {
+.page40__audio--text {
     display: flex;
     align-items: center;
+    text-align: left;
 }
 
-.pg40AudioText h2{
-    font-size: 2rem;
+.page40__audio--text2{
+    text-align: left;
+    font-size: 2.9rem;
 }
 
-.pg40Header img {
+.page40__header img {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-.page__paragraph {
+.page40__paragraph {
     text-align: left;
     color: #A61C28;
     font-weight: bold;
     position: relative;
     top: 2rem;
+}
+
+.page40__header--icon{
+    position: relative;
+    top: 1.5rem;
 }

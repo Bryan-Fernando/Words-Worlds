@@ -1,27 +1,27 @@
-.pg31Container {
+.page31__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg31Header {
+.page31__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg31HeaderH2 {
+.page31__header--h2 {
     color: black;
 }
 
-.pg31Main {
+.page31__main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.pg31TableHeader {
+.page31__table--header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -32,22 +32,25 @@
     font-size: 2rem;
 }
 
-.pg31StyledTable {
+.page31__table--styled {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg31StyledTable thead tr {
+.page31__table--styled:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page31__table--styled thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg31StyledTable th,
-.pg31StyledTable td {
+.page31__table--styled th,
+.page31__table--styled td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -55,17 +58,17 @@
     font-weight: bold;
 }
 
-.pg31StyledTable tbody tr {
+.page31__table--styled tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg31StyledTable tbody tr:nth-child(even) {
+.page31__table--styled tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg31InputCell {
+.page31__input--cell {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -78,41 +81,41 @@
     font-size: 1.8rem;
 }
 
-.pg31InputCell:focus {
+.page31__input--cell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg31InputCell::-webkit-scrollbar {
+.page31__input--cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg31Sujeito {
+.page31__subject {
     width: calc(10vw * 0.85);
 }
 
-.pg31verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page31__auxiliary--verb {
+    width: calc(10vw * 0.85);
 }
 
-.pg31Adverbio {
-    width: calc(12vw * 0.85)
+.page31__adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg31Verbo {
-    width: calc(12vw * 0.85)
+.page31__verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg31ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page31__objective--complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg31Traducao {
-    width: (18vw * 0.85);
+.page31__translation {
+    width: calc(18vw * 0.85);
 }
 
-.pg31Icon {
+.page31__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -122,11 +125,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg31Icon:hover {
+.page31__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page31__icon--left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -136,22 +139,21 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page31__icon--left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-    .pg31StyledTable {
+    .page31__table--styled {
         margin-bottom: 15%;
     }
 
-    .pg31StyledTable th,
-    .pg31StyledTable td {
+    .page31__table--styled th,
+    .page31__table--styled td {
         padding: .5rem;
-
     }
 
-    .pg31InputCell {
+    .page31__input--cell {
         height: calc(6vw * 0.85);
     }
 }

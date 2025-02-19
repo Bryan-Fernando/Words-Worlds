@@ -111,7 +111,7 @@ const Pagina62 = () => {
                         </div>
                     </div>
                 </header>
-    
+
                 <main className={styles["page62__main"]}>
                     <div className={styles["page62__titles"]}>
                         <h3 className={styles["page62__title-left"]} onClick={() => playAudio('pg62_audio1')} style={{ cursor: 'pointer' }}>
@@ -127,40 +127,40 @@ const Pagina62 = () => {
                             alt="Relógio com setas indicando o horário"
                             className={styles["page62__image"]}
                         />
-                        <p className={styles["page62__text"]} style={{ top: '24%', right: '100%' }} onClick={() => playAudio('pg62_audio3')}>
+                        <p className={styles["page62__text"]} style={{ top: '24%', right: '86%' }} onClick={() => playAudio('pg62_audio3')}>
                             It’s five <span className={styles["page62__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '33%', right: '100%' }} onClick={() => playAudio('pg62_audio4')}>
+                        <p className={styles["page62__text"]} style={{ top: '33%', right: '86%' }} onClick={() => playAudio('pg62_audio4')}>
                             It’s ten <span className={styles["page62__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '46%', right: '100%' }} onClick={() => playAudio('pg62_audio5')}>
+                        <p className={styles["page62__text"]} style={{ top: '46%', right: '86%' }} onClick={() => playAudio('pg62_audio5')}>
                             It’s (a) quarter <span className={styles["page62__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '58%', right: '100%' }} onClick={() => playAudio('pg62_audio6')}>
+                        <p className={styles["page62__text"]} style={{ top: '58%', right: '86%' }} onClick={() => playAudio('pg62_audio6')}>
                             It’s twenty <span className={styles["page62__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '68%', right: '100%' }} onClick={() => playAudio('pg62_audio7')}>
+                        <p className={styles["page62__text"]} style={{ top: '68%', right: '86%' }} onClick={() => playAudio('pg62_audio7')}>
                             It’s twenty-five <span className={styles["page62__highlight"]}>to...</span>
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '24%', left: '100%' }} onClick={() => playAudio('pg62_audio8')}>
+                        <p className={styles["page62__text"]} style={{ top: '24%', left: '86%' }} onClick={() => playAudio('pg62_audio8')}>
                             It’s five <span className={styles["page62__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '34%', left: '100%' }} onClick={() => playAudio('pg62_audio9')}>
+                        <p className={styles["page62__text"]} style={{ top: '34%', left: '86%' }} onClick={() => playAudio('pg62_audio9')}>
                             It’s ten <span className={styles["page62__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '46%', left: '100%' }} onClick={() => playAudio('pg62_audio10')}>
+                        <p className={styles["page62__text"]} style={{ top: '46%', left: '86%' }} onClick={() => playAudio('pg62_audio10')}>
                             It’s (a) quarter <span className={styles["page62__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '59%', left: '100%' }} onClick={() => playAudio('pg62_audio11')}>
+                        <p className={styles["page62__text"]} style={{ top: '59%', left: '86%' }} onClick={() => playAudio('pg62_audio11')}>
                             It’s twenty <span className={styles["page62__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '68%', left: '100%' }} onClick={() => playAudio('pg62_audio12')}>
+                        <p className={styles["page62__text"]} style={{ top: '68%', left: '86%' }} onClick={() => playAudio('pg62_audio12')}>
                             It’s twenty-five <span className={styles["page62__highlight"]}>past</span>...
                         </p>
                         <p className={styles["page62__text"]} style={{ top: '100%', left: '45%' }} onClick={() => playAudio('pg62_audio13')}>
                             It’s half <span className={styles["page62__highlight"]}>past</span>...
                         </p>
-                        <p className={styles["page62__text"]} style={{ top: '-15%', left: '45%' }} onClick={() => playAudio('pg62_audio14')}>
+                        <p className={styles["page62__text"]} style={{ top: '-19%', left: '45%' }} onClick={() => playAudio('pg62_audio14')}>
                             It is <br /> <span className={styles["page62__highlight"]}>...o’clock</span>
                         </p>
                     </div>
@@ -185,14 +185,14 @@ const Pagina62 = () => {
                                 10:55 - It’s five <strong>to</strong> eleven.
                             </p>
                         </div>
-    
+
                         {/* Bloco Central */}
                         <div className={styles["page62__extra-block--center"]}>
                             <p onClick={() => playAudio('pg62_audio20')} style={{ cursor: 'pointer' }}>
                                 10:00 - It’s ten <strong>o’clock</strong>.
                             </p>
                         </div>
-    
+
                         {/* Bloco Direito */}
                         <div className={styles["page62__extra-block"]}>
                             <p onClick={() => playAudio('pg62_audio21')} style={{ cursor: 'pointer' }}>
@@ -219,7 +219,7 @@ const Pagina62 = () => {
             </div>
         </div>
     );
-    
+
 };
 
 export default Pagina62;

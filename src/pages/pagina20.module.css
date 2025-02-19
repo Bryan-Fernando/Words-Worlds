@@ -1,27 +1,27 @@
-.pg20Container {
+.page20__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg20Header {
+.page20__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg20HeaderH2 {
+.page20__header--title {
     color: black;
 }
 
-.pg20Main {
+.page20__main {
     width: 100%;
     text-align: center;
 }
 
-/* Este é um comentário */
+/* Este é um comentário aqui */
 
-.pg20TableHeader {
+.page20__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -32,22 +32,25 @@
     font-size: 2rem;
 }
 
-.pg20StyledTable {
+.page20__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg20StyledTable thead tr {
+.page20__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page20__table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg20StyledTable th,
-.pg20StyledTable td {
+.page20__table th,
+.page20__table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -55,17 +58,17 @@
     font-weight: bold;
 }
 
-.pg20StyledTable tbody tr {
+.page20__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg20StyledTable tbody tr:nth-child(even) {
+.page20__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg20InputCell {
+.page20__input-cell {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -78,17 +81,17 @@
     font-size: 1.8rem;
 }
 
-.pg20InputCell:focus {
+.page20__input-cell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg20InputCell::-webkit-scrollbar {
+.page20__input-cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg20Icon {
+.page20__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -98,11 +101,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg20Icon:hover {
+.page20__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page20__icon--left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -112,45 +115,45 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page20__icon--left:hover {
     transform: scale(1.2);
 }
 
-.pg20Sujeito {
+.page20__subject {
     width: calc(10vw * 0.85);
 }
 
-.pg20verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page20__auxiliary-verb {
+    width: calc(10vw * 0.85);
 }
 
-.pg20Adverbio {
-    width: calc(12vw * 0.85)
+.page20__adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg20Verbo {
-    width: calc(12vw * 0.85)
+.page20__verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg20ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page20__objective-complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg20Traducao {
-    width: (18vw * 0.85);
+.page20__translation {
+    width: calc(18vw * 0.85);
 }
 
 @media (max-width: 1024px) {
-    .pg20StyledTable {
+    .page20__table {
         margin-bottom: 15%;
     }
 
-    .pg20StyledTable th,
-    .pg20StyledTable td {
+    .page20__table th,
+    .page20__table td {
         padding: .5rem;
     }
 
-    .pg20InputCell {
+    .page20__input-cell {
         height: calc(6vw * 0.85);
     }
 }

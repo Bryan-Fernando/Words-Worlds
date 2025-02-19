@@ -78,7 +78,7 @@
 
 .pg100InputBox {
     width: 100%;
-    padding: 8px 35px 8px 8px;
+    padding: .5rem;
     font-size: 1.6rem;
     background-color: lightgray;
     border: none;
@@ -112,7 +112,6 @@
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    margin: 2rem;
     text-align: center;
     display: block;
     font-size: 2rem;
@@ -139,7 +138,8 @@
 
 .pg100Questions1:nth-child(2),
 .pg100Questions1:nth-child(4) {
-    margin-top: 5.5rem;
+    display: flex;
+    flex-direction: column-reverse;
     border-radius: 0.8rem;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .pg100tabelaNegativaContainer {
-    width: 70%;
+    width: 100%;
 }
 
 .pg100tableHeaderNegativa {

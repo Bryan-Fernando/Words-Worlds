@@ -8,9 +8,7 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import pagina1_imagem1 from '../assets/images/pagina1_imagem1.webp';
 import pagina1_imagem2 from '../assets/images/pagina1_imagem2.webp';
 import pg1_audio1e from '../assets/audios/pg1_audio1e.mp3';
-import pg1_audio2e from '../assets/audios/pg1_audio2e.mp3';
 import pg1_audio1p from '../assets/audios/pg1_audio1p.mp3';
-import pg1_audio2p from '../assets/audios/pg1_audio2p.mp3';
 
 const Pagina1 = () => {
     const [currentAudio, setCurrentAudio] = useState(null);
@@ -35,27 +33,21 @@ const Pagina1 = () => {
             <div className={styles["page1__unit"]} onClick={() => playAudio(pg1_audio1)}>
                 <p>UNIT 1A</p>
                
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles["page1__icon--header"]}
-                    onClick={() => playAudio(pg1_audio1p)}
-                />
             </div>
 
-            <div className={styles["page1__title"]} onClick={() => playAudio(pg1_audio2)}>
+            <div className={styles["page1__title"]}>
                 <h1>People <br />and <br /> Places</h1>
                 <p>First Edition <img
                     src={eng_audio_icon}
                     alt="English Audio"
                     className={styles["page1__icon"]}
-                    onClick={() => playAudio(pg1_audio2e)}
+                    onClick={() => playAudio(pg1_audio1e)}
                 />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese Audio"
                         className={styles["page1__icon"]}
-                        onClick={() => playAudio(pg1_audio2p)}
+                        onClick={() => playAudio(pg1_audio1p)}
                     /></p>
             </div>
         </div>

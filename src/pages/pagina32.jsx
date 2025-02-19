@@ -49,58 +49,58 @@ const Pagina32 = () => {
 
     return (
         <div>
-            <div className={styles.pg32Container}>
-                <header className={styles.pg32Header}>
-                    <h1 className={styles.pg32AudioText}>
+            <div className={styles["page32__container"]}>
+                <header className={styles["page32__header"]}>
+                    <h1 className={styles["page32__audio--text"]}>
                         Grammar
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.pg32Icon}
+                            className={styles["page32__icon"]}
                             onClick={() => playAudio(global_grammar)}
                         />
                     </h1>
-                    <h2 className={styles.pg32AudioText} style={{ color: "black" }}>
+                    <h2 className={styles["page32__audio--text"]} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.pg32Icon}
+                            className={styles["page32__icon"]}
                             onClick={() => playAudio(global_simple_present)}
                         />
                     </h2>
-                    <h3 className={styles.pg32AudioText}>
+                    <h3 className={styles["page32__audio--text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles.pg32Icon}
+                            className={styles["page32__icon"]}
                             onClick={() => playAudio(global_verbo_to_be)}
                         />
                     </h3>
                 </header>
-                <main className={styles.pg32Main}>
+                <main className={styles["page32__main"]}>
                     <div>
                         <div
-                            className={styles.pg32TableHeader}
+                            className={styles["page32__table--header"]}
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             <img
                                 src={white_play_icon}
                                 alt="White icon"
-                                className={styles.page__icon__left}
+                                className={styles["page32__icon--left"]}
                             />
                             AFFIRMATIVE INTERROGATIVE
                         </div>
-                        <table className={styles.pg32StyledTable}>
+                        <table className={styles["page32__table--styled"]}>
                             <colgroup>
-                                <col className={styles.pg32Sujeito} />
-                                <col className={styles.pg32verbo_auxiliar} />
-                                <col className={styles.pg32Adverbio} />
-                                <col className={styles.pg32Verbo} />
-                                <col className={styles.pg32ObjetivoComplemento} />
-                                <col className={styles.pg32Traducao} />
+                                <col className={styles["page32__subject"]} />
+                                <col className={styles["page32__auxiliary--verb"]} />
+                                <col className={styles["page32__adverb"]} />
+                                <col className={styles["page32__verb"]} />
+                                <col className={styles["page32__objective--complement"]} />
+                                <col className={styles["page32__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -124,64 +124,63 @@ const Pagina32 = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__subject"]} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.pg32verbo_auxiliar} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__auxiliary--verb"]} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.pg32Adverbio}></td>
-                                    <td className={styles.pg32Verbo}></td>
-                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles["page32__adverb"]}></td>
+                                    <td className={styles["page32__verb"]}></td>
+                                    <td className={styles["page32__objective--complement"]} onClick={() => playAudio(pg32Audio1)} style={{ cursor: 'pointer' }}>
                                         from Brazil?
                                     </td>
-                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
                                         Eles são do Brasil?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__subject"]} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.pg32verbo_auxiliar} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__auxiliary--verb"]} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.pg32Adverbio}></td>
-                                    <td className={styles.pg32Verbo}></td>
-                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles["page32__adverb"]}></td>
+                                    <td className={styles["page32__verb"]}></td>
+                                    <td className={styles["page32__objective--complement"]} onClick={() => playAudio(pg32Audio2)} style={{ cursor: 'pointer' }}>
                                         at the gym?
                                     </td>
-                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
                                         Eles estão na academia?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles.pg32Sujeito} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__subject"]} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         Are
                                     </td>
-                                    <td className={styles.pg32verbo_auxiliar} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page32__auxiliary--verb"]} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles.pg32Adverbio}></td>
-                                    <td className={styles.pg32Verbo}></td>
-                                    <td className={styles.pg32ObjetivoComplemento} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer' }}>
-                                        15 and 16 years old?
+                                    <td className={styles["page32__adverb"]}></td>
+                                    <td className={styles["page32__verb"]}></td>
+                                    <td className={styles["page32__objective--complement"]} onClick={() => playAudio(pg32Audio3)} style={{ cursor: 'pointer' }}>
+                                        15 or 16 years old?
                                     </td>
-                                    <td className={styles.pg32Traducao} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
-                                        Eles têm 15 e 16 anos?
+                                    <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
+                                        Eles têm 15 ou 16 anos?
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-
-                        <table className={styles.pg32StyledTable}>
+                        <table className={styles["page32__table--styled"]}>
                             <colgroup>
-                                <col className={styles.pg32Sujeito} />
-                                <col className={styles.pg32verbo_auxiliar} />
-                                <col className={styles.pg32Adverbio} />
-                                <col className={styles.pg32Verbo} />
-                                <col className={styles.pg32ObjetivoComplemento} />
-                                <col className={styles.pg32Traducao} />
+                                <col className={styles["page32__subject"]} />
+                                <col className={styles["page32__auxiliary--verb"]} />
+                                <col className={styles["page32__adverb"]} />
+                                <col className={styles["page32__verb"]} />
+                                <col className={styles["page32__objective--complement"]} />
+                                <col className={styles["page32__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -203,7 +202,7 @@ const Pagina32 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg32InputCell}
+                                                    className={styles["page32__input--cell"]}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

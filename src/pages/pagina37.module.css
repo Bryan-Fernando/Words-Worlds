@@ -1,43 +1,43 @@
-.pg37Container {
+.page37__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 20px;
 }
 
-.pg37Header {
+.page37__header {
     width: 100%;
     text-align: left;
 }
 
-.pg37Title {
+.page37__title {
     color: #a61c28;
     text-align: left;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.pg37Instruction {
+.page37__instruction {
     color: #a61c28;
     font-weight: bold;
     margin-bottom: 20px;
     align-items: center;
 }
 
-.pg37Main {
+.page37__main {
     width: 100%;
     text-align: center;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.pg37ListaRespostas {
+.page37__list--respostas {
     display: flex;
     flex-direction: column;
     width: 70%;
 }
 
-.pg37RespostaItem {
+.page37__resposta--item {
     display: flex;
     align-items: center;
     gap: 1%;
@@ -47,43 +47,43 @@
     width: 100%;
 }
 
-.pg37Input:focus {
+.page37__input:focus {
     border-color: #000000;
     box-shadow: 0 0 5px rgba(19, 19, 19, 0.5);
 }
 
-.pg37StatusCorreto {
+.page37__status--correto {
     color: green;
     font-weight: bold;
 }
 
-.pg37StatusErrado {
+.page37__status--errado {
     color: red;
     font-weight: bold;
 }
 
-.pg37AudioIcon {
+.page37__audio--icon {
     width: auto;
     height: calc(8px + 1.9vw);
     object-fit: contain;
     cursor: pointer;
 }
 
-.pg37Volumeng_audio_icon {
+.page37__volumeng--audio--icon {
     width: auto;
     height: calc(8px + 1.9vw);
     object-fit: contain;
     cursor: pointer;
 }
 
-.pg37Status {
+.page37__status {
     width: auto;
     height: calc(8px + 1.9vw);
     object-fit: contain;
     cursor: pointer;
 }
 
-.pg37Input {
+.page37__input {
     flex: 1;
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -96,7 +96,7 @@
     height: auto;
 }
 
-.pg37PercentualAcertos {
+.page37__percentual--acertos {
     width: 30%;
     height: 26.1%;
     border: 2px dotted #a61c28;
@@ -110,30 +110,48 @@
     font-size: 3rem;
 }
 
+.page37__audio--icon {
+    transition: transform 0.3s ease-in-out;
+}
+
+.page37__audio--icon:hover {
+    transform: scale(1.3); 
+    animation: bounce 0.5s ease-in-out infinite; 
+}
+
+.page37__volumeng--audio--icon{
+    transition: transform 0.3s ease-in-out;
+}
+
+.page37__volumeng--audio--icon:hover {
+    transform: scale(1.3); 
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
 @media (max-width: 1440px) {
 
-    .pg37Main {
+    .page37__main {
         flex-direction: column;
     }
 
-    .pg37ListaRespostas {
+    .page37__list--respostas {
         width: 100%;
     }
 
-    .pg37PercentualAcertos {
+    .page37__percentual--acertos {
         width: 100%;
         margin-top: 3%;
     }
 
-    .pg37Instruction {
+    .page37__instruction {
         display: block;
     }
 
-    .pg37SpeedContainer {
+    .page37__speed--container {
         display: inline-block;
     }
 
-    .pg37Volumeng_audio_icon {
+    .page37__volumeng--audio--icon {
         vertical-align: middle;
     }
 }

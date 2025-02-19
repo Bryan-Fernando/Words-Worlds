@@ -171,15 +171,14 @@ const Pagina99 = () => {
                 <div className={styles.pg99tabelaNegativaContainer}>
                     <div className={styles.pg99tableHeaderNegativa}>NEGATIVA</div>
                     <table className={styles.pg99styledTableNegativa}>
-                        <thead>
+                        <thead className={styles.pg99Thead}>
                             <tr className={styles.pg99celulatable}>
+                                <th>Introdução</th>
                                 <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th>
-                                    <span style={{ color: 'red' }}>Not</span> <br /> Adverb
-                                </th>
+                                <th>Verbo <br /> Auxiliar</th>
+                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>
@@ -265,7 +264,7 @@ const Pagina99 = () => {
                                 "We ____ (not watch) TV after dinner."
                             ].map((question, index) => {
                                 const audioKey = `pg99_audio${index + 8}`;
-                                const parts = question.split('____'); 
+                                const parts = question.split('____');
 
                                 return (
                                     <div key={index + 5} className={styles.pg99Question}>
@@ -282,7 +281,7 @@ const Pagina99 = () => {
                                                 className={styles.pg99InputBox}
                                             />
                                         </div>
-                                        
+
                                         {parts.length > 1 && <span><em>{parts[1]}</em></span>}
 
                                         <div className={styles.pg99IconsContainer}>

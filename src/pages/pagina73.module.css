@@ -47,6 +47,7 @@
 .pg73Questions2 {
     margin-top: 2rem;
     text-align: left;
+    width: 70%;
 }
 
 .pg73Question {
@@ -72,7 +73,7 @@
 
 .pg73InputBox {
     width: 100%;
-    padding: 8px 35px 8px 8px;
+    padding: .5rem;
     font-size: 1.8rem;
     background-color: lightgray;
     border: none;
@@ -113,8 +114,6 @@
     display: block;
     font-size: 2rem;
     width: fit-content;
-    position: absolute;
-    top: 70%;
 }
 
 .pg73CheckButton:hover {
@@ -148,26 +147,23 @@
     justify-content: space-between;
     align-items: flex-end;
     gap: 1rem;
-    width: 100%;
-    margin-top: 2rem; 
+    margin-top: 2rem;
     flex-direction: column;
 }
 
-.pg73imagem1, .pg73imagem2 {
+.pg73imagem1,
+.pg73imagem2 {
     width: 24rem;
     height: auto;
-    box-shadow: 0.2rem 0.4rem 1rem rgba(0, 0, 0, 0.5); 
+    box-shadow: 0.2rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
 }
 
 .pg73imagem1 {
-    position: relative;
-    right: 20rem;
-    top: -37rem;
+    margin-right: 70%;
 }
 
 .pg73imagem2 {
-    position: relative;
-    top: -35rem;
+    margin-right: 45%;
 }
 
 
@@ -286,22 +282,12 @@
         font-size: 1.8rem;
     }
 
-    .pg73ContainerQuestoes {
-        flex-direction: column;
-    }
-
     .pg73Question {
         gap: 5px;
     }
 
     .pg73IconsContainer {
         margin-left: 0;
-    }
-
-    .pg73ContainerImagem {
-        align-items: start;
-        justify-content: left;
-        height: fit-content;
     }
 
     .pg73InputContainer {

@@ -1,25 +1,25 @@
-.pg10Container {
+.page10__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg10Header {
+.page10__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg10HeaderH2 {
+.page10__header-subtitle {
     color: black;
 }
 
-.pg10Main {
+.page10__main {
     width: 100%;
     text-align: center;
 }
 
-.pg10Aside {
+.page10__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
 
 /* Este é um comentário */
 
-.pg10TableHeader {
+.page10__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -38,22 +38,25 @@
     font-size: 2rem;
 }
 
-.pg10StyledTable {
+.page10__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg10StyledTable thead tr {
+.page10__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page10__table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg10StyledTable th,
-.pg10StyledTable td {
+.page10__table th,
+.page10__table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -61,17 +64,17 @@
     font-weight: bold;
 }
 
-.pg10StyledTable tbody tr {
+.page10__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg10StyledTable tbody tr:nth-child(even) {
+.page10__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg10InputCell {
+.page10__table-input {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -84,41 +87,41 @@
     font-size: 1.8rem;
 }
 
-.pg10InputCell:focus {
+.page10__table-input:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg10InputCell::-webkit-scrollbar {
+.page10__table-input::-webkit-scrollbar {
     display: none;
 }
 
-.pg10Sujeito {
+.page10__table-subject {
     width: calc(10vw * 0.85);
 }
 
-.pg10verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page10__table-auxiliary {
+    width: calc(10vw * 0.85);
 }
 
-.pg10Adverbio {
-    width: calc(12vw * 0.85)
+.page10__table-adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg10Verbo {
-    width: calc(12vw * 0.85)
+.page10__table-verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg10ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page10__table-complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg10Traducao {
+.page10__table-translation {
     width: (18vw * 0.85);
 }
 
-.pg10AsideNotes1 {
+.page10__aside-notes1 {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #A61C28;
@@ -133,17 +136,17 @@
     align-items: center;
 }
 
-.pg10AsideNotes1 p {
+.page10__aside-notes1 p {
     font-size: 1.5rem;
 }
 
-.pg10AsideImgNotes {
+.page10__aside-img {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.pg10AsideNotes2 {
+.page10__aside-notes2 {
     width: 50%;
     height: 100%;
     border: .4rem solid #A61C28;
@@ -157,12 +160,18 @@
     align-items: center;
 }
 
-.pg10AsideNotes2 p {
+.page10__aside-notes2 p {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
-.pg10Icon {
+.page10__aside-img-notes {
+    width: 2.5rem;  
+    height: 3rem;
+    margin-right: 1rem;
+}
+
+.page10__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -172,11 +181,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg10Icon:hover {
+.page10__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page10__icon-left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -186,33 +195,31 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page10__icon-left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-
-    .pg10StyledTable {
+    .page10__table {
         margin-bottom: 15%;
     }
 
-    .pg10StyledTable th,
-    .pg10StyledTable td {
+    .page10__table th,
+    .page10__table td {
         padding: .5rem;
-
     }
 
-    .pg10InputCell {
+    .page10__table-input {
         height: calc(6vw * 0.85);
     }
 
-    .pg10AsideNotes1,
-    .pg10AsideNotes2 {
+    .page10__aside-notes1,
+    .page10__aside-notes2 {
         width: 100%;
     }
 
-    .pg10AsideNotes1 p,
-    .pg10AsideNotes2 p {
+    .page10__aside-notes1 p,
+    .page10__aside-notes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

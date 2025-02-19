@@ -99,53 +99,52 @@ function Pagina37() {
     const percentage = (correctCount / totalCount) * 100;
 
     return (
-        <div className={styles.pg37Container}>
-            <header className={styles.pg37Header}>
-                <h1 className={styles.pg37Title}>Answers</h1>
-                <h2 className={styles.pg37Instruction}>
+        <div className={styles["page37__container"]}>
+            <header className={styles["page37__header"]}>
+                <h1 className={styles["page37__title"]}>Answers</h1>
+                <h2 className={styles["page37__instruction"]}>
                     Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
-                    <span className={styles.pg37SpeedContainer}>
+                    <span className={styles["page37__speed--container"]}>
                         <img
                             src={slow_audio_icon}
-                            className={styles.pg37Volumeng_audio_icon}
+                            className={styles["page37__volumeng--audio--icon"]}
                             alt="Speed icon"
                         />
                     </span>
                 </h2>
             </header>
 
-            <main className={styles.pg37Main}>
-                <div className={styles.pg37ListaRespostas}>
+            <main className={styles["page37__main"]}>
+                <div className={styles["page37__list--respostas"]}>
                     {respostasCorretas.map((respostaCorreta, index) => (
-                        <div key={index} className={styles.pg37RespostaItem}>
+                        <div key={index} className={styles["page37__resposta--item"]}>
                             <input
                                 type="text"
-                                className={styles.pg37Input}
+                                className={styles["page37__input"]}
                                 value={respostasUsuario[index]?.join(' ') || ''}
                                 readOnly
                             />
                             <img
                                 src={resultado[index] ? correct_icon : wrong_icon}
                                 alt={resultado[index] ? 'Correct' : 'Incorrect'}
-                                className={`${styles.pg37Status} ${resultado[index] ? styles.pg37Correta : styles.pg37Incorreta
-                                    }`}
+                                className={`${styles["page37__status"]} ${resultado[index] ? styles["page37__status--correto"] : styles["page37__status--errado"]}`}
                             />
                             {resultado[index] && (
                                 <>
                                     <img
-                                        className={styles.pg37AudioIcon}
+                                        className={styles["page37__audio--icon"]}
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
                                         onClick={() => playAudio(index, 'english')}
                                     />
                                     <img
-                                        className={styles.pg37AudioIcon}
+                                        className={styles["page37__audio--icon"]}
                                         src={portugueseng_audio_icon}
                                         alt="Play Portuguese Audio"
                                         onClick={() => playAudio(index, 'portuguese')}
                                     />
                                     <img
-                                        className={styles.pg37Volumeng_audio_icon}
+                                        className={styles["page37__volumeng--audio--icon"]}
                                         src={slow_audio_icon}
                                         alt="Toggle Speed"
                                         onClick={reduzirVelocidade}
@@ -155,7 +154,7 @@ function Pagina37() {
                         </div>
                     ))}
                 </div>
-                <div className={styles.pg37PercentualAcertos}>
+                <div className={styles["page37__percentual--acertos"]}>
                     <span>{Math.round(percentage)}% Out of 100</span>
                 </div>
             </main>

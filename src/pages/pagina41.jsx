@@ -25,19 +25,31 @@ import Pagina41_audioG from '../assets/audios/pagina41_audioG.mp3';
 import Pagina41_audioH from '../assets/audios/pagina41_audioH.mp3';
 import Pagina41_audioI from '../assets/audios/pagina41_audioI.mp3';
 import Pagina41_audioJ from '../assets/audios/pagina41_audioJ.mp3';
+import pg41_audio2p from '../assets/audios/pg41_audio2p.mp3';
+import pg41_audio3p from '../assets/audios/pg41_audio3p.mp3';
+import pg41_audio4p from '../assets/audios/pg41_audio4p.mp3';
+import pg41_audio5p from '../assets/audios/pg41_audio5p.mp3';
+import pg41_audio6p from '../assets/audios/pg41_audio6p.mp3';
+import pg41_audio7p from '../assets/audios/pg41_audio7p.mp3';
+import pg41_audio8p from '../assets/audios/pg41_audio8p.mp3';
+import pg41_audio9p from '../assets/audios/pg41_audio9p.mp3';
+import pg41_audio10p from '../assets/audios/pg41_audio10p.mp3';
+import pg41_audio11p from '../assets/audios/pg41_audio11p.mp3';
+
 
 const audioFiles = [
-    Pagina41_audioA,
-    Pagina41_audioB,
-    Pagina41_audioC,
-    Pagina41_audioD,
-    Pagina41_audioE,
-    Pagina41_audioF,
-    Pagina41_audioG,
-    Pagina41_audioH,
-    Pagina41_audioI,
-    Pagina41_audioJ
+    { en: Pagina41_audioA, pt: pg41_audio2p },
+    { en: Pagina41_audioB, pt: pg41_audio3p },
+    { en: Pagina41_audioC, pt: pg41_audio4p },
+    { en: Pagina41_audioD, pt: pg41_audio5p },
+    { en: Pagina41_audioE, pt: pg41_audio6p },
+    { en: Pagina41_audioF, pt: pg41_audio7p },
+    { en: Pagina41_audioG, pt: pg41_audio8p },
+    { en: Pagina41_audioH, pt: pg41_audio9p },
+    { en: Pagina41_audioI, pt: pg41_audio10p },
+    { en: Pagina41_audioJ, pt: pg41_audio11p }
 ];
+
 
 const Pagina41 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
@@ -66,8 +78,8 @@ const Pagina41 = () => {
     };
 
 
-    const playAudio = (index) => {
-        const audio = new Audio(audioFiles[index]);
+    const playAudio = (index, language) => {
+        const audio = new Audio(audioFiles[index][language]);
         audio.playbackRate = isSpeedReduced[index] ? 0.60 : 1;
         audio.play();
     };
@@ -156,9 +168,15 @@ const Pagina41 = () => {
                             <div className={styles.pg41IconsContainer}>
                                 <img
                                     src={eng_audio_icon}
-                                    alt="Audio Icon"
+                                    alt="English Audio"
                                     className={styles.pg41AdditionalIcon}
-                                    onClick={() => playAudio(index)}
+                                    onClick={() => playAudio(index, "en")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg41AdditionalIcon}
+                                    onClick={() => playAudio(index, "pt")}
                                 />
                                 <img
                                     src={slow_audio_icon}
@@ -171,6 +189,7 @@ const Pagina41 = () => {
                     );
                 })}
             </div>
+
             <button className={styles.pg41CheckButton} onClick={handleCheckClick}><em>Check</em></button>
             <div className={styles.pg41ImagesContainer}>
                 <img src={pagina41_imagem1} alt="Basketball" className={styles.pg41ImageBasketball} />

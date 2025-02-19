@@ -83,6 +83,7 @@
 }
 
 .pg45ExemploImg {
+    position: relative;
     text-align: center;
     display: flex;
     padding-top: 4rem;
@@ -120,23 +121,36 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
+    position: absolute;
     top: 4vw;
     left: 5%;
     cursor: pointer;
+    top: 68%;
+    left: 52%;
+}
+
+.pg45AsideTexto1::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 6%;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #FDCC98;
 }
 
 .pg45AsideTexto2::after {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 20px;
+    left: 50%;
     width: 0;
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid #FFF7A6;
-    
 }
 
 
@@ -149,8 +163,9 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
-    top: -2vw;
+    position: absolute;
+    top: -12%;
+    right: 15%;
     cursor: pointer;
 }
 

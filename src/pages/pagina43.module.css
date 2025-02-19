@@ -19,7 +19,7 @@
     text-align: center;
     display: flex;
     justify-content: space-between;
-  
+
 }
 
 .pg43Aside {
@@ -27,30 +27,31 @@
     display: flex;
 }
 
-.pg43ContainerMain{
+.pg43ContainerMain {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg43MainImagems{
+.pg43MainImagems {
     height: 10rem;
     width: 10rem;
 }
 
-.pg43ContainerDiv{
+.pg43ContainerDiv {
     display: flex;
     justify-content: flex-start;
     gap: 2.5rem;
     text-align: left;
 }
+
 .pg43VerticalLine {
-    border-left: 0.5 solid #A61C28; 
-    height: 100%; 
-    margin: 0 1rem; 
+    border-left: 0.5 solid #A61C28;
+    height: 100%;
+    margin: 0 1rem;
 }
 
-.pg43MainParagrafoBold{
+.pg43MainParagrafoBold {
     font-weight: bold;
 }
 
@@ -93,14 +94,13 @@
     gap: 1rem;
 }
 
-.pg43AsideNotes2Negrito{
+.pg43AsideNotes2Negrito {
     font-weight: bold;
 }
 
-.pg43Asidecontainer{
-    display: flex;
-    flex-direction: column;
+.pg43Asidecontainer {
     width: 100%;
+    height: fit-content;
 }
 
 .iconButton {

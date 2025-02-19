@@ -1,27 +1,27 @@
-.pg36Container {
+.page36__container {
     display: flex;
     flex-direction: column; 
     gap: 2rem; 
 }
 
-.pg36Header {
+.page36__header {
     width: 100%;
 }
 
-.pg36MainContainer {
+.page36__main--container {
     flex: 3; 
     display: flex;
     flex-direction: column;
 }
 
-.pg36MainAsideContainer {
+.page36__main--aside--container {
     display: flex; 
     justify-content: space-between; 
     gap: 2rem;
 }
 
-.pg36pageTitle,
-.pg36questionText {
+.page36__page--title,
+.page36__question--text {
     text-align: left;
     padding-left: 0;
     margin: 0; 
@@ -29,17 +29,17 @@
     font-weight: bold;
 }
 
-.pg36fraseContainer {
+.page36__frase--container {
     margin-bottom: 1rem;
 }
 
-.pg36frase {
+.page36__frase {
     display: flex;
     gap: 0.5rem;
     width: 100%;
 }
 
-.pg36word {
+.page36__word {
     font-size: 1.5rem;
     background-color: #d3d3d3;
     padding: 0.5rem 0.75rem;
@@ -48,12 +48,12 @@
     font-weight: bold;
 }
 
-.pg36word.pg36disabled {
+.page36__word--disabled {
     pointer-events: none;
     opacity: 0.5;
 }
 
-.pg36inputFrase {
+.page36__input--frase {
     display: flex;
     padding: 0.25rem; 
     border: 1px solid rgb(0, 0, 0); 
@@ -65,7 +65,7 @@
     margin-top: 2%;
 }
 
-.pg36chip {
+.page36__chip {
     font-size: 1.5rem;
     display: inline-flex; 
     background-color: #d3d3d3;
@@ -79,12 +79,12 @@
     margin-left: 0.5rem;
 }
 
-.pg36AsideContainer {
+.page36__aside--container {
     flex: 1; 
     display: block;
 }
 
-.pg36checkButton {
+.page36__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -97,23 +97,23 @@
     width: 25%;
 }
 
-.pg36checkButton:hover {
+.page36__check--button:hover {
     background-color: #821a22;
 }
 
-.pg36tabelaAfirmativaContainer,
-.pg36tabelaNegativaContainer {
+.page36__tabela--afirmativa--container,
+.page36__tabela--negativa--container {
     display: block;
     width: 37rem;
     margin-left: auto;
 }
 
-.pg36tabelaNegativaContainer {
+.page36__tabela--negativa--container {
     margin-top: 5.8rem;
 }
 
-.pg36tableHeaderAfirmativa,
-.pg36tableHeaderNegativa {
+.page36__table--header--afirmativa,
+.page36__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -125,16 +125,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg36styledTableAfirmativa,
-.pg36styledTableNegativa {
+.page36__styled--table--afirmativa,
+.page36__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-.pg36styledTableAfirmativa th,
-.pg36styledTableNegativa th {
+.page36__styled--table--afirmativa th,
+.page36__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -144,7 +144,7 @@
     border: 1px solid #A61C28;
 }
 
-.pg36ImagensContainer {
+.page36__imagens--container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -153,17 +153,17 @@
     margin-left: auto;
 }
 
-.pg36Imagem {
+.page36__imagem {
     border-radius: 5%;
 }
 
-.pg36Icon {
+.page36__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-  }
+}
   
-  .pg36Icon:hover {
+.page36__icon:hover {
     transform: scale(1.2);
-  }
+}

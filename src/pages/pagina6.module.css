@@ -1,31 +1,31 @@
-.page__container {
+.page6__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.page__header {
+.page6__header {
     width: 100%;
     text-align: left;
     color: #a61c28;
 }
 
-.page__header__subtitle {
+.page6__header-subtitle {
     color: black;
 }
 
-.page__main {
+.page6__main {
     width: 100%;
     text-align: center;
 }
 
-.page__aside {
+.page6__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.page__table__header {
+.page6__table-header {
     background-color: #a61c28;
     color: white;
     text-align: center;
@@ -37,21 +37,25 @@
     cursor: pointer;
 }
 
-.page__table {
+.page6__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.page__table thead tr {
+.page6__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page6__table thead tr {
     background-color: #888a8c;
     color: white;
     font-weight: bold;
 }
 
-.page__table th,
-.page__table td {
+.page6__table th,
+.page6__table td {
     border: 0.1rem solid #a61c28;
     padding: 1rem;
     text-align: left;
@@ -59,17 +63,17 @@
     font-weight: bold;
 }
 
-.page__table tbody tr {
+.page6__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.page__table tbody tr:nth-child(even) {
+.page6__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.page__table__input {
+.page6__table-input {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -82,41 +86,41 @@
     font-size: 1.8rem;
 }
 
-.page__table__input:focus {
+.page6__table-input:focus {
     outline: none;
     border: 0.1rem solid #f2f2f2;
     background-color: white;
 }
 
-.page__table__input::-webkit-scrollbar {
+.page6__table-input::-webkit-scrollbar {
     display: none;
 }
 
-.page__table__subject {
+.page6__table-subject {
     width: calc(10vw * 0.85);
 }
 
-.page__table__auxiliary {
+.page6__table-auxiliary {
     width: calc(10vw * 0.85);
 }
 
-.page__table__adverb {
+.page6__table-adverb {
     width: calc(12vw * 0.85);
 }
 
-.page__table__verb {
+.page6__table-verb {
     width: calc(12vw * 0.85);
 }
 
-.page__table__complement {
+.page6__table-complement {
     width: calc(18vw * 0.85);
 }
 
-.page__table__translation {
+.page6__table-translation {
     width: calc(18vw * 0.85);
 }
 
-.page__aside__notes1 {
+.page6__aside-notes1 {
     width: 50%;
     height: 4.5rem;
     border: 0.4rem solid #a61c28;
@@ -131,18 +135,18 @@
     align-items: center;
 }
 
-.page__aside__notes1 p {
+.page6__aside-notes1 p {
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.page__aside__img {
+.page6__aside-img {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: 0.5rem;
 }
 
-.page__aside__notes2 {
+.page6__aside-notes2 {
     width: 50%;
     height: 100%;
     border: 0.4rem solid #a61c28;
@@ -156,12 +160,12 @@
     align-items: center;
 }
 
-.page__aside__notes2 p {
+.page6__aside-notes2 p {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
-.page__icon {
+.page6__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -171,11 +175,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon:hover {
+.page6__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page6__icon-left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -185,32 +189,32 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page6__icon-left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-    .page__table {
+    .page6__table {
         margin-bottom: 15%;
     }
 
-    .page__table th,
-    .page__table td {
+    .page6__table th,
+    .page6__table td {
         padding: 0.5rem;
     }
 
-    .page__table__input {
+    .page6__table-input {
         height: calc(6vw * 0.85);
         padding: 0;
     }
 
-    .page__aside__notes1,
-    .page__aside__notes2 {
+    .page6__aside-notes1,
+    .page6__aside-notes2 {
         width: 100%;
     }
 
-    .page__aside__notes1 p,
-    .page__aside__notes2 p {
+    .page6__aside-notes1 p,
+    .page6__aside-notes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

@@ -81,7 +81,6 @@
 
 .page53__text {
     text-align: left;
-    cursor: pointer;
 }
 
 .page53__image-container {
@@ -107,14 +106,15 @@
     gap: 0.5rem;
 }
 
-.page53__subtitle {
-    cursor: pointer;
-}
+
 
 .page53__icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    position: relative;
+    top: 0.3rem;
+    left: 0.5rem;
     transition: transform 0.2s ease-in-out;
 }
 

@@ -1,27 +1,27 @@
-.pg32Container {
+.page32__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg32Header {
+.page32__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg32HeaderH2 {
+.page32__header--h2 {
     color: black;
 }
 
-.pg32Main {
+.page32__main {
     width: 100%;
     text-align: center;
 }
 
 /* Este é um comentário */
 
-.pg32TableHeader {
+.page32__table--header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -32,22 +32,25 @@
     font-size: 2rem;
 }
 
-.pg32StyledTable {
+.page32__table--styled {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg32StyledTable thead tr {
+.page32__table--styled:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page32__table--styled thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg32StyledTable th,
-.pg32StyledTable td {
+.page32__table--styled th,
+.page32__table--styled td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -55,17 +58,17 @@
     font-weight: bold;
 }
 
-.pg32StyledTable tbody tr {
+.page32__table--styled tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg32StyledTable tbody tr:nth-child(even) {
+.page32__table--styled tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg32InputCell {
+.page32__input--cell {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -78,41 +81,41 @@
     font-size: 1.8rem;
 }
 
-.pg32InputCell:focus {
+.page32__input--cell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg32InputCell::-webkit-scrollbar {
+.page32__input--cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg32Sujeito {
+.page32__subject {
     width: calc(10vw * 0.85);
 }
 
-.pg32verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page32__auxiliary--verb {
+    width: calc(10vw * 0.85);
 }
 
-.pg32Adverbio {
-    width: calc(12vw * 0.85)
+.page32__adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg32Verbo {
-    width: calc(12vw * 0.85)
+.page32__verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg32ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page32__objective--complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg32Traducao {
-    width: (18vw * 0.85);
+.page32__translation {
+    width: calc(18vw * 0.85);
 }
 
-.pg32Icon {
+.page32__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -122,11 +125,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg32Icon:hover {
+.page32__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page32__icon--left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -136,21 +139,21 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page32__icon--left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-    .pg32StyledTable {
+    .page32__table--styled {
         margin-bottom: 15%;
     }
 
-    .pg32StyledTable th,
-    .pg32StyledTable td {
+    .page32__table--styled th,
+    .page32__table--styled td {
         padding: .5rem;
     }
 
-    .pg32InputCell {
+    .page32__input--cell {
         height: calc(6vw * 0.85);
     }
 }

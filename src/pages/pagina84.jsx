@@ -318,8 +318,8 @@ const Pagina84 = () => {
                         </div>
                     </div>
                 </aside>
+                <button className={styles.pg84CheckButton} onClick={handleCheckClick}><em>Check</em></button>
             </main>
-            <button className={styles.pg84CheckButton} onClick={handleCheckClick}><em>Check</em></button>
         </div>
     );
 };

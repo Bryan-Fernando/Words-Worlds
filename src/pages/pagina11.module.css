@@ -1,25 +1,25 @@
-.pg11Container {
+.page11__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg11Header {
+.page11__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg11HeaderH2 {
+.page11__header-subtitle {
     color: black;
 }
 
-.pg11Main {
+.page11__main {
     width: 100%;
     text-align: center;
 }
 
-.pg11Aside {
+.page11__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
 
 /* Este é um comentário */
 
-.pg11TableHeader {
+.page11__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -38,22 +38,25 @@
     font-size: 2rem;
 }
 
-.pg11StyledTable {
+.page11__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg11StyledTable thead tr {
+.page11__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page11__table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg11StyledTable th,
-.pg11StyledTable td {
+.page11__table th,
+.page11__table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -61,17 +64,17 @@
     font-weight: bold;
 }
 
-.pg11StyledTable tbody tr {
+.page11__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg11StyledTable tbody tr:nth-child(even) {
+.page11__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg11InputCell {
+.page11__table-input {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -84,41 +87,41 @@
     font-size: 1.8rem;
 }
 
-.pg11InputCell:focus {
+.page11__table-input:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg11InputCell::-webkit-scrollbar {
+.page11__table-input::-webkit-scrollbar {
     display: none;
 }
 
-.pg11Sujeito {
+.page11__table-subject {
     width: calc(10vw * 0.85);
 }
 
-.pg11verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page11__table-auxiliary {
+    width: calc(10vw * 0.85);
 }
 
-.pg11Adverbio {
-    width: calc(12vw * 0.85)
+.page11__table-adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg11Verbo {
-    width: calc(12vw * 0.85)
+.page11__table-verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg11ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page11__table-complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg11Traducao {
-    width: (18vw * 0.85);
+.page11__table-translation {
+    width: calc(18vw * 0.85);
 }
 
-.pg11AsideNotes1 {
+.page11__aside-notes1 {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #A61C28;
@@ -133,17 +136,17 @@
     align-items: center;
 }
 
-.pg11AsideNotes1 p {
+.page11__aside-notes1 p {
     font-size: 1.5rem;
 }
 
-.pg11AsideImgNotes {
+.page11__aside-img-notes {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.pg11AsideNotes2 {
+.page11__aside-notes2 {
     width: 50%;
     height: 100%;
     border: .4rem solid #A61C28;
@@ -157,12 +160,12 @@
     align-items: center;
 }
 
-.pg11AsideNotes2 p {
+.page11__aside-notes2 p {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
-.pg11Icon {
+.page11__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -172,11 +175,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg11Icon:hover {
+.page11__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page11__icon-left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -186,32 +189,31 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page11__icon-left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-    .pg11StyledTable {
+    .page11__table {
         margin-bottom: 15%;
     }
 
-    .pg11StyledTable th,
-    .pg11StyledTable td {
+    .page11__table th,
+    .page11__table td {
         padding: .5rem;
-
     }
 
-    .pg11InputCell {
+    .page11__table-input {
         height: calc(6vw * 0.85);
     }
 
-    .pg11AsideNotes1,
-    .pg11AsideNotes2 {
+    .page11__aside-notes1,
+    .page11__aside-notes2 {
         width: 100%;
     }
 
-    .pg11AsideNotes1 p,
-    .pg11AsideNotes2 p {
+    .page11__aside-notes1 p,
+    .page11__aside-notes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

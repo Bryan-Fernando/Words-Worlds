@@ -42,7 +42,7 @@
 }
 
 .pg50Main p {
-    cursor: pointer;
+    
     margin-bottom: 2rem;
 }
 
@@ -83,17 +83,16 @@
 }
 
 .pg50Icon {
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
     cursor: pointer;
+    position: relative;
+    top: 0.3rem;
+    left: 0.5rem;
     transition: transform 0.2s ease-in-out;
 }
 
 .pg50Icon:hover {
     transform: scale(1.1);
-}
-
-.pg50HeaderH2 {
-    cursor: pointer;
 }
 

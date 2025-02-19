@@ -96,8 +96,8 @@
 /* Ajuste da posição de cada caixa de texto separadamente */
 .page64__text--my-family { top: -125%; left: 95%; }
 .page64__text--married { top: 0%; left: -208%; }
-.page64__text--children { top: 20%; left: 320%; }
-.page64__text--sister { top: 125%; left: 50%; }
+.page64__text--children { top: 20%; left: 325%; }
+.page64__text--sister { top: 125%; left: 45%; }
 
 /* Ícones de Áudio no Cabeçalho */
 .page64__audio-icon {

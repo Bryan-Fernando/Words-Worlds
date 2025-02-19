@@ -106,7 +106,7 @@ const Pagina36 = () => {
         navigate('/pagina37', { state: { respostasUsuario: respostas, resultado } });
     };
 
-    
+
 
     const playAudio = (audioFile) => {
         if (currentAudioRef.current) {
@@ -120,31 +120,31 @@ const Pagina36 = () => {
     };
 
     return (
-        <div className={styles.pg36Container}>
-            <header className={styles.pg36Header}>
-                <h1 className={styles.pg36pageTitle}>
+        <div className={styles["page36__container"]}>
+            <header className={styles["page36__header"]}>
+                <h1 className={styles["page36__page--title"]}>
                     Learning Language Exercises
-                    <img src={eng_audio_icon} alt="English Audio" className={styles.pg36Icon} onClick={() => playAudio(global_learning_le_e)} />
-                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles.pg36Icon} onClick={() => playAudio(global_learning_le_p)} />
+                    <img src={eng_audio_icon} alt="English Audio" className={styles["page36__icon"]} onClick={() => playAudio(global_learning_le_e)} />
+                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page36__icon"]} onClick={() => playAudio(global_learning_le_p)} />
                 </h1>
-                <h2 className={styles.pg36questionText}>
+                <h2 className={styles["page36__question--text"]}>
                     Put the words in the correct order.
-                    <img src={eng_audio_icon} alt="English Audio" className={styles.pg36Icon} onClick={() => playAudio(global_put_tw_e)} />
-                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles.pg36Icon} onClick={() => playAudio(global_put_tw_p)} />
+                    <img src={eng_audio_icon} alt="English Audio" className={styles["page36__icon"]} onClick={() => playAudio(global_put_tw_e)} />
+                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page36__icon"]} onClick={() => playAudio(global_put_tw_p)} />
                 </h2>
             </header>
 
-            <div className={styles.pg36MainAsideContainer}>
-                <main className={styles.pg36MainContainer}>
-                    <div className={styles.pg36frases}>
+            <div className={styles["page36__main--aside--container"]}>
+                <main className={styles["page36__main--container"]}>
+                    <div className={styles["page36__frases"]}>
                         {respostasCorretas.map((_, fraseIndex) => (
-                            <div key={fraseIndex} className={styles.pg36fraseContainer}>
-                                <div className={styles.pg36frase}>
+                            <div key={fraseIndex} className={styles["page36__frase--container"]}>
+                                <div className={styles["page36__frase"]}>
                                     {frasesEmbaralhadas[fraseIndex] &&
                                         frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
                                             <div
                                                 key={wordIndex}
-                                                className={`${styles.pg36word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.pg36disabled : ''}`}
+                                                className={`${styles["page36__word"]} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles["page36__word--disabled"] : ''}`}
                                                 onClick={() => handleWordClick(fraseIndex, word)}
                                             >
                                                 {word}
@@ -152,12 +152,12 @@ const Pagina36 = () => {
                                         ))}
                                 </div>
 
-                                <div className={styles.pg36inputFrase}>
+                                <div className={styles["page36__input--frase"]}>
                                     {respostas[fraseIndex] &&
                                         respostas[fraseIndex].map((palavra, index) => (
                                             <div
                                                 key={index}
-                                                className={styles.pg36chip}
+                                                className={styles["page36__chip"]}
                                                 onClick={() => handleChipClick(fraseIndex, palavra)}
                                             >
                                                 {index === 0
@@ -169,17 +169,17 @@ const Pagina36 = () => {
                             </div>
                         ))}
                     </div>
-                    <button className={styles.pg36checkButton} onClick={verificarRespostas}>
+                    <button className={styles["page36__check--button"]} onClick={verificarRespostas}>
                         Check
                     </button>
                 </main>
 
-                <aside className={styles.pg36AsideContainer}>
-                    <div className={styles.pg36tabelaAfirmativaContainer}>
-                    <div className={styles.pg36tableHeaderAfirmativa} onClick={() => playAudio(afirmativaAudio)} style={{ cursor: 'pointer' }}>
+                <aside className={styles["page36__aside--container"]}>
+                    <div className={styles["page36__tabela--afirmativa--container"]}>
+                        <div className={styles["page36__table--header--afirmativa"]} onClick={() => playAudio(afirmativaAudio)} style={{ cursor: 'pointer' }}>
                             AFIRMATIVA
                         </div>
-                        <table className={styles.pg36styledTableAfirmativa}>
+                        <table className={styles["page36__styled--table--afirmativa"]}>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Sujeito</th>
@@ -191,11 +191,11 @@ const Pagina36 = () => {
                             </thead>
                         </table>
                     </div>
-                    <div className={styles.pg36tabelaNegativaContainer}>
-                    <div className={styles.pg36tableHeaderNegativa} onClick={() => playAudio(negativaAudio)} style={{ cursor: 'pointer' }}>
+                    <div className={styles["page36__tabela--negativa--container"]}>
+                        <div className={styles["page36__table--header--negativa"]} onClick={() => playAudio(negativaAudio)} style={{ cursor: 'pointer' }}>
                             NEGATIVA
                         </div>
-                        <table className={styles.pg36styledTableNegativa}>
+                        <table className={styles["page36__styled--table--negativa"]}>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Sujeito</th>
@@ -210,13 +210,14 @@ const Pagina36 = () => {
                         </table>
                     </div>
 
-                    <div className={styles.pg36ImagensContainer}>
-                        <img src={pagina36_imagem1} alt="Pássaro" className={styles.pg36Imagem} />
-                        <img src={pagina36_imagem2} alt="Lápis" className={styles.pg36Imagem} />
+                    <div className={styles["page36__imagens--container"]}>
+                        <img src={pagina36_imagem1} alt="Pássaro" className={styles["page36__imagem"]} />
+                        <img src={pagina36_imagem2} alt="Lápis" className={styles["page36__imagem"]} />
                     </div>
                 </aside>
             </div>
         </div>
+
     );
 };
 

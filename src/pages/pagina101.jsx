@@ -77,11 +77,11 @@ const Pagina101 = () => {
 
             return trimmedValue !== "" && trimmedValue === correctValue;
         });
-    
+
         setResults(newResults);
     };
-    
-    
+
+
 
     const handleInputChange = (value, index) => {
         setInputValues(prevValues => {
@@ -90,7 +90,7 @@ const Pagina101 = () => {
             return newValues;
         });
     };
-    
+
 
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
@@ -117,6 +117,7 @@ const Pagina101 = () => {
                     <table className={styles.pg101styledTableAfirmativa}>
                         <thead>
                             <tr className={styles.pg101celulatable}>
+                                <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo Auxiliar</th>
                                 <th>Adverb</th>
@@ -239,64 +240,64 @@ const Pagina101 = () => {
                             />
                         </p>
                         {[
-    "I ____ a student.",
-    "She ____ a doctor.",
-    "They ____ my friends.",
-    "We ____ from Italy.",
-    "The book ____ on the table.",
-    "John ____ at home right now.",
-    "Alice ____ a doctor.",
-    "Tom and Emily ____ in the park.",
-    "We ____ students.",
-    "The party ____ tonight."
-].map((question, index) => {
-    const parts = question.split('____');
-    const audioKey = `pg101_audio${index + 2}`;
+                            "I ____ a student.",
+                            "She ____ a doctor.",
+                            "They ____ my friends.",
+                            "We ____ from Italy.",
+                            "The book ____ on the table.",
+                            "John ____ at home right now.",
+                            "Alice ____ a doctor.",
+                            "Tom and Emily ____ in the park.",
+                            "We ____ students.",
+                            "The party ____ tonight."
+                        ].map((question, index) => {
+                            const parts = question.split('____');
+                            const audioKey = `pg101_audio${index + 2}`;
 
-    return (
-        <div key={index} className={styles.pg101Question}>
-            <span><em><strong>{index + 1}.</strong> {parts[0]}</em></span>
-            <div className={styles.pg101InputContainer}>
-                <input
-                    type="text"
-                    value={inputValues[index] || ""}
-                    onChange={(e) => handleInputChange(e.target.value, index)}
-                    className={styles.pg101InputBox}
-                />
-            </div>
-            <span><em>{parts[1]}</em></span>
-            <div className={styles.pg101IconsContainer}>
-                {results[index] !== null && (
-                    <img
-                        src={results[index] ? correct_icon : wrong_icon}
-                        alt={results[index] ? "Correct" : "Incorrect"}
-                        className={styles.pg101CheckmarkImage}
-                    />
-                )}
-                <img
-                    src={eng_audio_icon}
-                    alt="Audio Icon"
-                    className={styles.pg101AdditionalIcon}
-                    onClick={() => playAudio(audioKey)}
-                />
-                <img
-                    src={slow_audio_icon}
-                    alt="Volume Reduced Icon"
-                    className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
-                    onClick={() => toggleSpeedReduction(audioKey)}
-                />
-            </div>
-        </div>
-    );
-})}
+                            return (
+                                <div key={index} className={styles.pg101Question}>
+                                    <span><em><strong>{index + 1}.</strong> {parts[0]}</em></span>
+                                    <div className={styles.pg101InputContainer}>
+                                        <input
+                                            type="text"
+                                            value={inputValues[index] || ""}
+                                            onChange={(e) => handleInputChange(e.target.value, index)}
+                                            className={styles.pg101InputBox}
+                                        />
+                                    </div>
+                                    <span><em>{parts[1]}</em></span>
+                                    <div className={styles.pg101IconsContainer}>
+                                        {results[index] !== null && (
+                                            <img
+                                                src={results[index] ? correct_icon : wrong_icon}
+                                                alt={results[index] ? "Correct" : "Incorrect"}
+                                                className={styles.pg101CheckmarkImage}
+                                            />
+                                        )}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles.pg101AdditionalIcon}
+                                            onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={slow_audio_icon}
+                                            alt="Volume Reduced Icon"
+                                            className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
+                                            onClick={() => toggleSpeedReduction(audioKey)}
+                                        />
+                                    </div>
+                                </div>
+                            );
+                        })}
 
                     </div>
                     <div className={styles.pg101ContainerImagem}>
                         <img className={styles.pg101imagem} src={Pagina101_imagem2} alt="" />
                     </div>
                 </div>
+                <button className={styles.pg101CheckButton} onClick={handleCheckClick}><em>Check</em></button>
             </main>
-            <button className={styles.pg101CheckButton} onClick={handleCheckClick}><em>Check</em></button>
         </div>
     );
 };

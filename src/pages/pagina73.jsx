@@ -234,8 +234,9 @@ const pagina73 = () => {
                                 </div>
                             );
                         })}
-
-
+                    </div>
+                    <div className={styles.pg73ContainerImagem}>
+                        <img className={styles.pg73imagem1} src={pagina73_imagem1} alt="" />
                     </div>
 
                 </div>
@@ -316,7 +317,7 @@ const pagina73 = () => {
                         })}
 
                     </div>
-                    <div className={styles.pg73ContainerImagem}> <img className={styles.pg73imagem1} src={pagina73_imagem1} alt="" />
+                    <div className={styles.pg73ContainerImagem}>
                         <img className={styles.pg73imagem2} src={pagina73_imagem2} alt="" />
                     </div>
 

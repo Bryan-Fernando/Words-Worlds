@@ -8,7 +8,8 @@
     width: 100%;
     text-align: left;
     color: #A61C28;
-    grid-area: header; /* Define área do header */
+    grid-area: header;
+    /* Define área do header */
 }
 
 .page55__title {
@@ -17,26 +18,24 @@
 
 .page55__content {
     width: 100%;
-    height: 105rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 6rem;
-    grid-area: main; /* Define área do main */
+    grid-area: main;
+    /* Define área do main */
 }
 
 .page55__aside {
     width: 100%;
     display: flex;
-    grid-area: aside; /* Define área do aside */
+    grid-area: aside;
+    margin-top: 5%;
 }
-
-/* Este é um comentário */
 
 .page55__section-left {
     width: 100%;
-    height: 45rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +43,6 @@
 
 .page55__section-right {
     width: 100%;
-    height: 40rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -113,9 +111,8 @@
 }
 
 .page55__aside-container {
-    display: flex;
-    flex-direction: column;
     width: 100%;
+    height: fit-content;
 }
 
 .page55__image {

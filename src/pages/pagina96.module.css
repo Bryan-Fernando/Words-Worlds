@@ -11,31 +11,28 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-  }
+}
   
-  .pg96QuestionWordsContainer {
+.pg96QuestionWordsContainer {
     display: flex;
     justify-content: flex-start;
     gap: 2rem;
     margin-right: 25rem;
-  }
+}
   
-  
-  .pg96QuestionWord {
-    background-color: #d3d3d3; /* Cinza claro */
+.pg96QuestionWord {
+    background-color: #d3d3d3; 
     color: black;
     font-weight: bold;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 1.8rem;
-  }
+}
   
-  .pg96inputboxquestion3 {
+.pg96inputboxquestion3 {
     margin-top: 1rem;
-  }
-  
-  
+} 
 
 .pg96Header {
     width: 100%;
@@ -70,7 +67,7 @@
     text-align: left;
 }
 
-.pg96Questions{
+.pg96Questions {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -81,7 +78,7 @@
 
 .pg95Question p {
     margin-bottom: 1.5rem;
-    
+
 }
 
 .pg95Question span {
@@ -92,7 +89,7 @@
 
 .pg95InputBox {
     width: 100%;
-    padding: 0.8rem 3.5rem 0.8rem 0.8rem;
+    padding: .5rem;
     font-size: 1.8rem;
     background-color: lightgray;
     border: none;
@@ -113,6 +110,7 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
     margin: 2rem;
+    margin-bottom: 0;
     text-align: center;
     display: block;
     font-size: 2rem;
@@ -190,13 +188,13 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .pg96Question {
     display: flex;
     align-items: center;
-    
+
     font-size: 1.8rem;
 }
 
@@ -206,7 +204,7 @@
 
 .pg95InputBoxSmall {
     width: 20%;
-    padding: 8px;
+    padding: .5rem;
     font-size: 1.8rem;
     background-color: lightgray;
     border: none;
@@ -216,9 +214,9 @@
     text-align: left;
 }
 
-.pg96inputboxquestion3{
+.pg96inputboxquestion3 {
     width: 70%;
-    padding: 8px;
+    padding: .5rem;
     font-size: 1.6rem;
     background-color: lightgray;
     border: none;
@@ -252,7 +250,7 @@
 }
 
 .icon {
-    width: 2rem; 
+    width: 2rem;
     height: 2rem;
     position: relative;
     top: 0.4rem;
@@ -269,39 +267,39 @@
 
 .pg96HeaderIcon {
     width: 2rem;
-    height: 2rem; 
+    height: 2rem;
     margin-left: 1rem;
     position: relative;
     top: 0.4rem;
-    cursor: pointer; 
-    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
-.pg96Q3Icon{
+.pg96Q3Icon {
     width: 2rem;
-    height: 2rem; 
+    height: 2rem;
     position: relative;
     top: 0.4rem;
-    cursor: pointer; 
-    transition: transform 0.3s ease-in-out; 
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
 }
 
 .pg96HeaderIcon:hover {
-    transform: scale(1.2); 
+    transform: scale(1.2);
 }
 
 .pg95AudioIcon {
-    width: 2.2rem; 
-    height: 2.2rem;  
-    margin-left: 1rem;  
-    cursor: pointer; 
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-left: 1rem;
+    cursor: pointer;
     position: relative;
     top: 0.5rem;
-    transition: transform 0.3s ease-in-out;  
+    transition: transform 0.3s ease-in-out;
 }
 
 .pg95AudioIcon:hover {
-    transform: scale(1.2);  
+    transform: scale(1.2);
 }
 
 

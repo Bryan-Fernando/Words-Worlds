@@ -1,31 +1,31 @@
-.pg13Container {
+.page13__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg13Header {
+.page13__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg13HeaderH2 {
+.page13__header-h2 {
     color: black;
 }
 
-.pg13Main {
+.page13__main {
     width: 100%;
     text-align: center;
 }
 
-.pg13Aside {
+.page13__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.pg13TableHeader {
+.page13__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -36,25 +36,27 @@
     font-size: 2rem;
 }
 
+/* Estrutura da tabela */
 
-/* Este é um comentário */
-
-.pg13StyledTable {
+.page13__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg13StyledTable thead tr {
+.page13__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page13__table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg13StyledTable th,
-.pg13StyledTable td {
+.page13__table th,
+.page13__table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -62,17 +64,19 @@
     font-weight: bold;
 }
 
-.pg13StyledTable tbody tr {
+.page13__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg13StyledTable tbody tr:nth-child(even) {
+.page13__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg13InputCell {
+/* Estilos dos inputs dentro da tabela */
+
+.page13__table-input {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -85,41 +89,45 @@
     font-size: 1.8rem;
 }
 
-.pg13InputCell:focus {
+.page13__table-input:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg13InputCell::-webkit-scrollbar {
+.page13__table-input::-webkit-scrollbar {
     display: none;
 }
 
-.pg13Sujeito {
+/* Definição de largura das colunas */
+
+.page13__table-subject {
     width: calc(10vw * 0.85);
 }
 
-.pg13verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page13__table-auxiliary {
+    width: calc(10vw * 0.85);
 }
 
-.pg13Adverbio {
-    width: calc(12vw * 0.85)
+.page13__table-adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg13Verbo {
-    width: calc(12vw * 0.85)
+.page13__table-verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg13ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page13__table-complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg13Traducao {
-    width: (18vw * 0.85);
+.page13__table-translation {
+    width: calc(18vw * 0.85);
 }
 
-.pg13AsideNotes1 {
+/* Notas ao lado da tabela */
+
+.page13__aside-notes1 {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #A61C28;
@@ -134,17 +142,17 @@
     align-items: center;
 }
 
-.pg13AsideNotes1 p {
+.page13__aside-notes1 p {
     font-size: 1.5rem;
 }
 
-.pg13AsideImgNotes {
+.page13__aside-img-notes {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.pg13AsideNotes2 {
+.page13__aside-notes2 {
     width: 50%;
     height: 100%;
     border: .4rem solid #A61C28;
@@ -158,12 +166,14 @@
     align-items: center;
 }
 
-.pg13AsideNotes2 p {
+.page13__aside-notes2 p {
     font-size: 1.5rem;
     padding: 1vw;
 }
 
-.pg13Icon {
+/* Ícones interativos */
+
+.page13__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -173,11 +183,13 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg13Icon:hover {
+.page13__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+/* Ícone esquerdo */
+
+.page13__icon-left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -187,31 +199,33 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page13__icon-left:hover {
     transform: scale(1.2);
 }
 
+/* Responsividade */
+
 @media (max-width: 1024px) {
-    .pg13StyledTable {
+    .page13__table {
         margin-bottom: 15%;
     }
 
-    .pg13StyledTable th,
-    .pg13StyledTable td {
+    .page13__table th,
+    .page13__table td {
         padding: .5rem;
     }
 
-    .pg13InputCell {
+    .page13__table-input {
         height: calc(6vw * 0.85);
     }
 
-    .pg13AsideNotes1,
-    .pg13AsideNotes2 {
+    .page13__aside-notes1,
+    .page13__aside-notes2 {
         width: 100%;
     }
 
-    .pg13AsideNotes1 p,
-    .pg13AsideNotes2 p {
+    .page13__aside-notes1 p,
+    .page13__aside-notes2 p {
         padding: 1rem;
         font-size: 2.75rem;
     }

@@ -21,7 +21,12 @@ import audio3 from '../assets/audios/pg52_audio3.mp3';
 import audio4 from '../assets/audios/pg52_audio4.mp3';
 import audio5 from '../assets/audios/pg52_audio5.mp3';
 import audio6 from '../assets/audios/pg52_audio6.mp3';
-
+import audio2p from '../assets/audios/pg52_audio2p.mp3';
+import audio3p from '../assets/audios/pg52_audio3p.mp3';
+import audio4p from '../assets/audios/pg52_audio4p.mp3';
+import audio5p from '../assets/audios/pg52_audio5p.mp3';
+import audio6p from '../assets/audios/pg52_audio6p.mp3';
+import audio7p from '../assets/audios/pg52_audio7p.mp3';
 
 const Pagina52 = () => {
     const audioMap = {
@@ -34,6 +39,12 @@ const Pagina52 = () => {
         'pg52_audio4': audio4,
         'pg52_audio5': audio5,
         'pg52_audio6': audio6,
+        'pg52_audio2p': audio2p,
+        'pg52_audio3p': audio3p,
+        'pg52_audio4p': audio4p,
+        'pg52_audio5p': audio5p,
+        'pg52_audio6p': audio6p,
+        'pg52_audio7p': audio7p,
     };
 
     const currentAudio = useRef(null);
@@ -58,7 +69,7 @@ const Pagina52 = () => {
                         <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1p')} />
                     </h1>
                     <div className={styles.pg52HeaderH2H3}>
-                        <h2 className={styles.pg52HeaderH2} onClick={() => playAudio('pg52_audio2H')}>
+                        <h2 className={styles.pg52HeaderH2}>
                             That = Aquele / Aquela
                         </h2>
                     </div>
@@ -69,50 +80,123 @@ const Pagina52 = () => {
                             <div className={styles.pg52Div1Container1}>
                                 <img src={pagina52_imagem1} alt="Imagem 1" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio1')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is your office</span>
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio1')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio2p')}
+                                />
                             </p>
                         </div>
                         <div>
                             <div className={styles.pg52Div2Container1}>
                                 <img src={pagina52_imagem3} alt="Imagem 2" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio2')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is my brother John</span> in the green shirt and brown pants.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio2')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio3p')}
+                                />
                             </p>
                         </div>
                         <div>
                             <div className={styles.pg52Div3Container1}>
                                 <img src={pagina52_imagem5} alt="Imagem 3" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio3')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is my sister Joan</span> and my cousin Maria.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio3')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio4p')}
+                                />
                             </p>
                         </div>
                     </div>
+
                     <div className={styles.pg52Container2}>
                         <div>
                             <div className={styles.pg52Div1Container2}>
                                 <img src={pagina52_imagem2} alt="Imagem 4" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio4')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is Mr. Batista</span>, the new director.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio4')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio5p')}
+                                />
                             </p>
                         </div>
                         <div>
                             <div className={styles.pg52Div2Container2}>
                                 <img src={pagina52_imagem4} alt="Imagem 5" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio5')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is my cousin Gary</span>.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio5')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio6p')}
+                                />
                             </p>
                         </div>
                         <div>
                             <div className={styles.pg52Div3Container2}>
                                 <img src={pagina52_imagem6} alt="Imagem 6" className={styles.pg52Img} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv} onClick={() => playAudio('pg52_audio6')}>
+                            <p className={styles.pg52ParagrafoDiv}>
                                 <span>That is my sister Julia</span> <br />in the yellow blouse and blue skirt.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio6')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles.pg52Icon}
+                                    onClick={() => playAudio('pg52_audio7p')}
+                                />
                             </p>
                         </div>
                     </div>

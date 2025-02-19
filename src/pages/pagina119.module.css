@@ -1,0 +1,102 @@
+.page119__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.page119__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+}
+
+.page119__header--h1 {
+    font-size: 4rem;
+    color: #A61C28;
+}
+
+.page119__main {
+    width: 100%;
+    height: 105rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 5rem;
+}
+
+.page119__main--container1 {
+    padding: 1rem;
+    background-color: #F8F9F9;
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+    border: 0.4rem solid #A61C28;
+}
+
+.page119__header--divider {
+    display: block;
+    align-items: center;
+    position: relative;
+}
+
+.page119__header--icon {
+    width: 1.2rem;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.page119__subtitle {
+    font-size: 3rem;
+    margin-left: 1.4rem;
+}
+
+.page119__subtext {
+    font-size: 2rem;
+    color: #000;
+    margin-left: 1.4rem;
+}
+
+.page119__frame--text {
+    width: 41rem;
+    height: 12rem;
+    padding: 1rem;
+    text-align: left;
+    border: 0.3rem solid #A61C28;
+}
+
+.page119__container--text {
+    text-align: left;
+}
+
+.page119__text--red {
+    color: #A61C28;
+}
+
+.page119__frame--text--gray {
+    width: 74%;
+    height: 6rem;
+    background-color: #F7F7F7;
+    border: 0.4rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+}
+
+.page119__title--bold {
+    font-weight: bolder;
+}
+
+.page119__container--image {
+    width: 100%;
+    height: 65rem;
+    display: flex;
+    justify-content: center;
+}
+
+.page119__image {
+    width: 65rem;
+    height: 40rem;
+}

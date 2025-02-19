@@ -131,14 +131,14 @@ const Pagina100 = () => {
                 <div className={styles.pg100tabelaNegativaContainer}>
                     <div className={styles.pg100tableHeaderNegativa}>NEGATIVA</div>
                     <table className={styles.pg100styledTableNegativa}>
-                        <thead>
+                        <thead className={styles.pg100Thead}>
                             <tr className={styles.pg100celulatable}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th><span style={{ color: 'red' }}>Not</span> <br /> Adverb</th>
+                                <th>Verbo <br /> Auxiliar</th>
+                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>
@@ -236,14 +236,14 @@ const Pagina100 = () => {
                 <div className={styles.pg100tabelaNegativaContainer}>
                     <div className={styles.pg100tableHeaderNegativa}>NEGATIVA</div>
                     <table className={styles.pg100styledTableNegativa}>
-                        <thead>
+                        <thead className={styles.pg100Thead}>
                             <tr className={styles.pg100celulatable}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th><span style={{ color: 'red' }}>Not</span> <br /> Adverb</th>
+                                <th>Verbo <br /> Auxiliar</th>
+                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>

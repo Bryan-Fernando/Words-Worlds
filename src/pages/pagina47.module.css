@@ -44,6 +44,7 @@
 }
 
 .pg47Titulo {
+    align-self: start;
     font-weight: bold;
     color: #A61C28;
     font-size: 3rem;
@@ -53,10 +54,10 @@
 
 .pg47table {
     border-collapse: collapse;
-    width: auto; 
-    max-width: 50%; 
+    width: auto;
+    max-width: 50%;
     font-family: Arial, sans-serif;
-    margin-right: 5rem; 
+    margin-right: 5rem;
 }
 
 
@@ -77,8 +78,8 @@
 .pg47ContainerMain {
     display: flex;
     justify-content: space-between;
-    gap: 2rem; 
-    flex-wrap: wrap; 
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 
@@ -119,6 +120,10 @@
 }
 
 .pg47Exemplo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     text-align: left;
     padding: 1rem;
@@ -130,19 +135,13 @@
     padding-top: 4rem;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .pg47AsideImg1 {
     width: 39.5rem;
     height: 29rem;
     border-radius: 50%;
-}
-
-.pg47ContainerAsidetexto {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    cursor: pointer;
 }
 
 .pg47AsideTexto1 {
@@ -154,10 +153,22 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
+    position: absolute;
     margin: 1rem auto;
-    top: 10rem;
-    right: 13rem;
+    top: 86%;
+    right: 26%;
+}
+
+.pg47AsideTexto1::after {
+    content: '';
+    position: absolute;
+    top: -8.7rem;
+    left: 3.8rem;
+    width: 0;
+    height: 0;
+    border-bottom: 9.8rem solid #F8D7DA;
+    border-left: .3rem solid transparent;
+    border-right: 2rem solid transparent;
 }
 
 
@@ -170,10 +181,21 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
+    position: absolute;
     margin: 1rem auto;
-    top: 30rem;
-    left: 25rem;
+    top: 70%;
+    left: -8%;
+}
+
+.pg47AsideTexto2::after {
+    content: '';
+    position: absolute;
+    top: -3.7rem;
+    left: 5.8rem;
+    width: 0;
+    height: 0;
+    border-bottom: 4.8rem solid #C1D9F1;
+    border-left: 2.3rem solid transparent;
 }
 
 
@@ -186,11 +208,25 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
+    position: absolute;
     margin: 1rem auto;
-    top: 10rem;
-    right: 25rem;
+    top: 8%;
+    right: 31%;
 }
+
+.pg47AsideTexto3::before {
+    content: '';
+    position: absolute;
+    bottom: -4.7rem;
+    left: 3.8rem;
+    width: 0;
+    height: 0;
+    border-top: 5.8rem solid #C5E2BA;
+    border-left: 6.3rem solid transparent;
+    clip-path: polygon(54% 0, 78% 100%, 14% 0%);
+    background-color: #C5E2BA;
+}
+
 
 
 .pg47AsideTexto4 {
@@ -202,12 +238,66 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    position: relative;
+    position: absolute;
     margin: 1rem auto;
     margin-bottom: 2rem;
-    top: -10rem;
-    left: 20rem;
+    top: 8%;
+    right: -42%;
     cursor: pointer;
+}
+
+.pg47AsideTexto4::before {
+    content: '';
+    position: absolute;
+    bottom: -3.7rem;
+    left: -2.2rem;
+    width: 0;
+    height: 0;
+    border-top: 4.8rem solid #FFF7A6;
+    border-left: 5.3rem solid transparent;
+    clip-path: polygon(125% -6%, 0% 67%, 47% 0%);
+    background-color: #FFF7A6;
+}
+
+.pg47AsideTexto4::after {
+    content: '';
+    position: absolute;
+    bottom: -3.7rem;
+    left: 6.8rem;
+    width: 0;
+    height: 0;
+    border: 2rem solid #FFF7A6;
+    border-left: 0;
+}
+
+.pg47AsideTexto5 {
+    background-color: #FFF7A6;
+    height: auto;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    padding: 1rem;
+    position: absolute;
+    margin: 1rem auto;
+    margin-bottom: 2rem;
+    top: 38%;
+    right: -70%;
+    cursor: pointer;
+}
+
+.pg47AsideTexto1 p,
+.pg47AsideTexto1 strong,
+.pg47AsideTexto2 p,
+.pg47AsideTexto2 strong,
+.pg47AsideTexto3 p,
+.pg47AsideTexto3 strong,
+.pg47AsideTexto4 p,
+.pg47AsideTexto4 strong,
+.pg47AsideTexto5 p,
+.pg47AsideTexto5 strong {
+    font-size: 1.5rem;
 }
 
 .pg47AsideTraducao1 {
@@ -255,19 +345,19 @@
     border-radius: 1.5rem;
     padding: 1rem;
     margin-left: 1rem;
-    margin-top: 1rem; 
-    width: 64%; 
+    margin-top: 1rem;
+    width: 64%;
 }
 
 .pg47Traducao {
     text-align: left;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     gap: 0.5rem;
 }
 
 .pg47TraducaoTop {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     gap: 0.5rem;
     width: 65%;
@@ -276,7 +366,7 @@
 .pg47AsideTraducao1,
 .pg47AsideTraducao2,
 .pg47AsideTraducao3 {
-    flex: 1; 
+    flex: 1;
 }
 
 .pg47AsideTraducao1,

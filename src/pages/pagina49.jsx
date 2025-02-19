@@ -109,31 +109,31 @@ const Pagina49 = () => {
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio7')}>
                                         <span className={styles.pg49TextRed}>This is <span className={styles.underline}>my</span> cat.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio8')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Esta é <span className={styles.underline}>minha</span> gata.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio9')}>
                                         <span className={styles.pg49TextRed}>These are <span className={styles.underline}>his</span> friends.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio10')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Estes são os amigos <span className={styles.underline}>dele</span>.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio11')}>
                                         <span className={styles.pg49TextRed}>Those are <span className={styles.underline}>my</span> parents.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio12')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Esses são <span className={styles.underline}>meus</span> pais.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio13')}>
                                         <span className={styles.pg49TextRed}>Those are <span className={styles.underline}>your</span> shoes.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio14')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Esses são <span className={styles.underline}>seus</span> sapatos.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio15')}>
                                         <span className={styles.pg49TextRed}>This is <span className={styles.underline}>our</span> school.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio16')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Este é <span className={styles.underline}>nosso</span> colégio.</span>
                                     </li>
                                 </ul>
@@ -143,36 +143,37 @@ const Pagina49 = () => {
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio17')}>
                                         <span className={styles.pg49TextRed}>Those are <span className={styles.underline}>his</span> sunglasses.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio18')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Esses são os óculos de sol <span className={styles.underline}>dele</span>.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio19')}>
                                         <span className={styles.pg49TextRed}>These are <span className={styles.underline}>their</span> favorite flowers.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio20')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Estas são as flores favoritas <span className={styles.underline}>deles</span>.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio21')}>
                                         <span className={styles.pg49TextRed}>That is <span className={styles.underline}>her</span> laptop.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio22')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Aquele é o laptop <span className={styles.underline}>dela</span>.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio23')}>
                                         <span className={styles.pg49TextRed}>Those are <span className={styles.underline}>our</span> classmates.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio24')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Aqueles são <span className={styles.underline}>nossos</span> colegas de classe.</span>
                                     </li>
                                     <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio25')}>
                                         <span className={styles.pg49TextRed}>That is not <span className={styles.underline}>your</span> umbrella.</span>
                                     </li>
-                                    <li className={styles.pg49Item} onClick={() => playAudio('pg49_audio26')}>
+                                    <li className={styles.pg49Item}>
                                         <span>Aquele não é <span className={styles.underline}>seu</span> guarda-chuva.</span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
+
                     </div>
                 </main>
 

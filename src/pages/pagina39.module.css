@@ -1,4 +1,4 @@
-.pg39Container {
+.page39__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -6,24 +6,24 @@
     align-items: stretch;
 }
 
-.pg39ExerciseTitle {
+.page39__exercise--title {
     font-weight: bold;
     text-align: left;
     color: black;
     margin-bottom: 1%;
 }
 
-.pg39ExerciseQuestion {
+.page39__exercise--question {
     text-align: left;
     color: black;
     font-weight: 700;
 }
 
-.pg39Main {
+.page39__main {
     flex-direction: column;
 }
 
-.pg39Title {
+.page39__title {
     font-weight: bold;
     text-align: center;
     font-size: 2.8rem;
@@ -31,7 +31,7 @@
     margin-bottom: 2rem;
 }
 
-.pg39ImagesContainer {
+.page39__images--container {
     display: flex;
     justify-content: center;
     gap: 2rem;
@@ -39,7 +39,7 @@
     flex-wrap: wrap;
 }
 
-.pg39ImageBox {
+.page39__image--box {
     margin: 1rem;
     padding: 1rem;
     position: relative;
@@ -48,14 +48,14 @@
     align-items: center;
 }
 
-.pg39ImageBox img {
+.page39__image--box img {
     border: .4rem solid #A61C28;
     border-radius: .8rem;
     width: 30rem;
     height: 18rem;
 }
 
-.pg39InputBoxContainer {
+.page39__input--box--container {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -64,7 +64,7 @@
     margin-top: 1rem;
 }
 
-.pg39InputBox {
+.page39__input--box {
     border: .2rem solid #A61C28;
     border-radius: .8rem;
     padding: 1rem;
@@ -76,13 +76,13 @@
     text-align: center;
 }
 
-.pg39InputBox::placeholder {
+.page39__input--box::placeholder {
     color: rgb(119, 116, 116);
     text-align: center;
     font-size: 2rem;
 }
 
-.pg39CheckmarkImage {
+.page39__checkmark--image {
     position: absolute;
     top: 1.5rem;
     right: -2.5rem;
@@ -91,14 +91,14 @@
     border: none !important;
 }
 
-.pg39SentencesContainer {
+.page39__sentences--container {
     margin-top: 3rem;
     text-align: left;
     color: black;
     font-weight: 600;
 }
 
-.pg39Sentence {
+.page39__sentence {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -106,7 +106,7 @@
     position: relative;
 }
 
-.pg39Sentence p {
+.page39__sentence p {
     display: contents;
     margin: 0;
     font-weight: bold;
@@ -116,29 +116,29 @@
     width: 50%;
 }
 
-.pg39IconsContainer {
+.page39__icons--container {
     display: contents;
     align-items: left;
     gap: 1rem;
 }
 
-.pg39AudioIcon,
-.pg39Portugueseng_audio_icon,
-.pg39Volumeng_audio_icon {
+.page39__audio--icon,
+.page39__portugueseng--audio--icon,
+.page39__volumeng--audio--icon {
     margin: 0 0.5%;
     width: auto;
     height: 2.5rem;
     cursor: pointer;
 }
 
-.pg39AudioIcon.pg39Pulsing,
-.pg39Portugueseng_audio_icon.pg39Pulsing,
-.pg39Volumeng_audio_icon.pg39Pulsing {
+.page39__audio--icon.page39__pulsing,
+.page39__portugueseng--audio--icon.page39__pulsing,
+.page39__volumeng--audio--icon.page39__pulsing {
     animation: pulse 1s infinite;
     filter: brightness(1.2) saturate(1.5);
 }
 
-.pg39CheckButton {
+.page39__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -154,16 +154,16 @@
     font-size: 2rem;
 }
 
-.pg39CheckButton:hover {
+.page39__check--button:hover {
     background-color: #8a1720;
 }
 
-.pg39Volumeng_audio_icon {
+.page39__volumeng--audio--icon {
     position: relative;
     top: 0;
 }
 
-.pg39Portugueseng_audio_icon {
+.page39__portugueseng--audio--icon {
     position: relative;
     top: 0;
 }
@@ -182,31 +182,45 @@
     }
 }
 
-.pg39Volumeng_audio_icon.pg39Active {
+.page39__volumeng--audio--icon.page39__active {
     animation: pulse 1s infinite;
     filter: brightness(1.5) saturate(1.5);
     color: #A61C28;
 }
 
-.pg39AudioText {
+.page39__audio--text {
     display: flex;
     align-items: center;
+    text-align: left;
 }
 
-.pg39AudioText h2{
-    font-size: 2rem;
+.page39__audio--text2{
+    text-align: left;
+    font-size: 2.9rem;
 }
 
-.pg39Header img {
+.page39__header img {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-.page__paragraph {
+.page39__paragraph {
     text-align: left;
     color: #A61C28;
     font-weight: bold;
     position: relative;
     top: 2rem;
+}
+
+.page39__header--icon{
+    position: relative;
+    top: 1.7rem;
+    margin-right: 0.3rem;
+}
+
+.page39__header--icon2{
+    position: relative;
+    top: 0.3rem;
+    margin-right: 0.3rem;
 }

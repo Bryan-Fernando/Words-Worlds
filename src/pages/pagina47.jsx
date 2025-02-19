@@ -161,27 +161,22 @@ const Pagina47 = () => {
                 <aside className={styles.pg47Aside}>
                     <div className={styles.pg47Exemplo}>
                         <p className={styles.pg47Titulo}>Exemplo:</p>
-                        <div className={styles.pg47ContainerAsidetexto}>
-                            <div className={`${styles.pg47AsideTexto2}`} onClick={() => playAudio('pg47_audio13e')}>
-                                <p>Hi, Daniel!</p>
-                            </div>
+                        <div className={styles.pg47ExemploImg}>
+                            <img className={styles.pg47AsideImg1} src={pagina47_imagem1} alt="" />
                             <div className={`${styles.pg47AsideTexto1}`} onClick={() => playAudio('pg47_audio11e')}>
                                 <p>Nice to meet you, Daniel.</p>
+                            </div>
+                            <div className={`${styles.pg47AsideTexto2}`} onClick={() => playAudio('pg47_audio13e')}>
+                                <p>Hi, Daniel!</p>
                             </div>
                             <div className={`${styles.pg47AsideTexto3}`} onClick={() => playAudio('pg47_audio12e')}>
                                 <p>Welcome guys!</p>
                             </div>
-
-                        </div>
-                        <div className={styles.pg47ExemploImg}>
-                            <img className={styles.pg47AsideImg1} src={pagina47_imagem1} alt="" />
-                        </div>
-                        <div className={styles.pg47ExemploTexto}>
                             <div className={styles.pg47AsideTexto4} onClick={() => playAudio('pg47_audio14e')}>
                                 <p>This is <strong>my</strong> friend Daniel.<br />
                                     He is <strong>our</strong> web designer.</p>
                             </div>
-                            <div className={styles.pg47AsideTexto4} onClick={() => playAudio('pg47_audio15e')}>
+                            <div className={styles.pg47AsideTexto5} onClick={() => playAudio('pg47_audio15e')}>
                                 <p>Daniel, this is <strong>my</strong> childhood friend Karen<br />
                                     and this is <strong>her</strong> brother Ethan.<br />
                                     They will be working in the IT (Information Technology) department.</p>

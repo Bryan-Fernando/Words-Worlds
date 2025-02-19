@@ -1,25 +1,25 @@
-.pg29Container {
+.page29__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg29Header {
+.page29__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg29HeaderH2 {
+.page29__header--title {
     color: black;
 }
 
-.pg29Main {
+.page29__main {
     width: 100%;
     text-align: center;
 }
 
-.pg29TableHeader {
+.page29__table--header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -30,22 +30,25 @@
     font-size: 2rem;
 }
 
-.pg29StyledTable {
+.page29__table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg29StyledTable thead tr {
+.page29__table:nth-child(odd) {
+    margin-bottom: 0;
+}
+
+.page29__table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg29StyledTable th,
-.pg29StyledTable td {
+.page29__table th,
+.page29__table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -53,17 +56,17 @@
     font-weight: bold;
 }
 
-.pg29StyledTable tbody tr {
+.page29__table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg29StyledTable tbody tr:nth-child(even) {
+.page29__table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg29InputCell {
+.page29__input--cell {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -76,41 +79,41 @@
     font-size: 1.8rem;
 }
 
-.pg29InputCell:focus {
+.page29__input--cell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg29InputCell::-webkit-scrollbar {
+.page29__input--cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg29Sujeito {
+.page29__subject {
     width: calc(10vw * 0.85);
 }
 
-.pg29verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page29__auxiliary--verb {
+    width: calc(10vw * 0.85);
 }
 
-.pg29Adverbio {
-    width: calc(12vw * 0.85)
+.page29__adverb {
+    width: calc(12vw * 0.85);
 }
 
-.pg29Verbo {
-    width: calc(12vw * 0.85)
+.page29__verb {
+    width: calc(12vw * 0.85);
 }
 
-.pg29ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page29__objective--complement {
+    width: calc(18vw * 0.85);
 }
 
-.pg29Traducao {
-    width: (18vw * 0.85);
+.page29__translation {
+    width: calc(18vw * 0.85);
 }
 
-.pg29Icon {
+.page29__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -120,11 +123,11 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg29Icon:hover {
+.page29__icon:hover {
     transform: scale(1.2);
 }
 
-.page__icon__left {
+.page29__icon--left {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
@@ -134,22 +137,21 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.page__icon__left:hover {
+.page29__icon--left:hover {
     transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {
-    .pg29StyledTable {
+    .page29__table {
         margin-bottom: 15%;
     }
 
-    .pg29StyledTable th,
-    .pg29StyledTable td {
+    .page29__table th,
+    .page29__table td {
         padding: .5rem;
-
     }
 
-    .pg29InputCell {
+    .page29__input--cell {
         height: calc(6vw * 0.85);
     }
 }

@@ -29,14 +29,14 @@
 .pg105Questions {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     width: 50%;
     gap: 1.5rem;
     margin-bottom: 18rem;
 }
 
 .pg105TextRed {
-    color: #A61C28; 
+    color: #A61C28;
     font-size: 2rem;
     text-align: left;
 }
@@ -50,7 +50,7 @@
 
 .pg105Question {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: flex-start;
     font-size: 1.8rem;
 }
@@ -95,7 +95,7 @@
     display: flex;
 }
 
-.pg105AsideNotes2Preto{
+.pg105AsideNotes2Preto {
     margin-bottom: 2rem;
 }
 
@@ -114,8 +114,6 @@
     display: flex;
     flex-direction: column;
     width: 60%;
-    height: 40rem;
-
 }
 
 .pg105HeaderIcon {
@@ -135,7 +133,6 @@
 
 @media (max-width: 1024px) {
     .pg105ContainerQuestoes {
-        flex-direction: column;
         align-items: center;
         gap: 2rem;
     }

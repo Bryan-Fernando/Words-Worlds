@@ -35,75 +35,120 @@
 }
 
 .pg48Exemplo {
-    background-color: #F2F2F2; /* Fundo cinza claro */
+    background-color: #F2F2F2;
+    /* Fundo cinza claro */
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 10px;
-    text-align: left; /* Garante alinhamento à esquerda */
+    text-align: left;
+    /* Garante alinhamento à esquerda */
+    margin-bottom: 0;
 }
 
 .pg48TituloExemplo {
-    color: #A61C28; /* Vermelho para "Exemplo" */
+    color: #A61C28;
+    /* Vermelho para "Exemplo" */
     font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
 .pg48TituloTraducao {
-    color: #A61C28; /* Vermelho para "Tradução" */
+    color: #A61C28;
+    /* Vermelho para "Tradução" */
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
-.pg48ContainerAsidetexto {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-bottom: 2rem;
-}
-
 /* Balões de fala */
-.pg48AsideTexto1{
+.pg48AsideTexto1 {
     background-color: #FFF7A6;
     height: auto;
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     padding: 1rem;
     font-size: 1.2rem;
-    position: relative;
-    left: 15%;
+    position: absolute;
+    top: -7%;
+    left: 51%;
 }
 
-.pg48AsideTexto2{
-    background-color:  #C1D9F1;
+.pg48AsideTexto1::before {
+    content: '';
+    position: absolute;
+    bottom: -3.7rem;
+    left: 3.8rem;
+    width: 0;
+    height: 0;
+    border-top: 4.8rem solid #FFF7A6;
+    border-left: 5.3rem solid transparent;
+    clip-path: polygon(125% -6%, 0% 67%, 47% 0%);
+    background-color: #FFF7A6;
+}
+
+.pg48AsideTexto2 {
+    background-color: #C1D9F1;
     height: auto;
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     padding: 1rem;
     font-size: 1.2rem;
-    position: relative;
-    left: 45%;
+    position: absolute;
+    top: 0%;
+    left: 53%;
+}
+
+.pg48AsideTexto2::before {
+    content: '';
+    position: absolute;
+    bottom: -23.7rem;
+    left: 8.8rem;
+    width: 0;
+    height: 0;
+    border-top: 23.8rem solid #C1D9F1;
+    border-left: 11.3rem solid transparent;
+    clip-path: polygon(113% -6%, 0% 19%, 51% 1%);
+    background-color: #C1D9F1;
 }
 
 
 .pg48AsideTexto3 {
-    background-color: #FDCC98; 
+    background-color: #FDCC98;
     height: auto;
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
     padding: 1rem;
     font-size: 1.2rem;
-    position: relative;
+    position: absolute;
+    top: 100%;
     right: 40%;
+}
+
+.pg48AsideTexto3::after {
+    content: '';
+    position: absolute;
+    top: -8.7rem;
+    left: 17.8rem;
+    width: 0;
+    height: 0;
+    border-bottom: 9.8rem solid #FDCC98;
+    border-left: .3rem solid transparent;
+    border-right: 2rem solid transparent;
+}
+
+.pg48AsideTexto1 p,
+.pg48AsideTexto1 strong,
+.pg48AsideTexto2 p,
+.pg48AsideTexto2 strong,
+.pg48AsideTexto3 p,
+.pg48AsideTexto3 strong {
+    font-size: 1.5rem;
 }
 
 .pg48ExemploImg {
@@ -111,6 +156,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    position: relative;
 }
 
 .pg48AsideImg1,

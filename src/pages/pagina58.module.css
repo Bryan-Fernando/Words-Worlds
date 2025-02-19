@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 3rem;
     padding: 2rem;
+    padding-bottom: 0;
 }
 
 .page58__title {

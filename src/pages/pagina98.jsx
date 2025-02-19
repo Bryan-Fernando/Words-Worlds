@@ -152,18 +152,18 @@ const Pagina98 = () => {
                 <div className={styles.pg98tabelaAfirmativaContainer}>
                     <div className={styles.pg98tableHeaderAfirmativa}>AFIRMATIVA</div>
                     <table className={styles.pg98styledTableAfirmativa}>
-                        <thead>
+                        <thead className={styles.pg98Thead}>
                             <tr className={styles.pg98celulatable}>
+                                <th>Introdução</th>
                                 <th>Sujeito</th>
-                                <th>Verbo Auxiliar</th>
-                                <th>Adverb</th>
+                                <th>Verbo <br /> Auxiliar</th>
+                                <th>Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
-
                 <div className={styles.pg98PrimeirasQuestoes}>
                     <div className={styles.pg98ContainerQuestoes}>
                         <div className={styles.pg98Questions1}>
@@ -307,18 +307,17 @@ const Pagina98 = () => {
                         <div className={styles.pg98ContainerImagem}> <img className={styles.pg98imagem} src={pagina98_imagem2} alt="" /></div>
                     </div>
                 </div>
-                <div className={styles.pg98tabelaInterrogativaContainer}>
-                    <div className={styles.pg98tableHeaderInterrogativa}>INTERROGATIVA</div>
-                    <table className={styles.pg98styledTableInterrogativa}>
-                        <thead>
-                            <tr className={styles.pg98celulatable}>
-                                <th>verbo_auxiliar</th>
+                <div className={styles["page98__table-interrogative-container"]}>
+                    <div className={styles["page98__table-header-interrogative"]}>INTERROGATIVA</div>
+                    <table className={styles["page98__styled-table-interrogative"]}>
+                        <thead className={styles["page98__thead"]}>
+                            <tr className={styles["page98__table-row"]}>
+                                <th>Palavras <br /> Interrogativas</th>
+                                <th>Verbo <br /> Auxiliar</th>
                                 <th>Sujeito</th>
-                                <th>
-                                    <span style={{ color: 'red' }}>Not</span> <br /> Adverb
-                                </th>
+                                <th><span className={styles["highlight"]}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
-                                <th>Objeto Complemento</th>
+                                <th>Objeto <br /> Complemento</th>
                             </tr>
                         </thead>
                     </table>

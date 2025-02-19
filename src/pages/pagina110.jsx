@@ -28,33 +28,33 @@ import pg110_audio15 from '../assets/audios/pg110_audio15.mp3';
 import pg110_audio16 from '../assets/audios/pg110_audio16.mp3';
 
 const labelsWomen = [
-    { text: 'bracelet\n(pulseira)', top: '20%', left: '9%', audio: "pg110_audio2" },
-    { text: 'glasses\n(óculos)', top: '22%', left: '38%', audio: "pg110_audio3" },
-    { text: 'earrings\n(brincos)', top: '26%', left: '40%', audio: "pg110_audio4" },
-    { text: 't-shirt\n(camiseta)', top: '31%', left: '9%', audio: "pg110_audio5" },
-    { text: 'jacket\n(jaqueta)', top: '32%', left: '38%', audio: "pg110_audio6" },
-    { text: 'handbag\n(bolsa de mão)', top: '37%', left: '9%', audio: "pg110_audio7" },
-    { text: 'shorts\n(Bermuda/shorts)', top: '39%', left: '35%', audio: "pg110_audio8" },
-    { text: 'boots\n(botas)', top: '57%', left: '31%', audio: "pg110_audio9" }
+    { text: 'bracelet\n(pulseira)', top: '8%', left: '9%', audio: "pg110_audio2" },
+    { text: 'glasses\n(óculos)', top: '10%', left: '77%', audio: "pg110_audio3" },
+    { text: 'earrings\n(brincos)', top: '17%', left: '65%', audio: "pg110_audio4" },
+    { text: 't-shirt\n(camiseta)', top: '26%', left: '20%', audio: "pg110_audio5" },
+    { text: 'jacket\n(jaqueta)', top: '31%', left: '78%', audio: "pg110_audio6" },
+    { text: 'handbag\n(bolsa de mão)', top: '37%', left: '13%', audio: "pg110_audio7" },
+    { text: 'shorts\n(Bermuda/shorts)', top: '45%', left: '74%', audio: "pg110_audio8" },
+    { text: 'boots\n(botas)', top: '77%', left: '69%', audio: "pg110_audio9" }
 ];
 
 
 const labelsMen = [
-    { text: 'blazer\n(blazer)', top: '27%', left: '86%', backgroundColor: '#B9DCEF', audio: "pg110_audio10" },
-    { text: 'shirt\n(camisa)', top: '28%', left: '65%', backgroundColor: '#B9DCEF', audio: "pg110_audio11" },
-    { text: 'tie\n(gravata)', top: '32.3%', left: '65%', backgroundColor: '#B9DCEF', audio: "pg110_audio12" },
-    { text: 'belt\n(cinto)', top: '37.5%', left: '64.3%', backgroundColor: '#B9DCEF', audio: "pg110_audio13" },
-    { text: 'wrist watch\n(relógio de pulso)', top: '39%', left: '88%', backgroundColor: '#B9DCEF', audio: "pg110_audio14" },
-    { text: 'sport pants\n(calças esportivas)', top: '45%', left: '86%', backgroundColor: '#B9DCEF', audio: "pg110_audio15" },
-    { text: 'shoes\n(sapatos)', top: '61%', left: '64%', backgroundColor: '#B9DCEF', audio: "pg110_audio16" }
+    { text: 'blazer\n(blazer)', top: '27%', left: '73%', backgroundColor: '#B9DCEF', audio: "pg110_audio10" },
+    { text: 'shirt\n(camisa)', top: '22%', left: '28%', backgroundColor: '#B9DCEF', audio: "pg110_audio11" },
+    { text: 'tie\n(gravata)', top: '31.3%', left: '29%', backgroundColor: '#B9DCEF', audio: "pg110_audio12" },
+    { text: 'belt\n(cinto)', top: '41.5%', left: '27.3%', backgroundColor: '#B9DCEF', audio: "pg110_audio13" },
+    { text: 'wrist watch\n(relógio de pulso)', top: '44%', left: '78%', width: '25%', backgroundColor: '#B9DCEF', audio: "pg110_audio14" },
+    { text: 'sport pants\n(calças esportivas)', top: '58%', left: '70%', width: '25%', backgroundColor: '#B9DCEF', audio: "pg110_audio15" },
+    { text: 'shoes\n(sapatos)', top: '85%', left: '75%', backgroundColor: '#B9DCEF', audio: "pg110_audio16" }
 ];
 
 
 const Label = ({ text, top, left, backgroundColor, audio }) => (
     <div className={styles.pg110Label} style={{ top, left, backgroundColor }}>
-        <p 
-            dangerouslySetInnerHTML={{ __html: text }} 
-            onClick={() => playAudio(audio)} 
+        <p
+            dangerouslySetInnerHTML={{ __html: text }}
+            onClick={() => playAudio(audio)}
             style={{ cursor: "pointer" }}
         ></p>
         <div className={styles.arrow}></div>

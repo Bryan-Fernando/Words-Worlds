@@ -83,7 +83,7 @@
 }
 
 .page62__image {
-    width: 100%;
+    width: 70%;
     height: auto;
 }
 
@@ -127,11 +127,11 @@
 
 .page62__extra-block--center {
     background-color: #F8F9F9;
-    border: 0.4rem solid #A61C28; 
+    border: 0.4rem solid #A61C28;
     border-radius: 1rem;
     width: 20%;
     text-align: left;
-    height: 4rem;
+    height: fit-content;
     box-shadow: 0rem 0.2rem 0.5rem rgba(0, 0, 0, 0.1);
 }
 

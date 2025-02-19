@@ -23,20 +23,20 @@ import pg4_audio13p from '../assets/audios/pg4_audio13p.mp3';
 import pg4_audio14p from '../assets/audios/pg4_audio14p.mp3';
 import pg4_audio15p from '../assets/audios/pg4_audio15p.mp3';
 import pg4_audio16p from '../assets/audios/pg4_audio16p.mp3';
-import imastu from '../assets/audios/imastu.mp3';
-import heisateacher from '../assets/audios/heisateacher.mp3';
-import sheismarried from '../assets/audios/sheismarried.mp3';
-import itshot from '../assets/audios/itshot.mp3';
-import wearebrazil from '../assets/audios/wearebrazil.mp3';
-import youaresingle from '../assets/audios/youaresingle.mp3';
-import theyarefromport from '../assets/audios/theyarefromport.mp3';
-import imnotspanish from '../assets/audios/imnotspanish.mp3';
-import heisnotalaw from '../assets/audios/heisnotalaw.mp3';
-import sheisnotsingle from '../assets/audios/sheisnotsingle.mp3';
-import itsnotcold from '../assets/audios/itsnotcold.mp3';
-import werenotportuguese from '../assets/audios/werenotportuguese.mp3';
-import yourenotitalian from '../assets/audios/yourenotitalian.mp3';
-import theyarenotbrazil from '../assets/audios/theyarenotbrazil.mp3';
+import pg4_audio3e from '../assets/audios/pg4_audio3e.mp3';
+import pg4_audio4e from '../assets/audios/pg4_audio4e.mp3';
+import pg4_audio5e from '../assets/audios/pg4_audio5e.mp3';
+import pg4_audio6e from '../assets/audios/pg4_audio6e.mp3';
+import pg4_audio7e from '../assets/audios/pg4_audio7e.mp3';
+import pg4_audio8e from '../assets/audios/pg4_audio8e.mp3';
+import pg4_audio9e from '../assets/audios/pg4_audio9e.mp3';
+import pg4_audio10e from '../assets/audios/pg4_audio10e.mp3';
+import pg4_audio11e from '../assets/audios/pg4_audio11e.mp3';
+import pg4_audio12e from '../assets/audios/pg4_audio12e.mp3';
+import pg4_audio13e from '../assets/audios/pg4_audio13e.mp3';
+import pg4_audio14e from '../assets/audios/pg4_audio14e.mp3';
+import pg4_audio15e from '../assets/audios/pg4_audio15e.mp3';
+import pg4_audio16e from '../assets/audios/pg4_audio16e.mp3';
 
 
 
@@ -146,7 +146,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(imastu)}
+                                    onClick={() => playAudio(pg4_audio3e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -162,7 +162,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(heisateacher)}
+                                    onClick={() => playAudio(pg4_audio4e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -177,7 +177,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(sheismarried)}
+                                    onClick={() => playAudio(pg4_audio5e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -192,7 +192,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(itshot)}
+                                    onClick={() => playAudio(pg4_audio6e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -208,7 +208,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(wearebrazil)}
+                                    onClick={() => playAudio(pg4_audio7e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -223,7 +223,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(youaresingle)}
+                                    onClick={() => playAudio(pg4_audio8e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -238,7 +238,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(theyarefromport)}
+                                    onClick={() => playAudio(pg4_audio9e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -259,7 +259,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(imnotspanish)}
+                                    onClick={() => playAudio(pg4_audio10e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -275,7 +275,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(heisnotalaw)}
+                                    onClick={() => playAudio(pg4_audio11e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -290,7 +290,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(sheisnotsingle)}
+                                    onClick={() => playAudio(pg4_audio12e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -305,7 +305,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(itsnotcold)}
+                                    onClick={() => playAudio(pg4_audio13e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -321,7 +321,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(werenotportuguese)}
+                                    onClick={() => playAudio(pg4_audio14e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -336,7 +336,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(yourenotitalian)}
+                                    onClick={() => playAudio(pg4_audio15e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
@@ -351,7 +351,7 @@ const Pagina4 = () => {
                                     src={eng_audio_icon}
                                     alt="English Audio"
                                     className={styles["page4__icon"]}
-                                    onClick={() => playAudio(theyarenotbrazil)}
+                                    onClick={() => playAudio(pg4_audio16e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}

@@ -140,24 +140,24 @@ const Pagina40 = () => {
     };
 
     return (
-        <div className={styles.pg40Container}>
-            <header className={styles.pg40Header}>
-                <h1 className={styles.pg40AudioText} style={{ color: '#A61C28' }}>
+        <div className={styles["page40__container"]}>
+            <header className={styles["page40__header"]}>
+                <h1 className={styles["page40__audio--text"]} style={{ color: '#A61C28' }}>
                     Exercise:
                     <img
                         src={eng_audio_icon}
                         alt="English Audio"
-                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        className={styles["page40__header--icon"]}
                         onClick={() => tocarAudio(pg39_audio1e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese Audio"
-                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        className={styles["page40__header--icon"]}
                         onClick={() => tocarAudio(pg39_audio1p)}
                     />
                 </h1>
-                <h2 className={styles.pg40AudioText} style={{ marginLeft: '-1.5rem' }}>
+                <h2 className={styles["page40__audio--text2"]}>
                     2. Matching Exercises (Match the sentence with the correct image/description)
                     <img
                         src={eng_audio_icon}
@@ -172,7 +172,7 @@ const Pagina40 = () => {
                         onClick={() => tocarAudio(pg39_audio2p)}
                     />
                 </h2>
-                <p className={styles.pg40AudioText}>
+                <p className={styles["page40__audio--text"]}>
                     Match the sentence (A-E) with the correct picture or description (1-5):
                     <img
                         src={eng_audio_icon}
@@ -187,17 +187,17 @@ const Pagina40 = () => {
                         onClick={() => tocarAudio(pg39_audio3p)}
                     />
                 </p>
-                <p className={styles.page__paragraph}>Clique ou digite</p>
+                <p className={styles["page40__paragraph"]}>Clique ou digite</p>
             </header>
-            <main className={styles.pg40Main}>
-                <div className={styles.pg40ImagesContainer}>
+            <main className={styles["page40__main"]}>
+                <div className={styles["page40__images--container"]}>
                     {[pagina40_imagem1, pagina40_imagem2, pagina40_imagem3, pagina40_imagem4, pagina40_imagem5].map((image, index) => (
-                        <div key={index} className={styles.pg40ImageBox}>
+                        <div key={index} className={styles["page40__image--box"]}>
                             <img src={image} alt={`Image ${index + 1}`} />
-                            <div className={styles.pg40InputBoxContainer}>
+                            <div className={styles["page40__input--box--container"]}>
                                 <input
                                     type="text"
-                                    className={styles.pg40InputBox}
+                                    className={styles["page40__input--box"]}
                                     placeholder="Place here"
                                     value={inputValues[index]}
                                     onChange={(e) => {
@@ -210,46 +210,47 @@ const Pagina40 = () => {
                                     <img
                                         src={results[index] ? correct_icon : wrong_icon}
                                         alt={results[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg40CheckmarkImage}
+                                        className={styles["page40__checkmark--image"]}
                                     />
                                 )}
                             </div>
                         </div>
                     ))}
                 </div>
-                <div className={styles.pg40SentencesContainer}>
+                <div className={styles["page40__sentences--container"]}>
                     <p><strong>Sentences:</strong></p>
                     {displayedSentences.map((sentence, index) => (
-                        <div key={index} className={styles.pg40Sentence} onClick={() => handleSentenceClick(sentence)}>
+                        <div key={index} className={styles["page40__sentence"]} onClick={() => handleSentenceClick(sentence)}>
                             <p><strong>{String.fromCharCode(65 + index)}) {sentence}</strong></p>
-                            <div className={styles.pg40IconsContainer}>
+                            <div className={styles["page40__icons--container"]}>
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio Icon"
-                                    className={`${styles.pg40AudioIcon} ${pulsingAudioEnglishIndex === index ? styles.pg40Pulsing : ''}`}
+                                    className={`${styles["page40__audio--icon"]} ${pulsingAudioEnglishIndex === index ? styles["page40__pulsing"] : ''}`}
                                     onClick={(e) => handleAudioClick(index, false, e)}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio Icon"
-                                    className={`${styles.pg40Portugueseng_audio_icon} ${pulsingAudioPortugueseIndex === index ? styles.pg40Pulsing : ''}`}
+                                    className={`${styles["page40__portuguese--audio--icon"]} ${pulsingAudioPortugueseIndex === index ? styles["page40__pulsing"] : ''}`}
                                     onClick={(e) => handleAudioClick(index, true, e)}
                                 />
                                 <img
                                     src={slow_audio_icon}
                                     alt="Reduce Speed Icon"
-                                    className={`${styles.pg40Volumeng_audio_icon} ${isSpeedReduced[index] ? styles.pg40Active : ''}`}
+                                    className={`${styles["page40__volume--audio--icon"]} ${isSpeedReduced[index] ? styles["page40__active"] : ''}`}
                                     onClick={(e) => reduzirVelocidade(index, e)}
                                 />
                             </div>
                         </div>
                     ))}
                 </div>
-                <button className={styles.pg40CheckButton} onClick={handleCheckClick}>
+                <button className={styles["page40__check--button"]} onClick={handleCheckClick}>
                     Check
                 </button>
             </main>
         </div>
+
     );
 };
 

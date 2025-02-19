@@ -117,7 +117,7 @@
 
 .page91__input-box {
     width: 18rem;
-    padding: 0.5rem 2.1875rem 0.5rem 0.5rem;
+    padding: .5rem;
     font-size: 1.8rem;
     background-color: lightgray;
     border: none;
@@ -205,9 +205,11 @@
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.1);
     }
+
     100% {
         transform: scale(1);
     }

@@ -1,12 +1,20 @@
 .pg89__container {
-    max-width: 1100px;
     margin: auto;
-    padding: 20px;
+    padding: 2rem;
 }
 
 .pg89__header {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+}
+
+.pg89__main {
+    justify-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    gap: 5rem;
 }
 
 .pg89__title {
@@ -20,7 +28,9 @@
     margin-bottom: 20px;
     color: #a50000;
 }
+
 .pg89__questions-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -89,6 +99,8 @@
     display: block;
     font-size: 2rem;
     width: fit-content;
+    justify-self: start;
+    align-self: start;
 }
 
 .pg89__check-button:hover {

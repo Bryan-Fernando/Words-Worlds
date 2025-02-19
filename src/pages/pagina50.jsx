@@ -25,6 +25,14 @@ import audio5 from '../assets/audios/pg50_audio5.mp3';
 import audio6 from '../assets/audios/pg50_audio6.mp3';
 import audio7 from '../assets/audios/pg50_audio7.mp3';
 import audio8 from '../assets/audios/pg50_audio8.mp3';
+import pg50_audio2p from '../assets/audios/pg50_audio2p.mp3';
+import pg50_audio3p from '../assets/audios/pg50_audio3p.mp3';
+import pg50_audio4p from '../assets/audios/pg50_audio4p.mp3';
+import pg50_audio5p from '../assets/audios/pg50_audio5p.mp3';
+import pg50_audio6p from '../assets/audios/pg50_audio6p.mp3';
+import pg50_audio7p from '../assets/audios/pg50_audio7p.mp3';
+import pg50_audio8p from '../assets/audios/pg50_audio8p.mp3';
+import pg50_audio9p from '../assets/audios/pg50_audio9p.mp3';
 
 const Pagina50 = () => {
     const audioMap = {
@@ -39,6 +47,14 @@ const Pagina50 = () => {
         pg50_audio6: audio6,
         pg50_audio7: audio7,
         pg50_audio8: audio8,
+        pg50_audio2p,
+        pg50_audio3p,
+        pg50_audio4p,
+        pg50_audio5p,
+        pg50_audio6p,
+        pg50_audio7p,
+        pg50_audio8p,
+        pg50_audio9p
     };
     
 
@@ -78,128 +94,188 @@ const Pagina50 = () => {
                     </div>
                     <div className={styles.pg50HeaderH2H3}>
                         <h2
-                            className={styles.pg50HeaderH2}
-                            onClick={() => playAudio('pg50_audio2H')}
-                            style={{ cursor: 'pointer' }}
-                        >
+                            className={styles.pg50HeaderH2}>
                             This = Este / Esta / Esse / Essa
                         </h2>
                     </div>
                 </header>
 
                 <main className={styles.pg50Main}>
-                    <div className={styles.pg50Container1}>
-                        <div>
-                            <div className={styles.pg50Div1Container1}>
-                                <img src={pagina50_imagem1} alt="Imagem 1" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio1')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Mother</strong> <br />
-                                This is my mother, Susan. She is a teacher
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div2Container1}>
-                                <img src={pagina50_imagem3} alt="Imagem 3" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio2')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Sister</strong> <br />
-                                This is my sister, Emily. She is a student.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div3Container1}>
-                                <img src={pagina50_imagem5} alt="Imagem 5" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio3')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Grandmother</strong> <br />
-                                This is my grandmother, Mary. She loves
-                                gardening.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div4Container1}>
-                                <img src={pagina50_imagem7} alt="Imagem 7" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio4')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Aunt</strong> <br />
-                                This is my aunt, Linda. She is a talented
-                                artist.
-                            </p>
-                        </div>
-                    </div>
-                    <div className={styles.pg50Container2}>
-                        <div>
-                            <div className={styles.pg50Div1Container2}>
-                                <img src={pagina50_imagem2} alt="Imagem 2" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio5')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Father</strong> <br />
-                                This is my father, John. He is an engineer.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div2Container2}>
-                                <img src={pagina50_imagem4} alt="Imagem 4" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio6')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Brother</strong> <br />
-                                This is my brother, Michael. He is a doctor.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div3Container2}>
-                                <img src={pagina50_imagem6} alt="Imagem 6" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio7')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Grandfather</strong> <br />
-                                This is my grandfather, Robert. He enjoys
-                                fishing.
-                            </p>
-                        </div>
-                        <div>
-                            <div className={styles.pg50Div4Container2}>
-                                <img src={pagina50_imagem8} alt="Imagem 8" className={styles.pg50Img} />
-                            </div>
-                            <p
-                                className={styles.pg50ParagrafoDiv}
-                                onClick={() => playAudio('pg50_audio8')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <strong style={{ fontSize: '3rem' }}>Uncle</strong> <br />
-                                This is my uncle, Peter. He loves to travel
-                            </p>
-                        </div>
-                    </div>
-                </main>
+    <div className={styles.pg50Container1}>
+        <div>
+            <div className={styles.pg50Div1Container1}>
+                <img src={pagina50_imagem1} alt="Imagem 1" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Mother</strong> <br />
+                This is my mother, Susan. She is a teacher
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio1')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio2p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div2Container1}>
+                <img src={pagina50_imagem3} alt="Imagem 3" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Sister</strong> <br />
+                This is my sister, Emily. She is a student.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio2')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio3p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div3Container1}>
+                <img src={pagina50_imagem5} alt="Imagem 5" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Grandmother</strong> <br />
+                This is my grandmother, Mary. She loves gardening.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio3')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio4p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div4Container1}>
+                <img src={pagina50_imagem7} alt="Imagem 7" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Aunt</strong> <br />
+                This is my aunt, Linda. She is a talented artist.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio4')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio5p')}
+                />
+            </p>
+        </div>
+    </div>
+    
+    <div className={styles.pg50Container2}>
+        <div>
+            <div className={styles.pg50Div1Container2}>
+                <img src={pagina50_imagem2} alt="Imagem 2" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Father</strong> <br />
+                This is my father, John. He is an engineer.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio5')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio6p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div2Container2}>
+                <img src={pagina50_imagem4} alt="Imagem 4" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Brother</strong> <br />
+                This is my brother, Michael. He is a doctor.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio6')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio7p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div3Container2}>
+                <img src={pagina50_imagem6} alt="Imagem 6" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Grandfather</strong> <br />
+                This is my grandfather, Robert. He enjoys fishing.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio7')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio8p')}
+                />
+            </p>
+        </div>
+        <div>
+            <div className={styles.pg50Div4Container2}>
+                <img src={pagina50_imagem8} alt="Imagem 8" className={styles.pg50Img} />
+            </div>
+            <p className={styles.pg50ParagrafoDiv}>
+                <strong style={{ fontSize: '3rem' }}>Uncle</strong> <br />
+                This is my uncle, Peter. He loves to travel.
+                <img
+                    src={iconeE}
+                    alt="English Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio8')}
+                />
+                <img
+                    src={iconeP}
+                    alt="Portuguese Audio"
+                    className={styles.pg50Icon}
+                    onClick={() => playAudio('pg50_audio9p')}
+                />
+            </p>
+        </div>
+    </div>
+</main>
+
             </div>
         </div>
     );

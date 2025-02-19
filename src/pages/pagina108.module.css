@@ -39,6 +39,10 @@
     table-layout: fixed;
 }
 
+.pg108StyledTable:nth-child(odd) {
+    margin-bottom: 0;
+}
+
 .pg108StyledTable thead tr {
     background-color: #888A8C;
     color: white;

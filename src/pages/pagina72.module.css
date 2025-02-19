@@ -73,7 +73,7 @@
 
 .pg72InputBox {
     width: 100%;
-    padding: 8px 35px 8px 8px;
+    padding: .5rem;
     font-size: 1.8rem;
     background-color: lightgray;
     border: none;
@@ -141,7 +141,6 @@
 .pg72imagem {
     width: 100%;
     height: auto;
-    margin-bottom: 5rem;
 }
 
 .pg72tabelaAfirmativaContainer,
@@ -315,9 +314,11 @@
     0% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.2);
     }
+
     100% {
         transform: scale(1);
     }

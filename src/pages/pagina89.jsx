@@ -175,11 +175,11 @@ const Pagina89 = () => {
                         ))}
                     </div>
                 </div>
+                <button className={styles["pg89__check-button"]} onClick={handleCheckClick}>
+                    <em>Check</em>
+                </button>
             </main>
 
-            <button className={styles["pg89__check-button"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
         </div>
     );
 };

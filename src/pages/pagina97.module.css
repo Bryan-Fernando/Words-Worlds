@@ -78,7 +78,7 @@
 
 .pg97InputBox {
     width: 100%;
-    padding: 8px 35px 8px 8px;
+    padding: .5rem;
     font-size: 1.6rem;
     background-color: lightgray;
     border: none;
@@ -113,6 +113,7 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
     margin: 2rem;
+    margin-bottom: 0;
     text-align: center;
     display: block;
     font-size: 2rem;
@@ -145,13 +146,11 @@
     transform: scale(1.2);
 }
 
-.pg97tabelaAfirmativaContainer,
-.pg97tabelaInterrogativaContainer {
-    width: 70%;
+.pg97tabelaAfirmativaContainer {
+    width: 100%;
 }
 
-.pg97tableHeaderAfirmativa,
-.pg97tableHeaderInterrogativa {
+.pg97tableHeaderAfirmativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -163,16 +162,15 @@
     margin-bottom: 0.2rem;
 }
 
-.pg97styledTableAfirmativa,
-.pg97styledTableInterrogativa {
+.pg97styledTableAfirmativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-.pg97styledTableAfirmativa th,
-.pg97styledTableInterrogativa th {
+
+.pg97styledTableAfirmativa th{
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -184,6 +182,54 @@
 
 .pg97celulatable {
     height: 7rem;
+}
+
+.page97__table-container {
+    width: 90rem;
+    height: 10rem;
+}
+
+.page97__table-interrogative-container {
+    width: 90rem;
+    height: 10rem;
+    width: 100%;
+}
+
+.page97__table-header-interrogative {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.page97__styled-table-interrogative {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.page97__thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.page97__styled-table-interrogative th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border: 0.0625rem solid #A61C28;
 }
 
 .pg97ContainerImagem {
@@ -201,7 +247,8 @@
     width: 15%;
 }
 
-.pg97HeaderIcon, .pg97AdditionalIcon {
+.pg97HeaderIcon,
+.pg97AdditionalIcon {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
@@ -209,8 +256,10 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.pg97HeaderIcon:hover, .pg97AdditionalIcon:hover {
-    transform: scale(1.2);  /* Aumenta o ícone ao passar o mouse */
+.pg97HeaderIcon:hover,
+.pg97AdditionalIcon:hover {
+    transform: scale(1.2);
+    /* Aumenta o ícone ao passar o mouse */
 }
 
 

@@ -49,58 +49,58 @@ const Pagina31 = () => {
 
     return (
         <div>
-            <div className={styles.pg31Container}>
-                <header className={styles.pg31Header}>
-                    <h1 className={styles.pg31AudioText}>
+            <div className={styles["page31__container"]}>
+                <header className={styles["page31__header"]}>
+                    <h1 className={styles["page31__audio--text"]}>
                         Grammar
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.pg31Icon}
+                            className={styles["page31__icon"]}
                             onClick={() => playAudio(global_grammar)}
                         />
                     </h1>
-                    <h2 className={styles.pg31AudioText} style={{ color: "black" }}>
+                    <h2 className={styles["page31__audio--text"]} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles.pg31Icon}
+                            className={styles["page31__icon"]}
                             onClick={() => playAudio(global_simple_present)}
                         />
                     </h2>
-                    <h3 className={styles.pg31AudioText}>
+                    <h3 className={styles["page31__audio--text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles.pg31Icon}
+                            className={styles["page31__icon"]}
                             onClick={() => playAudio(global_verbo_to_be)}
                         />
                     </h3>
                 </header>
-                <main className={styles.pg31Main}>
+                <main className={styles["page31__main"]}>
                     <div>
                         <div
-                            className={styles.pg31TableHeader}
+                            className={styles["page31__table--header"]}
                             onClick={() => playAudio(negativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             <img
                                 src={white_play_icon}
                                 alt="White icon"
-                                className={styles.page__icon__left}
+                                className={styles["page31__icon--left"]}
                             />
                             NEGATIVE
                         </div>
-                        <table className={styles.pg31StyledTable}>
+                        <table className={styles["page31__table--styled"]}>
                             <colgroup>
-                                <col className={styles.pg31Sujeito} />
-                                <col className={styles.pg31verbo_auxiliar} />
-                                <col className={styles.pg31Adverbio} />
-                                <col className={styles.pg31Verbo} />
-                                <col className={styles.pg31ObjetivoComplemento} />
-                                <col className={styles.pg31Traducao} />
+                                <col className={styles["page31__subject"]} />
+                                <col className={styles["page31__auxiliary--verb"]} />
+                                <col className={styles["page31__adverb"]} />
+                                <col className={styles["page31__verb"]} />
+                                <col className={styles["page31__objective--complement"]} />
+                                <col className={styles["page31__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -108,7 +108,7 @@ const Pagina31 = () => {
                                     <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>'Not'<br /> Adverb</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}><span style={{ color: "red" }}>'Not'</span><br /> Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
@@ -143,14 +143,14 @@ const Pagina31 = () => {
                                 </tr>
                             </tbody>
                         </table>
-                        <table className={styles.pg31StyledTable}>
+                        <table className={styles["page31__table--styled"]}>
                             <colgroup>
-                                <col className={styles.pg31Sujeito} />
-                                <col className={styles.pg31verbo_auxiliar} />
-                                <col className={styles.pg31Adverbio} />
-                                <col className={styles.pg31Verbo} />
-                                <col className={styles.pg31ObjetivoComplemento} />
-                                <col className={styles.pg31Traducao} />
+                                <col className={styles["page31__subject"]} />
+                                <col className={styles["page31__auxiliary--verb"]} />
+                                <col className={styles["page31__adverb"]} />
+                                <col className={styles["page31__verb"]} />
+                                <col className={styles["page31__objective--complement"]} />
+                                <col className={styles["page31__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -158,7 +158,7 @@ const Pagina31 = () => {
                                     <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>'Not'<br /> Adverb</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}><span style={{ color: "red" }}>'Not'</span><br /> Adverb</th>
                                     <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
@@ -172,7 +172,7 @@ const Pagina31 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg31InputCell}
+                                                    className={styles["page31__input--cell"]}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"
