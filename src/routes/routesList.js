@@ -35,7 +35,6 @@ import Pagina34 from "../pages/pagina34";
 import Pagina35 from "../pages/pagina35";
 import Pagina36 from "../pages/pagina36";
 import Pagina37 from "../pages/pagina37";
-import Pagina38 from "../pages/pagina38";
 import Pagina39 from "../pages/pagina39";
 import Pagina40 from "../pages/pagina40";
 import Pagina41 from "../pages/pagina41";
@@ -168,7 +167,6 @@ const routes = [
   { path: "/pagina35", Component: Pagina35 },
   { path: "/pagina36", Component: Pagina36 },
   { path: "/pagina37", Component: Pagina37 },
-  { path: "/pagina38", Component: Pagina38 },
   { path: "/pagina39", Component: Pagina39 },
   { path: "/pagina40", Component: Pagina40 },
   { path: "/pagina41", Component: Pagina41 },
