@@ -5,32 +5,57 @@ import styles from "./pagina64.module.css";
 import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
 import ptbr_audio_icon from "../assets/icons/ptbr_audio_icon.webp";
 
-import imagemUnica from "../assets/images/pagina64_imagem1.webp"; 
-import segundaImagem from "../assets/images/pagina64_imagem2.webp"; 
-import terceiraImagem from "../assets/images/pagina64_imagem3.webp";  
-import quartaImagem from "../assets/images/pagina64_imagem4.webp";  
-import quintaImagem from "../assets/images/pagina64_imagem5.webp";  
-import sextaImagem from "../assets/images/pagina64_imagem6.webp"; 
+import imagemUnica from "../assets/images/pagina64_imagem1.webp";
+import segundaImagem from "../assets/images/pagina64_imagem2.webp";
+import terceiraImagem from "../assets/images/pagina64_imagem3.webp";
+import quartaImagem from "../assets/images/pagina64_imagem4.webp";
+import quintaImagem from "../assets/images/pagina64_imagem5.webp";
+import sextaImagem from "../assets/images/pagina64_imagem6.webp";
 import setimaImagem from "../assets/images/pagina64_imagem7.webp";
 
 import pg64_audio1e from "../assets/audios/pg64_audio1e.mp3";
 import pg64_audio1p from "../assets/audios/pg64_audio1p.mp3";
-import pg64_audio2 from "../assets/audios/pg64_audio2.mp3";
-import pg64_audio3 from "../assets/audios/pg64_audio3.mp3";
-import pg64_audio4 from "../assets/audios/pg64_audio4.mp3";
-import pg64_audio5 from "../assets/audios/pg64_audio5.mp3";
+import pg64_audio2_1e from "../assets/audios/pg64_audio2_1e.mp3";
+import pg64_audio2_2e from "../assets/audios/pg64_audio2_2e.mp3";
+import pg64_audio2_3e from "../assets/audios/pg64_audio2_3e.mp3";
+import pg64_audio2_4e from "../assets/audios/pg64_audio2_4e.mp3";
+import pg64_audio2_5e from "../assets/audios/pg64_audio2_5e.mp3";
+import pg64_audio2_6e from "../assets/audios/pg64_audio2_6e.mp3";
+import pg64_audio3_1e from "../assets/audios/pg64_audio3_1e.mp3";
+import pg64_audio3_2e from "../assets/audios/pg64_audio3_2e.mp3";
+import pg64_audio3_3e from "../assets/audios/pg64_audio3_3e.mp3";
+import pg64_audio3_4e from "../assets/audios/pg64_audio3_4e.mp3";
+import pg64_audio3_5e from "../assets/audios/pg64_audio3_5e.mp3";
+import pg64_audio4_1e from "../assets/audios/pg64_audio4_1e.mp3";
+import pg64_audio4_2e from "../assets/audios/pg64_audio4_2e.mp3";
+import pg64_audio4_3e from "../assets/audios/pg64_audio4_3e.mp3";
+import pg64_audio4_4e from "../assets/audios/pg64_audio4_4e.mp3";
+import pg64_audio5_1e from "../assets/audios/pg64_audio5_1e.mp3";
+import pg64_audio5_2e from "../assets/audios/pg64_audio5_2e.mp3";
 
 const Pagina64 = () => {
 
   const audioMap = {
     pg64_audio1e: pg64_audio1e,
     pg64_audio1p: pg64_audio1p,
-    pg64_audio2: pg64_audio2,
-    pg64_audio3: pg64_audio3,
-    pg64_audio4: pg64_audio4,
-    pg64_audio5: pg64_audio5,
+    pg64_audio2_1e: pg64_audio2_1e,
+    pg64_audio2_2e: pg64_audio2_2e,
+    pg64_audio2_3e: pg64_audio2_3e,
+    pg64_audio2_4e: pg64_audio2_4e,
+    pg64_audio2_5e: pg64_audio2_5e,
+    pg64_audio2_6e: pg64_audio2_6e,
+    pg64_audio3_1e: pg64_audio3_1e,
+    pg64_audio3_2e: pg64_audio3_2e,
+    pg64_audio3_3e: pg64_audio3_3e,
+    pg64_audio3_4e: pg64_audio3_4e,
+    pg64_audio3_5e: pg64_audio3_5e,
+    pg64_audio4_1e: pg64_audio4_1e,
+    pg64_audio4_2e: pg64_audio4_2e,
+    pg64_audio4_3e: pg64_audio4_3e,
+    pg64_audio4_4e: pg64_audio4_4e,
+    pg64_audio5_1e: pg64_audio5_1e,
+    pg64_audio5_2e: pg64_audio5_2e,
   };
-
 
   const playAudio = (audioKey) => {
     const audioSrc = audioMap[audioKey];
@@ -64,7 +89,6 @@ const Pagina64 = () => {
         </h1>
       </header>
 
-      {/* Imagem única - Preenche toda a página */}
       <div className={styles["page64__background-container"]}>
         <img
           src={imagemUnica}
@@ -73,10 +97,8 @@ const Pagina64 = () => {
         />
       </div>
 
-      {/* Imagens adicionais separadas com moldura */}
       <div className={styles["page64__main"]}>
 
-        {/* Imagem 2 */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--my-family"]}`}
         >
@@ -91,13 +113,17 @@ const Pagina64 = () => {
             className={`${styles["page64__text-box"]} ${styles["page64__text--my-family"]}`}
           >
             <p onClick={() => playAudio("pg64_audio2")} style={{ cursor: "pointer" }}>
-              <strong>My Family.</strong> <br /> Hi! I'm Indira Alves França. I'm an educator/pedagogue.
-              I am from Paraty – Brazil. I'm Brazilian. I'm 37 years old.
+              <span onClick={() => playAudio("pg64_audio2_1e")}><strong>My Family.</strong></span> <br />
+              <span onClick={() => playAudio("pg64_audio2_2e")}>Hi! I'm Indira Alves França. </span>
+              <span onClick={() => playAudio("pg64_audio2_3e")}>I'm an educator/pedagogue.</span>
+              <span onClick={() => playAudio("pg64_audio2_4e")}>I am from Paraty – Brazil. </span>
+              <span onClick={() => playAudio("pg64_audio2_5e")}>I'm Brazilian. </span>
+              <span onClick={() => playAudio("pg64_audio2_6e")}>I'm 37 years old.</span>
             </p>
+
           </div>
         </div>
 
-        {/* Imagem 3 */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--married"]}`}
         >
@@ -112,13 +138,16 @@ const Pagina64 = () => {
             className={`${styles["page64__text-box"]} ${styles["page64__text--married"]}`}
           >
             <p onClick={() => playAudio("pg64_audio3")} style={{ cursor: "pointer" }}>
-              I am married to Sergio França. He is a journalist. He is also Brazilian,
-              from Paraty. He is 39 years old. We are a married couple.
+              <span onClick={() => playAudio("pg64_audio3_1e")}>I am married to Sergio França. </span>
+              <span onClick={() => playAudio("pg64_audio3_2e")}>He is a journalist. </span>
+              <span onClick={() => playAudio("pg64_audio3_3e")}>He is also Brazilian, from Paraty. </span>
+              <span onClick={() => playAudio("pg64_audio3_4e")}>He is 39 years old. </span>
+              <span onClick={() => playAudio("pg64_audio3_5e")}>We are a married couple.</span>
             </p>
+
           </div>
         </div>
 
-        {/* Imagem 4 - Children */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--children"]}`}
         >
@@ -129,20 +158,21 @@ const Pagina64 = () => {
               className={styles["page64__image"]}
             />
           </div>
-          {/* Envolvendo o texto com um wrapper separado */}
           <div className={styles["page64__text-wrapper"]}>
             <div
               className={`${styles["page64__text-box"]} ${styles["page64__text--children"]}`}
             >
               <p onClick={() => playAudio("pg64_audio4")} style={{ cursor: "pointer" }}>
-                We have two children. Our son, Eduardo is 10 (ten) years old. Our daughter,
-                Alice is 9 (nine) years old. They're both in elementary school.
+                <span onClick={() => playAudio("pg64_audio4_1e")}>We have two children. </span>
+                <span onClick={() => playAudio("pg64_audio4_2e")}>Our son, Eduardo is 10 (ten) years old. </span>
+                <span onClick={() => playAudio("pg64_audio4_3e")}>Our daughter, Alice is 9 (nine) years old. </span>
+                <span onClick={() => playAudio("pg64_audio4_4e")}>They're both in elementary school.</span>
               </p>
+
             </div>
           </div>
         </div>
 
-        {/* Imagem 5 - Sister */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--sister"]}`}
         >
@@ -153,19 +183,20 @@ const Pagina64 = () => {
               className={styles["page64__image"]}
             />
           </div>
-          {/* Envolvendo o texto com um wrapper separado */}
+
           <div className={styles["page64__text-wrapper"]}>
             <div
               className={`${styles["page64__text-box"]} ${styles["page64__text--sister"]}`}
             >
               <p onClick={() => playAudio("pg64_audio5")} style={{ cursor: "pointer" }}>
-                My sister Marilia Alves is single. Currently in the Bahamas, on vacation.
+                <span onClick={() => playAudio("pg64_audio5_1e")}>My sister Marilia Alves is single. </span>
+                <span onClick={() => playAudio("pg64_audio5_2e")}>Currently in the Bahamas, on vacation.</span>
               </p>
+
             </div>
           </div>
         </div>
 
-        {/* Imagem 6 */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation1"]}`}
         >
@@ -178,7 +209,6 @@ const Pagina64 = () => {
           </div>
         </div>
 
-        {/* Imagem 7 */}
         <div
           className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation2"]}`}
         >

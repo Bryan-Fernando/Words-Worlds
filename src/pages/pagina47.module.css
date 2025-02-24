@@ -381,3 +381,12 @@
 .pg47HeaderH3 {
     cursor: pointer;
 }
+
+.pg47AsideTexto1, .pg47AsideTexto2, .pg47AsideTexto3{
+    cursor: pointer;
+}
+
+.pg47LastLi{
+    position: relative;
+    right: 1.2rem;
+}

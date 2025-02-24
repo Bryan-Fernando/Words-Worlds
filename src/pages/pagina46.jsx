@@ -14,8 +14,10 @@ import its_audio from '../assets/audios/its_audio.mp3';
 import our_audio from '../assets/audios/our_audio.mp3';
 import your_audio from '../assets/audios/your_audio.mp3';
 import theirAudio from '../assets/audios/theirAudio.mp3';
-import audio1e from '../assets/audios/pg46_audio1e.mp3';
-import audio2e from '../assets/audios/pg46_audio2e.mp3';
+import audio1_1e from '../assets/audios/pg46_audio1_1e.mp3';
+import audio1_2e from '../assets/audios/pg46_audio1_2e.mp3';
+import audio2_1e from '../assets/audios/pg46_audio2_1e.mp3';
+import audio2_2e from '../assets/audios/pg46_audio2_2e.mp3';
 import audio1p from '../assets/audios/pg46_audio1p.mp3';
 import audio2p from '../assets/audios/pg46_audio2p.mp3';
 
@@ -28,8 +30,10 @@ const Pagina46 = () => {
         'our_audio': our_audio,
         'your_audio': your_audio,
         'theirAudio': theirAudio,
-        'pg46_audio1e': audio1e,
-        'pg46_audio2e': audio2e,
+        'pg46_audio1_1e': audio1_1e,
+        'pg46_audio1_2e': audio1_2e,
+        'pg46_audio2_1e': audio2_1e,
+        'pg46_audio2_2e': audio2_2e,
         'pg46_audio1p': audio1p,
         'pg46_audio2p': audio2p,
     };
@@ -119,11 +123,13 @@ const Pagina46 = () => {
                     <div className={styles.pg46Exemplo}>
                         <p> <strong>Exemplo: </strong></p>
                         <div className={styles.pg46ExemploImg}>
-                            <div className={styles.pg46AsideTexto1} onClick={() => playAudio('pg46_audio1e')} style={{ cursor: 'pointer' }}>
-                                <p>Emily: Yes, I’m proud of our progress.<br /> <strong>Our</strong> hard work is paying off.</p>
+                            <div className={styles.pg46AsideTexto1} >
+                                <div className={styles.pg46_icon2}>2</div>
+                                <p> <span onClick={() => playAudio('pg46_audio1_1e')} style={{ cursor: 'pointer' }}>Emily: Yes, I’m proud of our progress.</span><br />  <span onClick={() => playAudio('pg46_audio1_2e')} style={{ cursor: 'pointer' }}><strong>Our</strong> hard work is paying off.</span></p>
                             </div>
-                            <div className={styles.pg46AsideTexto2} onClick={() => playAudio('pg46_audio2e')} style={{ cursor: 'pointer' }}>
-                                <p>Alex: This project is going really well. <br /> <strong>Our</strong> team has put in  a lot of</p>
+                            <div className={styles.pg46AsideTexto2}>
+                                <div className={styles.pg46_icon1}>1</div>
+                                <p> <span onClick={() => playAudio('pg46_audio2_1e')} style={{ cursor: 'pointer' }}>Alex: This project is going really well. </span><br />  <span onClick={() => playAudio('pg46_audio2_2e')} style={{ cursor: 'pointer' }}><strong>Our</strong> team has put in  a lot of effort</span></p>
                             </div>
                             <img className={styles.pg46AsideImg1} src={pagina46_imagem1} alt="" />
                         </div>
@@ -131,9 +137,11 @@ const Pagina46 = () => {
                     <div className={styles.pg46Traducao}>
                         <p> <strong>Tradução:</strong></p>
                         <div className={styles.pg46AsideTraducao1} onClick={() => playAudio('pg46_audio1p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles.pg46_icon1_2}>1</div>
                             <p>Alex: Este projeto está indo muito bem. <strong>Nossa</strong> equipe tem se esforçado muito.</p>
                         </div>
                         <div className={styles.pg46AsideTraducao2} onClick={() => playAudio('pg46_audio2p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles.pg46_icon2_2}>2</div>
                             <p>Emily: Sim, estou orgulhoso do nosso progresso. <strong>Nosso</strong>  trabalho duro está valendo a pena.</p>
                         </div>
                     </div>

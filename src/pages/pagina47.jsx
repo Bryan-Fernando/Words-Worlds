@@ -27,8 +27,11 @@ import audio10e from '../assets/audios/pg47_audio10e.mp3';
 import audio11e from '../assets/audios/pg47_audio11e.mp3';
 import audio12e from '../assets/audios/pg47_audio12e.mp3';
 import audio13e from '../assets/audios/pg47_audio13e.mp3';
-import audio14e from '../assets/audios/pg47_audio14e.mp3';
-import audio15e from '../assets/audios/pg47_audio15e.mp3';
+import audio14_1e from '../assets/audios/pg47_audio14_1e.mp3';
+import audio14_2e from '../assets/audios/pg47_audio14_2e.mp3';
+import audio15_1e from '../assets/audios/pg47_audio15_1e.mp3';
+import audio15_2e from '../assets/audios/pg47_audio15_2e.mp3';
+import audio15_3e from '../assets/audios/pg47_audio15_3e.mp3';
 import audio1p from '../assets/audios/pg47_audio1p.mp3';
 import audio2p from '../assets/audios/pg47_audio2p.mp3';
 import audio3p from '../assets/audios/pg47_audio3p.mp3';
@@ -56,8 +59,11 @@ const Pagina47 = () => {
         'pg47_audio11e': audio11e,
         'pg47_audio12e': audio12e,
         'pg47_audio13e': audio13e,
-        'pg47_audio14e': audio14e,
-        'pg47_audio15e': audio15e,
+        'pg47_audio14_1e': audio14_1e,
+        'pg47_audio14_2e': audio14_2e,
+        'pg47_audio15_1e': audio15_1e,
+        'pg47_audio15_2e': audio15_2e,
+        'pg47_audio15_3e': audio15_3e,
         'pg47_audio1p': audio1p,
         'pg47_audio2p': audio2p,
         'pg47_audio3p': audio3p,
@@ -153,7 +159,7 @@ const Pagina47 = () => {
                                 <li onClick={() => playAudio('pg47_audio7e')}><strong>His</strong> dad is an engineer.</li>
                                 <li onClick={() => playAudio('pg47_audio8e')}><strong>Her</strong> parents are Canadian.</li>
                                 <li onClick={() => playAudio('pg47_audio9e')}><strong>Our</strong> neighbor is French.</li>
-                                <li onClick={() => playAudio('pg47_audio10e')}><strong>Your</strong> sister is smart.</li>
+                                <li onClick={() => playAudio('pg47_audio10e')} className={styles.pg47LastLi}><strong>Your</strong> sister is smart.</li>
                             </ol>
                         </div>
                     </div>
@@ -172,14 +178,14 @@ const Pagina47 = () => {
                             <div className={`${styles.pg47AsideTexto3}`} onClick={() => playAudio('pg47_audio12e')}>
                                 <p>Welcome guys!</p>
                             </div>
-                            <div className={styles.pg47AsideTexto4} onClick={() => playAudio('pg47_audio14e')}>
-                                <p>This is <strong>my</strong> friend Daniel.<br />
-                                    He is <strong>our</strong> web designer.</p>
+                            <div className={styles.pg47AsideTexto4}>
+                                <p> <span onClick={() => playAudio('pg47_audio14_1e')}>This is <strong>my</strong> friend Daniel. </span><br />
+                                <span onClick={() => playAudio('pg47_audio14_2e')}>He is <strong>our</strong> web designer.</span></p>
                             </div>
-                            <div className={styles.pg47AsideTexto5} onClick={() => playAudio('pg47_audio15e')}>
-                                <p>Daniel, this is <strong>my</strong> childhood friend Karen<br />
-                                    and this is <strong>her</strong> brother Ethan.<br />
-                                    They will be working in the IT (Information Technology) department.</p>
+                            <div className={styles.pg47AsideTexto5}>
+                                <p> <span onClick={() => playAudio('pg47_audio15_1e')}> Daniel, this is <strong>my</strong> childhood friend Karen </span><br />
+                                <span onClick={() => playAudio('pg47_audio15_2e')}>and this is <strong>her</strong> brother Ethan. </span><br />
+                                <span onClick={() => playAudio('pg47_audio15_3e')}>They will be working in the IT (Information Technology) department.</span></p>
                             </div>
                         </div>
                     </div>

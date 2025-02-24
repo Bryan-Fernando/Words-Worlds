@@ -82,7 +82,7 @@ const Pagina60 = () => {
 
         <main className={styles['page60__main']}>
             <div className={styles['page60__notes']}>
-                <div className={styles['page60__notes-icon']}>!</div> {/* Ícone no canto superior esquerdo */}
+                <div className={styles['page60__notes-icon']}>!</div>
                 <p style={{ fontWeight: 'bold', margin: 0 }}>
                     a.m = before noon (antes de meio-dia) <br />
                     p.m = after noon (depois de meio-dia)

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import styles from './pagina41.module.css';
 
@@ -55,6 +55,7 @@ const Pagina41 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState(Array(10).fill(false));
+    const currentAudioRef = useRef(null);
 
     const correctAnswers = [
         'is', 'go', 'meets', 'plays', 'is',
@@ -77,7 +78,6 @@ const Pagina41 = () => {
         audio.play();
     };
 
-
     const playAudio = (index, language) => {
         const audio = new Audio(audioFiles[index][language]);
         audio.playbackRate = isSpeedReduced[index] ? 0.60 : 1;
@@ -91,8 +91,8 @@ const Pagina41 = () => {
     };
 
     return (
-        <div className={styles.pg41Container}>
-            <h1 className={styles.pg41Title} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+        <div className={styles["page41__container"]}>
+            <h1 className={styles["page41__title"]} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                 Learning Language Exercises
                 <span>
                     <img
@@ -110,7 +110,7 @@ const Pagina41 = () => {
                 </span>
             </h1>
 
-            <h2 className={styles.pg41ExerciseTitle} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <h2 className={styles["page41__exercise-title"]} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                 Fill in the blanks in the Present Simple with the verbs in parentheses.
                 <span>
                     <img
@@ -128,7 +128,7 @@ const Pagina41 = () => {
                 </span>
             </h2>
 
-            <div className={styles.pg41QuestionsContainer}>
+            <div className={styles["page41__questions-container"]}>
                 {[
                     "My favorite color ____ blue. (be)",
                     "They ____ to the movies every Friday. (go)",
@@ -143,45 +143,45 @@ const Pagina41 = () => {
                 ].map((question, index) => {
                     const parts = question.split('____');
                     return (
-                        <div key={index} className={styles.pg41Question}>
+                        <div key={index} className={styles["page41__question"]}>
                             <span>
                                 <em>
                                     <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
                                 </em>
                             </span>
-                            <div className={styles.pg41InputContainer}>
+                            <div className={styles["page41__input-container"]}>
                                 <input
                                     type="text"
                                     value={inputValues[index]}
                                     onChange={(e) => handleInputChange(e.target.value, index)}
-                                    className={styles.pg41InputBox}
+                                    className={styles["page41__input-box"]}
                                 />
                                 {results[index] !== null && (
                                     <img
                                         src={results[index] ? correct_icon : wrong_icon}
                                         alt={results[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg41CheckmarkImage}
+                                        className={styles["page41__checkmark-image"]}
                                     />
                                 )}
                             </div>
                             <span><em>{parts[1]}</em></span>
-                            <div className={styles.pg41IconsContainer}>
+                            <div className={styles["page41__icons-container"]}>
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg41AdditionalIcon}
+                                    className={styles["page41__icon--additional"]}
                                     onClick={() => playAudio(index, "en")}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg41AdditionalIcon}
+                                    className={styles["page41__icon--additional"]}
                                     onClick={() => playAudio(index, "pt")}
                                 />
                                 <img
                                     src={slow_audio_icon}
                                     alt="Volume Reduced Icon"
-                                    className={`${styles.pg41AdditionalIcon} ${isSpeedReduced[index] ? styles.pg41Pulsing : ''}`}
+                                    className={`${styles["page41__icon--additional"]} ${isSpeedReduced[index] ? styles["page41__icon--pulsing"] : ''}`}
                                     onClick={() => toggleSpeedReduction(index)}
                                 />
                             </div>
@@ -190,12 +190,13 @@ const Pagina41 = () => {
                 })}
             </div>
 
-            <button className={styles.pg41CheckButton} onClick={handleCheckClick}><em>Check</em></button>
-            <div className={styles.pg41ImagesContainer}>
-                <img src={pagina41_imagem1} alt="Basketball" className={styles.pg41ImageBasketball} />
-                <img src={pagina41_imagem2} alt="Choir" className={styles.pg41ImageChoir} />
+            <button className={styles["page41__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
+            <div className={styles["page41__images-container"]}>
+                <img src={pagina41_imagem1} alt="Basketball" className={styles["page41__image--basketball"]} />
+                <img src={pagina41_imagem2} alt="Choir" className={styles["page41__image--choir"]} />
             </div>
         </div>
+
     );
 };
 

@@ -15,8 +15,10 @@ import its_audio from '../assets/audios/its_audio.mp3';
 import our_audio from '../assets/audios/our_audio.mp3';
 import your_audio from '../assets/audios/your_audio.mp3';
 import theirAudio from '../assets/audios/theirAudio.mp3';
-import audio1e from '../assets/audios/pg45_audio1e.mp3';
-import audio2e from '../assets/audios/pg45_audio2e.mp3';
+import audio1_1e from '../assets/audios/pg45_audio1_1e.mp3';
+import audio1_2e from '../assets/audios/pg45_audio1_2e.mp3';
+import audio2_1e from '../assets/audios/pg45_audio2_1e.mp3';
+import audio2_2e from '../assets/audios/pg45_audio2_2e.mp3';
 import audio1p from '../assets/audios/pg45_audio1p.mp3';
 import audio2p from '../assets/audios/pg45_audio2p.mp3';
 
@@ -29,8 +31,10 @@ const Pagina45 = () => {
         'our_audio': our_audio,
         'your_audio': your_audio,
         'theirAudio': theirAudio,
-        'pg45_audio1e': audio1e,
-        'pg45_audio2e': audio2e,
+        'pg45_audio1_1e': audio1_1e,
+        'pg45_audio1_2e': audio1_2e,
+        'pg45_audio2_1e': audio2_1e,
+        'pg45_audio2_2e': audio2_2e,
         'pg45_audio1p': audio1p,
         'pg45_audio2p': audio2p,
     };
@@ -119,11 +123,11 @@ const Pagina45 = () => {
                     <div className={styles.pg45Exemplo}>
                         <p> <strong>Exemplo:</strong></p>
                         <div className={styles.pg45ExemploImg}>
-                            <div className={styles.pg45AsideTexto1} onClick={() => playAudio('pg45_audio2e')} style={{ cursor: 'pointer' }}>
-                                <p>Laura: I know, it's hard to concentrate with <br /> all that noise. I'll talk to them about it.</p>
+                            <div className={styles.pg45AsideTexto1}>
+                                <p> <span onClick={() => playAudio('pg45_audio2_1e')} style={{ cursor: 'pointer' }}>Laura: I know, it's hard to concentrate with <br /> all that noise. </span> <span onClick={() => playAudio('pg45_audio2_2e')} style={{ cursor: 'pointer' }}>I'll talk to them about it.</span></p>
                             </div>
-                            <div className={styles.pg45AsideTexto2} onClick={() => playAudio('pg45_audio1e')} style={{ cursor: 'pointer' }}>
-                                <p>Mark: The neighbors are having a party. <br /> <strong>Their</strong> music is so loud!</p>
+                            <div className={styles.pg45AsideTexto2}>
+                                <p><span onClick={() => playAudio('pg45_audio1_1e')} style={{ cursor: 'pointer' }}>Mark: The neighbors are having a party. </span><br /> <span onClick={() => playAudio('pg45_audio1_2e')} style={{ cursor: 'pointer' }}> <strong>Their</strong> music is so loud!</span> </p>
                             </div>
                             <img className={styles.pg45AsideImg1} src={pagina45_imagem1} alt="" />
                             <img className={styles.pg45AsideImg2} src={pagina45_imagem2} alt="" />

@@ -32,6 +32,7 @@
 .pg51ParagrafoDiv {
     max-width: 40rem;
     text-align: left;
+    cursor: pointer;
 }
 
 /* Este é um comentário */
