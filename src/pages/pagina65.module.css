@@ -44,6 +44,13 @@
     position: relative;
 }
 
+.page65__text-container--first span,
+.page65__text-container--second span,
+.page65__text-container--third span{
+    cursor: pointer;
+}
+
+
 .page65__text-container--first::after,
 .page65__text-container--second::after {
     content: '';

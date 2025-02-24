@@ -41,6 +41,13 @@
     position: relative;
 }
 
+.page67__text-container1 span,
+.page67__text-container2 span,
+.page67__text-container3 span,
+.page67__text-container4 span {
+    cursor: pointer;
+}
+
 .page67__text-container1::after,
 .page67__text-container2::after,
 .page67__text-container3::after {

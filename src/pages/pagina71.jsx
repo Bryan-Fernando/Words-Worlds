@@ -14,8 +14,24 @@ import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_reading_compe from '../assets/audios/global_reading_compe.mp3';
 import global_reading_compp from '../assets/audios/global_reading_compp.mp3';
-import pg71_audio1 from "../assets/audios/pg71_audio1.mp3";
-import pg71_audio2 from "../assets/audios/pg71_audio2.mp3";
+import pg71_audio1_1 from "../assets/audios/pg71_audio1_1.mp3";
+import pg71_audio1_2 from "../assets/audios/pg71_audio1_2.mp3";
+import pg71_audio1_3 from "../assets/audios/pg71_audio1_3.mp3";
+import pg71_audio1_4 from "../assets/audios/pg71_audio1_4.mp3";
+import pg71_audio1_5 from "../assets/audios/pg71_audio1_5.mp3";
+import pg71_audio1_6 from "../assets/audios/pg71_audio1_6.mp3";
+import pg71_audio1_7 from "../assets/audios/pg71_audio1_7.mp3";
+import pg71_audio1_8 from "../assets/audios/pg71_audio1_8.mp3";
+import pg71_audio1_9 from "../assets/audios/pg71_audio1_9.mp3";
+import pg71_audio2_1 from "../assets/audios/pg71_audio2_1.mp3";
+import pg71_audio2_2 from "../assets/audios/pg71_audio2_2.mp3";
+import pg71_audio2_3 from "../assets/audios/pg71_audio2_3.mp3";
+import pg71_audio2_4 from "../assets/audios/pg71_audio2_4.mp3";
+import pg71_audio2_5 from "../assets/audios/pg71_audio2_5.mp3";
+import pg71_audio2_6 from "../assets/audios/pg71_audio2_6.mp3";
+import pg71_audio2_7 from "../assets/audios/pg71_audio2_7.mp3";
+import pg71_audio2_8 from "../assets/audios/pg71_audio2_8.mp3";
+import pg71_audio2_9 from "../assets/audios/pg71_audio2_9.mp3";
 import pg71_audio3e from "../assets/audios/pg71_audio3e.mp3";
 import pg71_audio3p from "../assets/audios/pg71_audio3p.mp3";
 import pg71_audio4e from "../assets/audios/pg71_audio4e.mp3";
@@ -59,8 +75,24 @@ const Pagina71 = () => {
         global_learning_le_p,
         global_reading_compe,
         global_reading_compp,
-        pg71_audio1,
-        pg71_audio2,
+        pg71_audio1_1,
+        pg71_audio1_2,
+        pg71_audio1_3,
+        pg71_audio1_4,
+        pg71_audio1_5,
+        pg71_audio1_6,
+        pg71_audio1_7,
+        pg71_audio1_8,
+        pg71_audio1_9,
+        pg71_audio2_1,
+        pg71_audio2_2,
+        pg71_audio2_3,
+        pg71_audio2_4,
+        pg71_audio2_5,
+        pg71_audio2_6,
+        pg71_audio2_7,
+        pg71_audio2_8,
+        pg71_audio2_9,
         pg71_audio3e,
         pg71_audio3p,
         pg71_audio4e,
@@ -156,9 +188,9 @@ const Pagina71 = () => {
                             <div>
                                 <p
                                     className={`${styles.pg71PersonTextEnglish} ${styles.pg71ClickableText}`}
-                                    onClick={() => playAudio("pg71_audio1")}
+
                                 >
-                                    I’m Karen Brandon. I’m from Portugal. Lisbon is my home. It’s an amazing city. I am an English student. I’m 19. My email is karen@mail.com and my phone number is 999 12 3456789.
+                                    <span onClick={() => playAudio("pg71_audio1_1")}>I’m Karen Brandon. </span> <span onClick={() => playAudio("pg71_audio1_2")}>I’m from Portugal. </span> <span onClick={() => playAudio("pg71_audio1_3")}>Lisbon is my home.</span> <span onClick={() => playAudio("pg71_audio1_4")}>It’s an amazing city.</span> <span onClick={() => playAudio("pg71_audio1_5")}>I am an English student.</span> <span onClick={() => playAudio("pg71_audio1_6")}>I’m 19.</span> <span onClick={() => playAudio("pg71_audio1_7")}>My email is karen@mail.com </span> <span onClick={() => playAudio("pg71_audio1_8")}>and my phone number is </span> <span onClick={() => playAudio("pg71_audio1_9")}>403 - 728930.</span>
                                 </p>
                                 <p className={styles.pg71PersonTextPortuguese}>Eu sou Karen Brandon. Sou de Portugal. Lisboa é minha casa. É uma cidade incrível. Sou estudante de inglês. Tenho 19 anos. Meu e-mail é karen@mail.com e meu número de telefone é 999 12 3456789.</p>
                             </div>
@@ -170,8 +202,17 @@ const Pagina71 = () => {
                                     className={`${styles.pg71PersonTextEnglish} ${styles.pg71ClickableText}`}
                                     onClick={() => playAudio("pg71_audio2")}
                                 >
-                                    Hi there, I’m Leo Santander. I’m Brazilian. I’m from Paraty, but I’m now in Rio. I’m an entrepreneur. I have a small company. I’m married. I’m 27 years old. My email is leo@mail.com and my cell phone number is 55 12 1234-1265.
+                                    <span onClick={() => playAudio("pg71_audio2_1")}>Hi there, I’m Leo Santander. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_2")}>I’m Brazilian. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_3")}>I’m from Paraty, but I’m now in Rio. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_4")}>I’m an entrepreneur. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_5")}>I have a small company. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_6")}>I’m married. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_7")}>I’m 27 years old. </span>
+                                    <span onClick={() => playAudio("pg71_audio2_8")}>My email is leo@mail.com, </span>
+                                    <span onClick={() => playAudio("pg71_audio2_9")}>and my cell phone number is 55 12 1234-1265.</span>
                                 </p>
+
                                 <p className={styles.pg71PersonTextPortuguese}>Olá, eu sou Leo Santander. Sou brasileiro. Sou de Paraty, mas estou agora no Rio. Sou empreendedor. Tenho uma pequena empresa. Sou casado. Tenho 27 anos. Meu e-mail é leo@mail.com e meu número de celular é 55 12 1234-1265.</p>
                             </div>
                         </div>

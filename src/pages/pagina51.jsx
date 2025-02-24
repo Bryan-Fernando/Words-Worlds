@@ -15,14 +15,20 @@ import pagina51_imagem7 from '../assets/images/pagina51_imagem7.webp';
 
 import pg50_audio1e from '../assets/audios/pg50_audio1e.mp3';
 import pg50_audio1p from '../assets/audios/pg50_audio1p.mp3';
-import pg50_audio2H from '../assets/audios/pg50_audio2H.mp3';
-import pg51_audio1 from '../assets/audios/pg51_audio1.mp3';
-import pg51_audio2 from '../assets/audios/pg51_audio2.mp3';
-import pg51_audio3 from '../assets/audios/pg51_audio3.mp3';
-import pg51_audio4 from '../assets/audios/pg51_audio4.mp3';
-import pg51_audio5 from '../assets/audios/pg51_audio5.mp3';
-import pg51_audio6 from '../assets/audios/pg51_audio6.mp3';
-import pg51_audio7 from '../assets/audios/pg51_audio7.mp3';
+import pg51_audio2_1e from '../assets/audios/pg51_audio2_1e.mp3';
+import pg51_audio2_2e from '../assets/audios/pg51_audio2_2e.mp3';
+import pg51_audio3_1e from '../assets/audios/pg51_audio3_1e.mp3';
+import pg51_audio3_2e from '../assets/audios/pg51_audio3_2e.mp3';
+import pg51_audio4_1e from '../assets/audios/pg51_audio4_1e.mp3';
+import pg51_audio4_2e from '../assets/audios/pg51_audio4_2e.mp3';
+import pg51_audio5_1e from '../assets/audios/pg51_audio5_1e.mp3';
+import pg51_audio5_2e from '../assets/audios/pg51_audio5_2e.mp3';
+import pg51_audio6_1e from '../assets/audios/pg51_audio6_1e.mp3';
+import pg51_audio6_2e from '../assets/audios/pg51_audio6_2e.mp3';
+import pg51_audio7_1e from '../assets/audios/pg51_audio7_1e.mp3';
+import pg51_audio7_2e from '../assets/audios/pg51_audio7_1e.mp3';
+import pg51_audio8_1e from '../assets/audios/pg51_audio8_1e.mp3';
+import pg51_audio8_2e from '../assets/audios/pg51_audio8_2e.mp3';
 import pg51_audio2p from '../assets/audios/pg51_audio2p.mp3';
 import pg51_audio3p from '../assets/audios/pg51_audio3p.mp3';
 import pg51_audio4p from '../assets/audios/pg51_audio4p.mp3';
@@ -35,14 +41,20 @@ const Pagina51 = () => {
     const audioMap = {
         pg50_audio1e,
         pg50_audio1p,
-        pg50_audio2H,
-        pg51_audio1,
-        pg51_audio2,
-        pg51_audio3,
-        pg51_audio4,
-        pg51_audio5,
-        pg51_audio6,
-        pg51_audio7,
+        pg51_audio2_1e,
+        pg51_audio2_2e,
+        pg51_audio3_1e,
+        pg51_audio3_2e,
+        pg51_audio4_1e,
+        pg51_audio4_2e,
+        pg51_audio5_1e,
+        pg51_audio5_2e,
+        pg51_audio6_1e,
+        pg51_audio6_2e,
+        pg51_audio7_1e,
+        pg51_audio7_2e,
+        pg51_audio8_1e,
+        pg51_audio8_2e,
         pg51_audio2p,
         pg51_audio3p,
         pg51_audio4p,
@@ -98,15 +110,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem1} alt="Imagem 1" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>Best Friend</strong><br />
-                                This is my best friend, Alex.
+                                <span onClick={() => playAudio('pg51_audio2_1e')}><strong>Best Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio2_2e')}>This is my best friend, Alex.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio1')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -121,15 +127,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem3} alt="Imagem 3" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>Work Friend</strong><br />
-                                This is my work friend, James. He is very helpful and kind.
+                                <span onClick={() => playAudio('pg51_audio3_1e')}><strong>Work Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio3_2e')}>This is my work friend, James. He is very helpful and kind.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio2')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -144,15 +144,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem5} alt="Imagem 5" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>Gym Friend</strong><br />
-                                This is my gym friend, David. He motivates me to stay fit.
+                                <span onClick={() => playAudio('pg51_audio4_1e')}><strong>Gym Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio4_2e')}>This is my gym friend, David. He motivates me to stay fit.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio3')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -167,15 +161,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem7} alt="Imagem 4" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>Online Friend</strong><br />
-                                This is my online friend, Sam.
+                                <span onClick={() => playAudio('pg51_audio5_1e')}><strong>Online Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio5_2e')}>This is my online friend, Sam.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio4')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -192,15 +180,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem2} alt="Imagem 5" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>School Friend</strong><br />
-                                This is my school friend, Emma. She is very good at math.
+                                <span onClick={() => playAudio('pg51_audio6_1e')}><strong>School Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio6_2e')}>This is my school friend, Emma. She is very good at math.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio5')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -215,15 +197,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem4} alt="Imagem 6" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>Neighbor Friend</strong><br />
-                                This is my neighbor friend, Sarah. We often go jogging together.
+                                <span onClick={() => playAudio('pg51_audio7_1e')}><strong>Neighbor Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio7_2e')}>This is my neighbor friend, Sarah. We often go jogging together.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio6')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -238,15 +214,9 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem6} alt="Imagem 7" className={styles.pg51Img} />
                             </div>
                             <p className={styles.pg51ParagrafoDiv}>
-                                <strong>College Friend</strong><br />
-                                This is my college friend, Rachel.
+                                <span onClick={() => playAudio('pg51_audio8_1e')}><strong>College Friend</strong></span><br />
+                                <span onClick={() => playAudio('pg51_audio8_2e')}>This is my college friend, Rachel.</span>
                                 <span>
-                                    <img
-                                        src={iconeE}
-                                        alt="English Audio"
-                                        className={styles.pg51Icon}
-                                        onClick={() => playAudio('pg51_audio7')}
-                                    />
                                     <img
                                         src={iconeP}
                                         alt="Portuguese Audio"
@@ -258,8 +228,6 @@ const Pagina51 = () => {
                         </div>
                     </div>
                 </main>
-
-
             </div>
         </div>
     );
