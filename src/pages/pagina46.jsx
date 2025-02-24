@@ -18,10 +18,6 @@ import audio1_1e from '../assets/audios/pg46_audio1_1e.mp3';
 import audio1_2e from '../assets/audios/pg46_audio1_2e.mp3';
 import audio2_1e from '../assets/audios/pg46_audio2_1e.mp3';
 import audio2_2e from '../assets/audios/pg46_audio2_2e.mp3';
-import audio1_1e from '../assets/audios/pg46_audio1_1e.mp3';
-import audio1_2e from '../assets/audios/pg46_audio1_2e.mp3';
-import audio2_1e from '../assets/audios/pg46_audio2_1e.mp3';
-import audio2_2e from '../assets/audios/pg46_audio2_2e.mp3';
 import audio1p from '../assets/audios/pg46_audio1p.mp3';
 import audio2p from '../assets/audios/pg46_audio2p.mp3';
 
@@ -34,10 +30,6 @@ const Pagina46 = () => {
         'our_audio': our_audio,
         'your_audio': your_audio,
         'theirAudio': theirAudio,
-        'pg46_audio1_1e': audio1_1e,
-        'pg46_audio1_2e': audio1_2e,
-        'pg46_audio2_1e': audio2_1e,
-        'pg46_audio2_2e': audio2_2e,
         'pg46_audio1_1e': audio1_1e,
         'pg46_audio1_2e': audio1_2e,
         'pg46_audio2_1e': audio2_1e,
