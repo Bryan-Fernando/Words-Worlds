@@ -36,7 +36,7 @@
     width: 55%;
     padding: 1.5rem;
     text-align: left;
-    color: gray;
+    color: black;
     position: relative;
 }
 
@@ -217,4 +217,12 @@
 /* Hover no ícone de áudio */
 .page66__audio-icon:hover {
     transform: scale(1.1);
+}
+
+.page66__audio-textIcon{
+  width: 2rem;
+  height: 2rem; 
+  position: relative;
+  top: 0.3rem;
+  margin-right: 0.2rem; 
 }

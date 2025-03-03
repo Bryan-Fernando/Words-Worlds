@@ -215,7 +215,7 @@
 
 .pg71WordBankContainer {
     width: 70%;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-radius: 2rem;
 }
 
@@ -224,7 +224,7 @@
     height: 4.5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     display: flex;
     align-items: center;
@@ -257,12 +257,12 @@
 .pg71WordColumn strong {
     display: block;
     font-weight: bold;
-    color: #A61C28;
+    color: #103275;
 }
 
 .pg71WordColumn span {
     display: block;
-    color: #4E4E4E;
+    color: #103275;
     margin-top: 0.2rem;
     font-size: 1.6rem;
 }

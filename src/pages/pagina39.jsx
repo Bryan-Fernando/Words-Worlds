@@ -20,16 +20,16 @@ import pg39_audio2e from '../assets/audios/pg39_audio2e.mp3';
 import pg39_audio2p from '../assets/audios/pg39_audio2p.mp3';
 import pg39_audio3e from '../assets/audios/pg39_audio3e.mp3';
 import pg39_audio3p from '../assets/audios/pg39_audio3p.mp3';
-import Pagina39_audioA from '../assets/audios/pagina39_audioA.mp3';
-import Pagina39_audioB from '../assets/audios/pagina39_audioB.mp3';
-import Pagina39_audioC from '../assets/audios/pagina39_audioC.mp3';
-import Pagina39_audioD from '../assets/audios/pagina39_audioD.mp3';
-import Pagina39_audioE from '../assets/audios/pagina39_audioE.mp3';
-import Pagina39_audio1 from '../assets/audios/pagina39_audio1.mp3';
-import Pagina39_audio2 from '../assets/audios/pagina39_audio2.mp3';
-import Pagina39_audio3 from '../assets/audios/pagina39_audio3.mp3';
-import Pagina39_audio4 from '../assets/audios/pagina39_audio4.mp3';
-import Pagina39_audio5 from '../assets/audios/pagina39_audio5.mp3';
+import pg39_audioA from '../assets/audios/pg39_audioA.mp3';
+import pg39_audioB from '../assets/audios/pg39_audioB.mp3';
+import pg39_audioC from '../assets/audios/pg39_audioC.mp3';
+import pg39_audioD from '../assets/audios/pg39_audioD.mp3';
+import pg39_audioE from '../assets/audios/pg39_audioE.mp3';
+import pg39_audio1 from '../assets/audios/pg39_audio1.mp3';
+import pg39_audio2 from '../assets/audios/pg39_audio2.mp3';
+import pg39_audio3 from '../assets/audios/pg39_audio3.mp3';
+import pg39_audio4 from '../assets/audios/pg39_audio4.mp3';
+import pg39_audio5 from '../assets/audios/pg39_audio5.mp3';
 
 const Pagina39 = () => {
     const [inputValues, setInputValues] = useState(['', '', '', '', '']);
@@ -56,19 +56,19 @@ const Pagina39 = () => {
     ];
 
     const audioFiles = [
-        Pagina39_audioA,
-        Pagina39_audioB,
-        Pagina39_audioC,
-        Pagina39_audioD,
-        Pagina39_audioE
+        pg39_audioA,
+        pg39_audioB,
+        pg39_audioC,
+        pg39_audioD,
+        pg39_audioE
     ];
 
     const portugueseAudioFiles = [
-        Pagina39_audio1,
-        Pagina39_audio2,
-        Pagina39_audio3,
-        Pagina39_audio4,
-        Pagina39_audio5
+        pg39_audio1,
+        pg39_audio2,
+        pg39_audio3,
+        pg39_audio4,
+        pg39_audio5
     ];
 
     const tocarAudio = (audioFile) => {

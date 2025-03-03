@@ -56,8 +56,6 @@ import audio19p from '../assets/audios/pg42_audio19p.mp3';
 import audio20e from '../assets/audios/pg42_audio20e.mp3';
 import audio20p from '../assets/audios/pg42_audio20p.mp3';
 
-
-
 const Pagina42 = () => {
     const audioMap = {
         'pg42_audio1e': audio1e,

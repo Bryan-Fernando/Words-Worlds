@@ -15,6 +15,10 @@ import setimaImagem from "../assets/images/pagina64_imagem7.webp";
 
 import pg64_audio1e from "../assets/audios/pg64_audio1e.mp3";
 import pg64_audio1p from "../assets/audios/pg64_audio1p.mp3";
+import pg64_audio2p from "../assets/audios/pg64_audio2p.mp3";
+import pg64_audio3p from "../assets/audios/pg64_audio3p.mp3";
+import pg64_audio4p from "../assets/audios/pg64_audio4p.mp3";
+import pg64_audio5p from "../assets/audios/pg64_audio5p.mp3";
 import pg64_audio2_1e from "../assets/audios/pg64_audio2_1e.mp3";
 import pg64_audio2_2e from "../assets/audios/pg64_audio2_2e.mp3";
 import pg64_audio2_3e from "../assets/audios/pg64_audio2_3e.mp3";
@@ -38,6 +42,10 @@ const Pagina64 = () => {
   const audioMap = {
     pg64_audio1e: pg64_audio1e,
     pg64_audio1p: pg64_audio1p,
+    pg64_audio2p: pg64_audio2p,
+    pg64_audio3p: pg64_audio3p,
+    pg64_audio4p: pg64_audio4p,
+    pg64_audio5p: pg64_audio5p,
     pg64_audio2_1e: pg64_audio2_1e,
     pg64_audio2_2e: pg64_audio2_2e,
     pg64_audio2_3e: pg64_audio2_3e,
@@ -112,13 +120,19 @@ const Pagina64 = () => {
           <div
             className={`${styles["page64__text-box"]} ${styles["page64__text--my-family"]}`}
           >
-            <p onClick={() => playAudio("pg64_audio2")} style={{ cursor: "pointer" }}>
+            <p>
               <span onClick={() => playAudio("pg64_audio2_1e")}><strong>My Family.</strong></span> <br />
               <span onClick={() => playAudio("pg64_audio2_2e")}>Hi! I'm Indira Alves França. </span>
               <span onClick={() => playAudio("pg64_audio2_3e")}>I'm an educator/pedagogue.</span>
               <span onClick={() => playAudio("pg64_audio2_4e")}>I am from Paraty – Brazil. </span>
               <span onClick={() => playAudio("pg64_audio2_5e")}>I'm Brazilian. </span>
               <span onClick={() => playAudio("pg64_audio2_6e")}>I'm 37 years old.</span>
+              <img
+                src={ptbr_audio_icon}
+                alt="Play Portuguese Audio"
+                className={styles["page64__audio-icon"]}
+                onClick={() => playAudio('pg64_audio2p')}
+              />
             </p>
 
           </div>
@@ -143,6 +157,12 @@ const Pagina64 = () => {
               <span onClick={() => playAudio("pg64_audio3_3e")}>He is also Brazilian, from Paraty. </span>
               <span onClick={() => playAudio("pg64_audio3_4e")}>He is 39 years old. </span>
               <span onClick={() => playAudio("pg64_audio3_5e")}>We are a married couple.</span>
+              <img
+                src={ptbr_audio_icon}
+                alt="Play Portuguese Audio"
+                className={styles["page64__audio-icon"]}
+                onClick={() => playAudio('pg64_audio3p')}
+              />
             </p>
 
           </div>
@@ -167,6 +187,12 @@ const Pagina64 = () => {
                 <span onClick={() => playAudio("pg64_audio4_2e")}>Our son, Eduardo is 10 (ten) years old. </span>
                 <span onClick={() => playAudio("pg64_audio4_3e")}>Our daughter, Alice is 9 (nine) years old. </span>
                 <span onClick={() => playAudio("pg64_audio4_4e")}>They're both in elementary school.</span>
+                <img
+                src={ptbr_audio_icon}
+                alt="Play Portuguese Audio"
+                className={styles["page64__audio-icon"]}
+                onClick={() => playAudio('pg64_audio4p')}
+              />
               </p>
 
             </div>
@@ -191,6 +217,12 @@ const Pagina64 = () => {
               <p onClick={() => playAudio("pg64_audio5")} style={{ cursor: "pointer" }}>
                 <span onClick={() => playAudio("pg64_audio5_1e")}>My sister Marilia Alves is single. </span>
                 <span onClick={() => playAudio("pg64_audio5_2e")}>Currently in the Bahamas, on vacation.</span>
+                <img
+                src={ptbr_audio_icon}
+                alt="Play Portuguese Audio"
+                className={styles["page64__audio-icon"]}
+                onClick={() => playAudio('pg64_audio5p')}
+              />
               </p>
 
             </div>

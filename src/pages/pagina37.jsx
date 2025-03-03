@@ -10,47 +10,47 @@ import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';
 
-import Pagina37_e1 from '../assets/audios/pg37_e1.mp3';
-import Pagina37_e2 from '../assets/audios/pg37_e2.mp3';
-import Pagina37_e3 from '../assets/audios/pg37_e3.mp3';
-import Pagina37_e4 from '../assets/audios/pg37_e4.mp3';
-import Pagina37_e5 from '../assets/audios/pg37_e5.mp3';
-import Pagina37_e6 from '../assets/audios/pg37_e6.mp3';
-import Pagina37_e7 from '../assets/audios/pg37_e7.mp3';
-import Pagina37_e8 from '../assets/audios/pg37_e8.mp3';
-import Pagina37_p1 from '../assets/audios/pagina37_p1.mp3';
-import Pagina37_p2 from '../assets/audios/pagina37_p2.mp3';
-import Pagina37_p3 from '../assets/audios/pagina37_p3.mp3';
-import Pagina37_p4 from '../assets/audios/pagina37_p4.mp3';
-import Pagina37_p5 from '../assets/audios/pagina37_p5.mp3';
-import Pagina37_p6 from '../assets/audios/pagina37_p6.mp3';
-import Pagina37_p7 from '../assets/audios/pagina37_p7.mp3';
-import Pagina37_p8 from '../assets/audios/pagina37_p8.mp3';
+import pg37_audio1e from '../assets/audios/pg37_audio1e.mp3';
+import pg37_audio2e from '../assets/audios/pg37_audio2e.mp3';
+import pg37_audio3e from '../assets/audios/pg37_audio3e.mp3';
+import pg37_audio4e from '../assets/audios/pg37_audio4e.mp3';
+import pg37_audio5e from '../assets/audios/pg37_audio5e.mp3';
+import pg37_audio6e from '../assets/audios/pg37_audio6e.mp3';
+import pg37_audio7e from '../assets/audios/pg37_audio7e.mp3';
+import pg37_audio8e from '../assets/audios/pg37_audio8e.mp3';
+import pg37_audio1p from '../assets/audios/pg37_audio1p.mp3';
+import pg37_audio2p from '../assets/audios/pg37_audio2p.mp3';
+import pg37_audio3p from '../assets/audios/pg37_audio3p.mp3';
+import pg37_audio4p from '../assets/audios/pg37_audio4p.mp3';
+import pg37_audio5p from '../assets/audios/pg37_audio5p.mp3';
+import pg37_audio6p from '../assets/audios/pg37_audio6p.mp3';
+import pg37_audio7p from '../assets/audios/pg37_audio7p.mp3';
+import pg37_audio8p from '../assets/audios/pg37_audio8p.mp3';
 
 const audios = {
     english: [
-        new Audio(Pagina37_e1),
-        new Audio(Pagina37_e2),
-        new Audio(Pagina37_e3),
-        new Audio(Pagina37_e4),
-        new Audio(Pagina37_e5),
-        new Audio(Pagina37_e6),
-        new Audio(Pagina37_e7),
-        new Audio(Pagina37_e8),
+        new Audio(pg37_audio1e),
+        new Audio(pg37_audio2e),
+        new Audio(pg37_audio3e),
+        new Audio(pg37_audio4e),
+        new Audio(pg37_audio5e),
+        new Audio(pg37_audio6e),
+        new Audio(pg37_audio7e),
+        new Audio(pg37_audio8e),
     ],
     portuguese: [
-        new Audio(Pagina37_p1),
-        new Audio(Pagina37_p2),
-        new Audio(Pagina37_p3),
-        new Audio(Pagina37_p4),
-        new Audio(Pagina37_p5),
-        new Audio(Pagina37_p6),
-        new Audio(Pagina37_p7),
-        new Audio(Pagina37_p8),
+        new Audio(pg37_audio1p),
+        new Audio(pg37_audio2p),
+        new Audio(pg37_audio3p),
+        new Audio(pg37_audio4p),
+        new Audio(pg37_audio5p),
+        new Audio(pg37_audio6p),
+        new Audio(pg37_audio7p),
+        new Audio(pg37_audio8p),
     ],
 };
 
-function Pagina37() {
+function pg37() {
     const location = useLocation();
     const { respostasUsuario, resultado } = location.state || {};
     const [isSpeedReduced, setIsSpeedReduced] = useState(false);
@@ -162,4 +162,4 @@ function Pagina37() {
     );
 }
 
-export default Pagina37;
+export default pg37;

@@ -102,8 +102,8 @@
 
 .pg47MainList li {
     padding: .8rem;
-    font-size: 2rem;
-    cursor: pointer;
+    font-size: 1.7rem;
+
 }
 
 .pg47MainList li:nth-child(1) {
@@ -389,4 +389,19 @@
 .pg47LastLi{
     position: relative;
     right: 1.2rem;
+}
+
+.pg47__audio-icon{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    position: relative;
+    top: 0.3rem;
+    left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+
+}
+
+.pg47__audio-icon:hover{
+    transform: scale(1.1);
 }

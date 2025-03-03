@@ -9,7 +9,7 @@
 }
 
 .pg89__main {
-    justify-self: center;
+    justify-self: start;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -44,7 +44,7 @@
 .pg89__question-item {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 .pg89__image {
@@ -76,7 +76,7 @@
 .pg89__icons-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .pg89__icon-check {

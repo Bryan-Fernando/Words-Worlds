@@ -10,7 +10,7 @@ const Pagina56 = () => {
     return (
         <div className={styles['page56']}>
             <main className={styles['page56__content']}>
-                {/* Container Principal 1 */}
+                
                 <div className={styles['page56__section--first']}>
                     <img className={styles['page56__image']} src={pagina56Imagem1} alt="Gustavo" />
                     <div className={styles['page56__text-container']}>

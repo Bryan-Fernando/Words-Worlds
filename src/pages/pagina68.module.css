@@ -15,7 +15,7 @@
 }
 
 .page68__header p {
-    color: gray;
+    color: black;
     font-weight: bold;
 }
 
@@ -92,7 +92,7 @@
 }
 
 .page68__label-carol {
-    color: gray;
+    color: black;
     font-weight: bold;
     font-size: 1.5rem;
 }
@@ -167,16 +167,6 @@
     position: relative;
 }
 
-.page68__aside::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 0.8rem;
-    background-color: #A61C28;
-}
-
 .page68__aside-section {
     padding: 2rem;
     background-color: #f2f2f2;
@@ -218,12 +208,69 @@
 /* Ícones de áudio */
 .page68__audio-icon {
     cursor: pointer;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    top: 0.3rem;
 }
 
 /* Efeito Hover nos Ícones */
 .page68__audio-icon:hover {
     transform: scale(1.1);
+}
+
+.page68__aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page68__aside-content {
+    display: flex;
+    position: relative;
+    bottom: 2.5rem;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page68__aside-note--first {
+    width: 100%;
+    height: 4.5rem;
+    border: 0.4rem solid #0A3282;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+
+    background-color: #0A3282;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+.page68__aside-note-icon {
+    height: 3rem;
+    width: 3rem;
+    padding-right: 0.5rem;
+}
+
+.page68__aside-note--second {
+    width: 100%;
+    height: 70%;
+    border: 0.4rem solid #0A3282; /* #0A3282 */
+    border-top: 0.1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    display: flex;
+    align-items: center;
+    color: #103275;
+}
+
+.page68__aside-note--second p {
+    padding: 1vw;
 }

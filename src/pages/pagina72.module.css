@@ -203,7 +203,7 @@
 
 .pg72WordBankContainer {
     width: 70%;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-radius: 2rem;
 }
 
@@ -212,7 +212,7 @@
     height: 4.5rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     display: flex;
     align-items: center;
@@ -240,12 +240,12 @@
     margin: 0.5rem 0;
     font-size: 1.7rem;
     text-align: left;
+    color: #0A3282;
 }
 
 .pg72RedText {
-    color: #A61C28;
+    color: #0A3282;
 }
-
 
 @media (max-width: 1024px) {
     .pg72AsideNotes2 p {

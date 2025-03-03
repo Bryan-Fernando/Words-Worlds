@@ -325,7 +325,7 @@ const Pagina6 = () => {
                             <span style={{ fontWeight: "bold", color: "#A61C28" }}>
                                 I - He - She - It - We - You - They podem usar
                             </span>
-                            <span style={{ fontWeight: "bold" }}>"ain't" na forma contraída.</span>
+                            <span style={{ fontWeight: "bold" }}> "ain't" na forma contraída.</span>
                         </p>
                     </div>
                 </aside>

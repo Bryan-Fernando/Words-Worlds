@@ -194,7 +194,7 @@ const routes = [
   { path: "/pagina63", Component: Pagina63 },
   { path: "/pagina64", Component: Pagina64 },
   { path: "/pagina65", Component: Pagina65 },
-  { path: "/pagina66", Component: Pagina66 },
+  //{ path: "/pagina66", Component: Pagina66 },
   { path: "/pagina67", Component: Pagina67 },
   { path: "/pagina68", Component: Pagina68 },
   { path: "/pagina69", Component: Pagina69 },

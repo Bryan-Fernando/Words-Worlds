@@ -19,17 +19,35 @@ import pg65_audio1_4e from "../assets/audios/pg65_audio1_4e.mp3";
 import pg65_audio1_5e from "../assets/audios/pg65_audio1_5e.mp3";
 import pg65_audio1_6e from "../assets/audios/pg65_audio1_6e.mp3";
 import pg65_audio1_7e from "../assets/audios/pg65_audio1_7e.mp3";
+import pg65_audio1_1p from "../assets/audios/pg65_audio1_1p.mp3";
+import pg65_audio1_2p from "../assets/audios/pg65_audio1_2p.mp3";
+import pg65_audio1_3p from "../assets/audios/pg65_audio1_3p.mp3";
+import pg65_audio1_4p from "../assets/audios/pg65_audio1_4p.mp3";
+import pg65_audio1_5p from "../assets/audios/pg65_audio1_5p.mp3";
+import pg65_audio1_6p from "../assets/audios/pg65_audio1_6p.mp3";
+import pg65_audio1_7p from "../assets/audios/pg65_audio1_7p.mp3";
 import pg65_audio2_1e from "../assets/audios/pg65_audio2_1e.mp3";
 import pg65_audio2_2e from "../assets/audios/pg65_audio2_2e.mp3";
 import pg65_audio2_3e from "../assets/audios/pg65_audio2_3e.mp3";
 import pg65_audio2_4e from "../assets/audios/pg65_audio2_4e.mp3";
 import pg65_audio2_5e from "../assets/audios/pg65_audio2_5e.mp3";
 import pg65_audio2_6e from "../assets/audios/pg65_audio2_6e.mp3";
+import pg65_audio2_1p from "../assets/audios/pg65_audio2_1p.mp3";
+import pg65_audio2_2p from "../assets/audios/pg65_audio2_2p.mp3";
+import pg65_audio2_3p from "../assets/audios/pg65_audio2_3p.mp3";
+import pg65_audio2_4p from "../assets/audios/pg65_audio2_4p.mp3";
+import pg65_audio2_5p from "../assets/audios/pg65_audio2_5p.mp3";
+import pg65_audio2_6p from "../assets/audios/pg65_audio2_6p.mp3";
 import pg65_audio3_1e from "../assets/audios/pg65_audio3_1e.mp3";
 import pg65_audio3_2e from "../assets/audios/pg65_audio3_2e.mp3";
 import pg65_audio3_3e from "../assets/audios/pg65_audio3_3e.mp3";
 import pg65_audio3_4e from "../assets/audios/pg65_audio3_4e.mp3";
 import pg65_audio3_5e from "../assets/audios/pg65_audio3_5e.mp3";
+import pg65_audio3_1p from "../assets/audios/pg65_audio3_1p.mp3";
+import pg65_audio3_2p from "../assets/audios/pg65_audio3_2p.mp3";
+import pg65_audio3_3p from "../assets/audios/pg65_audio3_3p.mp3";
+import pg65_audio3_4p from "../assets/audios/pg65_audio3_4p.mp3";
+import pg65_audio3_5p from "../assets/audios/pg65_audio3_5p.mp3";
 
 const Pagina65 = () => {
 
@@ -43,17 +61,35 @@ const Pagina65 = () => {
         pg65_audio1_5e: pg65_audio1_5e,
         pg65_audio1_6e: pg65_audio1_6e,
         pg65_audio1_7e: pg65_audio1_7e,
+        pg65_audio1_1p: pg65_audio1_1p,
+        pg65_audio1_2p: pg65_audio1_2p,
+        pg65_audio1_3p: pg65_audio1_3p,
+        pg65_audio1_4p: pg65_audio1_4p,
+        pg65_audio1_5p: pg65_audio1_5p,
+        pg65_audio1_6p: pg65_audio1_6p,
+        pg65_audio1_7p: pg65_audio1_7p,
         pg65_audio2_1e: pg65_audio2_1e,
         pg65_audio2_2e: pg65_audio2_2e,
         pg65_audio2_3e: pg65_audio2_3e,
         pg65_audio2_4e: pg65_audio2_4e,
         pg65_audio2_5e: pg65_audio2_5e,
         pg65_audio2_6e: pg65_audio2_6e,
+        pg65_audio2_1p: pg65_audio2_1p,
+        pg65_audio2_2p: pg65_audio2_2p,
+        pg65_audio2_3p: pg65_audio2_3p,
+        pg65_audio2_4p: pg65_audio2_4p,
+        pg65_audio2_5p: pg65_audio2_5p,
+        pg65_audio2_6p: pg65_audio2_6p,
         pg65_audio3_1e: pg65_audio3_1e,
         pg65_audio3_2e: pg65_audio3_2e,
         pg65_audio3_3e: pg65_audio3_3e,
         pg65_audio3_4e: pg65_audio3_4e,
         pg65_audio3_5e: pg65_audio3_5e,
+        pg65_audio3_1p: pg65_audio3_1p,
+        pg65_audio3_2p: pg65_audio3_2p,
+        pg65_audio3_3p: pg65_audio3_3p,
+        pg65_audio3_4p: pg65_audio3_4p,
+        pg65_audio3_5p: pg65_audio3_5p,
     };
 
 
@@ -92,17 +128,123 @@ const Pagina65 = () => {
                     <div className={styles["page65__content"]}>
                         <div className={styles["page65__text-container--first"]}>
                             <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio1_1e")}>Getting to Know Brazil</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    Getting to Know Brazil
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio1_2e")}>Brazil is a beautiful country in South America.</span>
-                                <span onClick={() => playAudio("pg65_audio1_3e")}>It <strong>is</strong> famous for its beautiful beaches </span>
-                                <span onClick={() => playAudio("pg65_audio1_4e")}>culturally diverse</span>
-                                <span onClick={() => playAudio("pg65_audio1_5e")}>, and delicious food.</span>
-                                <span onClick={() => playAudio("pg65_audio1_6e")}>The official language of Brazil is Portuguese.</span>
-                                <span onClick={() => playAudio("pg65_audio1_7e")}> People in Brazil <strong>are</strong> friendly and welcoming</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    Brazil is a beautiful country in South America.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    It <strong>is</strong> famous for its beautiful beaches
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    culturally diverse,
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    and delicious food.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    The official language of Brazil is Portuguese.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_6p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    People in Brazil <strong>are</strong> friendly and welcoming
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio1_7e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio1_7p")}
+                                    />
+                                </span>
                             </p>
                         </div>
+
                         <div className={styles["page65__image-container--first"]}>
                             <img src={pagina65Imagem1} alt="Brazil Image 1" className={styles["page65__image-small"]} />
                         </div>
@@ -111,15 +253,107 @@ const Pagina65 = () => {
                     <div className={styles["page65__content"]}>
                         <div className={styles["page65__text-container--second"]}>
                             <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio2_1e")}>My Family</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My Family
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio2_2e")}>My family is small.</span>
-                                <span onClick={() => playAudio("pg65_audio2_3e")}> There <strong>are</strong> four people in my family:</span>
-                                <span onClick={() => playAudio("pg65_audio2_4e")}> my father, my mother, my sister, and me.</span>
-                                <span onClick={() => playAudio("pg65_audio2_5e")}> My father is tall, and my mother <strong>is</strong> kind.</span> <span onClick={() => playAudio("pg65_audio2_6e")}>My sister <strong>is</strong> funny, and I <strong>am</strong> happy.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My family is small.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    There <strong>are</strong> four people in my family:
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    my father, my mother, my sister, and me.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    My father is tall, and my mother <strong>is</strong> kind.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    My sister <strong>is</strong> funny, and I <strong>am</strong> happy.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio2_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio2_6p")}
+                                    />
+                                </span>
                             </p>
                         </div>
+
                         <div className={styles["page65__image-container--second"]}>
                             <img src={pagina65Imagem2} alt="Brazil Image 2" className={styles["page65__image-small"]} />
                         </div>
@@ -128,15 +362,91 @@ const Pagina65 = () => {
                     <div className={styles["page65__content"]}>
                         <div className={styles["page65__text-container--third"]}>
                             <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio3_1e")}>School</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    School
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio3_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio3_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio3_2e")}>My school is big and colorful.</span>
-                                <span onClick={() => playAudio("pg65_audio3_3e")}> There <strong>are</strong> many students and teachers.</span>
-                                <span onClick={() => playAudio("pg65_audio3_4e")}> The classrooms <strong>are</strong> bright, and the playground <strong>is</strong> fun.</span>
-                                <span onClick={() => playAudio("pg65_audio3_5e")}> I <strong>am</strong> excited to learn every day.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My school is big and colorful.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio3_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio3_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    There <strong>are</strong> many students and teachers.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio3_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio3_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    The classrooms <strong>are</strong> bright, and the playground <strong>is</strong> fun.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio3_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio3_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I <strong>am</strong> excited to learn every day.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page65__audio-icon"]}
+                                        onClick={() => playAudio("pg65_audio3_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page65__audio-iconP"]}
+                                        onClick={() => playAudio("pg65_audio3_5p")}
+                                    />
+                                </span>
                             </p>
                         </div>
+
                         <div className={styles["page65__image-container--third"]}>
                             <img src={pagina65Imagem3} alt="School Image 3" className={styles["page65__image-small"]} />
                         </div>

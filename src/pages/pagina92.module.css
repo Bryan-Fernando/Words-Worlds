@@ -186,10 +186,10 @@
 
 .page92__aside-header {
     height: 4.5rem;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     text-align: left;
     padding-left: 1rem;
@@ -203,7 +203,7 @@
 }
 
 .page92__aside-content {
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top: 0.1rem;
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
@@ -220,6 +220,7 @@
 .page92__aside-column {
     display: flex;
     flex-direction: column;
+    color: #103275;
     width: 50%;
 }
 
@@ -232,7 +233,7 @@
 
 .page92__text--red {
     font-weight: bold;
-    color: #A61C28;
+    color: #103275;
 }
 
 .page92__aside-container {

@@ -66,10 +66,10 @@
 .page55__aside-notes1 {
     width: 80%;
     height: 4.5rem;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     text-align: left;
     padding-left: 1rem;
@@ -90,7 +90,7 @@
 .page55__aside-notes2 {
     width: 80%;
     height: 70%;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top: 0.1rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
@@ -99,6 +99,7 @@
     padding-left: 0.2rem;
     display: flex;
     align-items: center;
+    color: #103275;
 }
 
 .page55__aside-notes2 p {

@@ -226,17 +226,17 @@ const Pagina57 = () => {
                                 </h2>
                             </div>
                             <p>
-                                <span onClick={() => playAudio('pg57_audio47')} style={{ cursor: 'pointer' }}> Jones: Hello. My name is Arthur Black.</span> <br />
+                                <span onClick={() => playAudio('pg57_audio47')} style={{ cursor: 'pointer' }}> John: Hello. My name is John Black.</span> <br />
 
                                 <span onClick={() => playAudio('pg57_audio48')} style={{ cursor: 'pointer' }}>Clerk: How do you spell your first name? <br /></span>
 
-                                Jones: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio49')} style={{ cursor: 'pointer' }}>
-                                    A-R-T-H-U-R
+                                John: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio49')} style={{ cursor: 'pointer' }}>
+                                    J-O-H-N
                                 </span> <br />
 
                                 Clerk: <span onClick={() => playAudio('pg57_audio50')} style={{ cursor: 'pointer' }}>And how do you spell your last name?</span> <br />
                                 
-                                Jones: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio51')} style={{ cursor: 'pointer' }}>
+                                John: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio51')} style={{ cursor: 'pointer' }}>
                                     B-L-A-C-K.
                                 </span>
                             </p>

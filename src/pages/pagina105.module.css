@@ -68,10 +68,10 @@
 
 .pg105AsideNotes1 {
     height: 4.5rem;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     text-align: left;
     padding-left: 1rem;
@@ -85,7 +85,7 @@
 }
 
 .pg105AsideNotes2 {
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top: 0.1rem;
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;
@@ -97,17 +97,19 @@
 
 .pg105AsideNotes2Preto {
     margin-bottom: 2rem;
+    color: #103275;
 }
 
 .pg105AsideNotes3 {
     display: flex;
     flex-direction: column;
     width: 50%;
+    color: #103275;
 }
 
 .pg105AsideNotes2Vermelho {
     font-weight: bold;
-    color: #A61C28;
+    color: #0A3282;
 }
 
 .pg105Asidecontainer {

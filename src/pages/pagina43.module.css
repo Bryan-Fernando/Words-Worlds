@@ -59,13 +59,13 @@
 .pg43AsideNotes1 {
     width: 85%;
     height: 4.5rem;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
     background-color: white;
     text-align: left;
     padding-left: 1rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     display: flex;
     align-items: center;
@@ -80,7 +80,7 @@
 .pg43AsideNotes2 {
     width: 85%;
     height: 75%;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top: 0.1rem;
     border-bottom-left-radius: 2.5rem;
     border-bottom-right-radius: 2.5rem;

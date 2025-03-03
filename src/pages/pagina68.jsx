@@ -28,6 +28,19 @@ import pg68_audio12e from "../assets/audios/pg68_audio12e.mp3";
 import pg68_audio13e from "../assets/audios/pg68_audio13e.mp3";
 import pg68_audio14e from "../assets/audios/pg68_audio14e.mp3";
 import pg68_audio15e from "../assets/audios/pg68_audio15e.mp3";
+import pg68_audio3p from "../assets/audios/pg68_audio3p.mp3";
+import pg68_audio4p from "../assets/audios/pg68_audio4p.mp3";
+import pg68_audio5p from "../assets/audios/pg68_audio5p.mp3";
+import pg68_audio6p from "../assets/audios/pg68_audio6p.mp3";
+import pg68_audio7p from "../assets/audios/pg68_audio7p.mp3";
+import pg68_audio8p from "../assets/audios/pg68_audio8p.mp3";
+import pg68_audio9p from "../assets/audios/pg68_audio9p.mp3";
+import pg68_audio10p from "../assets/audios/pg68_audio10p.mp3";
+import pg68_audio11p from "../assets/audios/pg68_audio11p.mp3";
+import pg68_audio12p from "../assets/audios/pg68_audio12p.mp3";
+import pg68_audio13p from "../assets/audios/pg68_audio13p.mp3";
+import pg68_audio14p from "../assets/audios/pg68_audio14p.mp3";
+import pg68_audio15p from "../assets/audios/pg68_audio15p.mp3";
 
 const allowedAnswers = [
 
@@ -90,6 +103,20 @@ const Pagina68 = () => {
         pg68_audio13e: pg68_audio13e,
         pg68_audio14e: pg68_audio14e,
         pg68_audio15e: pg68_audio15e,
+        pg68_audio3p: pg68_audio3p,
+        pg68_audio4p: pg68_audio4p,
+        pg68_audio5p: pg68_audio5p,
+        pg68_audio6p: pg68_audio6p,
+        pg68_audio7p: pg68_audio7p,
+        pg68_audio8p: pg68_audio8p,
+        pg68_audio9p: pg68_audio9p,
+        pg68_audio10p: pg68_audio10p,
+        pg68_audio11p: pg68_audio11p,
+        pg68_audio12p: pg68_audio12p,
+        pg68_audio13p: pg68_audio13p,
+        pg68_audio14p: pg68_audio14p,
+        pg68_audio15p: pg68_audio15p,
+
     };
 
 
@@ -176,6 +203,14 @@ const Pagina68 = () => {
                     />
                 </p>
             </header>
+            <aside className={styles["page68__aside"]}>
+                <div className={styles["page68__aside-content"]}>
+                    <div className={styles["page68__aside-note--first"]}>
+                        <p >Nesse exercício você pode copiar da caixa de respostas transcrevendo, ou utilizando as teclas ctrl + c</p>
+                    </div>
+                </div>
+            </aside>
+
 
             <main className={styles["page68__main"]}>
                 <div className={styles["page68__left-side"]}>
@@ -225,7 +260,7 @@ const Pagina68 = () => {
                                 value={inputValues[3]}
                                 onChange={(e) => handleInputChange(e.target.value, 3)}
                                 className={styles["page68__input-box"]}
-                                placeholder="No, 355 - 6927"
+                                placeholder="No, 355 - 6927?"
                                 disabled
                             />
                         </div>
@@ -250,7 +285,7 @@ const Pagina68 = () => {
                                 value={inputValues[5]}
                                 onChange={(e) => handleInputChange(e.target.value, 5)}
                                 className={styles["page68__input-box"]}
-                                placeholder="It’s john2023@email.com"
+                                placeholder="It is john2023@email.com"
                                 disabled
                             />
                         </div>
@@ -269,7 +304,6 @@ const Pagina68 = () => {
                         </div>
 
                         <button className={styles["page68__check-button"]} onClick={handleCheckClick}>Check</button>
-
                     </div>
                 </div>
 
@@ -282,62 +316,225 @@ const Pagina68 = () => {
                         <p>
                             <strong>RESPOSTAS: (DEVEM SER VISÍVEIS APÓS CLICAR EM <span>‘CHECK’</span>)</strong>
                         </p>
-                        <p onClick={() => playAudio("pg68_audio3e")} style={{ cursor: "pointer" }}>
+                        <p>
                             <strong>A:</strong> Hey, John. What’s your phone number?
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio3e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio3p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio4e")} style={{ cursor: "pointer" }}>
-                            <strong>B:</strong> It’s 355-6927.
+
+                        <p>
+                            <strong>B:</strong> It is 355-6927.
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio4e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio4p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio5e")} style={{ cursor: "pointer" }}>
+
+                        <p>
                             <strong>A:</strong> 355-6937?
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio5e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio5p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio6e")} style={{ cursor: "pointer" }}>
+
+                        <p>
                             <strong>B:</strong> No, 355-6927.
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio6e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio6p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio7e")} style={{ cursor: "pointer" }}>
+
+                        <p>
                             <strong>A:</strong> Ok. What’s your email address?
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio7e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio7p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio8e")} style={{ cursor: "pointer" }}>
+
+                        <p>
                             <strong>B:</strong> It’s john2023@gmail.com
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio8e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio8p")}
+                            />
                         </p>
-                        <p onClick={() => playAudio("pg68_audio9e")} style={{ cursor: "pointer" }}>
+
+                        <p>
                             <strong>A:</strong> Thanks.
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio9e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio9p")}
+                            />
                         </p>
+
                     </div>
                 </div>
-
             </main>
 
             <div className={styles["page68__container-aside"]}>
                 <aside className={styles["page68__aside"]}>
                     <div className={styles["page68__aside-section"]}>
-                        <h2 onClick={() => playAudio("pg68_audio10e")} style={{ cursor: "pointer" }} className={styles["page68__aside-title"]}>
+                        <h2 className={styles["page68__aside-title"]}>
                             Asking for someone’s phone number
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio10e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio10p")}
+                            />
                         </h2>
                         <ul className={styles["page68__aside-list"]}>
-                            <li onClick={() => playAudio("pg68_audio11e")} style={{ cursor: "pointer" }}>
+                            <li>
                                 What’s your phone number?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Play English Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio11e")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Play Portuguese Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio11p")}
+                                />
                             </li>
-                            <li onClick={() => playAudio("pg68_audio12e")} style={{ cursor: "pointer" }}>
+                            <li>
                                 What’s your number?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Play English Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio12e")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Play Portuguese Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio12p")}
+                                />
                             </li>
                         </ul>
                     </div>
 
                     <div className={styles["page68__aside-section"]}>
-                        <h2 onClick={() => playAudio("pg68_audio13e")} style={{ cursor: "pointer" }} className={styles["page68__aside-title"]}>
+                        <h2 className={styles["page68__aside-title"]}>
                             Asking for someone’s email address
+                            <img
+                                src={eng_audio_icon}
+                                alt="Play English Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio13e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Play Portuguese Audio"
+                                className={styles["page68__audio-icon"]}
+                                onClick={() => playAudio("pg68_audio13p")}
+                            />
                         </h2>
                         <ul className={styles["page68__aside-list"]}>
-                            <li onClick={() => playAudio("pg68_audio14e")} style={{ cursor: "pointer" }}>
+                            <li>
                                 What’s your email address?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Play English Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio14e")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Play Portuguese Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio14p")}
+                                />
                             </li>
-                            <li onClick={() => playAudio("pg68_audio15e")} style={{ cursor: "pointer" }}>
+                            <li>
                                 What’s your email?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Play English Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio15e")}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Play Portuguese Audio"
+                                    className={styles["page68__audio-icon"]}
+                                    onClick={() => playAudio("pg68_audio15p")}
+                                />
                             </li>
                         </ul>
                     </div>
                 </aside>
+
             </div>
         </div>
 

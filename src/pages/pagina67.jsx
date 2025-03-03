@@ -20,7 +20,6 @@ import pg67_audio1_4e from "../assets/audios/pg67_audio1_4e.mp3";
 import pg67_audio1_5e from "../assets/audios/pg67_audio1_5e.mp3";
 import pg67_audio1_6e from "../assets/audios/pg67_audio1_6e.mp3";
 import pg67_audio1_7e from "../assets/audios/pg67_audio1_7e.mp3";
-
 import pg67_audio2_1e from "../assets/audios/pg67_audio2_1e.mp3";
 import pg67_audio2_2e from "../assets/audios/pg67_audio2_2e.mp3";
 import pg67_audio2_3e from "../assets/audios/pg67_audio2_3e.mp3";
@@ -41,6 +40,33 @@ import pg67_audio4_4e from "../assets/audios/pg67_audio4_4e.mp3";
 import pg67_audio4_5e from "../assets/audios/pg67_audio4_5e.mp3";
 import pg67_audio4_6e from "../assets/audios/pg67_audio4_6e.mp3";
 import pg67_audio4_7e from "../assets/audios/pg67_audio4_7e.mp3";
+import pg67_audio1_1p from "../assets/audios/pg67_audio1_1p.mp3";
+import pg67_audio1_2p from "../assets/audios/pg67_audio1_2p.mp3";
+import pg67_audio1_3p from "../assets/audios/pg67_audio1_3p.mp3";
+import pg67_audio1_4p from "../assets/audios/pg67_audio1_4p.mp3";
+import pg67_audio1_5p from "../assets/audios/pg67_audio1_5p.mp3";
+import pg67_audio1_6p from "../assets/audios/pg67_audio1_6p.mp3";
+import pg67_audio1_7p from "../assets/audios/pg67_audio1_7p.mp3";
+import pg67_audio2_1p from "../assets/audios/pg67_audio2_1p.mp3";
+import pg67_audio2_2p from "../assets/audios/pg67_audio2_2p.mp3";
+import pg67_audio2_3p from "../assets/audios/pg67_audio2_3p.mp3";
+import pg67_audio2_4p from "../assets/audios/pg67_audio2_4p.mp3";
+import pg67_audio2_5p from "../assets/audios/pg67_audio2_5p.mp3";
+import pg67_audio2_6p from "../assets/audios/pg67_audio2_6p.mp3";
+import pg67_audio2_7p from "../assets/audios/pg67_audio2_7p.mp3";
+import pg67_audio3_1p from "../assets/audios/pg67_audio3_1p.mp3";
+import pg67_audio3_2p from "../assets/audios/pg67_audio3_2p.mp3";
+import pg67_audio3_3p from "../assets/audios/pg67_audio3_3p.mp3";
+import pg67_audio3_4p from "../assets/audios/pg67_audio3_4p.mp3";
+import pg67_audio3_5p from "../assets/audios/pg67_audio3_5p.mp3";
+import pg67_audio3_6p from "../assets/audios/pg67_audio3_6p.mp3";
+import pg67_audio4_1p from "../assets/audios/pg67_audio4_1p.mp3";
+import pg67_audio4_2p from "../assets/audios/pg67_audio4_2p.mp3";
+import pg67_audio4_3p from "../assets/audios/pg67_audio4_3p.mp3";
+import pg67_audio4_4p from "../assets/audios/pg67_audio4_4p.mp3";
+import pg67_audio4_5p from "../assets/audios/pg67_audio4_5p.mp3";
+import pg67_audio4_6p from "../assets/audios/pg67_audio4_6p.mp3";
+import pg67_audio4_7p from "../assets/audios/pg67_audio4_7p.mp3";
 
 
 const pagina67 = () => {
@@ -75,6 +101,34 @@ const pagina67 = () => {
         pg67_audio4_5e: pg67_audio4_5e,
         pg67_audio4_6e: pg67_audio4_6e,
         pg67_audio4_7e: pg67_audio4_7e,
+        pg67_audio1_1p: pg67_audio1_1p,
+        pg67_audio1_2p: pg67_audio1_2p,
+        pg67_audio1_3p: pg67_audio1_3p,
+        pg67_audio1_4p: pg67_audio1_4p,
+        pg67_audio1_5p: pg67_audio1_5p,
+        pg67_audio1_6p: pg67_audio1_6p,
+        pg67_audio1_7p: pg67_audio1_7p,
+        pg67_audio2_1p: pg67_audio2_1p,
+        pg67_audio2_2p: pg67_audio2_2p,
+        pg67_audio2_3p: pg67_audio2_3p,
+        pg67_audio2_4p: pg67_audio2_4p,
+        pg67_audio2_5p: pg67_audio2_5p,
+        pg67_audio2_6p: pg67_audio2_6p,
+        pg67_audio2_7p: pg67_audio2_7p,
+        pg67_audio3_1p: pg67_audio3_1p,
+        pg67_audio3_2p: pg67_audio3_2p,
+        pg67_audio3_3p: pg67_audio3_3p,
+        pg67_audio3_4p: pg67_audio3_4p,
+        pg67_audio3_5p: pg67_audio3_5p,
+        pg67_audio3_6p: pg67_audio3_6p,
+        pg67_audio4_1p: pg67_audio4_1p,
+        pg67_audio4_2p: pg67_audio4_2p,
+        pg67_audio4_3p: pg67_audio4_3p,
+        pg67_audio4_4p: pg67_audio4_4p,
+        pg67_audio4_5p: pg67_audio4_5p,
+        pg67_audio4_6p: pg67_audio4_6p,
+        pg67_audio4_7p: pg67_audio4_7p,
+
     };
 
     const playAudio = (audioKey) => {
@@ -112,15 +166,120 @@ const pagina67 = () => {
                     <div className={styles["page67__main-container"]}>
                         <div className={styles["page67__text-container1"]}>
                             <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio1_1e")}>My Daily Routine</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My Daily Routine
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio1_2e")}>My daily routine is simple. </span>
-                                <span onClick={() => playAudio("pg67_audio1_3e")}>I <strong>am</strong> a teacher. </span>
-                                <span onClick={() => playAudio("pg67_audio1_4e")}>In the morning, I <strong>am</strong> at home. </span>
-                                <span onClick={() => playAudio("pg67_audio1_5e")}>Then, I <strong>am</strong> at work. </span>
-                                <span onClick={() => playAudio("pg67_audio1_6e")}>In the afternoon, I <strong>am</strong> busy with meetings and classes. </span>
-                                <span onClick={() => playAudio("pg67_audio1_7e")}>At night, I <strong>am</strong> at home again.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My daily routine is simple.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I <strong>am</strong> a teacher.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    In the morning, I <strong>am</strong> at home.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    Then, I <strong>am</strong> at work.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    In the afternoon, I <strong>am</strong> busy with meetings and classes.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_6p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    At night, I <strong>am</strong> at home again.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio1_7e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio1_7p")}
+                                    />
+                                </span>
                             </p>
                         </div>
 
@@ -131,15 +290,120 @@ const pagina67 = () => {
                     <div className={styles["page67__main-container"]}>
                         <div className={styles["page67__text-container2"]}>
                             <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio2_1e")}>Hobbies and Interests</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    Hobbies and Interests
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio2_2e")}>My hobbies <strong>are</strong> simple. </span>
-                                <span onClick={() => playAudio("pg67_audio2_3e")}>I <strong>am</strong> interested in reading. </span>
-                                <span onClick={() => playAudio("pg67_audio2_4e")}>Books <strong>are</strong> my passion. </span>
-                                <span onClick={() => playAudio("pg67_audio2_5e")}>I <strong>am</strong> also fond of cooking. </span>
-                                <span onClick={() => playAudio("pg67_audio2_6e")}>Recipes <strong>are</strong> my inspiration. </span>
-                                <span onClick={() => playAudio("pg67_audio2_7e")}>In my free time, I <strong>am</strong> happy pursuing these activities.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My hobbies <strong>are</strong> simple.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I <strong>am</strong> interested in reading.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    Books <strong>are</strong> my passion.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I <strong>am</strong> also fond of cooking.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    Recipes <strong>are</strong> my inspiration.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_6p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    In my free time, I <strong>am</strong> happy pursuing these activities.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio2_7e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio2_7p")}
+                                    />
+                                </span>
                             </p>
                         </div>
 
@@ -150,16 +414,107 @@ const pagina67 = () => {
                     <div className={styles["page67__main-container"]}>
                         <div className={styles["page67__text-container3"]}>
                             <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio3_1e")}>My Friends</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My Friends
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio3_2e")}>My friends are great. </span>
-                                <span onClick={() => playAudio("pg67_audio3_3e")}>They are fun to be around. </span>
-                                <span onClick={() => playAudio("pg67_audio3_4e")}>We are always together. </span>
-                                <span onClick={() => playAudio("pg67_audio3_5e")}>We are happy when we play games. </span>
-                                <span onClick={() => playAudio("pg67_audio3_6e")}>We are sad when we have to say goodbye.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My friends are great.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    They are fun to be around.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    We are always together.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    We are happy when we play games.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    We are sad when we have to say goodbye.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio3_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio3_6p")}
+                                    />
+                                </span>
                             </p>
                         </div>
+
 
                         <div className={styles["page67__image-container3"]}>
                             <img src={pagina67Imagem3} alt="Friends" className={styles["page67__img-small"]} />
@@ -168,17 +523,123 @@ const pagina67 = () => {
                     <div className={styles["page67__main-container"]}>
                         <div className={styles["page67__text-container4"]}>
                             <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio4_1e")}>My Phone</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My Phone
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_1e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_1p")}
+                                    />
+                                </span>
                             </p>
                             <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg67_audio4_2e")}>My phone is new. </span>
-                                <span onClick={() => playAudio("pg67_audio4_3e")}>It is a gift. </span>
-                                <span onClick={() => playAudio("pg67_audio4_4e")}>It is useful. </span>
-                                <span onClick={() => playAudio("pg67_audio4_5e")}>I am happy with it. </span>
-                                <span onClick={() => playAudio("pg67_audio4_6e")}>I am always texting my friends. </span>
-                                <span onClick={() => playAudio("pg67_audio4_7e")}>They are important to me.</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>
+                                    My phone is new.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_2e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_2p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    It is a gift.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_3e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_3p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    It is useful.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_4e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_4p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I am happy with it.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_5e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_5p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    I am always texting my friends.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_6e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_6p")}
+                                    />
+                                </span>
+
+                                <span>
+                                    They are important to me.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Play English Audio"
+                                        className={styles["page67__audio-icon"]}
+                                        onClick={() => playAudio("pg67_audio4_7e")}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["page67__audio-iconP"]}
+                                        onClick={() => playAudio("pg67_audio4_7p")}
+                                    />
+                                </span>
                             </p>
                         </div>
+
 
                         <div className={styles["page67__image-container4"]}>
                             <img src={pagina67Imagem4} alt="Phone" className={styles["page67__img-small"]} />

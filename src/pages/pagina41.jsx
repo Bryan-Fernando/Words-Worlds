@@ -15,16 +15,16 @@ import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg41_audio1e from '../assets/audios/pg41_audio1e.mp3';
 import pg41_audio1p from '../assets/audios/pg41_audio1p.mp3';
-import Pagina41_audioA from '../assets/audios/pagina41_audioA.mp3';
-import Pagina41_audioB from '../assets/audios/pagina41_audioB.mp3';
-import Pagina41_audioC from '../assets/audios/pagina41_audioC.mp3';
-import Pagina41_audioD from '../assets/audios/pagina41_audioD.mp3';
-import Pagina41_audioE from '../assets/audios/pagina41_audioE.mp3';
-import Pagina41_audioF from '../assets/audios/pagina41_audioF.mp3';
-import Pagina41_audioG from '../assets/audios/pagina41_audioG.mp3';
-import Pagina41_audioH from '../assets/audios/pagina41_audioH.mp3';
-import Pagina41_audioI from '../assets/audios/pagina41_audioI.mp3';
-import Pagina41_audioJ from '../assets/audios/pagina41_audioJ.mp3';
+import pg41_audio2e from '../assets/audios/pg41_audio2e.mp3';
+import pg41_audio3e from '../assets/audios/pg41_audio3e.mp3';
+import pg41_audio4e from '../assets/audios/pg41_audio4e.mp3';
+import pg41_audio5e from '../assets/audios/pg41_audio5e.mp3';
+import pg41_audio6e from '../assets/audios/pg41_audio6e.mp3';
+import pg41_audio7e from '../assets/audios/pg41_audio7e.mp3';
+import pg41_audio8e from '../assets/audios/pg41_audio8e.mp3';
+import pg41_audio9e from '../assets/audios/pg41_audio9e.mp3';
+import pg41_audio10e from '../assets/audios/pg41_audio10e.mp3';
+import pg41_audio11e from '../assets/audios/pg41_audio11e.mp3';
 import pg41_audio2p from '../assets/audios/pg41_audio2p.mp3';
 import pg41_audio3p from '../assets/audios/pg41_audio3p.mp3';
 import pg41_audio4p from '../assets/audios/pg41_audio4p.mp3';
@@ -38,16 +38,16 @@ import pg41_audio11p from '../assets/audios/pg41_audio11p.mp3';
 
 
 const audioFiles = [
-    { en: Pagina41_audioA, pt: pg41_audio2p },
-    { en: Pagina41_audioB, pt: pg41_audio3p },
-    { en: Pagina41_audioC, pt: pg41_audio4p },
-    { en: Pagina41_audioD, pt: pg41_audio5p },
-    { en: Pagina41_audioE, pt: pg41_audio6p },
-    { en: Pagina41_audioF, pt: pg41_audio7p },
-    { en: Pagina41_audioG, pt: pg41_audio8p },
-    { en: Pagina41_audioH, pt: pg41_audio9p },
-    { en: Pagina41_audioI, pt: pg41_audio10p },
-    { en: Pagina41_audioJ, pt: pg41_audio11p }
+    { en: pg41_audio2e, pt: pg41_audio2p },
+    { en: pg41_audio3e, pt: pg41_audio3p },
+    { en: pg41_audio4e, pt: pg41_audio4p },
+    { en: pg41_audio5e, pt: pg41_audio5p },
+    { en: pg41_audio6e, pt: pg41_audio6p },
+    { en: pg41_audio7e, pt: pg41_audio7p },
+    { en: pg41_audio8e, pt: pg41_audio8p },
+    { en: pg41_audio9e, pt: pg41_audio9p },
+    { en: pg41_audio10e, pt: pg41_audio10p },
+    { en: pg41_audio11e, pt: pg41_audio11p }
 ];
 
 

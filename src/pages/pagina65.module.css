@@ -40,16 +40,9 @@
     width: 55%;
     padding: 1.5rem;
     text-align: left;
-    color: gray; 
+    color: black; 
     position: relative;
 }
-
-.page65__text-container--first span,
-.page65__text-container--second span,
-.page65__text-container--third span{
-    cursor: pointer;
-}
-
 
 .page65__text-container--first::after,
 .page65__text-container--second::after {
@@ -117,10 +110,10 @@
 .page65__aside-note--first {
     width: 100%;
     height: 4.5rem;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
-    background-color: #A61C28;
+    background-color: #0A3282;
     color: white;
     display: flex;
     align-items: center;
@@ -136,7 +129,7 @@
 .page65__aside-note--second {
     width: 100%;
     height: 70%;
-    border: 0.4rem solid #A61C28;
+    border: 0.4rem solid #0A3282; /* #0A3282 */
     border-top: 0.1rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
@@ -144,6 +137,7 @@
     padding-left: 0.2rem;
     display: flex;
     align-items: center;
+    color: #103275;
 }
 
 .page65__aside-note--second p {
@@ -157,6 +151,19 @@
 
 /* Ícones de Áudio no Cabeçalho */
 .page65__audio-icon {
+    position: relative;
+    top: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page65__audio-iconP {
+    position: relative;
+    top: 0.3rem;
+    margin-right: 1rem;
     width: 2rem;
     height: 2rem;
     margin-left: 0.5rem;
@@ -166,5 +173,9 @@
 
 /* Efeito Hover no Ícone */
 .page65__audio-icon:hover {
+    transform: scale(1.1);
+}
+
+.page65__audio-iconP:hover {
     transform: scale(1.1);
 }

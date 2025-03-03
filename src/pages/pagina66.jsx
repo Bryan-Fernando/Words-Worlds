@@ -15,6 +15,7 @@ import global_readComPrp from '../assets/audios/global_readComPrp.mp3';
 import global_readComPre from '../assets/audios/global_readComPre.mp3';
 import pg65_audio1_1e from "../assets/audios/pg65_audio1_1e.mp3";
 import pg65_audio1_2e from "../assets/audios/pg65_audio1_2e.mp3";
+import pg65_audio1_2p from "../assets/audios/pg65_audio1_2p.mp3";
 import pg65_audio1_3e from "../assets/audios/pg65_audio1_3e.mp3";
 import pg65_audio1_4e from "../assets/audios/pg65_audio1_4e.mp3";
 import pg65_audio1_5e from "../assets/audios/pg65_audio1_5e.mp3";
@@ -39,6 +40,7 @@ const pagina66 = () => {
         global_readComPrp: global_readComPrp,
         pg65_audio1_1e: pg65_audio1_1e,
         pg65_audio1_2e: pg65_audio1_2e,
+        pg65_audio1_2p: pg65_audio1_2p,
         pg65_audio1_3e: pg65_audio1_3e,
         pg65_audio1_4e: pg65_audio1_4e,
         pg65_audio1_5e: pg65_audio1_5e,
@@ -95,6 +97,18 @@ const pagina66 = () => {
                             </p>
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio1_2e")}>Brazil is a beautiful country in South America.</span>
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page66__audio-textIcon"]}
+                            onClick={() => playAudio('pg65_audio1_2e')}
+                        />
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese audio"
+                            className={styles["page66__audio-textIcon"]}
+                            onClick={() => playAudio('pg65_audio1_2p')}
+                        />
                                 <span onClick={() => playAudio("pg65_audio1_3e")}>It <strong>is</strong> famous for its beautiful beaches </span>
                                 <span onClick={() => playAudio("pg65_audio1_4e")}>culturally diverse</span>
                                 <span onClick={() => playAudio("pg65_audio1_5e")}>, and delicious food.</span>

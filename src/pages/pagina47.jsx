@@ -4,6 +4,9 @@ import styles from './pagina47.module.css';
 
 import pagina47_imagem1 from '../assets/images/pagina47_imagem1.webp';
 
+import iconeE from '../assets/icons/eng_audio_icon.webp';
+import iconeP from '../assets/icons/ptbr_audio_icon.webp';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_posse_ae from '../assets/audios/global_posse_ae.mp3';
 import global_posse_ap from '../assets/audios/global_posse_ap.mp3';
@@ -36,6 +39,17 @@ import audio1p from '../assets/audios/pg47_audio1p.mp3';
 import audio2p from '../assets/audios/pg47_audio2p.mp3';
 import audio3p from '../assets/audios/pg47_audio3p.mp3';
 import audio4p from '../assets/audios/pg47_audio4p.mp3';
+import audio5p from '../assets/audios/pg47_audio5p.mp3';
+import audio6p from '../assets/audios/pg47_audio6p.mp3';
+import audio7p from '../assets/audios/pg47_audio7p.mp3';
+import audio8p from '../assets/audios/pg47_audio8p.mp3';
+import audio9p from '../assets/audios/pg47_audio9p.mp3';
+import audio10p from '../assets/audios/pg47_audio10p.mp3';
+import audio11p from '../assets/audios/pg47_audio11p.mp3';
+import audio12p from '../assets/audios/pg47_audio12p.mp3';
+import audio13p from '../assets/audios/pg47_audio13p.mp3';
+import audio14p from '../assets/audios/pg47_audio14p.mp3';
+
 
 const Pagina47 = () => {
     const audioMap = {
@@ -68,6 +82,16 @@ const Pagina47 = () => {
         'pg47_audio2p': audio2p,
         'pg47_audio3p': audio3p,
         'pg47_audio4p': audio4p,
+        'pg47_audio5p': audio5p,
+        'pg47_audio6p': audio6p,
+        'pg47_audio7p': audio7p,
+        'pg47_audio8p': audio8p,
+        'pg47_audio9p': audio9p,
+        'pg47_audio10p': audio10p,
+        'pg47_audio11p': audio11p,
+        'pg47_audio12p': audio12p,
+        'pg47_audio13p': audio13p,
+        'pg47_audio14p': audio14p,
     };
 
     const currentAudio = useRef(null);
@@ -150,16 +174,156 @@ const Pagina47 = () => {
                         </table>
                         <div className={styles.pg47MainTexto}>
                             <ol className={styles.pg47MainList}>
-                                <li onClick={() => playAudio('pg47_audio1e')}>This is <strong>my</strong> teacher.</li>
-                                <li onClick={() => playAudio('pg47_audio2e')}>Those are <strong>your</strong> keys.</li>
-                                <li onClick={() => playAudio('pg47_audio3e')}>These are <strong>his</strong> pens.</li>
-                                <li onClick={() => playAudio('pg47_audio4e')}>This is <strong>her</strong> phone.</li>
-                                <li onClick={() => playAudio('pg47_audio5e')}>That is <strong>their</strong> car.</li>
-                                <li onClick={() => playAudio('pg47_audio6e')}><strong>My</strong> friend Leo is from Italy.</li>
-                                <li onClick={() => playAudio('pg47_audio7e')}><strong>His</strong> dad is an engineer.</li>
-                                <li onClick={() => playAudio('pg47_audio8e')}><strong>Her</strong> parents are Canadian.</li>
-                                <li onClick={() => playAudio('pg47_audio9e')}><strong>Our</strong> neighbor is French.</li>
-                                <li onClick={() => playAudio('pg47_audio10e')} className={styles.pg47LastLi}><strong>Your</strong> sister is smart.</li>
+                                <li>
+                                    This is <strong>my</strong> teacher.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio1e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio1p')}
+                                    />
+                                </li>
+                                <li>
+                                    Those are <strong>your</strong> keys.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio2e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio2p')}
+                                    />
+                                </li>
+                                <li>
+                                    These are <strong>his</strong> pens.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio3e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio3p')}
+                                    />
+                                </li>
+                                <li>
+                                    This is <strong>her</strong> phone.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio4e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio4p')}
+                                    />
+                                </li>
+                                <li>
+                                    That is <strong>their</strong> car.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio5e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio5p')}
+                                    />
+                                </li>
+                                <li>
+                                    <strong>My</strong> friend Leo is from Italy.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio6e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio6p')}
+                                    />
+                                </li>
+                                <li>
+                                    <strong>His</strong> dad is an engineer.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio7e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio7p')}
+                                    />
+                                </li>
+                                <li>
+                                    <strong>Her</strong> parents are Canadian.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio8e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio8p')}
+                                    />
+                                </li>
+                                <li>
+                                    <strong>Our</strong> neighbor is French.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio9e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio9p')}
+                                    />
+                                </li>
+                                <li className={styles["pg47__last-li"]}>
+                                    <strong>Your</strong> sister is smart.
+                                    <img
+                                        src={iconeE}
+                                        alt="Play English Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio10e')}
+                                    />
+                                    <img
+                                        src={iconeP}
+                                        alt="Play Portuguese Audio"
+                                        className={styles["pg47__audio-icon"]}
+                                        onClick={() => playAudio('pg47_audio10p')}
+                                    />
+                                </li>
                             </ol>
                         </div>
                     </div>
@@ -180,12 +344,12 @@ const Pagina47 = () => {
                             </div>
                             <div className={styles.pg47AsideTexto4}>
                                 <p> <span onClick={() => playAudio('pg47_audio14_1e')}>This is <strong>my</strong> friend Daniel. </span><br />
-                                <span onClick={() => playAudio('pg47_audio14_2e')}>He is <strong>our</strong> web designer.</span></p>
+                                    <span onClick={() => playAudio('pg47_audio14_2e')}>He is <strong>our</strong> web designer.</span></p>
                             </div>
                             <div className={styles.pg47AsideTexto5}>
                                 <p> <span onClick={() => playAudio('pg47_audio15_1e')}> Daniel, this is <strong>my</strong> childhood friend Karen </span><br />
-                                <span onClick={() => playAudio('pg47_audio15_2e')}>and this is <strong>her</strong> brother Ethan. </span><br />
-                                <span onClick={() => playAudio('pg47_audio15_3e')}>They will be working in the IT (Information Technology) department.</span></p>
+                                    <span onClick={() => playAudio('pg47_audio15_2e')}>and this is <strong>her</strong> brother Ethan. </span><br />
+                                    <span onClick={() => playAudio('pg47_audio15_3e')}>They will be working in the IT (Information Technology) department.</span></p>
                             </div>
                         </div>
                     </div>
@@ -194,18 +358,18 @@ const Pagina47 = () => {
                         <p className={styles.pg47Titulo}>Tradução:</p>
 
                         <div className={styles.pg47TraducaoTop}>
-                            <div className={styles.pg47AsideTraducao2} onClick={() => playAudio('pg47_audio1p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles.pg47AsideTraducao2} onClick={() => playAudio('pg47_audio11p')} style={{ cursor: 'pointer' }}>
                                 <p>Oi, Daniel!</p>
                             </div>
-                            <div className={styles.pg47AsideTraducao3} onClick={() => playAudio('pg47_audio2p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles.pg47AsideTraducao3} onClick={() => playAudio('pg47_audio12p')} style={{ cursor: 'pointer' }}>
                                 <p>Sejam bem-vindos, pessoal!</p>
                             </div>
-                            <div className={styles.pg47AsideTraducao1} onClick={() => playAudio('pg47_audio3p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles.pg47AsideTraducao1} onClick={() => playAudio('pg47_audio13p')} style={{ cursor: 'pointer' }}>
                                 <p>Prazer em conhecê-lo, Daniel.</p>
                             </div>
                         </div>
 
-                        <div className={styles.pg47AsideTraducao4} onClick={() => playAudio('pg47_audio4p')} style={{ cursor: 'pointer' }}>
+                        <div className={styles.pg47AsideTraducao4} onClick={() => playAudio('pg47_audio14p')} style={{ cursor: 'pointer' }}>
                             <p>
                                 Este é meu amigo Daniel. Ele é nosso web designer. Daniel, esta é minha amiga de infância Karen e este é seu irmão Ethan.
                             </p>
