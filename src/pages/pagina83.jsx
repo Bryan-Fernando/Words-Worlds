@@ -28,6 +28,16 @@ import pg83_audio7 from '../assets/audios/pg83_audio7.mp3';
 import pg83_audio8 from '../assets/audios/pg83_audio8.mp3';
 import pg83_audio9 from '../assets/audios/pg83_audio9.mp3';
 import pg83_audio10 from '../assets/audios/pg83_audio10.mp3';
+import pg83_audio1p from '../assets/audios/pg83_audio1p.mp3';
+import pg83_audio2p from '../assets/audios/pg83_audio2p.mp3';
+import pg83_audio3p from '../assets/audios/pg83_audio3p.mp3';
+import pg83_audio4p from '../assets/audios/pg83_audio4p.mp3';
+import pg83_audio5p from '../assets/audios/pg83_audio5p.mp3';
+import pg83_audio6p from '../assets/audios/pg83_audio6p.mp3';
+import pg83_audio7p from '../assets/audios/pg83_audio7p.mp3';
+import pg83_audio8p from '../assets/audios/pg83_audio8p.mp3';
+import pg83_audio9p from '../assets/audios/pg83_audio9p.mp3';
+import pg83_audio10p from '../assets/audios/pg83_audio10p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -46,6 +56,17 @@ const audioMap = {
     pg83_audio8,
     pg83_audio9,
     pg83_audio10,
+    pg83_audio1p,
+    pg83_audio2p,
+    pg83_audio3p,
+    pg83_audio4p,
+    pg83_audio5p,
+    pg83_audio6p,
+    pg83_audio7p,
+    pg83_audio8p,
+    pg83_audio9p,
+    pg83_audio10p,
+
 };
 
 const Pagina83 = () => {
@@ -193,6 +214,14 @@ const Pagina83 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
 
+
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg83AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+
                                         {/* Ícone de Volume Reduzido */}
                                         <img
                                             src={slow_audio_icon}
@@ -298,6 +327,13 @@ const Pagina83 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
 
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg83AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+
                                         {/* Ícone de Volume Reduzido */}
                                         <img
                                             src={slow_audio_icon}
@@ -305,6 +341,7 @@ const Pagina83 = () => {
                                             className={`${styles.pg83AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg83Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
+
                                     </div>
                                 </div>
                             );

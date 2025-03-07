@@ -28,6 +28,16 @@ import pg72_audio9 from '../assets/audios/pg72_audio9.mp3';
 import pg72_audio10 from '../assets/audios/pg72_audio10.mp3';
 import pg72_audio11 from '../assets/audios/pg72_audio11.mp3';
 import pg72_audio12 from '../assets/audios/pg72_audio12.mp3';
+import pg72_audio2p from '../assets/audios/pg72_audio2p.mp3';
+import pg72_audio3p from '../assets/audios/pg72_audio3p.mp3';
+import pg72_audio4p from '../assets/audios/pg72_audio4p.mp3';
+import pg72_audio5p from '../assets/audios/pg72_audio5p.mp3';
+import pg72_audio6p from '../assets/audios/pg72_audio6p.mp3';
+import pg72_audio8p from '../assets/audios/pg72_audio8p.mp3';
+import pg72_audio9p from '../assets/audios/pg72_audio9p.mp3';
+import pg72_audio10p from '../assets/audios/pg72_audio10p.mp3';
+import pg72_audio11p from '../assets/audios/pg72_audio11p.mp3';
+import pg72_audio12p from '../assets/audios/pg72_audio12p.mp3';
 
 
 const audioMap = {
@@ -49,6 +59,17 @@ const audioMap = {
     pg72_audio10,
     pg72_audio11,
     pg72_audio12,
+    pg72_audio2p,
+    pg72_audio3p,
+    pg72_audio4p,
+    pg72_audio5p,
+    pg72_audio6p,
+    pg72_audio8p,
+    pg72_audio9p,
+    pg72_audio10p,
+    pg72_audio11p,
+    pg72_audio12p,
+
 };
 
 
@@ -62,11 +83,20 @@ const pagina72 = () => {
         'is not', 'are not', 'is not', 'am not', 'are not'
     ];
 
+    const [showCorrectAnswers, setShowCorrectAnswers] = useState(Array(10).fill(null));
+
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => value.toLowerCase() === correctAnswers[index]);
+
+        const newShowCorrectAnswers = newResults.map((isCorrect, index) =>
+            isCorrect ? null : correctAnswers[index]
+        );
+
         setResults(newResults);
+        setShowCorrectAnswers(newShowCorrectAnswers);
     };
+
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -184,6 +214,7 @@ const pagina72 = () => {
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles.pg72CheckmarkImage}
                                             />
+
                                         )}
                                         <img
                                             src={eng_audio_icon}
@@ -192,11 +223,24 @@ const pagina72 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg72AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+                                        <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
+                                         <div className={styles.pg72CorrectAnswerContainer} >
+                                            {showCorrectAnswers[index] && (
+                                                <span className={styles.pg72CorrectAnswer}style={{ fontSize: '1.5rem'}}>
+                                                    <strong style={{ fontSize: '1.5rem'}}>Answer:</strong> {showCorrectAnswers[index]}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             );
@@ -264,6 +308,9 @@ const pagina72 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index + 5)}
                                             className={styles.pg72InputBox}
                                         />
+                                       
+
+
                                     </div>
                                     <span>
                                         <em>
@@ -285,11 +332,24 @@ const pagina72 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg72AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+                                        <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
+                                         <div className={styles.pg72CorrectAnswerContainer} >
+                                            {showCorrectAnswers[index] && (
+                                                <span className={styles.pg72CorrectAnswer}style={{ fontSize: '1.5rem'}}>
+                                                    <strong style={{ fontSize: '1.5rem'}}>Answer:</strong> {showCorrectAnswers[index]}
+                                                </span>
+                                            )}
+                                        </div>
                                     </div>
                                 </div>
                             );
@@ -326,19 +386,19 @@ const pagina72 = () => {
                             <div className={styles.pg72WordColumn}>
                                 <p><strong className={styles.pg72RedText}>Friendly</strong> <span>(amigável)</span></p>
                                 <p><strong className={styles.pg72RedText}>Happy</strong> <span>(feliz)</span></p>
-                                <p><strong className={styles.pg72RedText}>Hardworking</strong> <span>(trabalhador)</span></p>
-                                <p><strong className={styles.pg72RedText}>Outgoing</strong> <span>(extrovertido)</span></p>
-                                <p><strong className={styles.pg72RedText}>Creative</strong> <span>(criativo)</span></p>
+                                <p><strong className={styles.pg72RedText}>Hardworking</strong> <span>(trabalhador(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Outgoing</strong> <span>(extrovertido(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Creative</strong> <span>(criativo(a))</span></p>
                                 <p><strong className={styles.pg72RedText}>Intelligent</strong> <span>(inteligente)</span></p>
-                                <p><strong className={styles.pg72RedText}>Ambitious</strong> <span>(ambicioso)</span></p>
+                                <p><strong className={styles.pg72RedText}>Ambitious</strong> <span>(ambicioso(a))</span></p>
                             </div>
                             <div className={styles.pg72WordColumn}>
-                                <p><strong className={styles.pg72RedText}>Helpful</strong> <span>(prestativo)</span></p>
-                                <p><strong className={styles.pg72RedText}>Talkative</strong> <span>(falante)</span></p>
-                                <p><strong className={styles.pg72RedText}>Organized</strong> <span>(organizado)</span></p>
-                                <p><strong className={styles.pg72RedText}>Shy</strong> <span>(tímido)</span></p>
-                                <p><strong className={styles.pg72RedText}>Lazy</strong> <span>(preguiçoso)</span></p>
-                                <p><strong className={styles.pg72RedText}>Disrespectful</strong> <span>(desrespeitoso)</span></p>
+                                <p><strong className={styles.pg72RedText}>Helpful</strong> <span>(prestativo(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Talkative</strong> <span>(pessoa que fala muito)</span></p>
+                                <p><strong className={styles.pg72RedText}>Organized</strong> <span>(organizado(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Shy</strong> <span>(tímido(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Lazy</strong> <span>(preguiçoso(a))</span></p>
+                                <p><strong className={styles.pg72RedText}>Disrespectful</strong> <span>(desrespeitoso(a))</span></p>
                             </div>
                         </div>
                     </div>

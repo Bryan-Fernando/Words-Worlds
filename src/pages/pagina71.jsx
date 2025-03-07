@@ -42,6 +42,12 @@ import pg71_audio7 from "../assets/audios/pg71_audio7.mp3";
 import pg71_audio8 from "../assets/audios/pg71_audio8.mp3";
 import pg71_audio9 from "../assets/audios/pg71_audio9.mp3";
 import pg71_audio10 from "../assets/audios/pg71_audio10.mp3";
+import pg71_audio5p from "../assets/audios/pg71_audio5p.mp3";
+import pg71_audio6p from "../assets/audios/pg71_audio6p.mp3";
+import pg71_audio7p from "../assets/audios/pg71_audio7p.mp3";
+import pg71_audio8p from "../assets/audios/pg71_audio8p.mp3";
+import pg71_audio9p from "../assets/audios/pg71_audio9p.mp3";
+import pg71_audio10p from "../assets/audios/pg71_audio10p.mp3";
 import pg71_audio11e from "../assets/audios/pg71_audio11e.mp3";
 import pg71_audio11p from "../assets/audios/pg71_audio11p.mp3";
 import pg71_audio12 from "../assets/audios/pg71_audio12.mp3";
@@ -51,7 +57,39 @@ import pg71_audio15 from "../assets/audios/pg71_audio15.mp3";
 import pg71_audio16 from "../assets/audios/pg71_audio16.mp3";
 import pg71_audio17 from "../assets/audios/pg71_audio17.mp3";
 import pg71_audio18 from "../assets/audios/pg71_audio18.mp3";
-
+import pg71_audio12p from "../assets/audios/pg71_audio12p.mp3";
+import pg71_audio13p from "../assets/audios/pg71_audio13p.mp3";
+import pg71_audio14p from "../assets/audios/pg71_audio14p.mp3";
+import pg71_audio15p from "../assets/audios/pg71_audio15p.mp3";
+import pg71_audio16p from "../assets/audios/pg71_audio16p.mp3";
+import pg71_audio17p from "../assets/audios/pg71_audio17p.mp3";
+import pg71_audio18p from "../assets/audios/pg71_audio18p.mp3";
+import pg71_audio19 from "../assets/audios/pg71_audio19.mp3";
+import pg71_audio20 from "../assets/audios/pg71_audio20.mp3";
+import pg71_audio21 from "../assets/audios/pg71_audio21.mp3";
+import pg71_audio22 from "../assets/audios/pg71_audio22.mp3";
+import pg71_audio23 from "../assets/audios/pg71_audio23.mp3";
+import pg71_audio24 from "../assets/audios/pg71_audio24.mp3";
+import pg71_audio25 from "../assets/audios/pg71_audio25.mp3";
+import pg71_audio26 from "../assets/audios/pg71_audio26.mp3";
+import pg71_audio27 from "../assets/audios/pg71_audio27.mp3";
+import pg71_audio28 from "../assets/audios/pg71_audio28.mp3";
+import pg71_audio29 from "../assets/audios/pg71_audio29.mp3";
+import pg71_audio30 from "../assets/audios/pg71_audio30.mp3";
+import pg71_audio31 from "../assets/audios/pg71_audio31.mp3";
+import pg71_audio19p from "../assets/audios/pg71_audio19p.mp3";
+import pg71_audio20p from "../assets/audios/pg71_audio20p.mp3";
+import pg71_audio21p from "../assets/audios/pg71_audio21p.mp3";
+import pg71_audio22p from "../assets/audios/pg71_audio22p.mp3";
+import pg71_audio23p from "../assets/audios/pg71_audio23p.mp3";
+import pg71_audio24p from "../assets/audios/pg71_audio24p.mp3";
+import pg71_audio25p from "../assets/audios/pg71_audio25p.mp3";
+import pg71_audio26p from "../assets/audios/pg71_audio26p.mp3";
+import pg71_audio27p from "../assets/audios/pg71_audio27p.mp3";
+import pg71_audio28p from "../assets/audios/pg71_audio28p.mp3";
+import pg71_audio29p from "../assets/audios/pg71_audio29p.mp3";
+import pg71_audio30p from "../assets/audios/pg71_audio30p.mp3";
+import pg71_audio31p from "../assets/audios/pg71_audio31p.mp3";
 
 const Pagina71 = () => {
     const correctAnswers = [
@@ -103,6 +141,12 @@ const Pagina71 = () => {
         pg71_audio8,
         pg71_audio9,
         pg71_audio10,
+        pg71_audio5p,
+        pg71_audio6p,
+        pg71_audio7p,
+        pg71_audio8p,
+        pg71_audio9p,
+        pg71_audio10p,
         pg71_audio11e,
         pg71_audio11p,
         pg71_audio12,
@@ -112,6 +156,39 @@ const Pagina71 = () => {
         pg71_audio16,
         pg71_audio17,
         pg71_audio18,
+        pg71_audio12p,
+        pg71_audio13p,
+        pg71_audio14p,
+        pg71_audio15p,
+        pg71_audio16p,
+        pg71_audio17p,
+        pg71_audio18p,
+        pg71_audio19,
+        pg71_audio20,
+        pg71_audio21,
+        pg71_audio22,
+        pg71_audio23,
+        pg71_audio24,
+        pg71_audio25,
+        pg71_audio26,
+        pg71_audio27,
+        pg71_audio28,
+        pg71_audio29,
+        pg71_audio30,
+        pg71_audio31,
+        pg71_audio19p,
+        pg71_audio20p,
+        pg71_audio21p,
+        pg71_audio22p,
+        pg71_audio23p,
+        pg71_audio24p,
+        pg71_audio25p,
+        pg71_audio26p,
+        pg71_audio27p,
+        pg71_audio28p,
+        pg71_audio29p,
+        pg71_audio30p,
+        pg71_audio31p,
     };
 
 
@@ -273,10 +350,21 @@ const Pagina71 = () => {
                         {["Who is she?", "Where is she from?", "What is her home city?", "How old is she?", "What is her email address?", "What is her phone number?"].map((question, index) => (
                             <div key={index} className={styles.pg71QuestionItem}>
                                 <p
-                                    className={`${styles.pg71Question} ${styles.pg71ClickableText}`}
-                                    onClick={() => playAudio(`pg71_audio${index + 5}`)}
+                                    className={`${styles.pg71Question}`}
                                 >
                                     {String.fromCharCode(97 + index)}. {question}
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles.pg71AudioIcon}
+                                        onClick={() => playAudio(`pg71_audio${index + 5}`)}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Portuguese audio"
+                                        className={styles.pg71AudioIcon}
+                                        onClick={() => playAudio(`pg71_audio${index + 5}p`)}
+                                    />
                                 </p>
                                 <input
                                     type="text"
@@ -284,11 +372,25 @@ const Pagina71 = () => {
                                     value={userAnswers[index]}
                                     onChange={(e) => handleInputChange(e.target.value, index)}
                                 />
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles.pg71AudioIconInput}
+                                        onClick={() => playAudio(`pg71_audio${index + 19}`)}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Portuguese audio"
+                                        className={styles.pg71AudioIconInput}
+                                        onClick={() => playAudio(`pg71_audio${index + 19}p`)}
+                                    />
+
                                 {results[index] && (
                                     <div className={styles.pg71CheckContainer}>
                                         <img src={results[index]} alt="result" className={styles.pg71CheckmarkImage} />
                                     </div>
                                 )}
+
                             </div>
                         ))}
                     </div>
@@ -313,10 +415,21 @@ const Pagina71 = () => {
                         {["Who is he?", "What is his nationality?", "Where is he from?", "Is he married or single?", "How old is he?", "What is his email address?", "What is his cell phone number?"].map((question, index) => (
                             <div key={index + 6} className={styles.pg71QuestionItem}>
                                 <p
-                                    className={`${styles.pg71Question} ${styles.pg71ClickableText}`}
-                                    onClick={() => playAudio(`pg71_audio${index + 12}`)}
+                                    className={`${styles.pg71Question}`}
                                 >
                                     {String.fromCharCode(97 + index + 6)}. {question}
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles.pg71AudioIcon}
+                                        onClick={() => playAudio(`pg71_audio${index + 12}`)}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Portuguese audio"
+                                        className={styles.pg71AudioIcon}
+                                        onClick={() => playAudio(`pg71_audio${index + 12}p`)}
+                                    />
                                 </p>
                                 <input
                                     type="text"
@@ -324,6 +437,18 @@ const Pagina71 = () => {
                                     value={userAnswers[index + 6]}
                                     onChange={(e) => handleInputChange(e.target.value, index + 6)}
                                 />
+                                <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles.pg71AudioIconInput}
+                                        onClick={() => playAudio(`pg71_audio${index + 25}`)}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Portuguese audio"
+                                        className={styles.pg71AudioIconInput}
+                                        onClick={() => playAudio(`pg71_audio${index + 25}p`)}
+                                    />
                                 {results[index + 6] && (
                                     <div className={styles.pg71CheckContainer}>
                                         <img src={results[index + 6]} alt="result" className={styles.pg71CheckmarkImage} />

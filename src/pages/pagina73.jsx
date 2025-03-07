@@ -29,6 +29,16 @@ import pg73_audio7 from '../assets/audios/pg73_audio7.mp3';
 import pg73_audio8 from '../assets/audios/pg73_audio8.mp3';
 import pg73_audio9 from '../assets/audios/pg73_audio9.mp3';
 import pg73_audio10 from '../assets/audios/pg73_audio10.mp3';
+import pg73_audio1p from '../assets/audios/pg73_audio1p.mp3';
+import pg73_audio2p from '../assets/audios/pg73_audio2p.mp3';
+import pg73_audio3p from '../assets/audios/pg73_audio3p.mp3';
+import pg73_audio4p from '../assets/audios/pg73_audio4p.mp3';
+import pg73_audio5p from '../assets/audios/pg73_audio5p.mp3';
+import pg73_audio6p from '../assets/audios/pg73_audio6p.mp3';
+import pg73_audio7p from '../assets/audios/pg73_audio7p.mp3';
+import pg73_audio8p from '../assets/audios/pg73_audio8p.mp3';
+import pg73_audio9p from '../assets/audios/pg73_audio9p.mp3';
+import pg73_audio10p from '../assets/audios/pg73_audio10p.mp3';
 
 
 const audioMap = {
@@ -50,6 +60,17 @@ const audioMap = {
     pg73_audio8,
     pg73_audio9,
     pg73_audio10,
+    pg73_audio1p,
+    pg73_audio2p,
+    pg73_audio3p,
+    pg73_audio4p,
+    pg73_audio5p,
+    pg73_audio6p,
+    pg73_audio7p,
+    pg73_audio8p,
+    pg73_audio9p,
+    pg73_audio10p,
+
 };
 
 
@@ -115,7 +136,7 @@ const pagina73 = () => {
                     />
                 </h1>
                 <p className={styles.pg73P}>
-                    Fill in the blanks with the correct form of the verb ‘to be’ in the Simple Present tense
+                    Exercise. Fill in the blanks with the correct form of the verb ‘be’ in the Simple Present tense
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
@@ -225,6 +246,12 @@ const pagina73 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg73AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+                                        <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg73AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg73Pulsing : ''}`}
@@ -304,6 +331,12 @@ const pagina73 = () => {
                                             alt="Audio Icon"
                                             className={styles.pg73AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg73AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
                                         />
                                         <img
                                             src={slow_audio_icon}

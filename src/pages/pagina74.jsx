@@ -28,6 +28,16 @@ import pg74_audio7 from '../assets/audios/pg74_audio7.mp3';
 import pg74_audio8 from '../assets/audios/pg74_audio8.mp3';
 import pg74_audio9 from '../assets/audios/pg74_audio9.mp3';
 import pg74_audio10 from '../assets/audios/pg74_audio10.mp3';
+import pg74_audio1p from '../assets/audios/pg74_audio1p.mp3';
+import pg74_audio2p from '../assets/audios/pg74_audio2p.mp3';
+import pg74_audio3p from '../assets/audios/pg74_audio3p.mp3';
+import pg74_audio4p from '../assets/audios/pg74_audio4p.mp3';
+import pg74_audio5p from '../assets/audios/pg74_audio5p.mp3';
+import pg74_audio6p from '../assets/audios/pg74_audio6p.mp3';
+import pg74_audio7p from '../assets/audios/pg74_audio7p.mp3';
+import pg74_audio8p from '../assets/audios/pg74_audio8p.mp3';
+import pg74_audio9p from '../assets/audios/pg74_audio9p.mp3';
+import pg74_audio10p from '../assets/audios/pg74_audio10p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -46,6 +56,17 @@ const audioMap = {
     pg74_audio8,
     pg74_audio9,
     pg74_audio10,
+    pg74_audio1p,
+    pg74_audio2p,
+    pg74_audio3p,
+    pg74_audio4p,
+    pg74_audio5p,
+    pg74_audio6p,
+    pg74_audio7p,
+    pg74_audio8p,
+    pg74_audio9p,
+    pg74_audio10p,
+
 };
 
 
@@ -56,7 +77,6 @@ const pagina74 = () => {
 
     const correctAnswers = [
         'is', 'is', 'is', 'is', 'are',
-
         'is not', 'are not', 'is not', 'is not', 'is not'
     ];
 
@@ -72,7 +92,7 @@ const pagina74 = () => {
     const handleInputChange = (value, index) => {
         setInputValues((prevValues) => {
             const newValues = [...prevValues];
-            newValues[index] = value.trim();
+            newValues[index] = value;
             return newValues;
         });
     };
@@ -89,7 +109,6 @@ const pagina74 = () => {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
-
 
     const toggleSpeedReduction = (audioKey) => {
         setIsSpeedReduced((prevState) => ({
@@ -156,7 +175,7 @@ const pagina74 = () => {
                         {[
                             "The weather ____ beautiful today.",
                             "My cat ____ playful in the morning.",
-                            "Sarah ____ my best friend.",
+                            "Mary ____ my best friend.",
                             "This book ____ interesting.",
                             "The flowers ____ blooming in the garden."
                         ].map((question, index) => {
@@ -192,6 +211,12 @@ const pagina74 = () => {
                                             alt="Audio Icon"
                                             className={styles.pg74AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg74AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
                                         />
                                         <img
                                             src={slow_audio_icon}
@@ -296,6 +321,12 @@ const pagina74 = () => {
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg74AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+                                        <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg74AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg74Pulsing : ''}`}
@@ -318,9 +349,9 @@ const pagina74 = () => {
                         </div>
                         <div className={styles.pg74AsideNotes2}>
                             <p>
-                                "Not" is used to form negative sentences. The verb "be" is conjugated as "am not" for the first
-                                person singular (I), "is not" for singular subjects (my dog, the sky, this restaurant, the movie),
-                                and "are not" for plural subjects (the children)
+                                <span style={{ color: '#8a1720' }}>"Not"</span> is used to form negative sentences. The verb "be" is conjugated as <span style={{ color: '#8a1720' }}> "am not"</span> for the first
+                                person singular (I), <span style={{ color: '#8a1720' }}>"is not"</span> for singular subjects (my dog, the sky, this restaurant, the movie),
+                                and <span style={{ color: '#8a1720' }}>"are not"</span> for plural subjects (the children)
                             </p>
                         </div>
                     </div>

@@ -127,14 +127,12 @@
 
 .pg71QuestionText {
     font-size: 2rem;
-    color: #4E4E4E;
     margin-bottom: 1rem;
 }
 
 .pg71Question {
     width: 30%;
-    font-size: 1.8rem;
-    color: #4E4E4E;
+    font-size: 1.7rem;
     margin-bottom: 0.8rem;
 }
 
@@ -269,7 +267,7 @@
 
 .pg71CheckContainer {
     position: absolute;
-    left: 60%;
+    left: 61%;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -305,9 +303,25 @@
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    top: 0.3rem;
 }
 
 .pg71AudioIcon:hover {
+    transform: scale(1.1);
+}
+
+.pg71AudioIconInput {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    position: relative;
+    top: 0.3rem;
+    right: 30%;
+}
+
+.pg71AudioIconInput:hover {
     transform: scale(1.1);
 }
 

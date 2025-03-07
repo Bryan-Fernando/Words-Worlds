@@ -108,14 +108,14 @@
 
 .pg70inputFrase .eng_audio_icon{
     position: absolute;
-    right: 10%;
+    right: 15%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .pg70inputFrase .ptbr_audio_icon{
     position: absolute;
-    right: 15%;
+    right: 10%;
     top: 50%;
     transform: translateY(-50%);
 }

@@ -247,6 +247,20 @@
     color: #0A3282;
 }
 
+.pg72CorrectAnswerContainer {
+    font-size: 0.1rem;
+    font-weight: bold;
+    white-space: nowrap;
+
+}
+
+.pg72InputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
 @media (max-width: 1024px) {
     .pg72AsideNotes2 p {
         font-size: 2rem;
