@@ -324,6 +324,20 @@
     animation: pulse 1.5s infinite;
 }
 
+.pg72CorrectAnswerWrapper {
+    width: 100%; /* Faz ocupar toda a largura do container */
+    display: block; /* Garante que fique abaixo */
+    margin-top: 10px; /* Espaço entre a resposta e os elementos acima */
+}
+
+.pg72CorrectAnswer {
+    font-size: 1.5rem;
+    color: red;
+    display: block; /* Garante que fique em uma linha separada */
+    font-weight: bold;
+}
+
+
 @keyframes pulse {
     0% {
         transform: scale(1);

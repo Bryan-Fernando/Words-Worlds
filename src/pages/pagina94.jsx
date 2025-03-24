@@ -66,7 +66,7 @@ const Pagina94 = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
 
-            const isCorrect = value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
+            const isCorrect = value.trim() === correctAnswers[index].toLowerCase();
 
             return isCorrect;
         });

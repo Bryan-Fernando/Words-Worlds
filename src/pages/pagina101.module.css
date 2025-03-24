@@ -60,7 +60,7 @@
 }
 
 .pg101Question span {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     font-weight: bold;
     color: black;
 }
@@ -85,7 +85,7 @@
 
 .pg101InputContainer {
     gap: 1rem;
-    width: 23%;
+    width: 19%;
     position: relative;
     display: inline-flex;
     align-items: center;

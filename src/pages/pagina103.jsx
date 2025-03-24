@@ -75,7 +75,7 @@ const Pagina103 = () => {
         <div className={styles.pg103Container}>
             <header className={styles.pg103Header}>
                 <h1 className={styles.pg103H1}>
-                    Learning Language Exercises 
+                    Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
@@ -89,28 +89,28 @@ const Pagina103 = () => {
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
-                <p>
-                    Match the questions with the correct answers.
-                    <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("pg103_audio1e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("pg103_audio1p")}
-                    />
-                </p>
             </header>
 
             <main className={styles.pg103Main}>
                 <div className={styles.pg103ContainerQuestoes}>
                     <div className={styles.pg103Questions}>
-                        <p className={styles.pg103TituloQuestion}>Questions:</p>
-
+                        <p className={styles.pg103TituloQuestion}>
+                            Match the questions with the correct answers.
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles.pg103HeaderIcon}
+                                onClick={() => playAudio("pg103_audio1e")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese audio"
+                                className={styles.pg103HeaderIcon}
+                                onClick={() => playAudio("pg103_audio1p")}
+                            />
+                            <br />
+                            Questions:</p>
+                        <br />
                         {[
                             "Are you a teacher?",
                             "Is she your neighbor?",

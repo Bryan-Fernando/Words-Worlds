@@ -87,7 +87,6 @@
 .page94__questions-container h2 {
     font-size: 2.5rem;
     padding-top: 5rem;
-    color: #58595B;
 }
 
 .page94__question {
@@ -101,7 +100,6 @@
 .page94__question-text {
     font-size: 2rem;
     font-weight: 400;
-    color: #888A8C;
     cursor: pointer;
 }
 

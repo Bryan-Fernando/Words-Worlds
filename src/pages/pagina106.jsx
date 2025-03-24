@@ -5,7 +5,7 @@ import styles from './pagina106.module.css';
 import pg106IconNotes from '../assets/icons/notes_icon.webp';
 
 import global_grammar from '../assets/audios/global_grammar.mp3';
-import global_simple_present from '../assets/audios/global_simple_present.mp3';
+import global_simple_present_main from '../assets/audios/global_simple_present_main.mp3';
 import afirmativaAudio from '../assets/audios/afirmativa.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
 import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
@@ -31,8 +31,9 @@ import pg106_trad7 from '../assets/audios/pg106_trad7.mp3';
 
 const Pagina106 = () => {
     const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
+        Array(3).fill(Array(6).fill(''))
     );
+
     const currentAudioRef = useRef(null);
 
     const playAudio = (audioFile) => {
@@ -59,14 +60,16 @@ const Pagina106 = () => {
             <div className={styles.pg106Container}>
                 <header className={styles.pg106Header}>
                     <h1 className={styles.pg8AudioText}
-                                            onClick={() => playAudio(global_grammar)} style={{cursor: 'pointer'}}>
-                                            Grammar
-                                        </h1>
-                                        <h2 className={styles.pg8AudioText}
-                                            onClick={() => playAudio(global_simple_present)}
-                                            style={{ color: 'black', cursor: 'pointer' }}>
-                                            Simple Present (Presente Simples)
-                                        </h2>
+                        onClick={() => playAudio(global_grammar)} style={{ cursor: 'pointer' }}>
+                        Grammar
+                    </h1>
+                    <h2 className={styles.pg8AudioText}
+                        onClick={() => playAudio(global_simple_present_main)}
+                        style={{ cursor: 'pointer' }}>
+                        Simple Present - Main verbs
+                        <br />
+                       <span style={{ color: 'black', fontSize: '3rem', position: 'relative', bottom: '1rem'} }> Presente simples - Verbos principais</span>
+                    </h2>
                 </header>
                 <main className={styles.pg106Main}>
                     <div>
@@ -101,27 +104,21 @@ const Pagina106 = () => {
                                 </tr>
                             </thead>
                             <tbody>
-    {[
-        { subject: "I", verb: "work", complement: "on Mondays", audio: pg106_audio1, translation: "Eu trabalho às segundas-feiras", tradAudio: pg106_trad1 },
-        { subject: "He", verb: "works", complement: "on Tuesdays", audio: pg106_audio2, translation: "Ele trabalha às terças-feiras", tradAudio: pg106_trad2 },
-        { subject: "She", verb: "works", complement: "on Wednesdays", audio: pg106_audio3, translation: "Ela trabalha às quartas-feiras", tradAudio: pg106_trad3 },
-        { subject: "It", verb: "works", complement: "now", audio: pg106_audio4, translation: "Funciona agora", tradAudio: pg106_trad4 },
-        { subject: "We", verb: "work", complement: "on Thursdays", audio: pg106_audio5, translation: "Nós trabalhamos às quintas-feiras", tradAudio: pg106_trad5 },
-        { subject: "You", verb: "work", complement: "on Fridays", audio: pg106_audio6, translation: "Você trabalha às sextas-feiras", tradAudio: pg106_trad6 },
-        { subject: "They", verb: "work", complement: "on Weekends", audio: pg106_audio7, translation: "Eles trabalham nos fins de semana", tradAudio: pg106_trad7 }
-    ].map((row, index) => (
-        <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: 'pointer' }}>
-            <td className={styles.pg106Sujeito} style={{ textAlign: 'center' }}>{row.subject}</td>
-            <td className={styles.pg106verbo_auxiliar}></td>
-            <td className={styles.pg106Adverbio}></td>
-            <td className={styles.pg106Verbo}>{row.verb}</td>
-            <td className={styles.pg106ObjetivoComplemento}>{row.complement}</td>
-            <td className={styles.pg106Traducao} onClick={(e) => { e.stopPropagation(); playAudio(row.tradAudio); }}>
-                {row.translation}
-            </td>
-        </tr>
-    ))}
-</tbody>
+                                {[
+                                    { subject: "I", verb: "work", complement: "on Mondays", audio: pg106_audio1, translation: "Eu trabalho às segundas-feiras", tradAudio: pg106_trad1 },                                    
+                                ].map((row, index) => (
+                                    <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: 'pointer' }}>
+                                        <td className={styles.pg106Sujeito} style={{ textAlign: 'center' }}>{row.subject}</td>
+                                        <td className={styles.pg106verbo_auxiliar}></td>
+                                        <td className={styles.pg106Adverbio}></td>
+                                        <td className={styles.pg106Verbo}>{row.verb}</td>
+                                        <td className={styles.pg106ObjetivoComplemento}>{row.complement}</td>
+                                        <td className={styles.pg106Traducao} onClick={(e) => { e.stopPropagation(); playAudio(row.tradAudio); }}>
+                                            {row.translation}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
 
                         </table>
                         <table className={styles.pg106StyledTable}>

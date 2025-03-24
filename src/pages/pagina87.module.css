@@ -25,6 +25,13 @@
     font-weight: bold;
 }
 
+.page87__subtitle-black {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
 .page87__main {
     display: flex;
     flex-direction: column;
@@ -91,7 +98,6 @@
 .page87__icon-check {
     width: 2.5rem;
     height: 2.5rem;
-    pointer-events: none;
 }
 
 .page87__button--check {
@@ -104,7 +110,6 @@
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    margin: 2rem;
     margin-bottom: 0;
     text-align: center;
     display: block;

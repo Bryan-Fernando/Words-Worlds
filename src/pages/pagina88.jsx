@@ -71,9 +71,8 @@ const Pagina88 = () => {
             <main className={styles["page88__main"]}>
                 <div className={styles["page88__article-block"]}>
                     <p className={styles["page88__article-text"]}>
-                        Articles a and an <br />
-                        a (antes de sons de consoantes) → <strong>a bag</strong> <br />
-                        an (antes de sons de vogais) → <strong>an eraser</strong>
+                        Article a <br />
+                        a (antes de sons de consoantes) → <strong>a bag</strong>
                     </p>
                 </div>
                 <div className={styles["page88__images-container"]}>
@@ -98,7 +97,12 @@ const Pagina88 = () => {
                             </div>
                         ))}
                     </div>
-
+                    <div className={styles["page88__article-block"]}>
+                    <p className={styles["page88__article-text"]}>
+                        Article an <br />
+                        an (antes de sons de vogais) → <strong>an eraser</strong>
+                    </p>
+                </div>
                     <div className={styles["page88__images-row"]}>
                         {[
                             { img: pagina88_imagem6, textRed: "an apple", textBlack: "uma maçã", audio: "pg88_audio6" },

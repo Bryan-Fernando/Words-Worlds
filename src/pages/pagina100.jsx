@@ -64,7 +64,7 @@ const Pagina100 = () => {
 
     const correctAnswers = [
         "'m not", "aren't", "aren't", "isn't", "aren't",
-        "isn't", "isn't", "isn't", "am not", "is not",
+        "isn't", "isn't", "aren't", "am not", "is not",
         "is not", "is not", "are not", "is not", "is not", "are not"
     ];
 
@@ -163,24 +163,7 @@ const Pagina100 = () => {
                                 />
                             </span>
                         </p>
-
-                        {[
-                            "I am single.",
-                            "We are at home.",
-                            "You are Brazilians.",
-                            "It is hot.",
-                            "They are busy.",
-                            "She is thirsty.",
-                            "He is a soccer player.",
-                            "We are in Paris."
-                        ].map((sentence, index) => (
-                            <div key={index} className={styles.pg100Question}>
-                                <span><em><strong>{index + 1}.</strong> {sentence}</em></span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className={styles.pg100Questions1}>
+                        <div className={styles.pg100Questions1}>
                         {[
                             "I ____ married.",
                             "We ____ at the club.",
@@ -229,6 +212,9 @@ const Pagina100 = () => {
                             );
                         })}
                     </div>
+                    </div>
+
+                    
 
                 </div>
 
@@ -267,14 +253,14 @@ const Pagina100 = () => {
                         </p>
 
                         {[
-                            "I am tired.",
-                            "He is happy.",
-                            "She is at home.",
-                            "It is cold.",
-                            "We are late.",
-                            "He is a doctor.",
-                            "She is my sister.",
-                            "We are in São Paulo."
+                            "We are in Rio de Janeiro.",
+                            "She is my cousin.",
+                            "He is a nurse.",
+                            "We are early.",
+                            "It is hot.",
+                            "She is at school.",
+                            "He is sad.",
+                            "I am sleepy"
                         ].map((sentence, index) => (
                             <div key={index + 8} className={styles.pg100Question}>
                                 <span><em><strong>{index + 1}.</strong> {sentence}</em></span>

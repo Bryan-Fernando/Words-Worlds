@@ -66,9 +66,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0.4rem solid #103275;
 }
 
 .page88__article-text {
     white-space: pre;
     text-align: left;
+    color: #103275;
 }

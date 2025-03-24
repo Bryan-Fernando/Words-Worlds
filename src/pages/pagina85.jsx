@@ -28,6 +28,16 @@ import pg85_audio7 from '../assets/audios/pg85_audio7.mp3';
 import pg85_audio8 from '../assets/audios/pg85_audio8.mp3';
 import pg85_audio9 from '../assets/audios/pg85_audio9.mp3';
 import pg85_audio10 from '../assets/audios/pg85_audio10.mp3';
+import pg85_audio1p from '../assets/audios/pg85_audio1p.mp3';
+import pg85_audio2p from '../assets/audios/pg85_audio2p.mp3';
+import pg85_audio3p from '../assets/audios/pg85_audio3p.mp3';
+import pg85_audio4p from '../assets/audios/pg85_audio4p.mp3';
+import pg85_audio5p from '../assets/audios/pg85_audio5p.mp3';
+import pg85_audio6p from '../assets/audios/pg85_audio6p.mp3';
+import pg85_audio7p from '../assets/audios/pg85_audio7p.mp3';
+import pg85_audio8p from '../assets/audios/pg85_audio8p.mp3';
+import pg85_audio9p from '../assets/audios/pg85_audio9p.mp3';
+import pg85_audio10p from '../assets/audios/pg85_audio10p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -46,6 +56,16 @@ const audioMap = {
     pg85_audio8,
     pg85_audio9,
     pg85_audio10,
+    pg85_audio1p,
+    pg85_audio2p,
+    pg85_audio3p,
+    pg85_audio4p,
+    pg85_audio5p,
+    pg85_audio6p,
+    pg85_audio7p,
+    pg85_audio8p,
+    pg85_audio9p,
+    pg85_audio10p,
 };
 
 const Pagina85 = () => {
@@ -60,7 +80,7 @@ const Pagina85 = () => {
 
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index]
+            value.trim() === correctAnswers[index]
         ));
     };
 
@@ -189,6 +209,13 @@ const Pagina85 = () => {
                                         />
 
                                         <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg85AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
+                                        />
+
+                                        <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
                                             className={`${styles.pg85AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg85Pulsing : ''}`}
@@ -290,6 +317,13 @@ const Pagina85 = () => {
                                             alt="Audio Icon"
                                             className={styles.pg85AdditionalIcon}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles.pg85AdditionalIcon}
+                                            onClick={() => playAudio(`${audioKey}p`)}
                                         />
 
                                         <img

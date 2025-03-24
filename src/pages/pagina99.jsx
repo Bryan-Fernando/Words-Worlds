@@ -150,41 +150,42 @@ const Pagina99 = () => {
                     />
                 </h1>
 
-                <p className={styles.pg99ATituloQuestion}>
-                    Change into the negative form:
-                    <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles.pg99HeaderIcon}
-                        onClick={() => playAudio("pg99_audio1e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles.pg99HeaderIcon}
-                        onClick={() => playAudio("pg99_audio1p")}
-                    />
-                </p>
+
 
             </header>
             <main className={styles.pg99Main}>
-                <div className={styles.pg99tabelaNegativaContainer}>
-                    <div className={styles.pg99tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg99styledTableNegativa}>
-                        <thead className={styles.pg99Thead}>
-                            <tr className={styles.pg99celulatable}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
                 <div className={styles.pg99ContainerImagem}> <img className={styles.pg99imagem} src={pagina99_imagem1} alt="" /></div>
                 <div className={styles.pg99PrimeirasQuestoes}>
+                    <div className={styles.pg99tabelaNegativaContainer}>
+                        <div className={styles.pg99tableHeaderNegativa}>NEGATIVA</div>
+                        <table className={styles.pg99styledTableNegativa}>
+                            <thead className={styles.pg99Thead}>
+                                <tr className={styles.pg99celulatable}>
+                                    <th>Introdução</th>
+                                    <th>Sujeito</th>
+                                    <th>Verbo <br /> Auxiliar</th>
+                                    <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                                    <th>Verbo(s)</th>
+                                    <th>Objeto <br /> Complemento</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <p className={styles.pg99ATituloQuestion}>
+                        Change into the negative form:
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles.pg99HeaderIcon}
+                            onClick={() => playAudio("pg99_audio1e")}
+                        />
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese audio"
+                            className={styles.pg99HeaderIcon}
+                            onClick={() => playAudio("pg99_audio1p")}
+                        />
+                    </p>
                     <div className={styles.pg99ContainerQuestoes}>
                         <div className={styles.pg99Questions1}>
                             {[
@@ -312,10 +313,27 @@ const Pagina99 = () => {
 
                         </div>
                     </div>
+                    <div className={styles.pg99tabelaInterrogativaContainer}>
+                            <div className={styles.pg99tableHeaderInterrogativa}>INTERROGATIVA NEGATIVA</div>
+                            <table className={styles.pg99styledTableInterrogativa}>
+                                <thead>
+                                    <tr className={styles.pg99celulatable}>
+                                        <th>Verbo Auxiliar</th>
+                                        <th>Sujeito</th>
+                                        <th>
+                                            <span style={{ color: 'red' }}>Not</span> <br /> Adverb
+                                        </th>
+                                        <th>Verbo(s)</th>
+                                        <th>Objeto Complemento</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
                     <div className={styles.pg99ContainerQuestoes}>
+                        
                         <div className={styles.pg99Questions2}>
                             <p className={styles.pg99ATituloQuestion}>
-                                Form negative questions using the simple present tense and give short answers:
+                                Form negative questions using the simple present tense.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"

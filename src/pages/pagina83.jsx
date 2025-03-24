@@ -81,7 +81,7 @@ const Pagina83 = () => {
 
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index]
+            value.trim() === correctAnswers[index]
         ));
     };
 

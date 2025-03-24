@@ -19,6 +19,12 @@ import pg87_audio3 from '../assets/audios/pg87_audio3.mp3';
 import pg87_audio4 from '../assets/audios/pg87_audio4.mp3';
 import pg87_audio5 from '../assets/audios/pg87_audio5.mp3';
 import pg87_audio6 from '../assets/audios/pg87_audio6.mp3';
+import pg87_audio1p from '../assets/audios/pg87_audio1p.mp3';
+import pg87_audio2p from '../assets/audios/pg87_audio2p.mp3';
+import pg87_audio3p from '../assets/audios/pg87_audio3p.mp3';
+import pg87_audio4p from '../assets/audios/pg87_audio4p.mp3';
+import pg87_audio5p from '../assets/audios/pg87_audio5p.mp3';
+
 
 const audioMap = {
     global_learning_le_e,
@@ -28,7 +34,12 @@ const audioMap = {
     pg87_audio3,
     pg87_audio4,
     pg87_audio5,
-    pg87_audio6
+    pg87_audio6,
+    pg87_audio1p,
+    pg87_audio2p,
+    pg87_audio3p,
+    pg87_audio4p,
+    pg87_audio5p,
 };
 
 const Pagina87 = () => {
@@ -36,14 +47,21 @@ const Pagina87 = () => {
     const [results, setResults] = useState(Array(6).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
 
-    const correctAnswers = ['The', 'the', 'The', 'The', 'The', 'The'];
+    const correctAnswers = ['The', 'The', 'The', 'The', 'The'];
 
     const handleCheckClick = () => {
-        setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index].toLowerCase()
-        ));
+        setResults(inputValues.map((value, index) => {
+            
+            const userAnswer = (value && value.trim()) ? value.trim() : '';
+            const correctAnswer = correctAnswers[index] ? correctAnswers[index].trim() : '';
+            
+            return userAnswer === correctAnswer;
+        }));
     };
-
+    
+    
+    
+    
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -88,9 +106,11 @@ const Pagina87 = () => {
                     />
                 </h1>
                 <h2 className={styles["page87__subtitle"]}>
-                    Fill in the blanks with the definite article “the” or leave the blank empty if not necessary <br />
-                    Preencha os espaços em branco com o artigo definido "the" ou deixe o espaço vazio se não for necessário
+                    Fill in the blanks with the definite article “The / the”.
                 </h2>
+
+                <h2 className={styles["page87__subtitle-black"]}>
+                    Preencha os espaços em branco com o artigo definido "O / o, Os / os, A / a, as / as".</h2>
             </header>
 
 
@@ -113,12 +133,11 @@ const Pagina87 = () => {
                 <div className={styles["page87__questions-container"]}>
                     <div className={styles["page87__questions-list"]}>
                         {[
-                            " ____ alarm clock is set for 6:00 AM every morning.",
-                            "Breakfast is the most important meal of ____ day.",
-                            " ____ commute to work takes about 30 minutes by car.",
-                            " ____ lunch break usually starts at noon.",
-                            " ____ afternoon meetings are scheduled for 2:00 PM.",
-                            " ____ traffic is usually heavy during rush hour."
+                            " ____ alarm clock is set for 6:00 AM every day.",
+                            " ____ cat is on the roof",
+                            " ____ sky is blue today.",
+                            " ____ laptop is on my desk",
+                            " ____ dog is sleeping under the tree."
                         ].map((question, index) => {
                             const audioKey = `pg87_audio${index + 1}`;
 
@@ -152,6 +171,13 @@ const Pagina87 = () => {
                                             alt="Audio Icon"
                                             className={styles["page87__icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles["page87__icon"]}
+                                            onClick={() => playAudio(`${audioKey}p`)}
                                         />
 
                                         <img

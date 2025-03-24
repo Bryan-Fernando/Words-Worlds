@@ -42,11 +42,11 @@ const Pagina89 = () => {
     const [inputValues, setInputValues] = useState(Array(6).fill(''));
     const [results, setResults] = useState(Array(6).fill(null));
 
-    const correctAnswers = ['an', 'a', 'a', 'an', 'a', 'an'];
+    const correctAnswers = ['An', 'A', 'A', 'An', 'A', 'An'];
 
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index]
+            value.trim() === correctAnswers[index]
         ));
     };
 
@@ -69,7 +69,7 @@ const Pagina89 = () => {
         <div className={styles["pg89__container"]}>
             <header className={styles["pg89__header"]}>
                 <h1 className={styles["pg89__title"]}>
-                    Learning Language Exercise
+                    Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"

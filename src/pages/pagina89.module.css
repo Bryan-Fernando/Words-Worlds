@@ -33,6 +33,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
 }
 
 .pg89__column {
@@ -44,7 +45,7 @@
 .pg89__question-item {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .pg89__image {

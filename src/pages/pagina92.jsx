@@ -59,7 +59,7 @@ const Pagina92 = () => {
 
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) =>
-            value.trim().toLowerCase() === correctAnswers[index].toLowerCase()
+            value.trim() === correctAnswers[index]
         ));
     };
 
@@ -127,7 +127,7 @@ const Pagina92 = () => {
                 <div className={styles["page92__flex-container"]}>
                     <div className={styles["page92__questions-container"]}>
                         <p className={styles["page92__questions-title"]}>
-                            Make questions for the following answers.
+                            Make questions by clicking on the audio icons for the following answers.
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"

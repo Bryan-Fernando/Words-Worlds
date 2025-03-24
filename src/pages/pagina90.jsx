@@ -50,8 +50,8 @@ const Pagina90 = () => {
                     Grammar
                 </h1>
                 <div>
-                    <h2 className={styles["page90__subtitle"]}>No Article (Plural) - Vocabulary</h2>
-                    <p className={styles["page90__description"]}>Plural sem artigo (um/uma)</p>
+                    <h2 className={styles["page90__subtitle"]}>No Indefinite Articles (Plural) - Vocabulary</h2>
+                    <p className={styles["page90__description"]}>Plural sem artigos indefinidos (um/uma)</p>
                 </div>
             </header>
             <main className={styles["page90__main"]}>

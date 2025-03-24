@@ -86,16 +86,32 @@ const pagina72 = () => {
     const [showCorrectAnswers, setShowCorrectAnswers] = useState(Array(10).fill(null));
 
 
+    const questions = [
+        { text: "I ____ creative.", fullAnswer: "I am creative." },
+        { text: "She ____ intelligent.", fullAnswer: "She is intelligent." },
+        { text: "He ____ ambitious.", fullAnswer: "He is ambitious." },
+        { text: "They ____ helpful.", fullAnswer: "They are helpful." },
+        { text: "The team ____ united.", fullAnswer: "The team is united." },
+        { text: "He ____ talkative.", fullAnswer: "He is not talkative." },
+        { text: "They ____ organized.", fullAnswer: "They are not organized." },
+        { text: "She ____ shy.", fullAnswer: "She is not shy." },
+        { text: "I ____ lazy.", fullAnswer: "I am not lazy." },
+        { text: "The students ____ disrespectful.", fullAnswer: "The students are not disrespectful." }
+    ];
+
     const handleCheckClick = () => {
-        const newResults = inputValues.map((value, index) => value.toLowerCase() === correctAnswers[index]);
+        const newResults = inputValues.map((value, index) =>
+            value.toLowerCase() === correctAnswers[index]
+        );
 
         const newShowCorrectAnswers = newResults.map((isCorrect, index) =>
-            isCorrect ? null : correctAnswers[index]
+            isCorrect ? null : questions[index].fullAnswer
         );
 
         setResults(newResults);
         setShowCorrectAnswers(newShowCorrectAnswers);
     };
+
 
 
     const handleInputChange = (value, index) => {
@@ -234,12 +250,15 @@ const pagina72 = () => {
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
-                                         <div className={styles.pg72CorrectAnswerContainer} >
+                                        <div className={styles.pg72CorrectAnswerContainer} >
                                             {showCorrectAnswers[index] && (
-                                                <span className={styles.pg72CorrectAnswer}style={{ fontSize: '1.5rem'}}>
-                                                    <strong style={{ fontSize: '1.5rem'}}>Answer:</strong> {showCorrectAnswers[index]}
-                                                </span>
+                                                <div className={styles.pg72CorrectAnswerWrapper}>
+                                                    <span className={styles.pg72CorrectAnswer}>
+                                                        <strong>Answer:</strong> {showCorrectAnswers[index]}
+                                                    </span>
+                                                </div>
                                             )}
+
                                         </div>
                                     </div>
                                 </div>
@@ -308,7 +327,7 @@ const pagina72 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index + 5)}
                                             className={styles.pg72InputBox}
                                         />
-                                       
+
 
 
                                     </div>
@@ -343,10 +362,10 @@ const pagina72 = () => {
                                             className={`${styles.pg72AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg72Pulsing : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
-                                         <div className={styles.pg72CorrectAnswerContainer} >
+                                        <div className={styles.pg72CorrectAnswerContainer} >
                                             {showCorrectAnswers[index] && (
-                                                <span className={styles.pg72CorrectAnswer}style={{ fontSize: '1.5rem'}}>
-                                                    <strong style={{ fontSize: '1.5rem'}}>Answer:</strong> {showCorrectAnswers[index]}
+                                                <span className={styles.pg72CorrectAnswer} style={{ fontSize: '1.5rem' }}>
+                                                    <strong style={{ fontSize: '1.5rem' }}>Answer:</strong> {showCorrectAnswers[index]}
                                                 </span>
                                             )}
                                         </div>

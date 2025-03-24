@@ -30,7 +30,7 @@ const Pagina91 = () => {
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
 
 
-    const correctAnswers = ['the', 'a', 'a', 'are', 'an', 'are', 'the', 'a'];
+    const correctAnswers = ['The', 'a', 'a', 'are', 'an', 'are', 'The', 'a'];
 
     const audioMap = {
         global_learning_le_e,
@@ -48,7 +48,7 @@ const Pagina91 = () => {
     };
 
     const handleCheckClick = () => {
-        const newResults = inputValues.map((value, index) => value.toLowerCase() === correctAnswers[index]);
+        const newResults = inputValues.map((value, index) => value === correctAnswers[index]);
         setResults(newResults);
     };
 

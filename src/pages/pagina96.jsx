@@ -357,11 +357,10 @@ const Pagina96 = () => {
                 </div>
 
                 <div className={styles.pg96Container3}>
-                    {/* Adicionando os bloquinhos acima da alternativa A  */}
 
 
                     <div className={styles.pg96Questions3}>
-                        <p>6. Make questions using the words from the box:
+                        <p>6. Make questions using the words from the box for the answers above:
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"

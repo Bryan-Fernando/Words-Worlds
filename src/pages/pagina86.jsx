@@ -55,8 +55,8 @@ const Pagina86 = () => {
                             Definite article THE
                         </h2>
                         <p className={styles["page86__description"]}>
-                            O artigo definido “THE“ é usado antes de substantivos cuja tradução pode ser
-                            “o“, “a“, “os“, “as“.
+                            O artigo definido <span style={{color: '#A61C28'}}>“THE / the“</span>  é usado antes de substantivos cuja tradução pode ser
+                            <span style={{color: '#A61C28'}}> “O / o, A / a, OS / os, AS / as“.</span>
                         </p>
                     </div>
                 </header>
@@ -88,7 +88,7 @@ const Pagina86 = () => {
                                         The cat is sleeping on the bed.
                                     </p>
                                     <p className={styles["page86__text--black"]}>
-                                        O gato está dormindo na cama.
+                                    <span style={{color: '#A61C28'}}>O</span> gato está dormindo na cama.
                                     </p>
                                 </div>
                                 <div className={styles["page86__image-item"]}>
@@ -100,7 +100,7 @@ const Pagina86 = () => {
                                         Please, pass me the book.
                                     </p>
                                     <p className={styles["page86__text--black"]}>
-                                        Por favor, passe-me o livro.
+                                        Por favor, passe-me <span style={{color: '#A61C28'}}>o</span> livro.
                                     </p>
                                 </div>
                             </div>
@@ -114,7 +114,7 @@ const Pagina86 = () => {
                                         The dogs are playing in the park.
                                     </p>
                                     <p className={styles["page86__text--black"]}>
-                                        Os cachorros estão brincando no parque.
+                                    <span style={{color: '#A61C28'}}>Os</span> cachorros estão brincando no parque.
                                     </p>
                                 </div>
                                 <div className={styles["page86__image-item"]}>
@@ -126,7 +126,7 @@ const Pagina86 = () => {
                                         The flowers in the garden are beautiful.
                                     </p>
                                     <p className={styles["page86__text--black"]}>
-                                        As flores no jardim estão lindas.
+                                    <span style={{color: '#A61C28'}}>As</span> flores no jardim estão lindas.
                                     </p>
                                 </div>
                             </div>

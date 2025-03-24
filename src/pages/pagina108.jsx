@@ -28,7 +28,7 @@ import pg108_trad7 from '../assets/audios/pg108_trad7.mp3';
 
 const Pagina108 = () => {
     const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
+        Array(3).fill(Array(6).fill(''))
     );
     const currentAudioRef = useRef(null);
 
@@ -105,12 +105,6 @@ const Pagina108 = () => {
                             <tbody>
                                 {[
                                     { sujeito: "Do", verboAux: "I", adverbio: "", verbo: "work", complemento: "on Mondays?", audio: pg108_audio1, tradAudio: pg108_trad1, traducao: "Eu trabalho às segundas-feiras?" },
-                                    { sujeito: "Does", verboAux: "he", adverbio: "", verbo: "work", complemento: "every day?", audio: pg108_audio2, tradAudio: pg108_trad2, traducao: "Ele trabalha todos os dias?" },
-                                    { sujeito: "Does", verboAux: "she", adverbio: "", verbo: "work", complemento: "at home?", audio: pg108_audio3, tradAudio: pg108_trad3, traducao: "Ela trabalha em casa?" },
-                                    { sujeito: "Does", verboAux: "it", adverbio: "", verbo: "work", complemento: "now?", audio: pg108_audio4, tradAudio: pg108_trad4, traducao: "Funciona agora?" },
-                                    { sujeito: "Do", verboAux: "we", adverbio: "", verbo: "work", complemento: "(on) weekdays?", audio: pg108_audio5, tradAudio: pg108_trad5, traducao: "Nós trabalhamos em dias úteis?" },
-                                    { sujeito: "Do", verboAux: "you", adverbio: "", verbo: "work", complemento: "(on) weekdays?", audio: pg108_audio6, tradAudio: pg108_trad6, traducao: "Você trabalha em dias úteis?" },
-                                    { sujeito: "Do", verboAux: "they", adverbio: "", verbo: "work", complemento: "on weekends?", audio: pg108_audio7, tradAudio: pg108_trad7, traducao: "Eles trabalham nos fins de semana?" },
                                 ].map((linha, index) => (
                                     <tr key={index} onClick={() => playAudio(linha.audio)} style={{ cursor: 'pointer' }}>
                                         <td className={styles.pg108Sujeito}>{linha.sujeito}</td>

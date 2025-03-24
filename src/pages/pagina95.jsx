@@ -122,9 +122,9 @@ const pagina95 = () => {
             };
         });
     };
-    
-    
- 
+
+
+
 
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
@@ -139,35 +139,35 @@ const pagina95 = () => {
         setResults((prevResults) => ({
             questions1: inputValues.questions1.map((input, idx) => {
                 const answerIndex = Math.floor(idx / 2);
-                const expectedAnswer = correctAnswers.questions1[answerIndex] || []; 
+                const expectedAnswer = correctAnswers.questions1[answerIndex] || [];
                 return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
             }),
-    
+
             questions2: inputValues.questions2.map((input, idx) => {
                 const answerIndex = Math.floor(idx / 2);
                 const expectedAnswer = correctAnswers.questions2[answerIndex] || [];
                 return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
             }),
-    
+
             questions3: inputValues.questions3.map((input, idx) => {
                 const answerIndex = Math.floor(idx / 2);
                 const expectedAnswer = correctAnswers.questions3[answerIndex] || [];
                 return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
             }),
-    
+
             shortAnswers1: inputValues.shortAnswers1.map((input, idx) => {
                 // Acessando as respostas afirmativa e negativa diretamente
                 const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[Math.floor(idx / 2)] || [];
                 return input.trim().toLowerCase() === affirmativeAnswer.toLowerCase() || input.trim().toLowerCase() === negativeAnswer.toLowerCase();
             }),
-    
+
             shortAnswers2: inputValues.shortAnswers2.map((input, idx) => {
                 const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers2[Math.floor(idx / 2)] || [];
                 return input.trim() === affirmativeAnswer || input.trim() === negativeAnswer;
             }),
-    
+
             shortAnswers3: inputValues.shortAnswers3.map((input, idx) => {
-                
+
                 const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers3[Math.floor(idx / 2)] || [];
                 return input.trim() === affirmativeAnswer || input.trim() === negativeAnswer;
             }),
@@ -198,20 +198,16 @@ const pagina95 = () => {
                     <div className={styles.pg95Questions1}>
                         <div className={styles.pg95Question}>
                             <span>
-                                <p>2. Make questions and give affirmative short answers.
-                                <img
-                                                        src={eng_audio_icon}
-                                                        alt="English audio"
-                                                        className={styles.pg95HeaderIcon}
-                                                        onClick={() => playAudio("pg95_audio1e")}
-                                                    />
-                                                    <img
-                                                        src={ptbr_audio_icon}
-                                                        alt="Portuguese audio"
-                                                        className={styles.pg95HeaderIcon}
-                                                        onClick={() => playAudio("pg95_audio1p")}
-                                                    />
-
+                                <p style={{color: '#A61C28'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do/does' or 'don't/doesn't'.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles.pg95HeaderIcon}
+                                        onClick={() => playAudio("pg95_audio1e")}
+                                    />
+                                    <br /> <br /> 
+                                 <p style={{color: 'black'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do/does" ou "don't/doesn't".</p>
+                                <br />
                                 </p>
                                 <em><strong>a.</strong>
                                     <input
@@ -227,7 +223,7 @@ const pagina95 = () => {
                                         onChange={(e) => handleInputChange(e.target.value, 1, 'questions1')}
                                         className={styles.pg95InputBoxSmall}
                                     />
-                                    ice cream?
+                                    ice cream? (Like)
 
                                     {/* Ícone Único para Validar Ambos os Inputs */}
                                     {results.questions1[0] !== null && results.questions1[1] !== null && (
@@ -266,7 +262,7 @@ const pagina95 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions1')}
                                             className={styles.pg95InputBoxSmall}
                                         />
-                                        {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays?" : index === 2 ? "on Sundays?" : index === 3 ? "TV in the evening?" : "Spanish fluently?"}
+                                        {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays? (Play)" : index === 2 ? "on Sundays? (Work)" : index === 3 ? "TV in the evening? (Watch)" : "Spanish? (Speak)"}
 
                                         {/* Ícone Único de Verificação */}
                                         {results.questions1[index * 2] !== null && results.questions1[index * 2 + 1] !== null && (
@@ -301,47 +297,47 @@ const pagina95 = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                            {Array.from({ length: 5 }).map((_, index) => {
-    // Acessando diretamente as respostas afirmativa e negativa
-    const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[index] || [];
+                                {Array.from({ length: 5 }).map((_, index) => {
+                                    // Acessando diretamente as respostas afirmativa e negativa
+                                    const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[index] || [];
 
-    return (
-        <tr key={index}>
-            <td>
-                <input
-                    type="text"
-                    value={inputValues.shortAnswers1[index * 2]} // Acessa a resposta afirmativa
-                    onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers1')}
-                    className={styles.pg95InputBoxColumn}
-                />
-                {results.shortAnswers1[index * 2] !== null && (
-                    <img
-                        src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
-                        alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
-                        className={styles.pg95CheckmarkImage}
-                    />
-                )}
-            </td>
-            <td>
-                <input
-                    type="text"
-                    value={inputValues.shortAnswers1[index * 2 + 1]} // Acessa a resposta negativa
-                    onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers1')}
-                    className={styles.pg95InputBoxColumn}
-                />
-                {results.shortAnswers1[index * 2 + 1] !== null && (
-                    <img
-                        src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
-                        alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
-                        className={styles.pg95CheckmarkImage}
-                    />
-                )}
-            </td>
-        </tr>
-    );
-})}
+                                    return (
+                                        <tr key={index}>
+                                            <td>
+                                                <input
+                                                    type="text"
+                                                    value={inputValues.shortAnswers1[index * 2]} // Acessa a resposta afirmativa
+                                                    onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers1')}
+                                                    className={styles.pg95InputBoxColumn}
+                                                />
+                                                {results.shortAnswers1[index * 2] !== null && (
+                                                    <img
+                                                        src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
+                                                        alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
+                                                        className={styles.pg95CheckmarkImage}
+                                                    />
+                                                )}
+                                            </td>
+                                            <td>
+                                                <input
+                                                    type="text"
+                                                    value={inputValues.shortAnswers1[index * 2 + 1]} // Acessa a resposta negativa
+                                                    onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers1')}
+                                                    className={styles.pg95InputBoxColumn}
+                                                />
+                                                {results.shortAnswers1[index * 2 + 1] !== null && (
+                                                    <img
+                                                        src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
+                                                        alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
+                                                        className={styles.pg95CheckmarkImage}
+                                                    />
+                                                )}
+                                            </td>
+                                        </tr>
+                                    );
+                                })}
 
-</tbody>
+                            </tbody>
 
 
 

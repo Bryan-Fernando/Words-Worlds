@@ -151,7 +151,7 @@ const Pagina93 = () => {
                                     <span className={styles["page93__text--red"]}>
                                         <strong>EXAMPLE.</strong>
                                     </span>{" "}
-                                    Answer the questions with your own words.
+                                    Answer the questions by clicking on the audio icons
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
@@ -170,7 +170,7 @@ const Pagina93 = () => {
                                     {[
                                         { question: "Who is he?", answer: "He is my classmate.", audio: "pg93_audio8" },
                                         { question: "What is his name?", answer: "His name is John.", audio: "pg93_audio9" },
-                                        { question: "Where is he from?", answer: "He is from Ariquemes.", audio: "pg93_audio10" },
+                                        { question: "Where is he from?", answer: "He is from Rio de Janeiro.", audio: "pg93_audio10" },
                                         { question: "What is his favorite sport?", answer: "His favorite sport is soccer.", audio: "pg93_audio11" },
                                         { question: "When is his birthday?", answer: "It is on March 2nd.", audio: "pg93_audio12" },
                                         { question: "How old is he?", answer: "He is 15.", audio: "pg93_audio13" },
@@ -203,7 +203,7 @@ const Pagina93 = () => {
                             {/* Bloco 1 */}
                             <div className={styles["page93__questions-list"]}>
                                 <h2>
-                                    1. Answer the questions with your own words.
+                                    1. Answer the questions by clicking on the audio icons
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
@@ -260,7 +260,7 @@ const Pagina93 = () => {
                             {/* Bloco 2 */}
                             <div className={styles["page93__questions-list"]}>
                                 <h2>
-                                    2. Answer the questions with your own words.
+                                    2. Answer the questions by clicking on the audio icons
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
@@ -317,7 +317,7 @@ const Pagina93 = () => {
                             {/* Bloco 3 */}
                             <div className={styles["page93__questions-list"]}>
                                 <h2>
-                                    3. Answer the questions with your own words.
+                                    3. Answer the questions by clicking on the audio icons
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"

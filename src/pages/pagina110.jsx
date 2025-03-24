@@ -26,6 +26,8 @@ import pg110_audio13 from '../assets/audios/pg110_audio13.mp3';
 import pg110_audio14 from '../assets/audios/pg110_audio14.mp3';
 import pg110_audio15 from '../assets/audios/pg110_audio15.mp3';
 import pg110_audio16 from '../assets/audios/pg110_audio16.mp3';
+import pg110_audio17 from '../assets/audios/pg110_audio17.mp3';
+import pg110_audio18 from '../assets/audios/pg110_audio18.mp3';
 
 const labelsWomen = [
     { text: 'bracelet\n(pulseira)', top: '8%', left: '9%', audio: "pg110_audio2" },
@@ -67,6 +69,7 @@ const audioMap = {
     pg110_audio5, pg110_audio6, pg110_audio7, pg110_audio8,
     pg110_audio9, pg110_audio10, pg110_audio11, pg110_audio12,
     pg110_audio13, pg110_audio14, pg110_audio15, pg110_audio16,
+    pg110_audio17, pg110_audio18
 };
 
 const playAudio = (audioKey) => {
@@ -113,14 +116,14 @@ const Pagina110 = () => {
                         {labelsWomen.map((label, index) => (
                             <Label key={index} {...label} />
                         ))}
-                        <div className={styles.pg110CaixaLegenda}><p>Women’s clothing (Roupas femininas)</p></div>
+                        <div className={styles.pg110CaixaLegenda}><p onClick={() => playAudio("pg110_audio17")} style={{cursor: 'pointer'}}>Women’s clothing (Roupas femininas)</p></div>
                     </div>
                     <div className={styles.pg110ContainerImagemB}>
                         <img className={styles.pg110Imagem} src={pagina110_imagem2} alt="Men's clothing" />
                         {labelsMen.map((label, index) => (
                             <Label key={index} {...label} />
                         ))}
-                        <div className={styles.pg110CaixaLegenda}><p>Men’s clothing (Roupas masculinas)</p></div>
+                        <div className={styles.pg110CaixaLegenda}><p onClick={() => playAudio("pg110_audio18")} style={{cursor: 'pointer'}}>Men’s clothing (Roupas masculinas)</p></div>
                     </div>
                 </main>
             </div>

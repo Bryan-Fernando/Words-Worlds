@@ -33,6 +33,8 @@ import pg101_audio17 from '../assets/audios/pg101_audio17.mp3';
 import pg101_audio18 from '../assets/audios/pg101_audio18.mp3';
 import pg101_audio19 from '../assets/audios/pg101_audio19.mp3';
 import pg101_audio20 from '../assets/audios/pg101_audio20.mp3';
+import pg101_audio21 from '../assets/audios/pg101_audio21.mp3';
+import pg101_audio22 from '../assets/audios/pg101_audio22.mp3';
 
 // Mapeamento de Áudio
 const audioMap = {
@@ -57,7 +59,9 @@ const audioMap = {
     pg101_audio17,
     pg101_audio18,
     pg101_audio19,
-    pg101_audio20
+    pg101_audio20,
+    pg101_audio21,
+    pg101_audio22
 };
 
 const Pagina101 = () => {
@@ -132,7 +136,7 @@ const Pagina101 = () => {
                 <div className={styles.pg101ContainerQuestoes}>
                     <div className={styles.pg101Questions1}>
                         <p className={styles.pg101ATituloQuestion}>
-                            C) Fill in the blanks with the correct form of the verb be in the Simple Present Tense (Affirmative Form):
+                            C) Use the complete (or full) affirmative form of the verb to be in the simple present:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
@@ -146,6 +150,9 @@ const Pagina101 = () => {
                                 onClick={() => playAudio("pg101_audio1p")}
                             />
                         </p>
+                        <br />
+
+
                         {[
                             "I ____ a student.",
                             "She ____ a doctor.",
@@ -225,7 +232,7 @@ const Pagina101 = () => {
                 <div className={styles.pg101ContainerQuestoes}>
                     <div className={styles.pg101Questions2}>
                         <p className={styles.pg101ATituloQuestion}>
-                            D) Negative Form:
+                            D) Use the complete (or full) negative form of the verb to be in the simple present:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
@@ -239,20 +246,22 @@ const Pagina101 = () => {
                                 onClick={() => playAudio("pg101_audio12p")}
                             />
                         </p>
+                        <br />
                         {[
-                            "I ____ a student.",
-                            "She ____ a doctor.",
-                            "They ____ my friends.",
-                            "We ____ from Italy.",
-                            "The book ____ on the table.",
-                            "John ____ at home right now.",
-                            "Alice ____ a doctor.",
-                            "Tom and Emily ____ in the park.",
-                            "We ____ students.",
-                            "The party ____ tonight."
+                            "I ____ late for class.",
+                            "He ____ at home right now.",
+                            "They ____ happy with the result.",
+                            "We ____ in the same class.",
+                            "The computer ____ on the desk.",
+                            "Kate ____ from Spain.",
+                            "David ____ here at the moment.",
+                            "The children ____ happy with the result.",
+                            "They ____ in the office.",
+                            "The store ____ open yet."
+
                         ].map((question, index) => {
                             const parts = question.split('____');
-                            const audioKey = `pg101_audio${index + 2}`;
+                            const audioKey = `pg101_audio${index + 13}`;
 
                             return (
                                 <div key={index} className={styles.pg101Question}>

@@ -127,7 +127,18 @@ import Pagina127 from "../pages/pagina127";
 import Pagina128 from "../pages/pagina128";
 import Pagina129 from "../pages/pagina129";
 import Pagina130 from "../pages/pagina130";
-
+import Pagina131 from "../pages/pagina131";
+import Pagina132 from "../pages/pagina132";
+import Pagina133 from "../pages/pagina133";
+import Pagina134 from "../pages/pagina134";
+import Pagina135 from "../pages/pagina135";
+import Pagina136 from "../pages/pagina136";
+import Pagina137 from "../pages/pagina137";
+import Pagina138 from "../pages/pagina138";
+import Pagina139 from "../pages/pagina139";
+import Pagina140 from "../pages/pagina140";
+import Pagina141 from "../pages/pagina141";
+import Pagina142 from "../pages/pagina142";
 
 const routes = [
   { path: "/", Component: Pagina1 },
@@ -203,14 +214,14 @@ const routes = [
   { path: "/pagina72", Component: Pagina72 },
   { path: "/pagina73", Component: Pagina73 },
   { path: "/pagina74", Component: Pagina74 },
-  /*{ path: "/pagina75", Component: Pagina75 },
+  { path: "/pagina75", Component: Pagina75 },
   { path: "/pagina76", Component: Pagina76 },
   { path: "/pagina77", Component: Pagina77 },
   { path: "/pagina78", Component: Pagina78 },
   { path: "/pagina79", Component: Pagina79 },
   { path: "/pagina80", Component: Pagina80 },
   { path: "/pagina81", Component: Pagina81 },
-  { path: "/pagina82", Component: Pagina82 }, */
+  { path: "/pagina82", Component: Pagina82 },
   { path: "/pagina83", Component: Pagina83 },
   { path: "/pagina84", Component: Pagina84 },
   { path: "/pagina85", Component: Pagina85 },
@@ -235,9 +246,21 @@ const routes = [
   { path: "/pagina104", Component: Pagina104 },
   { path: "/pagina105", Component: Pagina105 },
   { path: "/pagina106", Component: Pagina106 },
+  { path: "/pagina131", Component: Pagina131 },
+  { path: "/pagina132", Component: Pagina132 },
+  { path: "/pagina133", Component: Pagina133 },
   { path: "/pagina107", Component: Pagina107 },
+  { path: "/pagina134", Component: Pagina134 },
+  { path: "/pagina135", Component: Pagina135 },
+  { path: "/pagina136", Component: Pagina136 },
   { path: "/pagina108", Component: Pagina108 },
+  { path: "/pagina137", Component: Pagina137 },
+  { path: "/pagina138", Component: Pagina138 },
+  { path: "/pagina139", Component: Pagina139 },
   { path: "/pagina109", Component: Pagina109 },
+  { path: "/pagina140", Component: Pagina140 },
+  { path: "/pagina141", Component: Pagina141 },
+  { path: "/pagina142", Component: Pagina142 },
   { path: "/pagina110", Component: Pagina110 },
   { path: "/pagina111", Component: Pagina111 },
   { path: "/pagina112", Component: Pagina112 },
@@ -247,7 +270,7 @@ const routes = [
   { path: "/pagina116", Component: Pagina116 },
   { path: "/pagina117", Component: Pagina117 },
   { path: "/pagina118", Component: Pagina118 },
-  /*{ path: "/pagina119", Component: Pagina119 },
+  { path: "/pagina119", Component: Pagina119 },
   { path: "/pagina120", Component: Pagina120 },
   { path: "/pagina121", Component: Pagina121 },
   { path: "/pagina122", Component: Pagina122 },
@@ -258,7 +281,8 @@ const routes = [
   { path: "/pagina127", Component: Pagina127 },
   { path: "/pagina128", Component: Pagina128 },
   { path: "/pagina129", Component: Pagina129 },
-  { path: "/pagina130", Component: Pagina130 }  */
+  { path: "/pagina130", Component: Pagina130 },
+
 ];
 
 export default routes;

@@ -31,7 +31,7 @@ import pg107_trad7 from '../assets/audios/pg107_trad7.mp3';
 
 const Pagina107 = () => {
     const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
+        Array(3).fill(Array(6).fill(''))
     );
     const currentAudioRef = useRef(null);
 
@@ -101,33 +101,27 @@ const Pagina107 = () => {
                                 </tr>
                             </thead>
                             <tbody>
-    {[
-        { subject: "I", aux: "do", adv: "not", verb: "work", obj: "on Mondays", trad: "Eu não trabalho às segundas-feiras", audio: pg107_audio1, tradAudio: pg107_trad1 },
-        { subject: "He", aux: "doesn't", adv: "", verb: "work", obj: "every day", trad: "Ele não trabalha todos os dias", audio: pg107_audio2, tradAudio: pg107_trad2 },
-        { subject: "She", aux: "does", adv: "not", verb: "work", obj: "at home", trad: "Ela não trabalha em casa", audio: pg107_audio3, tradAudio: pg107_trad3 },
-        { subject: "It", aux: "does", adv: "not", verb: "work", obj: "that way", trad: "Não funciona dessa maneira", audio: pg107_audio4, tradAudio: pg107_trad4 },
-        { subject: "We", aux: "do", adv: "not", verb: "work", obj: "on weekdays", trad: "Nós não trabalhamos em dias úteis", audio: pg107_audio5, tradAudio: pg107_trad5 },
-        { subject: "You", aux: "do", adv: "not", verb: "work", obj: "hard", trad: "Você não trabalha duro", audio: pg107_audio6, tradAudio: pg107_trad6 },
-        { subject: "They", aux: "don’t", adv: "", verb: "work", obj: "on Weekends", trad: "Eles não trabalham nos fins de semana", audio: pg107_audio7, tradAudio: pg107_trad7 },
-    ].map((row, index) => (
-        <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: "pointer" }}>
-            <td className={styles.pg107Sujeito}>{row.subject}</td>
-            <td className={styles.pg107verbo_auxiliar}>{row.aux}</td>
-            <td className={styles.pg107Adverbio}>{row.adv}</td>
-            <td className={styles.pg107Verbo}>{row.verb}</td>
-            <td className={styles.pg107ObjetivoComplemento}>{row.obj}</td>
-            <td
-                className={styles.pg107Traducao}
-                onClick={(e) => {
-                    e.stopPropagation(); // Evita que clique no TD dispare o evento do TR
-                    playAudio(row.tradAudio);
-                }}
-            >
-                {row.trad}
-            </td>
-        </tr>
-    ))}
-</tbody>
+                                {[
+                                    { subject: "I", aux: "don't", adv: "", verb: "work", obj: "on Mondays", trad: "Eu não trabalho às segundas-feiras", audio: pg107_audio1, tradAudio: pg107_trad1 },
+                                ].map((row, index) => (
+                                    <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: "pointer" }}>
+                                        <td className={styles.pg107Sujeito}>{row.subject}</td>
+                                        <td className={styles.pg107verbo_auxiliar}>{row.aux}</td>
+                                        <td className={styles.pg107Adverbio}>{row.adv}</td>
+                                        <td className={styles.pg107Verbo}>{row.verb}</td>
+                                        <td className={styles.pg107ObjetivoComplemento}>{row.obj}</td>
+                                        <td
+                                            className={styles.pg107Traducao}
+                                            onClick={(e) => {
+                                                e.stopPropagation(); 
+                                                playAudio(row.tradAudio);
+                                            }}
+                                        >
+                                            {row.trad}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
 
                         </table>
                         <table className={styles.pg107StyledTable}>

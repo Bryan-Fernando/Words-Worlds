@@ -3,9 +3,12 @@ import React from 'react';
 import styles from './pagina105.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina105_imagem1 from '../assets/images/pagina105_imagem1.webp';
 
+import pg104_audio1e from '../assets/audios/pg104_audio1e.mp3';
+import pg104_audio1p from '../assets/audios/pg104_audio1p.mp3';
 import pg105_audio1 from '../assets/audios/pg105_audio1.mp3';
 import pg105_audio2 from '../assets/audios/pg105_audio2.mp3';
 import pg105_audio3 from '../assets/audios/pg105_audio3.mp3';
@@ -14,6 +17,8 @@ import pg105_audio5 from '../assets/audios/pg105_audio5.mp3';
 
 const audioMap = {
     pg105_audio1,
+    pg104_audio1e,
+    pg104_audio1p,
     pg105_audio2,
     pg105_audio3,
     pg105_audio4,
@@ -33,8 +38,27 @@ const Pagina105 = () => {
     return (
         <div className={styles.pg105Container}>
             <main className={styles.pg105Main}>
+
+                <header className={styles.pg105Header}>
+                    <h1 className={styles.pg105H1}>Useful Expressions
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles.pg105HeaderIcon}
+                            onClick={() => playAudio("pg104_audio1e")}
+                        />
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese audio"
+                            className={styles.pg105HeaderIcon}
+                            onClick={() => playAudio("pg104_audio1p")}
+                        />
+                    </h1>
+                </header>
+
                 <div className={styles.pg105ContainerQuestoes}>
                     <div className={styles.pg105Questions}>
+                        
                         {[
                             ["Can you say that again, please?", "(Você pode dizer isso de novo, por favor?)", "pg105_audio1"],
                             ["Could you speak more slowly, please?", "(Você poderia falar mais devagar, por favor?)", "pg105_audio2"],
