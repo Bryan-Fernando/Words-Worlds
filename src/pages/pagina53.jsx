@@ -57,124 +57,122 @@ const Pagina53 = () => {
 
     return (
         <div>
-            <div className={styles['page53']}>
-                <header className={styles['page53__header']}>
-                    <h1 className={styles['page53__title']}>
+            <div className={styles["page53"]}>
+                <header className={styles["page53__header"]}>
+                    <h1 className={styles["page53__title"]}>
                         Grammar - Demonstrative Pronouns
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles['page53__icon']}
+                            className={styles["page53__icon"]}
                             onClick={() => playAudio('pg50-audio1e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles['page53__icon']}
+                            className={styles["page53__icon"]}
                             onClick={() => playAudio('pg50-audio1p')}
                         />
                     </h1>
-                    <div className={styles['page53__subtitle-container']}>
+                    <div className={styles["page53__subtitle-container"]}>
                         <h2
-                            className={styles['page53__subtitle']}>
+                            className={styles["page53__subtitle"]}>
                             These = Estes / Estas / Esses / Essas
                         </h2>
                     </div>
                 </header>
-                <main className={styles['page53__content']}>
-    <div className={styles['page53__section-left']}>
-        <div>
-            <div className={styles['page53__image-container--large']}>
-                <img src={pagina53Imagem1} alt="Imagem 1" className={styles['page53__image']} />
-            </div>
-            <p className={styles['page53__text']}>
-                These are my co-workers. <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio1')}
-                />
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio2p')}
-                />
-            </p>
-            <div className={styles['page53__icons-container']}>
-                
-            </div>
-        </div>
-        <div>
-            <div className={styles['page53__image-container--tall']}>
-                <img src={pagina53Imagem3} alt="Imagem 2" className={styles['page53__image']} />
-            </div>
-            <p className={styles['page53__text']}>
-                These are my books.<img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio2')}
-                />
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio3p')}
-                />
-            </p>
-            <div className={styles['page53__icons-container']}>
-            </div>
-        </div>
-    </div>
-    <div className={styles['page53__section-right']}>
-        <div>
-            <div className={styles['page53__image-container--large-alt']}>
-                <img src={pagina53Imagem2} alt="Imagem 3" className={styles['page53__image']} />
-            </div>
-            <p className={styles['page53__text']}>
-                These are my grades. <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio3')}
-                />
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio4p')}
-                />
-            </p>
-            <div className={styles['page53__icons-container']}>
-                
-            </div>
-        </div>
-        <div>
-            <div className={styles['page53__image-container--tall-alt']}>
-                <img src={pagina53Imagem4} alt="Imagem 4" className={styles['page53__image']} />
-            </div>
-            <p className={styles['page53__text']}>
-                These are my new sneakers. <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio4')}
-                />
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles['page53__icon']}
-                    onClick={() => playAudio('pg53-audio5p')}
-                />
-            </p>
-            <div className={styles['page53__icons-container']}>
-                
-            </div>
-        </div>
-    </div>
-</main>
+                <main className={styles["page53__content"]}>
+                    <div className={styles["page53__section-left"]}>
+                        <div>
+                            <div className={styles["page53__image-container--large"]}>
+                                <img src={pagina53Imagem1} alt="Imagem 1" className={styles["page53__image"]} />
+                            </div>
+                            <p className={styles["page53__text"]}>
+                                These are my co-workers. <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio1')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio2p')}
+                                />
+                            </p>
+                            <div className={styles["page53__icons-container"]}>
 
+                            </div>
+                        </div>
+                        <div>
+                            <div className={styles["page53__image-container--tall"]}>
+                                <img src={pagina53Imagem3} alt="Imagem 2" className={styles["page53__image"]} />
+                            </div>
+                            <p className={styles["page53__text"]}>
+                                These are my books.<img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio2')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio3p')}
+                                />
+                            </p>
+                            <div className={styles["page53__icons-container"]}>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles["page53__section-right"]}>
+                        <div>
+                            <div className={styles["page53__image-container--large-alt"]}>
+                                <img src={pagina53Imagem2} alt="Imagem 3" className={styles["page53__image"]} />
+                            </div>
+                            <p className={styles["page53__text"]}>
+                                These are my grades. <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio3')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio4p')}
+                                />
+                            </p>
+                            <div className={styles["page53__icons-container"]}>
+
+                            </div>
+                        </div>
+                        <div>
+                            <div className={styles["page53__image-container--tall-alt"]}>
+                                <img src={pagina53Imagem4} alt="Imagem 4" className={styles["page53__image"]} />
+                            </div>
+                            <p className={styles["page53__text"]}>
+                                These are my new sneakers. <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio4')}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles["page53__icon"]}
+                                    onClick={() => playAudio('pg53-audio5p')}
+                                />
+                            </p>
+                            <div className={styles["page53__icons-container"]}>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </div>
         </div>
     );

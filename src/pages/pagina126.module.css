@@ -1,0 +1,110 @@
+.page126__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page126__header {
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page126__header h1 {
+    font-size: 4rem;
+}
+
+.page126__text-black {
+    color: black;
+}
+
+.page126__header-icon {
+    width: 2rem; 
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.8rem; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.page126__header-icon:hover {
+    transform: scale(1.2); 
+}
+
+.page126__main {
+    width: 100%;
+    height: 55rem;
+    flex-direction: column;
+    display: flex;
+    gap: 10rem;
+}
+
+.pg126tabelaNegativaContainer {
+    width: 100%;
+    height: 16rem;
+}
+
+.pg126tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg126styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg126celulatable {
+    height: 5rem;
+}
+
+.page126__table-interrogative-container {
+    height: 16rem;
+    width: 100%;
+}
+
+.page126__table-header-interrogative {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.page126__styled-table-interrogative {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.page126__thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.page126__titulo-table{
+    text-align: left;
+    color: #103275;
+}
+
+.page126__celulacolor{
+    background-color: white;
+    color: black !important; 
+}

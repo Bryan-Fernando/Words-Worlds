@@ -53,25 +53,25 @@ const Pagina60 = () => {
 
     return (
 <div>
-    <div className={styles['page60__container']}>
-        <header className={styles['page60__header']}>
+    <div className={styles["page60__container"]}>
+        <header className={styles["page60__header"]}>
             <h1
-                className={styles['page60__title']}
+                className={styles["page60__title"]}
                 onClick={() => playAudio('global_audio_grammar')}
                 style={{ cursor: 'pointer' }}
             >
                 Grammar
             </h1>
-            <div className={styles['page60__subtitle-container']}>
+            <div className={styles["page60__subtitle-container"]}>
                 <h2
-                    className={styles['page60__subtitle-text']}
+                    className={styles["page60__subtitle-text"]}
                     onClick={() => playAudio('global_what_ti_e')}
                     style={{ cursor: 'pointer' }}
                 >
                     What time is it?
                 </h2>
                 <p
-                    className={styles['page60__translation']}
+                    className={styles["page60__translation"]}
                     onClick={() => playAudio('global_what_ti_p')}
                     style={{ cursor: 'pointer' }}
                 >
@@ -80,18 +80,18 @@ const Pagina60 = () => {
             </div>
         </header>
 
-        <main className={styles['page60__main']}>
-            <div className={styles['page60__notes']}>
-                <div className={styles['page60__notes-icon']}>!</div>
+        <main className={styles["page60__main"]}>
+            <div className={styles["page60__notes"]}>
+                <div className={styles["page60__notes-icon"]}>!</div>
                 <p style={{ fontWeight: 'bold', margin: 0 }}>
                     a.m = before noon (antes de meio-dia) <br />
                     p.m = after noon (depois de meio-dia)
                 </p>
             </div>
 
-            <div className={styles['page60__examples-container']}>
-                <div className={styles['page60__example']}>
-                    <div className={styles['page60__image-container']}>
+            <div className={styles["page60__examples-container"]}>
+                <div className={styles["page60__example"]}>
+                    <div className={styles["page60__image-container"]}>
                         <img src={pagina60_imagem1} alt="Clock example 1" />
                     </div>
                     <p
@@ -102,8 +102,8 @@ const Pagina60 = () => {
                     </p>
                     <p>(São oito horas.)</p>
                 </div>
-                <div className={styles['page60__example']}>
-                    <div className={styles['page60__image-container']}>
+                <div className={styles["page60__example"]}>
+                    <div className={styles["page60__image-container"]}>
                         <img src={pagina60_imagem2} alt="Clock example 2" />
                     </div>
                     <p
@@ -114,8 +114,8 @@ const Pagina60 = () => {
                     </p>
                     <p>(São dez e dez.)</p>
                 </div>
-                <div className={styles['page60__example']}>
-                    <div className={styles['page60__image-container']}>
+                <div className={styles["page60__example"]}>
+                    <div className={styles["page60__image-container"]}>
                         <img src={pagina60_imagem3} alt="Clock example 3" />
                     </div>
                     <p
@@ -126,8 +126,8 @@ const Pagina60 = () => {
                     </p>
                     <p>(São sete e quinze.)</p>
                 </div>
-                <div className={styles['page60__example']}>
-                    <div className={styles['page60__image-container']}>
+                <div className={styles["page60__example"]}>
+                    <div className={styles["page60__image-container"]}>
                         <img src={pagina60_imagem4} alt="Clock example 4" />
                     </div>
                     <p
@@ -139,9 +139,9 @@ const Pagina60 = () => {
                     <p>(São cinco e quatorze.)</p>
                 </div>
             </div>
-            <div className={styles['page60__examples-container']}>
-                        <div className={styles['page60__example']}>
-                            <div className={styles['page60__image-container']}>
+            <div className={styles["page60__examples-container"]}>
+                        <div className={styles["page60__example"]}>
+                            <div className={styles["page60__image-container"]}>
                                 <img src={pagina60_imagem5} alt="Clock example 5" />
                             </div>
                             <p
@@ -152,8 +152,8 @@ const Pagina60 = () => {
                             </p>
                             <p>(São uma e vinte e nove.)</p>
                         </div>
-                        <div className={styles['page60__example']}>
-                            <div className={styles['page60__image-container']}>
+                        <div className={styles["page60__example"]}>
+                            <div className={styles["page60__image-container"]}>
                                 <img src={pagina60_imagem6} alt="Clock example 6" />
                             </div>
                             <p
@@ -164,8 +164,8 @@ const Pagina60 = () => {
                             </p>
                             <p>(É meio-dia.)</p>
                         </div>
-                        <div className={styles['page60__example']}>
-                            <div className={styles['page60__image-container']}>
+                        <div className={styles["page60__example"]}>
+                            <div className={styles["page60__image-container"]}>
                                 <img src={pagina60_imagem7} alt="Clock example 7" />
                             </div>
                             <p
@@ -180,8 +180,8 @@ const Pagina60 = () => {
                                 (São quinze para as dez.)
                             </p>
                         </div>
-                        <div className={styles['page60__example']}>
-                            <div className={styles['page60__image-container']}>
+                        <div className={styles["page60__example"]}>
+                            <div className={styles["page60__image-container"]}>
                                 <img src={pagina60_imagem8} alt="Clock example 8" />
                             </div>
                             <p

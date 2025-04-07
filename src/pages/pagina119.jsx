@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import styles from './pagina119.module.css';
 
-import pagina112_imagem1 from '../assets/images/pagina112_imagem1.webp';
+import pagina118_imagem1 from '../assets/images/pagina118_imagem1.jpg';
 
 const Pagina119 = () => {
     const [inputValues, setInputValues] = useState(
@@ -73,7 +73,7 @@ const Pagina119 = () => {
                         </p>
                     </div>
                     <div className={styles["page119__container--image"]}>
-                        <img className={styles["page119__image"]} src={pagina112_imagem1} alt="" />
+                        <img className={styles["page119__image"]} src={pagina118_imagem1} alt="" />
                     </div>
                 </main>
             </div>

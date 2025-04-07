@@ -1,34 +1,34 @@
-.pg71Container {
+.page71__container {
     display: flex;
     flex-direction: column;
     border: none;
     background-color: transparent;
 }
 
-.pg71Header {
+.page71__header {
     width: 100%;
     height: 15rem;
     text-align: left;
     color: #A61C28;
 }
 
-.pg71AnotherHeader {
+.page71__another-header {
     width: 75%;
     height: auto;
     text-align: left;
     color: #A61C28;
 }
 
-.pg71HeaderH1 {
+.page71__header--h1 {
     font-size: 4rem;
 }
 
-.pg71HeaderH2 {
+.page71__header--h2 {
     font-size: 2.5rem;
     color: black;
 }
 
-.pg71Section {
+.page71__section {
     padding: 1rem;
     background-color: #F8F9F9;
     width: 100%;
@@ -38,7 +38,7 @@
     border-radius: 1.5rem;
 }
 
-.pg71PersonContainer {
+.page71__person-container {
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -48,13 +48,13 @@
     height: auto;
 }
 
-.pg71PersonInfo {
+.page71__person-info {
     display: flex;
     gap: 2rem;
     width: 100%;
 }
 
-.pg71Image {
+.page71__image {
     width: 15rem;
     height: 100%;
     object-fit: cover;
@@ -64,14 +64,13 @@
     border-top: 0.4rem solid #d1d1d1;
 }
 
-.pg71PersonTextEnglish,
-.pg71PersonTextPortuguese {
+.page71__person-text--english,
+.page71__person-text--portuguese {
     font-size: 1.7rem;
     padding: 0.5rem;
     border-radius: 0.5rem;
     width: 100%;
     height: 100%;
-    
     border-bottom: 0.4rem solid #d1d1d1;
     border-right: 0.4rem solid #d1d1d1;
     border-left: 0.4rem solid #d1d1d1;
@@ -80,23 +79,22 @@
     right: 2rem;
 }
 
-.pg71PersonTextEnglish {
+.page71__person-text--english {
     color: #A61C28;
 }
 
-.pg71PersonTextPortuguese {
+.page71__person-text--portuguese {
     color: #4E4E4E;
     background-color: #f1efef;
 }
 
-
-.pg71PersonInfo>div {
+.page71__person-info > div {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.pg71Main {
+.page71__main {
     width: fit-content;
     height: auto;
     text-align: left;
@@ -105,14 +103,14 @@
     gap: 5rem;
 }
 
-.pg71QuestionItem {
+.page71__question-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
 }
 
-.pg71InputBox {
+.page71__input-box {
     width: 40%;
     padding: 0.8rem 1.5rem;
     font-size: 1.7rem;
@@ -125,18 +123,18 @@
     margin-left: 1rem;
 }
 
-.pg71QuestionText {
+.page71__question-text {
     font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-.pg71Question {
+.page71__question {
     width: 30%;
     font-size: 1.7rem;
     margin-bottom: 0.8rem;
 }
 
-.pg71CheckButton {
+.page71__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -149,18 +147,18 @@
     margin-top: 2rem;
 }
 
-.pg71CheckButton:hover {
+.page71__check-button:hover {
     background-color: #821a22;
 }
 
-.pg71QuestionText {
+.page71__question-text {
     font-size: 2rem;
     font-weight: bold;
     margin-top: 5rem;
     margin-bottom: 1rem;
 }
 
-.pg71Input {
+.page71__input {
     position: relative;
     width: 40%;
     padding: 0.8rem 1.5rem;
@@ -174,21 +172,20 @@
     margin-right: 35%;
 }
 
-
-.pg71QuestionItem {
+.page71__question-item {
     display: flex;
     justify-content: space-between;
     align-items: left;
     margin-bottom: 1rem;
 }
 
-.pg71InputContainer {
+.page71__input-container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.pg71CheckButton {
+.page71__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -200,24 +197,24 @@
     width: 10%;
 }
 
-.pg71CheckButton:hover {
+.page71__check-button:hover {
     background-color: #821a22;
 }
 
-.pg71WordBank {
+.page71__word-bank {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     margin-top: 5rem;
 }
 
-.pg71WordBankContainer {
+.page71__word-bank-container {
     width: 70%;
     border: 0.4rem solid #0A3282;
     border-radius: 2rem;
 }
 
-.pg71WordBankHeader {
+.page71__word-bank-header {
     width: 100%;
     height: 4.5rem;
     border-top-left-radius: 1rem;
@@ -231,7 +228,7 @@
     font-weight: bold;
 }
 
-.pg71WordBankContent {
+.page71__word-bank-content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -240,32 +237,33 @@
     border-bottom-right-radius: 2rem;
 }
 
-.pg71WordRow {
+.page71__word-row {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 }
 
-.pg71WordColumn p {
+.page71__word-column p {
     margin: 0.5rem 0;
     font-size: 1.7rem;
     text-align: left;
 }
 
-.pg71WordColumn strong {
+.page71__word-column strong {
     display: block;
     font-weight: bold;
     color: #103275;
+    
 }
 
-.pg71WordColumn span {
+.page71__word-column span {
     display: block;
     color: #103275;
     margin-top: 0.2rem;
     font-size: 1.6rem;
 }
 
-.pg71CheckContainer {
+.page71__check-container {
     position: absolute;
     left: 61%;
     display: flex;
@@ -273,32 +271,32 @@
     gap: 0.5rem;
 }
 
-.pg71CheckmarkImage {
+.page71__checkmark-image {
     width: 2rem;
     height: 2rem;
 }
 
-.pg71eng_audio_icon, .pg71ptbr_audio_icon, .pg71slow_audio_icon {
+.page71__eng-audio-icon, .page71__ptbr-audio-icon, .page71__slow-audio-icon {
     position: absolute;
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-.pg71eng_audio_icon {
+.page71__eng-audio-icon {
     right: 9rem;
 }
 
-.pg71ptbr_audio_icon {
+.page71__ptbr-audio-icon {
     right: 6rem;
 }
 
-.pg71slow_audio_icon {
+.page71__slow-audio-icon {
     right: 3rem;
     top: 2%;
 }
 
-.pg71AudioIcon {
+.page71__audio-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -307,11 +305,11 @@
     top: 0.3rem;
 }
 
-.pg71AudioIcon:hover {
+.page71__audio-icon:hover {
     transform: scale(1.1);
 }
 
-.pg71AudioIconInput {
+.page71__audio-icon-input {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -321,11 +319,11 @@
     right: 30%;
 }
 
-.pg71AudioIconInput:hover {
+.page71__audio-icon-input:hover {
     transform: scale(1.1);
 }
 
-.pg71Volumeng_audio_icon {
+.page71__volume-ng-audio-icon {
     width: 1.8rem;
     height: 1.8rem;
     cursor: pointer;
@@ -333,10 +331,10 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg71Volumeng_audio_icon:hover {
+.page71__volume-ng-audio-icon:hover {
     transform: scale(1.1);
 }
 
-.pg71ClickableText {
+.page71__clickable-text {
     cursor: pointer;
 }

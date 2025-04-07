@@ -1,4 +1,4 @@
-.pg73Container {
+.page73__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,50 +7,48 @@
     padding-left: 0;
 }
 
-.pg73Header {
+.page73__header {
     width: 100%;
 }
 
-.pg73H1 {
+.page73__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg73P {
+.page73__p {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
     margin-bottom: 2rem;
 }
 
-.pg73Main {
+.page73__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.pg73Aside {
+.page73__aside {
     width: 100%;
     display: flex;
 }
 
-/* Este é um comentário */
-
-.pg73ContainerQuestoes {
+.page73__container-questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg73Questions1,
-.pg73Questions2 {
+.page73__questions1,
+.page73__questions2 {
     margin-top: 2rem;
     text-align: left;
     width: 70%;
 }
 
-.pg73Question {
+.page73__question {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,19 +57,19 @@
     text-align: left;
 }
 
-.pg73Question span {
+.page73__question span {
     font-size: 1.8rem;
     font-weight: bold;
     color: black;
 }
 
-.pg84ATituloQuestion {
+.pg84__a-titulo-question {
     color: #8a1720;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg73InputBox {
+.page73__input-box {
     width: 100%;
     padding: .5rem;
     font-size: 1.8rem;
@@ -83,7 +81,7 @@
     text-align: left;
 }
 
-.pg73InputContainer {
+.page73__input-container {
     gap: 1rem;
     width: 23%;
     position: relative;
@@ -91,17 +89,17 @@
     align-items: center;
 }
 
-.pg73Questions2 .pg73InputContainer {
+.page73__questions2 .page73__input-container {
     width: 30%;
 }
 
-.pg73CheckmarkImage {
+.page73__checkmark-image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg73CheckButton {
+.page73__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -116,33 +114,33 @@
     width: fit-content;
 }
 
-.pg73CheckButton:hover {
+.page73__check-button:hover {
     background-color: #8a1720;
 }
 
-.pg73IconsContainer {
+.page73__icons-container {
     display: flex;
     align-items: center;
     gap: 1rem;
     position: relative;
 }
 
-.pg73AdditionalIcon {
+.page73__additional-icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg73AdditionalIcon.pg73Pulsing {
+.page73__additional-icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg73AdditionalIcon:hover {
+.page73__additional-icon:hover {
     transform: scale(1.2);
 }
 
-.pg73ContainerImagem {
+.page73__container-imagem {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -151,29 +149,28 @@
     flex-direction: column;
 }
 
-.pg73imagem1,
-.pg73imagem2 {
+.page73__imagem1,
+.page73__imagem2 {
     width: 24rem;
     height: auto;
     box-shadow: 0.2rem 0.4rem 1rem rgba(0, 0, 0, 0.5);
 }
 
-.pg73imagem1 {
+.page73__imagem1 {
     margin-right: 70%;
 }
 
-.pg73imagem2 {
+.page73__imagem2 {
     margin-right: 45%;
 }
 
-
-.pg73tabelaAfirmativaContainer,
-.pg73tabelaNegativaContainer {
+.page73__tabela-afirmativa-container,
+.page73__tabela-negativa-container {
     width: 100%;
 }
 
-.pg73tableHeaderAfirmativa,
-.pg73tableHeaderNegativa {
+.page73__table-header-afirmativa,
+.page73__table-header-negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -185,17 +182,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg73styledTableAfirmativa,
-.pg73styledTableNegativa {
+.page73__styled-table-afirmativa,
+.page73__styled-table-negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg73styledTableAfirmativa th,
-.pg73styledTableNegativa th {
+.page73__styled-table-afirmativa th,
+.page73__styled-table-negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -205,24 +201,25 @@
     border: 1px solid #A61C28;
 }
 
-.pg73celulatable {
+
+.page73__celula-table {
     height: 7rem;
 }
 
-.pg73WordBank {
+.page73__word-bank {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     margin-top: 5rem;
 }
 
-.pg73WordBankContainer {
+.page73__word-bank-container {
     width: 70%;
     border: 0.4rem solid #A61C28;
     border-radius: 2rem;
 }
 
-.pg73WordBankHeader {
+.page73__word-bank-header {
     width: 100%;
     height: 4.5rem;
     border-top-left-radius: 1rem;
@@ -236,7 +233,7 @@
     font-weight: bold;
 }
 
-.pg73WordBankContent {
+.page73__word-bank-content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -245,52 +242,52 @@
     border-bottom-right-radius: 2rem;
 }
 
-.pg73WordRow {
+.page73__word-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
-.pg73WordColumn p {
+.page73__word-column p {
     margin: 0.5rem 0;
     font-size: 1.7rem;
     text-align: left;
 }
 
-.pg73RedText {
+.page73__red-text {
     color: #A61C28;
 }
 
-.headerIcon {
+.page73__header-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.headerIcon:hover {
+.page73__header-icon:hover {
     transform: scale(1.1);
 }
 
 @media (max-width: 1024px) {
-    .pg73AsideNotes2 p {
+    .page73__aside-notes2 p {
         font-size: 2rem;
     }
 
-    .pg73styledTableAfirmativa th,
-    .pg73styledTableNegativa th {
+    .page73__styled-table-afirmativa th,
+    .page73__styled-table-negativa th {
         font-size: 1.8rem;
     }
 
-    .pg73Question {
+    .page73__question {
         gap: 5px;
     }
 
-    .pg73IconsContainer {
+    .page73__icons-container {
         margin-left: 0;
     }
 
-    .pg73InputContainer {
+    .page73__input-container {
         width: 15%;
     }
 }

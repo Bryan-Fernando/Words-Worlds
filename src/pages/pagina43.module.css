@@ -1,83 +1,79 @@
-.pg43Container {
+.page43__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg43Header {
+.page43__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg43HeaderH1 {
+.page43__header-title {
     font-size: 4rem;
 }
 
-.pg43Main {
+.page43__main {
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: space-between;
-
 }
 
-.pg43Aside {
+.page43__aside {
     width: 100%;
     display: flex;
 }
 
-.pg43ContainerMain {
+.page43__container-main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg43MainImagems {
+.page43__image {
     height: 10rem;
     width: 10rem;
 }
 
-.pg43ContainerDiv {
+.page43__container-div {
     display: flex;
     justify-content: flex-start;
     gap: 2.5rem;
     text-align: left;
 }
 
-.pg43VerticalLine {
+.page43__vertical-line {
     border-left: 0.5 solid #A61C28;
     height: 100%;
     margin: 0 1rem;
 }
 
-.pg43MainParagrafoBold {
+.page43__main-paragrafo-bold {
     font-weight: bold;
 }
 
-
-.pg43AsideNotes1 {
+.page43__aside-notes--1 {
     width: 85%;
     height: 4.5rem;
     border: 0.4rem solid #0A3282;
     border-top-left-radius: 2.5rem;
     border-top-right-radius: 2.5rem;
-    background-color: white;
-    text-align: left;
-    padding-left: 1rem;
     background-color: #0A3282;
     color: white;
     display: flex;
     align-items: center;
+    padding-left: 1rem;
 }
 
-.pg43AsideImgNotes {
+.page43__aside-image-notes {
     height: calc(1rem + 0.8vw);
     width: 2rem;
     padding-right: 0.5rem;
 }
 
-.pg43AsideNotes2 {
+.page43__aside-notes--2 {
     width: 85%;
     height: 75%;
     border: 0.4rem solid #0A3282;
@@ -94,25 +90,25 @@
     gap: 1rem;
 }
 
-.pg43AsideNotes2Negrito {
+.page43__aside-notes--2-bold {
     font-weight: bold;
 }
 
-.pg43Asidecontainer {
+.page43__aside-container {
     width: 100%;
     height: fit-content;
 }
 
-.iconButton {
+.page43__audio-icon {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
     margin-left: 0.5rem;
     position: relative;
-    top: 0.5rem
+    top: 0.5rem;
 }
 
-.pg43HeaderH1 img {
+.page43__header-title img {
     width: 1.8rem;
     height: 1.8rem;
     cursor: pointer;

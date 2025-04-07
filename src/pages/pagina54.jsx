@@ -58,117 +58,116 @@ const Pagina54 = () => {
 
     return (
         <div>
-            <div className={styles['page54']}>
-                <header className={styles['page54__header']}>
-                    <h1 className={styles['page54__title']}>
+            <div className={styles["page54"]}>
+                <header className={styles["page54__header"]}>
+                    <h1 className={styles["page54__title"]}>
                         Grammar - Demonstrative Pronouns
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles['page54__icon']}
+                            className={styles["page54__icon"]}
                             onClick={() => playAudio('pg50-audio1e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles['page54__icon']}
+                            className={styles["page54__icon"]}
                             onClick={() => playAudio('pg50-audio1p')}
                         />
                     </h1>
-                    <div className={styles['page54__subtitle-container']}>
+                    <div className={styles["page54__subtitle-container"]}>
                         <h2
-                            className={styles['page54__subtitle']}>
+                            className={styles["page54__subtitle"]}>
                             Those = Aqueles / Aquelas
                         </h2>
                     </div>
                 </header>
-                <main className={styles['page54__content']}>
-                    <div className={styles['page54__section-left']}>
+                <main className={styles["page54__content"]}>
+                    <div className={styles["page54__section-left"]}>
                         <div>
-                            <div className={styles['page54__image-container--large']}>
-                                <img src={pagina54Imagem1} alt="Imagem 1" className={styles['page54__image']} />
+                            <div className={styles["page54__image-container--large"]}>
+                                <img src={pagina54Imagem1} alt="Imagem 1" className={styles["page54__image"]} />
                             </div>
-                            <p className={styles['page54__text']}>
+                            <p className={styles["page54__text"]}>
                                 Those are my teammates.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio1')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio1p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles['page54__image-container--tall']}>
-                                <img src={pagina54Imagem3} alt="Imagem 3" className={styles['page54__image']} />
+                            <div className={styles["page54__image-container--tall"]}>
+                                <img src={pagina54Imagem3} alt="Imagem 3" className={styles["page54__image"]} />
                             </div>
-                            <p className={styles['page54__text']}>
+                            <p className={styles["page54__text"]}>
                                 Those are my friends.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio2')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio2p')}
                                 />
                             </p>
                         </div>
                     </div>
-                    <div className={styles['page54__section-right']}>
+                    <div className={styles["page54__section-right"]}>
                         <div>
-                            <div className={styles['page54__image-container--large-alt']}>
-                                <img src={pagina54Imagem2} alt="Imagem 2" className={styles['page54__image']} />
+                            <div className={styles["page54__image-container--large-alt"]}>
+                                <img src={pagina54Imagem2} alt="Imagem 2" className={styles["page54__image"]} />
                             </div>
-                            <p className={styles['page54__text']}>
+                            <p className={styles["page54__text"]}>
                                 Those are Anne’s parents.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio3')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio3p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles['page54__image-container--tall-alt']}>
-                                <img src={pagina54Imagem4} alt="Imagem 4" className={styles['page54__image']} />
+                            <div className={styles["page54__image-container--tall-alt"]}>
+                                <img src={pagina54Imagem4} alt="Imagem 4" className={styles["page54__image"]} />
                             </div>
-                            <p className={styles['page54__text']}>
+                            <p className={styles["page54__text"]}>
                                 Those are my classmates.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio4')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles['page54__icon']}
+                                    className={styles["page54__icon"]}
                                     onClick={() => playAudio('pg54-audio4p')}
                                 />
                             </p>
                         </div>
                     </div>
                 </main>
-
             </div>
         </div>
     );

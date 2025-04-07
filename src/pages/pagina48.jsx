@@ -51,70 +51,71 @@ const Pagina48 = () => {
 
     return (
         <div>
-            <div className={styles.pg48Container}>
-                <header className={styles.pg48Header}>
-                    <h1 className={styles.pg48HeaderH1} onClick={() => playGlobalAudio('global_grammar')}>
-                        Grammar
-                    </h1>
-                    <div className={styles.pg48HeaderH2H3}>
-                        <h2 className={styles.pg48HeaderH2} onClick={() => playGlobalAudio('global_posse_ae')}>
-                            Possessive Adjectives
-                        </h2>
-                        <h3 className={styles.pg48HeaderH3} onClick={() => playGlobalAudio('global_posse_ap')}>
-                            Pronomes possessivos
-                        </h3>
-                    </div>
-                </header>
-                <main className={styles.pg48Main}>
-                    {/* Primeiro bloco de exemplo */}
-                    <div className={styles.pg48Exemplo}>
-                        <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
-                        <div className={styles.pg48ExemploImg}>
-                            <div className={styles.pg48AsideTexto1} onClick={() => playAudio('pg48_audio1e')} style={{ cursor: 'pointer' }}>
-                                <p>John: I love this city. <strong>Its</strong> architecture is stunning.</p>
-                            </div>
-                            <img
-                                className={styles.pg48AsideImg1}
-                                src={pagina48_imagem1}
-                                alt="Primeira imagem de exemplo"
-                            />
-                        </div>
-                        <div className={styles.pg48Traducao}>
-                            <p className={styles.pg48TituloTraducao}><strong>Tradução:</strong></p>
-                            <p className={styles.pg48TraducaoTexto1} onClick={() => playAudio('pg48_audio1p')} style={{ cursor: 'pointer' }}>
-                                Eu amo essa cidade. <strong>Sua</strong> arquitetura é impressionante.
-                            </p>
-                        </div>
-                    </div>
-
-                    {/* Segundo bloco de exemplo */}
-                    <div className={styles.pg48Exemplo}>
-                        <p className={styles.pg48TituloExemplo}><strong>Exemplo:</strong></p>
-                        <div className={styles.pg48ExemploImg}>
-                            <div className={styles.pg48AsideTexto2} onClick={() => playAudio('pg48_audio2e')} style={{ cursor: 'pointer' }}>
-                                <p>Paulo: Are these <strong>our</strong> books?</p>
-                            </div>
-                            <div className={styles.pg48AsideTexto3} onClick={() => playAudio('pg48_audio3e')} style={{ cursor: 'pointer' }}>
-                                <p>Maria: No, they aren’t. <strong>Our</strong> books are on the teacher’s desk.</p>
-                            </div>
-                            <img
-                                className={styles.pg48AsideImg2}
-                                src={pagina48_imagem2}
-                                alt="Segunda imagem de exemplo"
-                            />
-                        </div>
-                        <div className={styles.pg48Traducao}>
-                            <p className={styles.pg48TituloTraducao}><strong>Tradução:</strong></p>
-                            <p className={styles.pg48TraducaoTexto2} onClick={() => playAudio('pg48_audio2p')} style={{ cursor: 'pointer' }}>
-                                Estes são <strong>nossos</strong> livros?
-                            </p>
-                            <p className={styles.pg48TraducaoTexto3} onClick={() => playAudio('pg48_audio3p')} style={{ cursor: 'pointer' }}>
-                                Não, não são. <strong>Nossos</strong> livros estão na mesa do professor.
-                            </p>
-                        </div>
-                    </div>
-                </main>
+           <div className={styles["page48__container"]}>
+    <header className={styles["page48__header"]}>
+        <h1 className={styles["page48__header-h1"]} onClick={() => playGlobalAudio('global_grammar')}>
+            Grammar
+        </h1>
+        <div className={styles["page48__header-h2-h3"]}>
+            <h2 className={styles["page48__header-h2"]} onClick={() => playGlobalAudio('global_posse_ae')}>
+                Possessive Adjectives
+            </h2>
+            <h3 className={styles["page48__header-h3"]} onClick={() => playGlobalAudio('global_posse_ap')}>
+                Pronomes possessivos
+            </h3>
+        </div>
+    </header>
+    <main className={styles["page48__main"]}>
+        {/* Primeiro bloco de exemplo */}
+        <div className={styles["page48__exemplo"]}>
+            <p className={styles["page48__titulo-exemplo"]}><strong>Exemplo:</strong></p>
+            <div className={styles["page48__exemplo-img"]}>
+                <div className={styles["page48__aside-texto-1"]} onClick={() => playAudio('pg48_audio1e')} style={{ cursor: 'pointer' }}>
+                    <p>John: I love this city. <strong>Its</strong> architecture is stunning.</p>
+                </div>
+                <img
+                    className={styles["page48__aside-img-1"]}
+                    src={pagina48_imagem1}
+                    alt="Primeira imagem de exemplo"
+                />
             </div>
+            <div className={styles["page48__traducao"]}>
+                <p className={styles["page48__titulo-traducao"]}><strong>Tradução:</strong></p>
+                <p className={styles["page48__traducao-texto-1"]} onClick={() => playAudio('pg48_audio1p')} style={{ cursor: 'pointer' }}>
+                    Eu amo essa cidade. <strong>Sua</strong> arquitetura é impressionante.
+                </p>
+            </div>
+        </div>
+
+        {/* Segundo bloco de exemplo */}
+        <div className={styles["page48__exemplo"]}>
+            <p className={styles["page48__titulo-exemplo"]}><strong>Exemplo:</strong></p>
+            <div className={styles["page48__exemplo-img"]}>
+                <div className={styles["page48__aside-texto-2"]} onClick={() => playAudio('pg48_audio2e')} style={{ cursor: 'pointer' }}>
+                    <p>Paulo: Are these <strong>our</strong> books?</p>
+                </div>
+                <div className={styles["page48__aside-texto-3"]} onClick={() => playAudio('pg48_audio3e')} style={{ cursor: 'pointer' }}>
+                    <p>Maria: No, they aren’t. <strong>Our</strong> books are on the teacher’s desk.</p>
+                </div>
+                <img
+                    className={styles["page48__aside-img-2"]}
+                    src={pagina48_imagem2}
+                    alt="Segunda imagem de exemplo"
+                />
+            </div>
+            <div className={styles["page48__traducao"]}>
+                <p className={styles["page48__titulo-traducao"]}><strong>Tradução:</strong></p>
+                <p className={styles["page48__traducao-texto-2"]} onClick={() => playAudio('pg48_audio2p')} style={{ cursor: 'pointer' }}>
+                    Estes são <strong>nossos</strong> livros?
+                </p>
+                <p className={styles["page48__traducao-texto-3"]} onClick={() => playAudio('pg48_audio3p')} style={{ cursor: 'pointer' }}>
+                    Não, não são. <strong>Nossos</strong> livros estão na mesa do professor.
+                </p>
+            </div>
+        </div>
+    </main>
+</div>
+
         </div>
     );
 };

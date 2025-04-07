@@ -1,0 +1,136 @@
+.page127__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-left: 0;
+    margin-right: auto;
+    padding-left: 0;
+}
+
+.page127__title {
+    text-align: left;
+    font-size: 4rem;
+    color: #8a1720;
+}
+
+.page127__exercise-title {
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.page127__questions-container {
+    text-align: left;
+}
+
+.page127__question {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: black;
+    text-align: left;
+    margin-left: 2.5rem;
+}
+
+.page127__question span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.page127__input-box {
+    width: 18rem;
+    padding: .5rem;
+    font-size: 1.8rem;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page127__input-container {
+    gap: 1rem;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.page127__checkmark-image {
+    width: 2.5rem;
+    height: 2.5rem;
+    pointer-events: none;
+}
+
+.page127__check-button {
+    background-color: #A61C28;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 2rem;
+    text-align: center;
+    display: block;
+    font-size: 2rem;
+    width: fit-content;
+}
+
+.page127__check-button:hover {
+    background-color: #8a1720;
+}
+
+.page127__icons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: 5px;
+}
+
+.page127__icon--additional {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.page127__icon--additional.page127__icon--pulsing {
+    animation: pulse 1s infinite;
+}
+
+.page127__icon--additional:hover {
+    transform: scale(1.2);
+}
+
+.page127__title,
+.page127__exercise-title {
+    display: inline-flex;
+    align-items: center;
+}
+
+.page127__title img,
+.page127__exercise-title img {
+    width: 1.8rem;
+    height: 1.8rem;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

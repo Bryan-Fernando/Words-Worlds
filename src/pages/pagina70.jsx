@@ -51,7 +51,7 @@ const pagina70 = () => {
         pg70_audio9e, pg70_audio9p,
         pg70_audio10e, pg70_audio10p,
     };
-    
+
 
     const respostasCorretas = [
         ['She', 'is', 'a teacher'],
@@ -150,34 +150,34 @@ const pagina70 = () => {
 
 
     return (
-        <div className={styles.pg70Container}>
-            <header className={styles.pg70Header}>
-                <h1 className={styles.pg70HeaderH1}>
+        <div className={styles["page70__container"]}>
+            <header className={styles["page70__header"]}>
+                <h1 className={styles["page70__header--h1"]}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg70AudioIcon}
+                        className={styles["page70__audio-icon"]}
                         onClick={() => playAudio(global_learning_le_e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg70AudioIcon}
+                        className={styles["page70__audio-icon"]}
                         onClick={() => playAudio(global_learning_le_p)}
                     />
                 </h1>
-                <p><span className={styles.pg70RedText}>Word Order:</span> Unscramble the words to form questions.</p>
-                <p><span className={styles.pg70RedText}>Ordem das Palavras:</span> Reorganize as palavras para formar perguntas.</p>
-                <p><span className={styles.pg70RedText}>Click</span> the words to form the correct sentence.</p>
-                <p><span className={styles.pg70RedText}>Clique</span> nas palavras para formar a frase correta.</p>
+                <p><span className={styles["page70__red-text"]}>Word Order:</span> Unscramble the words to form questions.</p>
+                <p><span className={styles["page70__red-text"]}>Ordem das Palavras:</span> Reorganize as palavras para formar perguntas.</p>
+                <p><span className={styles["page70__red-text"]}>Click</span> the words to form the correct sentence.</p>
+                <p><span className={styles["page70__red-text"]}>Clique</span> nas palavras para formar a frase correta.</p>
             </header>
 
-            <div className={styles.pg70tabelaAfirmativaContainer}>
-                <div className={styles.pg70tableHeaderAfirmativa}>AFIRMATIVA</div>
-                <table className={styles.pg70styledTableAfirmativa}>
-                    <thead className={styles.pg70Thead}>
-                        <tr className={styles.pg70celulatable}>
+            <div className={styles["page70__tabela-afirmativa-container"]}>
+                <div className={styles["page70__table-header-afirmativa"]}>AFIRMATIVA</div>
+                <table className={styles["page70__styled-table-afirmativa"]}>
+                    <thead className={styles["page70__thead"]}>
+                        <tr className={styles["page70__celula-table"]}>
                             <th>Introdução</th>
                             <th>Sujeito</th>
                             <th>Verbo <br /> Auxiliar</th>
@@ -189,18 +189,17 @@ const pagina70 = () => {
                 </table>
             </div>
 
-
-            <div className={styles.pg70MainAsideContainer}>
-                <main className={styles.pg70MainContainer}>
-                    <div className={styles.pg70frases}>
+            <div className={styles["page70__main-aside-container"]}>
+                <main className={styles["page70__main-container"]}>
+                    <div className={styles["page70__frases"]}>
                         {respostasCorretas.map((_, fraseIndex) => (
-                            <div key={fraseIndex} className={styles.pg70fraseContainer}>
-                                <div className={styles.pg70frase}>
+                            <div key={fraseIndex} className={styles["page70__frase-container"]}>
+                                <div className={styles["page70__frase"]}>
                                     {frasesEmbaralhadas[fraseIndex] &&
                                         frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
                                             <div
                                                 key={wordIndex}
-                                                className={`${styles.pg70word} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles.pg70disabled : ''}`}
+                                                className={`${styles["page70__word"]} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles["page70__disabled"] : ''}`}
                                                 onClick={() => handleWordClick(fraseIndex, word)}
                                             >
                                                 {word}
@@ -208,12 +207,12 @@ const pagina70 = () => {
                                         ))}
                                 </div>
 
-                                <div className={styles.pg70inputFrase}>
+                                <div className={styles["page70__input-frase"]}>
                                     {respostas[fraseIndex] &&
                                         respostas[fraseIndex].map((palavra, index) => (
                                             <div
                                                 key={index}
-                                                className={styles.pg70chip}
+                                                className={styles["page70__chip"]}
                                                 onClick={() => handleChipClick(fraseIndex, palavra)}
                                             >
                                                 {index === 0
@@ -222,52 +221,49 @@ const pagina70 = () => {
                                             </div>
                                         ))}
 
-{resultados.length > 0 && (
-    <>
-        {resultados[fraseIndex] ? (
-            <>
-                <img src={correct_icon} alt="Correto" className={styles.checkIcon} />
-
-                <img
-                    src={eng_audio_icon}
-                    alt="Play English Audio"
-                    className={styles.eng_audio_icon}
-                    onClick={() => playAudio(`pg70_audio${fraseIndex + 1}e`)}
-                    style={{ cursor: "pointer" }}
-                />
-
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Play Portuguese Audio"
-                    className={styles.ptbr_audio_icon}
-                    onClick={() => playAudio(`pg70_audio${fraseIndex + 1}p`)}
-                    style={{ cursor: "pointer" }}
-                />
-            </>
-        ) : (
-            <img src={wrong_icon} alt="Errado" className={styles.checkIcon} />
-        )}
-    </>
-)}
-
-
+                                    {resultados.length > 0 && (
+                                        <>
+                                            {resultados[fraseIndex] ? (
+                                                <>
+                                                    <img src={correct_icon} alt="Correto" className={styles["page70__check-icon"]} />
+                                                    <img
+                                                        src={eng_audio_icon}
+                                                        alt="Play English Audio"
+                                                        className={styles["page70__eng-audio-icon"]}
+                                                        onClick={() => playAudio(`pg70_audio${fraseIndex + 1}e`)}
+                                                        style={{ cursor: "pointer" }}
+                                                    />
+                                                    <img
+                                                        src={ptbr_audio_icon}
+                                                        alt="Play Portuguese Audio"
+                                                        className={styles["page70__ptbr-audio-icon"]}
+                                                        onClick={() => playAudio(`pg70_audio${fraseIndex + 1}p`)}
+                                                        style={{ cursor: "pointer" }}
+                                                    />
+                                                </>
+                                            ) : (
+                                                <img src={wrong_icon} alt="Errado" className={styles["page70__check-icon"]} />
+                                            )}
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <button className={styles.pg70checkButton} onClick={verificarRespostas}>
+                    <button className={styles["page70__check-button"]} onClick={verificarRespostas}>
                         Check
                     </button>
                 </main>
 
-                <aside className={styles.pg70AsideContainer}>
-                    <div className={styles.pg70ImagensContainer}>
-                        <img src={pagina70_imagem1} alt="Imagem 1" className={styles.pg70Imagem1} />
-                        <img src={pagina70_imagem2} alt="Imagem 2" className={styles.pg70Imagem2} />
+                <aside className={styles["page70__aside-container"]}>
+                    <div className={styles["page70__imagens-container"]}>
+                        <img src={pagina70_imagem1} alt="Imagem 1" className={styles["page70__imagem--1"]} />
+                        <img src={pagina70_imagem2} alt="Imagem 2" className={styles["page70__imagem--2"]} />
                     </div>
                 </aside>
             </div>
         </div>
+
     );
 };
 

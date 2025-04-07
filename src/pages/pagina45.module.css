@@ -1,34 +1,33 @@
-.pg45Container {
+.page45__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg45Header {
+.page45__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg45HeaderH2H3 {
+.page45__header-h2-h3 {
     color: black;
 }
 
-.pg45HeaderH2 {
+.page45__header-h2 {
     font-size: 3rem;
     padding-bottom: 0%;
 }
 
-.pg45HeaderH3 {
+.page45__header-h3 {
     font-size: 2.5rem;
 }
 
-.pg45HeaderH1 {
+.page45__header-h1 {
     font-size: 4rem;
 }
 
-
-.pg45Main {
+.page45__main {
     width: 100%;
     height: 50rem;
     text-align: center;
@@ -36,53 +35,53 @@
     justify-content: space-between;
 }
 
-.pg45tableContainer {
+.page45__table-container {
     width: 60%;
 }
 
-.pg45TableTh {
+.page45__table-th {
     color: black;
 }
 
-.pg45table {
+.page45__table {
     border-collapse: collapse;
     width: 100%;
     font-family: Arial, sans-serif;
 }
 
-.pg45table th,
-.pg45table td {
+.page45__table th,
+.page45__table td {
     border: 0.1rem solid #000;
     text-align: left;
     padding: 0.8rem;
 }
 
-.pg45table th {
+.page45__table th {
     width: 20%;
     background-color: #A61C28;
     font-weight: bold;
     cursor: pointer;
 }
 
-.pg45table td {
+.page45__table td {
     padding-left: 3.5%;
 }
 
-.pg45Aside {
+.page45__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-.pg45Exemplo {
+.page45__example {
     width: 100%;
     border: 0.3rem solid black;
     text-align: left;
     padding: 1rem;
 }
 
-.pg45ExemploImg {
+.page45__example-img {
     position: relative;
     text-align: center;
     display: flex;
@@ -91,19 +90,19 @@
     justify-content: center;
 }
 
-.pg45AsideImg1 {
+.page45__aside-img-1 {
     z-index: 1;
     width: 30%;
     border-radius: 50%;
 }
 
-.pg45AsideImg2 {
+.page45__aside-img-2 {
     margin-left: -2%;
     width: 35%;
     border-radius: 25%;
 }
 
-.pg45Traducao {
+.page45__translation {
     width: 100%;
     text-align: left;
     display: flex;
@@ -112,7 +111,7 @@
     font-size: 20rem;
 }
 
-.pg45AsideTexto1 {
+.page45__aside-texto-1 {
     background-color: #FDCC98;
     height: auto;
     width: fit-content;
@@ -129,7 +128,7 @@
     left: 52%;
 }
 
-.pg45AsideTexto1::after {
+.page45__aside-texto-1::after {
     content: '';
     position: absolute;
     top: -10px;
@@ -141,7 +140,7 @@
     border-bottom: 10px solid #FDCC98;
 }
 
-.pg45AsideTexto2::after {
+.page45__aside-texto-2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -153,8 +152,7 @@
     border-top: 10px solid #FFF7A6;
 }
 
-
-.pg45AsideTexto2 {
+.page45__aside-texto-2 {
     background-color: #FFF7A6;
     height: auto;
     width: fit-content;
@@ -169,12 +167,12 @@
     cursor: pointer;
 }
 
-.pg45ContainerAsidetexto {
+.page45__container-asidetexto {
     display: flex;
     justify-content: end;
 }
 
-.pg45AsideTraducao1 {
+.page45__aside-traducao-1 {
     background-color: #FFF7A6;
     height: auto;
     width: fit-content;
@@ -186,7 +184,7 @@
     cursor: pointer;
 }
 
-.pg45AsideTraducao2 {
+.page45__aside-traducao-2 {
     background-color: #FDCC98;
     height: auto;
     width: fit-content;
@@ -198,8 +196,8 @@
     cursor: pointer;
 }
 
-.pg45HeaderH1,
-.pg45HeaderH2,
-.pg45HeaderH3 {
+.page45__header-h1,
+.page45__header-h2,
+.page45__header-h3 {
     cursor: pointer;
 }

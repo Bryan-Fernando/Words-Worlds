@@ -65,23 +65,23 @@ const Pagina45 = () => {
 
     return (
         <div>
-            <div className={styles.pg45Container}>
-                <header className={styles.pg45Header}>
-                    <h1 className={styles.pg45HeaderH1} onClick={() => playGlobalAudio('global_grammar')}>
+            <div className={styles['page45__container']}>
+                <header className={styles['page45__header']}>
+                    <h1 className={styles['page45__header-h1']} onClick={() => playGlobalAudio('global_grammar')}>
                         Grammar
                     </h1>
-                    <div className={styles.pg45HeaderH2H3}>
-                        <h2 className={styles.pg45HeaderH2} onClick={() => playGlobalAudio('global_posse_ae')}>
+                    <div className={styles['page45__header-h2-h3']}>
+                        <h2 className={styles['page45__header-h2']} onClick={() => playGlobalAudio('global_posse_ae')}>
                             Possessive Adjectives
                         </h2>
-                        <h3 className={styles.pg45HeaderH3} onClick={() => playGlobalAudio('global_posse_ap')}>
+                        <h3 className={styles['page45__header-h3']} onClick={() => playGlobalAudio('global_posse_ap')}>
                             Pronomes possessivos
                         </h3>
                     </div>
                 </header>
-                <main className={styles.pg45Main}>
-                    <div className={styles.pg45tableContainer}>
-                        <table className={styles.pg45table}>
+                <main className={styles['page45__main']}>
+                    <div className={styles['page45__table-container']}>
+                        <table className={styles['page45__table']}>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio('my_audio')}>My</th>
@@ -119,26 +119,49 @@ const Pagina45 = () => {
                         </table>
                     </div>
                 </main>
-                <aside className={styles.pg45Aside}>
-                    <div className={styles.pg45Exemplo}>
-                        <p> <strong>Exemplo:</strong></p>
-                        <div className={styles.pg45ExemploImg}>
-                            <div className={styles.pg45AsideTexto1}>
-                                <p> <span onClick={() => playAudio('pg45_audio2_1e')} style={{ cursor: 'pointer' }}>Laura: I know, it's hard to concentrate with <br /> all that noise. </span> <span onClick={() => playAudio('pg45_audio2_2e')} style={{ cursor: 'pointer' }}>I'll talk to them about it.</span></p>
+                <aside className={styles['page45__aside']}>
+                    <div className={styles['page45__example']}>
+                        <p><strong>Exemplo:</strong></p>
+                        <div className={styles['page45__example-img']}>
+                            <div className={styles['page45__aside-texto-1']}>
+                                <p>
+                                    <span onClick={() => playAudio('pg45_audio2_1e')} style={{ cursor: 'pointer' }}>
+                                        Laura: I know, it's hard to concentrate with <br /> all that noise.
+                                    </span>
+                                    <span onClick={() => playAudio('pg45_audio2_2e')} style={{ cursor: 'pointer' }}>
+                                        I'll talk to them about it.
+                                    </span>
+                                </p>
                             </div>
-                            <div className={styles.pg45AsideTexto2}>
-                                <p><span onClick={() => playAudio('pg45_audio1_1e')} style={{ cursor: 'pointer' }}>Mark: The neighbors are having a party. </span><br /> <span onClick={() => playAudio('pg45_audio1_2e')} style={{ cursor: 'pointer' }}> <strong>Their</strong> music is so loud!</span> </p>
+                            <div className={styles['page45__aside-texto-2']}>
+                                <p>
+                                    <span onClick={() => playAudio('pg45_audio1_1e')} style={{ cursor: 'pointer' }}>
+                                        Mark: The neighbors are having a party.
+                                    </span>
+                                    <br />
+                                    <span onClick={() => playAudio('pg45_audio1_2e')} style={{ cursor: 'pointer' }}>
+                                        <strong>Their</strong> music is so loud!
+                                    </span>
+                                </p>
                             </div>
-                            <img className={styles.pg45AsideImg1} src={pagina45_imagem1} alt="" />
-                            <img className={styles.pg45AsideImg2} src={pagina45_imagem2} alt="" />
+                            <img className={styles['page45__aside-img-1']} src={pagina45_imagem1} alt="" />
+                            <img className={styles['page45__aside-img-2']} src={pagina45_imagem2} alt="" />
                         </div>
                     </div>
-                    <div className={styles.pg45Traducao}>
+                    <div className={styles['page45__translation']}>
                         <p><strong>Tradução:</strong></p>
-                        <div className={styles.pg45AsideTraducao1} onClick={() => playAudio('pg45_audio1p')} style={{ cursor: 'pointer' }}>
+                        <div
+                            className={styles['page45__aside-traducao-1']}
+                            onClick={() => playAudio('pg45_audio1p')}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <p>Mark: Os vizinhos estão dando uma festa. A música <strong>deles</strong> está tão alta!</p>
                         </div>
-                        <div className={styles.pg45AsideTraducao2} onClick={() => playAudio('pg45_audio2p')} style={{ cursor: 'pointer' }}>
+                        <div
+                            className={styles['page45__aside-traducao-2']}
+                            onClick={() => playAudio('pg45_audio2p')}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <p>Laura: Eu sei, é difícil se concentrar com tanto barulho. Vou falar com eles sobre isso.</p>
                         </div>
                     </div>

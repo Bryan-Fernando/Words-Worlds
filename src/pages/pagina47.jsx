@@ -120,23 +120,23 @@ const Pagina47 = () => {
 
     return (
         <div>
-            <div className={styles.pg47Container}>
-                <header className={styles.pg47Header}>
-                    <h1 className={styles.pg47HeaderH1} onClick={() => playGlobalAudio('global_grammar')}>
+            <div className={styles['page47__container']}>
+                <header className={styles['page47__header']}>
+                    <h1 className={styles['page47__header-h1']} onClick={() => playGlobalAudio('global_grammar')}>
                         Grammar
                     </h1>
-                    <div className={styles.pg47HeaderH2H3}>
-                        <h2 className={styles.pg47HeaderH2} onClick={() => playGlobalAudio('global_posse_ae')}>
+                    <div className={styles['page47__header-h2h3']}>
+                        <h2 className={styles['page47__header-h2']} onClick={() => playGlobalAudio('global_posse_ae')}>
                             Possessive Adjectives
                         </h2>
-                        <h3 className={styles.pg47HeaderH3} onClick={() => playGlobalAudio('global_posse_ap')}>
+                        <h3 className={styles['page47__header-h3']} onClick={() => playGlobalAudio('global_posse_ap')}>
                             Pronomes possessivos
                         </h3>
                     </div>
                 </header>
-                <main className={styles.pg47Main}>
-                    <div className={styles.pg47ContainerMain}>
-                        <table className={styles.pg47table}>
+                <main className={styles['page47__main']}>
+                    <div className={styles['page47__container-main']}>
+                        <table className={styles['page47__table']}>
                             <thead>
                                 <tr>
                                     <th onClick={() => playAudio('my_audio')}>My</th>
@@ -167,25 +167,25 @@ const Pagina47 = () => {
                                     <td>seus, suas, teus, tuas (de vocês)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('theirAudio')}>Their</th>
+                                    <th onClick={() => playAudio('their_audio')}>Their</th>
                                     <td>deles, delas, seus, suas</td>
                                 </tr>
                             </thead>
                         </table>
-                        <div className={styles.pg47MainTexto}>
-                            <ol className={styles.pg47MainList}>
+                        <div className={styles['page47__main-texto']}>
+                            <ol className={styles['page47__main-list']}>
                                 <li>
                                     This is <strong>my</strong> teacher.
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio1e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio1p')}
                                     />
                                 </li>
@@ -194,13 +194,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio2e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio2p')}
                                     />
                                 </li>
@@ -209,13 +209,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio3e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio3p')}
                                     />
                                 </li>
@@ -224,13 +224,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio4e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio4p')}
                                     />
                                 </li>
@@ -239,13 +239,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio5e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio5p')}
                                     />
                                 </li>
@@ -254,13 +254,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio6e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio6p')}
                                     />
                                 </li>
@@ -269,13 +269,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio7e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio7p')}
                                     />
                                 </li>
@@ -284,13 +284,13 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio8e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio8p')}
                                     />
                                 </li>
@@ -299,28 +299,28 @@ const Pagina47 = () => {
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio9e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio9p')}
                                     />
                                 </li>
-                                <li className={styles["pg47__last-li"]}>
+                                <li className={styles['page47__last-li']}>
                                     <strong>Your</strong> sister is smart.
                                     <img
                                         src={iconeE}
                                         alt="Play English Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio10e')}
                                     />
                                     <img
                                         src={iconeP}
                                         alt="Play Portuguese Audio"
-                                        className={styles["pg47__audio-icon"]}
+                                        className={styles['page47__audio-icon']}
                                         onClick={() => playAudio('pg47_audio10p')}
                                     />
                                 </li>
@@ -328,56 +328,60 @@ const Pagina47 = () => {
                         </div>
                     </div>
                 </main>
-                <aside className={styles.pg47Aside}>
-                    <div className={styles.pg47Exemplo}>
-                        <p className={styles.pg47Titulo}>Exemplo:</p>
-                        <div className={styles.pg47ExemploImg}>
-                            <img className={styles.pg47AsideImg1} src={pagina47_imagem1} alt="" />
-                            <div className={`${styles.pg47AsideTexto1}`} onClick={() => playAudio('pg47_audio11e')}>
+
+
+                <aside className={styles['page47__aside']}>
+                    <div className={styles['page47__exemplo']}>
+                        <p className={styles['page47__titulo']}>Exemplo:</p>
+                        <div className={styles['page47__exemplo-img']}>
+                            <img className={styles['page47__aside-img-1']} src={pagina47_imagem1} alt="" />
+                            <div className={styles['page47__aside-texto-1']} onClick={() => playAudio('pg47_audio11e')}>
                                 <p>Nice to meet you, Daniel.</p>
                             </div>
-                            <div className={`${styles.pg47AsideTexto2}`} onClick={() => playAudio('pg47_audio13e')}>
+                            <div className={styles['page47__aside-texto-2']} onClick={() => playAudio('pg47_audio13e')}>
                                 <p>Hi, Daniel!</p>
                             </div>
-                            <div className={`${styles.pg47AsideTexto3}`} onClick={() => playAudio('pg47_audio12e')}>
+                            <div className={styles['page47__aside-texto-3']} onClick={() => playAudio('pg47_audio12e')}>
                                 <p>Welcome guys!</p>
                             </div>
-                            <div className={styles.pg47AsideTexto4}>
-                                <p> <span onClick={() => playAudio('pg47_audio14_1e')}>This is <strong>my</strong> friend Daniel. </span><br />
-                                    <span onClick={() => playAudio('pg47_audio14_2e')}>He is <strong>our</strong> web designer.</span></p>
+                            <div className={styles['page47__aside-texto-4']}>
+                                <p>
+                                    <span onClick={() => playAudio('pg47_audio14_1e')}>This is <strong>my</strong> friend Daniel. </span><br />
+                                    <span onClick={() => playAudio('pg47_audio14_2e')}>He is <strong>our</strong> web designer.</span>
+                                </p>
                             </div>
-                            <div className={styles.pg47AsideTexto5}>
-                                <p> <span onClick={() => playAudio('pg47_audio15_1e')}> Daniel, this is <strong>my</strong> childhood friend Karen </span><br />
+                            <div className={styles['page47__aside-texto-5']}>
+                                <p>
+                                    <span onClick={() => playAudio('pg47_audio15_1e')}> Daniel, this is <strong>my</strong> childhood friend Karen </span><br />
                                     <span onClick={() => playAudio('pg47_audio15_2e')}>and this is <strong>her</strong> brother Ethan. </span><br />
-                                    <span onClick={() => playAudio('pg47_audio15_3e')}>They will be working in the IT (Information Technology) department.</span></p>
+                                    <span onClick={() => playAudio('pg47_audio15_3e')}>They will be working in the IT (Information Technology) department.</span>
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.pg47Traducao}>
-                        <p className={styles.pg47Titulo}>Tradução:</p>
+                    <div className={styles['page47__traducao']}>
+                        <p className={styles['page47__titulo']}>Tradução:</p>
 
-                        <div className={styles.pg47TraducaoTop}>
-                            <div className={styles.pg47AsideTraducao2} onClick={() => playAudio('pg47_audio11p')} style={{ cursor: 'pointer' }}>
+                        <div className={styles['page47__traducao-top']}>
+                            <div className={styles['page47__aside-traducao-2']} onClick={() => playAudio('pg47_audio11p')} style={{ cursor: 'pointer' }}>
                                 <p>Oi, Daniel!</p>
                             </div>
-                            <div className={styles.pg47AsideTraducao3} onClick={() => playAudio('pg47_audio12p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles['page47__aside-traducao-3']} onClick={() => playAudio('pg47_audio12p')} style={{ cursor: 'pointer' }}>
                                 <p>Sejam bem-vindos, pessoal!</p>
                             </div>
-                            <div className={styles.pg47AsideTraducao1} onClick={() => playAudio('pg47_audio13p')} style={{ cursor: 'pointer' }}>
+                            <div className={styles['page47__aside-traducao-1']} onClick={() => playAudio('pg47_audio13p')} style={{ cursor: 'pointer' }}>
                                 <p>Prazer em conhecê-lo, Daniel.</p>
                             </div>
                         </div>
 
-                        <div className={styles.pg47AsideTraducao4} onClick={() => playAudio('pg47_audio14p')} style={{ cursor: 'pointer' }}>
+                        <div className={styles['page47__aside-traducao-4']} onClick={() => playAudio('pg47_audio14p')} style={{ cursor: 'pointer' }}>
                             <p>
                                 Este é meu amigo Daniel. Ele é nosso web designer. Daniel, esta é minha amiga de infância Karen e este é seu irmão Ethan.
                             </p>
                         </div>
                     </div>
-
                 </aside>
-
             </div>
         </div>
     );

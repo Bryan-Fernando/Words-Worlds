@@ -118,49 +118,46 @@ const pagina73 = () => {
 
 
     return (
-        <div className={styles.pg73Container}>
-            <header className={styles.pg73Header}>
-                <h1 className={styles.pg73H1}>
+        <div className={styles["page73__container"]}>
+            <header className={styles["page73__header"]}>
+                <h1 className={styles["page73__h1"]}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.headerIcon}
+                        className={styles["page73__header-icon"]}
                         onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.headerIcon}
+                        className={styles["page73__header-icon"]}
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
-                <p className={styles.pg73P}>
+                <p className={styles["page73__p"]}>
                     Exercise. Fill in the blanks with the correct form of the verb ‘be’ in the Simple Present tense
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.headerIcon}
+                        className={styles["page73__header-icon"]}
                         onClick={() => playAudio("global_fillBlankse")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.headerIcon}
+                        className={styles["page73__header-icon"]}
                         onClick={() => playAudio("global_fillBlanksp")}
                     />
                 </p>
             </header>
 
-
-
-            <main className={styles.pg73Main}>
-
-                <div className={styles.pg73tabelaAfirmativaContainer}>
-                    <div className={styles.pg73tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.pg73styledTableAfirmativa}>
-                        <thead className={styles.pg73Thead}>
-                            <tr className={styles.pg73celulatable}>
+            <main className={styles["page73__main"]}>
+                <div className={styles["page73__tabela-afirmativa-container"]}>
+                    <div className={styles["page73__table-header-afirmativa"]}>AFIRMATIVA</div>
+                    <table className={styles["page73__styled-table-afirmativa"]}>
+                        <thead className={styles["page73__thead"]}>
+                            <tr className={styles["page73__celula-table"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo <br /> Auxiliar</th>
@@ -172,15 +169,15 @@ const pagina73 = () => {
                     </table>
                 </div>
 
-                <div className={styles.pg73tabelaNegativaContainer}>
-                    <div className={styles.pg73tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg73styledTableNegativa}>
-                        <thead className={styles.pg73Thead}>
-                            <tr className={styles.pg73celulatable}>
+                <div className={styles["page73__tabela-negativa-container"]}>
+                    <div className={styles["page73__table-header-negativa"]}>NEGATIVA</div>
+                    <table className={styles["page73__styled-table-negativa"]}>
+                        <thead className={styles["page73__thead"]}>
+                            <tr className={styles["page73__celula-table"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo <br /> Auxiliar</th>
-                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                                <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
                             </tr>
@@ -188,20 +185,20 @@ const pagina73 = () => {
                     </table>
                 </div>
 
-                <div className={styles.pg73ContainerQuestoes}>
-                    <div className={styles.pg73Questions1}>
-                        <p className={styles.pg84ATituloQuestion}>
+                <div className={styles["page73__container-questoes"]}>
+                    <div className={styles["page73__questions1"]}>
+                        <p className={styles["pg84__a-titulo-question"]}>
                             Affirmative:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.headerIcon}
+                                className={styles["page73__header-icon"]}
                                 onClick={() => playAudio("global_affirmativee")}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.headerIcon}
+                                className={styles["page73__header-icon"]}
                                 onClick={() => playAudio("global_affirmativep")}
                             />
                         </p>
@@ -216,45 +213,45 @@ const pagina73 = () => {
                             const audioKey = `pg73_audio${index + 1}`;
 
                             return (
-                                <div key={index} className={styles.pg73Question}>
+                                <div key={index} className={styles["page73__question"]}>
                                     <span>
                                         <em>
                                             <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
                                         </em>
                                     </span>
-                                    <div className={styles.pg73InputContainer}>
+                                    <div className={styles["page73__input-container"]}>
                                         <input
                                             type="text"
                                             value={inputValues[index]}
                                             onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles.pg73InputBox}
+                                            className={styles["page73__input-box"]}
                                         />
                                     </div>
                                     <span><em>{parts[1]}</em></span>
-                                    <div className={styles.pg73IconsContainer}>
+                                    <div className={styles["page73__icons-container"]}>
                                         {results[index] !== null && (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles.pg73CheckmarkImage}
+                                                className={styles["page73__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg73AdditionalIcon}
+                                            className={styles["page73__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
-                                            className={styles.pg73AdditionalIcon}
+                                            className={styles["page73__additional-icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
-                                            className={`${styles.pg73AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg73Pulsing : ''}`}
+                                            className={`${styles["page73__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page73__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
@@ -262,27 +259,28 @@ const pagina73 = () => {
                             );
                         })}
                     </div>
-                    <div className={styles.pg73ContainerImagem}>
-                        <img className={styles.pg73imagem1} src={pagina73_imagem1} alt="" />
+                    <div className={styles["page73__container-imagem"]}>
+                        <img className={styles["page73__imagem1"]} src={pagina73_imagem1} alt="" />
                     </div>
-
                 </div>
 
-                <div className={styles.pg73ContainerQuestoes}>
 
-                    <div className={styles.pg73Questions2}>
-                        <p className={styles.pg84ATituloQuestion}>
+
+                <div className={styles["page73__container-questoes"]}>
+
+                    <div className={styles["page73__questions2"]}>
+                        <p className={styles["pg84__a-titulo-question"]}>
                             Negative:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.headerIcon}
+                                className={styles["page73__header-icon"]}
                                 onClick={() => playAudio("global_negativee")}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.headerIcon}
+                                className={styles["page73__header-icon"]}
                                 onClick={() => playAudio("global_negativep")}
                             />
                         </p>
@@ -298,18 +296,18 @@ const pagina73 = () => {
                             const audioKey = `pg73_audio${index + 6}`;
 
                             return (
-                                <div key={index + 5} className={styles.pg73Question}>
+                                <div key={index + 5} className={styles["page73__question"]}>
                                     <span>
                                         <em>
                                             <strong>{String.fromCharCode(102 + index)}.</strong> {parts[0]}
                                         </em>
                                     </span>
-                                    <div className={styles.pg73InputContainer}>
+                                    <div className={styles["page73__input-container"]}>
                                         <input
                                             type="text"
                                             value={inputValues[index + 5]}
                                             onChange={(e) => handleInputChange(e.target.value, index + 5)}
-                                            className={styles.pg73InputBox}
+                                            className={styles["page73__input-box"]}
                                         />
                                     </div>
                                     <span>
@@ -318,30 +316,30 @@ const pagina73 = () => {
                                             {parts[1].split('not')[1]}
                                         </em>
                                     </span>
-                                    <div className={styles.pg73IconsContainer}>
+                                    <div className={styles["page73__icons-container"]}>
                                         {results[index + 5] !== null && (
                                             <img
                                                 src={results[index + 5] ? correct_icon : wrong_icon}
                                                 alt={results[index + 5] ? "Correct" : "Incorrect"}
-                                                className={styles.pg73CheckmarkImage}
+                                                className={styles["page73__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg73AdditionalIcon}
+                                            className={styles["page73__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
-                                            className={styles.pg73AdditionalIcon}
+                                            className={styles["page73__additional-icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
-                                            className={`${styles.pg73AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg73Pulsing : ''}`}
+                                            className={`${styles["page73__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page73__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
@@ -350,13 +348,14 @@ const pagina73 = () => {
                         })}
 
                     </div>
-                    <div className={styles.pg73ContainerImagem}>
-                        <img className={styles.pg73imagem2} src={pagina73_imagem2} alt="" />
+                    <div className={styles["page73__container-imagem"]}>
+                        <img className={styles["page73__imagem2"]} src={pagina73_imagem2} alt="" />
                     </div>
-
                 </div>
             </main>
-            <button className={styles.pg73CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            <button className={styles["page73__check-button"]} onClick={handleCheckClick}>
+                <em>Check</em>
+            </button>
         </div>
     );
 };

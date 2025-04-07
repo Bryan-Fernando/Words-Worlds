@@ -1,0 +1,160 @@
+.page124__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page124__header {
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page124__header h1 {
+    font-size: 4rem;
+}
+
+.page124__text-black {
+    color: black;
+}
+
+.page124__header-icon {
+    width: 2rem; 
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.8rem; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.page124__header-icon:hover {
+    transform: scale(1.2); 
+}
+
+.page124__main {
+    width: 100%;
+    height: 80rem;
+    flex-direction: column;
+    display: flex;
+    gap: 5rem;
+}
+
+.pg124Asidecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pg124AsideNotes1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #A61C28;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #A61C28;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pg124AsideImgNotes {
+    height: calc(10px + 0.8vw);
+    width: 20px;
+    padding-right: 5px;
+}
+
+.pg124AsideNotes2 {
+    width: 80%;
+    border: 4px solid #A61C28;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.pg124AsideNotes2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
+}
+
+.page124__table-interrogative-container {
+    width: 90rem;
+    height: 16rem;
+    width: 100%;
+}
+
+.page124__table-header-interrogative {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.page124__styled-table-interrogative {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.page6124__thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.page124__container-textoa{
+    text-align: left;
+}
+
+.page124_text-Bolder{
+    color: #A61C28;
+    font-weight: 600;
+}
+
+.pg124tabelaAfirmativaContainer {
+    width: 100%;
+    height: 16rem;
+}
+
+.pg124tableHeaderAfirmativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg124styledTableAfirmativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg124celulatable {
+    height: 5rem;
+}
+
+.page124__celulacolor{
+    background-color: white;
+    color: black !important; 
+}

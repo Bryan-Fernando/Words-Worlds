@@ -1,0 +1,141 @@
+.page125__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.page125__header {
+    height: fit-content;
+    width: 100%;
+    text-align: left;
+    color: #A61C28;
+}
+
+.page125__header h1 {
+    font-size: 4rem;
+}
+
+.page125__text-black {
+    color: black;
+}
+
+.page125__header-icon {
+    width: 2rem; 
+    height: 2rem;
+    cursor: pointer;
+    margin-left: 0.8rem; 
+    transition: transform 0.2s ease-in-out;
+}
+
+.page125__header-icon:hover {
+    transform: scale(1.2); 
+}
+
+.page125__main {
+    width: 100%;
+    height: 95rem;
+    flex-direction: column;
+    display: flex;
+    gap: 10rem;
+}
+
+.page125__container-textoa{
+    text-align: left;
+}
+
+.pg125Asidecontainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.pg125AsideNotes1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #103275;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: left;
+    font-weight: 600;
+    padding-left: 10px;
+    background-color: #103275;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.pg125AsideImgNotes {
+    height: calc(10px + 0.8vw);
+    width: 20px;
+    padding-right: 5px;
+}
+
+.pg125AsideNotes2 {
+    width: 80%;
+    border: 4px solid #103275;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: #103275;
+}
+
+.pg125AsideNotes2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
+}
+
+
+.page125__thead {
+    border: 0.3rem solid #A61C28;
+}
+
+.highlight {
+    color: #A61C28;
+}
+
+.pg125tabelaAfirmativaContainer,
+.pg125tabelaNegativaContainer {
+    width: 100%;
+    height: 16rem;
+}
+
+.pg125tableHeaderAfirmativa,
+.pg125tableHeaderNegativa {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 0.2rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+    width: 100%;
+    margin-bottom: 0.2rem;
+}
+
+.pg125styledTableAfirmativa,
+.pg125styledTableNegativa {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin-bottom: 0.5rem;
+}
+
+.pg125celulatable {
+    height: 5rem;
+}   
+
+.page125__celulacolor{
+    background-color: white;
+    color: black !important; 
+}
+
+.page125__titulo-table{
+    text-align: left;
+    color: #103275;
+}

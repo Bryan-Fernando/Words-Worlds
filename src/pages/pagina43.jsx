@@ -121,9 +121,9 @@ const Pagina43 = () => {
 
     return (
         <div>
-            <div className={styles.pg43Container}>
-                <header className={styles.pg43Header}>
-                    <h1 className={styles.pg43HeaderH1} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div className={styles['page43__container']}>
+                <header className={styles['page43__header']}>
+                    <h1 className={styles['page43__header-title']} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                         Introductions
                         <span>
                             <img
@@ -141,47 +141,48 @@ const Pagina43 = () => {
                         </span>
                     </h1>
                 </header>
-                <main className={styles.pg43Main}>
-                    <div className={styles.pg43ContainerMain}>
-                        <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={pagina43_imagem1} alt="" />
-                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                <main className={styles['page43__main']}>
+                    <div className={styles['page43__container-main']}>
+                        <div className={styles['page43__container-div']}>
+                            <img className={styles['page43__image']} src={pagina43_imagem1} alt="" />
+                            <p className={styles['page43__main-paragrafo-bold']}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>I'm Sister Juliana Garcia.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio1e')}
-                                /> <img
+                                />
+                                <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio1p')}
                                 />
                                 <br />I'm 32 years old.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio2e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio2p')}
                                 />
                                 <br />I'm Brazilian.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio3e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio3p')}
                                 />
                                 <br />
@@ -189,57 +190,57 @@ const Pagina43 = () => {
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio4e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio4p')}
                                 />
                             </p>
                         </div>
-                        <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={pagina43_imagem2} alt="" />
-                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                        <div className={styles['page43__container-div']}>
+                            <img className={styles['page43__image']} src={pagina43_imagem2} alt="" />
+                            <p className={styles['page43__main-paragrafo-bold']}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Jones Oliveira.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio5e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio5p')}
                                 />
                                 <br />He's 31 years old.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio6e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio6p')}
                                 />
                                 <br />He is Brazilian.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio7e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio7p')}
                                 />
                                 <br />
@@ -247,57 +248,57 @@ const Pagina43 = () => {
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio8e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio8p')}
                                 />
                             </p>
                         </div>
-                        <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={pagina43_imagem3} alt="" />
-                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                        <div className={styles['page43__container-div']}>
+                            <img className={styles['page43__image']} src={pagina43_imagem3} alt="" />
+                            <p className={styles['page43__main-paragrafo-bold']}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Laura Brandhuber.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio9e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio9p')}
                                 />
                                 <br />She's 30 years old.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio10e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio10p')}
                                 />
                                 <br /> She is Brazilian.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio11e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio11p')}
                                 />
                                 <br />
@@ -305,57 +306,57 @@ const Pagina43 = () => {
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio12e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio12p')}
                                 />
                             </p>
                         </div>
-                        <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={pagina43_imagem4} alt="" />
-                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                        <div className={styles['page43__container-div']}>
+                            <img className={styles['page43__image']} src={pagina43_imagem4} alt="" />
+                            <p className={styles['page43__main-paragrafo-bold']}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>I’m Rogério Madeira.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio13e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio13p')}
                                 />
                                 <br /> I’m 35 years old.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio14e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio14p')}
                                 />
                                 <br /> I’m Brazilian.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio15e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio15p')}
                                 />
                                 <br />
@@ -363,57 +364,57 @@ const Pagina43 = () => {
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio16e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio16p')}
                                 />
                             </p>
                         </div>
-                        <div className={styles.pg43ContainerDiv}>
-                            <img className={styles.pg43MainImagems} src={pagina43_imagem5} alt="" />
-                            <p className={styles.pg43MainParagrafoBold}>Name:<br />Age:<br />Nationality:<br />City:</p>
+                        <div className={styles['page43__container-div']}>
+                            <img className={styles['page43__image']} src={pagina43_imagem5} alt="" />
+                            <p className={styles['page43__main-paragrafo-bold']}>Name:<br />Age:<br />Nationality:<br />City:</p>
                             <p>This is Gustavo Farias.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio17e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio17p')}
                                 />
                                 <br /> He's 38 years old.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio18e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio18p')}
                                 />
                                 <br /> He's Brazilian.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio19e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio19p')}
                                 />
                                 <br />
@@ -421,27 +422,27 @@ const Pagina43 = () => {
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio20e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.iconButton}
+                                    className={styles['page43__audio-icon']}
                                     onClick={() => playAudio('pg43_audio20p')}
                                 />
                             </p>
                         </div>
                     </div>
                 </main>
-                <aside className={styles.pg43Aside}>
-                    <div className={styles.pg43Asidecontainer}>
-                        <div className={styles.pg43AsideNotes1}>
-                            <img className={styles.pg43AsideImgNotes} src={pg43IconNotes} alt="" />
+                <aside className={styles['page43__aside']}>
+                    <div className={styles['page43__aside-container']}>
+                        <div className={styles['page43__aside-notes--1']}>
+                            <img className={styles['page43__aside-image-notes']} src={pg43IconNotes} alt="" />
                             <p>Word Bank</p>
                         </div>
-                        <div className={styles.pg43AsideNotes2}>
-                            <p className={styles.pg43AsideNotes2Negrito}>
+                        <div className={styles['page43__aside-notes--2']}>
+                            <p className={styles['page43__aside-notes--2-bold']}>
                                 Who...? <br />
                                 What...? <br />
                                 Where...? <br />
@@ -455,8 +456,8 @@ const Pagina43 = () => {
                                 Quando...? <br />
                                 Que horas...? <br />
                             </p>
-                            <div className={styles.pg43VerticalLine}></div>
-                            <p className={styles.pg43AsideNotes2Negrito}>
+                            <div className={styles['page43__vertical-line']}></div>
+                            <p className={styles['page43__aside-notes--2-bold']}>
                                 How? <br />
                                 How Old? <br />
                             </p>

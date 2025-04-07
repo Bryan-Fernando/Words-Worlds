@@ -184,27 +184,27 @@ const Pagina58 = () => {
 
 
     return (
-        <div className={styles['page58__container']}>
-            <header className={styles['page58__header']}>
-                <h1 className={styles['page58__title']}>
+        <div className={styles["page58__container"]}>
+            <header className={styles["page58__header"]}>
+                <h1 className={styles["page58__title"]}>
                     Listening and Pronunciation
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles['page58__audio-icon']}
+                        className={styles["page58__audio-icon"]}
                         onClick={() => playAudio('pg58_audio1e')}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles['page58__audio-icon']}
+                        className={styles["page58__audio-icon"]}
                         onClick={() => playAudio('pg58_audio1p')}
                     />
                 </h1>
             </header>
 
-            <main className={styles['page58__main']}>
-                <table className={styles['page58__table']}>
+            <main className={styles["page58__main"]}>
+                <table className={styles["page58__table"]}>
                     <thead>
                         <tr>
                             <th onClick={() => playAudio('pg58_audio2')} style={{ cursor: 'pointer' }}>Flag</th>
@@ -215,128 +215,128 @@ const Pagina58 = () => {
                     </thead>
                     <tbody>
                         <tr>
-                            <th><img src={Pagina58_imagem1} alt="Angola Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem1} alt="Angola Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio6')}>Angola</th>
                             <th onClick={() => playAudio('pg58_audio7')}>Luanda</th>
                             <th onClick={() => playAudio('pg58_audio8')}>Angolan</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem2} alt="Argentina Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem2} alt="Argentina Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio9')}>Argentina</th>
                             <th onClick={() => playAudio('pg58_audio10')}>Buenos Aires</th>
                             <th onClick={() => playAudio('pg58_audio11')}>Argentine</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem3} alt="Australia Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem3} alt="Australia Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio12')}>Australia</th>
                             <th onClick={() => playAudio('pg58_audio13')}>Canberra</th>
                             <th onClick={() => playAudio('pg58_audio14')}>Australian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem4} alt="Brazil Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem4} alt="Brazil Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio15')}>Brazil</th>
                             <th onClick={() => playAudio('pg58_audio16')}>Brasília</th>
                             <th onClick={() => playAudio('pg58_audio17')}>Brazilian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem5} alt="Canada Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem5} alt="Canada Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio18')}>Canada</th>
                             <th onClick={() => playAudio('pg58_audio19')}>Ottawa</th>
                             <th onClick={() => playAudio('pg58_audio20')}>Canadian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem6} alt="China Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem6} alt="China Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio21')}>China</th>
                             <th onClick={() => playAudio('pg58_audio22')}>Beijing</th>
                             <th onClick={() => playAudio('pg58_audio23')}>Chinese</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem7} alt="Colombia Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem7} alt="Colombia Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio24')}>Colombia</th>
                             <th onClick={() => playAudio('pg58_audio25')}>Bogotá</th>
                             <th onClick={() => playAudio('pg58_audio26')}>Colombian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem8} alt="Egypt Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem8} alt="Egypt Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio27')}>Egypt</th>
                             <th onClick={() => playAudio('pg58_audio28')}>Cairo</th>
                             <th onClick={() => playAudio('pg58_audio29')}>Egyptian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem9} alt="France Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem9} alt="France Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio30')}>France</th>
                             <th onClick={() => playAudio('pg58_audio31')}>Paris</th>
                             <th onClick={() => playAudio('pg58_audio32')}>French</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem10} alt="Germany Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem10} alt="Germany Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio33')}>Germany</th>
                             <th onClick={() => playAudio('pg58_audio34')}>Berlin</th>
                             <th onClick={() => playAudio('pg58_audio35')}>German</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem11} alt="India Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem11} alt="India Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio36')}>India</th>
                             <th onClick={() => playAudio('pg58_audio37')}>New Delhi</th>
                             <th onClick={() => playAudio('pg58_audio38')}>Indian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem12} alt="Italy Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem12} alt="Italy Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio39')}>Italy</th>
                             <th onClick={() => playAudio('pg58_audio40')}>Rome</th>
                             <th onClick={() => playAudio('pg58_audio41')}>Italian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem13} alt="Japan Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem13} alt="Japan Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio42')}>Japan</th>
                             <th onClick={() => playAudio('pg58_audio43')}>Tokyo</th>
                             <th onClick={() => playAudio('pg58_audio44')}>Japanese</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem14} alt="Mexico Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem14} alt="Mexico Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio45')}>Mexico</th>
                             <th onClick={() => playAudio('pg58_audio46')}>Mexico City</th>
                             <th onClick={() => playAudio('pg58_audio47')}>Mexican</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem15} alt="Mozambique Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem15} alt="Mozambique Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio48')}>Mozambique</th>
                             <th onClick={() => playAudio('pg58_audio49')}>Maputo</th>
                             <th onClick={() => playAudio('pg58_audio50')}>Mozambican</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem16} alt="Peru Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem16} alt="Peru Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio51')}>Peru</th>
                             <th onClick={() => playAudio('pg58_audio52')}>Lima</th>
                             <th onClick={() => playAudio('pg58_audio53')}>Peruvian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem17} alt="Russia Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem17} alt="Russia Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio54')}>Russia</th>
                             <th onClick={() => playAudio('pg58_audio55')}>Moscow</th>
                             <th onClick={() => playAudio('pg58_audio56')}>Russian</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem18} alt="Spain Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem18} alt="Spain Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio57')}>Spain</th>
                             <th onClick={() => playAudio('pg58_audio58')}>Madrid</th>
                             <th onClick={() => playAudio('pg58_audio59')}>Spanish</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem19} alt="Switzerland Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem19} alt="Switzerland Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio60')}>Switzerland</th>
                             <th onClick={() => playAudio('pg58_audio61')}>Bern</th>
                             <th onClick={() => playAudio('pg58_audio62')}>Swiss</th>
                         </tr>
 
                         <tr>
-                            <th><img src={Pagina58_imagem20} alt="UK Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem20} alt="UK Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio63')}>United Kingdom</th>
                             <th onClick={() => playAudio('pg58_audio64')}>London</th>
                             <th onClick={() => playAudio('pg58_audio65')}>British</th>
                         </tr>
                         <tr>
-                            <th><img src={Pagina58_imagem21} alt="USA Flag" className={styles['page58__flag']} /></th>
+                            <th><img src={Pagina58_imagem21} alt="USA Flag" className={styles["page58__flag"]} /></th>
                             <th onClick={() => playAudio('pg58_audio66')}>United States</th>
                             <th onClick={() => playAudio('pg58_audio67')}>Washington, D.C.</th>
                             <th onClick={() => playAudio('pg58_audio68')}>American</th>
@@ -346,16 +346,16 @@ const Pagina58 = () => {
                 </table>
 
             </main>
-            <aside className={styles['page58__aside']}>
-                <div className={styles['page58__aside-container']}>
+            <aside className={styles["page58__aside"]}>
+                <div className={styles["page58__aside-container"]}>
                     {/* Cabeçalho do Word Bank */}
-                    <div className={styles['page58__aside-header']}>
+                    <div className={styles["page58__aside-header"]}>
                         <p>Word Bank</p>
                     </div>
                     {/* Conteúdo do Word Bank */}
-                    <div className={styles['page58__aside-content']}>
-                        <div className={styles['page58__word-row']}>
-                            <div className={styles['page58__word-column']}>
+                    <div className={styles["page58__aside-content"]}>
+                        <div className={styles["page58__word-row"]}>
+                            <div className={styles["page58__word-column"]}>
                                 <p>
                                     <strong>Good morning</strong> <span>Bom dia</span>
                                 </p>
@@ -366,7 +366,7 @@ const Pagina58 = () => {
                                     <strong>Good evening</strong> <span>Boa noite</span>
                                 </p>
                             </div>
-                            <div className={styles['page58__word-column']}>
+                            <div className={styles["page58__word-column"]}>
                                 <p>
                                     <strong>Good night</strong> <span>Boa noite</span>
                                 </p>

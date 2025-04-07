@@ -1,33 +1,33 @@
-.pg49Container {
+.page49__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg49Header {
+.page49__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg49HeaderH2H3 {
+.page49__header--h2-h3 {
     color: black;
 }
 
-.pg49HeaderH2 {
+.page49__header--h2 {
     font-size: 3rem;
     padding-bottom: 0%;
 }
 
-.pg49HeaderH3 {
+.page49__header--h3 {
     font-size: 2.5rem;
 }
 
-.pg49HeaderH1 {
+.page49__header--h1 {
     font-size: 4rem;
 }
 
-.pg49Main {
+.page49__main {
     width: 100%;
     text-align: center;
     display: flex;
@@ -35,7 +35,7 @@
     gap: 4rem;
 }
 
-.pg49MainDiv1 {
+.page49__main--div1 {
     width: 100%;
     background-color: #EEF1F2;
     display: flex;
@@ -47,7 +47,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.pg49MainDiv1 p {
+.page49__main--div1 p {
     margin: 0;
     padding: 1rem 2rem;
     font-size: 2rem;
@@ -61,13 +61,13 @@
     width: 25%;
 }
 
-.pg49MainDiv1 p:not(:last-child) {
+.page49__main--div1 p:not(:last-child) {
     border-right: 0.5rem solid #A61C28;
     border-radius: 0.1rem;
 }
 
-.pg49MainDiv2,
-.pg49MainDiv3 {
+.page49__main--div2,
+.page49__main--div3 {
     width: 48%;
     height: 60rem;
     background-color: #EEF1F2;
@@ -76,16 +76,15 @@
     border-radius: 2rem;
 }
 
-.pg49Listas li {
+.page49__listas--item {
     margin-bottom: 1rem;
 }
 
-.pg49Listas li span {
-    
+.page49__listas--item-text {
     font-size: 2rem;
 }
 
-.pg49Exemplo {
+.page49__exemplo {
     text-align: left;
     color: #A61C28;
     font-weight: bold;
@@ -93,38 +92,42 @@
     margin-left: 0.4rem;
 }
 
-.ContainerDivs {
+.page49__container--divs {
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
-.pg49Listas {
+.page49__listas {
     list-style: none;
     text-align: left;
 }
 
-.pg49Item {
+.page49__item {
     margin-left: 2rem;
 }
 
-.pg49TextRed {
+.page49__listas li span {
+    font-size: 2rem;
+}
+
+.page49__text--red {
     font-size: 2rem;
     cursor: pointer;
     color: #A61C28;
 }
 
-.underline {
+.page49__underline {
     text-decoration: underline;
 }
 
-.pg49HeaderH1 {
+.page49__header--h1 {
     cursor: pointer;
 }
 
-.pg49HeaderH2 {
+.page49__header--h2 {
     cursor: pointer;
 }
 
-.pg49HeaderH3 {
+.page49__header--h3 {
     cursor: pointer;
 }

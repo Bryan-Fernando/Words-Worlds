@@ -122,9 +122,9 @@ const Pagina42 = () => {
 
     return (
         <div>
-            <div className={styles.pg42Container}>
-                <header className={styles.pg42Header}>
-                    <h1 className={styles.pg42HeaderH1} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            <div className={styles['page42__container']}>
+                <header className={styles['page42__header']}>
+                    <h1 className={styles['page42__header-title']} style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
                         Introductions
                         <span>
                             <img
@@ -141,26 +141,25 @@ const Pagina42 = () => {
                             />
                         </span>
                     </h1>
-
                 </header>
-                <main className={styles.pg42Main}>
-                    <div className={styles.pg42ContainerPessoas}>
-                        {/* Pessoa 1 */}
-                        <div className={styles.pg42PessoasDiv}>
-                            <div className={styles.pg42Pessoa1}>
-                                <img className={styles.pg42_main_imagem1} src={pagina42_imagem1} alt="" />
+                <main className={styles['page42__main']}>
+                    <div className={styles['page42__people-container']}>
+                        {/* Person 1 */}
+                        <div className={styles['page42__person-wrapper']}>
+                            <div className={styles['page42__person--1']}>
+                                <img className={styles['page42__person-image--1']} src={pagina42_imagem1} alt="" />
                                 <p>
                                     Name: I’m Eric Porto.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio1e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio1p')}
                                     />
                                     <br />
@@ -168,13 +167,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio2e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio2p')}
                                     />
                                     <br />
@@ -182,13 +181,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio3e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio3p')}
                                     />
                                     <br />
@@ -196,36 +195,36 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio4e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio4p')}
                                     />
                                     <br />
                                 </p>
                             </div>
-                            <hr className={styles.pg4Hr} />
+                            <hr className={styles['page42__separator']} />
                         </div>
 
-                        {/* Pessoa 2 */}
-                        <div className={styles.pg42PessoasDiv}>
-                            <div className={styles.pg42Pessoa2}>
+                        {/* Person 2 */}
+                        <div className={styles['page42__person-wrapper']}>
+                            <div className={styles['page42__person--2']}>
                                 <p>
                                     Name: This is my friend Marilia Alves.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio5e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio5p')}
                                     />
                                     <br />
@@ -233,13 +232,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio6e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio6p')}
                                     />
                                     <br />
@@ -247,13 +246,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio7e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio7p')}
                                     />
                                     <br />
@@ -261,38 +260,38 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio8e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio8p')}
                                     />
                                     <br />
                                 </p>
-                                <img className={styles.pg42_main_imagem2} src={pagina42_imagem2} alt="" />
+                                <img className={styles['page42__person-image--2']} src={pagina42_imagem2} alt="" />
                             </div>
-                            <hr className={styles.pg4Hr} />
+                            <hr className={styles['page42__separator']} />
                         </div>
 
-                        {/* Pessoa 3 */}
-                        <div className={styles.pg42PessoasDiv}>
-                            <div className={styles.pg42Pessoa3}>
-                                <img className={styles.pg42_main_imagem3} src={pagina42_imagem3} alt="" />
+                        {/* Person 3 */}
+                        <div className={styles['page42__person-wrapper']}>
+                            <div className={styles['page42__person--3']}>
+                                <img className={styles['page42__person-image--3']} src={pagina42_imagem3} alt="" />
                                 <p>
                                     Name: This is Deborah Sena.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio9e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio9p')}
                                     />
                                     <br />
@@ -300,13 +299,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio10e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio10p')}
                                     />
                                     <br />
@@ -314,13 +313,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio11e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio11p')}
                                     />
                                     <br />
@@ -328,36 +327,36 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio12e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio12p')}
                                     />
                                     <br />
                                 </p>
                             </div>
-                            <hr className={styles.pg4Hr} />
+                            <hr className={styles['page42__separator']} />
                         </div>
 
-                        {/* Pessoa 4 */}
-                        <div className={styles.pg42PessoasDiv}>
-                            <div className={styles.pg42Pessoa4}>
+                        {/* Person 4 */}
+                        <div className={styles['page42__person-wrapper']}>
+                            <div className={styles['page42__person--4']}>
                                 <p>
                                     Name: Mei Lazari.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio13e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio13p')}
                                     />
                                     <br />
@@ -365,13 +364,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio14e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio14p')}
                                     />
                                     <br />
@@ -379,13 +378,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio15e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio15p')}
                                     />
                                     <br />
@@ -393,38 +392,39 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio16e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio16p')}
                                     />
                                     <br />
                                 </p>
-                                <img className={styles.pg42_main_imagem4} src={pagina42_imagem4} alt="" />
+                                <img className={styles['page42__person-image--4']} src={pagina42_imagem4} alt="" />
                             </div>
-                            <hr className={styles.pg4Hr} />
+                            <hr className={styles['page42__separator']} />
                         </div>
 
-                        {/* Pessoa 5 */}
-                        <div className={styles.pg42PessoasDiv}>
-                            <div className={styles.pg42Pessoa5}>
-                                <img className={styles.pg42_main_imagem5} src={pagina42_imagem5} alt="" />
+
+                        {/* Person 5 */}
+                        <div className={styles['page42__person-wrapper']}>
+                            <div className={styles['page42__person--5']}>
+                                <img className={styles['page42__person-image--5']} src={pagina42_imagem5} alt="" />
                                 <p>
                                     Name: This is Cheryl Daves.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio17e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio17p')}
                                     />
                                     <br />
@@ -432,13 +432,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio18e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio18p')}
                                     />
                                     <br />
@@ -446,13 +446,13 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio19e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio19p')}
                                     />
                                     <br />
@@ -460,31 +460,32 @@ const Pagina42 = () => {
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio20e')}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.iconButton}
+                                        className={styles['page42__audio-icon']}
                                         onClick={() => playAudio('pg42_audio20p')}
                                     />
                                     <br />
                                 </p>
                             </div>
-                            <hr className={styles.pg4Hr} />
+                            <hr className={styles['page42__separator']} />
                         </div>
+
                     </div>
-                    <img className={styles.pg42Imagem1} src={pagina42_imagem6} alt="" />
+                    <img className={styles['page42__image--1']} src={pagina42_imagem6} alt="" />
                 </main>
-                <aside className={styles.pg42Aside}>
-                    <div className={styles.pg42Asidecontainer}>
-                        <div className={styles.pg42AsideNotes1}>
-                            <img className={styles.pg42AsideImgNotes} src={pg42IconNotes} alt="" />
+                <aside className={styles['page42__aside']}>
+                    <div className={styles['page42__aside-container']}>
+                        <div className={styles['page42__aside-notes--1']}>
+                            <img className={styles['page42__aside-image-notes']} src={pg42IconNotes} alt="" />
                             <p>Word Bank</p>
                         </div>
-                        <div className={styles.pg42AsideNotes2}>
-                            <p className={styles.pg42AsideNotes2Negrito}>
+                        <div className={styles['page42__aside-notes--2']}>
+                            <p className={styles['page42__aside-notes--2-bold']}>
                                 Name <br />
                                 Age <br />
                                 Nationality <br />
@@ -501,6 +502,7 @@ const Pagina42 = () => {
                         </div>
                     </div>
                 </aside>
+
             </div>
 
         </div>

@@ -61,140 +61,140 @@ const Pagina52 = () => {
 
     return (
         <div>
-            <div className={styles.pg52Container}>
-                <header className={styles.pg52Header}>
-                    <h1 className={styles.pg52HeaderH1}>
+            <div className={styles["page52__container"]}>
+                <header className={styles["page52__header"]}>
+                    <h1 className={styles["page52__header--h1"]}>
                         Grammar - Demonstrative Pronouns
-                        <img src={eng_audio_icon} alt="English Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1e')} />
-                        <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles.pg52Icon} onClick={() => playAudio('pg52_audio1p')} />
+                        <img src={eng_audio_icon} alt="English Audio" className={styles["page52__icon"]} onClick={() => playAudio('pg52_audio1e')} />
+                        <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page52__icon"]} onClick={() => playAudio('pg52_audio1p')} />
                     </h1>
-                    <div className={styles.pg52HeaderH2H3}>
-                        <h2 className={styles.pg52HeaderH2}>
+                    <div className={styles["page52__header--h2-h3"]}>
+                        <h2 className={styles["page52__header--h2"]}>
                             That = Aquele / Aquela
                         </h2>
                     </div>
                 </header>
-                <main className={styles.pg52Main}>
-                    <div className={styles.pg52Container1}>
+                <main className={styles["page52__main"]}>
+                    <div className={styles["page52__container--1"]}>
                         <div>
-                            <div className={styles.pg52Div1Container1}>
-                                <img src={pagina52_imagem1} alt="Imagem 1" className={styles.pg52Img} />
+                            <div className={styles["page52__div--1-container-1"]}>
+                                <img src={pagina52_imagem1} alt="Imagem 1" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is your office</span>
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio1')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio2p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg52Div2Container1}>
-                                <img src={pagina52_imagem3} alt="Imagem 2" className={styles.pg52Img} />
+                            <div className={styles["page52__div--2-container-1"]}>
+                                <img src={pagina52_imagem3} alt="Imagem 2" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is my brother John</span> in the green shirt and brown pants.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio2')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio3p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg52Div3Container1}>
-                                <img src={pagina52_imagem5} alt="Imagem 3" className={styles.pg52Img} />
+                            <div className={styles["page52__div--3-container-1"]}>
+                                <img src={pagina52_imagem5} alt="Imagem 3" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is my sister Joan</span> and my cousin Maria.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio3')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio4p')}
                                 />
                             </p>
                         </div>
                     </div>
 
-                    <div className={styles.pg52Container2}>
+                    <div className={styles["page52__container--2"]}>
                         <div>
-                            <div className={styles.pg52Div1Container2}>
-                                <img src={pagina52_imagem2} alt="Imagem 4" className={styles.pg52Img} />
+                            <div className={styles["page52__div--1-container-2"]}>
+                                <img src={pagina52_imagem2} alt="Imagem 4" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is Mr. Batista</span>, the new director.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio4')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio5p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg52Div2Container2}>
-                                <img src={pagina52_imagem4} alt="Imagem 5" className={styles.pg52Img} />
+                            <div className={styles["page52__div--2-container-2"]}>
+                                <img src={pagina52_imagem4} alt="Imagem 5" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is my cousin Gary</span>.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio5')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio6p')}
                                 />
                             </p>
                         </div>
                         <div>
-                            <div className={styles.pg52Div3Container2}>
-                                <img src={pagina52_imagem6} alt="Imagem 6" className={styles.pg52Img} />
+                            <div className={styles["page52__div--3-container-2"]}>
+                                <img src={pagina52_imagem6} alt="Imagem 6" className={styles["page52__img"]} />
                             </div>
-                            <p className={styles.pg52ParagrafoDiv}>
+                            <p className={styles["page52__paragrafo--div"]}>
                                 <span>That is my sister Julia</span> <br />in the yellow blouse and blue skirt.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio6')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese Audio"
-                                    className={styles.pg52Icon}
+                                    className={styles["page52__icon"]}
                                     onClick={() => playAudio('pg52_audio7p')}
                                 />
                             </p>

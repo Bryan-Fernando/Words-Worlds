@@ -133,30 +133,30 @@ const Pagina57 = () => {
 
     return (
         <div>
-            <div className={styles['page57__container']}>
-                <header className={styles['page57__header']}>
-                    <h1 className={styles['page57__title']}>
+            <div className={styles["page57__container"]}>
+                <header className={styles["page57__header"]}>
+                    <h1 className={styles["page57__title"]}>
                         Asking and Giving <br /> Personal - Information
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles['page57__icon']}
+                            className={styles["page57__icon"]}
                             onClick={() => playAudio('pg57_audio1e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles['page57__icon']}
+                            className={styles["page57__icon"]}
                             onClick={() => playAudio('pg57_audio1p')}
                         />
                     </h1>
-                    <h1 className={styles['page57__title']}>Vocabulary: Numbers 0-10</h1>
+                    <h1 className={styles["page57__title"]}>Vocabulary: Numbers 0-10</h1>
                 </header>
-                <main className={styles['page57__main']}>
-                    <div className={styles['page57__numbers']}>
+                <main className={styles["page57__main"]}>
+                    <div className={styles["page57__numbers"]}>
                         {[...Array(11)].map((_, index) => (
                             <div key={index} onClick={() => playAudio(`pg57_audio${index + 2}`)} style={{ cursor: 'pointer' }}>
-                                <div className={styles['page57__number-box']}>
+                                <div className={styles["page57__number-box"]}>
                                     <p>{index}</p>
                                 </div>
                                 <p>{["zero (oh)", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"][index]}</p>
@@ -164,10 +164,10 @@ const Pagina57 = () => {
                         ))}
                     </div>
 
-                    <div className={styles['page57__contacts']}>
-                        <div className={styles['page57__contacts-content']}>
+                    <div className={styles["page57__contacts"]}>
+                        <div className={styles["page57__contacts-content"]}>
                             <div>
-                                <h2 className={styles['page57__title--phone']} onClick={() => playAudio('pg57_audio13')} style={{ cursor: 'pointer' }}>
+                                <h2 className={styles["page57__title--phone"]} onClick={() => playAudio('pg57_audio13')} style={{ cursor: 'pointer' }}>
                                     Phone numbers and email addresses
                                 </h2>
                             </div>
@@ -178,11 +178,11 @@ const Pagina57 = () => {
 
                                 <span onClick={() => playAudio('pg57_audio16')} style={{ cursor: 'pointer' }}>Ana: What’s your email address? </span><br />
 
-                                <span onClick={() => playAudio('pg57_audio17')} style={{ cursor: 'pointer' }}>Julie: It’s <span className={styles['page57__email']}>julie@gmail.com.</span> <br /></span>
+                                <span onClick={() => playAudio('pg57_audio17')} style={{ cursor: 'pointer' }}>Julie: It’s <span className={styles["page57__email"]}>julie@gmail.com.</span> <br /></span>
 
                                 <span onClick={() => playAudio('pg57_audio18')} style={{ cursor: 'pointer' }}>Ana: Thanks!</span>
                             </p>
-                            <div className={styles['page57__gray-box']}>
+                            <div className={styles["page57__gray-box"]}>
                                 <p>Nos endereços de email:</p>
                                 <ul>
                                     <li>‘‘.’’ = ‘‘dot’’</li>
@@ -191,26 +191,26 @@ const Pagina57 = () => {
                                 </ul>
                             </div>
                         </div>
-                        <img className={styles['page57__image']} src={pagina57_imagem1} alt="Duas pessoas conversando" />
+                        <img className={styles["page57__image"]} src={pagina57_imagem1} alt="Duas pessoas conversando" />
                     </div>
 
-                    <h2 className={styles['page57__title--alphabet']} onClick={() => playAudio('pg57_audio19')} style={{ cursor: 'pointer' }}>
+                    <h2 className={styles["page57__title--alphabet"]} onClick={() => playAudio('pg57_audio19')} style={{ cursor: 'pointer' }}>
                         Vocabulary: The alphabet
                     </h2>
-                    <div className={styles['page57__alphabet']}>
-                        <div className={styles['page57__letters']}>
+                    <div className={styles["page57__alphabet"]}>
+                        <div className={styles["page57__letters"]}>
                             {[...'ABCDEFGHIJKLM'].map((letter, index) => (
                                 <div key={letter} onClick={() => playAudio(`pg57_audio${20 + index}`)} style={{ cursor: 'pointer' }}>
-                                    <div className={styles['page57__letter-box']}>
+                                    <div className={styles["page57__letter-box"]}>
                                         <p>{letter + letter.toLowerCase()}</p>
                                     </div>
                                 </div>
                             ))}
                         </div>
-                        <div className={styles['page57__letters']}>
+                        <div className={styles["page57__letters"]}>
                             {[...'NOPQRSTUVWXYZ'].map((letter, index) => (
                                 <div key={letter} onClick={() => playAudio(`pg57_audio${33 + index}`)} style={{ cursor: 'pointer' }}>
-                                    <div className={styles['page57__letter-box']}>
+                                    <div className={styles["page57__letter-box"]}>
                                         <p>{letter + letter.toLowerCase()}</p>
                                     </div>
                                 </div>
@@ -218,10 +218,10 @@ const Pagina57 = () => {
                         </div>
                     </div>
 
-                    <div className={styles['page57__spelling']}>
-                        <div className={styles['page57__spelling-content']}>
+                    <div className={styles["page57__spelling"]}>
+                        <div className={styles["page57__spelling-content"]}>
                             <div>
-                                <h2 className={styles['page57__title--spelling']} onClick={() => playAudio('pg57_audio46')} style={{ cursor: 'pointer' }}>
+                                <h2 className={styles["page57__title--spelling"]} onClick={() => playAudio('pg57_audio46')} style={{ cursor: 'pointer' }}>
                                     Spelling names (Soletrando nomes)
                                 </h2>
                             </div>
@@ -230,18 +230,18 @@ const Pagina57 = () => {
 
                                 <span onClick={() => playAudio('pg57_audio48')} style={{ cursor: 'pointer' }}>Clerk: How do you spell your first name? <br /></span>
 
-                                John: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio49')} style={{ cursor: 'pointer' }}>
+                                John: <span className={styles["page57__spelling-word"]} onClick={() => playAudio('pg57_audio49')} style={{ cursor: 'pointer' }}>
                                     J-O-H-N
                                 </span> <br />
 
                                 Clerk: <span onClick={() => playAudio('pg57_audio50')} style={{ cursor: 'pointer' }}>And how do you spell your last name?</span> <br />
                                 
-                                John: <span className={styles['page57__spelling-word']} onClick={() => playAudio('pg57_audio51')} style={{ cursor: 'pointer' }}>
+                                John: <span className={styles["page57__spelling-word"]} onClick={() => playAudio('pg57_audio51')} style={{ cursor: 'pointer' }}>
                                     B-L-A-C-K.
                                 </span>
                             </p>
                         </div>
-                        <img className={styles['page57__image']} src={pagina57_imagem2} alt="Pessoa sendo atendida" />
+                        <img className={styles["page57__image"]} src={pagina57_imagem2} alt="Pessoa sendo atendida" />
                     </div>
                 </main>
             </div>

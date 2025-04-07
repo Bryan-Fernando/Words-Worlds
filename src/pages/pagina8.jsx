@@ -179,7 +179,7 @@ const Pagina8 = () => {
                                         onClick={() => playAudio(pg8Audio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        In class A?
+                                        in class A?
                                     </td>
                                     <td
                                         className={styles["page8__table-translation"]}

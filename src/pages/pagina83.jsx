@@ -115,255 +115,254 @@ const Pagina83 = () => {
     };
 
     return (
-        <div className={styles.pg83Container}>
-            <header className={styles.pg83Header}>
-                <h1 className={styles.pg83H1}>
-                    Learning Language Exercises
+        <div className={styles["page83__container"]}>
+    <header className={styles["page83__header"]}>
+        <h1 className={styles["page83__header--h1"]}>
+            Learning Language Exercises
+            <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page83__header--icon"]}
+                onClick={() => playAudio("global_learning_le_e")}
+            />
+            <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page83__header--icon"]}
+                onClick={() => playAudio("global_learning_le_p")}
+            />
+        </h1>
+        <h2 className={styles["page83__header--h2"]}>
+            Complete the sentences in the Simple Present Form of Verb Be <br />
+            Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
+        </h2>
+    </header>
+
+    <main className={styles["page83__main"]}>
+        <div className={styles["page83__tabela--afirmativa--container"]}>
+            <div className={styles["page83__table--header--afirmativa"]}>AFIRMATIVA</div>
+            <table className={styles["page83__styled--table--afirmativa"]}>
+                <thead className={styles["page83__thead"]}>
+                    <tr className={styles["page83__celula--table"]}>
+                        <th>Introdução</th>
+                        <th>Sujeito</th>
+                        <th>Verbo <br /> Auxiliar</th>
+                        <th>Advérbio</th>
+                        <th>Verbo(s)</th>
+                        <th>Objeto <br /> Complemento</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div className={styles["page83__container--questoes"]}>
+            <div className={styles["page83__questions--1"]}>
+                <p className={styles["page83__titulo--question"]}>
+                    Negative:
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg83HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_e")}
+                        className={styles["page83__header--icon"]}
+                        onClick={() => playAudio("global_negativee")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg83HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        className={styles["page83__header--icon"]}
+                        onClick={() => playAudio("global_negativep")}
                     />
-                </h1>
-                <h2 className={styles.pg83H2}>
-                    Complete the sentences in the Simple Present Form of Verb Be <br />
-                    Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
-                </h2>
-            </header>
+                </p>
+                {[
+                    "The new project ____ exciting.",
+                    "They ____ from Canada",
+                    "I ____ a good swimmer",
+                    "My parents ____ proud of me.",
+                    "That car ____ fast"
+                ].map((question, index) => {
+                    const audioKey = `pg83_audio${index + 1}`;
 
-            <main className={styles.pg83Main}>
-                <div className={styles.pg83tabelaAfirmativaContainer}>
-                    <div className={styles.pg83tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.pg83styledTableAfirmativa}>
-                        <thead className={styles.pg83Thead}>
-                            <tr className={styles.pg83celulatable}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th>Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-                <div className={styles.pg83ContainerQuestoes}>
-                    <div className={styles.pg83Questions1}>
-                        <p className={styles.pg83ATituloQuestion}>
-                            Negative:
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles.pg83HeaderIcon}
-                                onClick={() => playAudio("global_negativee")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles.pg83HeaderIcon}
-                                onClick={() => playAudio("global_negativep")}
-                            />
-                        </p>
-                        {[
-                            "The new project ____ exciting.",
-                            "They ____ from Canada",
-                            "I ____ a good swimmer",
-                            "My parents ____ proud of me.",
-                            "That car ____ fast"
-                        ].map((question, index) => {
-                            const audioKey = `pg83_audio${index + 1}`;
+                    return (
+                        <div key={index} className={styles["page83__question"]}>
+                            <span>
+                                <em>
+                                    <strong>{String.fromCharCode(97 + index)}.</strong> {question.split("____")[0]}
+                                </em>
+                            </span>
+                            <div className={styles["page83__input--container"]}>
+                                <input
+                                    type="text"
+                                    value={inputValues[index]}
+                                    onChange={(e) => handleInputChange(e.target.value, index)}
+                                    className={styles["page83__input--box"]}
+                                />
+                            </div>
+                            <span><em>{question.split("____")[1]}</em></span>
+                            <div className={styles["page83__icons--container"]}>
+                                {/* Ícones de Correção */}
+                                {results[index] !== null && (
+                                    <img
+                                        src={results[index] ? correct_icon : wrong_icon}
+                                        alt={results[index] ? "Correct" : "Incorrect"}
+                                        className={styles["page83__checkmark--image"]}
+                                    />
+                                )}
 
-                            return (
-                                <div key={index} className={styles.pg83Question}>
-                                    <span>
-                                        <em>
-                                            <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
-                                        </em>
-                                    </span>
-                                    <div className={styles.pg83InputContainer}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index]}
-                                            onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles.pg83InputBox}
-                                        />
-                                    </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles.pg83IconsContainer}>
-                                        {/* Ícones de Correção */}
-                                        {results[index] !== null && (
-                                            <img
-                                                src={results[index] ? correct_icon : wrong_icon}
-                                                alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles.pg83CheckmarkImage}
-                                            />
-                                        )}
+                                {/* Ícone de Áudio */}
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Audio Icon"
+                                    className={styles["page83__additional--icon"]}
+                                    onClick={() => playAudio(audioKey)}
+                                />
 
-                                        {/* Ícone de Áudio */}
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles.pg83AdditionalIcon}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese Audio"
+                                    className={styles["page83__additional--icon"]}
+                                    onClick={() => playAudio(`${audioKey}p`)}
+                                />
 
-
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Portuguese Audio"
-                                            className={styles.pg83AdditionalIcon}
-                                            onClick={() => playAudio(`${audioKey}p`)}
-                                        />
-
-                                        {/* Ícone de Volume Reduzido */}
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles.pg83AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg83Pulsing : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-
-                    </div>
-                    <div className={styles.pg83ContainerImagem}> <img className={styles.pg83imagem} src={pagina83_imagem1} alt="" /></div>
-                </div>
-                <aside className={styles.pg83Aside}>
-                    <div className={styles.pg83Asidecontainer}>
-                        <div className={styles.pg83AsideNotes1}>
-                            <img className={styles.pg83AsideImgNotes} src={pg83IconNotes} alt="" />
-                            <p>Study Note</p>
+                                {/* Ícone de Volume Reduzido */}
+                                <img
+                                    src={slow_audio_icon}
+                                    alt="Volume Reduced Icon"
+                                    className={`${styles["page83__additional--icon"]} ${isSpeedReduced[audioKey] ? styles["page83__additional--icon--pulsing"] : ""}`}
+                                    onClick={() => toggleSpeedReduction(audioKey)}
+                                />
+                            </div>
                         </div>
-                        <div className={styles.pg83AsideNotes2}>
-                            <p>
-                                Here, "is" is used for singular subjects (the new project, I, that car) and "are" is used for the
-                                plural subject (they).
-                            </p>
-                        </div>
-                    </div>
-                </aside>
-                <div className={styles.pg83tabelaNegativaContainer}>
-                    <div className={styles.pg83tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg83styledTableNegativa}>
-                        <thead className={styles.pg83Thead}>
-                            <tr className={styles.pg83celulatable}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
+                    );
+                })}
+            </div>
+            <div className={styles["page83__container--imagem"]}> <img className={styles["page83__image"]} src={pagina83_imagem1} alt="" /></div>
+        </div>
+        <aside className={styles["page83__aside"]}>
+            <div className={styles["page83__aside--container"]}>
+                <div className={styles["page83__aside--notes--1"]}>
+                    <img className={styles["page83__aside--img--notes"]} src={pg83IconNotes} alt="" />
+                    <p>Study Note</p>
                 </div>
-                <div className={styles.pg83ContainerQuestoes}>
-
-                    <div className={styles.pg83Questions2}>
-                        <p className={styles.pg83ATituloQuestion}>
-                            Negative:
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles.pg83HeaderIcon}
-                                onClick={() => playAudio("global_negativee")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles.pg83HeaderIcon}
-                                onClick={() => playAudio("global_negativep")}
-                            />
-                        </p>
-                        {[
-                            "The meeting ____ boring.",
-                            "She ____ at home right now.",
-                            "We ____ late for the train.",
-                            "The kittens ____ hungry.",
-                            "My phone ____ old."
-                        ].map((question, index) => {
-                            const audioKey = `pg83_audio${index + 6}`;
-
-                            return (
-                                <div key={index + 5} className={styles.pg83Question}>
-                                    <span>
-                                        <em>
-                                            <strong>{String.fromCharCode(102 + index)}.</strong> {question.split('____')[0]}
-                                        </em>
-                                    </span>
-                                    <div className={styles.pg83InputContainer}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index + 5]}
-                                            onChange={(e) => handleInputChange(e.target.value, index + 5)}
-                                            className={styles.pg83InputBox}
-                                        />
-                                    </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles.pg83IconsContainer}>
-                                        {/* Ícones de Correção */}
-                                        {results[index + 5] !== null && (
-                                            <img
-                                                src={results[index + 5] ? correct_icon : wrong_icon}
-                                                alt={results[index + 5] ? "Correct" : "Incorrect"}
-                                                className={styles.pg83CheckmarkImage}
-                                            />
-                                        )}
-
-                                        {/* Ícone de Áudio */}
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles.pg83AdditionalIcon}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Portuguese Audio"
-                                            className={styles.pg83AdditionalIcon}
-                                            onClick={() => playAudio(`${audioKey}p`)}
-                                        />
-
-                                        {/* Ícone de Volume Reduzido */}
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles.pg83AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg83Pulsing : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
-
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                    <div className={styles.pg83ContainerImagem}><img className={styles.pg83imagem} src={pagina83_imagem2} alt="" /></div>
+                <div className={styles["page83__aside--notes--2"]}>
+                    <p>
+                        Here, "is" is used for singular subjects (the new project, I, that car) and "are" is used for the
+                        plural subject (they).
+                    </p>
                 </div>
-                <aside className={styles.pg83Aside}>
-                    <div className={styles.pg83Asidecontainer}>
-                        <div className={styles.pg83AsideNotes1}>
-                            <img className={styles.pg83AsideImgNotes} src={pg83IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles.pg83AsideNotes2}>
-                            <p>
-                                "Not" negates the meaning of the sentence. The verb "be" is conjugated as "is not" for singular
-                                subjects (the meeting, she, my phone) and "are not" for plural subjects (we, the kittens)
-                            </p>
-                        </div>
+            </div>
+        </aside>
+
+
+        <div className={styles["page83__table--negativa--container"]}>
+    <div className={styles["page83__table--header--negativa"]}>NEGATIVA</div>
+    <table className={styles["page83__styled--table--negativa"]}>
+        <thead className={styles["page83__thead"]}>
+            <tr className={styles["page83__celula--table"]}>
+                <th>Introdução</th>
+                <th>Sujeito</th>
+                <th>Verbo <br /> Auxiliar</th>
+                <th> <span style={{ color: "red" }}>Not</span> <br />Advérbio</th>
+                <th>Verbo(s)</th>
+                <th>Objeto <br /> Complemento</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+<div className={styles["page83__container--questoes"]}>
+    <div className={styles["page83__questions--2"]}>
+        <p className={styles["page83__titulo--question"]}>
+            Negative:
+            <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page83__header--icon"]}
+                onClick={() => playAudio("global_negativee")}
+            />
+            <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page83__header--icon"]}
+                onClick={() => playAudio("global_negativep")}
+            />
+        </p>
+        {[
+            "The meeting ____ boring.",
+            "She ____ at home right now.",
+            "We ____ late for the train.",
+            "The kittens ____ hungry.",
+            "My phone ____ old."
+        ].map((question, index) => {
+            const audioKey = `pg83_audio${index + 6}`;
+
+            return (
+                <div key={index + 5} className={styles["page83__question"]}>
+                    <span>
+                        <em>
+                            <strong>{String.fromCharCode(102 + index)}.</strong> {question.split("____")[0]}
+                        </em>
+                    </span>
+                    <div className={styles["page83__input--container"]}>
+                        <input
+                            type="text"
+                            value={inputValues[index + 5]}
+                            onChange={(e) => handleInputChange(e.target.value, index + 5)}
+                            className={styles["page83__input--box"]}
+                        />
                     </div>
-                </aside>
-                <button className={styles.pg83CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+                    <span><em>{question.split("____")[1]}</em></span>
+                    <div className={styles["page83__icons--container"]}>
+                        {/* Ícones de Correção */}
+                        {results[index + 5] !== null && (
+                            <img
+                                src={results[index + 5] ? correct_icon : wrong_icon}
+                                alt={results[index + 5] ? "Correct" : "Incorrect"}
+                                className={styles["page83__checkmark--image"]}
+                            />
+                        )}
+
+                        {/* Ícone de Áudio */}
+                        <img
+                            src={eng_audio_icon}
+                            alt="Audio Icon"
+                            className={styles["page83__additional--icon"]}
+                            onClick={() => playAudio(audioKey)}
+                        />
+
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese Audio"
+                            className={styles["page83__additional--icon"]}
+                            onClick={() => playAudio(`${audioKey}p`)}
+                        />
+
+                        {/* Ícone de Volume Reduzido */}
+                        <img
+                            src={slow_audio_icon}
+                            alt="Volume Reduced Icon"
+                            className={`${styles["page83__additional--icon"]} ${isSpeedReduced[audioKey] ? styles["page83__additional--icon--pulsing"] : ""}`}
+                            onClick={() => toggleSpeedReduction(audioKey)}
+                        />
+                    </div>
+                </div>
+            );
+        })}
+    </div>
+    <div className={styles["page83__container--imagem"]}><img className={styles["page83__image"]} src={pagina83_imagem2} alt="" /></div>
+</div>
+<aside className={styles["page83__aside"]}>
+    <div className={styles["page83__aside--container"]}>
+        <div className={styles["page83__aside--notes--1"]}>
+            <img className={styles["page83__aside--img--notes"]} src={pg83IconNotes} alt="" />
+            <p>Study Note</p>
+        </div>
+        <div className={styles["page83__aside--notes--2"]}>
+            <p>
+                "Not" negates the meaning of the sentence. The verb "be" is conjugated as "is not" for singular
+                subjects (the meeting, she, my phone) and "are not" for plural subjects (we, the kittens)
+            </p>
+        </div>
+    </div>
+</aside>
+<button className={styles["page83__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+
             </main>
         </div>
     );

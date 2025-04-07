@@ -1,16 +1,15 @@
-.pg44Container {
+.page44__container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
-
-.pg44Main {
+.page44__main {
   width: 100%;
   text-align: center;
 }
 
-.pg44Aside {
+.page44__aside {
   padding: 0 2%;
   width: 100%;
   display: flex;
@@ -19,18 +18,18 @@
 
 /* Este é um comentário */
 
-.pg44MainImagems {
+.page44__image {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
-.tableContainer {
+.page44__table-container {
   width: 100%;
   display: flex;
   gap: 8%;
-  
 }
 
-.table {
+.page44__table {
   width: 50%;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -40,31 +39,31 @@
   cursor: pointer;
 }
 
-.header {
+.page44__header {
   background-color: #f0f0f0;
   font-weight: bold;
   display: flex;
 }
 
-.column {
+.page44__column {
   font-size: 2rem;
   flex: 1;
   padding: 0.5rem;
   text-align: start;
 }
 
-.column:nth-child(1) {
+.page44__column:nth-child(1) {
   width: 50%;
   border-right: 1px solid #ddd;
 }
 
-.row {
+.page44__row {
   font-size: 2rem;
   display: flex;
   border-top: 1px solid #ddd;
 }
 
-.cell {
+.page44__cell {
   flex: 1;
   padding: 0.70rem;
   display: flex;
@@ -72,12 +71,12 @@
   gap: 0.5rem;
 }
 
-.cell:nth-child(1) {
+.page44__cell:nth-child(1) {
   width: 50%;
   border-right: 1px solid #ddd;
 }
 
-.flag {
+.page44__flag {
   width: 20px;
   height: 15px;
   border: 1px solid #ddd;

@@ -188,11 +188,11 @@ const Pagina64 = () => {
                 <span onClick={() => playAudio("pg64_audio4_3e")}>Our daughter, Alice is 9 (nine) years old. </span>
                 <span onClick={() => playAudio("pg64_audio4_4e")}>They're both in elementary school.</span>
                 <img
-                src={ptbr_audio_icon}
-                alt="Play Portuguese Audio"
-                className={styles["page64__audio-icon"]}
-                onClick={() => playAudio('pg64_audio4p')}
-              />
+                  src={ptbr_audio_icon}
+                  alt="Play Portuguese Audio"
+                  className={styles["page64__audio-icon"]}
+                  onClick={() => playAudio('pg64_audio4p')}
+                />
               </p>
 
             </div>
@@ -218,11 +218,11 @@ const Pagina64 = () => {
                 <span onClick={() => playAudio("pg64_audio5_1e")}>My sister Marilia Alves is single. </span>
                 <span onClick={() => playAudio("pg64_audio5_2e")}>Currently in the Bahamas, on vacation.</span>
                 <img
-                src={ptbr_audio_icon}
-                alt="Play Portuguese Audio"
-                className={styles["page64__audio-icon"]}
-                onClick={() => playAudio('pg64_audio5p')}
-              />
+                  src={ptbr_audio_icon}
+                  alt="Play Portuguese Audio"
+                  className={styles["page64__audio-icon"]}
+                  onClick={() => playAudio('pg64_audio5p')}
+                />
               </p>
 
             </div>

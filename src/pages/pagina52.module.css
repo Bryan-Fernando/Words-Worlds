@@ -1,29 +1,29 @@
-.pg52Container {
+.page52__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg52Header {
+.page52__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg52HeaderH2H3 {
+.page52__header--h2-h3 {
     color: black;
 }
 
-.pg52HeaderH2 {
+.page52__header--h2 {
     font-size: 3rem;
     padding-bottom: 0%;
 }
 
-.pg52HeaderH1 {
+.page52__header--h1 {
     font-size: 4rem;
 }
 
-.pg52Main {
+.page52__main {
     width: 100%;
     text-align: center;
     display: flex;
@@ -31,25 +31,23 @@
     gap: 4rem;
 }
 
-
 /* Este é um comentário */
 
-
-.pg52Container1 {
+.page52__container--1 {
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 10rem;
 }
 
-.pg52Container2 {
+.page52__container--2 {
     width: 40%;
     display: flex;
     flex-direction: column;
     gap: 10rem;
 }
 
-.pg52Div1Container1 {
+.page52__div--1-container-1 {
     max-width: 100%;
     width: 40rem;
     height: 25rem;
@@ -57,7 +55,7 @@
     border-radius: 2%;
 }
 
-.pg52Div2Container1 {
+.page52__div--2-container-1 {
     max-width: 100%;
     width: 40rem;
     height: 25rem;
@@ -65,7 +63,7 @@
     border-radius: 2%;
 }
 
-.pg52Div3Container1 {
+.page52__div--3-container-1 {
     max-width: 100%;
     width: 40rem;
     height: 40rem;
@@ -73,8 +71,7 @@
     border-radius: 2%;
 }
 
-
-.pg52Div1Container2 {
+.page52__div--1-container-2 {
     max-width: 100%;
     width: 40rem;
     height: 25rem;
@@ -82,7 +79,7 @@
     border-radius: 2%;
 }
 
-.pg52Div2Container2 {
+.page52__div--2-container-2 {
     max-width: 100%;
     width: 40rem;
     height: 25rem;
@@ -90,8 +87,7 @@
     border-radius: 2%;
 }
 
-
-.pg52Div3Container2 {
+.page52__div--3-container-2 {
     max-width: 100%;
     margin-top: 3rem;
     width: 25rem;
@@ -100,23 +96,23 @@
     border-radius: 2%;
 }
 
-.pg52ParagrafoDiv {
+.page52__paragrafo--div {
     text-align: left;
 }
 
-.pg52Img {
+.page52__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.pg52HeaderH1 {
+.page52__header--h1 {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
 }
 
-.pg52Icon {
+.page52__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -126,6 +122,6 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg52Icon:hover {
+.page52__icon:hover {
     transform: scale(1.1);
 }

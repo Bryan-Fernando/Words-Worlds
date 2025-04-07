@@ -1,4 +1,4 @@
-.pg72Container {
+.page72__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,50 +7,48 @@
     padding-left: 0;
 }
 
-.pg72Header {
+.page72__header {
     width: 100%;
 }
 
-.pg72H1 {
+.page72__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg72P {
+.page72__p {
     text-align: left;
     font-size: 2.5rem;
     color: #4E4E4E;
     margin-bottom: 2rem;
 }
 
-.pg72Main {
+.page72__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.pg72Aside {
+.page72__aside {
     width: 100%;
     display: flex;
 }
 
-/* Este é um comentário */
-
-.pg72ContainerQuestoes {
+.page72__container-questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg72Questions1,
-.pg72Questions2 {
+.page72__questions1,
+.page72__questions2 {
     margin-top: 2rem;
     text-align: left;
     width: 53rem;
 }
 
-.pg72Question {
+.page72__question {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,19 +57,19 @@
     text-align: left;
 }
 
-.pg72Question span {
+.page72__question span {
     font-size: 1.8rem;
     font-weight: bold;
     color: black;
 }
 
-.pg84ATituloQuestion {
+.pg84__a-titulo-question {
     color: #8a1720;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg72InputBox {
+.page72__input-box {
     width: 100%;
     padding: .5rem;
     font-size: 1.8rem;
@@ -83,7 +81,7 @@
     text-align: left;
 }
 
-.pg72InputContainer {
+.page72__input-container {
     gap: 1rem;
     width: 23%;
     position: relative;
@@ -91,13 +89,13 @@
     align-items: center;
 }
 
-.pg72CheckmarkImage {
+.page72__checkmark-image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg72CheckButton {
+.page72__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -112,53 +110,51 @@
     width: fit-content;
 }
 
-.pg72CheckButton:hover {
+.page72__check-button:hover {
     background-color: #8a1720;
 }
 
-
-.pg72IconsContainer {
+.page72__icons-container {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.pg72AdditionalIcon {
+.page72__additional-icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg72AdditionalIcon.pg72Pulsing {
+.page72__additional-icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg72AdditionalIcon:hover {
+.page72__additional-icon:hover {
     transform: scale(1.2);
 }
 
-.pg72imagem {
+.page72__imagem {
     width: 100%;
     height: auto;
 }
 
-.pg72tabelaAfirmativaContainer,
-.pg72tabelaNegativaContainer {
+.page72__tabela-afirmativa-container,
+.page72__tabela-negativa-container {
     width: 50%;
 }
 
-.pg72tabelaAfirmativaContainer {
+.page72__tabela-afirmativa-container {
     margin-top: 3.5rem;
 }
 
-
-.pg72tabelaNegativaContainer {
+.page72__tabela-negativa-container {
     margin-top: 3rem;
 }
 
-.pg72tableHeaderAfirmativa,
-.pg72tableHeaderNegativa {
+.page72__table-header-afirmativa,
+.page72__table-header-negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -170,17 +166,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg72styledTableAfirmativa,
-.pg72styledTableNegativa {
+.page72__styled-table-afirmativa,
+.page72__styled-table-negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg72styledTableAfirmativa th,
-.pg72styledTableNegativa th {
+.page72__styled-table-afirmativa th,
+.page72__styled-table-negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -190,24 +185,24 @@
     border: 1px solid #A61C28;
 }
 
-.pg72celulatable {
+.page72__celula-table {
     height: 7rem;
 }
 
-.pg72WordBank {
+.page72__word-bank {
     display: flex;
     justify-content: flex-start;
     width: 100%;
     margin-top: 5rem;
 }
 
-.pg72WordBankContainer {
+.page72__word-bank-container {
     width: 70%;
     border: 0.4rem solid #0A3282;
     border-radius: 2rem;
 }
 
-.pg72WordBankHeader {
+.page72__word-bank-header {
     width: 100%;
     height: 4.5rem;
     border-top-left-radius: 1rem;
@@ -221,7 +216,7 @@
     font-weight: bold;
 }
 
-.pg72WordBankContent {
+.page72__word-bank-content {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -230,66 +225,64 @@
     border-bottom-right-radius: 2rem;
 }
 
-.pg72WordRow {
+.page72__word-row {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
-.pg72WordColumn p {
+.page72__word-column p {
     margin: 0.5rem 0;
     font-size: 1.7rem;
     text-align: left;
     color: #0A3282;
 }
 
-.pg72RedText {
+.page72__red-text {
     color: #0A3282;
 }
 
-.pg72CorrectAnswerContainer {
+.page72__correct-answer-container {
     font-size: 0.1rem;
     font-weight: bold;
     white-space: nowrap;
-
 }
 
-.pg72InputContainer {
+.page72__input-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-
 @media (max-width: 1024px) {
-    .pg72AsideNotes2 p {
+    .page72__aside-notes2 p {
         font-size: 2rem;
     }
 
-    .pg72styledTableAfirmativa th,
-    .pg72styledTableNegativa th {
+    .page72__styled-table-afirmativa th,
+    .page72__styled-table-negativa th {
         font-size: 1.8rem;
     }
 
-    .pg72ContainerQuestoes {
+    .page72__container-questoes {
         flex-direction: column;
     }
 
-    .pg72Question {
+    .page72__question {
         gap: 5px;
     }
 
-    .pg72IconsContainer {
+    .page72__icons-container {
         margin-left: 0;
     }
 
-    .pg72ContainerImagem {
+    .page72__container-imagem {
         align-items: start;
         justify-content: left;
         height: fit-content;
     }
 
-    .pg72InputContainer {
+    .page72__input-container {
         width: 15%;
     }
 }
@@ -308,7 +301,7 @@
     }
 }
 
-.pg72HeaderAudioIcon {
+.page72__header-audio-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -316,27 +309,26 @@
     margin-left: 0.5rem;
 }
 
-.pg72HeaderAudioIcon:hover {
+.page72__header-audio-icon:hover {
     transform: scale(1.1);
 }
 
-.pg72Pulsing {
+.page72__pulsing {
     animation: pulse 1.5s infinite;
 }
 
-.pg72CorrectAnswerWrapper {
-    width: 100%; /* Faz ocupar toda a largura do container */
-    display: block; /* Garante que fique abaixo */
-    margin-top: 10px; /* Espaço entre a resposta e os elementos acima */
+.page72__correct-answer-wrapper {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
 }
 
-.pg72CorrectAnswer {
+.page72__correct-answer {
     font-size: 1.5rem;
     color: red;
-    display: block; /* Garante que fique em uma linha separada */
+    display: block;
     font-weight: bold;
 }
-
 
 @keyframes pulse {
     0% {

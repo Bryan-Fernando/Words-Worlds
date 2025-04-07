@@ -1,0 +1,179 @@
+.page128__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page128__header {
+    width: 100%;
+    height: 15rem;
+    text-align: left;
+    color: #A61C28;
+    margin-bottom: -5rem;
+}
+
+.page128__title {
+    font-size: 4rem;
+}
+
+.page128__main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.page128__main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.page128__text-container1,
+.page128__text-container2{
+    width: 55%;
+    padding: 1.5rem;
+    text-align: left;
+    color: black;
+    position: relative;
+}
+
+.page128__text-container1::after,
+.page128__text-container2::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    width: 90%;
+    height: 0.4rem;
+    background-color: #A61C28;
+}
+
+.page128__image-container1,
+.page128__image-container2 {
+    width: fit-content;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.page128__image-container1 {
+    transform: rotate(-5deg);
+    position: relative;
+    left: 0;
+}
+
+.page128__image-container2 {
+    transform: rotate(5deg);
+    position: relative;
+    left: -15%;
+    top: -2rem;
+}
+
+.page128__image-container3 {
+    transform: rotate(-8deg);
+    position: relative;
+    left: -5%;
+    top: -4rem;
+}
+
+.page128__image-container4 {
+    transform: rotate(8deg);
+    position: relative;
+    right: 15%;
+    top: -6rem;
+}
+
+.page128__img-small {
+    width: 100%;
+    height: 20rem;
+    object-fit: cover;
+}
+
+.page128__aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page128__aside-notes1 {
+    width: 100%;
+    height: 4.5rem;
+    border: 0.4rem solid #0A3282;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    background-color: #0A3282;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.page128__aside-img-notes {
+    height: 3rem;
+    width: 3rem;
+    padding-right: 0.5rem;
+}
+
+.page128__aside-notes2 {
+    width: 100%;
+    height: 70%;
+    border: 0.4rem solid #0A3282;
+    border-top: 0.1rem;
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    text-align: left;
+    padding-left: 0.2rem;
+    display: flex;
+    align-items: center;
+    color: #103275;
+}
+
+.page128__aside-notes2 p {
+    padding: 1vw;
+}
+
+/* Ícones de Áudio no Cabeçalho */
+.page128__audio-icon {
+    position: relative;
+    top: 0.3rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page128__audio-iconP {
+    position: relative;
+    top: 0.3rem;
+    margin-right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Efeito Hover no Ícone */
+.page128__audio-icon:hover {
+    transform: scale(1.1);
+}
+
+.page128__audio-iconP:hover {
+    transform: scale(1.1);
+}
+
+.page128__titulo-red{
+    color: #A61C28;
+}
+
+.page128__paragraph-red{
+    color: #A61C28;
+}

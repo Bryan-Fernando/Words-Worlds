@@ -51,78 +51,78 @@ const Pagina55 = () => {
 
     return (
         <div>
-            <div className={styles['page55']}>
-                <header className={styles['page55__header']}>
-                    <h1 className={styles['page55__title']}>
+            <div className={styles["page55"]}>
+                <header className={styles["page55__header"]}>
+                    <h1 className={styles["page55__title"]}>
                         Names and Titles (Mr. Mrs. Miss. Ms. Ma’am)
                         <img
                             src={eng_audio_icon}
                             alt="English Audio"
-                            className={styles['page55__icon']}
+                            className={styles["page55__icon"]}
                             onClick={() => playAudio('pg55-audio1e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese Audio"
-                            className={styles['page55__icon']}
+                            className={styles["page55__icon"]}
                             onClick={() => playAudio('pg55-audio1p')}
                         />
                     </h1>
                 </header>
-                <main className={styles['page55__content']}>
-                    <div className={styles['page55__section-left']}>
+                <main className={styles["page55__content"]}>
+                    <div className={styles["page55__section-left"]}>
                         <div>
-                            <div className={styles['page55__image-container--large']}>
-                                <img src={pagina55Imagem1} alt="Ma’am Jeaneta Mc. Cartney" className={styles['page55__image']} />
+                            <div className={styles["page55__image-container--large"]}>
+                                <img src={pagina55Imagem1} alt="Ma’am Jeaneta Mc. Cartney" className={styles["page55__image"]} />
                             </div>
                             <p
-                                className={styles['page55__text']}
+                                className={styles["page55__text"]}
                                 onClick={() => playAudio('pg55-audio2')}
                             >
                                 <u>Ma’am</u> Jeaneta Mc. Cartney
                             </p>
                         </div>
                         <div>
-                            <div className={styles['page55__image-container--large-alt']}>
-                                <img src={pagina55Imagem2} alt="Mrs Carina Sanches" className={styles['page55__image']} />
+                            <div className={styles["page55__image-container--large-alt"]}>
+                                <img src={pagina55Imagem2} alt="Mrs Carina Sanches" className={styles["page55__image"]} />
                             </div>
                             <p
-                                className={styles['page55__text']}
+                                className={styles["page55__text"]}
                                 onClick={() => playAudio('pg55-audio3')}
                             >
                                 <u>Mrs</u> Carina Sanches
                             </p>
                         </div>
                         <div>
-                            <div className={styles['page55__image-container--large-alt']}>
-                                <img src={pagina55Imagem3} alt="Ms Olivia Gomes" className={styles['page55__image']} />
+                            <div className={styles["page55__image-container--large-alt"]}>
+                                <img src={pagina55Imagem3} alt="Ms Olivia Gomes" className={styles["page55__image"]} />
                             </div>
                             <p
-                                className={styles['page55__text']}
+                                className={styles["page55__text"]}
                                 onClick={() => playAudio('pg55-audio4')}
                             >
                                 <u>Ms</u> Olivia Gomes
                             </p>
                         </div>
                     </div>
-                    <div className={styles['page55__section-right']}>
+                    <div className={styles["page55__section-right"]}>
                         <div>
-                            <div className={styles['page55__image-container--large-alt']}>
-                                <img src={pagina55Imagem4} alt="Miss Leticia Pagliari" className={styles['page55__image']} />
+                            <div className={styles["page55__image-container--large-alt"]}>
+                                <img src={pagina55Imagem4} alt="Miss Leticia Pagliari" className={styles["page55__image"]} />
                             </div>
                             <p
-                                className={styles['page55__text']}
+                                className={styles["page55__text"]}
                                 onClick={() => playAudio('pg55-audio5')}
                             >
                                 <u>Miss</u> Leticia Pagliari
                             </p>
                         </div>
                         <div>
-                            <div className={styles['page55__image-container--large-alt']}>
-                                <img src={pagina55Imagem5} alt="Mr Ronaldo Willian" className={styles['page55__image']} />
+                            <div className={styles["page55__image-container--large-alt"]}>
+                                <img src={pagina55Imagem5} alt="Mr Ronaldo Willian" className={styles["page55__image"]} />
                             </div>
                             <p
-                                className={styles['page55__text']}
+                                className={styles["page55__text"]}
                                 onClick={() => playAudio('pg55-audio6')}
                             >
                                 <u>Mr</u> Ronaldo Willian
@@ -130,14 +130,14 @@ const Pagina55 = () => {
                         </div>
                     </div>
                 </main>
-                <aside className={styles['page55__aside']}>
-                    <div className={styles['page55__aside-container']}>
-                        <div className={styles['page55__aside-notes1']}>
-                            <img className={styles['page55__aside-img-notes']} src={pg55IconNotes} alt="Word Bank Icon" />
+                <aside className={styles["page55__aside"]}>
+                    <div className={styles["page55__aside-container"]}>
+                        <div className={styles["page55__aside-notes1"]}>
+                            <img className={styles["page55__aside-img-notes"]} src={pg55IconNotes} alt="Word Bank Icon" />
                             <p>Word Bank</p>
                         </div>
-                        <div className={styles['page55__aside-notes2']}>
-                            <p className={styles['page55__aside-text-red']}>
+                        <div className={styles["page55__aside-notes2"]}>
+                            <p className={styles["page55__aside-text-red"]}>
                                 Mr
                                 <br />
                                 Mrs

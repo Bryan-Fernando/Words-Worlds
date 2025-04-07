@@ -161,8 +161,20 @@ const Pagina5 = () => {
                             </tbody>
                         </table>
 
+                        <aside className={styles["page5__aside"]}>
+                            <div className={styles["page5__aside-notes1"]}>
+                                
+                                <p>Observação:</p>
+                            </div>
+                            <div className={styles["page5__aside-notes2"]}>
+                                <p>
+                                 Caso o conteúdo digitado nos campos da tabela não seja exibido corretamente, pressione a tecla seta para cima (↑) ou para baixo (↓) para restaurar a visualização.
+                                </p>
+                            </div>
+                        </aside>
+
                         <table className={styles["page5__table"]}>
-                        <colgroup>
+                            <colgroup>
                                 <col className={styles["page5__table-subject"]} />
                                 <col className={styles["page5__table-auxiliary"]} />
                                 <col className={styles["page5__table-adverb"]} />

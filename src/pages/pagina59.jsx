@@ -57,26 +57,26 @@ const Pagina59 = () => {
 
     return (
         <div>
-            <div className={styles['page59__container']}>
-                <header className={styles['page59__header']}>
+            <div className={styles["page59__container"]}>
+                <header className={styles["page59__header"]}>
                     <h1
-                        className={styles['page59__title']}
+                        className={styles["page59__title"]}
                         onClick={() => playAudio('global_audio_grammar')}
                         style={{ cursor: 'pointer' }}
                     >
                         Grammar
                     </h1>
-                    <div className={styles['page59__header-divider']}>
-                        <div className={styles['page59__header-icon']}></div>
+                    <div className={styles["page59__header-divider"]}>
+                        <div className={styles["page59__header-icon"]}></div>
                         <h2
-                            className={styles['page59__subtitle']}
+                            className={styles["page59__subtitle"]}
                             onClick={() => playAudio('global_audio_tellingTTe')}
                             style={{ cursor: 'pointer' }}
                         >
                             Telling the time
                         </h2>
                         <p
-                            className={styles['page59__subtext']}
+                            className={styles["page59__subtext"]}
                             onClick={() => playAudio('global_audio_tellingTTp')}
                             style={{ cursor: 'pointer' }}
                         >
@@ -85,17 +85,17 @@ const Pagina59 = () => {
                     </div>
                 </header>
     
-                <main className={styles['page59__main']}>
-                    <div className={styles['page59__info']}>
+                <main className={styles["page59__main"]}>
+                    <div className={styles["page59__info"]}>
                         <p><strong>OBS:</strong> Em inglês existem (têm) duas formas de dizer as horas:</p>
                         <p><strong>1.</strong> O sistema do relógio analógico conforme exemplos.</p>
                         <p><strong>1.1</strong> Neste sistema mencionamos primeiro as horas seguidas dos minutos até os 30 minutos.</p>
                         <p><strong>1.2</strong> Após os 30 minutos invertemos, mencionamos primeiro os minutos seguidos da hora até 1 minuto para a hora seguinte.</p>
                     </div>
-                    <div className={styles['page59__time-grid']}>
-                        <div className={styles['page59__time-column--left']}>
+                    <div className={styles["page59__time-grid"]}>
+                        <div className={styles["page59__time-column--left"]}>
                             <p onClick={() => playAudio('pg59_audio1')} style={{ cursor: 'pointer' }}>10:00 - It’s ten o’clock.</p>
-                            <div className={styles['page59__divider']}></div>
+                            <div className={styles["page59__divider"]}></div>
                             <p>
                                 <span onClick={() => playAudio('pg59_audio2')} style={{ cursor: 'pointer' }}>
                                     10:05 - It’s five past/after ten.
@@ -116,7 +116,7 @@ const Pagina59 = () => {
                                     10:30 - It’s half past/after ten.
                                 </span>
                             </p>
-                            <div className={styles['page59__divider']}></div>
+                            <div className={styles["page59__divider"]}></div>
                             <p>
                                 <span onClick={() => playAudio('pg59_audio8')} style={{ cursor: 'pointer' }}>
                                     10:35 - It’s twenty-five to eleven.
@@ -135,10 +135,10 @@ const Pagina59 = () => {
                                 </span>
                             </p>
                         </div>
-                        <div className={styles['page59__gray-box']}></div>
-                        <div className={styles['page59__time-column--right']}>
+                        <div className={styles["page59__gray-box"]}></div>
+                        <div className={styles["page59__time-column--right"]}>
                             <p>10:00 - São 10 horas</p>
-                            <div className={styles['page59__divider']}></div>
+                            <div className={styles["page59__divider"]}></div>
                             <p>
                                 10:05 - São 10 e 5<br />
                                 10:10 - São 10 e 10<br />
@@ -147,7 +147,7 @@ const Pagina59 = () => {
                                 10:25 - São 10 e 25<br />
                                 10:30 - São 10 e 30<br />
                             </p>
-                            <div className={styles['page59__divider']}></div>
+                            <div className={styles["page59__divider"]}></div>
                             <p>
                                 10:35 - São/Faltam 25 para às 11<br />
                                 10:40 - São/Faltam 20 para às 11<br />
@@ -158,10 +158,10 @@ const Pagina59 = () => {
                         </div>
                     </div>
                 </main>
-                <aside className={styles['page59__aside']}>
-                    <div className={styles['page59__aside-container']}>
+                <aside className={styles["page59__aside"]}>
+                    <div className={styles["page59__aside-container"]}>
                         <span
-                            className={styles['page59__text--left']}
+                            className={styles["page59__text--left"]}
                             onClick={() => playAudio('pg59_audio13')}
                             style={{ cursor: 'pointer' }}
                         >
@@ -170,10 +170,10 @@ const Pagina59 = () => {
                         <img
                             src={pagina59_imagem1}
                             alt="Clock Illustration"
-                            className={styles['page59__image']}
+                            className={styles["page59__image"]}
                         />
                         <span
-                            className={styles['page59__text--right']}
+                            className={styles["page59__text--right"]}
                             onClick={() => playAudio('pg59_audio14')}
                             style={{ cursor: 'pointer' }}
                         >

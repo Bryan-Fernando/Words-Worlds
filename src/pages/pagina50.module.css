@@ -1,39 +1,39 @@
-.pg50Container {
+.page50__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg50Header {
+.page50__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg50HeaderContainer {
+.page50__header--container {
     display: flex;
     gap: 2rem;
 }
 
-.listenRepeat {
+.page50__listen-repeat {
     color: black;
     font-size: 3rem;
 }
 
-.pg50HeaderH2H3{
+.page50__header--h2-h3 {
     color: black;
 }
 
-.pg50HeaderH1{
+.page50__header--h1 {
     font-size: 3rem;
 }
 
-.pg50HeaderH2{
+.page50__header--h2 {
     font-size: 2.5rem;
     padding-bottom: 0%;
 }
 
-.pg50Main {
+.page50__main {
     width: 100%;
     height: 145rem;
     text-align: center;
@@ -41,28 +41,27 @@
     justify-content: space-between;
 }
 
-.pg50Main p {
-    
+.page50__main p {
     margin-bottom: 2rem;
 }
 
 /* Este é um comentário */
-.pg50ParagrafoDiv{
+.page50__paragrafo--div {
     cursor: pointer;
     text-align: left;
 }
 
-.pg50Div1Container1,
-.pg50Div2Container1,
-.pg50Div3Container1,
-.pg50Div4Container1,
-.pg50Div1Container2,
-.pg50Div2Container2,
-.pg50Div3Container2,
-.pg50Div4Container2 {
+.page50__div--1-container-1,
+.page50__div--2-container-1,
+.page50__div--3-container-1,
+.page50__div--4-container-1,
+.page50__div--1-container-2,
+.page50__div--2-container-2,
+.page50__div--3-container-2,
+.page50__div--4-container-2 {
     width: 40rem;
     height: 25rem;
-    border: 0.8rem solid #A61C28; 
+    border: 0.8rem solid #A61C28;
     border-radius: 2%;
     overflow: hidden;
     display: flex;
@@ -70,20 +69,20 @@
     justify-content: center;
 }
 
-.pg50Img {
+.page50__img {
     width: 100%;
-    height: 100%; 
-    object-fit: cover; 
+    height: 100%;
+    object-fit: cover;
 }
 
-.headphIcon{
+.page50__headph-icon {
     position: relative;
     top: 40%;
     transform: translateY(-50%);
     width: 3rem;
 }
 
-.pg50Icon {
+.page50__icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -93,7 +92,6 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg50Icon:hover {
+.page50__icon:hover {
     transform: scale(1.1);
 }
-

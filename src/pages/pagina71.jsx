@@ -222,268 +222,267 @@ const Pagina71 = () => {
 
 
     return (
-        <div className={styles.pg71Container}>
-            <header className={styles.pg71Header}>
-                <h1 className={styles.pg71HeaderH1}>
+        <div className={styles["page71__container"]}>
+            <header className={styles["page71__header"]}>
+                <h1 className={styles["page71__header--h1"]}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_learning_le_e")}
+                        className={styles["page71__audio-icon"]}
+                        onClick={() => playAudio('global_learning_le_e')}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        className={styles["page71__audio-icon"]}
+                        onClick={() => playAudio('global_learning_le_p')}
                     />
                 </h1>
 
-                <h2 className={styles.pg71HeaderH2}>
+                <h2 className={styles["page71__header--h2"]}>
                     Reading Comprehension
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_reading_compe")}
+                        className={styles["page71__audio-icon"]}
+                        onClick={() => playAudio('global_reading_compe')}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg71AudioIcon}
-                        onClick={() => playAudio("global_reading_compp")}
+                        className={styles["page71__audio-icon"]}
+                        onClick={() => playAudio('global_reading_compp')}
                     />
                 </h2>
             </header>
 
-            <main className={styles.pg71Main}>
-                <div className={styles.pg71Section}>
-                    <div className={styles.pg71PersonContainer}>
-                        <div className={styles.pg71PersonInfo}>
-                            <img src={pagina71_imagem1} alt="Karen Brandon" className={styles.pg71Image} />
+            <main className={styles["page71__main"]}>
+                <div className={styles["page71__section"]}>
+                    <div className={styles["page71__person-container"]}>
+                        <div className={styles["page71__person-info"]}>
+                            <img src={pagina71_imagem1} alt="Karen Brandon" className={styles["page71__image"]} />
                             <div>
                                 <p
-                                    className={`${styles.pg71PersonTextEnglish} ${styles.pg71ClickableText}`}
-
+                                    className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}
                                 >
-                                    <span onClick={() => playAudio("pg71_audio1_1")}>I’m Karen Brandon. </span> <span onClick={() => playAudio("pg71_audio1_2")}>I’m from Portugal. </span> <span onClick={() => playAudio("pg71_audio1_3")}>Lisbon is my home.</span> <span onClick={() => playAudio("pg71_audio1_4")}>It’s an amazing city.</span> <span onClick={() => playAudio("pg71_audio1_5")}>I am an English student.</span> <span onClick={() => playAudio("pg71_audio1_6")}>I’m 19.</span> <span onClick={() => playAudio("pg71_audio1_7")}>My email is karen@mail.com </span> <span onClick={() => playAudio("pg71_audio1_8")}>and my phone number is </span> <span onClick={() => playAudio("pg71_audio1_9")}>403 - 728930.</span>
+                                    <span onClick={() => playAudio('pg71_audio1_1')}>I’m Karen Brandon. </span>
+                                    <span onClick={() => playAudio('pg71_audio1_2')}>I’m from Portugal. </span>
+                                    <span onClick={() => playAudio('pg71_audio1_3')}>Lisbon is my home.</span>
+                                    <span onClick={() => playAudio('pg71_audio1_4')}>It’s an amazing city.</span>
+                                    <span onClick={() => playAudio('pg71_audio1_5')}>I am an English student.</span>
+                                    <span onClick={() => playAudio('pg71_audio1_6')}>I’m 19.</span>
+                                    <span onClick={() => playAudio('pg71_audio1_7')}>My email is karen@mail.com </span>
+                                    <span onClick={() => playAudio('pg71_audio1_8')}>and my phone number is </span>
+                                    <span onClick={() => playAudio('pg71_audio1_9')}>403 - 728930.</span>
                                 </p>
-                                <p className={styles.pg71PersonTextPortuguese}>Eu sou Karen Brandon. Sou de Portugal. Lisboa é minha casa. É uma cidade incrível. Sou estudante de inglês. Tenho 19 anos. Meu e-mail é karen@mail.com e meu número de telefone é 999 12 3456789.</p>
+                                <p className={styles["page71__person-text--portuguese"]}>Eu sou Karen Brandon. Sou de Portugal. Lisboa é minha casa. É uma cidade incrível. Sou estudante de inglês. Tenho 19 anos. Meu e-mail é karen@mail.com e meu número de telefone é 999 12 3456789.</p>
                             </div>
                         </div>
-                        <div className={styles.pg71PersonInfo}>
-                            <img src={pagina71_imagem2} alt="Leo Santander" className={styles.pg71Image} />
+                        <div className={styles["page71__person-info"]}>
+                            <img src={pagina71_imagem2} alt="Leo Santander" className={styles["page71__image"]} />
                             <div>
                                 <p
-                                    className={`${styles.pg71PersonTextEnglish} ${styles.pg71ClickableText}`}
-                                    onClick={() => playAudio("pg71_audio2")}
+                                    className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}
+                                    onClick={() => playAudio('pg71_audio2')}
                                 >
-                                    <span onClick={() => playAudio("pg71_audio2_1")}>Hi there, I’m Leo Santander. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_2")}>I’m Brazilian. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_3")}>I’m from Paraty, but I’m now in Rio. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_4")}>I’m an entrepreneur. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_5")}>I have a small company. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_6")}>I’m married. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_7")}>I’m 27 years old. </span>
-                                    <span onClick={() => playAudio("pg71_audio2_8")}>My email is leo@mail.com, </span>
-                                    <span onClick={() => playAudio("pg71_audio2_9")}>and my cell phone number is 55 12 1234-1265.</span>
+                                    <span onClick={() => playAudio('pg71_audio2_1')}>Hi there, I’m Leo Santander. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_2')}>I’m Brazilian. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_3')}>I’m from Paraty, but I’m now in Rio. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_4')}>I’m an entrepreneur. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_5')}>I have a small company. </span>
+                                    <span on={() => playAudio('pg71_audio2_6')}>I’m married. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_7')}>I’m 27 years old. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_8')}>My email is leo@mail.com, </span>
+                                    <span onClick={() => playAudio('pg71_audio2_9')}>and my cell phone number is 55 12 1234-1265.</span>
                                 </p>
 
-                                <p className={styles.pg71PersonTextPortuguese}>Olá, eu sou Leo Santander. Sou brasileiro. Sou de Paraty, mas estou agora no Rio. Sou empreendedor. Tenho uma pequena empresa. Sou casado. Tenho 27 anos. Meu e-mail é leo@mail.com e meu número de celular é 55 12 1234-1265.</p>
+                                <p className={styles["page71__person-text--portuguese"]}>Olá, eu sou Leo Santander. Sou brasileiro. Sou de Paraty, mas estou agora no Rio. Sou empreendedor. Tenho uma pequena empresa. Sou casado. Tenho 27 anos. Meu e-mail é leo@mail.com e meu número de celular é 55 12 1234-1265.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className={styles.pg71AnotherHeader}>
-                        <h1 className={styles.pg71HeaderH1}>
+                    <div className={styles["page71__another-header"]}>
+                        <h1 className={styles["page71__header--h1"]}>
                             Learning Language Exercises
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.pg71AudioIcon}
-                                onClick={() => playAudio("global_learning_le_e")}
+                                className={styles["page71__audio-icon"]}
+                                onClick={() => playAudio('global_learning_le_e')}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.pg71AudioIcon}
-                                onClick={() => playAudio("global_learning_le_p")}
+                                className={styles["page71__audio-icon"]}
+                                onClick={() => playAudio('global_learning_le_p')}
                             />
                         </h1>
                         <div>
-                            <h2 className={styles.pg71HeaderH2}>
+                            <h2 className={styles["page71__header--h2"]}>
                                 Read the Statements and give complete answers according to the texts. <br />
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.pg71AudioIcon}
-                                    onClick={() => playAudio("pg71_audio3e")}
+                                    className={styles["page71__audio-icon"]}
+                                    onClick={() => playAudio('pg71_audio3e')}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.pg71AudioIcon}
-                                    onClick={() => playAudio("pg71_audio3p")}
+                                    className={styles["page71__audio-icon"]}
+                                    onClick={() => playAudio('pg71_audio3p')}
                                 />
                             </h2>
                         </div>
                     </div>
 
-                    <p className={styles.pg71QuestionText}>
+                    <p className={styles["page71__question-text"]}>
                         The questions about Karen Brandon.
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
-                            className={styles.pg71AudioIcon}
-                            onClick={() => playAudio("pg71_audio4e")}
+                            className={styles["page71__audio-icon"]}
+                            onClick={() => playAudio('pg71_audio4e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese audio"
-                            className={styles.pg71AudioIcon}
-                            onClick={() => playAudio("pg71_audio4p")}
+                            className={styles["page71__audio-icon"]}
+                            onClick={() => playAudio('pg71_audio4p')}
                         />
                     </p>
 
-                    <div className={styles.pg71QuestionList}>
+                    <div className={styles["page71__question-list"]}>
                         {["Who is she?", "Where is she from?", "What is her home city?", "How old is she?", "What is her email address?", "What is her phone number?"].map((question, index) => (
-                            <div key={index} className={styles.pg71QuestionItem}>
-                                <p
-                                    className={`${styles.pg71Question}`}
-                                >
+                            <div key={index} className={styles["page71__question-item"]}>
+                                <p className={styles["page71__question"]}>
                                     {String.fromCharCode(97 + index)}. {question}
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.pg71AudioIcon}
+                                        className={styles["page71__audio-icon"]}
                                         onClick={() => playAudio(`pg71_audio${index + 5}`)}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.pg71AudioIcon}
+                                        className={styles["page71__audio-icon"]}
                                         onClick={() => playAudio(`pg71_audio${index + 5}p`)}
                                     />
                                 </p>
                                 <input
                                     type="text"
-                                    className={styles.pg71Input}
+                                    className={styles["page71__input"]}
                                     value={userAnswers[index]}
                                     onChange={(e) => handleInputChange(e.target.value, index)}
                                 />
-                                    <img
-                                        src={eng_audio_icon}
-                                        alt="English audio"
-                                        className={styles.pg71AudioIconInput}
-                                        onClick={() => playAudio(`pg71_audio${index + 19}`)}
-                                    />
-                                    <img
-                                        src={ptbr_audio_icon}
-                                        alt="Portuguese audio"
-                                        className={styles.pg71AudioIconInput}
-                                        onClick={() => playAudio(`pg71_audio${index + 19}p`)}
-                                    />
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page71__audio-icon-input"]}
+                                    onClick={() => playAudio(`pg71_audio${index + 19}`)}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese audio"
+                                    className={styles["page71__audio-icon-input"]}
+                                    onClick={() => playAudio(`pg71_audio${index + 19}p`)}
+                                />
 
                                 {results[index] && (
-                                    <div className={styles.pg71CheckContainer}>
-                                        <img src={results[index]} alt="result" className={styles.pg71CheckmarkImage} />
+                                    <div className={styles["page71__check-container"]}>
+                                        <img src={results[index]} alt="result" className={styles["page71__checkmark-image"]} />
                                     </div>
                                 )}
-
                             </div>
                         ))}
                     </div>
-
-                    <p className={styles.pg71QuestionText}>
+                    <p className={styles["page71__question-text"]}>
                         The questions about Leo Santander.
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
-                            className={styles.pg71AudioIcon}
-                            onClick={() => playAudio("pg71_audio11e")}
+                            className={styles["page71__audio-icon"]}
+                            onClick={() => playAudio('pg71_audio11e')}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese audio"
-                            className={styles.pg71AudioIcon}
-                            onClick={() => playAudio("pg71_audio11p")}
+                            className={styles["page71__audio-icon"]}
+                            onClick={() => playAudio('pg71_audio11p')}
                         />
                     </p>
 
-                    <div className={styles.pg71QuestionList}>
+                    <div className={styles["page71__question-list"]}>
                         {["Who is he?", "What is his nationality?", "Where is he from?", "Is he married or single?", "How old is he?", "What is his email address?", "What is his cell phone number?"].map((question, index) => (
-                            <div key={index + 6} className={styles.pg71QuestionItem}>
-                                <p
-                                    className={`${styles.pg71Question}`}
-                                >
+                            <div key={index + 6} className={styles["page71__question-item"]}>
+                                <p className={styles["page71__question"]}>
                                     {String.fromCharCode(97 + index + 6)}. {question}
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.pg71AudioIcon}
+                                        className={styles["page71__audio-icon"]}
                                         onClick={() => playAudio(`pg71_audio${index + 12}`)}
                                     />
                                     <img
                                         src={ptbr_audio_icon}
                                         alt="Portuguese audio"
-                                        className={styles.pg71AudioIcon}
+                                        className={styles["page71__audio-icon"]}
                                         onClick={() => playAudio(`pg71_audio${index + 12}p`)}
                                     />
                                 </p>
                                 <input
                                     type="text"
-                                    className={styles.pg71Input}
+                                    className={styles["page71__input"]}
                                     value={userAnswers[index + 6]}
                                     onChange={(e) => handleInputChange(e.target.value, index + 6)}
                                 />
                                 <img
-                                        src={eng_audio_icon}
-                                        alt="English audio"
-                                        className={styles.pg71AudioIconInput}
-                                        onClick={() => playAudio(`pg71_audio${index + 25}`)}
-                                    />
-                                    <img
-                                        src={ptbr_audio_icon}
-                                        alt="Portuguese audio"
-                                        className={styles.pg71AudioIconInput}
-                                        onClick={() => playAudio(`pg71_audio${index + 25}p`)}
-                                    />
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page71__audio-icon-input"]}
+                                    onClick={() => playAudio(`pg71_audio${index + 25}`)}
+                                />
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese audio"
+                                    className={styles["page71__audio-icon-input"]}
+                                    onClick={() => playAudio(`pg71_audio${index + 25}p`)}
+                                />
                                 {results[index + 6] && (
-                                    <div className={styles.pg71CheckContainer}>
-                                        <img src={results[index + 6]} alt="result" className={styles.pg71CheckmarkImage} />
+                                    <div className={styles["page71__check-container"]}>
+                                        <img src={results[index + 6]} alt="result" className={styles["page71__checkmark-image"]} />
                                     </div>
                                 )}
                             </div>
                         ))}
                     </div>
-
-                    <button className={styles.pg71CheckButton} onClick={handleCheckClick}>Check</button>
+                    <button className={styles["page71__check-button"]} onClick={handleCheckClick}>Check</button>
                 </div>
             </main>
 
-
-            <aside className={styles.pg71WordBank}>
-                <div className={styles.pg71WordBankContainer}>
-                    <div className={styles.pg71WordBankHeader}>
+            <aside className={styles["page71__word-bank"]}>
+                <div className={styles["page71__word-bank-container"]}>
+                    <div className={styles["page71__word-bank-header"]}>
                         <p>Work Bank</p>
                     </div>
-                    <div className={styles.pg71WordBankContent}>
-                        <div className={styles.pg71WordRow}>
-                            <div className={styles.pg71WordColumn}>
+                    <div className={styles["page71__word-bank-content"]}>
+                        <div className={styles["page71__word-row"]}>
+                            <div className={styles["page71__word-column"]}>
                                 <p><strong>Hello/Hi</strong> <span>Olá/Oi</span></p>
                                 <p><strong>Good morning</strong> <span>Bom dia</span></p>
                             </div>
-                            <div className={styles.pg71WordColumn}>
+                            <div className={styles["page71__word-column"]}>
                                 <p><strong>Good afternoon</strong> <span>Boa tarde</span></p>
                                 <p><strong>Good evening</strong> <span>Boa noite</span></p>
                             </div>
-                            <div className={styles.pg71WordColumn}>
+                            <div className={styles["page71__word-column"]}>
                                 <p><strong>Bye</strong> <span>Tchau</span></p>
                                 <p><strong>Goodbye</strong> <span>Adeus</span></p>
                                 <p><strong>See you (see ya)</strong> <span>Até logo</span></p>
                             </div>
-                            <div className={styles.pg71WordColumn}>
+                            <div className={styles["page71__word-column"]}>
                                 <p><strong>See you later</strong> <span>Até mais tarde</span></p>
                                 <p><strong>Good night</strong> <span>Boa noite</span></p>
                             </div>

@@ -1,53 +1,52 @@
-.pg70Container {
+.page70__container {
     display: flex;
     flex-direction: column; 
     gap: 2rem; 
 }
 
-.pg70Header {
+.page70__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
     margin-bottom: 2rem;
 }
 
-.pg70RedText{
+.page70__red-text {
     color: #A61C28;
 }
 
-.pg70Header h1 {
+.page70__header--h1 {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 1rem;
 }
 
-.pg70Header p {
+.page70__header p {
     font-size: 1.8rem;
     color: #4E4E4E;
     margin-bottom: 0.5rem;
 }
 
-.pg70Header p {
+.page70__header--p {
     font-size: 1.8rem;
     font-weight: bold;
 }
 
-
-.pg70MainContainer {
+.page70__main-container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.pg70MainAsideContainer {
+.page70__main-aside-container {
     display: flex; 
     justify-content: space-between; 
     gap: 2rem;
     width: 100%;
 }
 
-.pg70pageTitle,
-.pg70questionText {
+.page70__page-title,
+.page70__question-text {
     text-align: left;
     padding-left: 0;
     margin: 0; 
@@ -55,20 +54,20 @@
     font-weight: bold;
 }
 
-.pg70fraseContainer {
+.page70__frase-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
-.pg70frase {
+.page70__frase {
     display: flex;
     gap: 0.5rem;
     width: 100%;
 }
 
-.pg70word {
+.page70__word {
     font-size: 1.5rem;
     background-color: #d3d3d3;
     padding: 0.5rem 0.75rem;
@@ -77,12 +76,12 @@
     font-weight: bold;
 }
 
-.pg70word.pg70disabled {
+.page70__word--disabled {
     pointer-events: none;
     opacity: 0.5;
 }
 
-.pg70inputFrase {
+.page70__input-frase {
     display: flex;
     padding: 0.25rem; 
     border: 0.1rem solid rgb(0, 0, 0); 
@@ -95,8 +94,8 @@
     position: relative;
 }
 
-.pg70inputFrase .checkIcon,
-.pg70inputFrase .wrongIcon {
+.page70__input-frase .page70__check-icon,
+.page70__input-frase .page70__wrong-icon {
     margin-left: 1rem;
     position: absolute;
     right: 5%;
@@ -106,37 +105,39 @@
     height: 2.5rem;
 }
 
-.pg70inputFrase .eng_audio_icon{
+
+
+.page70__input-frase .page70__eng-audio-icon {
     position: absolute;
     right: 15%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.pg70inputFrase .ptbr_audio_icon{
+.page70__input-frase .page70__ptbr-audio-icon {
     position: absolute;
     right: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.pg70inputFrase .slow_audio_icon{
+.page70__input-frase .page70__slow-audio-icon {
     position: absolute;
     right: 19%;
     top: 50%;
     transform: translateY(-50%);
 }
 
-.eng_audio_icon,
-.ptbr_audio_icon,
-.slow_audio_icon {
+.page70__eng-audio-icon,
+.page70__ptbr-audio-icon,
+.page70__slow-audio-icon {
     cursor: pointer;
     margin-left: 1rem;
     width: 2.5rem;
     height: 2.5rem;
 }
 
-.pg70chip {
+.page70__chip {
     font-size: 1.5rem;
     display: inline-flex; 
     background-color: #d3d3d3;
@@ -150,12 +151,12 @@
     margin-left: 0.5rem;
 }
 
-.pg70AsideContainer {
+.page70__aside-container {
     flex: 1; 
     display: block;
 }
 
-.pg70checkButton {
+.page70__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -168,18 +169,17 @@
     width: 25%;
 }
 
-.pg70checkButton:hover {
+.page70__check-button:hover {
     background-color: #821a22;
 }
 
-
-.pg70tabelaAfirmativaContainer {
+.page70__tabela-afirmativa-container {
     width: 90rem;
     height: 10rem;
     width: 100%;
 }
 
-.pg70tableHeaderAfirmativa {
+.page70__table-header-afirmativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -191,22 +191,22 @@
     margin-bottom: 0.2rem;
 }
 
-.pg70styledTableAfirmativa {
+.page70__styled-table-afirmativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-.pg70Thead {
+.page70__thead {
     border: 0.3rem solid #A61C28;
 }
 
-.highlight {
+.page70__highlight {
     color: #A61C28;
 }
 
-.pg70styledTableAfirmativa th {
+.page70__styled-table-afirmativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -216,7 +216,7 @@
     border: 0.0625rem solid #A61C28;
 }
 
-.pg70ImagensContainer {
+.page70__imagens-container {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -225,7 +225,7 @@
     margin-left: auto;
 }
 
-.pg70Imagem1 {
+.page70__imagem--1 {
     border-radius: 5%;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
     width: 60%;
@@ -233,7 +233,7 @@
     object-fit: cover; 
 }
 
-.pg70Imagem2{
+.page70__imagem--2 {
     border-radius: 5%;
     box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -241,24 +241,22 @@
     object-fit: cover; 
 }
 
-.pg70Imagem1 {
+.page70__imagem--1 {
     transform: rotate(-10deg);
 }
 
-.pg70Imagem2 {
+.page70__imagem--2 {
     transform: rotate(5deg) translateX(-10rem); 
 }
 
-/* Animação do Título Principal */
-.pg70HeaderH1 {
+.page70__header--h1 {
     font-size: 4rem;
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-/* Ícones de Áudio no Cabeçalho */
-.pg70AudioIcon {
+.page70__audio-icon {
     width: 2.5rem; /* Tamanho fixo para os ícones */
     height: auto;
     cursor: pointer;
@@ -266,6 +264,16 @@
 }
 
 /* Efeito Hover nos Ícones */
-.pg70AudioIcon:hover {
+.page70__audio-icon:hover {
     transform: scale(1.1);
+}
+
+/* Outras classes específicas para os ícones */
+.page70__eng-audio-icon,
+.page70__ptbr-audio-icon,
+.page70__slow-audio-icon {
+    cursor: pointer;
+    margin-left: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
 }
