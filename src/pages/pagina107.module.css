@@ -1,25 +1,25 @@
-.pg107Container {
+.page107__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg107Header {
+.page107__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg107HeaderH2 {
+.page107__header--h2 {
     color: black;
 }
 
-.pg107Main {
+.page107__main {
     width: 100%;
     text-align: center;
 }
 
-.pg107Aside {
+.page107__aside {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -27,7 +27,7 @@
 
 /* Este é um comentário */
 
-.pg107TableHeader {
+.page107__table--header {
     background-color: #A61C28;
     color: white;
     text-align: center !important;
@@ -38,26 +38,25 @@
     font-size: 2rem;
 }
 
-.pg107StyledTable {
+.page107__styled--table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 5%;
     table-layout: fixed;
 }
 
-.pg107StyledTable:nth-child(odd) {
+.page107__styled--table:nth-child(odd) {
     margin-bottom: 0;
 }
 
-.pg107StyledTable thead tr {
+.page107__styled--table thead tr {
     background-color: #888A8C;
     color: white;
     font-weight: bold;
 }
 
-
-.pg107StyledTable th,
-.pg107StyledTable td {
+.page107__styled--table th,
+.page107__styled--table td {
     border: .1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
@@ -65,17 +64,17 @@
     font-weight: bold;
 }
 
-.pg107StyledTable tbody tr {
+.page107__styled--table tbody tr {
     background-color: white;
     max-width: 100%;
     height: calc(7vw * 0.85);
 }
 
-.pg107StyledTable tbody tr:nth-child(even) {
+.page107__styled--table tbody tr:nth-child(even) {
     background-color: white;
 }
 
-.pg107InputCell {
+.page107__input--cell {
     width: 100%;
     height: calc(8vh * 0.85);
     border: none;
@@ -88,41 +87,41 @@
     font-size: 1.8rem;
 }
 
-.pg107InputCell:focus {
+.page107__input--cell:focus {
     outline: none;
     border: .1rem solid #F2F2F2;
     background-color: white;
 }
 
-.pg107InputCell::-webkit-scrollbar {
+.page107__input--cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg107Sujeito {
+.page107__sujeito {
     width: calc(10vw * 0.85);
 }
 
-.pg107verbo_auxiliar {
-    width: calc(10vw * 0.85)
+.page107__verbo--auxiliar {
+    width: calc(10vw * 0.85);
 }
 
-.pg107Adverbio {
-    width: calc(12vw * 0.85)
+.page107__adverbio {
+    width: calc(12vw * 0.85);
 }
 
-.pg107Verbo {
-    width: calc(12vw * 0.85)
+.page107__verbo {
+    width: calc(12vw * 0.85);
 }
 
-.pg107ObjetivoComplemento {
-    width: calc(18vw * 0.85)
+.page107__objetivo--complemento {
+    width: calc(18vw * 0.85);
 }
 
-.pg107Traducao {
+.page107__traducao {
     width: (18vw * 0.85);
 }
 
-.pg107AsideNotes1A {
+.page107__aside--notes1--a {
     width: 25%;
     height: fit-content;
     border: .4rem solid #0A3282;
@@ -137,8 +136,7 @@
     align-items: center;
 }
 
-
-.pg107AsideNotes1B {
+.page107__aside--notes1--b {
     width: 50%;
     height: 4.5rem;
     border: .4rem solid #0A3282;
@@ -153,18 +151,18 @@
     align-items: center;
 }
 
-.pg107AsideNotes1A p,
-.pg107AsideNotes1B p {
+.page107__aside--notes1--a p,
+.page107__aside--notes1--b p {
     font-size: 1.5rem;
 }
 
-.pg107AsideImgNotes {
+.page107__aside--img--notes--b {
     height: calc(10px + 0.8vw);
     width: 2rem;
     padding-right: .5rem;
 }
 
-.pg107AsideNotes2A {
+.page107__aside--notes2--a {
     width: 25%;
     height: fit-content;
     border: .4rem solid #0A3282;
@@ -179,7 +177,7 @@
     align-items: center;
 }
 
-.pg107AsideNotes2B {
+.page107__aside--notes2--b {
     width: 50%;
     height: 100%;
     border: .4rem solid #0A3282;
@@ -189,40 +187,38 @@
     background-color: white;
     text-align: left;
     padding-left: 1rem;
+    color: #103275;
     display: flex;
     align-items: center;
-    color: #103275;
 }
 
-.pg107AsideNotes2A p,
-.pg107AsideNotes2B p {
+.page107__aside--notes2--a p,
+.page107__aside--notes2--b p {
     font-size: 1.5rem;
     padding: 1rem;
 }
 
 @media (max-width: 1024px) {
-
-    .pg107StyledTable {
+    .page107__styled--table {
         margin-bottom: 15%;
     }
 
-    .pg107StyledTable th,
-    .pg107StyledTable td {
+    .page107__styled--table th,
+    .page107__styled--table td {
         padding: .5rem;
-
     }
 
-    .pg107InputCell {
+    .page107__input--cell {
         height: calc(6vw * 0.85);
     }
 
-    .pg107AsideNotes1,
-    .pg107AsideNotes2 {
+    .page107__aside--notes1,
+    .page107__aside--notes2 {
         width: 100%;
     }
 
-    .pg107AsideNotes2A p,
-    .pg107AsideNotes2B p {
+    .page107__aside--notes2--a p,
+    .page107__aside--notes2--b p {
         font-size: 2rem;
     }
 }
