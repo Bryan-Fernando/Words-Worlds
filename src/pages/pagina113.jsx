@@ -103,9 +103,9 @@ const Pagina113 = () => {
                                     onClick={() => playAudio(pg113_audio2)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    wool
+                                    denim
                                 </p>
-                                <p>lã </p>
+                                <p>jeans </p>
                             </div>
                         </div>
                         <div className={styles.FlexB}>
@@ -118,9 +118,9 @@ const Pagina113 = () => {
                                     onClick={() => playAudio(pg113_audio3)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    cotton
+                                    fur
                                 </p>
-                                <p>algodão </p>
+                                <p>pele </p>
                             </div>
                         </div>
                         <div className={styles.FlexB}>
@@ -133,9 +133,9 @@ const Pagina113 = () => {
                                     onClick={() => playAudio(pg113_audio4)}
                                     style={{ cursor: 'pointer' }}
                                 >
-                                    leather
+                                    nylon
                                 </p>
-                                <p>couro </p>
+                                <p>nylon </p>
                             </div>
                         </div>
                     </div>

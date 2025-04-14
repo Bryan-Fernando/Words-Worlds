@@ -63,6 +63,7 @@
     position: relative;
     top: 0.3rem;
     transition: transform 0.2s ease-in-out;
+    margin-right: 1rem;
 }
 
 .page2__icon:hover {
