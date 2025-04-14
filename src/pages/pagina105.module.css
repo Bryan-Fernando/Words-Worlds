@@ -1,39 +1,32 @@
-.pg105Container {
+.page105__container {
     display: flex;
     flex-direction: column;
     margin-right: auto;
 }
 
-.pg105Header {
+.page105__header {
     width: 100%;
 }
 
-.pg105H1 {
+.page105__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-
-.pg105H1 {
-    text-align: left;
-    font-size: 6rem;
-    color: #8a1720;
-}
-
-.pg105Main {
+.page105__main {
     display: flex;
     flex-direction: column;
 }
 
-.pg105ContainerQuestoes {
+.page105__container--questoes {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.pg105Questions {
+.page105__questions {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -43,38 +36,38 @@
     margin-top: 2rem;
 }
 
-.pg105TextRed {
+.page105__text--red {
     color: #A61C28;
     font-size: 2rem;
     text-align: left;
 }
 
-.pg105TextBlack {
+.page105__text--black {
     color: black;
     font-weight: bold;
     font-size: 2rem;
     text-align: left;
 }
 
-.pg105Question {
+.page105__question {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     font-size: 1.8rem;
 }
 
-.pg105ContainerImagem {
+.page105__container--imagem {
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
-.pg105imagem {
+.page105__imagem {
     width: 60%;
     height: auto;
 }
 
-.pg105AsideNotes1 {
+.page105__aside--notes1 {
     height: 4.5rem;
     border: 0.4rem solid #0A3282;
     border-top-left-radius: 2.5rem;
@@ -87,12 +80,12 @@
     align-items: center;
 }
 
-.pg105AsideImgNotes {
+.page105__aside--img-notes {
     height: calc(1rem + 0.8vw);
     padding-right: 0.5rem;
 }
 
-.pg105AsideNotes2 {
+.page105__aside--notes2 {
     border: 0.4rem solid #0A3282;
     border-top: 0.1rem;
     border-bottom-left-radius: 2.5rem;
@@ -103,30 +96,30 @@
     display: flex;
 }
 
-.pg105AsideNotes2Preto {
+.page105__aside--notes2--preto {
     margin-bottom: 2rem;
     color: #103275;
 }
 
-.pg105AsideNotes3 {
+.page105__aside--notes3 {
     display: flex;
     flex-direction: column;
     width: 50%;
     color: #103275;
 }
 
-.pg105AsideNotes2Vermelho {
+.page105__aside--notes2--vermelho {
     font-weight: bold;
     color: #0A3282;
 }
 
-.pg105Asidecontainer {
+.page105__aside--container {
     display: flex;
     flex-direction: column;
     width: 60%;
 }
 
-.pg105HeaderIcon {
+.page105__header--icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -136,26 +129,25 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg105HeaderIcon:hover {
+.page105__header--icon:hover {
     transform: scale(1.2);
 }
 
-
 @media (max-width: 1024px) {
-    .pg105ContainerQuestoes {
+    .page105__container--questoes {
         align-items: center;
         gap: 2rem;
     }
 
-    .pg105Questions {
+    .page105__questions {
         width: 100%;
     }
 
-    .pg105ContainerImagem {
+    .page105__container--imagem {
         width: 100%;
     }
 
-    .pg105imagem {
+    .page105__imagem {
         max-width: 90%;
     }
 }

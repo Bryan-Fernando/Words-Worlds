@@ -113,14 +113,14 @@ const Pagina101 = () => {
         }));
     };
     return (
-        <div className={styles.pg101Container}>
-            <main className={styles.pg101Main}>
+        <div className={styles["page101__container"]}>
+            <main className={styles["page101__main"]}>
                 {/* Tabela Afirmativa */}
-                <div className={styles.pg101tabelaAfirmativaContainer}>
-                    <div className={styles.pg101tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.pg101styledTableAfirmativa}>
+                <div className={styles["page101__tabela-afirmativa-container"]}>
+                    <div className={styles["page101__table-header-afirmativa"]}>AFIRMATIVA</div>
+                    <table className={styles["page101__styled-table-afirmativa"]}>
                         <thead>
-                            <tr className={styles.pg101celulatable}>
+                            <tr className={styles["page101__celula-table"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo Auxiliar</th>
@@ -133,25 +133,24 @@ const Pagina101 = () => {
                 </div>
 
                 {/* Primeira parte - Afirmativa */}
-                <div className={styles.pg101ContainerQuestoes}>
-                    <div className={styles.pg101Questions1}>
-                        <p className={styles.pg101ATituloQuestion}>
+                <div className={styles["page101__container-questoes"]}>
+                    <div className={styles["page101__questions-1"]}>
+                        <p className={styles["page101__a-titulo-question"]}>
                             C) Use the complete (or full) affirmative form of the verb to be in the simple present:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.pg101HeaderIcon}
+                                className={styles["page101__header-icon"]}
                                 onClick={() => playAudio("pg101_audio1e")}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.pg101HeaderIcon}
+                                className={styles["page101__header-icon"]}
                                 onClick={() => playAudio("pg101_audio1p")}
                             />
                         </p>
                         <br />
-
 
                         {[
                             "I ____ a student.",
@@ -169,36 +168,35 @@ const Pagina101 = () => {
                             const audioKey = `pg101_audio${index + 2}`;
 
                             return (
-                                <div key={index} className={styles.pg101Question}>
+                                <div key={index} className={styles["page101__question"]}>
                                     <span><em><strong>{index + 1}.</strong> {parts[0]}</em></span>
-                                    <div className={styles.pg101InputContainer}>
+                                    <div className={styles["page101__input-container"]}>
                                         <input
                                             type="text"
                                             value={inputValues[index]}
                                             onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles.pg101InputBox}
+                                            className={styles["page101__input-box"]}
                                         />
-
                                     </div>
                                     <span><em>{parts[1]}</em></span>
-                                    <div className={styles.pg101IconsContainer}>
+                                    <div className={styles["page101__icons-container"]}>
                                         {results[index] !== null && (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles.pg101CheckmarkImage}
+                                                className={styles["page101__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg101AdditionalIcon}
+                                            className={styles["page101__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
-                                            className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
+                                            className={`${styles["page101__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page101__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
@@ -206,17 +204,17 @@ const Pagina101 = () => {
                             );
                         })}
                     </div>
-                    <div className={styles.pg101ContainerImagem}>
-                        <img className={styles.pg101imagem} src={Pagina101_imagem1} alt="" />
+                    <div className={styles["page101__container-imagem"]}>
+                        <img className={styles["page101__imagem"]} src={Pagina101_imagem1} alt="" />
                     </div>
                 </div>
 
                 {/* Tabela Negativa */}
-                <div className={styles.pg101tabelaNegativaContainer}>
-                    <div className={styles.pg101tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg101styledTableNegativa}>
+                <div className={styles["page101__tabela-negativa-container"]}>
+                    <div className={styles["page101__table-header-negativa"]}>NEGATIVA</div>
+                    <table className={styles["page101__styled-table-negativa"]}>
                         <thead>
-                            <tr className={styles.pg101celulatable}>
+                            <tr className={styles["page101__celula-table"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo Auxiliar</th>
@@ -229,20 +227,20 @@ const Pagina101 = () => {
                 </div>
 
                 {/* Segunda parte - Negativa */}
-                <div className={styles.pg101ContainerQuestoes}>
-                    <div className={styles.pg101Questions2}>
-                        <p className={styles.pg101ATituloQuestion}>
+                <div className={styles["page101__container-questoes"]}>
+                    <div className={styles["page101__questions-2"]}>
+                        <p className={styles["page101__a-titulo-question"]}>
                             D) Use the complete (or full) negative form of the verb to be in the simple present:
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.pg101HeaderIcon}
+                                className={styles["page101__header-icon"]}
                                 onClick={() => playAudio("pg101_audio12e")}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.pg101HeaderIcon}
+                                className={styles["page101__header-icon"]}
                                 onClick={() => playAudio("pg101_audio12p")}
                             />
                         </p>
@@ -258,54 +256,52 @@ const Pagina101 = () => {
                             "The children ____ happy with the result.",
                             "They ____ in the office.",
                             "The store ____ open yet."
-
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg101_audio${index + 13}`;
 
                             return (
-                                <div key={index} className={styles.pg101Question}>
+                                <div key={index} className={styles["page101__question"]}>
                                     <span><em><strong>{index + 1}.</strong> {parts[0]}</em></span>
-                                    <div className={styles.pg101InputContainer}>
+                                    <div className={styles["page101__input-container"]}>
                                         <input
                                             type="text"
                                             value={inputValues[index] || ""}
                                             onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles.pg101InputBox}
+                                            className={styles["page101__input-box"]}
                                         />
                                     </div>
                                     <span><em>{parts[1]}</em></span>
-                                    <div className={styles.pg101IconsContainer}>
+                                    <div className={styles["page101__icons-container"]}>
                                         {results[index] !== null && (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles.pg101CheckmarkImage}
+                                                className={styles["page101__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg101AdditionalIcon}
+                                            className={styles["page101__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
-                                            className={`${styles.pg101AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg101Pulsing : ''}`}
+                                            className={`${styles["page101__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page101__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
                                 </div>
                             );
                         })}
-
                     </div>
-                    <div className={styles.pg101ContainerImagem}>
-                        <img className={styles.pg101imagem} src={Pagina101_imagem2} alt="" />
+                    <div className={styles["page101__container-imagem"]}>
+                        <img className={styles["page101__imagem"]} src={Pagina101_imagem2} alt="" />
                     </div>
                 </div>
-                <button className={styles.pg101CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+                <button className={styles["page101__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
             </main>
         </div>
     );

@@ -1,4 +1,4 @@
-.pg100Container {
+.page100__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,17 +7,17 @@
     padding-left: 0;
 }
 
-.pg100Header {
+.page100__header {
     width: 100%;
 }
 
-.pg100H1 {
+.page100__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg100H2 {
+.page100__h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-.pg100Main {
+.page100__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
@@ -33,29 +33,28 @@
 
 /* Este é um comentário */
 
-.pg100ContainerQuestoes {
+.page100__container-questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg100ContainerQuestoes p {
+.page100__container-questoes p {
     color: #8a1720;
 }
 
-.pg100PrimeirasQuestoes {
+.page100__primeiras-questoes {
     display: flex;
     flex-direction: column;
-
 }
 
-.pg100Questions1,
-.pg100Questions2 {
+.page100__questions-1,
+.page100__questions-2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg100Question {
+.page100__question {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -64,19 +63,19 @@
     text-align: left;
 }
 
-.pg100Question span {
+.page100__question span {
     font-size: 1.6rem;
     font-weight: bold;
     color: black;
 }
 
-.pg100ATituloQuestion {
+.page100__a-titulo-question {
     font-weight: bold;
     font-size: 1.7rem;
     margin-bottom: 2rem;
 }
 
-.pg100InputBox {
+.page100__input-box {
     width: 100%;
     padding: .5rem;
     font-size: 1.6rem;
@@ -88,7 +87,7 @@
     text-align: left;
 }
 
-.pg100InputContainer {
+.page100__input-container {
     width: 25%;
     gap: 1rem;
     position: relative;
@@ -96,13 +95,13 @@
     align-items: center;
 }
 
-.pg100CheckmarkImage {
+.page100__checkmark-image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg100CheckButton {
+.page100__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -118,45 +117,44 @@
     width: fit-content;
 }
 
-.pg100CheckButton:hover {
+.page100__check-button:hover {
     background-color: #8a1720;
 }
 
-.pg100IconsContainer {
+.page100__icons-container {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 5px;
 }
 
-.pg100AdditionalIcon {
+.page100__additional-icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg100Questions1:nth-child(2),
-.pg100Questions1:nth-child(4) {
+.page100__questions-1:nth-child(2),
+.page100__questions-1:nth-child(4) {
     display: flex;
     flex-direction: column-reverse;
     border-radius: 0.8rem;
 }
 
-
-.pg100AdditionalIcon.pg100Pulsing {
+.page100__additional-icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg100AdditionalIcon:hover {
+.page100__additional-icon:hover {
     transform: scale(1.2);
 }
 
-.pg100tabelaNegativaContainer {
+.page100__tabela-negativa-container {
     width: 100%;
 }
 
-.pg100tableHeaderNegativa {
+.page100__table-header-negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -168,14 +166,14 @@
     margin-bottom: 0.2rem;
 }
 
-.pg100styledTableNegativa {
+.page100__styled-table-negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-.pg100styledTableNegativa th {
+.page100__styled-table-negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -185,26 +183,26 @@
     border: 1px solid #A61C28;
 }
 
-.pg100celulatable {
+.page100__celula-table {
     height: 7rem;
 }
 
-.pg100ContainerImagem {
+.page100__container-imagem {
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pg100imagem {
+.page100__imagem {
     width: 100%;
 }
 
-.pg100spaminput {
+.page100__spam-input {
     width: 15%;
 }
 
-.pg100HeaderIcon {
+.page100__header-icon {
     width: 2rem;
     height: 2rem;
     margin-left: 0.5rem;
@@ -212,10 +210,9 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg100HeaderIcon:hover {
+.page100__header-icon:hover {
     transform: scale(1.1);
 }
-
 
 @keyframes pulse {
     0% {

@@ -1,4 +1,4 @@
-.pg104Container {
+.page104__container {
     display: flex;
     flex-direction: column;
     margin-left: 0;
@@ -6,38 +6,37 @@
     padding-left: 0;
 }
 
-.pg104Header {
+.page104__header {
     width: 100%;
 }
 
-.pg104H1 {
+.page104__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg104Main {
+.page104__main {
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
 
-.pg104ContainerQuestoes {
+.page104__container--questoes {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.pg104Questions {
+.page104__questions {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: 50%;
 }
 
-
-.pg104TextRed {
+.page104__text--red {
     display: flex;
     color: #A61C28;
     font-weight: bold;
@@ -45,8 +44,7 @@
     font-size: 2rem;
 }
 
-
-.pg104TextBlack {
+.page104__text--black {
     display: flex;
     color: black;
     font-weight: bold;
@@ -54,7 +52,7 @@
     font-size: 2rem;
 }
 
-.pg104Question {
+.page104__question {
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -63,7 +61,7 @@
     text-align: left;
 }
 
-.pg104InputBox {
+.page104__input--box {
     width: 18rem;
     padding: 0.5rem;
     font-size: 1.6rem;
@@ -76,29 +74,29 @@
     margin: 0.5rem;
 }
 
-.pg104ContainerImagem {
+.page104__container--imagem {
     width: 50%;
     display: flex;
     justify-content: center;
 }
 
-.pg104imagem {
+.page104__imagem {
     width: 100%;
     height: auto;
 }
 
-.pg104HeaderIcon {
+.page104__header-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.pg104HeaderIcon:hover {
+.page104__header-icon:hover {
     transform: scale(1.1);
 }
 
-.pg104AdditionalIcon {
+.page104__additional--icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -110,21 +108,21 @@
 
 /* Responsividade */
 @media (max-width: 1024px) {
-    .pg104ContainerQuestoes {
+    .page104__container--questoes {
         flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
 
-    .pg104Questions {
+    .page104__questions {
         width: 100%;
     }
 
-    .pg104ContainerImagem {
+    .page104__container--imagem {
         width: 100%;
     }
 
-    .pg104imagem {
+    .page104__imagem {
         max-width: 90%;
     }
 }

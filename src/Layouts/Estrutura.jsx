@@ -123,7 +123,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
                   if (e.key === 'Enter') handlePageChangeKeyPress(e);
                 }}
                 style={{
-                  width: '40px',
+                  width: '7rem',
                   textAlign: 'center',
                   padding: '5px',
                 }}

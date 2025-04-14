@@ -128,11 +128,11 @@ const Pagina93 = () => {
             </header>
             <main className={styles["page93__main"]}>
                 <div className={styles["page93__column-container"]}>
-                    <div className={styles.pg93tabelaAfirmativaContainer}>
-                        <div className={styles.pg93tableHeaderAfirmativa}>AFIRMATIVA</div>
-                        <table className={styles.pg93styledTableAfirmativa}>
-                            <thead className={styles.pg93Thead}>
-                                <tr className={styles.pg93celulatable}>
+                    <div className={styles["page93__table--afirmativa--container"]}>
+                        <div className={styles["page93__table--header--afirmativa"]}>AFIRMATIVA</div>
+                        <table className={styles["page93__styled--table--afirmativa"]}>
+                            <thead className={styles["page93__thead"]}>
+                                <tr className={styles["page93__cell--table"]}>
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo <br /> Auxiliar</th>
@@ -143,6 +143,7 @@ const Pagina93 = () => {
                             </thead>
                         </table>
                     </div>
+
                     <div className={styles["page93__content-flex"]}>
                         <div className={styles["page93__questions-container"]}>
                             {/* EXAMPLE */}

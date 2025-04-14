@@ -1,4 +1,4 @@
-.pg85Container {
+.page85__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,17 +7,17 @@
     padding-left: 0;
 }
 
-.pg85Header {
+.page85__header {
     width: 100%;
 }
 
-.pg85H1 {
+.page85__header--h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg85H2 {
+.page85__header--h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,32 +25,32 @@
     font-weight: bold;
 }
 
-.pg85Main {
+.page85__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.pg85Aside {
+.page85__aside {
     width: 100%;
     display: flex;
 }
 
 /* Este é um comentário */
 
-.pg85ContainerQuestoes {
+.page85__container--questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg85Questions1,
-.pg85Questions2 {
+.page85__questions--1,
+.page85__questions--2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg85Question {
+.page85__question {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,19 +59,19 @@
     text-align: left;
 }
 
-.pg85Question span {
+.page85__question--text {
     font-size: 1.9rem;
     font-weight: bold;
     color: black;
 }
 
-.pg85ATituloQuestion {
+.page85__question--titulo {
     color: #8a1720;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg85InputBox {
+.page85__input--box {
     width: 100%;
     padding: .5rem;
     font-size: 1.8rem;
@@ -83,7 +83,7 @@
     text-align: left;
 }
 
-.pg85InputContainer {
+.page85__input--container {
     gap: 1rem;
     width: 23%;
     position: relative;
@@ -91,13 +91,13 @@
     align-items: center;
 }
 
-.pg85CheckmarkImage {
+.page85__checkmark--image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg85CheckButton {
+.page85__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -115,44 +115,44 @@
     width: fit-content;
 }
 
-.pg85CheckButton:hover {
+.page85__check--button:hover {
     background-color: #8a1720;
 }
 
-.pg85IconsContainer {
+.page85__icons--container {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 5px;
 }
 
-.pg85AdditionalIcon {
+.page85__additional--icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg85AdditionalIcon.pg85Pulsing {
+.page85__additional--icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg85AdditionalIcon:hover {
+.page85__additional--icon:hover {
     transform: scale(1.2);
 }
 
-.pg85imagem {
+.page85__image {
     width: 37rem;
     height: 27rem;
 }
 
-.pg85tabelaAfirmativaContainer,
-.pg85tabelaNegativaContainer {
+.page85__table--afirmativa--container,
+.page85__table--negativa--container {
     width: 100%;
 }
 
-.pg85tableHeaderAfirmativa,
-.pg85tableHeaderNegativa {
+.page85__table--header--afirmativa,
+.page85__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -163,18 +163,16 @@
     width: 100%;
     margin-bottom: 0.2rem;
 }
-
-.pg85styledTableAfirmativa,
-.pg85styledTableNegativa {
+.page85__styled--table--afirmativa,
+.page85__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg85styledTableAfirmativa th,
-.pg85styledTableNegativa th {
+.page85__styled--table--afirmativa th,
+.page85__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -184,17 +182,17 @@
     border: 1px solid #A61C28;
 }
 
-.pg85celulatable {
+.page85__cell--table {
     height: 7rem;
 }
 
-.pg85Asidecontainer {
+.page85__aside--container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.pg85AsideNotes1 {
+.page85__aside--notes--1 {
     width: 80%;
     height: fit-content;
     border: 4px solid #0A3282;
@@ -209,13 +207,13 @@
     align-items: center;
 }
 
-.pg85AsideImgNotes {
+.page85__aside--img--notes {
     height: calc(10px + 0.8vw);
     width: 20px;
     padding-right: 5px;
 }
 
-.pg85AsideNotes2 {
+.page85__aside--notes--2 {
     width: 80%;
     border: 4px solid #0A3282;
     border-top: 1px;
@@ -229,19 +227,19 @@
     color: #103275;
 }
 
-.pg85AsideNotes2 p {
+.page85__aside--notes--2 p {
     padding: 1vw;
     font-size: 1.65rem;
 }
 
-.pg85ContainerImagem {
+.page85__container--imagem {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35rem;
 }
 
-.pg85HeaderIcon {
+.page85__header--icon {
     width: 2rem;
     height: 2rem;
     margin-left: 0.5rem;
@@ -249,44 +247,42 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg85HeaderIcon:hover {
+.page85__header--icon:hover {
     transform: scale(1.1);
 }
 
-
 @media (max-width: 1024px) {
-    .pg85AsideNotes2 p {
+    .page85__aside--notes--2 p {
         font-size: 2rem;
     }
 
-    .pg85styledTableAfirmativa th,
-    .pg85styledTableNegativa th {
+    .page85__styled--table--afirmativa th,
+    .page85__styled--table--negativa th {
         font-size: 1.8rem;
     }
 
-    .pg85ContainerQuestoes {
+    .page85__container--questoes {
         flex-direction: column;
     }
 
-    .pg85Question {
+    .page85__question {
         gap: 5px;
     }
 
-    .pg85IconsContainer {
+    .page85__icons--container {
         margin-left: 0;
     }
 
-    .pg85ContainerImagem {
+    .page85__container--imagem {
         align-items: start;
         justify-content: left;
         height: fit-content;
     }
 
-    .pg85InputContainer {
+    .page85__input--container {
         width: 15%;
     }
 }
-
 
 @keyframes pulse {
     0% {

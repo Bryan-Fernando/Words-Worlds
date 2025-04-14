@@ -1,4 +1,4 @@
-.pg84Container {
+.page84__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,17 +7,17 @@
     padding-left: 0;
 }
 
-.pg84Header {
+.page84__header {
     width: 100%;
 }
 
-.pg84H1 {
+.page84__header--h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg84H2 {
+.page84__header--h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,32 +25,32 @@
     font-weight: bold;
 }
 
-.pg84Main {
+.page84__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.pg84Aside {
+.page84__aside {
     width: 100%;
     display: flex;
 }
 
 /* Este é um comentário */
 
-.pg84ContainerQuestoes {
+.page84__container--questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg84Questions1,
-.pg84Questions2 {
+.page84__questions--1,
+.page84__questions--2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg84Question {
+.page84__question {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -59,19 +59,19 @@
     text-align: left;
 }
 
-.pg84Question span {
+.page84__question--text {
     font-size: 1.9rem;
     font-weight: bold;
     color: black;
 }
 
-.pg84ATituloQuestion {
+.page84__question--titulo {
     color: #8a1720;
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg84InputBox {
+.page84__input--box {
     width: 100%;
     padding: .5rem;
     font-size: 1.8rem;
@@ -83,7 +83,7 @@
     text-align: left;
 }
 
-.pg84InputContainer {
+.page84__input--container {
     gap: 1rem;
     width: 23%;
     position: relative;
@@ -91,13 +91,13 @@
     align-items: center;
 }
 
-.pg84CheckmarkImage {
+.page84__checkmark--image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg84CheckButton {
+.page84__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -115,45 +115,44 @@
     width: fit-content;
 }
 
-.pg84CheckButton:hover {
+.page84__check--button:hover {
     background-color: #8a1720;
 }
 
-
-.pg84IconsContainer {
+.page84__icons--container {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 5px;
 }
 
-.pg84AdditionalIcon {
+.page84__additional--icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg84AdditionalIcon.pg84Pulsing {
+.page84__additional--icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg84AdditionalIcon:hover {
+.page84__additional--icon:hover {
     transform: scale(1.2);
 }
 
-.pg84imagem {
+.page84__image {
     width: 37rem;
     height: 27rem;
 }
 
-.pg84tabelaAfirmativaContainer,
-.pg84tabelaNegativaContainer {
+.page84__table--afirmativa--container,
+.page84__table--negativa--container {
     width: 100%;
 }
 
-.pg84tableHeaderAfirmativa,
-.pg84tableHeaderNegativa {
+.page84__table--header--afirmativa,
+.page84__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -164,18 +163,16 @@
     width: 100%;
     margin-bottom: 0.2rem;
 }
-
-.pg84styledTableAfirmativa,
-.pg84styledTableNegativa {
+.page84__styled--table--afirmativa,
+.page84__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg84styledTableAfirmativa th,
-.pg84styledTableNegativa th {
+.page84__styled--table--afirmativa th,
+.page84__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -185,17 +182,17 @@
     border: 1px solid #A61C28;
 }
 
-.pg84celulatable {
+.page84__cell--table {
     height: 7rem;
 }
 
-.pg84Asidecontainer {
+.page84__aside--container {
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-.pg84AsideNotes1 {
+.page84__aside--notes--1 {
     width: 80%;
     height: fit-content;
     border: 4px solid #0A3282;
@@ -210,13 +207,13 @@
     align-items: center;
 }
 
-.pg84AsideImgNotes {
+.page84__aside--img--notes {
     height: calc(10px + 0.8vw);
     width: 20px;
     padding-right: 5px;
 }
 
-.pg84AsideNotes2 {
+.page84__aside--notes--2 {
     width: 80%;
     border: 4px solid #0A3282;
     border-top: 1px;
@@ -230,63 +227,62 @@
     color: #103275;
 }
 
-.pg84AsideNotes2 p {
+.page84__aside--notes--2 p {
     padding: 1vw;
     font-size: 1.65rem;
 }
 
-.pg84ContainerImagem {
+.page84__container--imagem {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 35rem;
 }
 
-.pg84HeaderIcon {
+.page84__header--icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.pg84HeaderIcon:hover {
+.page84__header--icon:hover {
     transform: scale(1.1);
 }
 
 
 @media (max-width: 1024px) {
-    .pg84AsideNotes2 p {
+    .page84__aside--notes--2 p {
         font-size: 2rem;
     }
 
-    .pg84styledTableAfirmativa th,
-    .pg84styledTableNegativa th {
+    .page84__styled--table--afirmativa th,
+    .page84__styled--table--negativa th {
         font-size: 1.8rem;
     }
 
-    .pg84ContainerQuestoes {
+    .page84__container--questoes {
         flex-direction: column;
     }
 
-    .pg84Question {
+    .page84__question {
         gap: 5px;
     }
 
-    .pg84IconsContainer {
+    .page84__icons--container {
         margin-left: 0;
     }
 
-    .pg84ContainerImagem {
+    .page84__container--imagem {
         align-items: start;
         justify-content: left;
         height: fit-content;
     }
 
-    .pg84InputContainer {
+    .page84__input--container {
         width: 15%;
     }
 }
-
 
 @keyframes pulse {
     0% {

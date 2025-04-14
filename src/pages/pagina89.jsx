@@ -66,72 +66,72 @@ const Pagina89 = () => {
     };
 
     return (
-        <div className={styles["pg89__container"]}>
-            <header className={styles["pg89__header"]}>
-                <h1 className={styles["pg89__title"]}>
+        <div className={styles["page89__container"]}>
+            <header className={styles["page89__header"]}>
+                <h1 className={styles["page89__title"]}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles["pg89__header-icon"]}
+                        className={styles["page89__header-icon"]}
                         onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles["pg89__header-icon"]}
+                        className={styles["page89__header-icon"]}
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
 
-                <h2 className={styles["pg89__subtitle"]}>
+                <h2 className={styles["page89__subtitle"]}>
                     Complete with the appropriate indefinite article (a/an)
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles["pg89__header-icon"]}
+                        className={styles["page89__header-icon"]}
                         onClick={() => playAudio("global_article_a_ane")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles["pg89__header-icon"]}
+                        className={styles["page89__header-icon"]}
                         onClick={() => playAudio("global_article_a_anp")}
                     />
                 </h2>
             </header>
 
-            <main className={styles["pg89__main"]}>
-                <div className={styles["pg89__questions-container"]}>
-                    <div className={styles["pg89__column"]}>
+            <main className={styles["page89__main"]}>
+                <div className={styles["page89__questions-container"]}>
+                    <div className={styles["page89__column"]}>
                         {[
                             { img: pagina89_imagem1, sentence: "animal.", audio: "pg89_audio1" },
                             { img: pagina89_imagem2, sentence: "man.", audio: "pg89_audio2" },
                             { img: pagina89_imagem3, sentence: "river.", audio: "pg89_audio3" }
                         ].map((question, index) => (
-                            <div key={index} className={styles["pg89__question-item"]}>
-                                <img className={styles["pg89__image"]} src={question.img} alt="" />
+                            <div key={index} className={styles["page89__question-item"]}>
+                                <img className={styles["page89__image"]} src={question.img} alt="" />
                                 <span>
                                     <strong>{String.fromCharCode(97 + index)}.</strong>
                                     <input
                                         type="text"
                                         value={inputValues[index]}
                                         onChange={(e) => handleInputChange(e.target.value, index)}
-                                        className={styles["pg89__input"]}
+                                        className={styles["page89__input"]}
                                     />
                                     <span
-                                        className={styles["pg89__clickable-text"]}
+                                        className={styles["page89__clickable-text"]}
                                         onClick={() => playAudio(question.audio)}
                                     >
                                         {question.sentence}
                                     </span>
                                 </span>
-                                <div className={styles["pg89__icons-container"]}>
+                                <div className={styles["page89__icons-container"]}>
                                     {results[index] !== null && (
                                         <img
                                             src={results[index] ? correct_icon : wrong_icon}
                                             alt={results[index] ? "Correct" : "Incorrect"}
-                                            className={styles["pg89__icon-check"]}
+                                            className={styles["page89__icon-check"]}
                                         />
                                     )}
                                 </div>
@@ -139,35 +139,35 @@ const Pagina89 = () => {
                         ))}
                     </div>
 
-                    <div className={styles["pg89__column"]}>
+                    <div className={styles["page89__column"]}>
                         {[
                             { img: pagina89_imagem4, sentence: "elephant.", audio: "pg89_audio4" },
                             { img: pagina89_imagem5, sentence: "lion.", audio: "pg89_audio5" },
                             { img: pagina89_imagem6, sentence: "ocean.", audio: "pg89_audio6" }
                         ].map((question, index) => (
-                            <div key={index + 3} className={styles["pg89__question-item"]}>
-                                <img className={styles["pg89__image"]} src={question.img} alt="" />
+                            <div key={index + 3} className={styles["page89__question-item"]}>
+                                <img className={styles["page89__image"]} src={question.img} alt="" />
                                 <span>
                                     <strong>{String.fromCharCode(100 + index)}.</strong>
                                     <input
                                         type="text"
                                         value={inputValues[index + 3]}
                                         onChange={(e) => handleInputChange(e.target.value, index + 3)}
-                                        className={styles["pg89__input"]}
+                                        className={styles["page89__input"]}
                                     />
                                     <span
-                                        className={styles["pg89__clickable-text"]}
+                                        className={styles["page89__clickable-text"]}
                                         onClick={() => playAudio(question.audio)}
                                     >
                                         {question.sentence}
                                     </span>
                                 </span>
-                                <div className={styles["pg89__icons-container"]}>
+                                <div className={styles["page89__icons-container"]}>
                                     {results[index + 3] !== null && (
                                         <img
                                             src={results[index + 3] ? correct_icon : wrong_icon}
                                             alt={results[index + 3] ? "Correct" : "Incorrect"}
-                                            className={styles["pg89__icon-check"]}
+                                            className={styles["page89__icon-check"]}
                                         />
                                     )}
                                 </div>
@@ -175,7 +175,7 @@ const Pagina89 = () => {
                         ))}
                     </div>
                 </div>
-                <button className={styles["pg89__check-button"]} onClick={handleCheckClick}>
+                <button className={styles["page89__check-button"]} onClick={handleCheckClick}>
                     <em>Check</em>
                 </button>
             </main>

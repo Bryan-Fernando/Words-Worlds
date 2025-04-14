@@ -9,13 +9,13 @@
     text-align: left;
 }
 
-.page86__title {
+.page86__header--title {
     font-size: 4rem;
     color: #A61C28;
     cursor: pointer;
 }
 
-.page86__subtitle {
+.page86__header--subtitle {
     font-size: 2.5rem;
     color: #A61C28;
     cursor: pointer;
@@ -32,7 +32,7 @@
 
 /* Este é um comentário */
 
-.page86__table-images-container {
+.page86__table--images--container {
     width: 100%;
     text-align: center;
     display: flex;
@@ -41,13 +41,13 @@
     gap: 5rem;
 }
 
-.pg86tabelaAfirmativaContainer,
-.pg86tabelaNegativaContainer {
+.page86__table--afirmativa--container,
+.page86__table--negativa--container {
     width: 100%;
 }
 
-.pg86tableHeaderAfirmativa,
-.pg86tableHeaderNegativa {
+.page86__table--header--afirmativa,
+.page86__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -59,17 +59,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg86styledTableAfirmativa,
-.pg86styledTableNegativa {
+.page86__styled--table--afirmativa,
+.page86__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg86styledTableAfirmativa th,
-.pg86styledTableNegativa th {
+.page86__styled--table--afirmativa th,
+.page86__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -79,17 +78,17 @@
     border: 1px solid #A61C28;
 }
 
-.pg86celulatable {
+.page86__cell--table {
     height: 7rem;
 }
 
-.page86__images-container {
+.page86__images--container {
     display: flex;
     flex-direction: column;
     gap: 10rem;
 }
 
-.page86__images-row {
+.page86__images--row {
     display: flex;
     justify-content: space-between;
     gap: 15rem;

@@ -110,29 +110,31 @@ const Pagina100 = () => {
 
 
     return (
-        <div className={styles.pg100Container}>
-            <header className={styles.pg100Header}>
-                <h1 className={styles.pg100H1}>Learning Language Exercises
+        <div className={styles["page100__container"]}>
+            <header className={styles["page100__header"]}>
+                <h1 className={styles["page100__h1"]}>
+                    Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg100HeaderIcon}
+                        className={styles["page100__header-icon"]}
                         onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg100HeaderIcon}
+                        className={styles["page100__header-icon"]}
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
-            <main className={styles.pg100Main}>
-                <div className={styles.pg100tabelaNegativaContainer}>
-                    <div className={styles.pg100tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg100styledTableNegativa}>
-                        <thead className={styles.pg100Thead}>
-                            <tr className={styles.pg100celulatable}>
+
+            <main className={styles["page100__main"]}>
+                <div className={styles["page100__tabela-negativa-container"]}>
+                    <div className={styles["page100__table-header-negativa"]}>NEGATIVA</div>
+                    <table className={styles["page100__styled-table-negativa"]}>
+                        <thead className={styles["page100__thead"]}>
+                            <tr className={styles["page100__table-row"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo <br /> Auxiliar</th>
@@ -144,86 +146,83 @@ const Pagina100 = () => {
                     </table>
                 </div>
 
-                <div className={styles.pg100ContainerQuestoes}>
-                    <div className={styles.pg100Questions1}>
-                        <p className={styles.pg100ATituloQuestion}>
+                <div className={styles["page100__container-questoes"]}>
+                    <div className={styles["page100__questions-1"]}>
+                        <p className={styles["page100__a-titulo-question"]}>
                             A) Fill in the blanks with the negative form, using the contracted forms: ('m not, isn't, or aren't).
-                            <span className={styles.pg100IconsContainer}>
+                            <span className={styles["page100__icons-container"]}>
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.pg100HeaderIcon}
+                                    className={styles["page100__header-icon"]}
                                     onClick={() => playAudio("pg100_audio1e")}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.pg100HeaderIcon}
+                                    className={styles["page100__header-icon"]}
                                     onClick={() => playAudio("pg100_audio1p")}
                                 />
                             </span>
                         </p>
-                        <div className={styles.pg100Questions1}>
-                        {[
-                            "I ____ married.",
-                            "We ____ at the club.",
-                            "You ____ Portuguese.",
-                            "It ____ cool.",
-                            "They ____ free (available).",
-                            "She ____ hungry.",
-                            "He ____ a musician.",
-                            "We ____ in London."
-                        ].map((question, index) => {
-                            const audioKey = `pg100_audio${index + 2}`;
-                            return (
-                                <div key={index} className={styles.pg100Question}>
-                                    <span><em>{question.split('____')[0]}</em></span>
-                                    <div className={styles.pg100InputContainer}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index]}
-                                            onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles.pg100InputBox}
-                                        />
-                                    </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles.pg100IconsContainer}>
-                                        {results[index] !== null && (
-                                            <img
-                                                src={results[index] ? correct_icon : wrong_icon}
-                                                alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles.pg100CheckmarkImage}
+                        <div className={styles["page100__questions-1"]}>
+                            {[
+                                "I ____ married.",
+                                "We ____ at the club.",
+                                "You ____ Portuguese.",
+                                "It ____ cool.",
+                                "They ____ free (available).",
+                                "She ____ hungry.",
+                                "He ____ a musician.",
+                                "We ____ in London."
+                            ].map((question, index) => {
+                                const audioKey = `pg100_audio${index + 2}`;
+                                return (
+                                    <div key={index} className={styles["page100__question"]}>
+                                        <span><em>{question.split('____')[0]}</em></span>
+                                        <div className={styles["page100__input-container"]}>
+                                            <input
+                                                type="text"
+                                                value={inputValues[index]}
+                                                onChange={(e) => handleInputChange(e.target.value, index)}
+                                                className={styles["page100__input-box"]}
                                             />
-                                        )}
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles.pg100AdditionalIcon}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles.pg100AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg100Pulsing : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
+                                        </div>
+                                        <span><em>{question.split('____')[1]}</em></span>
+                                        <div className={styles["page100__icons-container"]}>
+                                            {results[index] !== null && (
+                                                <img
+                                                    src={results[index] ? correct_icon : wrong_icon}
+                                                    alt={results[index] ? "Correct" : "Incorrect"}
+                                                    className={styles["page100__checkmark-image"]}
+                                                />
+                                            )}
+                                            <img
+                                                src={eng_audio_icon}
+                                                alt="Audio Icon"
+                                                className={styles["page100__additional-icon"]}
+                                                onClick={() => playAudio(audioKey)}
+                                            />
+                                            <img
+                                                src={slow_audio_icon}
+                                                alt="Volume Reduced Icon"
+                                                className={`${styles["page100__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page100__pulsing"] : ''}`}
+                                                onClick={() => toggleSpeedReduction(audioKey)}
+                                            />
+                                        </div>
                                     </div>
-                                </div>
-                            );
-                        })}
+                                );
+                            })}
+                        </div>
                     </div>
-                    </div>
-
-                    
-
                 </div>
 
                 {/* Tabela NEGATIVA */}
-                <div className={styles.pg100tabelaNegativaContainer}>
-                    <div className={styles.pg100tableHeaderNegativa}>NEGATIVA</div>
-                    <table className={styles.pg100styledTableNegativa}>
-                        <thead className={styles.pg100Thead}>
-                            <tr className={styles.pg100celulatable}>
+                <div className={styles["page100__tabela-negativa-container"]}>
+                    <div className={styles["page100__table-header-negativa"]}>NEGATIVA</div>
+                    <table className={styles["page100__styled-table-negativa"]}>
+                        <thead className={styles["page100__thead"]}>
+                            <tr className={styles["page100__table-row"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo <br /> Auxiliar</th>
@@ -235,19 +234,20 @@ const Pagina100 = () => {
                     </table>
                 </div>
 
-                <div className={styles.pg100ContainerQuestoes}>
-                    <div className={styles.pg100Questions1}>
-                        <p className={styles.pg100ATituloQuestion}>
-                            B) Change into the Negative Form, using (not). <img
+                <div className={styles["page100__container-questoes"]}>
+                    <div className={styles["page100__questions-1"]}>
+                        <p className={styles["page100__a-titulo-question"]}>
+                            B) Change into the Negative Form, using (not).
+                            <img
                                 src={eng_audio_icon}
                                 alt="English audio"
-                                className={styles.pg100HeaderIcon}
+                                className={styles["page100__header-icon"]}
                                 onClick={() => playAudio("pg100_audio10e")}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
-                                className={styles.pg100HeaderIcon}
+                                className={styles["page100__header-icon"]}
                                 onClick={() => playAudio("pg100_audio10p")}
                             />
                         </p>
@@ -262,13 +262,13 @@ const Pagina100 = () => {
                             "He is sad.",
                             "I am sleepy"
                         ].map((sentence, index) => (
-                            <div key={index + 8} className={styles.pg100Question}>
+                            <div key={index + 8} className={styles["page100__question"]}>
                                 <span><em><strong>{index + 1}.</strong> {sentence}</em></span>
                             </div>
                         ))}
                     </div>
 
-                    <div className={styles.pg100Questions1}>
+                    <div className={styles["page100__questions-1"]}>
                         {[
                             "I ____ sleepy.",
                             "He ____ sad.",
@@ -281,35 +281,35 @@ const Pagina100 = () => {
                         ].map((question, index) => {
                             const audioKey = `pg100_audio${index + 11}`;
                             return (
-                                <div key={index + 8} className={styles.pg100Question}>
+                                <div key={index + 8} className={styles["page100__question"]}>
                                     <span><em>{question.split('____')[0]}</em></span>
-                                    <div className={styles.pg100InputContainer}>
+                                    <div className={styles["page100__input-container"]}>
                                         <input
                                             type="text"
                                             value={inputValues[index + 8]}
                                             onChange={(e) => handleInputChange(e.target.value, index + 8)}
-                                            className={styles.pg100InputBox}
+                                            className={styles["page100__input-box"]}
                                         />
                                     </div>
                                     <span><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles.pg100IconsContainer}>
+                                    <div className={styles["page100__icons-container"]}>
                                         {results[index + 8] !== null && (
                                             <img
                                                 src={results[index + 8] ? correct_icon : wrong_icon}
                                                 alt={results[index + 8] ? "Correct" : "Incorrect"}
-                                                className={styles.pg100CheckmarkImage}
+                                                className={styles["page100__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg100AdditionalIcon}
+                                            className={styles["page100__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
-                                            className={`${styles.pg100AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg100Pulsing : ''}`}
+                                            className={`${styles["page100__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page100__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
@@ -317,11 +317,10 @@ const Pagina100 = () => {
                             );
                         })}
                     </div>
-
                 </div>
 
             </main>
-            <button className={styles.pg100CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            <button className={styles["page100__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
         </div>
     );
 };

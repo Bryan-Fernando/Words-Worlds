@@ -175,13 +175,13 @@ const pagina95 = () => {
     };
 
     return (
-        <div className={styles.pg95Container}>
-            <main className={styles.pg95Main}>
-                <div className={styles.pg95tabelaInterrogativaContainer}>
-                    <div className={styles.pg95tableHeaderInterrogativa}>INTERROGATIVA</div>
-                    <table className={styles.pg95styledTableInterrogativa}>
-                        <thead className={styles.pg95Thead}>
-                            <tr className={styles.pg95celulatable}>
+        <div className={styles["page95__container"]}>
+            <main className={styles["page95__main"]}>
+                <div className={styles["page95__table--interrogativa--container"]}>
+                    <div className={styles["page95__table--header--interrogativa"]}>INTERROGATIVA</div>
+                    <table className={styles["page95__styled--table--interrogativa"]}>
+                        <thead className={styles["page95__thead"]}>
+                            <tr className={styles["page95__cell--table"]}>
                                 <th>Palavras <br /> Interrogativas</th>
                                 <th>Verbo <br /> Auxiliar</th>
                                 <th>Sujeito</th>
@@ -194,34 +194,34 @@ const pagina95 = () => {
                 </div>
 
                 {/* Questões 1 */}
-                <div className={styles.pg95ContainerQuestoes}>
-                    <div className={styles.pg95Questions1}>
-                        <div className={styles.pg95Question}>
+                <div className={styles["page95__container--questoes"]}>
+                    <div className={styles["page95__questions--1"]}>
+                        <div className={styles["page95__question"]}>
                             <span>
-                                <p style={{color: '#A61C28'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do/does' or 'don't/doesn't'.
+                                <p style={{ color: '#A61C28', fontWeight: 'bold'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do/does' or 'don't/doesn't'.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
-                                        className={styles.pg95HeaderIcon}
+                                        className={styles["page95__header--icon"]}
                                         onClick={() => playAudio("pg95_audio1e")}
                                     />
-                                    <br /> <br /> 
-                                 <p style={{color: 'black'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do/does" ou "don't/doesn't".</p>
-                                <br />
+                                    <br /> <br />
+                                    <p style={{ color: 'black', fontWeight: 'bold'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do/does" ou "don't/doesn't".</p>
+                                    <br />
                                 </p>
-                                <em><strong>a.</strong>
+                                <em className={styles["page95__question--text"]}><strong>a.</strong>
                                     <input
                                         type="text"
                                         value={inputValues.questions1[0]}
                                         onChange={(e) => handleInputChange(e.target.value, 0, 'questions1')}
-                                        className={styles.pg95InputBoxSmall}
+                                        className={styles["page95__input--box--small"]}
                                     />
                                     she
                                     <input
                                         type="text"
                                         value={inputValues.questions1[1]}
                                         onChange={(e) => handleInputChange(e.target.value, 1, 'questions1')}
-                                        className={styles.pg95InputBoxSmall}
+                                        className={styles["page95__input--box--small"]}
                                     />
                                     ice cream? (Like)
 
@@ -230,14 +230,14 @@ const pagina95 = () => {
                                         <img
                                             src={results.questions1[0] && results.questions1[1] ? correct_icon : wrong_icon}
                                             alt={results.questions1[0] && results.questions1[1] ? "Correct" : "Incorrect"}
-                                            className={styles.pg95CheckmarkImage}
+                                            className={styles["page95__checkmark--image"]}
                                         />
                                     )}
 
                                     <img
                                         src={eng_audio_icon}
                                         alt="Audio Icon"
-                                        className={styles.pg95AdditionalIcon}
+                                        className={styles["page95__additional--icon"]}
                                         onClick={() => playAudio("pg95_audio2")}
                                     />
                                 </em>
@@ -246,21 +246,21 @@ const pagina95 = () => {
 
                         {/* Repete para as demais perguntas */}
                         {[1, 2, 3, 4].map((index) => (
-                            <div key={index} className={styles.pg95Question}>
-                                <span>
+                            <div key={index} className={styles["page95__question"]}>
+                                <span className={styles["page95__question--text"]}>
                                     <em><strong>{String.fromCharCode(97 + index)}.</strong>
                                         <input
                                             type="text"
                                             value={inputValues.questions1[index * 2]}
                                             onChange={(e) => handleInputChange(e.target.value, index * 2, 'questions1')}
-                                            className={styles.pg95InputBoxSmall}
+                                            className={styles["page95__input--box--small"]}
                                         />
                                         {index === 3 ? "the children" : index === 4 ? "you" : "they"}
                                         <input
                                             type="text"
                                             value={inputValues.questions1[index * 2 + 1]}
                                             onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions1')}
-                                            className={styles.pg95InputBoxSmall}
+                                            className={styles["page95__input--box--small"]}
                                         />
                                         {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays? (Play)" : index === 2 ? "on Sundays? (Work)" : index === 3 ? "TV in the evening? (Watch)" : "Spanish? (Speak)"}
 
@@ -269,14 +269,14 @@ const pagina95 = () => {
                                             <img
                                                 src={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? correct_icon : wrong_icon}
                                                 alt={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? "Correct" : "Incorrect"}
-                                                className={styles.pg95CheckmarkImage}
+                                                className={styles["page95__checkmark--image"]}
                                             />
                                         )}
 
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg95AdditionalIcon}
+                                            className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(`pg95_audio${index + 2}`)}
                                         />
                                     </em>
@@ -287,9 +287,9 @@ const pagina95 = () => {
                     </div>
 
                     {/* Short Answers (right side) */}
-                    <div className={styles.pg95ShortAnswers}>
+                    <div className={styles["page95__short-answers--header"]}>
                         <h2>Short Answers</h2>
-                        <table className={styles.pg95styledTableShortAnswers}>
+                        <table className={styles["page95__styled--table--short-answers"]}>
                             <thead>
                                 <tr>
                                     <th><p>Affirmative</p></th>
@@ -302,19 +302,19 @@ const pagina95 = () => {
                                     const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[index] || [];
 
                                     return (
-                                        <tr key={index}>
-                                            <td>
+                                        <tr key={index} >
+                                            <td >
                                                 <input
                                                     type="text"
                                                     value={inputValues.shortAnswers1[index * 2]} // Acessa a resposta afirmativa
                                                     onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers1')}
-                                                    className={styles.pg95InputBoxColumn}
+                                                    className={styles["page95__input--box--column"]}
                                                 />
                                                 {results.shortAnswers1[index * 2] !== null && (
                                                     <img
                                                         src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
                                                         alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
-                                                        className={styles.pg95CheckmarkImage}
+                                                        className={styles["page95__checkmark--image"]}
                                                     />
                                                 )}
                                             </td>
@@ -323,33 +323,27 @@ const pagina95 = () => {
                                                     type="text"
                                                     value={inputValues.shortAnswers1[index * 2 + 1]} // Acessa a resposta negativa
                                                     onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers1')}
-                                                    className={styles.pg95InputBoxColumn}
+                                                    className={styles["page95__input--box--column"]}
                                                 />
                                                 {results.shortAnswers1[index * 2 + 1] !== null && (
                                                     <img
                                                         src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
                                                         alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
-                                                        className={styles.pg95CheckmarkImage}
+                                                        className={styles["page95__checkmark--image"]}
                                                     />
                                                 )}
                                             </td>
                                         </tr>
                                     );
                                 })}
-
                             </tbody>
-
-
-
-
                         </table>
                     </div>
                 </div>
 
-
                 {/* Questões 2 */}
-                <div className={styles.pg95ContainerQuestoes}>
-                    <div className={styles.pg95Questions2}>
+                <div className={styles["page95__container--questoes"]}>
+                    <div className={styles["page95__questions--2"]}>
                         {[
                             "she __ before going to bed?",
                             "they __ every morning?",
@@ -363,8 +357,8 @@ const pagina95 = () => {
                                 results.questions2[index * 2 + 1] === true;
 
                             return (
-                                <div key={index} className={styles.pg95Question}>
-                                    <span>
+                                <div key={index} className={styles["page95__question"]}>
+                                    <span className={styles["page95__question--text"]}>
                                         <em>
                                             <strong>{String.fromCharCode(97 + index)}.</strong>
                                             <input
@@ -373,7 +367,7 @@ const pagina95 = () => {
                                                 onChange={(e) =>
                                                     handleInputChange(e.target.value, index * 2, 'questions2')
                                                 }
-                                                className={styles.pg95InputBoxSmall}
+                                                className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[0]}
                                             <input
@@ -382,7 +376,7 @@ const pagina95 = () => {
                                                 onChange={(e) =>
                                                     handleInputChange(e.target.value, index * 2 + 1, 'questions2')
                                                 }
-                                                className={styles.pg95InputBoxSmall}
+                                                className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[1]}
                                         </em>
@@ -393,7 +387,7 @@ const pagina95 = () => {
                                                 <img
                                                     src={isCorrect ? correct_icon : wrong_icon}
                                                     alt={isCorrect ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
 
@@ -401,7 +395,7 @@ const pagina95 = () => {
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg95AdditionalIcon}
+                                            className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                     </span>
@@ -410,12 +404,10 @@ const pagina95 = () => {
                         })}
                     </div>
 
-
                     {/* Short Answers (right side) */}
-                    <div className={styles.pg95ShortAnswers}>
-                        <table className={styles.pg95styledTableShortAnswers}>
-                            <thead>
-                            </thead>
+                    <div className={styles["page95__short-answers"]}>
+                        <table className={styles["page95__styled--table--short-answers"]}>
+                            <thead></thead>
                             <tbody>
                                 {Array.from({ length: 5 }).map((_, index) => (
                                     <tr key={index}>
@@ -424,13 +416,13 @@ const pagina95 = () => {
                                                 type="text"
                                                 value={inputValues.shortAnswers2[index * 2]}
                                                 onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers2')}
-                                                className={styles.pg95InputBoxColumn}
+                                                className={styles["page95__input--box--column"]}
                                             />
                                             {results.shortAnswers2[index * 2] !== null && (
                                                 <img
                                                     src={results.shortAnswers2[index * 2] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers2[index * 2] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
                                         </td>
@@ -439,13 +431,13 @@ const pagina95 = () => {
                                                 type="text"
                                                 value={inputValues.shortAnswers2[index * 2 + 1]}
                                                 onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers2')}
-                                                className={styles.pg95InputBoxColumn}
+                                                className={styles["page95__input--box--column"]}
                                             />
                                             {results.shortAnswers2[index * 2 + 1] !== null && (
                                                 <img
                                                     src={results.shortAnswers2[index * 2 + 1] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers2[index * 2 + 1] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
                                         </td>
@@ -456,10 +448,9 @@ const pagina95 = () => {
                     </div>
                 </div>
 
-
                 {/* Questões 3 */}
-                <div className={styles.pg95ContainerQuestoes}>
-                    <div className={styles.pg95Questions3}>
+                <div className={styles["page95__container--questoes"]}>
+                    <div className={styles["page95__questions--3"]}>
                         {[
                             "she __ tea or coffee?",
                             "they __ to watch movies on weekends?",
@@ -473,8 +464,8 @@ const pagina95 = () => {
                                 results.questions3[index * 2 + 1] === true;
 
                             return (
-                                <div key={index} className={styles.pg95Question}>
-                                    <span>
+                                <div key={index} className={styles["page95__question"]}>
+                                    <span className={styles["page95__question--text"]}>
                                         <em>
                                             <strong>{String.fromCharCode(97 + index)}.</strong>
                                             <input
@@ -483,7 +474,7 @@ const pagina95 = () => {
                                                 onChange={(e) =>
                                                     handleInputChange(e.target.value, index * 2, 'questions3')
                                                 }
-                                                className={styles.pg95InputBoxSmall}
+                                                className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[0]}
                                             <input
@@ -492,7 +483,7 @@ const pagina95 = () => {
                                                 onChange={(e) =>
                                                     handleInputChange(e.target.value, index * 2 + 1, 'questions3')
                                                 }
-                                                className={styles.pg95InputBoxSmall}
+                                                className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[1]}
                                         </em>
@@ -503,7 +494,7 @@ const pagina95 = () => {
                                                 <img
                                                     src={isCorrect ? correct_icon : wrong_icon}
                                                     alt={isCorrect ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
 
@@ -511,7 +502,7 @@ const pagina95 = () => {
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg95AdditionalIcon}
+                                            className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
                                     </span>
@@ -521,10 +512,9 @@ const pagina95 = () => {
                     </div>
 
                     {/* Short Answers (right side) */}
-                    <div className={styles.pg95ShortAnswers}>
-                        <table className={styles.pg95styledTableShortAnswers}>
-                            <thead>
-                            </thead>
+                    <div className={styles["page95__short-answers"]}>
+                        <table className={styles["page95__styled--table--short-answers"]}>
+                            <thead></thead>
                             <tbody>
                                 {Array.from({ length: 5 }).map((_, index) => (
                                     <tr key={index}>
@@ -533,13 +523,13 @@ const pagina95 = () => {
                                                 type="text"
                                                 value={inputValues.shortAnswers3[index * 2]}
                                                 onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers3')}
-                                                className={styles.pg95InputBoxColumn}
+                                                className={styles["page95__input--box--column"]}
                                             />
                                             {results.shortAnswers3[index * 2] !== null && (
                                                 <img
                                                     src={results.shortAnswers3[index * 2] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers3[index * 2] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
                                         </td>
@@ -548,13 +538,13 @@ const pagina95 = () => {
                                                 type="text"
                                                 value={inputValues.shortAnswers3[index * 2 + 1]}
                                                 onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers3')}
-                                                className={styles.pg95InputBoxColumn}
+                                                className={styles["page95__input--box--column"]}
                                             />
                                             {results.shortAnswers3[index * 2 + 1] !== null && (
                                                 <img
                                                     src={results.shortAnswers3[index * 2 + 1] ? correct_icon : wrong_icon}
                                                     alt={results.shortAnswers3[index * 2 + 1] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg95CheckmarkImage}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
                                         </td>
@@ -565,7 +555,7 @@ const pagina95 = () => {
                     </div>
                 </div>
             </main>
-            <button className={styles.pg95ButtonCheck} onClick={handleCheckClick}>
+            <button className={styles["page95__button--check"]} onClick={handleCheckClick}>
                 <em>Check</em>
             </button>
         </div>

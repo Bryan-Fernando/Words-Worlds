@@ -1,4 +1,4 @@
-.pg103Container {
+.page103__container {
     display: flex;
     flex-direction: column;
     margin-left: 0;
@@ -6,17 +6,17 @@
     padding-left: 0;
 }
 
-.pg103Header {
+.page103__header {
     width: 100%;
 }
 
-.pg103H1 {
+.page103__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg103H2 {
+.page103__h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -24,32 +24,31 @@
     font-weight: bold;
 }
 
-.pg103Main {
+.page103__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
 }
 
-.pg103Aside {
+.page103__aside {
     width: 100%;
     display: flex;
 }
 
-/* Este é um comentário */
-
-.pg103ContainerQuestoes {
+/* Container de questões */
+.page103__container--questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg103Questions1,
-.pg103Questions2 {
+.page103__questions1,
+.page103__questions2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg103Question {
+.page103__question {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -58,27 +57,27 @@
     text-align: left;
 }
 
-.pg103Question span {
+.page103__question span {
     font-size: 1.9rem;
     font-weight: bold;
     color: black;
 }
 
-.pg103Header p{
+.page103__header p {
     font-size: 2rem;
     text-align: left;
     font-weight: bold;
     margin-top: 5rem;
 }
 
-.pg103TituloQuestion {
+.page103__titulo--question {
     text-align: left;
     font-weight: bold;
     font-size: 2rem;
     color: #A61C28;
 }
 
-.pg103SelectBox {
+.page103__select--box {
     width: 25rem;
     padding: 0.5rem;
     font-size: 1.6rem;
@@ -90,13 +89,13 @@
     text-align: left;
 }
 
-.pg103CheckmarkImage {
+.page103__checkmark--image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg103CheckButton {
+.page103__check--button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -112,45 +111,44 @@
     width: fit-content;
 }
 
-.pg103CheckButton:hover {
+.page103__check--button:hover {
     background-color: #8a1720;
 }
 
-
-.pg103IconsContainer {
+.page103__icons--container {
     display: flex;
     align-items: center;
     margin-left: 5px;
 }
 
-.pg103AdditionalIcon {
+.page103__additional--icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg103AdditionalIcon.pg103Pulsing {
+.page103__additional--icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg103AdditionalIcon:hover {
+.page103__additional--icon:hover {
     transform: scale(1.2);
 }
 
-.pg103imagem {
+.page103__imagem {
     width: 37rem;
     height: 27rem;
 }
 
-.pg103tabelaAfirmativaContainer,
-.pg103tabelaNegativaContainer {
+.page103__tabela--afirmativa--container,
+.page103__tabela--negativa--container {
     width: 70%;
     height: 10rem;
 }
 
-.pg103tableHeaderAfirmativa,
-.pg103tableHeaderNegativa {
+.page103__table--header--afirmativa,
+.page103__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -162,17 +160,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg103styledTableAfirmativa,
-.pg103styledTableNegativa {
+.page103__styled--table--afirmativa,
+.page103__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg103styledTableAfirmativa th,
-.pg103styledTableNegativa th {
+.page103__styled--table--afirmativa th,
+.page103__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -182,18 +179,18 @@
     border: 1px solid #A61C28;
 }
 
-.pg103celulatable {
+.page103__celula--table {
     height: 7rem;
 }
 
-.pg103ContainerImagem {
+.page103__container--imagem {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 28rem;
 }
 
-.pg103HeaderIcon {
+.page103__header--icon {
     width: 2rem; /* Tamanho do ícone */
     height: 2rem;
     margin-left: 8px;
@@ -201,6 +198,6 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg103HeaderIcon:hover {
+.page103__header--icon:hover {
     transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
 }

@@ -1,4 +1,4 @@
-.pg97Container {
+.page97__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,17 +7,17 @@
     padding-left: 0;
 }
 
-.pg97Header {
+.page97__header {
     width: 100%;
 }
 
-.pg97H1 {
+.page97__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg97H2 {
+.page97__h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-.pg97Main {
+.page97__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
@@ -33,25 +33,24 @@
 
 /* Este é um comentário */
 
-.pg97ContainerQuestoes {
+.page97__container-questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg97PrimeirasQuestoes {
+.page97__primeiras-questoes {
     display: flex;
     flex-direction: column;
-
 }
 
-.pg97Questions1,
-.pg97Questions2 {
+.page97__questions-1,
+.page97__questions-2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg97Question {
+.page97__question {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -60,23 +59,23 @@
     text-align: left;
 }
 
-.pg97Question span {
+.page97__question span {
     font-size: 1.8rem;
     font-weight: bold;
     color: black;
 }
 
-.pg97ATituloQuestion {
+.page97__a-titulo-question {
     font-weight: bold;
     font-size: 1.8rem;
 }
 
-.pg97NumeroQuestion {
+.page97__numero-question {
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg97InputBox {
+.page97__input-box {
     width: 100%;
     padding: .5rem;
     font-size: 1.6rem;
@@ -88,7 +87,7 @@
     text-align: left;
 }
 
-.pg97InputContainer {
+.page97__input-container {
     width: 25%;
     gap: 1rem;
     position: relative;
@@ -96,13 +95,13 @@
     align-items: center;
 }
 
-.pg97CheckmarkImage {
+.page97__checkmark-image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg97CheckButton {
+.page97__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -120,37 +119,37 @@
     width: fit-content;
 }
 
-.pg97CheckButton:hover {
+.page97__check-button:hover {
     background-color: #8a1720;
 }
 
-.pg97IconsContainer {
+.page97__icons-container {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 5px;
 }
 
-.pg97AdditionalIcon {
+.page97__additional-icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg97AdditionalIcon.pg97Pulsing {
+.page97__additional-icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg97AdditionalIcon:hover {
+.page97__additional-icon:hover {
     transform: scale(1.2);
 }
 
-.pg97tabelaAfirmativaContainer {
+.page97__tabela-afirmativa-container {
     width: 100%;
 }
 
-.pg97tableHeaderAfirmativa {
+.page97__table-header-afirmativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -162,15 +161,14 @@
     margin-bottom: 0.2rem;
 }
 
-.pg97styledTableAfirmativa {
+.page97__styled-table-afirmativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg97styledTableAfirmativa th{
+.page97__styled-table-afirmativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -180,7 +178,7 @@
     border: 1px solid #A61C28;
 }
 
-.pg97celulatable {
+.page97__celula-table {
     height: 7rem;
 }
 
@@ -218,7 +216,7 @@
     border: 0.3rem solid #A61C28;
 }
 
-.highlight {
+.page97__highlight {
     color: #A61C28;
 }
 
@@ -232,23 +230,23 @@
     border: 0.0625rem solid #A61C28;
 }
 
-.pg97ContainerImagem {
+.page97__container-imagem {
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pg97imagem {
+.page97__imagem {
     width: 100%;
 }
 
-.pg97spaminput {
+.page97__spam-input {
     width: 15%;
 }
 
-.pg97HeaderIcon,
-.pg97AdditionalIcon {
+.page97__header-icon,
+.page97__additional-icon {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
@@ -256,12 +254,11 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.pg97HeaderIcon:hover,
-.pg97AdditionalIcon:hover {
+.page97__header-icon:hover,
+.page97__additional-icon:hover {
     transform: scale(1.2);
     /* Aumenta o ícone ao passar o mouse */
 }
-
 
 @keyframes pulse {
     0% {

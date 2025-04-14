@@ -11,13 +11,13 @@
     width: 100%;
 }
 
-.page87__title {
+.page87__header--title {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.page87__subtitle {
+.page87__header--subtitle {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-.page87__subtitle-black {
+.page87__header--subtitle--black {
     text-align: left;
     font-size: 2.5rem;
     margin-bottom: 2rem;
@@ -45,18 +45,18 @@
 
 /* Este é um comentário */
 
-.page87__questions-container {
+.page87__questions--container {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.page87__questions-list {
+.page87__questions--list {
     margin-top: 2rem;
     text-align: left;
 }
 
-.page87__question-item {
+.page87__question--item {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -65,13 +65,13 @@
     text-align: left;
 }
 
-.page87__question-item span {
+.page87__question--item span {
     font-size: 1.4rem;
     font-weight: bold;
     color: black;
 }
 
-.page87__question-item strong {
+.page87__question--item strong {
     font-size: 1.5rem;
 }
 
@@ -87,7 +87,7 @@
     text-align: left;
 }
 
-.page87__input-container {
+.page87__input--container {
     width: 15%;
     gap: 1rem;
     position: relative;
@@ -95,7 +95,7 @@
     align-items: center;
 }
 
-.page87__icon-check {
+.page87__icon--check {
     width: 2.5rem;
     height: 2.5rem;
 }
@@ -121,7 +121,7 @@
     background-color: #8a1720;
 }
 
-.page87__icons-container {
+.page87__icons--container {
     display: flex;
     align-items: center;
     gap: 1rem;
@@ -161,7 +161,7 @@
     transform: rotate(6deg);
 }
 
-.page87__images-container {
+.page87__images--container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -171,13 +171,13 @@
     gap: 1rem;
 }
 
-.pg87tabelaAfirmativaContainer,
-.pg87tabelaNegativaContainer {
+.page87__table--afirmativa--container,
+.page87__table--negativa--container {
     width: 100%;
 }
 
-.pg87tableHeaderAfirmativa,
-.pg87tableHeaderNegativa {
+.page87__table--header--afirmativa,
+.page87__table--header--negativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -189,17 +189,16 @@
     margin-bottom: 0.2rem;
 }
 
-.pg87styledTableAfirmativa,
-.pg87styledTableNegativa {
+.page87__styled--table--afirmativa,
+.page87__styled--table--negativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg87styledTableAfirmativa th,
-.pg87styledTableNegativa th {
+.page87__styled--table--afirmativa th,
+.page87__styled--table--negativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -209,23 +208,22 @@
     border: 1px solid #A61C28;
 }
 
-.pg87celulatable {
+.page87__cell--table {
     height: 7rem;
 }
 
-.page87__header-icon {
+.page87__header--icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
 }
 
-
 @media (max-width: 1024px) {
-    .page87__question-item span {
+    .page87__question--item span {
         font-size: 2rem;
     }
 
-    .page87__images-container {
+    .page87__images--container {
         height: fit-content;
     }
 
@@ -234,7 +232,7 @@
         height: 19rem;
     }
 
-    .page87__questions-container {
+    .page87__questions--container {
         flex-direction: column;
     }
 

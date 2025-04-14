@@ -1,4 +1,4 @@
-.pg98Container {
+.page98__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -7,17 +7,17 @@
     padding-left: 0;
 }
 
-.pg98Header {
+.page98__header {
     width: 100%;
 }
 
-.pg98H1 {
+.page98__h1 {
     text-align: left;
     font-size: 6rem;
     color: #8a1720;
 }
 
-.pg98H2 {
+.page98__h2 {
     text-align: left;
     font-size: 2.5rem;
     color: #8a1720;
@@ -25,7 +25,7 @@
     font-weight: bold;
 }
 
-.pg98Main {
+.page98__main {
     display: flex;
     flex-direction: column;
     gap: 7rem;
@@ -33,25 +33,24 @@
 
 /* Este é um comentário */
 
-.pg98ContainerQuestoes {
+.page98__container-questoes {
     display: flex;
     justify-content: space-between;
     width: 100%;
 }
 
-.pg98PrimeirasQuestoes {
+.page98__primeiras-questoes {
     display: flex;
     flex-direction: column;
-
 }
 
-.pg98Questions1,
-.pg98Questions2 {
+.page98__questions-1,
+.page98__questions-2 {
     margin-top: 2rem;
     text-align: left;
 }
 
-.pg98Question {
+.page98__question {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -60,23 +59,23 @@
     text-align: left;
 }
 
-.pg98Question span {
+.page98__question span {
     font-size: 1.6rem;
     font-weight: bold;
     color: black;
 }
 
-.pg98ATituloQuestion {
+.page98__a-titulo-question {
     font-weight: bold;
     font-size: 1.7rem;
 }
 
-.pg98NumeroQuestion {
+.page98__numero-question {
     font-weight: bold;
     font-size: 2rem;
 }
 
-.pg98InputBox {
+.page98__input-box {
     width: 100%;
     padding: .5rem;
     font-size: 1.6rem;
@@ -88,7 +87,7 @@
     text-align: left;
 }
 
-.pg98InputContainer {
+.page98__input-container {
     width: 25%;
     gap: 1rem;
     position: relative;
@@ -96,13 +95,13 @@
     align-items: center;
 }
 
-.pg98CheckmarkImage {
+.page98__checkmark-image {
     width: 2.5rem;
     height: 2.5rem;
     pointer-events: none;
 }
 
-.pg98CheckButton {
+.page98__check-button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -120,37 +119,37 @@
     width: fit-content;
 }
 
-.pg98CheckButton:hover {
+.page98__check-button:hover {
     background-color: #8a1720;
 }
 
-.pg98IconsContainer {
+.page98__icons-container {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-left: 5px;
 }
 
-.pg98AdditionalIcon {
+.page98__additional-icon {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-.pg98AdditionalIcon.pg98Pulsing {
+.page98__additional-icon--pulsing {
     animation: pulse 1s infinite;
 }
 
-.pg98AdditionalIcon:hover {
+.page98__additional-icon:hover {
     transform: scale(1.2);
 }
 
-.pg98tabelaAfirmativaContainer {
+.page98__tabela-afirmativa-container {
     width: 100%;
 }
 
-.pg98tableHeaderAfirmativa {
+.page98__table-header-afirmativa {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -162,15 +161,14 @@
     margin-bottom: 0.2rem;
 }
 
-.pg98styledTableAfirmativa {
+.page98__styled-table-afirmativa {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
 
-
-.pg98styledTableAfirmativa th{
+.page98__styled-table-afirmativa th {
     background-color: #888A8C;
     color: white;
     text-align: center;
@@ -180,7 +178,7 @@
     border: 1px solid #A61C28;
 }
 
-.pg98celulatable {
+.page98__celula-table {
     height: 7rem;
 }
 
@@ -218,7 +216,7 @@
     border: 0.3rem solid #A61C28;
 }
 
-.highlight {
+.page98__highlight {
     color: #A61C28;
 }
 
@@ -232,32 +230,31 @@
     border: 0.0625rem solid #A61C28;
 }
 
-.pg98ContainerImagem {
+.page98__container-imagem {
     width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.pg98imagem {
+.page98__imagem {
     width: 100%;
 }
 
-.pg98spaminput {
+.page98__spam-input {
     width: 15%;
 }
 
-.pg98HeaderIcon {
+.page98__header-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.pg98HeaderIcon:hover {
+.page98__header-icon:hover {
     transform: scale(1.1);
 }
-
 
 @keyframes pulse {
     0% {

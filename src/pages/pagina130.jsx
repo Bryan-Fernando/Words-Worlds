@@ -3,17 +3,6 @@ import React, { useState } from 'react';
 import styles from './pagina130.module.css';
 
 const Pagina130 = () => {
-    const [inputValues, setInputValues] = useState(
-        Array(6).fill(Array(6).fill(''))
-    );
-
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
-    };
 
     return (
         <div>

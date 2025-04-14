@@ -107,31 +107,31 @@ const Pagina97 = () => {
     };
 
     return (
-        <div className={styles.pg97Container}>
-            <header className={styles.pg97Header}>
-                <h1 className={styles.pg97H1}>
+        <div className={styles["page97__container"]}>
+            <header className={styles["page97__header"]}>
+                <h1 className={styles["page97__h1"]}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg97HeaderIcon}
+                        className={styles["page97__header-icon"]}
                         onClick={() => playAudio("global_learning_le_e")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg97HeaderIcon}
+                        className={styles["page97__header-icon"]}
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
             </header>
 
-            <main className={styles.pg97Main}>
-                <div className={styles.pg97tabelaAfirmativaContainer}>
-                    <div className={styles.pg97tableHeaderAfirmativa}>AFIRMATIVA</div>
-                    <table className={styles.pg97styledTableAfirmativa}>
-                        <thead className={styles.pg97Thead}>
-                            <tr className={styles.pg97celulatable}>
+            <main className={styles["page97__main"]}>
+                <div className={styles["page97__tabela-afirmativa-container"]}>
+                    <div className={styles["page97__table-header-afirmativa"]}>AFIRMATIVA</div>
+                    <table className={styles["page97__styled-table-afirmativa"]}>
+                        <thead className={styles["page97__thead"]}>
+                            <tr className={styles["page97__table-row"]}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
                                 <th>Verbo <br /> Auxiliar</th>
@@ -142,24 +142,25 @@ const Pagina97 = () => {
                         </thead>
                     </table>
                 </div>
-                <div className={styles.pg97PrimeirasQuestoes}>
-                    <div className={styles.pg97ContainerQuestoes}>
-                        <div className={styles.pg97Questions1}>
-                            <p className={styles.pg97ATituloQuestion}>Complete the sentences with the correct form of the verbs in parentheses:
+                <div className={styles["page97__primeiras-questoes"]}>
+                    <div className={styles["page97__container-questoes"]}>
+                        <div className={styles["page97__questions-1"]}>
+                            <p className={styles["page97__a-titulo-question"]}>
+                                Complete the sentences with the correct form of the verbs in parentheses:
                                 <img
                                     src={eng_audio_icon}
                                     alt="English audio"
-                                    className={styles.pg97HeaderIcon}
+                                    className={styles["page97__header-icon"]}
                                     onClick={() => playAudio("pg97_audio1e")}
                                 />
                                 <img
                                     src={ptbr_audio_icon}
                                     alt="Portuguese audio"
-                                    className={styles.pg97HeaderIcon}
+                                    className={styles["page97__header-icon"]}
                                     onClick={() => playAudio("pg97_audio1p")}
                                 />
                             </p>
-                            <p className={styles.pg97NumeroQuestion}>1.</p>
+                            <p className={styles["page97__numero-question"]}>1.</p>
                             {["He ____  (work) at a restaurant as a waiter.",
                                 "The cat ____ (sleep) on the sofa all afternoon.",
                                 "She ____ (read) a novel every evening before bed.",
@@ -182,50 +183,49 @@ const Pagina97 = () => {
                                 }
 
                                 return (
-                                    <div key={index} className={styles.pg97Question}>
+                                    <div key={index} className={styles["page97__question"]}>
                                         <span>
                                             <em>
                                                 <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
                                             </em>
                                         </span>
-                                        <div className={styles.pg97InputContainer}>
+                                        <div className={styles["page97__input-container"]}>
                                             <input
                                                 type="text"
                                                 value={inputValues[index]}
                                                 onChange={(e) => handleInputChange(e.target.value, index)}
-                                                className={styles.pg97InputBox}
+                                                className={styles["page97__input-box"]}
                                             />
                                         </div>
                                         <span><em>{parts[1]}</em></span>
-                                        <div className={styles.pg97IconsContainer}>
+                                        <div className={styles["page97__icons-container"]}>
                                             {results[index] !== null && (
                                                 <img
                                                     src={results[index] ? correct_icon : wrong_icon}
                                                     alt={results[index] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg97CheckmarkImage}
+                                                    className={styles["page97__checkmark-image"]}
                                                 />
                                             )}
                                             <img
                                                 src={eng_audio_icon}
                                                 alt="Audio English"
-                                                className={styles.pg97AdditionalIcon}
+                                                className={styles["page97__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
                                             />
-
                                         </div>
                                     </div>
                                 );
                             })}
                         </div>
 
-
-
-                        <div className={styles.pg97ContainerImagem}> <img className={styles.pg97imagem} src={Pagina97_imagem1} alt="" /></div>
+                        <div className={styles["page97__container-imagem"]}>
+                            <img className={styles["page97__imagem"]} src={Pagina97_imagem1} alt="" />
+                        </div>
                     </div>
 
-                    <div className={styles.pg97ContainerQuestoes}>
-                        <div className={styles.pg97Questions1}>
-                            <p className={styles.pg97NumeroQuestion}>2.</p>
+                    <div className={styles["page97__container-questoes"]}>
+                        <div className={styles["page97__questions-1"]}>
+                            <p className={styles["page97__numero-question"]}>2.</p>
                             {["Water ____ (boil) at 100 degrees Celsius.",
                                 "English ____ (have) many irregular verbs.",
                                 "Plants ____ (need) sunlight to grow."
@@ -234,33 +234,33 @@ const Pagina97 = () => {
                                 const audioKey = `pg97_audio${index + 7}`;
 
                                 return (
-                                    <div key={index} className={styles.pg97Question}>
+                                    <div key={index} className={styles["page97__question"]}>
                                         <span>
                                             <em>
                                                 <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
                                             </em>
                                         </span>
-                                        <div className={styles.pg97InputContainer}>
+                                        <div className={styles["page97__input-container"]}>
                                             <input
                                                 type="text"
                                                 value={inputValues[index + 5]}
                                                 onChange={(e) => handleInputChange(e.target.value, index + 5)}
-                                                className={styles.pg97InputBox}
+                                                className={styles["page97__input-box"]}
                                             />
                                         </div>
                                         <span><em>{parts[1]}</em></span>
-                                        <div className={styles.pg97IconsContainer}>
+                                        <div className={styles["page97__icons-container"]}>
                                             {results[index + 5] !== null && (
                                                 <img
                                                     src={results[index + 5] ? correct_icon : wrong_icon}
                                                     alt={results[index + 5] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg97CheckmarkImage}
+                                                    className={styles["page97__checkmark-image"]}
                                                 />
                                             )}
                                             <img
                                                 src={eng_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles.pg97AdditionalIcon}
+                                                alt="Audio English"
+                                                className={styles["page97__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
                                             />
                                         </div>
@@ -269,7 +269,9 @@ const Pagina97 = () => {
                             })}
                         </div>
 
-                        <div className={styles.pg97ContainerImagem}> <img className={styles.pg97imagem} src={Pagina97_imagem2} alt="" /></div>
+                        <div className={styles["page97__container-imagem"]}>
+                            <img className={styles["page97__imagem"]} src={Pagina97_imagem2} alt="" />
+                        </div>
                     </div>
                 </div>
                 <div className={styles["page97__table-interrogative-container"]}>
@@ -287,9 +289,9 @@ const Pagina97 = () => {
                         </thead>
                     </table>
                 </div>
-                <div className={styles.pg97ContainerQuestoes}>
-                    <div className={styles.pg97Questions2}>
-                        <p className={styles.pg97NumeroQuestion}>3.</p>
+                <div className={styles["page97__container-questoes"]}>
+                    <div className={styles["page97__questions-2"]}>
+                        <p className={styles["page97__numero-question"]}>3.</p>
                         {[
                             "____ she ____ (work) at the hospital?",
                             "____ they ____ (play) soccer on weekends?",
@@ -297,11 +299,10 @@ const Pagina97 = () => {
                             "____ you ____ (enjoy) hiking in the mountains?"
                         ].map((question, index) => {
                             const parts = question.split('____');
-                            const audioKey = `pg97_audio${index + 10}`; // Ajuste para o áudio correto
+                            const audioKey = `pg97_audio${index + 10}`;
 
-                            // Para lidar com questões que têm múltiplos campos
                             return (
-                                <div key={index + 10} className={styles.pg97Question}>
+                                <div key={index + 10} className={styles["page97__question"]}>
                                     <span>
                                         <em>
                                             <strong>{String.fromCharCode(97 + index)}.</strong>
@@ -310,24 +311,24 @@ const Pagina97 = () => {
                                     {parts.map((part, fieldIndex) => (
                                         <React.Fragment key={fieldIndex}>
                                             {fieldIndex === 0 && (
-                                                <span className={styles.pg97spaminput}>
+                                                <span className={styles["page97__spam-input"]}>
                                                     <input
                                                         type="text"
                                                         value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
                                                         onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
-                                                        className={styles.pg97InputBox}
+                                                        className={styles["page97__input-box"]}
                                                     />
                                                 </span>
                                             )}
                                             {fieldIndex > 0 && fieldIndex < parts.length - 1 && (
                                                 <>
                                                     <span>{part}</span>
-                                                    <span className={styles.pg97spaminput}>
+                                                    <span className={styles["page97__spam-input"]}>
                                                         <input
                                                             type="text"
                                                             value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
                                                             onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
-                                                            className={styles.pg97InputBox}
+                                                            className={styles["page97__input-box"]}
                                                         />
                                                     </span>
                                                 </>
@@ -335,31 +336,28 @@ const Pagina97 = () => {
                                             {fieldIndex === parts.length - 1 && <span>{part}</span>}
                                         </React.Fragment>
                                     ))}
-                                    <div className={styles.pg97IconsContainer}>
+                                    <div className={styles["page97__icons-container"]}>
                                         {results[index + 10] !== null && (
                                             <img
                                                 src={results[index + 10] ? correct_icon : wrong_icon}
                                                 alt={results[index + 10] ? "Correct" : "Incorrect"}
-                                                className={styles.pg97CheckmarkImage}
+                                                className={styles["page97__checkmark-image"]}
                                             />
                                         )}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
-                                            className={styles.pg97AdditionalIcon}
-                                            onClick={() => playAudio(audioKey)} // Lógica de áudio sem o volume reduzido
+                                            className={styles["page97__additional-icon"]}
+                                            onClick={() => playAudio(audioKey)}
                                         />
                                     </div>
                                 </div>
                             );
                         })}
-
                     </div>
-
                 </div>
-
             </main>
-            <button className={styles.pg97CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            <button className={styles["page97__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
         </div>
     );
 };

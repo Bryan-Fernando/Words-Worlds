@@ -72,98 +72,100 @@ const Pagina103 = () => {
     };
 
     return (
-        <div className={styles.pg103Container}>
-            <header className={styles.pg103Header}>
-                <h1 className={styles.pg103H1}>
-                    Learning Language Exercises
+        <div className={styles["page103__container"]}>
+    <header className={styles["page103__header"]}>
+        <h1 className={styles["page103__h1"]}>
+            Learning Language Exercises
+            <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page103__header--icon"]}
+                onClick={() => playAudio("global_learning_le_e")}
+            />
+            <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page103__header--icon"]}
+                onClick={() => playAudio("global_learning_le_p")}
+            />
+        </h1>
+    </header>
+
+    <main className={styles["page103__main"]}>
+        <div className={styles["page103__container--questoes"]}>
+            <div className={styles["page103__questions"]}>
+                <p className={styles["page103__titulo--question"]}>
+                    Match the questions with the correct answers.
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_e")}
+                        className={styles["page103__header--icon"]}
+                        onClick={() => playAudio("pg103_audio1e")}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles.pg103HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        className={styles["page103__header--icon"]}
+                        onClick={() => playAudio("pg103_audio1p")}
                     />
-                </h1>
-            </header>
+                    <br />
+                    Questions:
+                </p>
+                <br />
+                {[
+                    "Are you a teacher?",
+                    "Is she your neighbor?",
+                    "Are we going to the park?",
+                    "Is it raining outside?",
+                    "Are they from Japan?"
+                ].map((question, index) => {
+                    const audioKey = `pg103_audio${index + 2}`;
 
-            <main className={styles.pg103Main}>
-                <div className={styles.pg103ContainerQuestoes}>
-                    <div className={styles.pg103Questions}>
-                        <p className={styles.pg103TituloQuestion}>
-                            Match the questions with the correct answers.
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles.pg103HeaderIcon}
-                                onClick={() => playAudio("pg103_audio1e")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles.pg103HeaderIcon}
-                                onClick={() => playAudio("pg103_audio1p")}
-                            />
-                            <br />
-                            Questions:</p>
-                        <br />
-                        {[
-                            "Are you a teacher?",
-                            "Is she your neighbor?",
-                            "Are we going to the park?",
-                            "Is it raining outside?",
-                            "Are they from Japan?"
-                        ].map((question, index) => {
-                            const audioKey = `pg103_audio${index + 2}`;
+                    return (
+                        <div key={index} className={styles["page103__question"]}>
+                            <span><strong>{index + 1}.</strong> {question}</span>
 
-                            return (
-                                <div key={index} className={styles.pg103Question}>
-                                    <span><strong>{index + 1}.</strong> {question}</span>
+                            <select
+                                className={styles["page103__select--box"]}
+                                value={inputValues[index]}
+                                onChange={(e) => handleInputChange(e.target.value, index)}
+                            >
+                                <option value="">Select an answer</option>
+                                {options[index].map((option, optIndex) => (
+                                    <option key={optIndex} value={option}>{option}</option>
+                                ))}
+                            </select>
 
-                                    <select
-                                        className={styles.pg103SelectBox}
-                                        value={inputValues[index]}
-                                        onChange={(e) => handleInputChange(e.target.value, index)}
-                                    >
-                                        <option value="">Select an answer</option>
-                                        {options[index].map((option, optIndex) => (
-                                            <option key={optIndex} value={option}>{option}</option>
-                                        ))}
-                                    </select>
+                            {results[index] !== null && (
+                                <img
+                                    src={results[index] ? correct_icon : wrong_icon}
+                                    alt={results[index] ? "Correct" : "Incorrect"}
+                                    className={styles["page103__checkmark--image"]}
+                                />
+                            )}
 
-                                    {results[index] !== null && (
-                                        <img
-                                            src={results[index] ? correct_icon : wrong_icon}
-                                            alt={results[index] ? "Correct" : "Incorrect"}
-                                            className={styles.pg103CheckmarkImage}
-                                        />
-                                    )}
+                            <div className={styles["page103__icons--container"]}>
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Audio Icon"
+                                    className={styles["page103__additional--icon"]}
+                                    onClick={() => playAudio(audioKey)}
+                                />
+                            </div>
+                        </div>
+                    );
+                })}
+            </div>
 
-                                    <div className={styles.pg103IconsContainer}>
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles.pg103AdditionalIcon}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-
-                    <div className={styles.pg103ContainerImagem}>
-                        <img className={styles.pg103imagem} src={pagina103_imagem1} alt="Learning" />
-                    </div>
-                </div>
-            </main>
-
-            <button className={styles.pg103CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            <div className={styles["page103__container--imagem"]}>
+                <img className={styles["page103__imagem"]} src={pagina103_imagem1} alt="Learning" />
+            </div>
         </div>
+    </main>
+
+    <button className={styles["page103__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+</div>
+
     );
 };
 

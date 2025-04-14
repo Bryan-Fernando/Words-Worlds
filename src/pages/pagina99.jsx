@@ -132,297 +132,300 @@ const Pagina99 = () => {
     };
 
     return (
-        <div className={styles.pg99Container}>
-            <header className={styles.pg99Header}>
-                <h1 className={styles.pg99H1}>
-                    Learning Language Exercises
-                    <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles.pg99HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles.pg99HeaderIcon}
-                        onClick={() => playAudio("global_learning_le_p")}
-                    />
-                </h1>
+        <div className={styles["page99__container"]}>
+    <header className={styles["page99__header"]}>
+        <h1 className={styles["page99__h1"]}>
+            Learning Language Exercises
+            <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page99__header-icon"]}
+                onClick={() => playAudio("global_learning_le_e")}
+            />
+            <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page99__header-icon"]}
+                onClick={() => playAudio("global_learning_le_p")}
+            />
+        </h1>
+    </header>
 
+    <main className={styles["page99__main"]}>
+        <div className={styles["page99__container-imagem"]}>
+            <img className={styles["page99__imagem"]} src={pagina99_imagem1} alt="" />
+        </div>
 
+        <div className={styles["page99__primeiras-questoes"]}>
+            <div className={styles["page99__tabela-negativa-container"]}>
+                <div className={styles["page99__table-header-negativa"]}>NEGATIVA</div>
+                <table className={styles["page99__styled-table-negativa"]}>
+                    <thead className={styles["page99__thead"]}>
+                        <tr className={styles["page99__table-row"]}>
+                            <th>Introdução</th>
+                            <th>Sujeito</th>
+                            <th>Verbo <br /> Auxiliar</th>
+                            <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                            <th>Verbo(s)</th>
+                            <th>Objeto <br /> Complemento</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
 
-            </header>
-            <main className={styles.pg99Main}>
-                <div className={styles.pg99ContainerImagem}> <img className={styles.pg99imagem} src={pagina99_imagem1} alt="" /></div>
-                <div className={styles.pg99PrimeirasQuestoes}>
-                    <div className={styles.pg99tabelaNegativaContainer}>
-                        <div className={styles.pg99tableHeaderNegativa}>NEGATIVA</div>
-                        <table className={styles.pg99styledTableNegativa}>
-                            <thead className={styles.pg99Thead}>
-                                <tr className={styles.pg99celulatable}>
-                                    <th>Introdução</th>
-                                    <th>Sujeito</th>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <p className={styles.pg99ATituloQuestion}>
-                        Change into the negative form:
+            <p className={styles["page99__a-titulo-question"]}>
+                Change into the negative form:
+                <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page99__header-icon"]}
+                    onClick={() => playAudio("pg99_audio1e")}
+                />
+                <img
+                    src={ptbr_audio_icon}
+                    alt="Portuguese audio"
+                    className={styles["page99__header-icon"]}
+                    onClick={() => playAudio("pg99_audio1p")}
+                />
+            </p>
+
+            <div className={styles["page99__container-questoes"]}>
+                <div className={styles["page99__questions-1"]}>
+                    {[
+                        "She likes to swim in the pool. ____",
+                        "They eat lunch together every day. ____",
+                        "He watches television in the evening. ____",
+                        "The children play in the park after school. ____",
+                        "I drink coffee in the morning. ____"
+                    ].map((question, index) => {
+                        const audioKey = `pg99_audio${index + 2}`; // Ajuste correto do áudio
+
+                        return (
+                            <div key={index} className={styles["page99__question"]}>
+                                <span>
+                                    <em>
+                                        <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
+                                    </em>
+                                </span>
+                                <div className={styles["page99__input-container"]}>
+                                    <input
+                                        type="text"
+                                        value={inputValues[index]}
+                                        onChange={(e) => handleInputChange(e.target.value, index)}
+                                        className={styles["page99__large-input-box"]}
+                                    />
+                                </div>
+                                <div className={styles["page99__icons-container"]}>
+                                    {results[index] !== null && (
+                                        <img
+                                            src={results[index] ? correct_icon : wrong_icon}
+                                            alt={results[index] ? "Correct" : "Incorrect"}
+                                            className={styles["page99__checkmark-image"]}
+                                        />
+                                    )}
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKey)}
+                                    />
+                                    <img
+                                        src={slow_audio_icon}
+                                        alt="Volume Reduced Icon"
+                                        className={`${styles["page99__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page99__pulsing"] : ''}`}
+                                        onClick={() => toggleSpeedReduction(audioKey)}
+                                    />
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
+
+            <div className={styles["page99__container-questoes"]}>
+                <div className={styles["page99__questions-1"]}>
+                    <p className={styles["page99__a-titulo-question"]}>
+                        Fill in the blanks with the negative form of the verbs:
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
-                            className={styles.pg99HeaderIcon}
-                            onClick={() => playAudio("pg99_audio1e")}
+                            className={styles["page99__header-icon"]}
+                            onClick={() => playAudio("pg99_audio7e")}
                         />
                         <img
                             src={ptbr_audio_icon}
                             alt="Portuguese audio"
-                            className={styles.pg99HeaderIcon}
-                            onClick={() => playAudio("pg99_audio1p")}
+                            className={styles["page99__header-icon"]}
+                            onClick={() => playAudio("pg99_audio7p")}
                         />
                     </p>
-                    <div className={styles.pg99ContainerQuestoes}>
-                        <div className={styles.pg99Questions1}>
-                            {[
-                                "She likes to swim in the pool. ____",
-                                "They eat lunch together every day. ____",
-                                "He watches television in the evening. ____",
-                                "The children play in the park after school. ____",
-                                "I drink coffee in the morning. ____"
-                            ].map((question, index) => {
-                                const audioKey = `pg99_audio${index + 2}`; // Ajuste correto do áudio
 
-                                return (
-                                    <div key={index} className={styles.pg99Question}>
-                                        <span>
-                                            <em>
-                                                <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
-                                            </em>
-                                        </span>
-                                        <div className={styles.pg99InputContainer}>
-                                            <input
-                                                type="text"
-                                                value={inputValues[index]}
-                                                onChange={(e) => handleInputChange(e.target.value, index)}
-                                                className={styles.pg99LargeInputBox}
-                                            />
-                                        </div>
-                                        <div className={styles.pg99IconsContainer}>
-                                            {results[index] !== null && (
-                                                <img
-                                                    src={results[index] ? correct_icon : wrong_icon}
-                                                    alt={results[index] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg99CheckmarkImage}
-                                                />
-                                            )}
-                                            <img
-                                                src={eng_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles.pg99AdditionalIcon}
-                                                onClick={() => playAudio(audioKey)}
-                                            />
-                                            <img
-                                                src={slow_audio_icon}
-                                                alt="Volume Reduced Icon"
-                                                className={`${styles.pg99AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg99Pulsing : ''}`}
-                                                onClick={() => toggleSpeedReduction(audioKey)}
-                                            />
-                                        </div>
-                                    </div>
-                                );
-                            })}
+                    {[
+                        "She ____ (not like) to eat spicy food.",
+                        "They ____ (not study) French at school.",
+                        "He ____ (not play) video games on weekdays.",
+                        "The cat ____ (not sleep) on the bed.",
+                        "We ____ (not watch) TV after dinner."
+                    ].map((question, index) => {
+                        const audioKey = `pg99_audio${index + 8}`;
+                        const parts = question.split('____');
 
-                        </div>
-                    </div>
-                    <div className={styles.pg99ContainerQuestoes}>
-                        <div className={styles.pg99Questions1}>
-                            <p className={styles.pg99ATituloQuestion}>
-                                Fill in the blanks with the negative form of the verbs:
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="English audio"
-                                    className={styles.pg99HeaderIcon}
-                                    onClick={() => playAudio("pg99_audio7e")}
-                                />
-                                <img
-                                    src={ptbr_audio_icon}
-                                    alt="Portuguese audio"
-                                    className={styles.pg99HeaderIcon}
-                                    onClick={() => playAudio("pg99_audio7p")}
-                                />
-                            </p>
+                        return (
+                            <div key={index + 5} className={styles["page99__question"]}>
+                                <span>
+                                    <em>
+                                        <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
+                                    </em>
+                                </span>
+                                <div className={styles["page99__input-container"]}>
+                                    <input
+                                        type="text"
+                                        value={inputValues[index + 5]}
+                                        onChange={(e) => handleInputChange(e.target.value, index + 5)}
+                                        className={styles["page99__input-box"]}
+                                    />
+                                </div>
 
-                            {[
-                                "She ____ (not like) to eat spicy food.",
-                                "They ____ (not study) French at school.",
-                                "He ____ (not play) video games on weekdays.",
-                                "The cat ____ (not sleep) on the bed.",
-                                "We ____ (not watch) TV after dinner."
-                            ].map((question, index) => {
-                                const audioKey = `pg99_audio${index + 8}`;
-                                const parts = question.split('____');
+                                {parts.length > 1 && <span><em>{parts[1]}</em></span>}
 
-                                return (
-                                    <div key={index + 5} className={styles.pg99Question}>
-                                        <span>
-                                            <em>
-                                                <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
-                                            </em>
-                                        </span>
-                                        <div className={styles.pg99InputContainer}>
-                                            <input
-                                                type="text"
-                                                value={inputValues[index + 5]}
-                                                onChange={(e) => handleInputChange(e.target.value, index + 5)}
-                                                className={styles.pg99InputBox}
-                                            />
-                                        </div>
-
-                                        {parts.length > 1 && <span><em>{parts[1]}</em></span>}
-
-                                        <div className={styles.pg99IconsContainer}>
-                                            {results[index + 5] !== null && (
-                                                <img
-                                                    src={results[index + 5] ? correct_icon : wrong_icon}
-                                                    alt={results[index + 5] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg99CheckmarkImage}
-                                                />
-                                            )}
-                                            <img
-                                                src={eng_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles.pg99AdditionalIcon}
-                                                onClick={() => playAudio(audioKey)}
-                                            />
-                                            <img
-                                                src={slow_audio_icon}
-                                                alt="Volume Reduced Icon"
-                                                className={`${styles.pg99AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg99Pulsing : ''}`}
-                                                onClick={() => toggleSpeedReduction(audioKey)}
-                                            />
-                                        </div>
-                                    </div>
-                                );
-                            })}
-
-
-                        </div>
-                    </div>
-                    <div className={styles.pg99tabelaInterrogativaContainer}>
-                            <div className={styles.pg99tableHeaderInterrogativa}>INTERROGATIVA NEGATIVA</div>
-                            <table className={styles.pg99styledTableInterrogativa}>
-                                <thead>
-                                    <tr className={styles.pg99celulatable}>
-                                        <th>Verbo Auxiliar</th>
-                                        <th>Sujeito</th>
-                                        <th>
-                                            <span style={{ color: 'red' }}>Not</span> <br /> Adverb
-                                        </th>
-                                        <th>Verbo(s)</th>
-                                        <th>Objeto Complemento</th>
-                                    </tr>
-                                </thead>
-                            </table>
-                        </div>
-                    <div className={styles.pg99ContainerQuestoes}>
-                        
-                        <div className={styles.pg99Questions2}>
-                            <p className={styles.pg99ATituloQuestion}>
-                                Form negative questions using the simple present tense.
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="English audio"
-                                    className={styles.pg99HeaderIcon}
-                                    onClick={() => playAudio("pg99_audio13e")}
-                                />
-                                <img
-                                    src={ptbr_audio_icon}
-                                    alt="Portuguese audio"
-                                    className={styles.pg99HeaderIcon}
-                                    onClick={() => playAudio("pg99_audio13p")}
-                                />
-                            </p>
-
-                            {[
-                                "____ she ____ (not like) ice cream?",
-                                "____ they ____ (not play) soccer on weekends?",
-                                "____ he ____ (not drink) coffee in the morning?",
-                                "____ you ____ (not enjoy) watching movies?"
-                            ].map((question, index) => {
-                                const parts = question.split('____');
-                                const audioKey = `pg99_audio${index + 14}`;
-
-                                return (
-                                    <div key={index + 10} className={styles.pg99Question}>
-                                        <span>
-                                            <em>
-                                                <strong>{String.fromCharCode(97 + index)}.</strong>
-                                            </em>
-                                        </span>
-                                        {parts.map((part, fieldIndex) => (
-                                            <React.Fragment key={fieldIndex}>
-                                                {fieldIndex === 0 && (
-                                                    <span className={styles.pg99spaminput}>
-                                                        <input
-                                                            type="text"
-                                                            value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
-                                                            onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
-                                                            className={styles.pg99InputBox}
-                                                        />
-                                                    </span>
-                                                )}
-                                                {fieldIndex > 0 && fieldIndex < parts.length - 1 && (
-                                                    <>
-                                                        <span>{part}</span>
-                                                        <span className={styles.pg99spaminput}>
-                                                            <input
-                                                                type="text"
-                                                                value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
-                                                                onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
-                                                                className={styles.pg99InputBox}
-                                                            />
-                                                        </span>
-                                                    </>
-                                                )}
-                                                {fieldIndex === parts.length - 1 && <span>{part}</span>}
-                                            </React.Fragment>
-                                        ))}
-                                        <div className={styles.pg99IconsContainer}>
-                                            {results[index + 10] !== null && (
-                                                <img
-                                                    src={results[index + 10] ? correct_icon : wrong_icon}
-                                                    alt={results[index + 10] ? "Correct" : "Incorrect"}
-                                                    className={styles.pg99CheckmarkImage}
-                                                />
-                                            )}
-                                            <img
-                                                src={eng_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles.pg99AdditionalIcon}
-                                                onClick={() => playAudio(audioKey)}
-                                            />
-                                            <img
-                                                src={slow_audio_icon}
-                                                alt="Volume Reduced Icon"
-                                                className={`${styles.pg99AdditionalIcon} ${isSpeedReduced[audioKey] ? styles.pg99Pulsing : ''}`}
-                                                onClick={() => toggleSpeedReduction(audioKey)}
-                                            />
-                                        </div>
-                                    </div>
-                                );
-                            })}
-
-                        </div>
-                    </div>
+                                <div className={styles["page99__icons-container"]}>
+                                    {results[index + 5] !== null && (
+                                        <img
+                                            src={results[index + 5] ? correct_icon : wrong_icon}
+                                            alt={results[index + 5] ? "Correct" : "Incorrect"}
+                                            className={styles["page99__checkmark-image"]}
+                                        />
+                                    )}
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKey)}
+                                    />
+                                    <img
+                                        src={slow_audio_icon}
+                                        alt="Volume Reduced Icon"
+                                        className={`${styles["page99__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page99__pulsing"] : ''}`}
+                                        onClick={() => toggleSpeedReduction(audioKey)}
+                                    />
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
-            </main>
-            <button className={styles.pg99CheckButton} onClick={handleCheckClick}><em>Check</em></button>
+            </div>
+
+            <div className={styles["page99__tabela-interrogativa-container"]}>
+                <div className={styles["page99__table-header-interrogativa"]}>INTERROGATIVA NEGATIVA</div>
+                <table className={styles["page99__styled-table-interrogativa"]}>
+                    <thead>
+                        <tr className={styles["page99__table-row"]}>
+                            <th>Verbo Auxiliar</th>
+                            <th>Sujeito</th>
+                            <th>
+                                <span style={{ color: 'red' }}>Not</span> <br /> Adverb
+                            </th>
+                            <th>Verbo(s)</th>
+                            <th>Objeto Complemento</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div className={styles["page99__container-questoes"]}>
+                <div className={styles["page99__questions-2"]}>
+                    <p className={styles["page99__a-titulo-question"]}>
+                        Form negative questions using the simple present tense.
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page99__header-icon"]}
+                            onClick={() => playAudio("pg99_audio13e")}
+                        />
+                        <img
+                            src={ptbr_audio_icon}
+                            alt="Portuguese audio"
+                            className={styles["page99__header-icon"]}
+                            onClick={() => playAudio("pg99_audio13p")}
+                        />
+                    </p>
+
+                    {[
+                        "____ she ____ (not like) ice cream?",
+                        "____ they ____ (not play) soccer on weekends?",
+                        "____ he ____ (not drink) coffee in the morning?",
+                        "____ you ____ (not enjoy) watching movies?"
+                    ].map((question, index) => {
+                        const parts = question.split('____');
+                        const audioKey = `pg99_audio${index + 14}`;
+
+                        return (
+                            <div key={index + 10} className={styles["page99__question"]}>
+                                <span>
+                                    <em>
+                                        <strong>{String.fromCharCode(97 + index)}.</strong>
+                                    </em>
+                                </span>
+                                {parts.map((part, fieldIndex) => (
+                                    <React.Fragment key={fieldIndex}>
+                                        {fieldIndex === 0 && (
+                                            <span className={styles["page99__spam-input"]}>
+                                                <input
+                                                    type="text"
+                                                    value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
+                                                    onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
+                                                    className={styles["page99__input-box"]}
+                                                />
+                                            </span>
+                                        )}
+                                        {fieldIndex > 0 && fieldIndex < parts.length - 1 && (
+                                            <>
+                                                <span>{part}</span>
+                                                <span className={styles["page99__spam-input"]}>
+                                                    <input
+                                                        type="text"
+                                                        value={Array.isArray(inputValues[index + 10]) ? inputValues[index + 10][fieldIndex] || '' : ''}
+                                                        onChange={(e) => handleInputChange(e.target.value, index + 10, fieldIndex)}
+                                                        className={styles["page99__input-box"]}
+                                                    />
+                                                </span>
+                                            </>
+                                        )}
+                                        {fieldIndex === parts.length - 1 && <span>{part}</span>}
+                                    </React.Fragment>
+                                ))}
+                                <div className={styles["page99__icons-container"]}>
+                                    {results[index + 10] !== null && (
+                                        <img
+                                            src={results[index + 10] ? correct_icon : wrong_icon}
+                                            alt={results[index + 10] ? "Correct" : "Incorrect"}
+                                            className={styles["page99__checkmark-image"]}
+                                        />
+                                    )}
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKey)}
+                                    />
+                                    <img
+                                        src={slow_audio_icon}
+                                        alt="Volume Reduced Icon"
+                                        className={`${styles["page99__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page99__pulsing"] : ''}`}
+                                        onClick={() => toggleSpeedReduction(audioKey)}
+                                    />
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            </div>
         </div>
+    </main>
+
+    <button className={styles["page99__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
+</div>
+
     );
 };
 

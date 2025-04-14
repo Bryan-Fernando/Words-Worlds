@@ -117,6 +117,15 @@
     color: #A61C28;
 }
 
+/*th {
+    background-color: #888A8C;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}*/
+
 .page124__container-textoa{
     text-align: left;
 }
@@ -149,6 +158,17 @@
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
+
+/*th {
+    background-color: #888A8C;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: 1px solid #A61C28;
+}*/
+
+
 
 .pg124celulatable {
     height: 5rem;
