@@ -7,14 +7,6 @@ const Pagina129 = () => {
         Array(6).fill(Array(6).fill(''))
     );
 
-    const handleInputChange = (rowIndex, colIndex, e) => {
-        const newValue = e.target.value;
-        const updatedValues = inputValues.map((row, i) =>
-            row.map((value, j) => (i === rowIndex && j === colIndex ? newValue : value))
-        );
-        setInputValues(updatedValues);
-    };
-
     return (
         <div>
             <div className={styles.pg91Container}>

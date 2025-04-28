@@ -1,1 +1,130 @@
-/* Styles for pagina180 */
+.page180__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page180__header {
+    width: 100%;
+}
+
+.page180__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page180__title_black {
+    color: black;
+}
+
+.page180__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page180__aside {
+    width: 100%;
+}
+
+.page180__aside_container {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+}
+
+.page180__subtitle{
+    text-align: left;
+}
+
+.page180__aside_header {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.page180__aside_content {
+    padding: 2rem;
+}
+
+.page180__text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+.page180__highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page180__tableSection {
+    width: 100%;
+}
+
+.page180__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.page180__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.page180__table th,
+.page180__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.page180__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+.page180__translation {
+    font-size: 1.4rem;
+    color: #A61C28;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .page180__container {
+        padding: 1rem;
+    }
+
+    .page180__title {
+        font-size: 4rem;
+    }
+
+    .page180__aside_header {
+        font-size: 1.8rem;
+    }
+
+    .page180__text {
+        font-size: 1.8rem;
+    }
+
+    .page180__table th,
+    .page180__table td {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+
+    .page180__translation {
+        font-size: 1.2rem;
+    }
+}

@@ -1,25 +1,25 @@
-.pg111Container {
+.page111__container {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 }
 
-.pg111Header {
+.page111__header {
     width: 100%;
     height: 15rem;
     text-align: left;
 }
 
-.pg111HeaderH1 {
+.page111__header-h1 {
     font-size: 4rem;
     color: #A61C28;
 }
 
-.pg111HeaderH2 {
+.page111__header-h2 {
     font-size: 2.5rem;
 }
 
-.pg111Main {
+.page111__main {
     width: 85%;
     text-align: center;
     display: flex;
@@ -30,50 +30,49 @@
 
 /* Este é um comentário */
 
-.pg111Imagens {
+.page111__images {
     display: flex;
     gap: 10%;
 }
 
-.pg111imagem {
+.page111__image {
     width: 16.9rem;
     aspect-ratio: 1 / 1;
     border-radius: 1.5rem;
 }
 
-.pg111ParagrafoVermelho {
+.page111__paragraph--red {
     color: #A61C28;
 }
 
-.pg111ParagrafoPreto {
+.page111__paragraph--black {
     font-size: 1.8rem;
     color: #62169F;
 }
 
-.pg111HeaderH1 {
+.page111__header-h1 {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.pg111AudioIcon {
+.page111__audio-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.pg111AudioIcon:hover {
+.page111__audio-icon:hover {
     transform: scale(1.1);
 }
 
-.pg111Imagens > div > p:first-of-type {
+.page111__images > div > p:first-of-type {
     cursor: pointer;
 }
 
-
 @media (max-width: 1024px) {
-    .pg111Main {
+    .page111__main {
         width: 100%;
     }
 }

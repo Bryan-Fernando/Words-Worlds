@@ -1,25 +1,25 @@
-.pg112Container {
+.page112__container {
     display: flex;
     flex-direction: column;
     gap: 2.5rem;
 }
 
-.pg112Header {
+.page112__header {
     width: 100%;
     height: 15rem;
     text-align: left;
 }
 
-.pg112HeaderH1 {
+.page112__header-h1 {
     font-size: 4rem;
     color: #A61C28;
 }
 
-.pg112HeaderH2 {
+.page112__header-h2 {
     font-size: 2.5rem;
 }
 
-.pg112Main {
+.page112__main {
     width: 85%;
     text-align: center;
     display: flex;
@@ -30,68 +30,66 @@
 
 /* Este é um comentário */
 
-.pg112Imagens {
+.page112__images {
     display: flex;
     gap: 10%;
 }
 
-.pg112imagem {
+.page112__image {
     width: 17rem;
     height: 17.5rem;
     aspect-ratio: 1 / 1;
     border-radius: 1.5rem;
 }
 
-
-.pg112ParagrafoVermelho {
+.page112__paragraph--red {
     color: #A61C28;
 }
 
-.pg112ParagrafoPreto {
+.page112__paragraph--black {
     font-size: 1.8rem;
     color: #62169F;
 }
 
-.pg112Imagens:last-child {
+.page112__images:last-child {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.pg112Imagens:last-child > div:nth-child(3),
-.pg112Imagens:last-child > div:nth-child(4) {
-    visibility: hidden; 
+.page112__images:last-child > div:nth-child(3),
+.page112__images:last-child > div:nth-child(4) {
+    visibility: hidden;
 }
 
-.pg112Imagens:last-child > div:nth-child(1),
-.pg112Imagens:last-child > div:nth-child(2) {
-    visibility: visible; 
+.page112__images:last-child > div:nth-child(1),
+.page112__images:last-child > div:nth-child(2) {
+    visibility: visible;
 }
 
-.pg112HeaderH1 {
+.page112__header-h1 {
     display: flex;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
-.pg112HeaderIcons {
+.page112__header-icons {
     display: flex;
     gap: 0.5rem;
 }
 
-.pg112HeaderIcon {
+.page112__header-icon {
     width: 2rem;
     height: 2rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }
 
-.pg112HeaderIcon:hover {
+.page112__header-icon:hover {
     transform: scale(1.1);
 }
 
-
 @media (max-width: 1024px) {
-    .pg112Main {
+    .page112__main {
         width: 100%;
     }
 }

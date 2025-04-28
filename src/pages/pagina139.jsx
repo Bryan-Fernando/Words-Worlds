@@ -52,35 +52,40 @@ const Pagina108 = () => {
 
     return (
         <div>
-            <div className={styles.pg108Container}>
-                <header className={styles.pg108Header}>
-                    <h1 className={styles.pg8AudioText}
-                        onClick={() => playAudio(global_grammar)} style={{ cursor: 'pointer' }}>
+            <div className={styles["page108__container"]}>
+                <header className={styles["page108__header"]}>
+                    <h1
+                        className={styles["page108__audio-text"]}
+                        onClick={() => playAudio(global_grammar)}
+                        style={{ cursor: 'pointer' }}
+                    >
                         Grammar
                     </h1>
-                    <h2 className={styles.pg8AudioText}
+                    <h2
+                        className={styles["page108__audio-text"]}
                         onClick={() => playAudio(global_simple_present)}
-                        style={{ color: 'black', cursor: 'pointer' }}>
+                        style={{ color: 'black', cursor: 'pointer' }}
+                    >
                         Simple Present (Presente Simples)
                     </h2>
                 </header>
-                <main className={styles.pg108Main}>
+                <main className={styles["page108__main"]}>
                     <div>
                         <div
-                            className={styles.pg108TableHeader}
+                            className={styles["page108__table--header"]}
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
                             AFFIRMATIVE INTERROGATIVE
                         </div>
-                        <table className={styles.pg108StyledTable}>
+                        <table className={styles["page108__styled--table"]}>
                             <colgroup>
-                                <col className={styles.pg108Sujeito} />
-                                <col className={styles.pg108verbo_auxiliar} />
-                                <col className={styles.pg108Adverbio} />
-                                <col className={styles.pg108Verbo} />
-                                <col className={styles.pg108ObjetivoComplemento} />
-                                <col className={styles.pg108Traducao} />
+                                <col className={styles["page108__subject"]} />
+                                <col className={styles["page108__auxiliary--verb"]} />
+                                <col className={styles["page108__adverb"]} />
+                                <col className={styles["page108__verb"]} />
+                                <col className={styles["page108__object--complement"]} />
+                                <col className={styles["page108__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -93,7 +98,9 @@ const Pagina108 = () => {
                                     <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>
                                         Adverb
                                     </th>
-                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>
+                                        Verb(s)
+                                    </th>
                                     <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
                                         Object <br /> Complement
                                     </th>
@@ -105,33 +112,29 @@ const Pagina108 = () => {
                             <tbody>
                                 {[
                                     { sujeito: "Do", verboAux: "we", adverbio: "", verbo: "work", complemento: "(on) weekdays?", audio: pg108_audio5, tradAudio: pg108_trad5, traducao: "Nós trabalhamos em dias úteis?" },
-                                    { sujeito: "Do", verboAux: "you", adverbio: "", verbo: "work", complemento: "(on) weekdays?", audio: pg108_audio6, tradAudio: pg108_trad6, traducao: "Você trabalha em dias úteis?" },
-                                    { sujeito: "Do", verboAux: "they", adverbio: "", verbo: "work", complemento: "on weekends?", audio: pg108_audio7, tradAudio: pg108_trad7, traducao: "Eles trabalham nos fins de semana?" },
                                 ].map((linha, index) => (
                                     <tr key={index} onClick={() => playAudio(linha.audio)} style={{ cursor: 'pointer' }}>
-                                        <td className={styles.pg108Sujeito}>{linha.sujeito}</td>
-                                        <td className={styles.pg108verbo_auxiliar}>{linha.verboAux}</td>
-                                        <td className={styles.pg108Adverbio}>{linha.adverbio}</td>
-                                        <td className={styles.pg108Verbo}>{linha.verbo}</td>
-                                        <td className={styles.pg108ObjetivoComplemento}>{linha.complemento}</td>
-                                        <td className={styles.pg108Traducao} onClick={(e) => { e.stopPropagation(); playAudio(linha.tradAudio); }}>
+                                        <td className={styles["page108__subject"]}>{linha.sujeito}</td>
+                                        <td className={styles["page108__auxiliary--verb"]}>{linha.verboAux}</td>
+                                        <td className={styles["page108__adverb"]}>{linha.adverbio}</td>
+                                        <td className={styles["page108__verb"]}>{linha.verbo}</td>
+                                        <td className={styles["page108__object--complement"]}>{linha.complemento}</td>
+                                        <td className={styles["page108__translation"]} onClick={(e) => { e.stopPropagation(); playAudio(linha.tradAudio); }}>
                                             {linha.traducao}
                                         </td>
                                     </tr>
                                 ))}
                             </tbody>
-
-
                         </table>
 
-                        <table className={styles.pg108StyledTable}>
+                        <table className={styles["page108__styled--table"]}>
                             <colgroup>
-                                <col className={styles.pg108Sujeito} />
-                                <col className={styles.pg108verbo_auxiliar} />
-                                <col className={styles.pg108Adverbio} />
-                                <col className={styles.pg108Verbo} />
-                                <col className={styles.pg108ObjetivoComplemento} />
-                                <col className={styles.pg108Traducao} />
+                                <col className={styles["page108__subject"]} />
+                                <col className={styles["page108__auxiliary--verb"]} />
+                                <col className={styles["page108__adverb"]} />
+                                <col className={styles["page108__verb"]} />
+                                <col className={styles["page108__object--complement"]} />
+                                <col className={styles["page108__translation"]} />
                             </colgroup>
                             <thead>
                                 <tr>
@@ -153,7 +156,7 @@ const Pagina108 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg108InputCell}
+                                                    className={styles["page108__input--cell"]}
                                                     value={value}
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     rows="1"

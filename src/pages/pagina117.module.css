@@ -1,4 +1,4 @@
-.pg117Container {
+.page117__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,19 +6,19 @@
     width: 100%;
 }
 
-.pg117StyledTable {
+.page117__styled-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
     table-layout: fixed;
 }
 
-.pg117StyledTable:nth-child(odd) {
+.page117__styled-table:nth-child(odd) {
     margin-bottom: 0;
 }
 
-.pg117StyledTable th,
-.pg117StyledTable td {
+.page117__styled-table th,
+.page117__styled-table td {
     border: 0.1rem solid #A61C28;
     padding: 0.5rem;
     text-align: center;
@@ -27,43 +27,37 @@
     word-wrap: break-word;
 }
 
-.pg117StyledTable th {
+.page117__styled-table th {
     background-color: #888A8C;
-    /* Cor de fundo do cabeçalho */
     color: white;
-    /* Cor do texto */
     font-weight: bold;
     font-size: 1.2rem;
-    /* Tamanho maior da fonte */
     text-align: center;
-    /* Centraliza o texto */
     padding: 1.5rem;
-    /* Mais espaço ao redor do texto */
 }
 
-
-.pg117TableAligned {
+.page117__table-aligned {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
 }
 
-.pg117Header {
+.page117__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg117HeaderH2 {
+.page117__header-h2 {
     color: black;
 }
 
-.pg117Main {
+.page117__main {
     width: 100%;
     text-align: center;
 }
 
-.pg117TableHeader {
+.page117__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -74,16 +68,13 @@
     font-size: 1.5rem;
 }
 
-.pg117InputCell {
+.page117__input-cell {
     width: 100%;
-    /* Ocupa toda a largura da célula */
     height: calc(10vh * 0.85);
-    /* Aumenta a altura */
     font-size: 1.5rem;
     line-height: 1.5;
     border: none;
     padding: 0.8rem;
-    /* Espaçamento interno */
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -93,42 +84,41 @@
     overflow-wrap: break-word;
 }
 
-.pg117InputCell:focus {
+.page117__input-cell:focus {
     outline: none;
     border: 0.1rem solid #F2F2F2;
     background-color: white;
 }
 
-
-.pg117InputCell::-webkit-scrollbar {
+.page117__input-cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg117ColIntro {
+.page117__col-intro {
     width: 20%;
 }
 
-.pg117ColSujeito {
+.page117__col-sujeito {
     width: 15%;
 }
 
-.pg117VerboAux {
+.page117__verbo-aux {
     width: 15%;
 }
 
-.pg117ColNot {
+.page117__col-not {
     width: 10%;
 }
 
-.pg117ColVerbo {
+.page117__col-verbo {
     width: 25%;
 }
 
-.pg117ColComplemento {
+.page117__col-complemento {
     width: 20%;
 }
 
-.pg117ExtraColumn {
+.page117__extra-column {
     background-color: #888A8C;
     color: white;
     border: 1px solid #A61C28;
@@ -137,17 +127,17 @@
 }
 
 @media (max-width: 1024px) {
-    .pg117StyledTable {
+    .page117__styled-table {
         margin-bottom: 15%;
     }
 
-    .pg117StyledTable th,
-    .pg117StyledTable td {
+    .page117__styled-table th,
+    .page117__styled-table td {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
 
-    .pg117InputCell {
+    .page117__input-cell {
         height: calc(6vw * 0.8);
     }
 }

@@ -21,17 +21,18 @@ const pagina115 = () => {
 
     return (
         <div>
-            <div className={styles.pg115Container}>
-                <header className={styles.pg115Header}>
+            <div className={styles["page115__container"]}>
+                <header className={styles["page115__header"]}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.pg115HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles["page115__header-h2"]}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.pg115Main}>
+                <main className={styles["page115__main"]}>
                     <div>
-                        <div className={styles.pg115TableHeader}>INTERROGATIVE</div>
+                        <div className={styles["page115__table-header"]}>INTERROGATIVE</div>
+
                         {/* Tabela de Cima */}
-                        <table className={styles.pg115StyledTable}>
+                        <table className={styles["page115__styled-table"]}>
                             <colgroup>
                                 <col style={{ width: '15%' }} />
                                 <col style={{ width: '15%' }} />
@@ -57,7 +58,7 @@ const pagina115 = () => {
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`table1-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg115InputCell}
+                                                    className={styles["page115__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -77,9 +78,9 @@ const pagina115 = () => {
                         </table>
 
                         {/* Tabela de Baixo */}
-                        <table className={`${styles.pg115StyledTable} ${styles.pg115TableAligned}`}>
-                        <colgroup>
-                                <col style={{ width: '20.2%' }} className={styles.pg115ExtraColumn} />
+                        <table className={`${styles["page115__styled-table"]} ${styles["page115__table-aligned"]}`}>
+                            <colgroup>
+                                <col style={{ width: '20.2%' }} className={styles["page115__extra-column"]} />
                                 <col style={{ width: '20.2%' }} />
                                 <col style={{ width: '13.5%' }} />
                                 <col style={{ width: '11%' }} />
@@ -89,7 +90,7 @@ const pagina115 = () => {
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th className={styles.pg115ExtraColumn}></th>
+                                    <th className={styles["page115__extra-column"]}></th>
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo Auxiliar</th>
@@ -101,12 +102,12 @@ const pagina115 = () => {
                             <tbody>
                                 {inputValuesTable2.map((row, rowIndex) => (
                                     <tr key={rowIndex}>
-                                        <td className={styles.pg115ExtraColumn}></td>
+                                        <td className={styles["page115__extra-column"]}></td>
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`table2-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg115InputCell}
+                                                    className={styles["page115__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>

@@ -1,23 +1,111 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 import styles from './pagina190.module.css';
 
 const Pagina190 = () => {
+    const questionWords = [
+        { word: 'How many times', translation: 'Quantas vezes' },
+        { word: 'How many times a day', translation: 'Quantas vezes por dia' },
+        { word: 'How many times a week', translation: 'Quantas vezes por semana' },
+        { word: 'How many times a month', translation: 'Quantas vezes por mês' },
+        { word: 'How many times a year', translation: 'Quantas vezes por ano' }
+    ];
+
+    const tableData = [
+        {
+            questionWord: 'How many times',
+            wordTranslation: 'Quantas vezes',
+            subject: 'I',
+            translation: 'eu',
+            verb: 'need to call',
+            verbTranslation: 'precisaria ligar',
+            complement: 'before the phone?',
+            complementTranslation: 'antes de o telefone?'
+        },
+        {
+            questionWord: 'How many times',
+            wordTranslation: 'Quantas vezes',
+            subject: 'you',
+            translation: 'você',
+            verb: 'try giving up',
+            verbTranslation: 'tentaria desistir',
+            complement: 'before?',
+            complementTranslation: 'antes?'
+        },
+        {
+            questionWord: 'How many times',
+            wordTranslation: 'Quantas vezes',
+            subject: 'it',
+            translation: 'seria',
+            verb: 'be',
+            verbTranslation: 'seria necessário',
+            complement: 'to repeat the process?',
+            complementTranslation: 'repetir o processo?'
+        }
+    ];
 
     return (
-        <div>
-            <div className={styles.pg91Container}>
-                <header className={styles.pg91Header}>
-                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                    <div>
-                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                        <p>Dizendo as horas</p>
+        <div className={styles.page190__container}>
+            <header className={styles.page190__header}>
+                <h1 className={styles.page190__title}>Grammar - <span className={styles.page190__title_black}>Question Words</span></h1>
+            </header>
+
+            <main className={styles.page190__main}>
+                <section className={styles.page190__vocabulary}>
+                    <div className={styles.page190__vocabulary_grid}>
+                        {questionWords.map((item, index) => (
+                            <div key={index} className={styles.page190__vocabulary_card}>
+                                <div className={styles.page190__word}>{item.word}</div>
+                                <div className={styles.page190__translation}>{item.translation}</div>
+                            </div>
+                        ))}
                     </div>
-                </header>
-                <main className={styles.pg91Main}>
-                    <div></div>
-                </main>
-            </div>
+                </section>
+
+                <section className={styles.page190__tableSection}>
+                    <div className={styles.page190__tableTitle}>
+                        Question Words
+                    </div>
+                    <div className={styles.page190__subtitleSection}>
+                        Interrogative Form
+                    </div>
+                    <table className={styles.page190__table}>
+                        <thead>
+                            <tr>
+                                <th>Question Word</th>
+                                <th>Aux. Verb</th>
+                                <th>Subject</th>
+                                <th>Adv</th>
+                                <th>Verb(s)</th>
+                                <th>Object Complement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tableData.map((item, index) => (
+                                <tr key={index}>
+                                    <td>
+                                        {item.questionWord}
+                                        <div className={styles.page190__translation}>{item.wordTranslation}</div>
+                                    </td>
+                                    <td>would</td>
+                                    <td>
+                                        {item.subject}
+                                        <div className={styles.page190__translation}>{item.translation}</div>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        {item.verb}
+                                        <div className={styles.page190__translation}>{item.verbTranslation}</div>
+                                    </td>
+                                    <td>
+                                        {item.complement}
+                                        <div className={styles.page190__translation}>{item.complementTranslation}</div>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </section>
+            </main>
         </div>
     );
 };

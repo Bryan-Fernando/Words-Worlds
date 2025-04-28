@@ -53,15 +53,21 @@ const labelsMen = [
 
 
 const Label = ({ text, top, left, backgroundColor, audio }) => (
-    <div className={styles.pg110Label} style={{ top, left, backgroundColor }}>
+    <div
+        className={styles["page110__label"]}
+        style={{ top, left, backgroundColor, position: 'absolute' }}
+    >
         <p
             dangerouslySetInnerHTML={{ __html: text }}
             onClick={() => playAudio(audio)}
             style={{ cursor: "pointer" }}
         ></p>
-        <div className={styles.arrow}></div>
+        <div className={styles["page110__arrow"]}></div>
     </div>
 );
+
+
+
 
 const audioMap = {
     global_vocabularye, global_vocabularyp,
@@ -84,49 +90,56 @@ const playAudio = (audioKey) => {
 
 
 const Pagina110 = () => {
-
     return (
-        <div>
-            <div className={styles.pg110Container}>
-                <header className={styles.pg110Header}>
-                    <h1 className={styles.pg110HeaderH1}>
-                        Vocabulary
-                        <img
-                            src={eng_audio_icon}
-                            alt="English audio"
-                            className={styles.pg110AudioIcon}
-                            onClick={() => playAudio("global_vocabularye")}
-                        />
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese audio"
-                            className={styles.pg110AudioIcon}
-                            onClick={() => playAudio("global_vocabularyp")}
-                        />
-                    </h1>
-                    <div>
-                        <h2 onClick={() => playAudio("pg110_audio1")} style={{ cursor: "pointer" }}>Clothing</h2>
-                        <p>Roupas</p>
-                    </div>
-                </header>
+        <div className={styles["page110__container"]}>
+            <header className={styles["page110__header"]}>
+                <h1 className={styles["page110__header-h1"]}>
+                    Vocabulary
+                    <img
+                        src={eng_audio_icon}
+                        alt="English audio"
+                        className={styles["page110__audio-icon"]}
+                        onClick={() => playAudio("global_vocabularye")}
+                    />
+                    <img
+                        src={ptbr_audio_icon}
+                        alt="Portuguese audio"
+                        className={styles["page110__audio-icon"]}
+                        onClick={() => playAudio("global_vocabularyp")}
+                    />
+                </h1>
+                <div>
+                    <h2 onClick={() => playAudio("pg110_audio1")} style={{ cursor: "pointer" }}>
+                        Clothing
+                    </h2>
+                    <p>Roupas</p>
+                </div>
+            </header>
 
-                <main className={styles.pg110Main}>
-                    <div className={styles.pg110ContainerImagemA}>
-                        <img className={styles.pg110Imagem} src={pagina110_imagem1} alt="Women's clothing" />
-                        {labelsWomen.map((label, index) => (
-                            <Label key={index} {...label} />
-                        ))}
-                        <div className={styles.pg110CaixaLegenda}><p onClick={() => playAudio("pg110_audio17")} style={{cursor: 'pointer'}}>Women’s clothing (Roupas femininas)</p></div>
+            <main className={styles["page110__main"]}>
+                <div className={styles["page110__container-image-a"]}>
+                    <img className={styles["page110__image"]} src={pagina110_imagem1} alt="Women's clothing" />
+                    {labelsWomen.map((label, index) => (
+                        <Label key={index} {...label} />
+                    ))}
+                    <div className={styles["page110__box-caption"]}>
+                        <p onClick={() => playAudio("pg110_audio17")} style={{ cursor: 'pointer' }}>
+                            Women’s clothing (Roupas femininas)
+                        </p>
                     </div>
-                    <div className={styles.pg110ContainerImagemB}>
-                        <img className={styles.pg110Imagem} src={pagina110_imagem2} alt="Men's clothing" />
-                        {labelsMen.map((label, index) => (
-                            <Label key={index} {...label} />
-                        ))}
-                        <div className={styles.pg110CaixaLegenda}><p onClick={() => playAudio("pg110_audio18")} style={{cursor: 'pointer'}}>Men’s clothing (Roupas masculinas)</p></div>
+                </div>
+                <div className={styles["page110__container-image-b"]}>
+                    <img className={styles["page110__image"]} src={pagina110_imagem2} alt="Men's clothing" />
+                    {labelsMen.map((label, index) => (
+                        <Label key={index} {...label} />
+                    ))}
+                    <div className={styles["page110__box-caption"]}>
+                        <p onClick={() => playAudio("pg110_audio18")} style={{ cursor: 'pointer' }}>
+                            Men’s clothing (Roupas masculinas)
+                        </p>
                     </div>
-                </main>
-            </div>
+                </div>
+            </main>
         </div>
     );
 };

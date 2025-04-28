@@ -1,1 +1,132 @@
-/* Styles for pagina185 */
+.page185__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page185__header {
+    width: 100%;
+}
+
+.page185__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page185__title_black {
+    color: black;
+}
+
+.page185__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page185__vocabulary {
+    width: 100%;
+}
+
+.page185__vocabulary_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.page185__vocabulary_card {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.page185__word {
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #A61C28;
+    margin-bottom: 1rem;
+}
+
+.page185__translation {
+    font-size: 1.4rem;
+    color: #666;
+    font-style: italic;
+}
+
+.page185__tableSection {
+    width: 100%;
+}
+
+.page185__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.page185__subtitleSection {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+.page185__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.page185__table th,
+.page185__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.page185__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 1024px) {
+    .page185__container {
+        padding: 1rem;
+    }
+
+    .page185__title {
+        font-size: 4rem;
+    }
+
+    .page185__vocabulary_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page185__word {
+        font-size: 2rem;
+    }
+
+    .page185__table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .page185__table th,
+    .page185__table td {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+
+    .page185__translation {
+        font-size: 1.2rem;
+    }
+}

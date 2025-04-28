@@ -24,14 +24,14 @@ const Pagina51 = () => {
 
     return (
         <div>
-            <div className={styles.pg118Container}>
-                <header className={styles.pg118Header}>
+            <div className={styles["page118__container"]}>
+                <header className={styles["page118__header"]}>
                     <h1>Grammar</h1>
                 </header>
-                <main className={styles.pg118Main}>
+                <main className={styles["page118__main"]}>
                     <div>
-                        <div className={styles.pg118TableHeader}>INTERROGATIVE</div>
-                        <table className={styles.pg118StyledTable}>
+                        <div className={styles["page118__table-header"]}>INTERROGATIVE</div>
+                        <table className={styles["page118__styled-table"]}>
                             <thead>
                                 <tr>
                                     <th>Palavras interrogativas</th>
@@ -48,7 +48,7 @@ const Pagina51 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg118InputCell}
+                                                    className={styles["page118__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -67,8 +67,8 @@ const Pagina51 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg118TableHeader}>AFFIRMATIVE</div>
-                        <table className={styles.pg118StyledTable}>
+                        <div className={styles["page118__table-header"]}>AFFIRMATIVE</div>
+                        <table className={styles["page118__styled-table"]}>
                             <thead>
                                 <tr>
                                     <th>Introdução</th>
@@ -77,7 +77,6 @@ const Pagina51 = () => {
                                     <th>Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
-                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -86,7 +85,7 @@ const Pagina51 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg118InputCell}
+                                                    className={styles["page118__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -105,14 +104,14 @@ const Pagina51 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg118TableHeader}>NEGATIVE</div>
-                        <table className={styles.pg118StyledTable}>
+                        <div className={styles["page118__table-header"]}>NEGATIVE</div>
+                        <table className={styles["page118__styled-table"]}>
                             <thead>
                                 <tr>
-                                <th>Introdução</th>
+                                    <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo <br /> Auxiliar</th>
-                                    <th> <span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
+                                    <th><span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
                                 </tr>
@@ -123,7 +122,7 @@ const Pagina51 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg118InputCell}
+                                                    className={styles["page118__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>

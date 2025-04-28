@@ -1,1 +1,133 @@
-/* Styles for pagina181 */
+.page181__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page181__header {
+    width: 100%;
+}
+
+.page181__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page181__title_black {
+    color: black;
+}
+
+.page181__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page181__aside {
+    width: 100%;
+}
+
+.page181__aside_container {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+}
+
+.page181__aside_header {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.page181__aside_content {
+    padding: 2rem;
+}
+
+.page181__text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+.page181__highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page181__tableSection {
+    width: 100%;
+}
+
+.page181__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.page181__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.page181__table th,
+.page181__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.page181__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+.page181__translation {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .page181__container {
+        padding: 1rem;
+    }
+
+    .page181__title {
+        font-size: 4rem;
+    }
+
+    .page181__aside_header {
+        font-size: 1.8rem;
+    }
+
+    .page181__text {
+        font-size: 1.8rem;
+    }
+
+    .page181__table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .page181__table th,
+    .page181__table td {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+
+    .page181__translation {
+        font-size: 1.2rem;
+    }
+}

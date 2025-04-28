@@ -1,19 +1,19 @@
-.pg110Container {
+.page110__container {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.pg110Header {
+.page110__header {
     width: 100%;
     text-align: left;
 }
 
-.pg110HeaderH1 {
+.page110__header-h1 {
     color: #A61C28;
 }
 
-.pg110Main {
+.page110__main {
     width: 100%;
     text-align: center;
     gap: 20rem;
@@ -21,18 +21,18 @@
 
 /* Este é um comentário */
 
-.pg110ContainerImagemA,
-.pg110ContainerImagemB {
+.page110__container-image-a,
+.page110__container-image-b {
     position: relative;
     width: 100%;
 }
 
-.pg110Imagem {
+.page110__image {
     width: 100%;
     aspect-ratio: 1 / 1.4;
 }
 
-.pg110CaixaLegenda {
+.page110__box-caption {
     width: 100%;
     height: 5rem;
     background-color: #62169F;
@@ -42,7 +42,7 @@
     justify-content: center;
 }
 
-.pg110Label {
+.page110__label {
     position: absolute;
     background-color: rgba(144, 238, 144, 0.8);
     padding: 0.1rem;
@@ -53,11 +53,11 @@
     transform: translate(-50%, -50%);
 }
 
-.pg110Label p {
+.page110__label p {
     font-size: 1.5rem;
 }
 
-.pg110AudioIcon {
+.page110__audio-icon {
     width: 2rem;
     height: 2rem;
     margin-left: 10px;
@@ -65,7 +65,7 @@
     transition: transform 0.2s ease-in-out;
 }
 
-.pg110AudioIcon:hover {
+.page110__audio-icon:hover {
     transform: scale(1.1);
     opacity: 0.8;
 }

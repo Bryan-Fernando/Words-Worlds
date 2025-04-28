@@ -106,252 +106,250 @@ const pagina114 = () => {
     };
 
     return (
-        <div className={styles.pg114Container}>
-            <main className={styles.pg114Main}>
-                <header className={styles.pg114Header}>
-                    <h1 className={styles.pg114H1}>Learning Language Exercises <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles.pg114HeaderIcon}
-                        onClick={() => playAudio(global_learning_le_e)}
+        <div className={styles["page114__container"]}>
+    <main className={styles["page114__main"]}>
+        <header className={styles["page114__header"]}>
+            <h1 className={styles["page114__header-h1"]} onClick={() => playAudio(global_grammar)} style={{ cursor: 'pointer' }}>
+                Grammar
+                <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page114__header-icon"]}
+                    onClick={() => playAudio(global_learning_le_e)}
+                />
+                <img
+                    src={ptbr_audio_icon}
+                    alt="Portuguese audio"
+                    className={styles["page114__header-icon"]}
+                    onClick={() => playAudio(global_learning_le_p)}
+                />
+            </h1>
+            <p className={styles["page114__text-explanatory"]}>
+                Complete the questions using the correct question words: <strong> What | Where | When | What time | How;</strong>
+                along with the verbs: <strong> am| is | are |. </strong>Then answer them with your own words.
+                <br /> <br />
+                Complete as perguntas usando as palavras interrogativas corretas: O que / Onde / Quando / Que horas / Como; juntamente com os verbos: sou / é / são. Depois, responda-as com suas próprias palavras.
+            </p>
+            <p className={styles["page114__text-explanatory--red"]}>
+                There can be more than one possible question and answer <br /> Nota: Pode haver mais de uma pergunta e resposta possíveis.
+            </p>
+        </header>
 
-                    />
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese audio"
-                            className={styles.pg114HeaderIcon}
-                            onClick={() => playAudio(global_learning_le_p)}
+        <div className={styles["page114__container-tables"]}>
+            {/* Tabela Interrogativa */}
+            <div className={styles["page114__interrogative-table-container"]}>
+                <div className={styles["page114__table-header-interrogative"]}>INTERROGATIVA</div>
+                <table className={styles["page114__styled-table-interrogative"]}>
+                    <thead>
+                        <tr className={styles["page114__cell-table"]}>
+                            <th>Palavras <br /> Interrogativas</th>
+                            <th>Verbo <br /> Auxiliar</th>
+                            <th>Sujeito</th>
+                            <th><span style={{ color: '#A61C28' }}>Not</span> <br />Advérbio</th>
+                            <th>Verbo(s)</th>
+                            <th>Objeto <br /> Complemento</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
 
-                        /></h1>
-                    <p className={styles.pg114TextoExplicativo}>Complete the questions using the correct question words: <strong> What | Where | When | What time | How;</strong>
-                        along with the verbs: <strong> am| is | are |. </strong>Then answer them with your own words.
-                        <br /> <br />
-                        Complete as perguntas usando as palavras interrogativas corretas: O que / Onde / Quando /
-                        Que horas / Como; juntamente com os verbos: sou / é / são. Depois, responda-as com suas
-                        próprias palavras.</p>
-                    <p className={styles.pg114TextoExplicativoRed}>There can be more than one possible question and answer <br /> Nota: Pode haver mais de uma pergunta e resposta possíveis.</p>
-
-                </header>
-
-                <div className={styles.pg114ContainerTabelas}>
-                    {/* Tabela Interrogativa */}
-                    <div className={styles.pg114tabelaInterrogativaContainer}>
-                        <div className={styles.pg114tableHeaderInterrogativa}>INTERROGATIVA</div>
-                        <table className={styles.pg114styledTableInterrogativa}>
-                            <thead>
-                                <tr className={styles.pg114celulatable}>
-                                    <th>Palavras <br /> Interrogativas</th>
-                                    <th>Verbo <br /> Auxiliar</th>
-                                    <th>Sujeito</th>
-                                    <th><span style={{ color: '#A61C28' }}>Not</span> <br />Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-
-                    {/* Tabela Afirmação */}
-                    <div className={styles.pg114tabelaInterrogativaContainer}>
-                        <div className={styles.pg114tableHeaderInterrogativa}>AFIRMATIVA</div>
-                        <table className={styles.pg114styledTableInterrogativa}>
-                            <thead>
-                                <tr className={styles.pg114celulatable}>
-                                    <th>Introdução</th>
-                                    <th>Sujeito</th>
-                                    <th>Verbo Auxiliar</th>
-                                    <th>Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto <br /> Complemento</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-
-                {/* Questões com Respostas */}
-                <div className={styles.pg114ContainerQuestoes}>
-                    {/* Questões 1 e Respostas 1 */}
-                    <div className={styles.pg114Questions1}>
-                        <p className={styles.pg114TitleContainer}>
-                            <strong>1 - Questions</strong>
-                        </p>
-                        {[" you from?", " your favorite color?", " the party tonight?", " your parents?"].map((question, index) => (
-                            <div key={index} className={styles.pg114Question}>
-                                <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
-                                <input
-                                    type="text"
-                                    value={inputValues.questions1[index]}
-                                    onChange={(e) => handleInputChange(e.target.value, index, 'questions1')}
-                                    className={styles.pg114InputBoxSmall}
-                                />
-                                {question}
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="Play Audio"
-                                    className={styles.pg114AudioIcon}
-                                    onClick={() => playAudio(eval(`pg114_audio${index + 1}`))}
-
-                                />
-                                {results.questions1[index] !== null && (
-                                    <img
-                                        src={results.questions1[index] ? correct_icon : wrong_icon}
-                                        alt={results.questions1[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg114CheckmarkImage}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Respostas 1 */}
-                    <div className={styles.pg114Answers}>
-                        <p><strong>1 - Answers</strong></p>
-                        {["a", "b", "c", "d"].map((item, index) => (
-                            <div key={index} className={styles.pg114Answer}>
-                                <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers1[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers1')} className={styles.pg114InputBoxColumn} /></em>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Questões 2 e Respostas 2 */}
-                <div className={styles.pg114ContainerQuestoes}>
-                    <div className={styles.pg114Questions2}>
-                        <p className={styles.pg114TitleContainer}>
-                            <strong>2 - Questions</strong>
-                        </p>
-                        {["(What / your name)?", "(Where / your keys)?", "(When / the next train)?", "(How / your new job)?"].map((question, index) => (
-                            <div key={index} className={styles.pg114Question}>
-                                <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
-                                <input
-                                    type="text"
-                                    value={inputValues.questions2[index]}
-                                    onChange={(e) => handleInputChange(e.target.value, index, 'questions2')}
-                                    className={styles.pg114InputBoxSmall}
-                                />
-                                {question}
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="Play Audio"
-                                    className={styles.pg114AudioIcon}
-                                    onClick={() => playAudio(eval(`pg114_audio${index + 5}`))}
-
-                                />
-                                {results.questions2[index] !== null && (
-                                    <img
-                                        src={results.questions2[index] ? correct_icon : wrong_icon}
-                                        alt={results.questions2[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg114CheckmarkImage}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Respostas 2 */}
-                    <div className={styles.pg114Answers}>
-                        <p><strong>2 - Answers</strong></p>
-                        {["a", "b", "c", "d"].map((item, index) => (
-                            <div key={index} className={styles.pg114Answer}>
-                                <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers2[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers2')} className={styles.pg114InputBoxColumn} /></em>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Questões 3 e Respostas 3 */}
-                <div className={styles.pg114ContainerQuestoes}>
-                    <div className={styles.pg114Questions3}>
-                        <p><strong>3 - Questions</strong></p>
-                        {[" the concert? ", "the weather today?", "your favorite subject at school?"].map((question, index) => (
-                            <div key={index} className={styles.pg114Question}>
-                                <span><strong>{String.fromCharCode(97 + index)}.</strong> </span>
-                                <input
-                                    type="text"
-                                    value={inputValues.questions3[index]}
-                                    onChange={(e) => handleInputChange(e.target.value, index, 'questions3')}
-                                    className={styles.pg114InputBoxSmall}
-                                />{question}
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="Play Audio"
-                                    className={styles.pg114AudioIcon}
-                                    onClick={() => playAudio(eval(`pg114_audio${index + 9}`))}
-
-                                />
-                                {results.questions3[index] !== null && (
-                                    <img
-                                        src={results.questions3[index] ? correct_icon : wrong_icon}
-                                        alt={results.questions3[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg114CheckmarkImage}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Respostas 3 */}
-                    <div className={styles.pg114Answers}>
-                        <p><strong>3 - Answers</strong></p>
-                        {["a", "b", "c"].map((item, index) => (
-                            <div key={index} className={styles.pg114Answer}>
-                                <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers3[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers3')} className={styles.pg114InputBoxColumn} /></em>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-                {/* Questões 4 e Respostas 4 */}
-                <div className={styles.pg114ContainerQuestoes}>
-                    <div className={styles.pg114Questions4}>
-                        <p><strong>4 - Questions</strong></p>
-                        {["your favorite book?", " you at home?", " the time now?", " your phone number?"].map((question, index) => (
-                            <div key={index} className={styles.pg114Question}>
-                                <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
-                                <input
-                                    type="text"
-                                    value={inputValues.questions4[index]}
-                                    onChange={(e) => handleInputChange(e.target.value, index, 'questions4')}
-                                    className={styles.pg114InputBoxSmall}
-                                /> {question}
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="Play Audio"
-                                    className={styles.pg114AudioIcon}
-                                    onClick={() => playAudio(eval(`pg114_audio${index + 12}`))}
-
-                                />
-                                {results.questions4[index] !== null && (
-                                    <img
-                                        src={results.questions4[index] ? correct_icon : wrong_icon}
-                                        alt={results.questions4[index] ? "Correct" : "Incorrect"}
-                                        className={styles.pg114CheckmarkImage}
-                                    />
-                                )}
-                            </div>
-                        ))}
-                    </div>
-
-                    {/* Respostas 4 */}
-                    <div className={styles.pg114Answers}>
-                        <p><strong>4 - Answers</strong></p>
-                        {["a", "b", "c", "d"].map((item, index) => (
-                            <div key={index} className={styles.pg114Answer}>
-                                <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers4[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers4')} className={styles.pg114InputBoxColumn} /></em>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-
-
-                <button className={styles.pg114CheckButton} onClick={handleCheckClick}>Check</button>
-
-                <div className={styles.pg114ContainerImagem}> <img className={styles.pg114imagem} src={pagina114_imagem1} alt="" /></div>
-
-
-            </main>
+            {/* Tabela Afirmação */}
+            <div className={styles["page114__interrogative-table-container"]}>
+                <div className={styles["page114__table-header-interrogative"]}>AFIRMATIVA</div>
+                <table className={styles["page114__styled-table-interrogative"]}>
+                    <thead>
+                        <tr className={styles["page114__cell-table"]}>
+                            <th>Introdução</th>
+                            <th>Sujeito</th>
+                            <th>Verbo Auxiliar</th>
+                            <th>Advérbio</th>
+                            <th>Verbo(s)</th>
+                            <th>Objeto <br /> Complemento</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
         </div>
+
+        {/* Questões com Respostas */}
+        <div className={styles["page114__container-questions"]}>
+            {/* Questões 1 e Respostas 1 */}
+            <div className={styles["page114__questions-1"]}>
+                <p className={styles["page114__title-container"]}>
+                    <strong>1 - Questions</strong>
+                </p>
+                {[" you from?", " your favorite color?", " the party tonight?", " your parents?"].map((question, index) => (
+                    <div key={index} className={styles["page114__question"]}>
+                        <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
+                        <input
+                            type="text"
+                            value={inputValues.questions1[index]}
+                            onChange={(e) => handleInputChange(e.target.value, index, 'questions1')}
+                            className={styles["page114__input-box-small"]}
+                        />
+                        {question}
+                        <img
+                            src={eng_audio_icon}
+                            alt="Play Audio"
+                            className={styles["page114__audio-icon"]}
+                            onClick={() => playAudio(eval(`pg114_audio${index + 1}`))}
+                        />
+                        {results.questions1[index] !== null && (
+                            <img
+                                src={results.questions1[index] ? correct_icon : wrong_icon}
+                                alt={results.questions1[index] ? "Correct" : "Incorrect"}
+                                className={styles["page114__checkmark-image"]}
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            {/* Respostas 1 */}
+            <div className={styles["page114__answers"]}>
+                <p><strong>1 - Answers</strong></p>
+                {["a", "b", "c", "d"].map((item, index) => (
+                    <div key={index} className={styles["page114__answer"]}>
+                        <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers1[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers1')} className={styles["page114__input-box-column"]} /></em>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Questões 2 e Respostas 2 */}
+        <div className={styles["page114__container-questions"]}>
+            <div className={styles["page114__questions-2"]}>
+                <p className={styles["page114__title-container"]}>
+                    <strong>2 - Questions</strong>
+                </p>
+                {["(What / your name)?", "(Where / your keys)?", "(When / the next train)?", "(How / your new job)?"].map((question, index) => (
+                    <div key={index} className={styles["page114__question"]}>
+                        <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
+                        <input
+                            type="text"
+                            value={inputValues.questions2[index]}
+                            onChange={(e) => handleInputChange(e.target.value, index, 'questions2')}
+                            className={styles["page114__input-box-small"]}
+                        />
+                        {question}
+                        <img
+                            src={eng_audio_icon}
+                            alt="Play Audio"
+                            className={styles["page114__audio-icon"]}
+                            onClick={() => playAudio(eval(`pg114_audio${index + 5}`))}
+                        />
+                        {results.questions2[index] !== null && (
+                            <img
+                                src={results.questions2[index] ? correct_icon : wrong_icon}
+                                alt={results.questions2[index] ? "Correct" : "Incorrect"}
+                                className={styles["page114__checkmark-image"]}
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            {/* Respostas 2 */}
+            <div className={styles["page114__answers"]}>
+                <p><strong>2 - Answers</strong></p>
+                {["a", "b", "c", "d"].map((item, index) => (
+                    <div key={index} className={styles["page114__answer"]}>
+                        <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers2[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers2')} className={styles["page114__input-box-column"]} /></em>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Questões 3 e Respostas 3 */}
+        <div className={styles["page114__container-questions"]}>
+            <div className={styles["page114__questions-3"]}>
+                <p><strong>3 - Questions</strong></p>
+                {[" the concert? ", "the weather today?", "your favorite subject at school?"].map((question, index) => (
+                    <div key={index} className={styles["page114__question"]}>
+                        <span><strong>{String.fromCharCode(97 + index)}.</strong> </span>
+                        <input
+                            type="text"
+                            value={inputValues.questions3[index]}
+                            onChange={(e) => handleInputChange(e.target.value, index, 'questions3')}
+                            className={styles["page114__input-box-small"]}
+                        />{question}
+                        <img
+                            src={eng_audio_icon}
+                            alt="Play Audio"
+                            className={styles["page114__audio-icon"]}
+                            onClick={() => playAudio(eval(`pg114_audio${index + 9}`))}
+                        />
+                        {results.questions3[index] !== null && (
+                            <img
+                                src={results.questions3[index] ? correct_icon : wrong_icon}
+                                alt={results.questions3[index] ? "Correct" : "Incorrect"}
+                                className={styles["page114__checkmark-image"]}
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            {/* Respostas 3 */}
+            <div className={styles["page114__answers"]}>
+                <p><strong>3 - Answers</strong></p>
+                {["a", "b", "c"].map((item, index) => (
+                    <div key={index} className={styles["page114__answer"]}>
+                        <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers3[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers3')} className={styles["page114__input-box-column"]} /></em>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Questões 4 e Respostas 4 */}
+        <div className={styles["page114__container-questions"]}>
+            <div className={styles["page114__questions-4"]}>
+                <p><strong>4 - Questions</strong></p>
+                {["your favorite book?", " you at home?", " the time now?", " your phone number?"].map((question, index) => (
+                    <div key={index} className={styles["page114__question"]}>
+                        <span><strong>{String.fromCharCode(97 + index)}.</strong></span>
+                        <input
+                            type="text"
+                            value={inputValues.questions4[index]}
+                            onChange={(e) => handleInputChange(e.target.value, index, 'questions4')}
+                            className={styles["page114__input-box-small"]}
+                        /> {question}
+                        <img
+                            src={eng_audio_icon}
+                            alt="Play Audio"
+                            className={styles["page114__audio-icon"]}
+                            onClick={() => playAudio(eval(`pg114_audio${index + 12}`))}
+                        />
+                        {results.questions4[index] !== null && (
+                            <img
+                                src={results.questions4[index] ? correct_icon : wrong_icon}
+                                alt={results.questions4[index] ? "Correct" : "Incorrect"}
+                                className={styles["page114__checkmark-image"]}
+                            />
+                        )}
+                    </div>
+                ))}
+            </div>
+
+            {/* Respostas 4 */}
+            <div className={styles["page114__answers"]}>
+                <p><strong>4 - Answers</strong></p>
+                {["a", "b", "c", "d"].map((item, index) => (
+                    <div key={index} className={styles["page114__answer"]}>
+                        <em><strong>{item})</strong> <input type="text" value={inputValues.shortAnswers4[index]} onChange={(e) => handleInputChange(e.target.value, index, 'shortAnswers4')} className={styles["page114__input-box-column"]} /></em>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        <button className={styles["page114__check-button"]} onClick={handleCheckClick}>Check</button>
+
+        <div className={styles["page114__container-image"]}>
+            <img className={styles["page114__image"]} src={pagina114_imagem1} alt="" />
+        </div>
+    </main>
+</div>
+
     );
 };
 

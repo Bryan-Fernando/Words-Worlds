@@ -1,1 +1,134 @@
-/* Styles for pagina183 */
+.page183__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page183__header {
+    width: 100%;
+}
+
+.page183__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page183__title_black {
+    color: black;
+}
+
+.page183__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page183__aside {
+    width: 100%;
+}
+
+.page183__aside_container {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+}
+
+.page183__aside_header {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.page183__aside_content {
+    padding: 2rem;
+}
+
+.page183__text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+.page183__highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page183__tableSection {
+    width: 100%;
+}
+
+.page183__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.page183__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+}
+
+.page183__table th,
+.page183__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.page183__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+}
+
+.page183__translation {
+    font-size: 1.4rem;
+    color: #666;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+@media (max-width: 1024px) {
+    .page183__container {
+        padding: 1rem;
+    }
+
+    .page183__title {
+        font-size: 4rem;
+    }
+
+    .page183__aside_header {
+        font-size: 1.8rem;
+    }
+
+    .page183__text {
+        font-size: 1.8rem;
+    }
+
+    .page183__table {
+        overflow-x: auto;
+        display: block;
+    }
+
+    .page183__table th,
+    .page183__table td {
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+
+    .page183__translation {
+        font-size: 1.2rem;
+    }
+}

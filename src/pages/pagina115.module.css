@@ -1,4 +1,4 @@
-.pg115Container {
+.page115__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,15 +6,15 @@
     width: 100%;
 }
 
-.pg115StyledTable {
+.page115__styled-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
     table-layout: fixed;
 }
 
-.pg115StyledTable th,
-.pg115StyledTable td {
+.page115__styled-table th,
+.page115__styled-table td {
     border: 0.1rem solid #A61C28;
     padding: 0.5rem;
     text-align: center;
@@ -23,7 +23,7 @@
     word-wrap: break-word;
 }
 
-.pg115StyledTable th {
+.page115__styled-table th {
     background-color: #888A8C;
     /* Cor de fundo do cabeçalho */
     color: white;
@@ -37,29 +37,28 @@
     /* Mais espaço ao redor do texto */
 }
 
-
-.pg115TableAligned {
+.page115__table-aligned {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
 }
 
-.pg115Header {
+.page115__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg115HeaderH2 {
+.page115__header-h2 {
     color: black;
 }
 
-.pg115Main {
+.page115__main {
     width: 100%;
     text-align: center;
 }
 
-.pg115TableHeader {
+.page115__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -70,7 +69,7 @@
     font-size: 1.5rem;
 }
 
-.pg115InputCell {
+.page115__input-cell {
     width: 100%;
     /* Ocupa toda a largura da célula */
     height: calc(10vh * 0.85);
@@ -89,42 +88,41 @@
     overflow-wrap: break-word;
 }
 
-.pg115InputCell:focus {
+.page115__input-cell:focus {
     outline: none;
     border: 0.1rem solid #F2F2F2;
     background-color: white;
 }
 
-
-.pg115InputCell::-webkit-scrollbar {
+.page115__input-cell::-webkit-scrollbar {
     display: none;
 }
 
-.pg115ColIntro {
+.page115__col-intro {
     width: 20%;
 }
 
-.pg115ColSujeito {
+.page115__col-sujeito {
     width: 15%;
 }
 
-.pg115VerboAux {
+.page115__verbo-aux {
     width: 15%;
 }
 
-.pg115ColNot {
+.page115__col-not {
     width: 10%;
 }
 
-.pg115ColVerbo {
+.page115__col-verbo {
     width: 25%;
 }
 
-.pg115ColComplemento {
+.page115__col-complemento {
     width: 20%;
 }
 
-.pg115ExtraColumn {
+.page115__extra-column {
     background-color: #888A8C;
     color: white;
     border: 1px solid #A61C28;
@@ -133,17 +131,17 @@
 }
 
 @media (max-width: 1024px) {
-    .pg115StyledTable {
+    .page115__styled-table {
         margin-bottom: 15%;
     }
 
-    .pg115StyledTable th,
-    .pg115StyledTable td {
+    .page115__styled-table th,
+    .page115__styled-table td {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
 
-    .pg115InputCell {
+    .page115__input-cell {
         height: calc(6vw * 0.8);
     }
 }

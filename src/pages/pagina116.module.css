@@ -1,4 +1,4 @@
-.pg116Container {
+.page116__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,15 +6,15 @@
     width: 100%;
 }
 
-.pg116StyledTable {
+.page116__styled-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
     table-layout: fixed;
 }
 
-.pg116StyledTable th,
-.pg116StyledTable td {
+.page116__styled-table th,
+.page116__styled-table td {
     border: 0.1rem solid #A61C28;
     padding: 0.5rem;
     text-align: center;
@@ -23,7 +23,7 @@
     word-wrap: break-word;
 }
 
-.pg116StyledTable th {
+.page116__styled-table th {
     background-color: #888A8C; /* Cor de fundo do cabeçalho */
     color: white; /* Cor do texto */
     font-weight: bold;
@@ -32,29 +32,28 @@
     padding: 1.5rem; /* Mais espaço ao redor do texto */
 }
 
-
-.pg116TableAligned {
+.page116__table-aligned {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
 }
 
-.pg116Header {
+.page116__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg116HeaderH2 {
+.page116__header-h2 {
     color: black;
 }
 
-.pg116Main {
+.page116__main {
     width: 100%;
     text-align: center;
 }
 
-.pg116TableHeader {
+.page116__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -65,7 +64,7 @@
     font-size: 1.5rem;
 }
 
-.pg116InputCell {
+.page116__input-cell {
     width: 100%; /* Ocupa toda a largura da célula */
     height: calc(10vh * 0.85); /* Aumenta a altura */
     font-size: 1.5rem;
@@ -81,29 +80,28 @@
     overflow-wrap: break-word; 
 }
 
-.pg116InputCell:focus {
+.page116__input-cell:focus {
     outline: none;
     border: 0.1rem solid #F2F2F2;
     background-color: white;
 }
 
-
-.pg116InputCell::-webkit-scrollbar {
+.page116__input-cell::-webkit-scrollbar {
     display: none;
 }
 
 @media (max-width: 1024px) {
-    .pg116StyledTable {
+    .page116__styled-table {
         margin-bottom: 15%;
     }
 
-    .pg116StyledTable th,
-    .pg116StyledTable td {
+    .page116__styled-table th,
+    .page116__styled-table td {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
 
-    .pg116InputCell {
+    .page116__input-cell {
         height: calc(6vw * 0.8);
     }
 }

@@ -1,0 +1,152 @@
+.page198__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page198__header {
+    width: 100%;
+    text-align: left;
+}
+
+.page198__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.page198__listen {
+    font-size: 3rem;
+    color: #333;
+}
+
+.page198__subtitle {
+    font-size: 2.4rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.page198__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page198__dialogue_section {
+    border: 0.2rem solid #A61C28;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.page198__dialogue_content {
+    width: 100%;
+}
+
+.page198__dialogue_title {
+    font-size: 2.4rem;
+    color: #A61C28;
+    margin-bottom: 2rem;
+}
+
+.page198__conversation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page198__dialogue_line {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.page198__speaker {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.page198__ava {
+    color: #A61C28;
+}
+
+.page198__leo {
+    color: #D4365C;
+}
+
+.page198__text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.page198__ava_text {
+    color: #A61C28;
+}
+
+.page198__leo_text {
+    color: #D4365C;
+}
+
+.page198__translation {
+    font-size: 1.6rem;
+    color: #666;
+    font-style: italic;
+}
+
+.page198__images {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.page198__stage_image,
+.page198__crowd_image {
+    width: calc(50% - 1rem);
+    height: 200px;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+    .page198__container {
+        padding: 1rem;
+    }
+
+    .page198__title {
+        font-size: 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .page198__listen {
+        font-size: 2.4rem;
+    }
+
+    .page198__subtitle {
+        font-size: 2rem;
+    }
+
+    .page198__images {
+        flex-direction: column;
+    }
+
+    .page198__stage_image,
+    .page198__crowd_image {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .page198__speaker,
+    .page198__text {
+        font-size: 1.6rem;
+    }
+
+    .page198__translation {
+        font-size: 1.4rem;
+    }
+}

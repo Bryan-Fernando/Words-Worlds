@@ -1,4 +1,4 @@
-.pg118Container {
+.page118__container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,19 +6,19 @@
     width: 100%;
 }
 
-.pg118StyledTable {
+.page118__styled-table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 2rem;
     table-layout: fixed;
 }
 
-.pg118StyledTable:nth-child(odd) {
+.page118__styled-table:nth-child(odd) {
     margin-bottom: 0;
 }
 
-.pg118StyledTable th,
-.pg118StyledTable td {
+.page118__styled-table th,
+.page118__styled-table td {
     border: 0.1rem solid #A61C28;
     padding: 0.5rem;
     text-align: center;
@@ -27,43 +27,36 @@
     word-wrap: break-word;
 }
 
-.pg118StyledTable th {
+.page118__styled-table th {
     background-color: #888A8C;
-    /* Cor de fundo do cabeçalho */
     color: white;
-    /* Cor do texto */
     font-weight: bold;
     font-size: 1.2rem;
-    /* Tamanho maior da fonte */
-    text-align: center;
-    /* Centraliza o texto */
     padding: 1.5rem;
-    /* Mais espaço ao redor do texto */
 }
 
-
-.pg118TableAligned {
+.page118__table-aligned {
     margin-left: 0;
     padding-left: 0;
     width: 100%;
 }
 
-.pg118Header {
+.page118__header {
     width: 100%;
     text-align: left;
     color: #A61C28;
 }
 
-.pg118HeaderH2 {
+.page118__header-h2 {
     color: black;
 }
 
-.pg118Main {
+.page118__main {
     width: 100%;
     text-align: center;
 }
 
-.pg118TableHeader {
+.page118__table-header {
     background-color: #A61C28;
     color: white;
     text-align: center;
@@ -74,16 +67,13 @@
     font-size: 1.5rem;
 }
 
-.pg118InputCell {
+.page118__input-cell {
     width: 100%;
-    /* Ocupa toda a largura da célula */
     height: calc(10vh * 0.85);
-    /* Aumenta a altura */
     font-size: 1.5rem;
     line-height: 1.5;
     border: none;
     padding: 0.8rem;
-    /* Espaçamento interno */
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
@@ -93,29 +83,28 @@
     overflow-wrap: break-word;
 }
 
-.pg118InputCell:focus {
+.page118__input-cell:focus {
     outline: none;
     border: 0.1rem solid #F2F2F2;
     background-color: white;
 }
 
-
-.pg118InputCell::-webkit-scrollbar {
+.page118__input-cell::-webkit-scrollbar {
     display: none;
 }
 
 @media (max-width: 1024px) {
-    .pg118StyledTable {
+    .page118__styled-table {
         margin-bottom: 15%;
     }
 
-    .pg118StyledTable th,
-    .pg118StyledTable td {
+    .page118__styled-table th,
+    .page118__styled-table td {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
 
-    .pg118InputCell {
+    .page118__input-cell {
         height: calc(6vw * 0.8);
     }
 }

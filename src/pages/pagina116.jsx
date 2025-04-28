@@ -24,16 +24,16 @@ const Pagina116 = () => {
 
     return (
         <div>
-            <div className={styles.pg116Container}>
-                <header className={styles.pg116Header}>
+            <div className={styles["page116__container"]}>
+                <header className={styles["page116__header"]}>
                     <h1>Grammar</h1>
-                    <h2 className={styles.pg116HeaderH2}>Simple Present (Presente Simples)</h2>
+                    <h2 className={styles["page116__header-h2"]}>Simple Present (Presente Simples)</h2>
                     <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
-                <main className={styles.pg116Main}>
+                <main className={styles["page116__main"]}>
                     <div>
-                        <div className={styles.pg116TableHeader}>INTERROGATIVE</div>
-                        <table className={styles.pg116StyledTable}>
+                        <div className={styles["page116__table-header"]}>INTERROGATIVE</div>
+                        <table className={styles["page116__styled-table"]}>
                             <thead>
                                 <tr>
                                     <th>Palavras interrogativas</th>
@@ -50,7 +50,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg116InputCell}
+                                                    className={styles["page116__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -69,8 +69,8 @@ const Pagina116 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg116TableHeader}>AFFIRMATIVE</div>
-                        <table className={styles.pg116StyledTable}>
+                        <div className={styles["page116__table-header"]}>AFFIRMATIVE</div>
+                        <table className={styles["page116__styled-table"]}>
                             <thead>
                                 <tr>
                                     <th>Introdução</th>
@@ -79,7 +79,6 @@ const Pagina116 = () => {
                                     <th>Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
-                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -88,7 +87,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg116InputCell}
+                                                    className={styles["page116__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
@@ -107,14 +106,14 @@ const Pagina116 = () => {
                             </tbody>
                         </table>
 
-                        <div className={styles.pg116TableHeader}>NEGATIVE</div>
-                        <table className={styles.pg116StyledTable}>
+                        <div className={styles["page116__table-header"]}>NEGATIVE</div>
+                        <table className={styles["page116__styled-table"]}>
                             <thead>
                                 <tr>
-                                <th>Introdução</th>
+                                    <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo <br /> Auxiliar</th>
-                                    <th> <span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
+                                    <th><span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
                                 </tr>
@@ -125,7 +124,7 @@ const Pagina116 = () => {
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
-                                                    className={styles.pg116InputCell}
+                                                    className={styles["page116__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>

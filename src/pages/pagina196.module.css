@@ -1,0 +1,152 @@
+.page196__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 0;
+    padding: 2rem;
+}
+
+.page196__header {
+    width: 100%;
+    text-align: left;
+}
+
+.page196__title {
+    font-size: 6rem;
+    color: #A61C28;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.page196__listen {
+    font-size: 3rem;
+    color: #333;
+}
+
+.page196__subtitle {
+    font-size: 2.4rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+.page196__main {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.page196__dialogue_section {
+    border: 0.2rem solid #A61C28;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+
+.page196__dialogue_content {
+    width: 100%;
+}
+
+.page196__dialogue_title {
+    font-size: 2.4rem;
+    color: #A61C28;
+    margin-bottom: 2rem;
+}
+
+.page196__conversation {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page196__dialogue_line {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.page196__speaker {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.page196__john {
+    color: #A61C28;
+}
+
+.page196__mary {
+    color: #FFB6C1;
+}
+
+.page196__text {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.page196__john_text {
+    color: #A61C28;
+}
+
+.page196__mary_text {
+    color: #FFB6C1;
+}
+
+.page196__translation {
+    font-size: 1.6rem;
+    color: #666;
+    font-style: italic;
+}
+
+.page196__images {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.page196__cherry_blossoms,
+.page196__japan_night {
+    width: calc(50% - 1rem);
+    height: 200px;
+    border-radius: 0.5rem;
+    background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+    .page196__container {
+        padding: 1rem;
+    }
+
+    .page196__title {
+        font-size: 4rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .page196__listen {
+        font-size: 2.4rem;
+    }
+
+    .page196__subtitle {
+        font-size: 2rem;
+    }
+
+    .page196__images {
+        flex-direction: column;
+    }
+
+    .page196__cherry_blossoms,
+    .page196__japan_night {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .page196__speaker,
+    .page196__text {
+        font-size: 1.6rem;
+    }
+
+    .page196__translation {
+        font-size: 1.4rem;
+    }
+}

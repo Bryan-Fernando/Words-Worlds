@@ -21,29 +21,29 @@ const Pagina51 = () => {
 
     return (
         <div>
-            <div className={styles.pg117Container}>
-                <header className={styles.pg117Header}>
+            <div className={styles["page117__container"]}>
+                <header className={styles["page117__header"]}>
                     <h1>Grammar</h1>
                 </header>
-                <main className={styles.pg117Main}>
+                <main className={styles["page117__main"]}>
                     <div>
-                        <div className={styles.pg117TableHeader}>INTERROGATIVE</div>
+                        <div className={styles["page117__table-header"]}>INTERROGATIVE</div>
                         {/* Tabela de Cima */}
-                        <table className={styles.pg117StyledTable}>
+                        <table className={styles["page117__styled-table"]}>
                             <colgroup>
-                                <col style={{ width: '15%' }} />
-                                <col style={{ width: '15%' }} />
-                                <col style={{ width: '10%' }} />
-                                <col style={{ width: '10%' }} />
-                                <col style={{ width: '25%' }} />
-                                <col style={{ width: '25%' }} />
+                                <col style={{ width: "15%" }} />
+                                <col style={{ width: "15%" }} />
+                                <col style={{ width: "10%" }} />
+                                <col style={{ width: "10%" }} />
+                                <col style={{ width: "25%" }} />
+                                <col style={{ width: "25%" }} />
                             </colgroup>
                             <thead>
                                 <tr>
                                     <th>Palavras <br /> Interrogativas</th>
                                     <th>Verbo <br /> Auxiliar</th>
                                     <th>Sujeito</th>
-                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
+                                    <th><span style={{ color: "red" }}>'Not'</span><br /> Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto complemento</th>
                                 </tr>
@@ -55,16 +55,16 @@ const Pagina51 = () => {
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`table1-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg117InputCell}
+                                                    className={styles["page117__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
                                                         handleInputChange(rowIndex, colIndex, e, setInputValuesTable1)
                                                     }
                                                     style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
+                                                        resize: "none",
+                                                        overflowWrap: "break-word",
+                                                        wordWrap: "break-word",
                                                     }}
                                                 />
                                             </td>
@@ -74,24 +74,24 @@ const Pagina51 = () => {
                             </tbody>
                         </table>
 
-                        {/* Tabela de Baixo */}
-                        <table className={`${styles.pg117StyledTable} ${styles.pg117TableAligned}`}>
-                        <colgroup>
-                                <col style={{ width: '20.2%' }} className={styles.pg117ExtraColumn} />
-                                <col style={{ width: '20.2%' }} />
-                                <col style={{ width: '13.5%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '25%' }} />
-                                <col style={{ width: '33.7%' }} />
+                        <div className={styles["page117__table-header"]}>AFFIRMATIVE</div>
+                        <table className={styles["page117__styled-table"]}>
+                            <colgroup>
+                                <col style={{ width: "20.2%" }} className={styles["page117__extra-column"]} />
+                                <col style={{ width: "20.2%" }} />
+                                <col style={{ width: "13.5%" }} />
+                                <col style={{ width: "11%" }} />
+                                <col style={{ width: "11%" }} />
+                                <col style={{ width: "25%" }} />
+                                <col style={{ width: "33.7%" }} />
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th className={styles.pg117ExtraColumn}></th>
+                                    <th className={styles["page117__extra-column"]}></th>
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo Auxiliar</th>
-                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
+                                    <th><span style={{ color: "red" }}>'Not'</span><br /> Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto Complemento</th>
                                 </tr>
@@ -99,21 +99,21 @@ const Pagina51 = () => {
                             <tbody>
                                 {inputValuesTable2.map((row, rowIndex) => (
                                     <tr key={rowIndex}>
-                                        <td className={styles.pg117ExtraColumn}></td>
+                                        <td className={styles["page117__extra-column"]}></td>
                                         {row.map((value, colIndex) => (
                                             <td key={colIndex}>
                                                 <textarea
                                                     id={`table2-input-${rowIndex}-${colIndex}`}
-                                                    className={styles.pg117InputCell}
+                                                    className={styles["page117__input-cell"]}
                                                     value={value}
                                                     rows="1"
                                                     onChange={(e) =>
                                                         handleInputChange(rowIndex, colIndex, e, setInputValuesTable2)
                                                     }
                                                     style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
+                                                        resize: "none",
+                                                        overflowWrap: "break-word",
+                                                        wordWrap: "break-word",
                                                     }}
                                                 />
                                             </td>
