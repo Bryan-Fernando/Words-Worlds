@@ -120,7 +120,7 @@ const Pagina3 = () => {
                                 />
                             </li>
                             <li className={styles["page3__list-item"]}>
-                                Hello, I am Andrei. I am a teacher.
+                                Hello, I am Andrei. I am a University Teacher.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"
