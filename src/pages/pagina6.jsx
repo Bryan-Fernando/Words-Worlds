@@ -147,9 +147,9 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>not</span>
+                                        not
                                     </td>
                                     <td className={styles["page6__table-verb"]}></td>
                                     <td className={styles["page6__table-complement"]} onClick={() => playAudio(pg6Audio1)}
@@ -180,9 +180,9 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>not</span>
+                                        not
                                     </td>
                                     <td className={styles["page6__table-verb"]}></td>
                                     <td
@@ -218,9 +218,9 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>not</span>
+                                        not
                                     </td>
                                     <td className={styles["page6__table-verb"]}></td>
                                     <td

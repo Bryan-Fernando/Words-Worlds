@@ -139,9 +139,9 @@ const Pagina13 = () => {
                                     <td
                                         className={styles["page13__table-adverb"]}
                                         onClick={() => playAudio(pg13Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"  }}
                                     >
-                                        not
+                                       not
                                     </td>
                                     <td className={styles["page13__table-verb"]}></td>
                                     <td
@@ -156,14 +156,14 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não é o novo diretor?
+                                        Você <span style={{ color: "red" }}>não</span> é o novo diretor?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page13__table-auxiliary"]}
                                         onClick={() => playAudio(pg13Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         Aren't
                                     </td>
@@ -188,14 +188,14 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não está na sala de aula (turma/classe) 2-B?
+                                        Você <span style={{ color: "red" }}>não</span> está na sala de aula (turma/classe) 2-B?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page13__table-auxiliary"]}
                                         onClick={() => playAudio(pg13Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         Ain't
                                     </td>
@@ -220,7 +220,7 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não tem apenas 12 anos?
+                                        Você <span style={{ color: "red" }}>não</span> tem apenas 12 anos?
                                     </td>
                                 </tr>
                             </tbody>

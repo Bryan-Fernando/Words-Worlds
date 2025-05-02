@@ -137,9 +137,9 @@ const Pagina8 = () => {
                                     <td
                                         className={styles["page8__table-adverb"]}
                                         onClick={() => playAudio(pg8Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>not</span>
+                                        not
                                     </td>
                                     <td className={styles["page8__table-verb"]}></td>
                                     <td
@@ -161,9 +161,9 @@ const Pagina8 = () => {
                                     <td
                                         className={styles["page8__table-subject"]}
                                         onClick={() => playAudio(pg8Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>Ain't</span>
+                                        Ain't
                                     </td>
                                     <td
                                         className={styles["page8__table-auxiliary"]}
@@ -193,9 +193,9 @@ const Pagina8 = () => {
                                     <td
                                         className={styles["page8__table-subject"]}
                                         onClick={() => playAudio(pg8Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
-                                        <span style={{ color: "red" }}>Ain't</span>
+                                        Ain't
                                     </td>
                                     <td
                                         className={styles["page8__table-auxiliary"]}

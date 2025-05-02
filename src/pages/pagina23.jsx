@@ -140,7 +140,7 @@ const Pagina23 = () => {
                                     <td
                                         className={styles["page23__adverb"]}
                                         onClick={() => playAudio(pg23Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
                                     >
                                         not
                                     </td>
@@ -157,7 +157,7 @@ const Pagina23 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Não está quente
+                                        <span style={{ color: "red" }}>Não</span> está quente
                                     </td>
                                 </tr>
                                 <tr>
@@ -178,7 +178,7 @@ const Pagina23 = () => {
                                     <td
                                         className={styles["page23__adverb"]}
                                         onClick={() => playAudio(pg23Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
                                     >
                                         not
                                     </td>
@@ -195,7 +195,7 @@ const Pagina23 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Não é / Fica ao lado da biblioteca
+                                        <span style={{ color: "red" }}>Não</span> é / Fica ao lado da biblioteca
                                     </td>
                                 </tr>
                                 <tr>
@@ -209,7 +209,7 @@ const Pagina23 = () => {
                                     <td
                                         className={styles["page23__auxiliary-verb"]}
                                         onClick={() => playAudio(pg23Audio4)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
                                     >
                                         isn't
                                     </td>
@@ -227,7 +227,7 @@ const Pagina23 = () => {
                                         onClick={() => playAudio(traducaoAudio4)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Não tem 3 anos
+                                        <span style={{ color: "red" }}>Não</span> tem 3 anos
                                     </td>
                                 </tr>
                                 <tr>
@@ -241,7 +241,7 @@ const Pagina23 = () => {
                                     <td
                                         className={styles["page23__auxiliary-verb"]}
                                         onClick={() => playAudio(pg23Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
                                     >
                                         ain't
                                     </td>
@@ -259,7 +259,7 @@ const Pagina23 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Não está bem
+                                        <span style={{ color: "red" }}>Não</span> está bem
                                     </td>
                                 </tr>
                             </tbody>
