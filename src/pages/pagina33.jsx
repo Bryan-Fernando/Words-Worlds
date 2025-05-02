@@ -136,7 +136,7 @@ const Pagina33 = () => {
                                         from Argentina?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Eles não são da Argentina?
+                                        Eles / Elas não são da Argentina?
                                     </td>
                                 </tr>
                                 <tr>
@@ -152,7 +152,7 @@ const Pagina33 = () => {
                                         at the cinema?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
-                                        Eles não estão no cinema?
+                                        Eles / Elas não estão no cinema?
                                     </td>
                                 </tr>
                                 <tr>
@@ -168,7 +168,7 @@ const Pagina33 = () => {
                                         15 and 16 years old?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
-                                        Eles não têm 15 e 16 anos?
+                                        Eles / Elas não têm 15 e 16 anos?
                                     </td>
                                 </tr>
                             </tbody>

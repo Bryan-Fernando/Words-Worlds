@@ -13,7 +13,7 @@ import her_audio from '../assets/audios/her_audio.mp3';
 import its_audio from '../assets/audios/its_audio.mp3';
 import our_audio from '../assets/audios/our_audio.mp3';
 import your_audio from '../assets/audios/your_audio.mp3';
-import theirAudio from '../assets/audios/theirAudio.mp3';
+import their_audio from '../assets/audios/their_audio.mp3';
 import audio1_1e from '../assets/audios/pg46_audio1_1e.mp3';
 import audio1_2e from '../assets/audios/pg46_audio1_2e.mp3';
 import audio2_1e from '../assets/audios/pg46_audio2_1e.mp3';
@@ -29,7 +29,7 @@ const Pagina46 = () => {
         'its_audio': its_audio,
         'our_audio': our_audio,
         'your_audio': your_audio,
-        'theirAudio': theirAudio,
+        'their_audio': their_audio,
         'pg46_audio1_1e': audio1_1e,
         'pg46_audio1_2e': audio1_2e,
         'pg46_audio2_1e': audio2_1e,
@@ -112,7 +112,7 @@ const Pagina46 = () => {
                                     <td>seus, suas, teus, tuas (de vocês)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('theirAudio')}>Their</th>
+                                    <th onClick={() => playAudio('their_audio')}>Their</th>
                                     <td>deles, delas, seus, suas</td>
                                 </tr>
                             </thead>

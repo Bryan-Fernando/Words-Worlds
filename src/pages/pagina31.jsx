@@ -123,7 +123,7 @@ const Pagina31 = () => {
                                     <td onClick={() => playAudio(pg31Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>not</td>
                                     <td></td>
                                     <td onClick={() => playAudio(pg31Audio1)} style={{ cursor: 'pointer' }}>from Argentina</td>
-                                    <td onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>Eles/Elas não são da Argentina</td>
+                                    <td onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>Eles / Elas não são da Argentina</td>
                                 </tr>
                                 <tr>
                                     <td onClick={() => playAudio(pg31Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>They</td>
@@ -131,7 +131,7 @@ const Pagina31 = () => {
                                     <td></td>
                                     <td></td>
                                     <td onClick={() => playAudio(pg31Audio2)} style={{ cursor: 'pointer' }}>at the shopping mall</td>
-                                    <td onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>Eles/Elas não estão no shopping</td>
+                                    <td onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>Eles / Elas não estão no shopping</td>
                                 </tr>
                                 <tr>
                                     <td onClick={() => playAudio(pg31Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>They</td>
@@ -139,7 +139,7 @@ const Pagina31 = () => {
                                     <td></td>
                                     <td></td>
                                     <td onClick={() => playAudio(pg31Audio3)} style={{ cursor: 'pointer' }}>15 and 16 years old</td>
-                                    <td onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>Eles/Elas não têm 15 e 16 anos de idade</td>
+                                    <td onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>Eles / Elas não têm 15 e 16 anos de idade</td>
                                 </tr>
                             </tbody>
                         </table>
