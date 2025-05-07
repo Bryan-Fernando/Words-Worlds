@@ -171,7 +171,7 @@ const playAudio = (audioKey, speed = 1.0) => {
                 </h1>
                 <p><span className={styles["page69__text--red"]}>Word Order:</span> Unscramble the words to form questions.</p>
                 <p><span className={styles["page69__text--red"]}>Ordem das Palavras:</span> Reorganize as palavras para formar perguntas.</p>
-                <p><span className={styles["page69__text--red"]}>Click</span> the words to form the correct sentence.</p>
+                <p><span className={styles["page69__text--red"]}>Click</span> on the words to form the correct sentence.</p>
                 <p><span className={styles["page69__text--red"]}>Clique</span> nas palavras para formar a frase correta.</p>
             </header>
     

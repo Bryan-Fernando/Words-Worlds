@@ -5,6 +5,7 @@ import styles from './pagina67.module.css';
 import pg67IconNotes from '../assets/icons/notes_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import campainha from '../assets/icons/campainha.png';
 
 import pagina67Imagem1 from '../assets/images/pagina67_imagem1.webp';
 import pagina67Imagem2 from '../assets/images/pagina67_imagem2.webp';
@@ -67,11 +68,12 @@ import pg67_audio4_4p from "../assets/audios/pg67_audio4_4p.mp3";
 import pg67_audio4_5p from "../assets/audios/pg67_audio4_5p.mp3";
 import pg67_audio4_6p from "../assets/audios/pg67_audio4_6p.mp3";
 import pg67_audio4_7p from "../assets/audios/pg67_audio4_7p.mp3";
-
+import bell from '../assets/audios/bell.mp3';
 
 const pagina67 = () => {
 
     const audioMap = {
+        bell: bell,
         global_readComPre: global_readComPre,
         global_readComPrp: global_readComPrp,
         pg67_audio1_1e: pg67_audio1_1e,
@@ -186,7 +188,7 @@ const pagina67 = () => {
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    My daily routine is simple.
+                                    My daily routine <strong>is</strong> simple.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -279,6 +281,7 @@ const pagina67 = () => {
                                         className={styles["page67__audio-iconP"]}
                                         onClick={() => playAudio("pg67_audio1_7p")}
                                     />
+                                   <span style={{color: "red"}}> OBS: Then = After</span>
                                 </span>
                             </p>
                         </div>
@@ -339,6 +342,7 @@ const pagina67 = () => {
                                         className={styles["page67__audio-iconP"]}
                                         onClick={() => playAudio("pg67_audio2_3p")}
                                     />
+                                    
                                 </span>
 
                                 <span>
@@ -434,7 +438,7 @@ const pagina67 = () => {
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    My friends are great.
+                                    My friends <strong>are</strong> great.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -450,7 +454,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    They are fun to be around.
+                                    They <strong>are</strong> fun to be around.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -466,7 +470,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    We are always together.
+                                    We <strong>are</strong> always together.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -482,7 +486,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    We are happy when we play games.
+                                    We <strong>are</strong> happy when we play games.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -498,7 +502,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    We are sad when we have to say goodbye.
+                                    We <strong>are</strong> sad when we have to say goodbye.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -543,7 +547,7 @@ const pagina67 = () => {
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    My phone is new.
+                                    My phone <strong>is</strong> new.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -559,7 +563,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    It is a gift.
+                                    It <strong>is</strong> a gift.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -575,7 +579,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    It is useful.
+                                    It <strong>is</strong> useful.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -623,7 +627,7 @@ const pagina67 = () => {
                                 </span>
 
                                 <span>
-                                    They are important to me.
+                                    They <strong>are</strong> important to me.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -649,7 +653,7 @@ const pagina67 = () => {
                 <aside className={styles["page67__aside"]}>
                     <div className={styles["page67__aside-container"]}>
                         <div className={styles["page67__aside-notes1"]}>
-                            <img className={styles["page67__aside-img-notes"]} src={pg67IconNotes} alt="Word Bank Icon" />
+                        <img className={styles["page67__aside-img-notes"]} onClick={() => playAudio("bell")} src={campainha} alt="" />
                             <p><strong>Listening Comprehension and Pronunciation</strong></p>
                         </div>
                         <div className={styles["page67__aside-notes2"]}>

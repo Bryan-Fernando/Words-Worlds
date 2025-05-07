@@ -341,46 +341,9 @@ const Pagina58 = () => {
                             <th onClick={() => playAudio('pg58_audio67')}>Washington, D.C.</th>
                             <th onClick={() => playAudio('pg58_audio68')}>American</th>
                         </tr>
-
                     </tbody>
                 </table>
-
             </main>
-            <aside className={styles["page58__aside"]}>
-                <div className={styles["page58__aside-container"]}>
-                    {/* Cabeçalho do Word Bank */}
-                    <div className={styles["page58__aside-header"]}>
-                        <p>Word Bank</p>
-                    </div>
-                    {/* Conteúdo do Word Bank */}
-                    <div className={styles["page58__aside-content"]}>
-                        <div className={styles["page58__word-row"]}>
-                            <div className={styles["page58__word-column"]}>
-                                <p>
-                                    <strong>Good morning</strong> <span>Bom dia</span>
-                                </p>
-                                <p>
-                                    <strong>Good afternoon</strong> <span>Boa tarde</span>
-                                </p>
-                                <p>
-                                    <strong>Good evening</strong> <span>Boa noite</span>
-                                </p>
-                            </div>
-                            <div className={styles["page58__word-column"]}>
-                                <p>
-                                    <strong>Good night</strong> <span>Boa noite</span>
-                                </p>
-                                <p>
-                                    <strong>Country/Nationality</strong> <span>País/Nacionalidade</span>
-                                </p>
-                                <p>
-                                    <strong>Job/Occupation</strong> <span>Trabalho/Ocupação</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
         </div>
     );
 };

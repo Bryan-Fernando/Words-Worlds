@@ -4,7 +4,7 @@ import styles from './pagina2.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
-import white_play_icon from '../assets/icons/white_play_icon.png'
+import white_play_icon from '../assets/icons/white_play_icon.png';
 
 import pg2Audio1e from '../assets/audios/pg2_audio1e.mp3';
 import pg2Audio2e from '../assets/audios/pg2_audio2e.mp3';

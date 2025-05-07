@@ -5,11 +5,13 @@ import styles from './pagina65.module.css';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import pg65IconNotes from '../assets/icons/notes_icon.webp';
+import campainha from '../assets/icons/campainha.png';
 
 import pagina65Imagem1 from '../assets/images/pagina65_imagem1.webp';
 import pagina65Imagem2 from '../assets/images/pagina65_imagem2.webp';
 import pagina65Imagem3 from '../assets/images/pagina65_imagem3.webp';
 
+import bell from '../assets/audios/bell.mp3';
 import global_readComPrp from '../assets/audios/global_readComPrp.mp3';
 import global_readComPre from '../assets/audios/global_readComPre.mp3';
 import pg65_audio1_1e from "../assets/audios/pg65_audio1_1e.mp3";
@@ -52,6 +54,7 @@ import pg65_audio3_5p from "../assets/audios/pg65_audio3_5p.mp3";
 const Pagina65 = () => {
 
     const audioMap = {
+        bell : bell,
         global_readComPre: global_readComPre,
         global_readComPrp: global_readComPrp,
         pg65_audio1_1e: pg65_audio1_1e,
@@ -212,7 +215,7 @@ const Pagina65 = () => {
                                 </span>
 
                                 <span>
-                                    The official language of Brazil is Portuguese.
+                                    The official language of Brazil <strong>is</strong> Portuguese.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -273,7 +276,7 @@ const Pagina65 = () => {
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    My family is small.
+                                    My family <strong>is</strong> small.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -321,7 +324,7 @@ const Pagina65 = () => {
                                 </span>
 
                                 <span>
-                                    My father is tall, and my mother <strong>is</strong> kind.
+                                    My father <strong>is</strong> tall, and my mother <strong>is</strong> kind.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -382,7 +385,7 @@ const Pagina65 = () => {
                             <p>
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <span>
-                                    My school is big and colorful.
+                                    My school <strong>is</strong> big and colorful.
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"
@@ -456,7 +459,7 @@ const Pagina65 = () => {
                 <aside className={styles["page65__aside"]}>
                     <div className={styles["page65__aside-content"]}>
                         <div className={styles["page65__aside-note--first"]}>
-                            <img className={styles["page65__aside-note-icon"]} src={pg65IconNotes} alt="Word Bank Icon" />
+                        <img className={styles["page65__aside-img"]} onClick={() => playAudio("bell")} src={campainha} alt="" />
                             <p><strong>Listening Comprehension and Pronunciation</strong></p>
                         </div>
                         <div className={styles["page65__aside-note--second"]}>
