@@ -192,11 +192,11 @@
 
 .page73__styled-table-afirmativa th,
 .page73__styled-table-negativa th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: bold;
     border: 1px solid #A61C28;
 }
@@ -231,6 +231,14 @@
     padding-left: 1rem;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.page73__word-bank-header-1{
+    width: 100%;
+    color: #0A3282;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .page73__word-bank-content {

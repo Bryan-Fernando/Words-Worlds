@@ -130,7 +130,7 @@ const Pagina84 = () => {
                     />
                 </h1>
                 <h2 className={styles["page84__header--h2"]}>
-                    Complete the sentences in the Simple Present Form of Verb Be <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
+                Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
                 </h2>
             </header>
             <main className={styles["page84__main"]}>
@@ -151,6 +151,10 @@ const Pagina84 = () => {
                 </div>
                 <div className={styles["page84__container--questoes"]}>
                     <div className={styles["page84__questions--1"]}>
+                        <div className={styles["page84__word-bank-header-1"]}>
+                            <p>Use as formas completas do verbo. <br /> 
+                            E as tabelas para formar as frases corretas.</p>
+                        </div>
                         <p className={styles["page84__question--titulo"]}>
                             Affirmative:
                             <img
@@ -228,20 +232,7 @@ const Pagina84 = () => {
                         <img className={styles["page84__image"]} src={pagina84_imagem1} alt="" />
                     </div>
                 </div>
-                <aside className={styles["page84__aside"]}>
-                    <div className={styles["page84__aside--container"]}>
-                        <div className={styles["page84__aside--notes--1"]}>
-                            <img className={styles["page84__aside--img--notes"]} src={pg84IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles["page84__aside--notes--2"]}>
-                            <p>
-                                In these sentences, "is" is used with singular subjects (the sky, I, that restaurant, my sister) while
-                                "are" is used with plural subjects (the children).
-                            </p>
-                        </div>
-                    </div>
-                </aside>
+            
                 <div className={styles["page84__table--negativa--container"]}>
                     <div className={styles["page84__table--header--negativa"]}>NEGATIVA</div>
                     <table className={styles["page84__styled--table--negativa"]}>
@@ -341,20 +332,7 @@ const Pagina84 = () => {
                         <img className={styles["page84__image"]} src={pagina84_imagem2} alt="" />
                     </div>
                 </div>
-                <aside className={styles["page84__aside"]}>
-                    <div className={styles["page84__aside--container"]}>
-                        <div className={styles["page84__aside--notes--1"]}>
-                            <img className={styles["page84__aside--img--notes"]} src={pg84IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles["page84__aside--notes--2"]}>
-                            <p>
-                                "Not" is used to negate the meaning. The verb "be" is conjugated as "is not" for singular
-                                subjects (it, the soup, she) and "are not" for plural subjects (they, my keys).
-                            </p>
-                        </div>
-                    </div>
-                </aside>
+            
                 <button className={styles["page84__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
             </main>
         </div>

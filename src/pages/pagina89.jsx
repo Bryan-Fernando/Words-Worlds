@@ -85,7 +85,7 @@ const Pagina89 = () => {
                 </h1>
 
                 <h2 className={styles["page89__subtitle"]}>
-                    Complete with the appropriate indefinite article (a/an)
+                    Complete with the appropriate indefinite article (a/an) after listening to the audio.
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
