@@ -336,21 +336,7 @@ const pagina74 = () => {
                         <img className={styles["page74__imagem"]} src={pagina74_imagem2} alt="" />
                     </div>
                 </div>
-                <aside className={styles["page74__aside"]}>
-                    <div className={styles["page74__aside-container"]}>
-                        <div className={styles["page74__aside-notes1"]}>
-                            <img className={styles["page74__aside-img-notes"]} src={pg74IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles["page74__aside-notes2"]}>
-                            <p>
-                                <span style={{ color: '#8a1720' }}>"Not"</span> is used to form negative sentences. The verb "be" is conjugated as <span style={{ color: '#8a1720' }}> "am not"</span> for the first
-                                person singular (I), <span style={{ color: '#8a1720' }}>"is not"</span> for singular subjects (my dog, the sky, this restaurant, the movie),
-                                and <span style={{ color: '#8a1720' }}>"are not"</span> for plural subjects (the children)
-                            </p>
-                        </div>
-                    </div>
-                </aside>
+                
                 <button className={styles["page74__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
 
             </main>

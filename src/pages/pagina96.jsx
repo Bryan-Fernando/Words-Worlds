@@ -28,6 +28,19 @@ import pg96_audio12 from '../assets/audios/pg96_audio12.mp3';
 import pg96_audio13 from '../assets/audios/pg96_audio13.mp3';
 import pg96_audio14 from '../assets/audios/pg96_audio14.mp3';
 import pg96_audio15 from '../assets/audios/pg96_audio15.mp3';
+import pg96_audio2p from '../assets/audios/pg96_audio2p.mp3';
+import pg96_audio3p from '../assets/audios/pg96_audio3p.mp3';
+import pg96_audio4p from '../assets/audios/pg96_audio4p.mp3';
+import pg96_audio5p from '../assets/audios/pg96_audio5p.mp3';
+import pg96_audio6p from '../assets/audios/pg96_audio6p.mp3';
+import pg96_audio7p from '../assets/audios/pg96_audio7p.mp3';
+import pg96_audio8p from '../assets/audios/pg96_audio8p.mp3';
+import pg96_audio9p from '../assets/audios/pg96_audio9p.mp3';
+import pg96_audio10p from '../assets/audios/pg96_audio10p.mp3';
+import pg96_audio12p from '../assets/audios/pg96_audio12p.mp3';
+import pg96_audio13p from '../assets/audios/pg96_audio13p.mp3';
+import pg96_audio14p from '../assets/audios/pg96_audio14p.mp3';
+import pg96_audio15p from '../assets/audios/pg96_audio15p.mp3';
 
 const Pagina96 = () => {
     const [inputValues, setInputValues] = useState({
@@ -53,14 +66,14 @@ const Pagina96 = () => {
         questions2: [
             ['does', 'wake up'],
             ['do', 'take'],
-            ['does', 'eat'],
+            ['does', 'eat breakfast'],
             ['do', 'check']
         ],
         questions3: [
-            'when does she finish her homework?',
-            'how often do they clean the house?',
-            'what time does the shop open?',
-            'who cooks dinner for your family?'
+            'When does she finish her homework?',
+            'How often do they clean the house?',
+            'What time does the shop open?',
+            'Who cooks dinner for your family?'
         ]
     };
 
@@ -83,7 +96,22 @@ const Pagina96 = () => {
         pg96_audio12,
         pg96_audio13,
         pg96_audio14,
-        pg96_audio15
+        pg96_audio15,
+        pg96_audio2p,
+        pg96_audio3p,
+        pg96_audio4p,
+        pg96_audio5p,
+        pg96_audio6p,
+        pg96_audio7p,
+        pg96_audio8p,
+        pg96_audio9p,
+        pg96_audio10p,
+        pg96_audio11e,
+        pg96_audio12p,
+        pg96_audio13p,
+        pg96_audio14p,
+        pg96_audio15p
+
     };
 
     const playAudio = (audioKey) => {
@@ -199,6 +227,12 @@ const Pagina96 = () => {
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio2")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio2p")}
+                            />
                         </span>
                     </div>
 
@@ -211,6 +245,12 @@ const Pagina96 = () => {
                                 alt="Audio English"
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio3")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio3p")}
                             />
                         </span>
                     </div>
@@ -225,6 +265,12 @@ const Pagina96 = () => {
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio4")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio4p")}
+                            />
                         </span>
                     </div>
 
@@ -238,6 +284,12 @@ const Pagina96 = () => {
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio5")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio5p")}
+                            />
                         </span>
                     </div>
 
@@ -250,6 +302,12 @@ const Pagina96 = () => {
                                 alt="Audio English"
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio6")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio6p")}
                             />
                         </span>
                     </div>
@@ -298,6 +356,12 @@ const Pagina96 = () => {
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio7")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio7p")}
+                            />
                         </span>
                     </div>
 
@@ -311,18 +375,30 @@ const Pagina96 = () => {
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio8")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio8p")}
+                            />
                         </span>
                     </div>
 
                     <div className={styles["page95__question"]}>
                         <span>
-                            <em><strong>c.</strong> <input type="text" value={inputValues.questions2[4]} onChange={(e) => handleInputChange(e.target.value, 4, 'questions2')} className={styles["page95__input-box-small"]} /> he <input type="text" value={inputValues.questions2[5]} onChange={(e) => handleInputChange(e.target.value, 5, 'questions2')} className={styles["page95__input-box-small"]} /> (eat) breakfast before leaving?</em>
+                            <em><strong>c.</strong> <input type="text" value={inputValues.questions2[4]} onChange={(e) => handleInputChange(e.target.value, 4, 'questions2')} className={styles["page95__input-box-small"]} /> he <input type="text" value={inputValues.questions2[5]} onChange={(e) => handleInputChange(e.target.value, 5, 'questions2')} className={styles["page95__input-box-small"]} /> (eat breakfast) before leaving?</em>
                             {results.questions2[2] && <img src={results.questions2[2]} alt="Result" className={styles["page96__icon"]} />}
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio9")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio9p")}
                             />
                         </span>
                     </div>
@@ -336,6 +412,12 @@ const Pagina96 = () => {
                                 alt="Audio English"
                                 className={styles["page95__audio-icon"]}
                                 onClick={() => playAudio("pg96_audio10")}
+                            />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio10p")}
                             />
                         </span>
                     </div>
@@ -382,72 +464,100 @@ const Pagina96 = () => {
                                 <div className={styles["page96__question-word"]}>Who</div>
                                 <div className={styles["page96__question-word"]}>What time</div>
                             </div>
-                            <em><strong>a.</strong> She finishes her homework before dinner.</em>
+                            <input
+                                type="text"
+                                value={inputValues.questions3[0]}
+                                onChange={(e) => handleInputChange(e.target.value, 0, 'questions3')}
+                                className={styles["page96__input-box-question3"]}
+                            />
+                            {results.questions3[0] && <img src={results.questions3[0]} alt="Result" className={styles["page96__icon"]} />}
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio12")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio12p")}
+                            />
+                            <em><strong>a.</strong> She finishes her homework before dinner.</em>
+
                         </div>
-                        <input
-                            type="text"
-                            value={inputValues.questions3[0]}
-                            onChange={(e) => handleInputChange(e.target.value, 0, 'questions3')}
-                            className={styles["page96__input-box-question3"]}
-                        />
-                        {results.questions3[0] && <img src={results.questions3[0]} alt="Result" className={styles["page96__icon"]} />}
 
                         <div className={styles["page96__question"]}>
-                            <em><strong>b.</strong> They clean the house every Saturday.</em>
+                            <input
+                                type="text"
+                                value={inputValues.questions3[1]}
+                                onChange={(e) => handleInputChange(e.target.value, 1, 'questions3')}
+                                className={styles["page96__input-box-question3"]}
+                            />
+
+                            {results.questions3[1] && <img src={results.questions3[1]} alt="Result" className={styles["page96__icon"]} />}
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio13")}
                             />
-                        </div>
-                        <input
-                            type="text"
-                            value={inputValues.questions3[1]}
-                            onChange={(e) => handleInputChange(e.target.value, 1, 'questions3')}
-                            className={styles["page96__input-box-question3"]}
-                        />
-                        {results.questions3[1] && <img src={results.questions3[1]} alt="Result" className={styles["page96__icon"]} />}
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio13p")}
+                            />
+                            <em><strong>b.</strong> They clean the house every Saturday.</em>
 
+                        </div>
                         <div className={styles["page96__question"]}>
-                            <em><strong>c.</strong> The shop opens at 9:00 AM.</em>
+                            <input
+                                type="text"
+                                value={inputValues.questions3[2]}
+                                onChange={(e) => handleInputChange(e.target.value, 2, 'questions3')}
+                                className={styles["page96__input-box-question3"]}
+                            />
+                            {results.questions3[2] && <img src={results.questions3[2]} alt="Result" className={styles["page96__icon"]} />}
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio14")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio14p")}
+                            />
+                            <em><strong>c.</strong> The shop opens at 9:00 AM.</em>
+
                         </div>
-                        <input
-                            type="text"
-                            value={inputValues.questions3[2]}
-                            onChange={(e) => handleInputChange(e.target.value, 2, 'questions3')}
-                            className={styles["page96__input-box-question3"]}
-                        />
-                        {results.questions3[2] && <img src={results.questions3[2]} alt="Result" className={styles["page96__icon"]} />}
 
                         <div className={styles["page96__question"]}>
-                            <em><strong>d.</strong> I cook dinner for my family.</em>
+                            <input
+                                type="text"
+                                value={inputValues.questions3[3]}
+                                onChange={(e) => handleInputChange(e.target.value, 3, 'questions3')}
+                                className={styles["page96__input-box-question3"]}
+                            />
+                            {results.questions3[3] && <img src={results.questions3[3]} alt="Result" className={styles["page96__icon"]} />}
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio15")}
                             />
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese Audio"
+                                className={styles["page95__audio-icon-p"]}
+                                onClick={() => playAudio("pg96_audio15p")}
+                            />
+                            <em><strong>d.</strong> I cook dinner for my family.</em>
+
                         </div>
-                        <input
-                            type="text"
-                            value={inputValues.questions3[3]}
-                            onChange={(e) => handleInputChange(e.target.value, 3, 'questions3')}
-                            className={styles["page96__input-box-question3"]}
-                        />
-                        {results.questions3[3] && <img src={results.questions3[3]} alt="Result" className={styles["page96__icon"]} />}
                     </div>
 
                     <div className={styles["page96__container-imagem"]}>

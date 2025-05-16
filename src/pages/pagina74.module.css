@@ -31,11 +31,6 @@
     gap: 7rem;
 }
 
-.page74__aside {
-    width: 100%;
-    display: flex;
-}
-
 .page74__container-questoes {
     display: flex;
     justify-content: space-between;
@@ -192,52 +187,6 @@
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 2rem;
-}
-
-.page74__aside-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.page74__aside-notes1 {
-    width: 80%;
-    height: fit-content;
-    border: 4px solid #0A3282;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background-color: white;
-    text-align: left;
-    padding-left: 10px;
-    background-color: #0A3282;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.page74__aside-img-notes {
-    height: calc(10px + 0.8vw);
-    width: 20px;
-    padding-right: 5px;
-}
-
-.page74__aside-notes2 {
-    width: 80%;
-    border: 4px solid #0A3282;
-    border-top: 1px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    background-color: white;
-    text-align: left;
-    padding-left: 10px;
-    display: flex;
-    align-items: center;
-    color: #103275;
-}
-
-.page74__aside-notes2 p {
-    padding: 1vw;
-    font-size: 1.65rem;
 }
 
 .page74__container-imagem {

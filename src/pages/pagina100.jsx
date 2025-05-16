@@ -149,7 +149,7 @@ const Pagina100 = () => {
                 <div className={styles["page100__container-questoes"]}>
                     <div className={styles["page100__questions-1"]}>
                         <p className={styles["page100__a-titulo-question"]}>
-                            A) Fill in the blanks with the negative form, using the contracted forms: ('m not, isn't, or aren't).
+                            A) Fill in the blanks with the negative form, using the contracted forms: (I'm not, isn't, or aren't).
                             <span className={styles["page100__icons-container"]}>
                                 <img
                                     src={eng_audio_icon}
@@ -170,8 +170,8 @@ const Pagina100 = () => {
                                 "I ____ married.",
                                 "We ____ at the club.",
                                 "You ____ Portuguese.",
-                                "It ____ cool.",
-                                "They ____ free (available).",
+                                "It ____ hot.",
+                                "They ____ available.",
                                 "She ____ hungry.",
                                 "He ____ a musician.",
                                 "We ____ in London."
@@ -237,7 +237,7 @@ const Pagina100 = () => {
                 <div className={styles["page100__container-questoes"]}>
                     <div className={styles["page100__questions-1"]}>
                         <p className={styles["page100__a-titulo-question"]}>
-                            B) Change into the Negative Form, using (not).
+                            B) Change into the <span style={{color: 'blue'}}>Negative Full Form,</span> using (not).
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
