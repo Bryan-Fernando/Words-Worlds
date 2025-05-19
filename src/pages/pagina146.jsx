@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import clock1 from '../assets/images/clock1.png';
 import clock2 from '../assets/images/clock2.png';
 import clock3 from '../assets/images/clock3.png';
+import clock_w from '../assets/audios/clock-w.mp3';
+import clock_1 from '../assets/audios/clock1.mp3';
+import clock_2 from '../assets/audios/clock2.mp3';
+import clock_3 from '../assets/audios/clock3.mp3';
 import styles from './pagina146.module.css';
 
 const Pagina146 = () => {
@@ -23,6 +27,22 @@ const Pagina146 = () => {
         }
     };
 
+    const playAudio = (audioKey) => {
+        if (audioMap[audioKey]) {
+            const audio = new Audio(audioMap[audioKey]);
+            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
+        } else {
+            console.warn(`Áudio não encontrado para: ${audioKey}`);
+        }
+    };
+
+    const audioMap = {
+        clock_w,
+        clock_1,
+        clock_2,
+        clock_3
+    };
+
     return (
         <div className={styles.pg91Container}>
             <header className={styles.pg91Header}>
@@ -34,9 +54,9 @@ const Pagina146 = () => {
             </header>
             <main className={styles.pg91Main}>
                 <div className={styles.clockTextContainer}>
-                    <p onClick={() => handleClockChange(1)}>What time is it? It is one o’clock</p>
-                    <p onClick={() => handleClockChange(2)}>What time is it? It is two o’clock</p>
-                    <p onClick={() => handleClockChange(3)}>What time is it? It is three o’clock</p>
+                    <p onClick={() => handleClockChange(1)}> <span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_1')}> It is one o’clock</span></p>
+                    <p onClick={() => handleClockChange(2)}><span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_2')}> It is two o’clock</span></p>
+                    <p onClick={() => handleClockChange(3)}><span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_3')}> It is three o’clock</span></p>
                 </div>
                 <div className={styles.clockImageContainer}>
                     <img src={currentClock} alt="Clock showing selected time" />

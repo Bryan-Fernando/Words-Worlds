@@ -25,6 +25,16 @@ import pg101_audio8 from '../assets/audios/pg101_audio8.mp3';
 import pg101_audio9 from '../assets/audios/pg101_audio9.mp3';
 import pg101_audio10 from '../assets/audios/pg101_audio10.mp3';
 import pg101_audio11 from '../assets/audios/pg101_audio11.mp3';
+import pg101_audio2p from '../assets/audios/pg101_audio2p.mp3';
+import pg101_audio3p from '../assets/audios/pg101_audio3p.mp3';
+import pg101_audio4p from '../assets/audios/pg101_audio4p.mp3';
+import pg101_audio5p from '../assets/audios/pg101_audio5p.mp3';
+import pg101_audio6p from '../assets/audios/pg101_audio6p.mp3';
+import pg101_audio7p from '../assets/audios/pg101_audio7p.mp3';
+import pg101_audio8p from '../assets/audios/pg101_audio8p.mp3';
+import pg101_audio9p from '../assets/audios/pg101_audio9p.mp3';
+import pg101_audio10p from '../assets/audios/pg101_audio10p.mp3';
+import pg101_audio11p from '../assets/audios/pg101_audio11p.mp3';
 import pg101_audio13 from '../assets/audios/pg101_audio13.mp3';
 import pg101_audio14 from '../assets/audios/pg101_audio14.mp3';
 import pg101_audio15 from '../assets/audios/pg101_audio15.mp3';
@@ -35,6 +45,16 @@ import pg101_audio19 from '../assets/audios/pg101_audio19.mp3';
 import pg101_audio20 from '../assets/audios/pg101_audio20.mp3';
 import pg101_audio21 from '../assets/audios/pg101_audio21.mp3';
 import pg101_audio22 from '../assets/audios/pg101_audio22.mp3';
+import pg101_audio13p from '../assets/audios/pg101_audio13p.mp3';
+import pg101_audio14p from '../assets/audios/pg101_audio14p.mp3';
+import pg101_audio15p from '../assets/audios/pg101_audio15p.mp3';
+import pg101_audio16p from '../assets/audios/pg101_audio16p.mp3';
+import pg101_audio17p from '../assets/audios/pg101_audio17p.mp3';
+import pg101_audio18p from '../assets/audios/pg101_audio18p.mp3';
+import pg101_audio19p from '../assets/audios/pg101_audio19p.mp3';
+import pg101_audio20p from '../assets/audios/pg101_audio20p.mp3';
+import pg101_audio21p from '../assets/audios/pg101_audio21p.mp3';
+import pg101_audio22p from '../assets/audios/pg101_audio22p.mp3';
 
 // Mapeamento de Áudio
 const audioMap = {
@@ -50,6 +70,16 @@ const audioMap = {
     pg101_audio9,
     pg101_audio10,
     pg101_audio11,
+    pg101_audio2p,
+    pg101_audio3p,
+    pg101_audio4p,
+    pg101_audio5p,
+    pg101_audio6p,
+    pg101_audio7p,
+    pg101_audio8p,
+    pg101_audio9p,
+    pg101_audio10p,
+    pg101_audio11p,
     pg101_audio12e,
     pg101_audio12p,
     pg101_audio13,
@@ -61,7 +91,17 @@ const audioMap = {
     pg101_audio19,
     pg101_audio20,
     pg101_audio21,
-    pg101_audio22
+    pg101_audio22,
+    pg101_audio13p,
+    pg101_audio14p,
+    pg101_audio15p,
+    pg101_audio16p,
+    pg101_audio17p,
+    pg101_audio18p,
+    pg101_audio19p,
+    pg101_audio20p,
+    pg101_audio21p,
+    pg101_audio22p
 };
 
 const Pagina101 = () => {
@@ -166,6 +206,7 @@ const Pagina101 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg101_audio${index + 2}`;
+                            const audioKeyP = `pg101_audio${index + 2}p`;
 
                             return (
                                 <div key={index} className={styles["page101__question"]}>
@@ -192,6 +233,12 @@ const Pagina101 = () => {
                                             alt="Audio Icon"
                                             className={styles["page101__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page101__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}
@@ -259,6 +306,7 @@ const Pagina101 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg101_audio${index + 13}`;
+                            const audioKeyP = `pg101_audio${index + 13}p`;
 
                             return (
                                 <div key={index} className={styles["page101__question"]}>
@@ -285,6 +333,12 @@ const Pagina101 = () => {
                                             alt="Audio Icon"
                                             className={styles["page101__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page101__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}

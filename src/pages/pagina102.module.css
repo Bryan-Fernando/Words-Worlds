@@ -151,8 +151,8 @@
 }
 
 .page102__imagem {
-    width: 57rem;
-    height: 40rem;
+    width: 50rem;
+    height: 36rem;
 }
 
 .page102__tabela-afirmativa-container,
@@ -188,8 +188,8 @@
 .page102__styled-table-afirmativa th,
 .page102__styled-table-negativa th,
 .page102__styled-table-interrogativa th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;
