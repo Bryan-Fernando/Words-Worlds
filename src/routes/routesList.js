@@ -341,7 +341,6 @@ const routes = [
   { path: "/pagina143", Component: Pagina143 },
   { path: "/pagina144", Component: Pagina144 },
   { path: "/pagina145", Component: Pagina145 },
-  { path: "/pagina146", Component: Pagina146 },
   { path: "/pagina147", Component: Pagina147 },
   { path: "/pagina148", Component: Pagina148 },
   { path: "/pagina149", Component: Pagina149 },
@@ -386,6 +385,7 @@ const routes = [
   { path: "/pagina188", Component: Pagina188 },
   { path: "/pagina189", Component: Pagina189 },
   { path: "/pagina190", Component: Pagina190 },
+  { path: "/pagina146", Component: Pagina146 },
 ];
 
 export default routes;
