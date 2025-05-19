@@ -34,7 +34,7 @@ const Pagina146 = () => {
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
-    };
+    }
 
     const audioMap = {
         clock_w,
