@@ -138,7 +138,7 @@ const Pagina10 = () => {
                                     <td
                                         className={styles["page10__table-adverb"]}
                                         onClick={() => playAudio(pg10Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         not
                                     </td>
@@ -155,7 +155,7 @@ const Pagina10 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Você não é o novo diretor.
+                                        Você <span style={{ color: "red" }}>não</span> é o novo diretor.
                                     </td>
                                 </tr>
                                 <tr>
@@ -169,7 +169,7 @@ const Pagina10 = () => {
                                     <td
                                         className={styles["page10__table-auxiliary"]}
                                         onClick={() => playAudio(pg10Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         aren't
                                     </td>
@@ -187,7 +187,7 @@ const Pagina10 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Você não está na sala de aula (turma/classe) 2-B.
+                                        Você <span style={{ color: "red" }}>não</span> está na sala de aula (turma/classe) 2-B.
                                     </td>
                                 </tr>
                                 <tr>
@@ -201,7 +201,7 @@ const Pagina10 = () => {
                                     <td
                                         className={styles["page10__table-auxiliary"]}
                                         onClick={() => playAudio(pg10Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         ain't
                                     </td>
@@ -219,7 +219,7 @@ const Pagina10 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Você não tem apenas 12 anos de idade.
+                                        Você <span style={{ color: "red" }}>não</span> tem apenas 12 anos de idade.
                                     </td>
                                 </tr>
                             </tbody>

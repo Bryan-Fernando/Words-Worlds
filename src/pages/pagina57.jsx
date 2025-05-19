@@ -60,6 +60,10 @@ import pg57_audio48 from '../assets/audios/pg57_audio48.mp3';
 import pg57_audio49 from '../assets/audios/pg57_audio49.mp3';
 import pg57_audio50 from '../assets/audios/pg57_audio50.mp3';
 import pg57_audio51 from '../assets/audios/pg57_audio51.mp3';
+import pg57_audio52 from '../assets/audios/pg57_audio52.mp3';
+import pg57_audio53 from '../assets/audios/pg57_audio53.mp3';
+import pg57_audio54 from '../assets/audios/pg57_audio54.mp3';
+import pg57_audio55 from '../assets/audios/pg57_audio55.mp3';
 
 const Pagina57 = () => {
 
@@ -116,6 +120,10 @@ const Pagina57 = () => {
         pg57_audio49,
         pg57_audio50,
         pg57_audio51,
+        pg57_audio52,
+        pg57_audio53,
+        pg57_audio54,
+        pg57_audio55
     };
 
     const currentAudio = useRef(null);
@@ -182,12 +190,12 @@ const Pagina57 = () => {
 
                                 <span onClick={() => playAudio('pg57_audio18')} style={{ cursor: 'pointer' }}>Ana: Thanks!</span>
                             </p>
-                            <div className={styles["page57__gray-box"]}>
-                                <p>Nos endereços de email:</p>
+                            <div className={styles["page57__gray-box"]} style={{ fontWeight: "bold"}}>
+                                <p >Nos endereços de email:</p>
                                 <ul>
-                                    <li>‘‘.’’ = ‘‘dot’’</li>
-                                    <li>‘‘@’’ = ‘‘at’’</li>
-                                    <li>‘‘_’’ = ‘‘underscore’’</li>
+                                    <li onClick={() => playAudio('pg57_audio53')}>‘‘.’’ = ‘‘dot’’</li>
+                                    <li onClick={() => playAudio('pg57_audio54')}>‘‘@’’ = ‘‘at’’</li>
+                                    <li onClick={() => playAudio('pg57_audio55')}>‘‘_’’ = ‘‘underscore’’</li>
                                 </ul>
                             </div>
                         </div>
@@ -202,7 +210,7 @@ const Pagina57 = () => {
                             {[...'ABCDEFGHIJKLM'].map((letter, index) => (
                                 <div key={letter} onClick={() => playAudio(`pg57_audio${20 + index}`)} style={{ cursor: 'pointer' }}>
                                     <div className={styles["page57__letter-box"]}>
-                                        <p>{letter + letter.toLowerCase()}</p>
+                                        <p>{letter}</p>
                                     </div>
                                 </div>
                             ))}
@@ -211,7 +219,7 @@ const Pagina57 = () => {
                             {[...'NOPQRSTUVWXYZ'].map((letter, index) => (
                                 <div key={letter} onClick={() => playAudio(`pg57_audio${33 + index}`)} style={{ cursor: 'pointer' }}>
                                     <div className={styles["page57__letter-box"]}>
-                                        <p>{letter + letter.toLowerCase()}</p>
+                                        <p>{letter}</p>
                                     </div>
                                 </div>
                             ))}
@@ -241,9 +249,34 @@ const Pagina57 = () => {
                                 </span>
                             </p>
                         </div>
+
+                      
+
                         <img className={styles["page57__image"]} src={pagina57_imagem2} alt="Pessoa sendo atendida" />
                     </div>
+
+
                 </main>
+                <div className={styles["page57__alphabet"]}>
+                        <div className={styles["page57__letters"]}>
+                            {[...'ABCDEFGHIJKLM'].map((letter, index) => (
+                                <div key={letter} onClick={() => playAudio(`pg57_audio${20 + index}`)} style={{ cursor: 'pointer' }}>
+                                    <div className={styles["page57__letter-box"]}>
+                                        <p>{letter.toLowerCase()}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={styles["page57__letters"]}>
+                            {[...'NOPQRSTUVWXYZ'].map((letter, index) => (
+                                <div key={letter} onClick={() => playAudio(`pg57_audio${33 + index}`)} style={{ cursor: 'pointer' }}>
+                                    <div className={styles["page57__letter-box"]}>
+                                        <p>{letter.toLowerCase()}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
             </div>
         </div>
     );

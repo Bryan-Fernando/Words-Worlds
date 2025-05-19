@@ -137,7 +137,7 @@ const Pagina8 = () => {
                                     <td
                                         className={styles["page8__table-adverb"]}
                                         onClick={() => playAudio(pg8Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         not
                                     </td>
@@ -154,14 +154,14 @@ const Pagina8 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não sou um bom aluno?
+                                        Eu <span style={{ color: "red" }}>não</span> sou um bom aluno?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page8__table-subject"]}
                                         onClick={() => playAudio(pg8Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         Ain't
                                     </td>
@@ -186,14 +186,14 @@ const Pagina8 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não estou na sala de aula (turma/classe) A?
+                                        Eu <span style={{ color: "red" }}>não</span> estou na sala de aula (turma/classe) A?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page8__table-subject"]}
                                         onClick={() => playAudio(pg8Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         Ain't
                                     </td>
@@ -218,7 +218,7 @@ const Pagina8 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não tenho mais de 3 anos?
+                                        Eu <span style={{ color: "red" }}>não</span> tenho mais de 3 anos?
                                     </td>
                                 </tr>
                             </tbody>

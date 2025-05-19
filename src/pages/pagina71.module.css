@@ -214,6 +214,13 @@
     border-radius: 2rem;
 }
 
+.page71__aside-img {
+    height: calc(2rem + 0.8vw);
+    width: 4rem;
+    padding-right: 0.5rem;
+    cursor: pointer;
+}
+
 .page71__word-bank-header {
     width: 100%;
     height: 4.5rem;
@@ -302,7 +309,8 @@
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     position: relative;
-    top: 0.3rem;
+    top: 0.4rem;
+    margin-left: 0.4rem;
 }
 
 .page71__audio-icon:hover {

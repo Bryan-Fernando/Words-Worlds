@@ -38,6 +38,30 @@ import pg102_audio22 from '../assets/audios/pg102_audio22.mp3';
 import pg102_audio23 from '../assets/audios/pg102_audio23.mp3';
 import pg102_audio24 from '../assets/audios/pg102_audio24.mp3';
 import pg102_audio25 from '../assets/audios/pg102_audio25.mp3';
+import pg102_audio2p from '../assets/audios/pg102_audio2p.mp3';
+import pg102_audio3p from '../assets/audios/pg102_audio3p.mp3';
+import pg102_audio4p from '../assets/audios/pg102_audio4p.mp3';
+import pg102_audio5p from '../assets/audios/pg102_audio5p.mp3';
+import pg102_audio6p from '../assets/audios/pg102_audio6p.mp3';
+import pg102_audio7p from '../assets/audios/pg102_audio7p.mp3';
+import pg102_audio8p from '../assets/audios/pg102_audio8p.mp3';
+import pg102_audio9p from '../assets/audios/pg102_audio9p.mp3';
+import pg102_audio10p from '../assets/audios/pg102_audio10p.mp3';
+import pg102_audio11p from '../assets/audios/pg102_audio11p.mp3';
+import pg102_audio12p from '../assets/audios/pg102_audio12p.mp3';
+import pg102_audio13p from '../assets/audios/pg102_audio13p.mp3';
+import pg102_audio14p from '../assets/audios/pg102_audio14p.mp3';
+import pg102_audio15p from '../assets/audios/pg102_audio15p.mp3';
+import pg102_audio16p from '../assets/audios/pg102_audio16p.mp3';
+import pg102_audio17p from '../assets/audios/pg102_audio17p.mp3';
+import pg102_audio18p from '../assets/audios/pg102_audio18p.mp3';
+import pg102_audio19p from '../assets/audios/pg102_audio19p.mp3';
+import pg102_audio20p from '../assets/audios/pg102_audio20p.mp3';
+import pg102_audio21p from '../assets/audios/pg102_audio21p.mp3';
+import pg102_audio22p from '../assets/audios/pg102_audio22p.mp3';
+import pg102_audio23p from '../assets/audios/pg102_audio23p.mp3';
+import pg102_audio24p from '../assets/audios/pg102_audio24p.mp3';
+import pg102_audio25p from '../assets/audios/pg102_audio25p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -68,6 +92,30 @@ const audioMap = {
     pg102_audio23,
     pg102_audio24,
     pg102_audio25,
+    pg102_audio2p,
+    pg102_audio3p,
+    pg102_audio4p,
+    pg102_audio5p,
+    pg102_audio6p,
+    pg102_audio7p,
+    pg102_audio8p,
+    pg102_audio9p,
+    pg102_audio10p,
+    pg102_audio11p,
+    pg102_audio12p,
+    pg102_audio13p,
+    pg102_audio14p,
+    pg102_audio15p,
+    pg102_audio16p,
+    pg102_audio17p,
+    pg102_audio18p,
+    pg102_audio19p,
+    pg102_audio20p,
+    pg102_audio21p,
+    pg102_audio22p,
+    pg102_audio23p,
+    pg102_audio24p,
+    pg102_audio25p,
 };
 
 const Pagina102 = () => {
@@ -175,6 +223,7 @@ const Pagina102 = () => {
                             "It ____ a beautiful day."
                         ].map((sentence, index) => {
                             const audioKey = `pg102_audio${index + 2}`;
+                            const audioKeyP = `pg102_audio${index + 2}p`;
                             return (
                                 <div key={index} className={styles["page102__question"]}>
                                     <span>{sentence.split('____')[0]}</span>
@@ -200,6 +249,12 @@ const Pagina102 = () => {
                                             alt="Audio Icon"
                                             className={styles["page102__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page102__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}
@@ -242,6 +297,7 @@ const Pagina102 = () => {
                         ].map((sentence, index) => {
                             const realIndex = index + 5;
                             const audioKey = `pg102_audio${realIndex + 2}`;
+                            const audioKeyP = `pg102_audio${realIndex + 2}p`;
 
                             return (
                                 <div key={realIndex} className={styles["page102__question"]}>
@@ -268,6 +324,12 @@ const Pagina102 = () => {
                                             alt="Audio Icon"
                                             className={styles["page102__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page102__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}
@@ -309,6 +371,7 @@ const Pagina102 = () => {
                         ].map((sentence, index) => {
                             const realIndex = index + 14;
                             const audioKey = `pg102_audio${realIndex - 2}`;
+                            const audioKeyP = `pg102_audio${realIndex - 2}p`;
 
                             return (
                                 <div key={realIndex} className={styles["page102__question"]}>
@@ -334,6 +397,12 @@ const Pagina102 = () => {
                                             alt="Audio Icon"
                                             className={styles["page102__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page102__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}
@@ -380,7 +449,7 @@ const Pagina102 = () => {
                         ].map((sentence, index) => {
                             const realIndex = index + 14;
                             const audioKey = `pg102_audio${realIndex + 2}`;
-
+                            const audioKeyP = `pg102_audio${realIndex + 2}p`;
                             return (
                                 <div key={realIndex} className={styles["page102__question"]}>
                                     <span>{sentence.split('____')[0]}</span>
@@ -408,6 +477,12 @@ const Pagina102 = () => {
                                             alt="Audio Icon"
                                             className={styles["page102__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page102__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}

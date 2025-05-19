@@ -4,12 +4,14 @@ import { useNavigate } from 'react-router-dom';
 
 import styles from './pagina36.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina36_imagem1 from '../assets/images/pagina36_imagem1.webp';
 import pagina36_imagem2 from '../assets/images/pagina36_imagem2.webp';
 
+import bell from '../assets/audios/bell.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_put_tw_p from '../assets/audios/global_put_tw_p.mp3';
@@ -172,6 +174,21 @@ const Pagina36 = () => {
                     <button className={styles["page36__check--button"]} onClick={verificarRespostas}>
                         Check
                     </button>
+                    <aside className={styles["page36__new-aside"]}>
+                            <div className={styles["page36__new-aside-notes1"]}>
+                                <img className={styles["page36__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                                <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                            </div>
+                            <div className={styles["page36__new-aside-notes2"]}>
+                                <p style={{ fontSize: "2rem" }}>
+                                  <li> Embora a tradução de: </li>
+                                  <li> <span style={{ fontWeight: "bold"}}>"There is"</span>  seja <span style={{ fontWeight: "bold"}}>"há"</span> ou <span style={{ fontWeight: "bold"}}>"existe"</span> - Singular.</li>
+                                  <li> <span style={{ fontWeight: "bold"}}>"There are"</span> seja <span style={{ fontWeight: "bold"}}>"há" </span>ou <span style={{ fontWeight: "bold"}}>"existem"</span> - Plural </li>            
+                                  <li>No português no dia a dia é mais comum usar <span style={{ fontWeight: "bold"}}>"Tem".</span></li>
+                                  <li>(Especialmente na linguagem falada)</li>
+                                </p>
+                            </div>
+                        </aside>
                 </main>
 
                 <aside className={styles["page36__aside--container"]}>

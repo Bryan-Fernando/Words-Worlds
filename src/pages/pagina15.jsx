@@ -144,7 +144,7 @@ const Pagina15 = () => {
                                     <td
                                         className={styles["page15__table-adverb"]}
                                         onClick={() => playAudio(pg15Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         not
                                     </td>
@@ -161,7 +161,7 @@ const Pagina15 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Ele não é o senhor Black
+                                        Ele <span style={{ color: "red" }}>não</span> é o senhor Black
                                     </td>
                                 </tr>
                                 <tr>
@@ -175,7 +175,7 @@ const Pagina15 = () => {
                                     <td
                                         className={styles["page15__table-auxiliary"]}
                                         onClick={() => playAudio(pg15Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         isn't
                                     </td>
@@ -193,7 +193,7 @@ const Pagina15 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Ele não está no banco
+                                        Ele <span style={{ color: "red" }}>não</span> está no banco
                                     </td>
                                 </tr>
                                 <tr>
@@ -207,9 +207,9 @@ const Pagina15 = () => {
                                     <td
                                         className={styles["page15__table-auxiliary"]}
                                         onClick={() => playAudio(pg15Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"  }}
                                     >
-                                        ain't
+                                       ain't
                                     </td>
                                     <td className={styles["page15__table-adverb"]}></td>
                                     <td className={styles["page15__table-verb"]}></td>
@@ -225,7 +225,7 @@ const Pagina15 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Ele não tem 29 anos
+                                        Ele <span style={{ color: "red" }}>não</span> tem 29 anos
                                     </td>
                                 </tr>
                             </tbody>

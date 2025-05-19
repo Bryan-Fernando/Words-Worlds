@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styles from './pagina71.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
@@ -10,6 +11,7 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import pagina71_imagem1 from '../assets/images/pagina71_imagem1.webp';
 import pagina71_imagem2 from '../assets/images/pagina71_imagem2.webp';
 
+import bell from '../assets/audios/bell.mp3';
 import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import global_reading_compe from '../assets/audios/global_reading_compe.mp3';
@@ -98,14 +100,14 @@ const Pagina71 = () => {
         "Lisbon is her home city.",
         "She is 19.",
         "Her email address is karen@mail.com",
-        "Her phone number is 999 12 3456789.",
+        "Her phone number is 403728930.",
         "He is Leo Santander.",
-        "He’s Brazilian.",
-        "He’s from Paraty.",
-        "He’s married.",
-        "He’s 27.",
+        "He's Brazilian.",
+        "He's from Paraty.",
+        "He's married.",
+        "He's 27.",
         "His email is leo@mail.com.",
-        "His cell phone number is 99 12 1234-1265."
+        "His cell phone number is 991212341265."
     ];
 
     const audioMap = {
@@ -189,6 +191,7 @@ const Pagina71 = () => {
         pg71_audio29p,
         pg71_audio30p,
         pg71_audio31p,
+        bell
     };
 
 
@@ -276,7 +279,7 @@ const Pagina71 = () => {
                                     <span onClick={() => playAudio('pg71_audio1_8')}>and my phone number is </span>
                                     <span onClick={() => playAudio('pg71_audio1_9')}>403 - 728930.</span>
                                 </p>
-                                <p className={styles["page71__person-text--portuguese"]}>Eu sou Karen Brandon. Sou de Portugal. Lisboa é minha casa. É uma cidade incrível. Sou estudante de inglês. Tenho 19 anos. Meu e-mail é karen@mail.com e meu número de telefone é 999 12 3456789.</p>
+                                <p className={styles["page71__person-text--portuguese"]}>Eu sou Karen Brandon. Sou de Portugal. Lisboa é minha casa. É uma cidade incrível. Sou estudante de inglês. Tenho 19 anos. Meu e-mail é karen@mail.com e meu número de telefone é 403 - 728930.</p>
                             </div>
                         </div>
                         <div className={styles["page71__person-info"]}>
@@ -286,15 +289,15 @@ const Pagina71 = () => {
                                     className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}
                                     onClick={() => playAudio('pg71_audio2')}
                                 >
-                                    <span onClick={() => playAudio('pg71_audio2_1')}>Hi there, I’m Leo Santander. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_1')}>Hi there. I’m Leo Santander. </span>
                                     <span onClick={() => playAudio('pg71_audio2_2')}>I’m Brazilian. </span>
                                     <span onClick={() => playAudio('pg71_audio2_3')}>I’m from Paraty, but I’m now in Rio. </span>
                                     <span onClick={() => playAudio('pg71_audio2_4')}>I’m an entrepreneur. </span>
                                     <span onClick={() => playAudio('pg71_audio2_5')}>I have a small company. </span>
-                                    <span on={() => playAudio('pg71_audio2_6')}>I’m married. </span>
+                                    <span onClick={() => playAudio('pg71_audio2_6')}>I’m married. </span>
                                     <span onClick={() => playAudio('pg71_audio2_7')}>I’m 27 years old. </span>
                                     <span onClick={() => playAudio('pg71_audio2_8')}>My email is leo@mail.com, </span>
-                                    <span onClick={() => playAudio('pg71_audio2_9')}>and my cell phone number is 55 12 1234-1265.</span>
+                                    <span onClick={() => playAudio('pg71_audio2_9')}>and my cell phone number is 99 12 1234 - 1265</span>
                                 </p>
 
                                 <p className={styles["page71__person-text--portuguese"]}>Olá, eu sou Leo Santander. Sou brasileiro. Sou de Paraty, mas estou agora no Rio. Sou empreendedor. Tenho uma pequena empresa. Sou casado. Tenho 27 anos. Meu e-mail é leo@mail.com e meu número de celular é 55 12 1234-1265.</p>
@@ -338,7 +341,7 @@ const Pagina71 = () => {
                     </div>
 
                     <p className={styles["page71__question-text"]}>
-                        The questions about Karen Brandon.
+                        Questions about Karen Brandon.
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
@@ -399,7 +402,7 @@ const Pagina71 = () => {
                         ))}
                     </div>
                     <p className={styles["page71__question-text"]}>
-                        The questions about Leo Santander.
+                        Questions about Leo Santander.
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
@@ -465,6 +468,7 @@ const Pagina71 = () => {
             <aside className={styles["page71__word-bank"]}>
                 <div className={styles["page71__word-bank-container"]}>
                     <div className={styles["page71__word-bank-header"]}>
+                        <img className={styles["page71__aside-img"]} onClick={() => playAudio("bell")} src={campainha} alt="" />
                         <p>Work Bank</p>
                     </div>
                     <div className={styles["page71__word-bank-content"]}>

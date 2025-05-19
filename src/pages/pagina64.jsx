@@ -4,6 +4,7 @@ import styles from "./pagina64.module.css";
 
 import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
 import ptbr_audio_icon from "../assets/icons/ptbr_audio_icon.webp";
+import white_play_icon from '../assets/icons/white_play_icon.png';
 
 import imagemUnica from "../assets/images/pagina64_imagem1.webp";
 import segundaImagem from "../assets/images/pagina64_imagem2.webp";
@@ -29,7 +30,6 @@ import pg64_audio3_1e from "../assets/audios/pg64_audio3_1e.mp3";
 import pg64_audio3_2e from "../assets/audios/pg64_audio3_2e.mp3";
 import pg64_audio3_3e from "../assets/audios/pg64_audio3_3e.mp3";
 import pg64_audio3_4e from "../assets/audios/pg64_audio3_4e.mp3";
-import pg64_audio3_5e from "../assets/audios/pg64_audio3_5e.mp3";
 import pg64_audio4_1e from "../assets/audios/pg64_audio4_1e.mp3";
 import pg64_audio4_2e from "../assets/audios/pg64_audio4_2e.mp3";
 import pg64_audio4_3e from "../assets/audios/pg64_audio4_3e.mp3";
@@ -56,7 +56,6 @@ const Pagina64 = () => {
     pg64_audio3_2e: pg64_audio3_2e,
     pg64_audio3_3e: pg64_audio3_3e,
     pg64_audio3_4e: pg64_audio3_4e,
-    pg64_audio3_5e: pg64_audio3_5e,
     pg64_audio4_1e: pg64_audio4_1e,
     pg64_audio4_2e: pg64_audio4_2e,
     pg64_audio4_3e: pg64_audio4_3e,
@@ -83,13 +82,13 @@ const Pagina64 = () => {
         <h1 className={styles["page64__title"]}>
           Reading and Comprehension
           <img
-            src={eng_audio_icon}
+            src={white_play_icon}
             alt="English audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1e')}
           />
           <img
-            src={ptbr_audio_icon}
+            src={white_play_icon}
             alt="Portuguese audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1p')}
@@ -156,7 +155,6 @@ const Pagina64 = () => {
               <span onClick={() => playAudio("pg64_audio3_2e")}>He is a journalist. </span>
               <span onClick={() => playAudio("pg64_audio3_3e")}>He is also Brazilian, from Paraty. </span>
               <span onClick={() => playAudio("pg64_audio3_4e")}>He is 39 years old. </span>
-              <span onClick={() => playAudio("pg64_audio3_5e")}>We are a married couple.</span>
               <img
                 src={ptbr_audio_icon}
                 alt="Play Portuguese Audio"

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import styles from './pagina39.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
@@ -14,6 +15,7 @@ import pagina39_imagem3 from '../assets/images/pagina39_imagem3.webp';
 import pagina39_imagem4 from '../assets/images/pagina39_imagem4.webp';
 import pagina39_imagem5 from '../assets/images/pagina39_imagem5.webp';
 
+import bell from '../assets/audios/bell.mp3';
 import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';
 import pg39_audio1p from '../assets/audios/pg39_audio1p.mp3';
 import pg39_audio2e from '../assets/audios/pg39_audio2e.mp3';
@@ -188,7 +190,19 @@ const Pagina39 = () => {
                     />
                 </p>
                 <p className={styles["page39__paragraph"]}>Clique ou digite</p>
+                
             </header>
+            <aside className={styles["page39__new-aside"]}>
+                    <div className={styles["page39__new-aside-notes1"]}>
+                        <img className={styles["page39__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                        <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                    </div>
+                    <div className={styles["page39__new-aside-notes2"]}>
+                        <p style={{ fontSize: "2rem" }}>
+                            Para uma melhor visão da página em caso de <span style={{fontWeight: "bold"}}>telas menores</span>, utilize o <span style={{fontWeight: "bold"}}>zoom reverso.</span>
+                        </p>
+                    </div>
+                </aside>
 
             <main className={styles["page39__main"]}>
                 <div className={styles["page39__images--container"]}>

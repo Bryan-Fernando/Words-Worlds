@@ -127,8 +127,7 @@ const Pagina85 = () => {
                     />
                 </h1>
                 <h2 className={styles["page85__header--h2"]}>
-                    Complete the sentences in the Simple Present Form of Verb Be <br />
-                    Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
+                Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
                 </h2>
             </header>
 
@@ -151,6 +150,10 @@ const Pagina85 = () => {
 
                 <div className={styles["page85__container--questoes"]}>
                     <div className={styles["page85__questions--1"]}>
+                        <div className={styles["page85__word-bank-header-1"]}>
+                            <p>Use as formas completas do verbo. <br /> 
+                            E as tabelas para formar as frases corretas.</p>
+                        </div>
                         <p className={styles["page85__question--titulo"]}>
                             Affirmative:
                             <img
@@ -230,21 +233,6 @@ const Pagina85 = () => {
                         <img className={styles["page85__image"]} src={pagina85_imagem1} alt="" />
                     </div>
                 </div>
-
-                <aside className={styles["page85__aside"]}>
-                    <div className={styles["page85__aside--container"]}>
-                        <div className={styles["page85__aside--notes--1"]}>
-                            <img className={styles["page85__aside--img--notes"]} src={pg85IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles["page85__aside--notes--2"]}>
-                            <p>
-                                Here, "is" is used with singular subjects (mathematics, he, the park) and "are" is used with the
-                                plural subjects (these shoes, the birds).
-                            </p>
-                        </div>
-                    </div>
-                </aside>
 
                 <div className={styles["page85__table--negativa--container"]}>
                     <div className={styles["page85__table--header--negativa"]}>NEGATIVA</div>
@@ -346,20 +334,7 @@ const Pagina85 = () => {
                         <img className={styles["page85__image"]} src={pagina85_imagem2} alt="" />
                     </div>
                 </div>
-                <aside className={styles["page85__aside"]}>
-                    <div className={styles["page85__aside--container"]}>
-                        <div className={styles["page85__aside--notes--1"]}>
-                            <img className={styles["page85__aside--img--notes"]} src={pg85IconNotes} alt="" />
-                            <p>Study Note</p>
-                        </div>
-                        <div className={styles["page85__aside--notes--2"]}>
-                            <p>
-                                "Not" negates the meaning. The verb "be" is conjugated as "is not" for singular subjects (her
-                                cat, I, the test) and "are not" for plural subjects (the flowers, our neighbors).
-                            </p>
-                        </div>
-                    </div>
-                </aside>
+                
                 <button className={styles["page85__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
 
             </main>

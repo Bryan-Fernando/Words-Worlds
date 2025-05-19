@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina12.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import white_play_icon from '../assets/icons/white_play_icon.png'
@@ -9,6 +10,7 @@ import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_simple_present from '../assets/audios/global_simple_present.mp3';
 
+import bell from '../assets/audios/bell.mp3';
 import interrogativa_audio from '../assets/audios/interrogativa_a.mp3';
 import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
@@ -217,6 +219,21 @@ const Pagina12 = () => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        <aside className={styles["page12__aside"]}>
+                            <div className={styles["page12__new-aside-notes1"]}>
+                                <img className={styles["page12__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                                <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                            </div>
+                            <div className={styles["page12__new-aside-notes2"]}>
+                                <p style={{ fontSize: "2rem" }}>
+                                    Na forma interrogativa, não esquecer que o <span style={{ fontWeight: "bold" }}>verbo auxiliar</span> troca de lugar com o <span style={{ fontWeight: "bold" }}>sujeito</span>
+                                    
+                                </p>
+                            </div>
+                        </aside>
+
+
                         <table className={styles["page12__table"]}>
                             <colgroup>
                                 <col className={styles["page12__table-subject"]} />

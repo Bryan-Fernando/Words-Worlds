@@ -115,7 +115,7 @@
 }
 
 .page95__input--box--column {
-    width: 80%;
+    width: 85%;
     padding: 0.5rem;
     font-size: 1.8rem;
     background-color: lightgray;
@@ -144,6 +144,8 @@
 .page95__styled--table--short-answers {
     width: 100%;
     border-collapse: collapse;
+    position: relative;
+    top: 9rem;
 }
 
 .page95__styled--table--short-answers th,
@@ -237,7 +239,20 @@
     font-size: 3rem;
     margin: auto;
     margin-bottom: 2rem;
+    position: relative;
+    top: 14rem;
 }
+
+.page95__short-answers:nth-of-type(2){
+    position: relative;
+    bottom: 12rem;
+}
+
+.page95__styled--table--short-answers:nth-of-type(1){
+    position: relative;
+    top: 15rem;
+}
+
 
 .page95__styled--table--short-answers th p {
     color: #A61C28;
@@ -255,11 +270,11 @@
 }
 
 .page95__styled--table--interrogativa th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: bold;
     border: 0.1rem solid #A61C28;
 }
@@ -286,6 +301,7 @@
     height: 2.3rem;
     position: relative;
     top: 0.7rem;
+    left: 0.3rem;
 }
 
 .page95__button--check {

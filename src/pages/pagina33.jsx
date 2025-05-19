@@ -128,7 +128,7 @@ const Pagina33 = () => {
                                     <td className={styles["page33__auxiliary--verb"]} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         they
                                     </td>
-                                    <td className={styles["page33__adverb"]} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page33__adverb"]} onClick={() => playAudio(pg33Audio1)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
                                         not
                                     </td>
                                     <td className={styles["page33__verb"]}></td>
@@ -136,11 +136,11 @@ const Pagina33 = () => {
                                         from Argentina?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Eles não são da Argentina?
+                                        Eles / Elas <span style={{ color: "red" }}>não</span> são da Argentina?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles["page33__subject"]} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page33__subject"]} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
                                         Aren't
                                     </td>
                                     <td className={styles["page33__auxiliary--verb"]} onClick={() => playAudio(pg33Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
@@ -152,11 +152,11 @@ const Pagina33 = () => {
                                         at the cinema?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
-                                        Eles não estão no cinema?
+                                        Eles / Elas <span style={{ color: "red" }}>não</span> estão no cinema?
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className={styles["page33__subject"]} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page33__subject"]} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
                                         Ain't
                                     </td>
                                     <td className={styles["page33__auxiliary--verb"]} onClick={() => playAudio(pg33Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
@@ -168,7 +168,7 @@ const Pagina33 = () => {
                                         15 and 16 years old?
                                     </td>
                                     <td className={styles["page33__translation"]} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
-                                        Eles não têm 15 e 16 anos?
+                                        Eles / Elas <span style={{ color: "red" }}>não</span> têm 15 e 16 anos?
                                     </td>
                                 </tr>
                             </tbody>

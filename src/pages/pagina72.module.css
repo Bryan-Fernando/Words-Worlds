@@ -20,7 +20,6 @@
 .page72__p {
     text-align: left;
     font-size: 2.5rem;
-    color: #4E4E4E;
     margin-bottom: 2rem;
 }
 
@@ -140,12 +139,12 @@
     height: auto;
 }
 
-.page72__tabela-afirmativa-container,
+.page72__notes-container,
 .page72__tabela-negativa-container {
     width: 50%;
 }
 
-.page72__tabela-afirmativa-container {
+.page72__notes-container {
     margin-top: 3.5rem;
 }
 
@@ -176,11 +175,11 @@
 
 .page72__styled-table-afirmativa th,
 .page72__styled-table-negativa th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
     border: 1px solid #A61C28;
 }
@@ -214,6 +213,15 @@
     padding-left: 1rem;
     font-size: 2rem;
     font-weight: bold;
+}
+
+.page72__word-bank-header-1{
+    width: 100%;
+    color: #0A3282;
+    display: flex;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .page72__word-bank-content {

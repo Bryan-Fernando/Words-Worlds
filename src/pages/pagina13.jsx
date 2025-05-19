@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import styles from './pagina13.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import white_play_icon from '../assets/icons/white_play_icon.png'
@@ -9,6 +10,7 @@ import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_simple_present from '../assets/audios/global_simple_present.mp3';
 
+import bell from '../assets/audios/bell.mp3';
 import interrogativa_negativaAudio from '../assets/audios/interrogativa_n.mp3';
 import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
@@ -137,9 +139,9 @@ const Pagina13 = () => {
                                     <td
                                         className={styles["page13__table-adverb"]}
                                         onClick={() => playAudio(pg13Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"  }}
                                     >
-                                        not
+                                       not
                                     </td>
                                     <td className={styles["page13__table-verb"]}></td>
                                     <td
@@ -154,14 +156,14 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não é o novo diretor?
+                                        Você <span style={{ color: "red" }}>não</span> é o novo diretor?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page13__table-auxiliary"]}
                                         onClick={() => playAudio(pg13Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         Aren't
                                     </td>
@@ -186,14 +188,14 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não está na sala de aula (turma/classe) 2-B?
+                                        Você <span style={{ color: "red" }}>não</span> está na sala de aula (turma/classe) 2-B?
                                     </td>
                                 </tr>
                                 <tr>
                                     <td
                                         className={styles["page13__table-auxiliary"]}
                                         onClick={() => playAudio(pg13Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
+                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
                                     >
                                         Ain't
                                     </td>
@@ -218,11 +220,26 @@ const Pagina13 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Você não tem apenas 12 anos?
+                                        Você <span style={{ color: "red" }}>não</span> tem apenas 12 anos?
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <aside className={styles["page13__aside"]}>
+                            <div className={styles["page13__new-aside-notes1"]}>
+                                <img className={styles["page13__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                                <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                            </div>
+                            <div className={styles["page13__new-aside-notes2"]}>
+                                <p style={{ fontSize: "2rem" }}>
+                                   Na tradução em português <span style={{ fontWeight: "bold", color: "red" }}>não</span> na forma <span style={{ fontWeight: "bold", color: "red" }}>negativa </span> ou <span style={{ fontWeight: "bold", color: "red" }}>interrogativa negativa,</span> vem sempre após o sujeito.
+                                
+                                    
+                                </p>
+                            </div>
+                        </aside>
+
                         <table className={styles["page13__table"]}>
                             <colgroup>
                                 <col className={styles["page13__table-subject"]} />

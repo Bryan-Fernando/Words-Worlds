@@ -2,10 +2,12 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina7.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import white_play_icon from '../assets/icons/white_play_icon.png'
 
+import bell from '../assets/audios/bell.mp3';
 import global_verbo_to_be from '../assets/audios/global_verbo_to_be.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_simple_present from '../assets/audios/global_simple_present.mp3';
@@ -217,6 +219,20 @@ const Pagina7 = () => {
                                 </tr>
                             </tbody>
                         </table>
+
+                        <aside className={styles["page7__aside"]}>
+                            <div className={styles["page7__new-aside-notes1"]}>
+                                <img className={styles["page7__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                                <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                            </div>
+                            <div className={styles["page7__new-aside-notes2"]}>
+                                <p style={{ fontSize: "2rem" }}>
+                                <span style={{ fontWeight: "bold" }}> Conforme a tabela acima,</span> não se esqueça de que o <span style={{ fontWeight: "bold" }}>verbo auxiliar</span> troca de posição com o <span style={{ fontWeight: "bold" }}>sujeito</span> nas perguntas.
+                                    
+                                </p>
+                            </div>
+                        </aside>
+
                         <table className={styles["page7__table"]}>
                             <colgroup>
                                 <col className={styles["page7__table-subject"]} />

@@ -169,8 +169,8 @@
 }
 
 .page97__styled-table-afirmativa th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;
@@ -221,8 +221,8 @@
 }
 
 .page97__styled-table-interrogative th {
-    background-color: #888A8C;
-    color: white;
+    background-color: #ffffff;
+    color: #0A3282 !important;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.6rem;

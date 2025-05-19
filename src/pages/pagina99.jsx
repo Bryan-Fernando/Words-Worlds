@@ -32,6 +32,20 @@ import pg99_audio14 from '../assets/audios/pg99_audio14.mp3';
 import pg99_audio15 from '../assets/audios/pg99_audio15.mp3';
 import pg99_audio16 from '../assets/audios/pg99_audio16.mp3';
 import pg99_audio17 from '../assets/audios/pg99_audio17.mp3';
+import pg99_audio2p from '../assets/audios/pg99_audio2p.mp3';
+import pg99_audio3p from '../assets/audios/pg99_audio3p.mp3';
+import pg99_audio4p from '../assets/audios/pg99_audio4p.mp3';
+import pg99_audio5p from '../assets/audios/pg99_audio5p.mp3';
+import pg99_audio6p from '../assets/audios/pg99_audio6p.mp3';
+import pg99_audio8p from '../assets/audios/pg99_audio8p.mp3';
+import pg99_audio9p from '../assets/audios/pg99_audio9p.mp3';
+import pg99_audio10p from '../assets/audios/pg99_audio10p.mp3';
+import pg99_audio11p from '../assets/audios/pg99_audio11p.mp3';
+import pg99_audio12p from '../assets/audios/pg99_audio12p.mp3';
+import pg99_audio14p from '../assets/audios/pg99_audio14p.mp3';
+import pg99_audio15p from '../assets/audios/pg99_audio15p.mp3';
+import pg99_audio16p from '../assets/audios/pg99_audio16p.mp3';
+import pg99_audio17p from '../assets/audios/pg99_audio17p.mp3';
 
 
 const audioMap = {
@@ -57,6 +71,20 @@ const audioMap = {
     pg99_audio15,
     pg99_audio16,
     pg99_audio17,
+    pg99_audio2p,
+    pg99_audio3p,
+    pg99_audio4p,
+    pg99_audio5p,
+    pg99_audio6p,
+    pg99_audio8p,
+    pg99_audio9p,
+    pg99_audio10p,
+    pg99_audio11p,
+    pg99_audio12p,
+    pg99_audio14p,
+    pg99_audio15p,
+    pg99_audio16p,
+    pg99_audio17p,
 };
 
 
@@ -67,24 +95,21 @@ const Pagina99 = () => {
     const [results, setResults] = useState(Array(14).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
 
-
-
-
     const correctAnswers = [
-        "she doesn't like to swim in the pool.",
-        "they don't eat lunch together.",
-        "he doesn't watch every day",
-        "the children don't play in the park after school.",
-        "i don't drink coffee in the morning.",
+        "She doesn't like to swim in the pool",
+        "They don't eat lunch together",
+        "He doesn't watch TV in the evening",
+        "The children don't play in the park after school",
+        "I don't drink coffee in the morning",
         "doesn't like",
         "don't study",
         "doesn't play",
         "doesn't sleep",
         "don't watch",
-        ["doesn't", "like"],
-        ["don't", "play"],
-        ["doesn't", "drink"],
-        ["don't", "enjoy"]
+        ["Doesn't", "like"],
+        ["Don't", "play"],
+        ["Doesn't", "drink"],
+        ["Don't", "enjoy"]
     ];
 
     const handleCheckClick = () => {
@@ -92,10 +117,10 @@ const Pagina99 = () => {
             if (Array.isArray(correctAnswers[index])) {
                 return Array.isArray(value) && correctAnswers[index].every(
                     (answer, subIndex) =>
-                        value[subIndex]?.trim().toLowerCase() === answer.toLowerCase()
+                        value[subIndex]?.trim() === answer
                 );
             }
-            return value?.trim().toLowerCase() === correctAnswers[index].toLowerCase();
+            return value?.trim() === correctAnswers[index];
         });
         setResults(newResults.map((res) => (res !== true ? false : true)));
     };
@@ -148,6 +173,8 @@ const Pagina99 = () => {
                 className={styles["page99__header-icon"]}
                 onClick={() => playAudio("global_learning_le_p")}
             />
+            <br />
+            Simple Present
         </h1>
     </header>
 
@@ -174,7 +201,7 @@ const Pagina99 = () => {
             </div>
 
             <p className={styles["page99__a-titulo-question"]}>
-                Change into the negative form:
+                1. Change into the <span style={{color: 'blue'}}>negative contracted</span>  form:
                 <img
                     src={eng_audio_icon}
                     alt="English audio"
@@ -194,11 +221,12 @@ const Pagina99 = () => {
                     {[
                         "She likes to swim in the pool. ____",
                         "They eat lunch together every day. ____",
-                        "He watches television in the evening. ____",
+                        "He watches TV in the evening. ____",
                         "The children play in the park after school. ____",
                         "I drink coffee in the morning. ____"
                     ].map((question, index) => {
-                        const audioKey = `pg99_audio${index + 2}`; // Ajuste correto do áudio
+                        const audioKey = `pg99_audio${index + 2}`; 
+                        const audioKeyP = `pg99_audio${index + 2}p`; 
 
                         return (
                             <div key={index} className={styles["page99__question"]}>
@@ -230,6 +258,13 @@ const Pagina99 = () => {
                                         onClick={() => playAudio(audioKey)}
                                     />
                                     <img
+                                        src={ptbr_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKeyP)}
+                                    />
+                                    
+                                    <img
                                         src={slow_audio_icon}
                                         alt="Volume Reduced Icon"
                                         className={`${styles["page99__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page99__pulsing"] : ''}`}
@@ -245,7 +280,7 @@ const Pagina99 = () => {
             <div className={styles["page99__container-questoes"]}>
                 <div className={styles["page99__questions-1"]}>
                     <p className={styles["page99__a-titulo-question"]}>
-                        Fill in the blanks with the negative form of the verbs:
+                        2. Fill in the blanks with the <span style={{color: 'blue'}}>negative contracted</span> form of the verbs:
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
@@ -268,6 +303,7 @@ const Pagina99 = () => {
                         "We ____ (not watch) TV after dinner."
                     ].map((question, index) => {
                         const audioKey = `pg99_audio${index + 8}`;
+                        const audioKeyP = `pg99_audio${index + 8}p`;
                         const parts = question.split('____');
 
                         return (
@@ -303,6 +339,12 @@ const Pagina99 = () => {
                                         onClick={() => playAudio(audioKey)}
                                     />
                                     <img
+                                        src={ptbr_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKeyP)}
+                                    />
+                                    <img
                                         src={slow_audio_icon}
                                         alt="Volume Reduced Icon"
                                         className={`${styles["page99__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page99__pulsing"] : ''}`}
@@ -335,7 +377,7 @@ const Pagina99 = () => {
             <div className={styles["page99__container-questoes"]}>
                 <div className={styles["page99__questions-2"]}>
                     <p className={styles["page99__a-titulo-question"]}>
-                        Form negative questions using the simple present tense.
+                       3. Form negative interrogative questions in the <span style={{color: 'blue'}}>contracted form.</span>
                         <img
                             src={eng_audio_icon}
                             alt="English audio"
@@ -358,6 +400,7 @@ const Pagina99 = () => {
                     ].map((question, index) => {
                         const parts = question.split('____');
                         const audioKey = `pg99_audio${index + 14}`;
+                        const audioKeyP = `pg99_audio${index + 14}p`;
 
                         return (
                             <div key={index + 10} className={styles["page99__question"]}>
@@ -407,6 +450,12 @@ const Pagina99 = () => {
                                         alt="Audio Icon"
                                         className={styles["page99__additional-icon"]}
                                         onClick={() => playAudio(audioKey)}
+                                    />
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Audio Icon"
+                                        className={styles["page99__additional-icon"]}
+                                        onClick={() => playAudio(audioKeyP)}
                                     />
                                     <img
                                         src={slow_audio_icon}

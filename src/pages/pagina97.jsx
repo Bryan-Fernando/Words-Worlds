@@ -26,7 +26,18 @@ import pg97_audio10 from '../assets/audios/pg97_audio10.mp3';
 import pg97_audio11 from '../assets/audios/pg97_audio11.mp3';
 import pg97_audio12 from '../assets/audios/pg97_audio12.mp3';
 import pg97_audio13 from '../assets/audios/pg97_audio13.mp3';
-
+import pg97_audio2p from '../assets/audios/pg97_audio2p.mp3';
+import pg97_audio3p from '../assets/audios/pg97_audio3p.mp3';
+import pg97_audio4p from '../assets/audios/pg97_audio4p.mp3';
+import pg97_audio5p from '../assets/audios/pg97_audio5p.mp3';
+import pg97_audio6p from '../assets/audios/pg97_audio6p.mp3';
+import pg97_audio7p from '../assets/audios/pg97_audio7p.mp3';
+import pg97_audio8p from '../assets/audios/pg97_audio8p.mp3';
+import pg97_audio9p from '../assets/audios/pg97_audio9p.mp3';
+import pg97_audio10p from '../assets/audios/pg97_audio10p.mp3';
+import pg97_audio11p from '../assets/audios/pg97_audio11p.mp3';
+import pg97_audio12p from '../assets/audios/pg97_audio12p.mp3';
+import pg97_audio13p from '../assets/audios/pg97_audio13p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -45,6 +56,18 @@ const audioMap = {
     pg97_audio11,
     pg97_audio12,
     pg97_audio13,
+    pg97_audio2p,
+    pg97_audio3p,
+    pg97_audio4p,
+    pg97_audio5p,
+    pg97_audio6p,
+    pg97_audio7p,
+    pg97_audio8p,
+    pg97_audio9p,
+    pg97_audio10p,
+    pg97_audio11p,
+    pg97_audio12p,
+    pg97_audio13p,
 };
 
 
@@ -182,6 +205,19 @@ const Pagina97 = () => {
                                     audioKey = 'pg97_audio6';
                                 }
 
+                                let audioKeyP;
+                                if (index === 0) {
+                                    audioKeyP = 'pg97_audio2p';
+                                } else if (index === 1) {
+                                    audioKeyP = 'pg97_audio3p';
+                                } else if (index === 2) {
+                                    audioKeyP = 'pg97_audio4p';
+                                } else if (index === 3) {
+                                    audioKeyP = 'pg97_audio5p';
+                                } else {
+                                    audioKeyP = 'pg97_audio6p';
+                                }
+
                                 return (
                                     <div key={index} className={styles["page97__question"]}>
                                         <span>
@@ -212,6 +248,12 @@ const Pagina97 = () => {
                                                 className={styles["page97__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
                                             />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Portuguese Audio"
+                                                className={styles["page97__additional-icon"]}
+                                                onClick={() => playAudio(audioKeyP)}
+                                            />
                                         </div>
                                     </div>
                                 );
@@ -232,6 +274,7 @@ const Pagina97 = () => {
                             ].map((question, index) => {
                                 const parts = question.split('____');
                                 const audioKey = `pg97_audio${index + 7}`;
+                                const audioKeyP = `pg97_audio${index + 7}p`;
 
                                 return (
                                     <div key={index} className={styles["page97__question"]}>
@@ -262,6 +305,12 @@ const Pagina97 = () => {
                                                 alt="Audio English"
                                                 className={styles["page97__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
+                                            />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Portuguese Audio"
+                                                className={styles["page97__additional-icon"]}
+                                                onClick={() => playAudio(audioKeyP)}
                                             />
                                         </div>
                                     </div>
@@ -300,7 +349,7 @@ const Pagina97 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg97_audio${index + 10}`;
-
+                            const audioKeyP = `pg97_audio${index + 10}p`;
                             return (
                                 <div key={index + 10} className={styles["page97__question"]}>
                                     <span>
@@ -349,6 +398,12 @@ const Pagina97 = () => {
                                             alt="Audio Icon"
                                             className={styles["page97__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page97__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                     </div>
                                 </div>

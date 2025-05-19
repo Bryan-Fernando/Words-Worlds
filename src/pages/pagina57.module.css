@@ -199,3 +199,7 @@
 .page57__icon:hover {
     transform: scale(1.1);
 }
+
+.page57__gray-box ul li {
+    cursor: pointer;
+}

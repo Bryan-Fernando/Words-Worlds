@@ -32,6 +32,21 @@ import pg98_audio14 from '../assets/audios/pg98_audio14.mp3';
 import pg98_audio15 from '../assets/audios/pg98_audio15.mp3';
 import pg98_audio16 from '../assets/audios/pg98_audio16.mp3';
 import pg98_audio17 from '../assets/audios/pg98_audio17.mp3';
+import pg98_audio2p from '../assets/audios/pg98_audio2p.mp3';
+import pg98_audio3p from '../assets/audios/pg98_audio3p.mp3';
+import pg98_audio4p from '../assets/audios/pg98_audio4p.mp3';
+import pg98_audio5p from '../assets/audios/pg98_audio5p.mp3';
+import pg98_audio6p from '../assets/audios/pg98_audio6p.mp3';
+import pg98_audio8p from '../assets/audios/pg98_audio8p.mp3';
+import pg98_audio9p from '../assets/audios/pg98_audio9p.mp3';
+import pg98_audio10p from '../assets/audios/pg98_audio10p.mp3';
+import pg98_audio11p from '../assets/audios/pg98_audio11p.mp3';
+import pg98_audio12p from '../assets/audios/pg98_audio12p.mp3';
+import pg98_audio13p from '../assets/audios/pg98_audio13p.mp3';
+import pg98_audio14p from '../assets/audios/pg98_audio14p.mp3';
+import pg98_audio15p from '../assets/audios/pg98_audio15p.mp3';
+import pg98_audio16p from '../assets/audios/pg98_audio16p.mp3';
+import pg98_audio17p from '../assets/audios/pg98_audio17p.mp3';
 
 
 
@@ -57,6 +72,22 @@ const audioMap = {
     pg98_audio15,
     pg98_audio16,
     pg98_audio17,
+    pg98_audio2p,
+    pg98_audio3p,
+    pg98_audio4p,
+    pg98_audio5p,
+    pg98_audio6p,
+    pg98_audio8p,
+    pg98_audio9p,
+    pg98_audio10p,
+    pg98_audio11p,
+    pg98_audio12p,
+    pg98_audio13p,
+    pg98_audio14p,
+    pg98_audio15p,
+    pg98_audio16p,
+    pg98_audio17p,
+
 };
 
 const Pagina98 = () => {
@@ -82,11 +113,11 @@ const Pagina98 = () => {
 
                 return Array.isArray(value) && correctAnswers[index].every(
                     (answer, subIndex) =>
-                        value[subIndex]?.trim().toLowerCase() === answer.toLowerCase()
+                        value[subIndex]?.trim() === answer
                 );
             }
 
-            return value?.trim().toLowerCase() === correctAnswers[index].toLowerCase();
+            return value?.trim() === correctAnswers[index];
         });
         setResults(newResults.map((res) => res !== true ? false : true));
     };
@@ -167,6 +198,7 @@ const Pagina98 = () => {
                 <div className={styles["page98__primeiras-questoes"]}>
                     <div className={styles["page98__container-questoes"]}>
                         <div className={styles["page98__questions-1"]}>
+                            <p style={{color: '#0A3282', fontWeight: 'bold'}}>Um clique no auto falante diminui a velocidade do áudio.</p>
                             <p className={styles["page98__a-titulo-question"]}>
                                 Fill in the blanks with the correct form of the verb in the simple present tense:
                                 <img
@@ -183,14 +215,15 @@ const Pagina98 = () => {
                                 />
                             </p>
                             <p className={styles["page98__numero-question"]}>1.</p>
-                            {["She ____ a book every night before bed.",
-                                "They ____ basketball every Saturday morning.",
-                                "He ____ a glass of water after every meal.",
-                                "The sun ____ in the east.",
-                                "We ____ English at school."
+                            {["She ____ (read) a book every night before bed.",
+                                "They ____ (play) basketball every Saturday morning.",
+                                "He ____ (drink) a glass of water after every meal.",
+                                "The sun ____ (rise) in the east.",
+                                "We ____ (study) English at school."
                             ].map((question, index) => {
                                 const parts = question.split('____');
                                 const audioKey = `pg98_audio${index + 2}`; // Define corretamente os áudios
+                                const audioKeyP = `pg98_audio${index + 2}p`;
 
                                 return (
                                     <div key={index} className={styles["page98__question"]}>
@@ -221,6 +254,12 @@ const Pagina98 = () => {
                                                 alt="Audio Icon"
                                                 className={styles["page98__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
+                                            />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Audio Icon"
+                                                className={styles["page98__additional-icon"]}
+                                                onClick={() => playAudio(audioKeyP)}
                                             />
                                             <img
                                                 src={slow_audio_icon}
@@ -265,6 +304,7 @@ const Pagina98 = () => {
                             ].map((question, index) => {
                                 const parts = question.split('____');
                                 const audioKey = `pg98_audio${index + 8}`; // Começa no pg98_audio8
+                                const audioKeyP = `pg98_audio${index + 8}p`;
 
                                 return (
                                     <div key={index} className={styles["page98__question"]}>
@@ -295,6 +335,12 @@ const Pagina98 = () => {
                                                 alt="Audio Icon"
                                                 className={styles["page98__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
+                                            />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Audio Icon"
+                                                className={styles["page98__additional-icon"]}
+                                                onClick={() => playAudio(audioKeyP)}
                                             />
                                             <img
                                                 src={slow_audio_icon}
@@ -341,6 +387,7 @@ const Pagina98 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg98_audio${index + 13}`; // Começa no pg98_audio13
+                            const audioKeyP = `pg98_audio${index + 13}p`;
 
                             return (
                                 <div key={index + 10} className={styles["page98__question"]}>
@@ -390,6 +437,18 @@ const Pagina98 = () => {
                                             alt="Audio Icon"
                                             className={styles["page98__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page98__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
+                                        />
+                                        <img
+                                            src={slow_audio_icon}
+                                            alt="Volume Reduced Icon"
+                                            className={`${styles["page98__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page98__pulsing"] : ''}`}
+                                            onClick={() => toggleSpeedReduction(audioKey)}
                                         />
                                     </div>
                                 </div>

@@ -5,7 +5,7 @@ import styles from './pagina6.module.css';
 import pg6IconNotes from '../assets/icons/notes_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
-import white_play_icon from '../assets/icons/white_play_icon.png'
+import white_play_icon from '../assets/icons/white_play_icon.png';
 
 import globalVerboToBe from '../assets/audios/global_verbo_to_be.mp3';
 import globalGrammar from '../assets/audios/global_grammar.mp3';
@@ -147,7 +147,7 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         not
                                     </td>
@@ -159,7 +159,7 @@ const Pagina6 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não sou Pedro
+                                        Eu <span style={{ color: "red" }}>não</span> sou Pedro
                                     </td>
                                 </tr>
                                 <tr>
@@ -180,7 +180,7 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         not
                                     </td>
@@ -197,7 +197,7 @@ const Pagina6 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não estou no trabalho
+                                        Eu <span style={{ color: "red" }}>não</span> estou no trabalho
                                     </td>
                                 </tr>
                                 <tr>
@@ -218,7 +218,7 @@ const Pagina6 = () => {
                                     <td
                                         className={styles["page6__table-adverb"]}
                                         onClick={() => playAudio(pg6Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}
                                     >
                                         not
                                     </td>
@@ -235,7 +235,7 @@ const Pagina6 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Eu não tenho (dezesseis) anos de idade
+                                        Eu <span style={{ color: "red" }}>não</span> tenho (dezesseis) anos de idade
                                     </td>
                                 </tr>
                                 <tr>
@@ -246,7 +246,7 @@ const Pagina6 = () => {
                                     >
                                         I
                                     </td>
-                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center' }} className={styles["page6__table-auxiliary"]}>ain't</td>
+                                    <td onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red' }} className={styles["page6__table-auxiliary"]}>ain't</td>
                                     <td className={styles["page6__table-adverb"]}></td>
                                     <td className={styles["page6__table-verb"]}></td>
                                     <td className={styles["page6__table-complement"]} onClick={() => playAudio(pg6Audio4)} style={{ cursor: 'pointer' }}>ready yet</td>
@@ -254,10 +254,23 @@ const Pagina6 = () => {
                                         className={styles["page6__table-translation"]}
                                         onClick={() => playAudio(traducaoAudio4)}
                                         style={{ cursor: 'pointer' }}
-                                    >Eu não estou pronto ainda</td>
+                                    >Eu <span style={{ color: "red" }}>não</span> estou pronto ainda</td>
                                 </tr>
                             </tbody>
                         </table>
+
+                        <aside className={styles["page6__aside"]}>
+                            <div className={styles["page6__new-aside-notes1"]}>
+                                <img className={styles["page6__aside-img"]} src={pg6IconNotes} alt="" />
+                                <p>NOTE:</p>
+                            </div>
+                            <div className={styles["page6__new-aside-notes2"]}>
+                                <p style={{ fontSize: "2rem" }}>
+                                    Em inglês, <span style={{ color: "red" }}>not</span> vem depois do verbo <span style={{ color: "red" }}>"be"</span>, mas em portugês, <span style={{ color: "red" }}>"não"</span> vem antes do verbo, e não antes do pronome pessoal.
+                                    <span style={{ fontWeight: "bold" }}> (Conforme a tabela acima)</span>
+                                </p>
+                            </div>
+                        </aside>
 
                         <table className={styles["page6__table"]}>
                             <colgroup>
