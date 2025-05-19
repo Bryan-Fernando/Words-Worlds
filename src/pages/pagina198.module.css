@@ -27,7 +27,6 @@
 
 .page198__subtitle {
     font-size: 2.4rem;
-    color: #666;
     margin-top: 1rem;
 }
 
@@ -45,6 +44,7 @@
 
 .page198__dialogue_content {
     width: 100%;
+    text-align: left;
 }
 
 .page198__dialogue_title {
@@ -75,7 +75,7 @@
 }
 
 .page198__leo {
-    color: #D4365C;
+    color: #A61C28;
 }
 
 .page198__text {
@@ -88,12 +88,11 @@
 }
 
 .page198__leo_text {
-    color: #D4365C;
+    color: #A61C28;
 }
 
 .page198__translation {
     font-size: 1.6rem;
-    color: #666;
     font-style: italic;
 }
 

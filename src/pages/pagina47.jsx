@@ -16,7 +16,7 @@ import her_audio from '../assets/audios/her_audio.mp3';
 import its_audio from '../assets/audios/its_audio.mp3';
 import our_audio from '../assets/audios/our_audio.mp3';
 import your_audio from '../assets/audios/your_audio.mp3';
-import their_audio from '../assets/audios/their_audio.mp3';
+import theirAudio from '../assets/audios/theirAudio.mp3';
 import audio1e from '../assets/audios/pg47_audio1e.mp3';
 import audio2e from '../assets/audios/pg47_audio2e.mp3';
 import audio3e from '../assets/audios/pg47_audio3e.mp3';
@@ -59,7 +59,7 @@ const Pagina47 = () => {
         'its_audio': its_audio,
         'our_audio': our_audio,
         'your_audio': your_audio,
-        'their_audio': their_audio,
+        'theirAudio': theirAudio,
         'pg47_audio1e': audio1e,
         'pg47_audio2e': audio2e,
         'pg47_audio3e': audio3e,

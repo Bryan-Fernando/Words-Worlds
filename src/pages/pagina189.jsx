@@ -5,14 +5,14 @@ const Pagina189 = () => {
     const questionWords = [
         { word: 'How much', translation: 'Quanto / quanta / quanto de (substantivos incontáveis)' },
         { word: 'How many', translation: 'Quantos / quantas (substantivos contáveis)' },
-        { word: 'How long', translation: 'Quanto tempo (duração total de algo — início ao fim)' },
-        { word: 'How much longer', translation: 'Quanto tempo mais / ainda (tempo restante até algo terminar ou acontecer)' }
+        { word: 'How long', translation: 'Quanto tempo (usado para perguntar sobre a duração total de algo, seja uma ação, estado ou situação — do início ao ﬁm)' },
+        { word: 'How much longer', translation: 'Quanto tempo mais / ainda (usado para perguntar quanto tempo ainda resta até que algo termine ou aconteça. Ou seja, ela foca no tempo restante, e não na duração total)' }
     ];
 
     const tableData = [
         {
-            questionWord: 'How much',
-            wordTranslation: 'Quanto',
+            questionWord: 'How much money',
+            wordTranslation: 'Quanto dinheiro',
             subject: 'you',
             translation: 'você',
             verb: 'spend',
@@ -21,8 +21,8 @@ const Pagina189 = () => {
             complementTranslation: 'em um presente de aniversário?'
         },
         {
-            questionWord: 'How many',
-            wordTranslation: 'Quantos',
+            questionWord: 'How many books',
+            wordTranslation: 'Quantos livros    ',
             subject: 'Bryan',
             translation: 'Bryan',
             verb: 'read',
@@ -44,11 +44,11 @@ const Pagina189 = () => {
             questionWord: 'How much longer',
             wordTranslation: 'Quanto tempo a mais',
             subject: 'it',
-            translation: 'isso',
-            verb: 'take',
-            verbTranslation: 'levaria',
-            complement: 'to update the system?',
-            complementTranslation: 'para atualizar o sistema?'
+            translation: '',
+            verb: 'take to update',
+            verbTranslation: 'levaria para atualizar',
+            complement: 'the system?',
+            complementTranslation: 'o sistema?'
         }
     ];
 
@@ -95,7 +95,7 @@ const Pagina189 = () => {
                                         {item.questionWord}
                                         <div className={styles.page189__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page189__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page189__translation}>{item.translation}</div>

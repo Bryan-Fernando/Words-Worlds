@@ -1,0 +1,365 @@
+.pg130Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+.pg130Header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.pg130Title {
+  color: #a61c28;
+  font-size: 50px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg130Subtitle {
+  font-size: 30px;
+  color: #000000;
+  margin: 0;
+  font-weight: normal;
+  text-align: left;
+}
+
+.pg130DialoguesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pg130DialogueBox {
+  border: 2px solid #a61c28;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #ffffff;
+  min-width: 350px;
+}
+
+.pg130DialogueTitle {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 20px);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.pg130DialogueLine {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.5;
+}
+
+.pg130SpeakerA,
+.pg130SpeakerB {
+  font-style: italic;
+  min-width: 25px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  white-space: nowrap;
+}
+
+.pg130SpeakerA {
+  color: #a61c28;
+}
+
+.pg130SpeakerB {
+  color: #000000;
+}
+
+.pg130TextA,
+.pg130TextB {
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pg130TextA {
+  color: #a61c28;
+}
+
+.pg130TextB {
+  color: #000000;
+}
+
+.pg130DialogueBox {
+  border: 2px solid #a61c28;
+  border-radius: 10px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  background-color: #ffffff;
+  min-width: 280px;
+}
+
+.pg130DialogueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg130DialogueLine {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.pg130TextA,
+.pg130TextB {
+  font-style: italic;
+  font-size: 18px;
+  text-align: left;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+.pg130TextA {
+  color: #a61c28;
+}
+
+.pg130TextB {
+  color: #000000;
+}
+
+.pg130SpeakerA {
+  color: #a61c28;
+  font-style: italic;
+  min-width: 30px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.pg130SpeakerB {
+  color: #000000;
+  font-style: italic;
+  min-width: 30px;
+  font-size: 18px;
+  white-space: nowrap;
+}
+
+.pg130TextA {
+  font-style: italic;
+  color: #a61c28;
+  font-size: 18px;
+}
+
+.pg130TextB {
+  font-style: italic;
+  color: #000000;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .pg130Container {
+    padding: 1rem;
+  }
+
+  .pg130DialoguesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .pg130Title {
+    font-size: 35px;
+  }
+
+  .pg130Subtitle {
+    font-size: 25px;
+  }
+
+  .pg130DialogueTitle {
+    font-size: 20px;
+  }
+
+  .pg130SpeakerA,
+  .pg130SpeakerB,
+  .pg130TextA,
+  .pg130TextB {
+    font-size: 16px;
+  }
+}
+
+.pg130IconContainer {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pg130AudioIcon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.pg130Translation {
+  color: #666666;
+  font-style: italic;
+  margin-left: 2rem;
+  font-size: 0.9em;
+}
+
+.pg130Theme {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #a61c28;
+}
+
+@media (max-width: 768px) {
+  .pg130Container {
+    padding: 1rem;
+  }
+
+  .pg130DialoguesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .pg130Title {
+    font-size: 2rem;
+  }
+
+  .pg130Subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+.pg225Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+.pg225Header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding-left: 1rem;
+}
+
+.pg225Title {
+  color: #a61c28;
+  font-size: 50px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg225Subtitle {
+  font-size: 30px;
+  color: #000000;
+  margin: 0;
+  font-weight: normal;
+  text-align: left;
+}
+
+.pg225DialoguesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.pg225DialogueBox {
+  border: 2px solid #a61c28;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: #ffffff;
+  min-width: 350px;
+}
+
+.pg225DialogueTitle {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+  font-size: clamp(18px, 2vw, 20px);
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.pg225DialogueLine {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.5;
+}
+
+.pg225SpeakerA,
+.pg225SpeakerB {
+  font-style: italic;
+  min-width: 25px;
+  font-size: clamp(14px, 1.8vw, 16px);
+  white-space: nowrap;
+}
+
+.pg225SpeakerA {
+  color: #a61c28;
+}
+
+.pg225SpeakerB {
+  color: #000000;
+}
+
+.pg225TextA,
+.pg225TextB {
+  font-style: italic;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.pg225TextA {
+  color: #a61c28;
+}
+
+.pg225TextB {
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .pg225Container {
+    padding: 1rem;
+  }
+
+  .pg225DialoguesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .pg225Title {
+    font-size: 35px;
+  }
+
+  .pg225Subtitle {
+    font-size: 25px;
+  }
+
+  .pg225DialogueTitle {
+    font-size: 20px;
+  }
+
+  .pg225SpeakerA,
+  .pg225SpeakerB,
+  .pg225TextA,
+  .pg225TextB {
+    font-size: 16px;
+  }
+}

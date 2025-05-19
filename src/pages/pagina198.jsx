@@ -17,14 +17,34 @@ const Pagina198 = () => {
             },
             {
                 speaker: 'Ava',
-                text: 'I would scream so loud...',
-                translation: 'Eu gritaria tão alto...'
+                text: 'Me too. I would buy the tickets right now if I had my wallet.',
+                translation: 'Eu também. Eu compraria os ingressos agora mesmo se estivesse com minha carteira.'
             },
             {
                 speaker: 'Leo',
-                text: 'I would lose my voice! Let\'s grab those tickets later!',
-                translation: 'Eu perderia minha voz! Vamos pegar esses ingressos mais tarde!'
-            }
+                text: 'Same here. I would even skip work just to go!',
+                translation: 'Idem. Eu até faltaria ao trabalho só pra ir!'
+            },
+            {
+                speaker: 'Ava',
+                text: 'That’s serious dedication. I would scream so loud during “Midnight Run.',
+                translation: 'Fala sério. Eu gritaria tanto durante “Midnight Run.'
+            },
+            {
+                speaker: 'Leo',
+                text: 'I would lose my voice by the end of the concert. Totally worth it.',
+                translation: 'Eu sairia rouco até o ﬁm do show, mas ia valer a pena.'
+            },
+            {
+                speaker: 'Ava',
+                text: 'I would say it’s the best way to spend a Saturday night.',
+                translation: 'Eu diria que é a melhor forma de passar um sábado à noite.'
+            },
+            {
+                speaker: 'Leo',
+                text: 'No doubt. Let’s grab those tickets later?',
+                translation: 'Sem dúvida. Vamos comprar os ingressos mais tarde?'
+            },
         ]
     };
 

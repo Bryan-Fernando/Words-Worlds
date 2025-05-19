@@ -31,6 +31,11 @@
     gap: 7rem;
 }
 
+.page84__aside {
+    width: 100%;
+    display: flex;
+}
+
 /* Este é um comentário */
 
 .page84__container--questoes {
@@ -168,17 +173,63 @@
 
 .page84__styled--table--afirmativa th,
 .page84__styled--table--negativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: bold;
     border: 1px solid #A61C28;
 }
 
 .page84__cell--table {
     height: 7rem;
+}
+
+.page84__aside--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page84__aside--notes--1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #0A3282;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #0A3282;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.page84__aside--img--notes {
+    height: calc(10px + 0.8vw);
+    width: 20px;
+    padding-right: 5px;
+}
+
+.page84__aside--notes--2 {
+    width: 80%;
+    border: 4px solid #0A3282;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    color: #103275;
+}
+
+.page84__aside--notes--2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
 }
 
 .page84__container--imagem {
@@ -199,15 +250,11 @@
     transform: scale(1.1);
 }
 
-.page84__word-bank-header-1{
-    width: 100%;
-    color: #0A3282;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-}
 
 @media (max-width: 1024px) {
+    .page84__aside--notes--2 p {
+        font-size: 2rem;
+    }
 
     .page84__styled--table--afirmativa th,
     .page84__styled--table--negativa th {

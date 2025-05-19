@@ -136,7 +136,7 @@ const Pagina32 = () => {
                                         from Brazil?
                                     </td>
                                     <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Eles / Elas são do Brasil?
+                                        Eles são do Brasil?
                                     </td>
                                 </tr>
                                 <tr>
@@ -152,7 +152,7 @@ const Pagina32 = () => {
                                         at the gym?
                                     </td>
                                     <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
-                                        Eles / Elas estão na academia?
+                                        Eles estão na academia?
                                     </td>
                                 </tr>
                                 <tr>
@@ -168,7 +168,7 @@ const Pagina32 = () => {
                                         15 or 16 years old?
                                     </td>
                                     <td className={styles["page32__translation"]} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
-                                        Eles / Elas têm 15 ou 16 anos?
+                                        Eles têm 15 ou 16 anos?
                                     </td>
                                 </tr>
                             </tbody>

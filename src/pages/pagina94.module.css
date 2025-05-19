@@ -15,10 +15,6 @@
     font-size: 4rem;
 }
 
-.page94__questions-title{
-    text-align: left;
-}
-
 .page94__main {
     width: 100%;
     flex-direction: column;
@@ -63,8 +59,8 @@
 }
 
 .page94__styled-table-interrogative th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.6rem;

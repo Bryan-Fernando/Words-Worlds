@@ -1,0 +1,106 @@
+.pg223Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  background-color: #ffffff;
+}
+
+.pg223Header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.pg223Title {
+  color: #a61c28;
+  font-size: 50px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg223Subtitle {
+  font-size: 30px;
+  color: #000000;
+  margin: 0;
+  font-weight: normal;
+}
+
+.pg223ImagesContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0;
+}
+
+.pg223ImagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background-color: #808080;
+  border-radius: 8px;
+}
+
+.pg223DialoguesFirstSet,
+.pg223DialoguesSecondSet {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin: 2rem 0;
+}
+
+.pg223DialogueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+.pg223DialogueTitle {
+  color: #000000;
+  font-weight: bold;
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.pg223Question {
+  color: #a61c28;
+  font-style: italic;
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+.pg223Answer {
+  color: #000000;
+  font-style: italic;
+  margin: 0;
+  font-size: 16px;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .pg223Container {
+    padding: 1rem;
+  }
+
+  .pg223ImagesContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .pg223DialoguesFirstSet,
+  .pg223DialoguesSecondSet {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .pg223Title {
+    font-size: 35px;
+  }
+
+  .pg223Subtitle {
+    font-size: 25px;
+  }
+}

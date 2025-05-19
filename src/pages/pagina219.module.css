@@ -1,0 +1,116 @@
+.pg219Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 5rem;
+  background-color: #ffffff;
+  align-items: flex-start;
+}
+
+.pg219Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg219ExerciseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.pg219ExerciseTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg219ColumnsContainer,
+.pg219AnswerColumns {
+  display: flex;
+  justify-content: flex-start;
+  gap: 6rem;
+  margin-top: 1rem;
+}
+
+.pg219Column {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 1.5rem;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pg219Item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.pg219Number,
+.pg219Letter {
+  color: #000000;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.pg219Text {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg219AnswerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pg219AnswerTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .pg219Container {
+    padding: 1rem;
+  }
+
+  .pg219Title {
+    font-size: 30px;
+  }
+
+  .pg219ExerciseTitle,
+  .pg219AnswerTitle {
+    font-size: 16px;
+  }
+
+  .pg219ColumnsContainer,
+  .pg219AnswerColumns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .pg219Column {
+    min-width: auto;
+  }
+
+  .pg219Number,
+  .pg219Letter,
+  .pg219Text {
+    font-size: 14px;
+  }
+}

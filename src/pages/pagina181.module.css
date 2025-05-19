@@ -67,7 +67,7 @@
 .page181__tableTitle {
     background-color: #A61C28;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
     font-weight: bold;
     font-size: 2rem;
@@ -94,8 +94,7 @@
 }
 
 .page181__translation {
-    font-size: 1.4rem;
-    color: #666;
+    color: #A61C28;
     margin-top: 0.5rem;
 }
 

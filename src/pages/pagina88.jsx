@@ -65,7 +65,7 @@ const Pagina88 = () => {
 
                 <div>
                     <h2 className={styles["page88__subtitle"]}>Indefinite articles ‘‘A’’ and ‘‘AN’’ = um ou uma</h2>
-                    <p className={styles["page88__description"]}>Artigos indefinidos "a" e "an" = um ou uma</p>
+                    <p className={styles["page88__description"]}>Artigos indefinidos "a" e "an"</p>
                 </div>
             </header>
             <main className={styles["page88__main"]}>

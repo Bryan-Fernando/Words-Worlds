@@ -96,7 +96,6 @@ const Pagina104 = () => {
                                             value={inputValues[index]}
                                             onChange={(e) => handleInputChange(e.target.value, index)}
                                             className={styles["page104__input--box"]}
-                                            placeholder='escola'
                                         />
                                         <span className={styles["page104__text--black"]}><strong>{question[3]}</strong></span>
                                     </div>

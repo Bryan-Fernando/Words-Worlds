@@ -19,8 +19,6 @@ import pg60_audio5 from '../assets/audios/pg60_audio5.mp3';
 import pg60_audio6 from '../assets/audios/pg60_audio6.mp3';
 import pg60_audio7 from '../assets/audios/pg60_audio7.mp3';
 import pg60_audio8 from '../assets/audios/pg60_audio8.mp3';
-import pg60_audio9 from '../assets/audios/pg60_audio9.mp3';
-import pg60_audio10 from '../assets/audios/pg60_audio10.mp3';
 import global_audio_grammar from '../assets/audios/global_grammar.mp3';
 import global_what_ti_e from '../assets/audios/global_what_ti_e.mp3';
 import global_what_ti_p from '../assets/audios/global_what_ti_p.mp3';
@@ -39,9 +37,7 @@ const Pagina60 = () => {
         pg60_audio5,
         pg60_audio6,
         pg60_audio7,
-        pg60_audio8,
-        pg60_audio9,
-        pg60_audio10
+        pg60_audio8
     };
 
     const playAudio = (audioKey) => {
@@ -88,8 +84,8 @@ const Pagina60 = () => {
             <div className={styles["page60__notes"]}>
                 <div className={styles["page60__notes-icon"]}>!</div>
                 <p style={{ fontWeight: 'bold', margin: 0 }}>
-                   <span onClick={() => playAudio('pg60_audio9')}>a.m = before noon (antes de meio-dia)</span>  <br />
-                   <span onClick={() => playAudio('pg60_audio10')}>p.m = after noon (depois de meio-dia)</span>
+                    a.m = before noon (antes de meio-dia) <br />
+                    p.m = after noon (depois de meio-dia)
                 </p>
             </div>
 

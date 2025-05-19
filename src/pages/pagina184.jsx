@@ -34,7 +34,7 @@ const Pagina184 = () => {
             questionWord: 'When',
             wordTranslation: 'Quando',
             subject: 'Melissa',
-            translation: 'ela',
+            translation: 'Melissa',
             verb: 'start working',
             verbTranslation: 'começaria a trabalhar',
             complement: 'at Credisis?',
@@ -45,10 +45,10 @@ const Pagina184 = () => {
             wordTranslation: 'Que horas',
             subject: 'we',
             translation: 'nós',
-            verb: 'need to wake up',
-            verbTranslation: 'precisaríamos acordar',
-            complement: '?',
-            complementTranslation: '?'
+            verb: 'need to wake up?',
+            verbTranslation: 'precisaríamos acordar?',
+            complement: '',
+            complementTranslation: ''
         }
     ];
 
@@ -95,7 +95,7 @@ const Pagina184 = () => {
                                         {item.questionWord}
                                         <div className={styles.page184__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page184__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page184__translation}>{item.translation}</div>

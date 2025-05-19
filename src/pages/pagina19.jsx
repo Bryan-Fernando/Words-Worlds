@@ -138,7 +138,7 @@ const Pagina19 = () => {
                                     <td
                                         className={styles["page19__adverb"]}
                                         onClick={() => playAudio(pg19Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         not
                                     </td>
@@ -155,7 +155,7 @@ const Pagina19 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Ela <span style={{ color: "red" }}>não</span> é a Srta. Pamela
+                                        Ela não é a Srta. Pamela
                                     </td>
                                 </tr>
                                 <tr>
@@ -169,7 +169,7 @@ const Pagina19 = () => {
                                     <td
                                         className={styles["page19__auxiliary-verb"]}
                                         onClick={() => playAudio(pg19Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         isn't
                                     </td>
@@ -187,7 +187,7 @@ const Pagina19 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Ela <span style={{ color: "red" }}>não</span> está na academia
+                                        Ela não está na academia
                                     </td>
                                 </tr>
                                 <tr>
@@ -201,7 +201,7 @@ const Pagina19 = () => {
                                     <td
                                         className={styles["page19__auxiliary-verb"]}
                                         onClick={() => playAudio(pg19Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center', color: 'red' }}
+                                        style={{ cursor: 'pointer', textAlign: 'center' }}
                                     >
                                         ain't
                                     </td>
@@ -219,7 +219,7 @@ const Pagina19 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        Ela <span style={{ color: "red" }}>não</span> tem 27 anos
+                                        Ela não tem 27 anos
                                     </td>
                                 </tr>
                             </tbody>

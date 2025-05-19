@@ -14,8 +14,20 @@ import verboAudio from '../assets/audios/verbo.mp3';
 import objeto_complemento_audio from '../assets/audios/objeto_complemento.mp3';
 import traducaoAudio from '../assets/audios/traducao.mp3';
 import pg107_audio1 from '../assets/audios/pg107_audio1.mp3';
-import pg107_audio1_1 from '../assets/audios/pg107_audio1_1.mp3';
+import pg107_audio2 from '../assets/audios/pg107_audio2.mp3';
+import pg107_audio3 from '../assets/audios/pg107_audio3.mp3';
+import pg107_audio4 from '../assets/audios/pg107_audio4.mp3';
+import pg107_audio5 from '../assets/audios/pg107_audio5.mp3';
+import pg107_audio6 from '../assets/audios/pg107_audio6.mp3';
+import pg107_audio7 from '../assets/audios/pg107_audio7.mp3';
+
 import pg107_trad1 from '../assets/audios/pg107_trad1.mp3';
+import pg107_trad2 from '../assets/audios/pg107_trad2.mp3';
+import pg107_trad3 from '../assets/audios/pg107_trad3.mp3';
+import pg107_trad4 from '../assets/audios/pg107_trad4.mp3';
+import pg107_trad5 from '../assets/audios/pg107_trad5.mp3';
+import pg107_trad6 from '../assets/audios/pg107_trad6.mp3';
+import pg107_trad7 from '../assets/audios/pg107_trad7.mp3';
 
 const Pagina107 = () => {
     const [inputValues, setInputValues] = useState(
@@ -97,7 +109,7 @@ const Pagina107 = () => {
                             onClick={() => playAudio(adverbioAudio)}
                             style={{ cursor: 'pointer' }}
                         >
-                            <span style={{ color: 'red' }}>'Not'</span> <br /> Adverb
+                            'Not' <br /> Adverb
                         </th>
                         <th
                             onClick={() => playAudio(verboAudio)}
@@ -121,7 +133,6 @@ const Pagina107 = () => {
                 </thead>
                 <tbody>
                     {[
-                        { subject: "I", aux: "do", adv: "not", verb: "work", obj: "on Mondays", trad: "Eu não trabalho às segundas-feiras", audio: pg107_audio1_1, tradAudio: pg107_trad1 },
                         { subject: "I", aux: "don't", adv: "", verb: "work", obj: "on Mondays", trad: "Eu não trabalho às segundas-feiras", audio: pg107_audio1, tradAudio: pg107_trad1 },
                     ].map((row, index) => (
                         <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: "pointer" }}>

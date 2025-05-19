@@ -18,25 +18,25 @@ const Pagina190 = () => {
             translation: 'eu',
             verb: 'need to call',
             verbTranslation: 'precisaria ligar',
-            complement: 'before the phone?',
-            complementTranslation: 'antes de o telefone?'
+            complement: 'before answer the phone?',
+            complementTranslation: 'antes de atender o telefone?'
         },
         {
             questionWord: 'How many times',
             wordTranslation: 'Quantas vezes',
             subject: 'you',
             translation: 'você',
-            verb: 'try giving up',
-            verbTranslation: 'tentaria desistir',
-            complement: 'before?',
-            complementTranslation: 'antes?'
+            verb: 'try before',
+            verbTranslation: 'tentaria antes',
+            complement: 'givin up',
+            complementTranslation: 'de desisitr'
         },
         {
             questionWord: 'How many times',
             wordTranslation: 'Quantas vezes',
             subject: 'it',
-            translation: 'seria',
-            verb: 'be',
+            translation: '',
+            verb: 'be necessary',
             verbTranslation: 'seria necessário',
             complement: 'to repeat the process?',
             complementTranslation: 'repetir o processo?'
@@ -86,7 +86,7 @@ const Pagina190 = () => {
                                         {item.questionWord}
                                         <div className={styles.page190__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page190__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page190__translation}>{item.translation}</div>

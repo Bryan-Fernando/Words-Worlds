@@ -184,7 +184,7 @@ const Pagina22 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Está / Fica ao lado da biblioteca
+                                        Está/Fica ao lado da biblioteca
                                     </td>
                                 </tr>
                                 <tr>

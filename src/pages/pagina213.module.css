@@ -1,0 +1,246 @@
+.pg213Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 5rem;
+  background-color: #ffffff;
+}
+
+.pg213Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+.pg213SubtitleContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.pg213MainSubtitle {
+  color: #000000;
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.pg213MainSubtitle span {
+  color: #a61c28;
+}
+
+.pg213SecondarySubtitle {
+  color: #000000;
+  font-size: 14px;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+.pg213SecondarySubtitle span {
+  color: #a61c28;
+} 
+
+.pg213TableContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg213TitleContainer {
+  background-color: #a61c28;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.pg213TableTitle {
+  color: white;
+  font-size: 18px;
+  margin: 0;
+  text-align: center;
+  font-style: italic;
+}
+
+.pg213ContentContainer {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.pg213HeaderRow {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 0.8fr 1fr 1.4fr;
+  background-color: #cccccc;
+  border-bottom: 2px solid #a61c28;
+}
+
+.pg213HeaderRow > div {
+  padding: 0.5rem;
+  text-align: left;
+  font-size: 16px;
+  border-right: 1px solid #a61c28;
+  color: #000000;
+  font-style: italic;
+}
+
+.pg213Cell {
+  padding: 0.75rem;
+  border-right: 1px solid #a61c28;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+  font-size: 16px;
+}
+
+.pg213Red {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.pg213Blue {
+  color: #0000ff;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.pg213Black {
+  color: #000000;
+  font-style: italic;
+  font-size: 16px;
+}
+
+.pg213HeaderRow > div:last-child {
+  border-right: none;
+}
+
+.pg213NotAdv {
+  color: #ff0000;
+}
+
+.pg213TableContent {
+  background-color: white;
+}
+
+.pg213TableRow {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 0.8fr 1fr 1.4fr;
+  border-bottom: 1px solid #a61c28;
+}
+
+.pg213TableRow:last-child {
+  border-bottom: none;
+}
+
+.pg213Cell {
+  padding: 0.75rem;
+  border-right: 1px solid #a61c28;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: left;
+}
+
+.pg213Cell:last-child {
+  border-right: none;
+}
+
+.pg213Red {
+  color: #a61c28;
+  font-style: italic;
+}
+
+.pg213Blue {
+  color: #0000ff;
+  font-style: italic;
+}
+
+.pg213Green {
+  color: #006600;
+  font-style: italic;
+}
+
+.pg213Note {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  text-align: left;
+}
+
+.pg213NoteHeader {
+  background-color: #003366;
+  padding: 0.5rem 1rem;
+}
+
+.pg213NoteTitle {
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0;
+  font-size: 18px;
+}
+
+.pg213NoteContent {
+  background-color: white;
+  padding: 1rem;
+}
+
+.pg213NoteContent ul {
+  margin: 0;
+  padding-left: 1.5rem;
+  list-style: none;
+}
+
+.pg213NoteContent li {
+  color: #003366;
+  font-style: italic;
+  font-size: 16px;
+  position: relative;
+}
+
+.pg213NoteContent li::before {
+  content: "•";
+  position: absolute;
+  left: -1rem;
+  color: #003366;
+}
+.pg213Note p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.pg213Note ul {
+  margin: 0.5rem 0 0 0;
+  padding-left: 1.5rem;
+}
+
+.pg213Note li {
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .pg213Container {
+    padding: 1rem;
+  }
+
+  .pg213TableContainer {
+    overflow-x: auto;
+  }
+
+  .pg213TableRow,
+  .pg213HeaderRow {
+    min-width: 600px;
+  }
+}
+
+.pg213Black {
+  color: #000000;
+  font-style: italic;
+}

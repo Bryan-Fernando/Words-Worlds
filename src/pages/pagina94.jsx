@@ -23,11 +23,6 @@ import pg94_audio8 from '../assets/audios/pg94_audio8.mp3';
 import pg94_audio9 from '../assets/audios/pg94_audio9.mp3';
 import pg94_audio10 from '../assets/audios/pg94_audio10.mp3';
 import pg94_audio11 from '../assets/audios/pg94_audio11.mp3';
-import pg94_audio7p from '../assets/audios/pg94_audio7p.mp3';
-import pg94_audio8p from '../assets/audios/pg94_audio8p.mp3';
-import pg94_audio9p from '../assets/audios/pg94_audio9p.mp3';
-import pg94_audio10p from '../assets/audios/pg94_audio10p.mp3';
-import pg94_audio11p from '../assets/audios/pg94_audio11p.mp3';
 
 const Pagina94 = () => {
     const [inputValues, setInputValues] = useState(Array(6).fill(''));
@@ -37,7 +32,7 @@ const Pagina94 = () => {
         'Does she eat breakfast every morning?',
         'Do they play soccer in the park?',
         'Does he go to the gym after work?',
-        'Do the birds sing in the trees?',
+        'Do birds sing in the trees?',
         'Do you study English at school?'
     ];
 
@@ -55,13 +50,7 @@ const Pagina94 = () => {
         pg94_audio8,
         pg94_audio9,
         pg94_audio10,
-        pg94_audio11,
-        pg94_audio7p,
-        pg94_audio8p,
-        pg94_audio9p,
-        pg94_audio10p,
-        pg94_audio11p
-
+        pg94_audio11
     };
 
     const playAudio = (audioKey) => {
@@ -77,7 +66,7 @@ const Pagina94 = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
 
-            const isCorrect = value.trim() === correctAnswers[index]
+            const isCorrect = value.trim() === correctAnswers[index].toLowerCase();
 
             return isCorrect;
         });
@@ -128,10 +117,8 @@ const Pagina94 = () => {
                 </div>
                 <div className={styles["page94__content-flex"]}>
                     <div className={styles["page94__questions-container"]}>
-                        
                         <h2 className={styles["page94__questions-title"]}>
-                            1. Make questions by clicking on the audio icons  
-                            for the following answers.
+                            1. Make questions for the following answers.
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
@@ -155,7 +142,6 @@ const Pagina94 = () => {
                         ].map((question, index) => {
                             const answerAudio = `pg94_audio${index + 2}`;
                             const inputAudio = `pg94_audio${index + 7}`;
-                            const inputAudioP = `pg94_audio${index + 7}p`;
 
                             return (
                                 <div key={index} className={styles["page94__question"]}>
@@ -171,12 +157,6 @@ const Pagina94 = () => {
                                             alt="Audio Icon"
                                             className={styles["page94__additional-icon"]}
                                             onClick={() => playAudio(inputAudio)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page94__additional-icon"]}
-                                            onClick={() => playAudio(inputAudioP)}
                                         />
                                         {results[index] !== null ? (
                                             <img

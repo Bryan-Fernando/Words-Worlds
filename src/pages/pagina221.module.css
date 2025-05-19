@@ -1,0 +1,135 @@
+.pg221Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 5rem;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.pg221Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg221ExerciseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.pg221ExerciseTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg221QuestionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.pg221QuestionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pg221Question {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  color: #a61c28;
+  font-style: italic;
+}
+
+.pg221Options {
+  text-align: left;
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 0;
+  padding: 0;
+}
+
+.pg221Number {
+  color: #a61c28;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg221QuestionText {
+  color: #a61c28;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg221Options {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+  margin-left: 1.5rem;
+}
+
+.pg221AnswerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pg221AnswerTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg221AnswerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg221AnswerLine {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.pg221Answer {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .pg221Container {
+    padding: 1rem;
+  }
+
+  .pg221Title {
+    font-size: 30px;
+  }
+
+  .pg221ExerciseTitle,
+  .pg221AnswerTitle {
+    font-size: 16px;
+  }
+
+  .pg221Number,
+  .pg221QuestionText,
+  .pg221Options,
+  .pg221Answer {
+    font-size: 14px;
+  }
+}

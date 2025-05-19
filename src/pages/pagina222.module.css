@@ -1,0 +1,93 @@
+.pg222Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 10rem;
+  background-color: #ffffff;
+  text-align: left;
+}
+
+.pg222Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg222ExerciseSection,
+.pg222AnswerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg222ExerciseTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+}
+
+.pg222AnswerTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+}
+
+.pg222WordsBox,
+.pg222AnswerBox {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg222WordLine,
+.pg222AnswerLine {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pg222Number {
+  color: #000000;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.pg222Words {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg222Answer {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .pg222Container {
+    padding: 1rem;
+  }
+
+  .pg222Title {
+    font-size: 30px;
+  }
+
+  .pg222ExerciseTitle,
+  .pg222AnswerTitle {
+    font-size: 16px;
+  }
+
+  .pg222Words,
+  .pg222Answer,
+  .pg222Number {
+    font-size: 14px;
+  }
+}

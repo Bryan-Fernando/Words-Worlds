@@ -25,11 +25,11 @@ const Pagina192 = () => {
             questionWord: 'How many times a week',
             wordTranslation: 'Quantas vezes por semana',
             subject: 'it',
-            translation: 'isso',
-            verb: 'happen',
-            verbTranslation: 'aconteceria',
-            complement: '?',
-            complementTranslation: '?'
+            translation: '',
+            verb: 'happen?',
+            verbTranslation: 'aconteceria?',
+            complement: '',
+            complementTranslation: ''
         },
         {
             questionWord: 'How many times a week',
@@ -86,7 +86,7 @@ const Pagina192 = () => {
                                         {item.questionWord}
                                         <div className={styles.page192__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page192__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page192__translation}>{item.translation}</div>

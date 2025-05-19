@@ -159,8 +159,8 @@
 }
 
 .page69__styled-table-interrogativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.6rem;
@@ -291,17 +291,6 @@
     cursor: pointer;
     position: relative;
     top: 0.5rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.page95__audio-icon-p {
-    width: 2rem;
-    height: 2rem;
-    margin-left: 1rem;
-    cursor: pointer;
-    position: relative;
-    top: 0.35rem;
-    right: 1.2rem;
     transition: transform 0.3s ease-in-out;
 }
 

@@ -96,9 +96,41 @@
 }
 
 .page180__translation {
-    font-size: 1.4rem;
     color: #A61C28;
     margin-top: 0.5rem;
+}
+
+.page180__aside {
+    width: 100%;
+}
+
+.page180__aside_container {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+}
+
+.page180__aside_header {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.page180__aside_content {
+    padding: 2rem;
+}
+
+.page180__text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+.page180__highlight {
+    color: #A61C28;
+    font-weight: bold;
 }
 
 @media (max-width: 1024px) {

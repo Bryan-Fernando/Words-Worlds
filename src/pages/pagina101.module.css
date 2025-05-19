@@ -113,7 +113,6 @@
     width: fit-content;
     position: relative;
     bottom: 15rem;
-    margin-top: 2rem;
 }
 
 .page101__check-button:hover {
@@ -176,8 +175,8 @@
 
 .page101__styled-table-afirmativa th,
 .page101__styled-table-negativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;

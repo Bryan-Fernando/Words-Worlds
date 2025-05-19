@@ -4,7 +4,6 @@ import styles from './pagina2.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
-import white_play_icon from '../assets/icons/white_play_icon.png';
 
 import pg2Audio1e from '../assets/audios/pg2_audio1e.mp3';
 import pg2Audio2e from '../assets/audios/pg2_audio2e.mp3';
@@ -90,13 +89,13 @@ const Pagina2 = () => {
             <div className={styles["page2__container"]}>
                 <header className={styles["page2__header"]}>
                     <h1 className={styles["page2__header--title"]}>Contents 1 - A <img
-                        src={white_play_icon}
+                        src={eng_audio_icon}
                         alt="English Audio"
                         className={styles["page2__icon"]}
                         onClick={() => playAudio(pg2Audio1e)}
                     />
                         <img
-                            src={white_play_icon}
+                            src={ptbr_audio_icon}
                             alt="Portuguese Audio"
                             className={styles["page2__icon"]}
                             onClick={() => playAudio(pg2Audio1p)}

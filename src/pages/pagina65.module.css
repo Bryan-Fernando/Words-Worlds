@@ -179,10 +179,3 @@
 .page65__audio-iconP:hover {
     transform: scale(1.1);
 }
-
-.page65__aside-img {
-    height: calc(2rem + 0.8vw);
-    width: 4rem;
-    padding-right: 0.5rem;
-    cursor: pointer;
-}

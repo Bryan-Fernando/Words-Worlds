@@ -53,8 +53,11 @@
 
 .page193__translation {
     font-size: 1.4rem;
-    color: #666;
     font-style: italic;
+}
+
+.page193__translationBlue {
+    color: #1F3C8C;
 }
 
 .page193__tableSection {
@@ -64,7 +67,7 @@
 .page193__tableTitle {
     background-color: #A61C28;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
     font-weight: bold;
     font-size: 2rem;

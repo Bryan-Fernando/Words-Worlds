@@ -14,7 +14,27 @@ const Pagina196 = () => {
                 speaker: 'Mary',
                 text: 'Oh, I would love to visit Japan.',
                 translation: 'Ah, eu adoraria visitar o Japão.'
-            }
+            },
+            {
+                speaker: 'John',
+                text: 'That sounds amazing. I would go there just for the sushi!',
+                translation: 'Isso parece incrível. Eu iria só pelo sushi!'
+            },
+            {
+                speaker: 'Mary',
+                text: 'And the cherry blossoms... I would never stop taking pictures.',
+                translation: 'E as cerejeiras... eu nunca pararia de tirar fotos.'
+            },
+            {
+                speaker: 'John',
+                text: 'I think I would learn a bit of Japanese before going.',
+                translation: 'Acho que eu aprenderia um pouco de japonês antes de ir.'
+            },
+            {
+                speaker: 'Mary',
+                text: 'Good idea! That would make the trip even better.',
+                translation: 'Boa ideia! Isso tornaria a viagem ainda melhor.'
+            },
         ]
     };
 

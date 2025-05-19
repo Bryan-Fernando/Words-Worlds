@@ -15,7 +15,27 @@ const Pagina195 = () => {
                     speaker: 'Emma',
                     text: 'I would like a lemonade, please.',
                     translation: 'Eu gostaria de uma limonada, por favor.'
-                }
+                },
+                {
+                    speaker: 'Waiter',
+                    text: 'And to eat ?',
+                    translation: 'E para comer?'
+                },
+                {
+                    speaker: 'Emma',
+                    text: 'I would like a sandwich.',
+                    translation: 'Eu gostaria de um sanduíche.'
+                },
+                {
+                    speaker: 'Waiter',
+                    text: 'Great! Anything else ?',
+                    translation: 'Ótimo! Mais alguma coisa?'
+                },
+                {
+                    speaker: 'Emma',
+                    text: 'No, thank you.',
+                    translation: 'Não, obrigada.'
+                },
             ]
         },
         {
@@ -30,7 +50,22 @@ const Pagina195 = () => {
                     speaker: 'Anna',
                     text: 'Yes! I would love to.',
                     translation: 'Sim! Eu adoraria jogar.'
-                }
+                },
+                {
+                    speaker: 'Liam',
+                    text: "Great! Let's go to the park.",
+                    translation: 'Ótimo! Vamos ao parque.'
+                },
+                {
+                    speaker: 'Anna',
+                    text: 'Sure! But ﬁrst, would you help me carry my bag ?',
+                    translation: 'Claro! Mas antes, você poderia me ajudar a carregar minha bolsa?'
+                },
+                {
+                    speaker: 'Liam',
+                    text: "Of course !",
+                    translation: 'Claro!'
+                },
             ]
         }
     ];
@@ -75,15 +110,14 @@ const Pagina195 = () => {
                         <div className={styles.page195__image_container}>
                             {index === 0 ? (
                                 <div className={styles.page195__restaurant_image} />
-                            ) : (
-                                <div className={styles.page195__soccer_images}>
-                                    <div className={styles.page195__car_image} />
-                                    <div className={styles.page195__soccer_image} />
-                                </div>
-                            )}
+                            ) : null}
                         </div>
                     </section>
                 ))}
+                 <section className={styles.page195__soccer_images}>
+                    <div className={styles.page195__car_image} />
+                    <div className={styles.page195__soccer_image} />
+                </section>
             </main>
         </div>
     );

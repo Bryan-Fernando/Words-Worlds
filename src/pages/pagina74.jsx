@@ -137,7 +137,7 @@ const pagina74 = () => {
                     />
                 </h1>
                 <h2 className={styles["page74__h2"]}>
-                    Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
+                    Complete the sentences in the Simple Present Form of Verb Be <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar).
                 </h2>
             </header>
             <main className={styles["page74__main"]}>
@@ -158,10 +158,6 @@ const pagina74 = () => {
                 </div>
                 <div className={styles["page74__container-questoes"]}>
                     <div className={styles["page74__questions1"]}>
-                        <div className={styles["page74__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
-                        </div>
                         <p className={styles["page74__a-titulo-question"]}>
                             Affirmative:
                             <img
@@ -177,7 +173,6 @@ const pagina74 = () => {
                                 onClick={() => playAudio("global_affirmativep")}
                             />
                         </p>
-                        
                         {[
                             "The weather ____ beautiful today.",
                             "My cat ____ playful in the morning.",
@@ -185,7 +180,7 @@ const pagina74 = () => {
                             "This book ____ interesting.",
                             "The flowers ____ blooming in the garden."
                         ].map((question, index) => {
-                            const audioKey = `pg74_audio${index + 1}`;
+                            const audioKey = `page74_audio${index + 1}`;
 
                             return (
                                 <div key={index} className={styles["page74__question"]}>
@@ -238,7 +233,20 @@ const pagina74 = () => {
                         <img className={styles["page74__imagem"]} src={pagina74_imagem1} alt="" />
                     </div>
                 </div>
-                
+                <aside className={styles["page74__aside"]}>
+                    <div className={styles["page74__aside-container"]}>
+                        <div className={styles["page74__aside-notes1"]}>
+                            <img className={styles["page74__aside-img-notes"]} src={pg74IconNotes} alt="" />
+                            <p>Study Note</p>
+                        </div>
+                        <div className={styles["page74__aside-notes2"]}>
+                            <p>
+                                In these sentences, "is" is used with singular subjects (the weather, my cat, Sarah, this book)
+                                while "are" is used with plural subjects (the flowers).
+                            </p>
+                        </div>
+                    </div>
+                </aside>
                 <div className={styles["page74__tabela-negativa-container"]}>
                     <div className={styles["page74__table-header-negativa"]}>NEGATIVA</div>
                     <table className={styles["page74__styled-table-negativa"]}>
@@ -282,7 +290,7 @@ const pagina74 = () => {
                             "This restaurant ____ expensive.",
                             "The movie ____ boring."
                         ].map((question, index) => {
-                            const audioKey = `pg74_audio${index + 6}`;
+                            const audioKey = `page74_audio${index + 6}`;
 
                             return (
                                 <div key={index + 5} className={styles["page74__question"]}>
@@ -336,7 +344,21 @@ const pagina74 = () => {
                         <img className={styles["page74__imagem"]} src={pagina74_imagem2} alt="" />
                     </div>
                 </div>
-                
+                <aside className={styles["page74__aside"]}>
+                    <div className={styles["page74__aside-container"]}>
+                        <div className={styles["page74__aside-notes1"]}>
+                            <img className={styles["page74__aside-img-notes"]} src={pg74IconNotes} alt="" />
+                            <p>Study Note</p>
+                        </div>
+                        <div className={styles["page74__aside-notes2"]}>
+                            <p>
+                                <span style={{ color: '#8a1720' }}>"Not"</span> is used to form negative sentences. The verb "be" is conjugated as <span style={{ color: '#8a1720' }}> "am not"</span> for the first
+                                person singular (I), <span style={{ color: '#8a1720' }}>"is not"</span> for singular subjects (my dog, the sky, this restaurant, the movie),
+                                and <span style={{ color: '#8a1720' }}>"are not"</span> for plural subjects (the children)
+                            </p>
+                        </div>
+                    </div>
+                </aside>
                 <button className={styles["page74__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
 
             </main>

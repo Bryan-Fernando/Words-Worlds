@@ -1,0 +1,97 @@
+.pg214Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 5rem;
+  background-color: #ffffff;
+}
+
+.pg214Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+  text-align: left;
+}
+
+.pg214ExerciseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.pg214ExerciseTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg214QuestionsBox,
+.pg214AnswerBox {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: fit-content;
+  min-width: 300px;
+}
+
+.pg214Line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.pg214Number {
+  color: #000000;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.pg214Text {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg214AnswerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pg214AnswerTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .pg214Container {
+    padding: 1rem;
+  }
+
+  .pg214Title {
+    font-size: 30px;
+  }
+
+  .pg214ExerciseTitle,
+  .pg214AnswerTitle {
+    font-size: 16px;
+  }
+
+  .pg214Text,
+  .pg214Number {
+    font-size: 14px;
+  }
+}

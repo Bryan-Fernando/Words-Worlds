@@ -57,6 +57,70 @@
     border-right: none;
 }
 
+.page58__aside {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.page58__aside-container {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.page58__aside-header {
+    width: 100%;
+    height: 4.5rem;
+    border: 0.4rem solid #0A3282;
+    border-top-left-radius: 2.5rem;
+    border-top-right-radius: 2.5rem;
+    background-color: #0A3282;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.page58__aside-header p {
+    font-size: calc(0.8rem + 0.8vw);
+    font-weight: bold;
+}
+
+.page58__aside-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: white;
+    border: 0.4rem solid #0A3282;
+    border-top: none;
+    border-bottom-left-radius: 2.5rem;
+    border-bottom-right-radius: 2.5rem;
+}
+
+.page58__word-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.page58__word-column p {
+    margin: 0.5rem 0;
+    font-size: calc(0.8rem + 0.6vw);
+    text-align: left;
+}
+
+.page58__word-column strong {
+    display: block;
+    font-weight: bold;
+    color: #103275;
+}
+
+.page58__word-column span {
+    display: block;
+    color: #103275;
+    margin-top: 0.2rem;
+}
+
 .page58__audio-icon {
     width: 1.8rem;
     height: 1.8rem;

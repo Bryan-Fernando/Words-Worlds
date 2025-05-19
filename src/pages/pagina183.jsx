@@ -9,29 +9,34 @@ const Pagina183 = () => {
             </header>
 
             <main className={styles.page183__main}>
-                <section className={styles.page183__explanation}>
-                    <h2 className={styles.page183__subtitle}>Would - Futuro do Pretérito</h2>
-                    <p className={styles.page183__text}>
-                        O <span className={styles.page183__highlight}>Would</span> é um <span className={styles.page183__highlight}>verbo modal/auxiliar</span> que usamos para expressar ações no futuro do pretérito (terminação <span className={styles.page183__highlight}>ria</span> em português).
-                    </p>
-                </section>
+                <aside className={styles.page183__aside}>
+                    <div className={styles.page183__aside_container}>
+                        <div className={styles.page183__aside_header}>
+                            <p><strong>Would - Futuro do Pretérito</strong></p>
+                        </div>
+                        <div className={styles.page183__aside_content}>
+                            <p className={styles.page183__text}>
+                                O <span className={styles.page183__highlight}>Would</span> é um <span className={styles.page183__highlight}>verbo modal/auxiliar</span> que não tem uma tradução
+                                exata, mas que coloca o verbo principal no futuro do pretérito com a terminação de <span className={styles.page183__highlight}>ria</span> em português.
+                            </p>
+                        </div>
+                    </div>
+                </aside>
 
                 <section className={styles.page183__tableSection}>
                     <div className={styles.page183__tableTitle}>
-                        Negative Interrogative Form
-                    </div>
-                    <div className={styles.page183__subtitleSection}>
-                        Contraction Form
+                        Negative Interrogative Form -  Contraction
                     </div>
                     <table className={styles.page183__table}>
                         <thead>
                             <tr>
-                                <th>Aux. Verb</th>
+                                <th>
+                                    <div className={styles.page183__translation}>Contraction</div>
+                                    Aux. Verb</th>
                                 <th>
                                     Subject
-                                    <div className={styles.page183__translation}>Sujeito</div>
                                 </th>
-                                <th>Adv / Not</th>
+                                <th>Adv / <div className={styles.page183__translation}>Not</div></th>
                                 <th>
                                     Verb(s)
                                     <div className={styles.page183__translation}>Verbo(s)</div>
@@ -45,48 +50,72 @@ const Pagina183 = () => {
                         <tbody>
                             {[
                                 {
-                                    subject: 'you',
-                                    translation: 'você',
+                                    subject: 'I',
+                                    translation: 'Eu',
+                                    verb: 'be',
+                                    verbTranslation: 'não seria',
+                                    complement: 'a good leader for this team?',
+                                    complementTranslation: 'um bom líder para esta equipe?'
+                                },
+                                {
+                                    subject: 'he',
+                                    translation: 'Ele',
+                                    verb: 'enjoy going',
+                                    verbTranslation: 'não gostaria de ir',
+                                    complement: 'to the concert with us?',
+                                    complementTranslation: 'ao show com a gente ?'
+                                },
+                                {
+                                    subject: 'she',
+                                    translation: 'Ela',
                                     verb: 'want to know',
                                     verbTranslation: 'não gostaria de saber',
                                     complement: 'the truth?',
                                     complementTranslation: 'a verdade?'
                                 },
                                 {
-                                    subject: 'he',
-                                    translation: 'ele',
-                                    verb: 'like to go',
-                                    verbTranslation: 'não gostaria de ir',
-                                    complement: 'to the beach?',
-                                    complementTranslation: 'à praia?'
-                                },
-                                {
-                                    subject: 'they',
-                                    translation: 'eles',
-                                    verb: 'prefer to stay',
-                                    verbTranslation: 'não prefeririam ficar',
-                                    complement: 'at home?',
-                                    complementTranslation: 'em casa?'
+                                    subject: 'it',
+                                    translation: '-',
+                                    verb: 'take to travel',
+                                    verbTranslation: 'Não levaria para viajar',
+                                    complement: 'too long by bus ?',
+                                    complementTranslation: 'tempo demais de ônibus ?'
                                 },
                                 {
                                     subject: 'we',
-                                    translation: 'nós',
-                                    verb: 'take to travel',
-                                    verbTranslation: 'não levaríamos para viajar',
-                                    complement: 'by train?',
-                                    complementTranslation: 'de trem?'
+                                    translation: 'Nós',
+                                    verb: 'have',
+                                    verbTranslation: 'não nos divertiríamos',
+                                    complement: 'more fun at the beach?',
+                                    complementTranslation: 'mais na praia ?'
                                 },
                                 {
-                                    subject: 'she',
-                                    translation: 'ela',
-                                    verb: 'need to study',
-                                    verbTranslation: 'não precisaria estudar',
-                                    complement: 'for the test?',
-                                    complementTranslation: 'para a prova?'
+                                    subject: 'you',
+                                    translation: 'Você',
+                                    verb: 'prefer to stay',
+                                    verbTranslation: 'não preferiria ficar',
+                                    complement: 'home tonight?',
+                                    complementTranslation: 'em casa esta noite?'
+                                },
+                                {
+                                    subject: 'y’all',
+                                    translation: 'Vocês ',
+                                    verb: 'prefer to stay',
+                                    verbTranslation: 'não prefeririam ficar ',
+                                    complement: 'home tonight?',
+                                    complementTranslation: 'em casa esta noite?'
+                                },
+                                {
+                                    subject: 'they',
+                                    translation: 'Eles / Elas',
+                                    verb: 'notice',
+                                    verbTranslation: 'não perceberiam',
+                                    complement: 'the difference?',
+                                    complementTranslation: 'a diferença?'
                                 }
                             ].map((item, index) => (
                                 <tr key={index}>
-                                    <td>Wouldn't</td>
+                                    <td><div className={styles.page183__translation}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page183__translation}>

@@ -16,16 +16,16 @@ const Pagina193 = () => {
             wordTranslation: 'Quantas vezes por mês',
             subject: 'you',
             translation: 'você',
-            verb: 'go',
-            verbTranslation: 'iria',
+            verb: 'go to the spa just',
+            verbTranslation: 'iria ao spa só para',
             complement: 'to relax?',
-            complementTranslation: 'ao spa só para relaxar?'
+            complementTranslation: 'relaxar?'
         },
         {
             questionWord: 'How many times a month',
             wordTranslation: 'Quantas vezes por mês',
             subject: 'it',
-            translation: 'ele',
+            translation: '',
             verb: 'need',
             verbTranslation: 'precisaria',
             complement: 'maintenance?',
@@ -86,7 +86,7 @@ const Pagina193 = () => {
                                         {item.questionWord}
                                         <div className={styles.page193__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page193__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page193__translation}>{item.translation}</div>

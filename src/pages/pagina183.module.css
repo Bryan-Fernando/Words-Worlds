@@ -67,7 +67,7 @@
 .page183__tableTitle {
     background-color: #A61C28;
     color: white;
-    text-align: left;
+    text-align: center;
     padding: 1rem;
     font-weight: bold;
     font-size: 2rem;
@@ -94,10 +94,41 @@
 }
 
 .page183__translation {
-    font-size: 1.4rem;
-    color: #666;
+    color: #A61C28;
     margin-top: 0.5rem;
-    font-style: italic;
+}
+
+.page183__aside {
+    width: 100%;
+}
+
+.page182__aside_container {
+    border: 0.2rem solid #A61C28;
+    border-radius: 0.5rem;
+}
+
+.page183__aside_header {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 2.2rem;
+    text-align: left;
+}
+
+.page183__aside_content {
+    padding: 2rem;
+}
+
+.page183__text {
+    font-size: 2rem;
+    line-height: 1.5;
+    color: black;
+    text-align: left;
+}
+
+.page183__highlight {
+    color: #A61C28;
+    font-weight: bold;
 }
 
 @media (max-width: 1024px) {

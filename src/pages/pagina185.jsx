@@ -44,11 +44,11 @@ const Pagina185 = () => {
             questionWord: 'What size',
             wordTranslation: 'Qual tamanho',
             subject: 'it',
-            translation: 'ele',
-            verb: 'be washing',
-            verbTranslation: 'seria de lavar',
-            complement: 'after?',
-            complementTranslation: 'depois?'
+            translation: '',
+            verb: 'be washing?',
+            verbTranslation: 'seria de lavar?',
+            complement: 'after',
+            complementTranslation: 'o tamanho depois'
         }
     ];
 
@@ -95,7 +95,7 @@ const Pagina185 = () => {
                                         {item.questionWord}
                                         <div className={styles.page185__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page185__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page185__translation}>{item.translation}</div>

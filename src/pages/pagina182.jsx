@@ -16,7 +16,8 @@ const Pagina182 = () => {
                         </div>
                         <div className={styles.page182__aside_content}>
                             <p className={styles.page182__text}>
-                                O <span className={styles.page182__highlight}>Would</span> é um <span className={styles.page182__highlight}>verbo modal/auxiliar</span> que usamos para expressar ações no futuro do pretérito (terminação <span className={styles.page182__highlight}>ria</span> em português).
+                                O <span className={styles.page182__highlight}>Would</span> é um <span className={styles.page182__highlight}>verbo modal/auxiliar</span> que não tem uma tradução
+                                exata, mas que coloca o verbo principal no futuro do pretérito com a terminação de <span className={styles.page182__highlight}>ria</span> em português.
                             </p>
                         </div>
                     </div>
@@ -29,67 +30,90 @@ const Pagina182 = () => {
                     <table className={styles.page182__table}>
                         <thead>
                             <tr>
-                                <th>Aux. Verb</th>
+                                <th><div className={styles.page182__translation}>Full Form</div>
+                                    Aux. Verb</th>
                                 <th>
                                     Subject
                                     <div className={styles.page182__translation}>Sujeito</div>
                                 </th>
-                                <th>Adv / Not</th>
+                                <th>Adv / <div className={styles.page182__translation}>Not</div></th>
                                 <th>
                                     Verb(s)
-                                    <div className={styles.page182__translation}>Verbo(s)</div>
                                 </th>
                                 <th>
                                     Object Complement
-                                    <div className={styles.page182__translation}>Complemento</div>
                                 </th>
                             </tr>
                         </thead>
                         <tbody>
                             {[
                                 {
-                                    subject: 'you',
-                                    translation: 'você',
-                                    verb: 'help',
-                                    verbTranslation: 'ajudaria',
-                                    complement: 'with the homework?',
-                                    complementTranslation: 'com a tarefa de casa?'
+                                    subject: 'I',
+                                    translation: 'Eu',
+                                    verb: 'be',
+                                    verbTranslation: 'seria',
+                                    complement: 'a good teacher one day?',
+                                    complementTranslation: 'uma boa professora um dia?'
                                 },
                                 {
                                     subject: 'he',
-                                    translation: 'ele',
-                                    verb: 'need to finish',
-                                    verbTranslation: 'precisaria terminar',
-                                    complement: 'the project today?',
-                                    complementTranslation: 'o projeto hoje?'
-                                },
-                                {
-                                    subject: 'they',
-                                    translation: 'eles',
-                                    verb: 'like',
-                                    verbTranslation: 'gostariam',
-                                    complement: 'to travel abroad?',
-                                    complementTranslation: 'de viajar para o exterior?'
-                                },
-                                {
-                                    subject: 'we',
-                                    translation: 'nós',
-                                    verb: 'have to study',
-                                    verbTranslation: 'teríamos que estudar',
-                                    complement: 'for the test?',
-                                    complementTranslation: 'para a prova?'
+                                    translation: 'Ele',
+                                    verb: 'help',
+                                    verbTranslation: 'nos ajudaria',
+                                    complement: 'us with the homework?',
+                                    complementTranslation: 'com a tarefa de casa ?'
                                 },
                                 {
                                     subject: 'she',
-                                    translation: 'ela',
-                                    verb: 'want',
-                                    verbTranslation: 'quereria',
-                                    complement: 'to join us?',
-                                    complementTranslation: 'se juntar a nós?'
+                                    translation: 'Ela',
+                                    verb: 'forgive',
+                                    verbTranslation: 'me',
+                                    complement: 'me?',
+                                    complementTranslation: 'perdoaria?'
+                                },
+                                {
+                                    subject: 'it',
+                                    translation: '-',
+                                    verb: 'be',
+                                    verbTranslation: 'Seria',
+                                    complement: 'enough ?',
+                                    complementTranslation: 'suficiente ?'
+                                },
+                                {
+                                    subject: 'we',
+                                    translation: 'Nós',
+                                    verb: 'need to finish',
+                                    verbTranslation: 'precisaríamos para terminar',
+                                    complement: 'more time this project?',
+                                    complementTranslation: 'de mais tempo o projeto ?'
+                                },
+                                {
+                                    subject: 'you',
+                                    translation: 'Você',
+                                    verb: 'be',
+                                    verbTranslation: 'estaria',
+                                    complement: 'okay with that?',
+                                    complementTranslation: 'de acordo com isso?'
+                                },
+                                {
+                                    subject: 'y’all',
+                                    translation: 'Vocês',
+                                    verb: 'like',
+                                    verbTranslation: 'gostariam',
+                                    complement: 'some coffee?',
+                                    complementTranslation: 'de um café?'
+                                },
+                                {
+                                    subject: 'they',
+                                    translation: 'Eles / Elas',
+                                    verb: 'accept',
+                                    verbTranslation: 'aceitariam',
+                                    complement: 'the offer?',
+                                    complementTranslation: 'a oferta?'
                                 }
                             ].map((item, index) => (
                                 <tr key={index}>
-                                    <td>Would</td>
+                                    <td><div className={styles.page182__translation}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page182__translation}>

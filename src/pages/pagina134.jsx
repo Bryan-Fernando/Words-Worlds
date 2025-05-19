@@ -109,7 +109,7 @@ const Pagina107 = () => {
                                         onClick={() => playAudio(adverbioAudio)}
                                         style={{ cursor: 'pointer' }}
                                     >
-                                        <span style={{ color: 'red' }}>'Not'</span> <br /> Adverb
+                                        'Not' <br /> Adverb
                                     </th>
                                     <th
                                         onClick={() => playAudio(verboAudio)}
@@ -133,7 +133,7 @@ const Pagina107 = () => {
                             </thead>
                             <tbody>
                                 {[
-                                    { subject: "He", aux: "does", adv: "not", verb: "work", obj: "every day", trad: "Ele não trabalha todos os dias", audio: pg107_audio2, tradAudio: pg107_trad2 },
+                                    { subject: "He", aux: "doesn't", adv: "", verb: "work", obj: "every day", trad: "Ele não trabalha todos os dias", audio: pg107_audio2, tradAudio: pg107_trad2 },
                                     { subject: "She", aux: "doesn't", adv: "", verb: "work", obj: "at home", trad: "Ela não trabalha em casa", audio: pg107_audio3, tradAudio: pg107_trad3 },
                                 ].map((row, index) => (
                                     <tr key={index} onClick={() => playAudio(row.audio)} style={{ cursor: 'pointer' }}>

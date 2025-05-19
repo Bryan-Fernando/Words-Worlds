@@ -151,7 +151,7 @@ const Pagina27 = () => {
                                     <td
                                         className={styles["page27__adverb"]}
                                         onClick={() => playAudio(pg27Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
+                                        style={{ cursor: "pointer", textAlign: "center" }}
                                     >
                                         not
                                     </td>
@@ -168,7 +168,7 @@ const Pagina27 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Nós <span style={{ color: "red" }}>não</span> somos do Brasil
+                                        Nós não somos do Brasil
                                     </td>
                                 </tr>
                                 <tr>
@@ -182,7 +182,7 @@ const Pagina27 = () => {
                                     <td
                                         className={styles["page27__auxiliary--verb"]}
                                         onClick={() => playAudio(pg27Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
+                                        style={{ cursor: "pointer", textAlign: "center" }}
                                     >
                                         aren't
                                     </td>
@@ -200,7 +200,7 @@ const Pagina27 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Nós <span style={{ color: "red" }}>não</span> estamos no cinema
+                                        Nós não estamos no cinema
                                     </td>
                                 </tr>
                                 <tr>
@@ -214,9 +214,9 @@ const Pagina27 = () => {
                                     <td
                                         className={styles["page27__auxiliary--verb"]}
                                         onClick={() => playAudio(pg27Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red" }}
+                                        style={{ cursor: "pointer", textAlign: "center" }}
                                     >
-                                        Ain't
+                                        ain't
                                     </td>
                                     <td className={styles["page27__adverb"]}></td>
                                     <td className={styles["page27__verb"]}></td>
@@ -232,7 +232,7 @@ const Pagina27 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Nós <span style={{ color: "red" }}>não</span> temos 15 e 16 anos de idade
+                                        Nós não temos 15 e 16 anos de idade
                                     </td>
                                 </tr>
                             </tbody>

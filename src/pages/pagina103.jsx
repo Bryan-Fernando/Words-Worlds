@@ -18,11 +18,6 @@ import pg103_audio3 from '../assets/audios/pg103_audio3.mp3';
 import pg103_audio4 from '../assets/audios/pg103_audio4.mp3';
 import pg103_audio5 from '../assets/audios/pg103_audio5.mp3';
 import pg103_audio6 from '../assets/audios/pg103_audio6.mp3';
-import pg103_audio2p from '../assets/audios/pg103_audio2p.mp3';
-import pg103_audio3p from '../assets/audios/pg103_audio3p.mp3';
-import pg103_audio4p from '../assets/audios/pg103_audio4p.mp3';
-import pg103_audio5p from '../assets/audios/pg103_audio5p.mp3';
-import pg103_audio6p from '../assets/audios/pg103_audio6p.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -33,12 +28,7 @@ const audioMap = {
     pg103_audio3,
     pg103_audio4,
     pg103_audio5,
-    pg103_audio6,
-    pg103_audio2p,
-    pg103_audio3p,
-    pg103_audio4p,
-    pg103_audio5p,
-    pg103_audio6p
+    pg103_audio6
 };
 
 const Pagina103 = () => {
@@ -130,7 +120,7 @@ const Pagina103 = () => {
                     "Are they from Japan?"
                 ].map((question, index) => {
                     const audioKey = `pg103_audio${index + 2}`;
-                    const audioKeyP = `pg103_audio${index + 2}p`;
+
                     return (
                         <div key={index} className={styles["page103__question"]}>
                             <span><strong>{index + 1}.</strong> {question}</span>
@@ -160,12 +150,6 @@ const Pagina103 = () => {
                                     alt="Audio Icon"
                                     className={styles["page103__additional--icon"]}
                                     onClick={() => playAudio(audioKey)}
-                                />
-                                <img
-                                    src={ptbr_audio_icon}
-                                    alt="Audio Icon"
-                                    className={styles["page103__additional--icon"]}
-                                    onClick={() => playAudio(audioKeyP)}
                                 />
                             </div>
                         </div>

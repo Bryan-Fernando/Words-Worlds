@@ -14,7 +14,22 @@ const Pagina197 = () => {
                 speaker: 'Customer',
                 text: 'Yes, I would love to. What do you recommend?',
                 translation: 'Sim, adoraria. O que você recomenda?'
-            }
+            },
+            {
+                speaker: 'Server',
+                text: 'I would recommend our chocolate mousse or the apple pie. Both are very popular.',
+                translation: 'Eu recomendaria nossa mousse de chocolate ou a torta de maçã. As duas são muito populares.'
+            },
+            {
+                speaker: 'Customer',
+                text: 'That sounds good! I think I would go for the chocolate mousse.',
+                translation: 'Parece ótimo! Acho que vou querer a mousse de chocolate.'
+            },
+            {
+                speaker: 'Server',
+                text: 'Excellent choice. I’ll bring that right out for you.',
+                translation: 'Excelente escolha. Já vou trazer para você.'
+            },
         ]
     };
 

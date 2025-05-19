@@ -55,7 +55,7 @@ const Pagina86 = () => {
                     </h2>
                     <p className={styles["page86__description"]}>
                         O artigo definido <span style={{ color: '#A61C28' }}>“THE / the“</span>  é usado antes de substantivos cuja tradução pode ser
-                        <span style={{ color: '#A61C28' }}> “o - a - os - as“.</span>
+                        <span style={{ color: '#A61C28' }}> “O / o, A / a, OS / os, AS / as“.</span>
                     </p>
                 </div>
             </header>

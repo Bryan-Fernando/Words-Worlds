@@ -31,6 +31,11 @@
     gap: 7rem;
 }
 
+.page85__aside {
+    width: 100%;
+    display: flex;
+}
+
 /* Este é um comentário */
 
 .page85__container--questoes {
@@ -158,7 +163,6 @@
     width: 100%;
     margin-bottom: 0.2rem;
 }
-
 .page85__styled--table--afirmativa,
 .page85__styled--table--negativa {
     width: 100%;
@@ -169,8 +173,8 @@
 
 .page85__styled--table--afirmativa th,
 .page85__styled--table--negativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;
@@ -180,6 +184,52 @@
 
 .page85__cell--table {
     height: 7rem;
+}
+
+.page85__aside--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page85__aside--notes--1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #0A3282;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #0A3282;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.page85__aside--img--notes {
+    height: calc(10px + 0.8vw);
+    width: 20px;
+    padding-right: 5px;
+}
+
+.page85__aside--notes--2 {
+    width: 80%;
+    border: 4px solid #0A3282;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    color: #103275;
+}
+
+.page85__aside--notes--2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
 }
 
 .page85__container--imagem {
@@ -199,14 +249,6 @@
 
 .page85__header--icon:hover {
     transform: scale(1.1);
-}
-
-.page85__word-bank-header-1{
-    width: 100%;
-    color: #0A3282;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
 }
 
 @media (max-width: 1024px) {

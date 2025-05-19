@@ -25,7 +25,7 @@ const Pagina194 = () => {
             questionWord: 'How many times a year',
             wordTranslation: 'Quantas vezes por ano',
             subject: 'it',
-            translation: 'isso',
+            translation: '',
             verb: 'be possible to see',
             verbTranslation: 'seria possível ver',
             complement: 'that comet?',
@@ -86,7 +86,7 @@ const Pagina194 = () => {
                                         {item.questionWord}
                                         <div className={styles.page194__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page194__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page194__translation}>{item.translation}</div>

@@ -136,7 +136,7 @@ const pagina73 = () => {
                     />
                 </h1>
                 <p className={styles["page73__p"]}>
-                    Exercise. Fill in the blanks with the correct form of the verb ‘be’ in the Simple Present tense <strong>after listening to the audio.</strong>
+                    Exercise. Fill in the blanks with the correct form of the verb ‘be’ in the Simple Present tense
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
@@ -185,13 +185,8 @@ const pagina73 = () => {
                     </table>
                 </div>
 
-
                 <div className={styles["page73__container-questoes"]}>
                     <div className={styles["page73__questions1"]}>
-                        <div className={styles["page73__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
-                        </div>
                         <p className={styles["pg84__a-titulo-question"]}>
                             Affirmative:
                             <img

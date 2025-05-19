@@ -24,21 +24,6 @@ import pg95_audio13 from '../assets/audios/pg95_audio13.mp3';
 import pg95_audio14 from '../assets/audios/pg95_audio14.mp3';
 import pg95_audio15 from '../assets/audios/pg95_audio15.mp3';
 import pg95_audio16 from '../assets/audios/pg95_audio16.mp3';
-import pg95_audio2p from '../assets/audios/pg95_audio2p.mp3';
-import pg95_audio3p from '../assets/audios/pg95_audio3p.mp3';
-import pg95_audio4p from '../assets/audios/pg95_audio4p.mp3';
-import pg95_audio5p from '../assets/audios/pg95_audio5p.mp3';
-import pg95_audio6p from '../assets/audios/pg95_audio6p.mp3';
-import pg95_audio7p from '../assets/audios/pg95_audio7p.mp3';
-import pg95_audio8p from '../assets/audios/pg95_audio8p.mp3';
-import pg95_audio9p from '../assets/audios/pg95_audio9p.mp3';
-import pg95_audio10p from '../assets/audios/pg95_audio10p.mp3';
-import pg95_audio11p from '../assets/audios/pg95_audio11p.mp3';
-import pg95_audio12p from '../assets/audios/pg95_audio12p.mp3';
-import pg95_audio13p from '../assets/audios/pg95_audio13p.mp3';
-import pg95_audio14p from '../assets/audios/pg95_audio14p.mp3';
-import pg95_audio15p from '../assets/audios/pg95_audio15p.mp3';
-import pg95_audio16p from '../assets/audios/pg95_audio16p.mp3';
 
 const pagina95 = () => {
     const [inputValues, setInputValues] = useState({
@@ -77,22 +62,7 @@ const pagina95 = () => {
         pg95_audio13,
         pg95_audio14,
         pg95_audio15,
-        pg95_audio16,
-        pg95_audio2p,
-        pg95_audio3p,
-        pg95_audio4p,
-        pg95_audio5p,
-        pg95_audio6p,
-        pg95_audio7p,
-        pg95_audio8p,
-        pg95_audio9p,
-        pg95_audio10p,
-        pg95_audio11p,
-        pg95_audio12p,
-        pg95_audio13p,
-        pg95_audio14p,
-        pg95_audio15p,
-        pg95_audio16p
+        pg95_audio16
     };
 
 
@@ -100,7 +70,7 @@ const pagina95 = () => {
         questions1: [
             ["Does", "like"],
             ["Do", "play"],
-            ["Do", "work"],
+            ["Does", "work"],
             ["Do", "watch"],
             ["Do", "speak"]
         ],
@@ -112,7 +82,7 @@ const pagina95 = () => {
             ["Do", "listen"]
         ],
         questions3: [
-            ["Does", "drink"],
+            ["Does", "prefer"],
             ["Do", "like"],
             ["Does", "enjoy"],
             ["Do", "want"],
@@ -133,7 +103,7 @@ const pagina95 = () => {
             ["Yes, I do.", "No, I don't."]
         ],
         shortAnswers3: [
-            ["Yes, she does.", "No, she doesn't."],
+            ["She prefers tea.", "No, she doesn't."],
             ["Yes, they do.", "No, they don't."],
             ["Yes, he does.", "No, he doesn't."],
             ["Yes, they do.", "No, they don't."],
@@ -228,8 +198,7 @@ const pagina95 = () => {
                     <div className={styles["page95__questions--1"]}>
                         <div className={styles["page95__question"]}>
                             <span>
-                                <p style={{ color: '#A61C28', fontWeight: 'bold'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do / does' or 'don't / doesn't'.
-                        
+                                <p style={{ color: '#A61C28', fontWeight: 'bold'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do/does' or 'don't/doesn't'.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
@@ -237,16 +206,9 @@ const pagina95 = () => {
                                         onClick={() => playAudio("pg95_audio1e")}
                                     />
                                     <br /> <br />
-                                    <p style={{ color: 'black', fontWeight: 'bold'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do / does" ou "don't / doesn't". 
-                                        <br />
-       
-                                    </p>
-                                    
-                                    <span style={{color: '#0A3282'}}>Exemplo de respostas curtas: Yes<span style={{color: 'red'}}>,</span> she does<span style={{color: 'red'}}>.</span> No<span style={{color: 'red'}}>,</span> she doesn't<span style={{color: 'red'}}>.</span></span> <br /> <br />
-
-                                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>1.</span>
+                                    <p style={{ color: 'black', fontWeight: 'bold'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do/does" ou "don't/doesn't".</p>
+                                    <br />
                                 </p>
-                                
                                 <em className={styles["page95__question--text"]}><strong>a.</strong>
                                     <input
                                         type="text"
@@ -261,7 +223,7 @@ const pagina95 = () => {
                                         onChange={(e) => handleInputChange(e.target.value, 1, 'questions1')}
                                         className={styles["page95__input--box--small"]}
                                     />
-                                    ice cream? (like)
+                                    ice cream? (Like)
 
                                     {/* Ícone Único para Validar Ambos os Inputs */}
                                     {results.questions1[0] !== null && results.questions1[1] !== null && (
@@ -277,12 +239,6 @@ const pagina95 = () => {
                                         alt="Audio Icon"
                                         className={styles["page95__additional--icon"]}
                                         onClick={() => playAudio("pg95_audio2")}
-                                    />
-                                    <img
-                                        src={ptbr_audio_icon}
-                                        alt="Audio Icon"
-                                        className={styles["page95__additional--icon"]}
-                                        onClick={() => playAudio("pg95_audio2p")}
                                     />
                                 </em>
                             </span>
@@ -306,7 +262,7 @@ const pagina95 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions1')}
                                             className={styles["page95__input--box--small"]}
                                         />
-                                        {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays? (play)" : index === 2 ? "on Sundays? (work)" : index === 3 ? "TV in the evening? (watch)" : "Spanish? (speak)"}
+                                        {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays? (Play)" : index === 2 ? "on Sundays? (Work)" : index === 3 ? "TV in the evening? (Watch)" : "Spanish? (Speak)"}
 
                                         {/* Ícone Único de Verificação */}
                                         {results.questions1[index * 2] !== null && results.questions1[index * 2 + 1] !== null && (
@@ -322,12 +278,6 @@ const pagina95 = () => {
                                             alt="Audio Icon"
                                             className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(`pg95_audio${index + 2}`)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page95__additional--icon"]}
-                                            onClick={() => playAudio(`pg95_audio${index + 2}p`)}
                                         />
                                     </em>
                                 </span>
@@ -392,20 +342,16 @@ const pagina95 = () => {
                 </div>
 
                 {/* Questões 2 */}
-                
                 <div className={styles["page95__container--questoes"]}>
-                
                     <div className={styles["page95__questions--2"]}>
-                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>2.</span>
                         {[
-                            "she __ before going to bed? (read)",
-                            "they __ every morning? (exercice)",
-                            "he __ coffee in the morning? (drink)",
-                            "the bus __ on time? (arrive)",
-                            "you __ to music while working? (listen)",
+                            "she __ before going to bed?",
+                            "they __ every morning?",
+                            "he __ coffee in the morning?",
+                            "the bus __ on time?",
+                            "you __ to music while working?",
                         ].map((question, index) => {
                             const audioKey = `pg95_audio${index + 7}`;
-                            const audioKeyP = `pg95_audio${index + 7}p`;
                             const isCorrect =
                                 results.questions2[index * 2] === true &&
                                 results.questions2[index * 2 + 1] === true;
@@ -451,12 +397,6 @@ const pagina95 = () => {
                                             alt="Audio Icon"
                                             className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page95__additional--icon"]}
-                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                     </span>
                                 </div>
@@ -511,16 +451,14 @@ const pagina95 = () => {
                 {/* Questões 3 */}
                 <div className={styles["page95__container--questoes"]}>
                     <div className={styles["page95__questions--3"]}>
-                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>3.</span>
                         {[
-                            "she __ tea? (drink)",
-                            "they __ to watch movies on weekends? (like)",
-                            "he __ playing video games? (enjoy)",
-                            "the children __ pizza for dinner? (want)",
-                            "you __ going to the beach? (love)",
+                            "she __ tea or coffee?",
+                            "they __ to watch movies on weekends?",
+                            "he __ playing video games?",
+                            "the children __ pizza for dinner?",
+                            "you __ going to the beach?",
                         ].map((question, index) => {
                             const audioKey = `pg95_audio${index + 12}`;
-                            const audioKeyP = `pg95_audio${index + 12}p`;
                             const isCorrect =
                                 results.questions3[index * 2] === true &&
                                 results.questions3[index * 2 + 1] === true;
@@ -566,12 +504,6 @@ const pagina95 = () => {
                                             alt="Audio Icon"
                                             className={styles["page95__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page95__additional--icon"]}
-                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                     </span>
                                 </div>

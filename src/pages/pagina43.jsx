@@ -435,6 +435,39 @@ const Pagina43 = () => {
                         </div>
                     </div>
                 </main>
+                <aside className={styles['page43__aside']}>
+                    <div className={styles['page43__aside-container']}>
+                        <div className={styles['page43__aside-notes--1']}>
+                            <img className={styles['page43__aside-image-notes']} src={pg43IconNotes} alt="" />
+                            <p>Word Bank</p>
+                        </div>
+                        <div className={styles['page43__aside-notes--2']}>
+                            <p className={styles['page43__aside-notes--2-bold']}>
+                                Who...? <br />
+                                What...? <br />
+                                Where...? <br />
+                                When...? <br />
+                                What Time...? <br />
+                            </p>
+                            <p>
+                                Quem...? <br />
+                                O que | Que | Qual | Quais...? <br />
+                                Aonde | Onde...? <br />
+                                Quando...? <br />
+                                Que horas...? <br />
+                            </p>
+                            <div className={styles['page43__vertical-line']}></div>
+                            <p className={styles['page43__aside-notes--2-bold']}>
+                                How? <br />
+                                How Old? <br />
+                            </p>
+                            <p>
+                                Como? <br />
+                                Quantos anos? <br />
+                            </p>
+                        </div>
+                    </div>
+                </aside>
             </div>
         </div>
     );

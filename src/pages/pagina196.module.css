@@ -27,7 +27,6 @@
 
 .page196__subtitle {
     font-size: 2.4rem;
-    color: #666;
     margin-top: 1rem;
 }
 
@@ -45,6 +44,7 @@
 
 .page196__dialogue_content {
     width: 100%;
+    text-align: left;
 }
 
 .page196__dialogue_title {
@@ -75,7 +75,7 @@
 }
 
 .page196__mary {
-    color: #FFB6C1;
+    color: #A61C28;
 }
 
 .page196__text {
@@ -88,12 +88,11 @@
 }
 
 .page196__mary_text {
-    color: #FFB6C1;
+    color: #A61C28;
 }
 
 .page196__translation {
     font-size: 1.6rem;
-    color: #666;
     font-style: italic;
 }
 

@@ -127,7 +127,7 @@ const Pagina35 = () => {
                                     <td className={styles["page35__subject"]} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         We
                                     </td>
-                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
+                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
                                     <td className={styles["page35__adverb"]}></td>
@@ -136,14 +136,14 @@ const Pagina35 = () => {
                                         in Miami
                                     </td>
                                     <td className={styles["page35__translation"]} onClick={() => playAudio(traducaoAudio1)} style={{ cursor: 'pointer' }}>
-                                        Nós <span style={{ color: "red" }}>não</span> estamos em Miami
+                                        Nós não estamos em Miami
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className={styles["page35__subject"]} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         You
                                     </td>
-                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
+                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio2)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
                                     <td className={styles["page35__adverb"]}></td>
@@ -152,14 +152,14 @@ const Pagina35 = () => {
                                         on duty
                                     </td>
                                     <td className={styles["page35__translation"]} onClick={() => playAudio(traducaoAudio2)} style={{ cursor: 'pointer' }}>
-                                        Você <span style={{ color: "red" }}>não</span> está de plantão
+                                        Você não está de plantão
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className={styles["page35__subject"]} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         They
                                     </td>
-                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center', color: 'red'  }}>
+                                    <td className={styles["page35__auxiliary--verb"]} onClick={() => playAudio(pg35Audio3)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         aren't
                                     </td>
                                     <td className={styles["page35__adverb"]}></td>
@@ -168,7 +168,7 @@ const Pagina35 = () => {
                                         busy
                                     </td>
                                     <td className={styles["page35__translation"]} onClick={() => playAudio(traducaoAudio3)} style={{ cursor: 'pointer' }}>
-                                        Eles <span style={{ color: "red" }}>não</span> estão ocupados
+                                        Eles não estão ocupados
                                     </td>
                                 </tr>
                             </tbody>

@@ -95,7 +95,7 @@ const Pagina187 = () => {
                                         {item.questionWord}
                                         <div className={styles.page187__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page187__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page187__translation}>{item.translation}</div>

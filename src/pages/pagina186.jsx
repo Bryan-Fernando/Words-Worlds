@@ -11,17 +11,17 @@ const Pagina186 = () => {
 
     const tableData = [
         {
-            questionWord: 'Whose',
+            questionWord: 'Whose idea',
             wordTranslation: 'De quem',
             subject: 'it',
-            translation: 'seria',
+            translation: '',
             verb: 'be to cancel',
-            verbTranslation: 'seria cancelar',
+            verbTranslation: 'seria / de cancelar',
             complement: 'the trip?',
             complementTranslation: 'a viagem?'
         },
         {
-            questionWord: 'What kind of',
+            questionWord: 'What kind of gift',
             wordTranslation: 'Que tipo de',
             subject: 'we',
             translation: 'nós',
@@ -31,7 +31,7 @@ const Pagina186 = () => {
             complementTranslation: 'para a festa?'
         },
         {
-            questionWord: 'What type of',
+            questionWord: 'What type of clothes',
             wordTranslation: 'Que tipo de',
             subject: 'you',
             translation: 'você',
@@ -41,7 +41,7 @@ const Pagina186 = () => {
             complementTranslation: 'para um evento social?'
         },
         {
-            questionWord: 'What sort of',
+            questionWord: 'What sort of music',
             wordTranslation: 'Que tipo de',
             subject: 'he',
             translation: 'ele',
@@ -95,7 +95,7 @@ const Pagina186 = () => {
                                         {item.questionWord}
                                         <div className={styles.page186__translation}>{item.wordTranslation}</div>
                                     </td>
-                                    <td>would</td>
+                                    <td><div className={styles.page186__translationBlue}>would</div></td>
                                     <td>
                                         {item.subject}
                                         <div className={styles.page186__translation}>{item.translation}</div>

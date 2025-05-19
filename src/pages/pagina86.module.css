@@ -69,11 +69,11 @@
 
 .page86__styled--table--afirmativa th,
 .page86__styled--table--negativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     font-weight: bold;
     border: 1px solid #A61C28;
 }

@@ -40,7 +40,6 @@ const pagina70 = () => {
     const [resultados, setResultados] = useState([]);
 
     const audioMap = {
-        global_learning_le_e, global_learning_le_p,
         pg70_audio1e, pg70_audio1p,
         pg70_audio2e, pg70_audio2p,
         pg70_audio3e, pg70_audio3p,
@@ -159,13 +158,13 @@ const pagina70 = () => {
                         src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page70__audio-icon"]}
-                        onClick={() => playAudio("global_learning_le_e")}
+                        onClick={() => playAudio(global_learning_le_e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
                         className={styles["page70__audio-icon"]}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        onClick={() => playAudio(global_learning_le_p)}
                     />
                 </h1>
                 <p><span className={styles["page70__red-text"]}>Word Order:</span> Unscramble the words to form questions.</p>

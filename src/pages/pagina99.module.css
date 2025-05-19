@@ -80,7 +80,6 @@
     font-size: 2rem;
     text-align: left;
     color: #A61C28;
-    margin-bottom: 1rem;
 }
 
 .page99__input-box {
@@ -163,8 +162,6 @@
     cursor: pointer;
     margin-left: 0.5rem;
     transition: transform 0.2s ease-in-out;
-    position: relative;
-    top: 0.4rem;
 }
 
 .page99__header-icon:hover {
@@ -205,8 +202,8 @@
 }
 
 .page99__styled-table-negativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;
@@ -243,8 +240,8 @@
 }
 
 .page99__styled-table-interrogativa th {
-    background-color: #ffffff;
-    color: #0A3282 !important;
+    background-color: #888A8C;
+    color: white;
     text-align: center;
     padding: 0.5rem;
     font-size: 1.3rem;

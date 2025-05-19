@@ -154,7 +154,7 @@ const Pagina30 = () => {
                                         onClick={() => playAudio(traducaoAudio1)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Eles / Elas são do Brasil.
+                                        Eles/Elas são do Brasil.
                                     </td>
                                 </tr>
                                 <tr>
@@ -186,7 +186,7 @@ const Pagina30 = () => {
                                         onClick={() => playAudio(traducaoAudio2)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Eles / Elas estão no cinema.
+                                        Eles/Elas estão no cinema.
                                     </td>
                                 </tr>
                                 <tr>
@@ -218,7 +218,7 @@ const Pagina30 = () => {
                                         onClick={() => playAudio(traducaoAudio3)}
                                         style={{ cursor: "pointer" }}
                                     >
-                                        Eles / Elas têm 15 e 16 anos de idade.
+                                        Eles/Elas têm 15 e 16 anos de idade.
                                     </td>
                                 </tr>
                             </tbody>

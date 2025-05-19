@@ -1,0 +1,140 @@
+.pg220Container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 5rem;
+  background-color: #ffffff;
+  align-items: flex-start;
+}
+
+.pg220Title {
+  color: #a61c28;
+  font-size: 40px;
+  font-style: italic;
+  margin: 0;
+}
+
+.pg220ExerciseSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 6rem;
+}
+
+.pg220ExerciseTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg220SentencesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.pg220Line {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.pg220Number {
+  color: #000000;
+  font-size: 16px;
+  min-width: 20px;
+}
+
+.pg220Text {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.pg220ImagesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+  width: fit-content;
+}
+
+.pg220ImageContainer {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 1rem;
+  position: relative;
+}
+
+.pg220ImagePlaceholder {
+  width: 250px;
+  height: 150px;
+  background-color: #808080;
+  border-radius: 4px;
+}
+
+.pg220ImageLabel {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #a61c28;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pg220AnswerSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.pg220AnswerTitle {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 18px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.pg220Answer {
+  color: #000000;
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pg220Container {
+    padding: 1rem;
+  }
+
+  .pg220Title {
+    font-size: 30px;
+  }
+
+  .pg220ExerciseTitle,
+  .pg220AnswerTitle {
+    font-size: 16px;
+  }
+
+  .pg220ImagesGrid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .pg220ImagePlaceholder {
+    width: 100%;
+    height: 120px;
+  }
+
+  .pg220Number,
+  .pg220Text,
+  .pg220Answer {
+    font-size: 14px;
+  }
+}

@@ -161,7 +161,7 @@ const pagina72 = () => {
                     />
                 </h1>
                 <p className={styles["page72__p"]}>
-                    <strong>EXERCISE.</strong> Fill in the blanks with the correct forms of the verb 'be' in the Simple Present Tense <strong>after listening to the audio.</strong>
+                    <strong>EXERCISE.</strong> Fill in the blanks with the correct forms of the verb 'be' in the Simple Present Tense
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
@@ -263,12 +263,7 @@ const pagina72 = () => {
                         })}
                     </div>
 
-                    <div className={styles["page72__notes-container"]}>
-
-                        <div className={styles["page72__word-bank-header-1"]}>
-                            <p>Use as tabelas para formar as frases corretas.</p>
-                        </div>
-
+                    <div className={styles["page72__tabela-afirmativa-container"]}>
                         <div className={styles["page72__table-header-afirmativa"]}>AFIRMATIVA</div>
                         <table className={styles["page72__styled-table-afirmativa"]}>
                             <thead className={styles["page72__thead"]}>

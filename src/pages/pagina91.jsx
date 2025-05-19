@@ -23,14 +23,6 @@ import pg91_audio6 from '../assets/audios/pg91_audio6.mp3';
 import pg91_audio7 from '../assets/audios/pg91_audio7.mp3';
 import pg91_audio8 from '../assets/audios/pg91_audio8.mp3';
 import pg91_audio9 from '../assets/audios/pg91_audio9.mp3';
-import pg91_audio2p from '../assets/audios/pg91_audio2p.mp3';
-import pg91_audio3p from '../assets/audios/pg91_audio3p.mp3';
-import pg91_audio4p from '../assets/audios/pg91_audio4p.mp3';
-import pg91_audio5p from '../assets/audios/pg91_audio5p.mp3';
-import pg91_audio6p from '../assets/audios/pg91_audio6p.mp3';
-import pg91_audio7p from '../assets/audios/pg91_audio7p.mp3';
-import pg91_audio8p from '../assets/audios/pg91_audio8p.mp3';
-import pg91_audio9p from '../assets/audios/pg91_audio9p.mp3';
 
 const Pagina91 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
@@ -38,7 +30,7 @@ const Pagina91 = () => {
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
 
 
-    const correctAnswers = ['The', 'a', 'a', '', 'an', '', 'The', 'a'];
+    const correctAnswers = ['The', 'a', 'a', 'are', 'an', 'are', 'The', 'a'];
 
     const audioMap = {
         global_learning_le_e,
@@ -52,15 +44,7 @@ const Pagina91 = () => {
         pg91_audio6,
         pg91_audio7,
         pg91_audio8,
-        pg91_audio9,
-        pg91_audio2p,
-        pg91_audio3p,
-        pg91_audio4p,
-        pg91_audio5p,
-        pg91_audio6p,
-        pg91_audio7p,
-        pg91_audio8p,
-        pg91_audio9p
+        pg91_audio9
     };
 
     const handleCheckClick = () => {
@@ -139,7 +123,7 @@ const Pagina91 = () => {
             </main>
             <aside className={styles["page91__aside"]}>
                 <h2 className={styles["page91__questions-title"]}>
-                    Fill in the blanks with the appropriate
+                    Fill in the blank with the appropriate
                     <span className={styles["page91__highlight--definite"]}> Definitive </span>
                     or
                     <span className={styles["page91__highlight--indefinite"]}> Indefinite </span>
@@ -157,24 +141,19 @@ const Pagina91 = () => {
                         className={styles["page91__header-icon"]}
                         onClick={() => playAudio("pg91_audio1p")}
                     />
-                    <div className={styles["page91__word-bank-header-1"]}>
-                        <p>Faça os exercícios após escutar os áudios.</p>
-                    </div>
                 </h2>
                 <div className={styles["page91__questions-container"]}>
                     {[
                         "____ sky is blue.",
                         "I have ____ cat.",
                         "She is ____ teacher.",
-                        "We are____ students.",
+                        "We  ____ students.",
                         "He is ____ architect.",
-                        "They are ____ engineers.",
+                        "They  ____ engineers.",
                         "____ Earth is round.",
                         "You are ____ musician"
                     ].map((question, index) => {
-                        const audioKeyEn = `pg91_audio${index + 2}`;
-                        const audioKeyPt = `pg91_audio${index + 2}p`;
-
+                        const audioKey = `pg91_audio${index + 2}`; // Áudios começam no pg91_audio2
                         return (
                             <div key={index} className={styles["page91__question"]}>
                                 <span>
@@ -201,28 +180,21 @@ const Pagina91 = () => {
                                 <div className={styles["page91__icons-container"]}>
                                     <img
                                         src={eng_audio_icon}
-                                        alt="English Audio Icon"
+                                        alt="Audio Icon"
                                         className={styles["page91__additional-icon"]}
-                                        onClick={() => playAudio(audioKeyEn)}
-                                    />
-                                    <img
-                                        src={ptbr_audio_icon}
-                                        alt="Portuguese Audio Icon"
-                                        className={styles["page91__additional-icon"]}
-                                        onClick={() => playAudio(audioKeyPt)}
+                                        onClick={() => playAudio(audioKey)}
                                     />
                                     <img
                                         src={slow_audio_icon}
                                         alt="Volume Reduced Icon"
-                                        className={`${styles["page91__additional-icon"]} ${isSpeedReduced[audioKeyEn] ? styles["page91__icon--pulsing"] : ''}`}
-                                        onClick={() => toggleSpeedReduction(audioKeyEn)}
+                                        className={`${styles["page91__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page91__icon--pulsing"] : ''}`}
+                                        onClick={() => toggleSpeedReduction(audioKey)}
                                     />
                                 </div>
                             </div>
                         );
                     })}
                 </div>
-
 
                 <button className={styles["page91__button--check"]} onClick={handleCheckClick}>
                     <em>Check</em>

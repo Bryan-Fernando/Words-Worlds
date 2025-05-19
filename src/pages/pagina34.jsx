@@ -159,10 +159,10 @@ const Pagina34 = () => {
                                 </tr>
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg34Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                        I'm
+                                        I
                                     </td>
                                     <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg34Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                        
+                                        'm
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -225,10 +225,10 @@ const Pagina34 = () => {
 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg34Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp; He's
+                                        He
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg34Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -259,10 +259,10 @@ const Pagina34 = () => {
 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg34Audio3_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp; &nbsp;She's
+                                        She
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg34Audio3_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -293,10 +293,10 @@ const Pagina34 = () => {
 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg34Audio4_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp;  It's
+                                        It
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg34Audio4_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        's
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -360,10 +360,10 @@ const Pagina34 = () => {
 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg26Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp; We're
+                                        We
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg26Audio2_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        're
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -376,15 +376,15 @@ const Pagina34 = () => {
                                 </tr>
 
                                 <tr>
-                                    <td className={styles["page34__subject"]} onClick={() => playAudio(pg9Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page34__subject"]} onClick={() => playAudio(pg9Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         You
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg9Audio1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg9Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
                                         are
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
-                                    <td className={styles["page34__objective--complement"]} onClick={() => playAudio(pg9Audio1)} style={{ cursor: 'pointer' }}>
+                                    <td className={styles["page34__objective--complement"]} onClick={() => playAudio(pg9Audio1_1)} style={{ cursor: 'pointer' }}>
                                         the new director
                                     </td>
                                     <td className={styles["page34__translation"]} onClick={() => playAudio(traducao9Audio1)} style={{ cursor: 'pointer' }}>
@@ -394,10 +394,10 @@ const Pagina34 = () => {
 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg9Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp;  You're
+                                        You
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg9Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        're
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
@@ -428,10 +428,10 @@ const Pagina34 = () => {
                                 
                                 <tr>
                                     <td className={styles["page34__subject"]} onClick={() => playAudio(pg30Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
-                                    &nbsp; They're
+                                        They
                                     </td>
-                                    <td className={styles["page34__auxiliary--verb"]}>
-                                        
+                                    <td className={styles["page34__auxiliary--verb"]} onClick={() => playAudio(pg30Audio1_1)} style={{ cursor: 'pointer', textAlign: 'center' }}>
+                                        're
                                     </td>
                                     <td className={styles["page34__adverb"]}></td>
                                     <td className={styles["page34__verb"]}></td>
