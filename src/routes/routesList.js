@@ -223,57 +223,6 @@ import Pagina223 from "../pages/pagina223";
 import Pagina224 from "../pages/pagina224";
 import Pagina225 from "../pages/pagina225";
 import Pagina226 from "../pages/pagina226";
-import Pagina227 from "../pages/pagina227";
-import Pagina228 from "../pages/pagina228";
-import Pagina229 from "../pages/pagina229";
-import Pagina230 from "../pages/pagina230";
-import Pagina231 from "../pages/pagina231";
-import Pagina232 from "../pages/pagina232";
-import Pagina233 from "../pages/pagina233";
-import Pagina234 from "../pages/pagina234";
-import Pagina235 from "../pages/pagina235";
-import Pagina236 from "../pages/pagina236";
-import Pagina237 from "../pages/pagina237";
-import Pagina238 from "../pages/pagina238";
-import Pagina239 from "../pages/pagina239";
-import Pagina240 from "../pages/pagina240";
-import Pagina241 from "../pages/pagina241";
-import Pagina242 from "../pages/pagina242";
-import Pagina243 from "../pages/pagina243";
-import Pagina244 from "../pages/pagina244";
-import Pagina245 from "../pages/pagina245";
-import Pagina246 from "../pages/pagina246";
-import Pagina247 from "../pages/pagina247";
-import Pagina248 from "../pages/pagina248";
-import Pagina249 from "../pages/pagina249";
-import Pagina250 from "../pages/pagina250";
-import Pagina251 from "../pages/pagina251";
-import Pagina252 from "../pages/pagina252";
-import Pagina253 from "../pages/pagina253";
-import Pagina254 from "../pages/pagina254";
-import Pagina255 from "../pages/pagina255";
-import Pagina256 from "../pages/pagina256";
-import Pagina257 from "../pages/pagina257";
-import Pagina258 from "../pages/pagina258";
-import Pagina259 from "../pages/pagina259";
-import Pagina260 from "../pages/pagina260";
-import Pagina261 from "../pages/pagina261";
-import Pagina262 from "../pages/pagina262";
-import Pagina263 from "../pages/pagina263";
-import Pagina264 from "../pages/pagina264";
-import Pagina265 from "../pages/pagina265";
-import Pagina266 from "../pages/pagina266";
-import Pagina267 from "../pages/pagina267";
-import Pagina268 from "../pages/pagina268";
-import Pagina269 from "../pages/pagina269";
-import Pagina270 from "../pages/pagina270";
-import Pagina271 from "../pages/pagina271";
-import Pagina272 from "../pages/pagina272";
-import Pagina273 from "../pages/pagina273";
-import Pagina274 from "../pages/pagina274";
-import Pagina275 from "../pages/pagina275";
-import Pagina276 from "../pages/pagina276";
-import Pagina277 from "../pages/pagina277";
 
 const routes = [
   { path: "/", Component: Pagina1 },
@@ -501,58 +450,6 @@ const routes = [
   { path: "/pagina224", Component: Pagina224 },
   { path: "/pagina225", Component: Pagina225 },
   { path: "/pagina226", Component: Pagina226 },
-  { path: "/pagina227", Component: Pagina227 },
-  { path: "/pagina228", Component: Pagina228 },
-  { path: "/pagina229", Component: Pagina229 },
-  { path: "/pagina230", Component: Pagina230 },
-  { path: "/pagina231", Component: Pagina231 },
-  { path: "/pagina232", Component: Pagina232 },
-  { path: "/pagina233", Component: Pagina233 },
-  { path: "/pagina234", Component: Pagina234 },
-  { path: "/pagina235", Component: Pagina235 },
-  { path: "/pagina236", Component: Pagina236 },
-  { path: "/pagina237", Component: Pagina237 },
-  { path: "/pagina238", Component: Pagina238 },
-  { path: "/pagina239", Component: Pagina239 },
-  { path: "/pagina240", Component: Pagina240 },
-  { path: "/pagina241", Component: Pagina241 },
-  { path: "/pagina242", Component: Pagina242 },
-  { path: "/pagina243", Component: Pagina243 },
-  { path: "/pagina244", Component: Pagina244 },
-  { path: "/pagina245", Component: Pagina245 },
-  { path: "/pagina246", Component: Pagina246 },
-  { path: "/pagina247", Component: Pagina247 },
-  { path: "/pagina248", Component: Pagina248 },
-  { path: "/pagina249", Component: Pagina249 },
-  { path: "/pagina250", Component: Pagina250 },
-  { path: "/pagina251", Component: Pagina251 },
-  { path: "/pagina252", Component: Pagina252 },
-  { path: "/pagina253", Component: Pagina253 },
-  { path: "/pagina254", Component: Pagina254 },
-  { path: "/pagina255", Component: Pagina255 },
-  { path: "/pagina256", Component: Pagina256 },
-  { path: "/pagina257", Component: Pagina257 },
-  { path: "/pagina258", Component: Pagina258 },
-  { path: "/pagina259", Component: Pagina259 },
-  { path: "/pagina260", Component: Pagina260 },
-  { path: "/pagina261", Component: Pagina261 },
-  { path: "/pagina262", Component: Pagina262 },
-  { path: "/pagina263", Component: Pagina263 },
-  { path: "/pagina264", Component: Pagina264 },
-  { path: "/pagina265", Component: Pagina265 },
-  { path: "/pagina266", Component: Pagina266 },
-  { path: "/pagina267", Component: Pagina267 },
-  { path: "/pagina268", Component: Pagina268 },
-  { path: "/pagina269", Component: Pagina269 },
-  { path: "/pagina270", Component: Pagina270 },
-  { path: "/pagina271", Component: Pagina271 },
-  { path: "/pagina272", Component: Pagina272 },
-  { path: "/pagina273", Component: Pagina273 },
-  { path: "/pagina274", Component: Pagina274 },
-  { path: "/pagina275", Component: Pagina275 },
-  { path: "/pagina276", Component: Pagina276 },
-  { path: "/pagina277", Component: Pagina277 },
-
 ];
 
 export default routes;
