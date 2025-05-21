@@ -231,20 +231,6 @@ const Pagina107 = () => {
                 </main>
 
                 <aside className={styles["page107__aside"]}>
-                    <div className={styles["page107__aside--notes1--a"]}>
-                        <p>Word Bank</p>
-                    </div>
-                    <div className={styles["page107__aside--notes2--a"]}>
-                        <p>That way <br />
-                            Dessa forma.
-                            <br />
-                            Hard <br />
-                            Muito.
-                        </p>
-                    </div>
-                </aside>
-
-                <aside className={styles["page107__aside"]}>
                     <div className={styles["page107__aside--notes1--b"]}>
                         <img className={styles["page107__aside--img--notes--b"]} src={pg10IconNotes} alt="" />
                         <p>NOTE</p>

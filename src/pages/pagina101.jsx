@@ -111,7 +111,7 @@ const Pagina101 = () => {
 
     const correctAnswers = [
         'am', 'is', 'are', 'are', 'is', 'is', 'is', 'are', 'are', 'is',
-        'am not', 'is not', 'are not', 'are not', 'is not', 'is not', 'is not', 'is not', 'are not', 'is not'
+        'am not', 'is not', 'are not', 'are not', 'is not', 'is not', 'is not', 'are not', 'are not', 'is not'
     ];
 
     const handleCheckClick = () => {

@@ -17,6 +17,9 @@ import pg113_audio1 from '../assets/audios/pg113_audio1.mp3';
 import pg113_audio2 from '../assets/audios/pg113_audio2.mp3';
 import pg113_audio3 from '../assets/audios/pg113_audio3.mp3';
 import pg113_audio4 from '../assets/audios/pg113_audio4.mp3';
+import pg113_audio5 from '../assets/audios/pg113_audio5.mp3';
+import pg113_audio6 from '../assets/audios/pg113_audio6.mp3';
+import pg113_audio7 from '../assets/audios/pg113_audio7.mp3';
 
 const Pagina113 = () => {
 
@@ -87,10 +90,10 @@ const Pagina113 = () => {
                     <div><img className={styles["page113__image-large"]} src={pagina113_imagem7} alt="" /></div>
                 </div>
                 <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio2)} style={{ cursor: 'pointer' }}>
+                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio5)} style={{ cursor: 'pointer' }}>
                         denim
                     </p>
-                    <p>jeans</p>
+                    <p>jeans (Brim)</p>
                 </div>
             </div>
             <div className={styles["page113__flex-b"]}>
@@ -98,7 +101,7 @@ const Pagina113 = () => {
                     <div><img className={styles["page113__image-large"]} src={pagina113_imagem8} alt="" /></div>
                 </div>
                 <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio3)} style={{ cursor: 'pointer' }}>
+                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio6)} style={{ cursor: 'pointer' }}>
                         fur
                     </p>
                     <p>pele</p>
@@ -109,7 +112,7 @@ const Pagina113 = () => {
                     <div><img className={styles["page113__image-large"]} src={pagina113_imagem9} alt="" /></div>
                 </div>
                 <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio4)} style={{ cursor: 'pointer' }}>
+                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio7)} style={{ cursor: 'pointer' }}>
                         nylon
                     </p>
                     <p>nylon</p>

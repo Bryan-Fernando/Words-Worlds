@@ -97,6 +97,15 @@
     justify-content: space-between;
     width: 100%;
     gap: 2rem;
+    position: relative;
+    top: 5rem;
+}
+.page114__bell-img{
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
+    cursor: pointer;
 }
 
 .page114__interrogative-table-container {
@@ -145,10 +154,10 @@
     background-color: #888A8C;
     color: white;
     text-align: center;
-    padding: 0.5rem;
     font-size: 1.3rem;
     font-weight: bold;
     border: 0.1rem solid #A61C28;
+    height: 0.5rem;
 }
 
 .page114__cell-table {
@@ -198,6 +207,7 @@
     position: relative;
     top: 0.4rem;
     cursor: pointer;
+    margin-left: 1rem;
 }
 
 .page114__header-icon {
