@@ -369,7 +369,7 @@ const Pagina102 = () => {
                             "we late?",
                             "they at the park?"
                         ].map((sentence, index) => {
-                            const realIndex = index + 14;
+                            const realIndex = index + 10;
                             const audioKey = `pg102_audio${realIndex - 2}`;
                             const audioKeyP = `pg102_audio${realIndex - 2}p`;
 
@@ -383,7 +383,8 @@ const Pagina102 = () => {
                                     />
                                     <span>{sentence}</span>
 
-                                    {results[realIndex] !== undefined && (
+                                    {results[realIndex] !== null && (
+
                                         <img
                                             src={results[realIndex] ? correct_icon : wrong_icon}
                                             alt={results[realIndex] ? "Correct" : "Incorrect"}
@@ -420,7 +421,7 @@ const Pagina102 = () => {
                         <table className={styles["page102__styled-table-interrogativa"]}>
                             <thead>
                                 <tr className={styles["page102__celula-table"]}>
-                                    <th>verbo_auxiliar</th>
+                                    <th>Verbo Auxiliar</th>
                                     <th>Sujeito</th>
                                     <th><span style={{ color: 'red' }}>Not</span> <br /> Adverb</th>
                                     <th>Verbo(s)</th>
@@ -463,7 +464,8 @@ const Pagina102 = () => {
 
                                     <span>{sentence.split('____')[1]}</span>
 
-                                    {results[realIndex] !== undefined && (
+                                    {results[realIndex] !== null && (
+
                                         <img
                                             src={results[realIndex] ? correct_icon : wrong_icon}
                                             alt={results[realIndex] ? "Correct" : "Incorrect"}

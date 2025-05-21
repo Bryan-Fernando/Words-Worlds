@@ -24,13 +24,22 @@ const audioMap = {
 };
 
 const Pagina104 = () => {
-    const [inputValues, setInputValues] = useState(Array(4).fill(''));
+    const [inputValues, setInputValues] = useState(
+        Array(4).fill({ en: '', pt: '' })
+    );
 
-    const handleInputChange = (value, index) => {
-        const newValues = [...inputValues];
-        newValues[index] = value;
-        setInputValues(newValues);
+
+    const handleInputChange = (value, index, lang) => {
+        setInputValues((prevValues) => {
+            const newValues = [...prevValues];
+            newValues[index] = {
+                ...newValues[index],
+                [lang]: value
+            };
+            return newValues;
+        });
     };
+
 
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
@@ -77,8 +86,8 @@ const Pagina104 = () => {
                                         <span className={styles["page104__text--red"]}><em>{question[0]}</em></span>
                                         <input
                                             type="text"
-                                            value={inputValues[index]}
-                                            onChange={(e) => handleInputChange(e.target.value, index)}
+                                            value={inputValues[index].en}
+                                            onChange={(e) => handleInputChange(e.target.value, index, 'en')}
                                             className={styles["page104__input--box"]}
                                         />
                                         <span className={styles["page104__text--red"]}><em>{question[1]}</em></span>
@@ -93,10 +102,10 @@ const Pagina104 = () => {
                                         <span className={styles["page104__text--black"]}><strong>{question[2]}</strong></span>
                                         <input
                                             type="text"
-                                            value={inputValues[index]}
-                                            onChange={(e) => handleInputChange(e.target.value, index)}
+                                            value={inputValues[index].pt}
+                                            onChange={(e) => handleInputChange(e.target.value, index, 'pt')}
                                             className={styles["page104__input--box"]}
-                                            placeholder='escola'
+                                            placeholder={index === 0 ? "escola" : "school"}
                                         />
                                         <span className={styles["page104__text--black"]}><strong>{question[3]}</strong></span>
                                     </div>

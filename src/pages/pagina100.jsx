@@ -30,6 +30,22 @@ import pg100_audio15 from '../assets/audios/pg100_audio15.mp3';
 import pg100_audio16 from '../assets/audios/pg100_audio16.mp3';
 import pg100_audio17 from '../assets/audios/pg100_audio17.mp3';
 import pg100_audio18 from '../assets/audios/pg100_audio18.mp3';
+import pg100_audio2p from '../assets/audios/pg100_audio2p.mp3';
+import pg100_audio3p from '../assets/audios/pg100_audio3p.mp3';
+import pg100_audio4p from '../assets/audios/pg100_audio4p.mp3';
+import pg100_audio5p from '../assets/audios/pg100_audio5p.mp3';
+import pg100_audio6p from '../assets/audios/pg100_audio6p.mp3';
+import pg100_audio7p from '../assets/audios/pg100_audio7p.mp3';
+import pg100_audio8p from '../assets/audios/pg100_audio8p.mp3';
+import pg100_audio9p from '../assets/audios/pg100_audio9p.mp3';
+import pg100_audio11p from '../assets/audios/pg100_audio11p.mp3';
+import pg100_audio12p from '../assets/audios/pg100_audio12p.mp3';
+import pg100_audio13p from '../assets/audios/pg100_audio13p.mp3';
+import pg100_audio14p from '../assets/audios/pg100_audio14p.mp3';
+import pg100_audio15p from '../assets/audios/pg100_audio15p.mp3';
+import pg100_audio16p from '../assets/audios/pg100_audio16p.mp3';
+import pg100_audio17p from '../assets/audios/pg100_audio17p.mp3';
+import pg100_audio18p from '../assets/audios/pg100_audio18p.mp3';
 
 // Mapeamento dos áudios
 const audioMap = {
@@ -55,6 +71,23 @@ const audioMap = {
     pg100_audio16,
     pg100_audio17,
     pg100_audio18,
+    pg100_audio2p,
+    pg100_audio3p,
+    pg100_audio4p,
+    pg100_audio5p,
+    pg100_audio6p,
+    pg100_audio7p,
+    pg100_audio8p,
+    pg100_audio9p,
+    pg100_audio11p,
+    pg100_audio12p,
+    pg100_audio13p,
+    pg100_audio14p,
+    pg100_audio15p,
+    pg100_audio16p,
+    pg100_audio17p,
+    pg100_audio18p,
+
 };
 
 const Pagina100 = () => {
@@ -177,6 +210,7 @@ const Pagina100 = () => {
                                 "We ____ in London."
                             ].map((question, index) => {
                                 const audioKey = `pg100_audio${index + 2}`;
+                                const audioKeyP = `pg100_audio${index + 2}p`;
                                 return (
                                     <div key={index} className={styles["page100__question"]}>
                                         <span><em>{question.split('____')[0]}</em></span>
@@ -202,6 +236,12 @@ const Pagina100 = () => {
                                                 alt="Audio Icon"
                                                 className={styles["page100__additional-icon"]}
                                                 onClick={() => playAudio(audioKey)}
+                                            />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Audio Icon"
+                                                className={styles["page100__additional-icon"]}
+                                                onClick={() => playAudio(audioKeyP)}
                                             />
                                             <img
                                                 src={slow_audio_icon}
@@ -280,6 +320,7 @@ const Pagina100 = () => {
                             "We ____ in Rio de Janeiro."
                         ].map((question, index) => {
                             const audioKey = `pg100_audio${index + 11}`;
+                            const audioKeyP = `pg100_audio${index + 11}p`;
                             return (
                                 <div key={index + 8} className={styles["page100__question"]}>
                                     <span><em>{question.split('____')[0]}</em></span>
@@ -305,6 +346,12 @@ const Pagina100 = () => {
                                             alt="Audio Icon"
                                             className={styles["page100__additional-icon"]}
                                             onClick={() => playAudio(audioKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page100__additional-icon"]}
+                                            onClick={() => playAudio(audioKeyP)}
                                         />
                                         <img
                                             src={slow_audio_icon}
