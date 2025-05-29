@@ -442,7 +442,7 @@ const Pagina96 = () => {
 
                 <div className={styles["page96__container-3"]}>
                     <div className={styles["page96__questions-3"]}>
-                        <p>6. Make questions using the words from the box for the answers above:
+                        <p>6. Make questions using the words from the box for the answers below:
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
