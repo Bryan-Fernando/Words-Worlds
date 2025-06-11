@@ -354,23 +354,23 @@ const routes = [
   { path: "/pagina116", Component: Pagina116 },
   { path: "/pagina117", Component: Pagina117 },
   { path: "/pagina118", Component: Pagina118 },
+  { path: "/pagina146", Component: Pagina146 },
+  
   { path: "/pagina119", Component: Pagina119 },
   { path: "/pagina120", Component: Pagina120 },
   { path: "/pagina121", Component: Pagina121 },
   { path: "/pagina122", Component: Pagina122 },
   { path: "/pagina123", Component: Pagina123 },
-  //{ path: "/pagina124", Component: Pagina124 },
-  //{ path: "/pagina125", Component: Pagina125 },
-  //{ path: "/pagina126", Component: Pagina126 },
+  { path: "/pagina124", Component: Pagina124 },
+  { path: "/pagina125", Component: Pagina125 },
+  { path: "/pagina126", Component: Pagina126 },
   { path: "/pagina127", Component: Pagina127 },
   { path: "/pagina128", Component: Pagina128 },
-  { path: "/pagina146", Component: Pagina146 },
  /* { path: "/pagina129", Component: Pagina129 },
- { path: "/pagina130", Component: Pagina130 },
+  { path: "/pagina130", Component: Pagina130 },
   { path: "/pagina143", Component: Pagina143 },
   { path: "/pagina144", Component: Pagina144 },
   { path: "/pagina145", Component: Pagina145 },
-
   { path: "/pagina147", Component: Pagina147 },
   { path: "/pagina148", Component: Pagina148 },
   { path: "/pagina149", Component: Pagina149 },
@@ -403,7 +403,7 @@ const routes = [
   { path: "/pagina176", Component: Pagina176 },
   { path: "/pagina177", Component: Pagina177 },
   { path: "/pagina178", Component: Pagina178 },
-  { path: "/pagina179", Component: Pagina179 },*/
+  { path: "/pagina179", Component: Pagina179 },
   { path: "/pagina180", Component: Pagina180 },
   { path: "/pagina181", Component: Pagina181 },
   { path: "/pagina182", Component: Pagina182 },
@@ -450,7 +450,7 @@ const routes = [
   { path: "/pagina223", Component: Pagina223 },
   { path: "/pagina224", Component: Pagina224 },
   { path: "/pagina225", Component: Pagina225 },
-  { path: "/pagina226", Component: Pagina226 },
+  { path: "/pagina226", Component: Pagina226 },*/
 ];
 
 export default routes;

@@ -19,13 +19,6 @@
     text-align: center;
 }
 
-.page108__aside {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-
 /* Este é um comentário */
 
 .page108__table--header {
@@ -120,85 +113,6 @@
 
 .page108__translation {
     width: calc(18vw * 0.85);
-}
-
-
-.page108__aside--notes1--a {
-    width: 25%;
-    height: fit-content;
-    border: .4rem solid #0A3282;
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
-    background-color: white;
-    text-align: left;
-    padding-left: 1rem;
-    background-color: #0A3282;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.page108__aside--notes1--b {
-    width: 50%;
-    height: 4.5rem;
-    border: .4rem solid #0A3282;
-    border-top-left-radius: 2.5rem;
-    border-top-right-radius: 2.5rem;
-    background-color: white;
-    text-align: left;
-    padding-left: 1rem;
-    background-color: #0A3282;
-    color: white;
-    display: flex;
-    align-items: center;
-}
-
-.page108__aside--notes1--a p,
-.page108__aside--notes1--b p {
-    font-size: 1.5rem;
-}
-
-.page108__aside--img--notes--b {
-    height: calc(2rem + 0.8vw);
-    width: 3rem;
-    padding-right: .5rem;
-    cursor: pointer;
-}
-
-.page108__aside--notes2--a {
-    width: 25%;
-    height: fit-content;
-    border: .4rem solid #0A3282;
-    border-top: .1rem;
-    border-bottom-left-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-    background-color: white;
-    text-align: left;
-    padding-left: 1rem;
-    color: #103275;
-    display: flex;
-    align-items: center;
-}
-
-.page108__aside--notes2--b {
-    width: 50%;
-    height: 100%;
-    border: .4rem solid #0A3282;
-    border-top: .1rem;
-    border-bottom-left-radius: 2.5rem;
-    border-bottom-right-radius: 2.5rem;
-    background-color: white;
-    text-align: left;
-    padding-left: 1rem;
-    color: #103275;
-    display: flex;
-    align-items: center;
-}
-
-.page108__aside--notes2--a p,
-.page108__aside--notes2--b p {
-    font-size: 1.5rem;
-    padding: 1rem;
 }
 
 @media (max-width: 1024px) {

@@ -237,129 +237,141 @@
   }
 }
 
+/* Estilos para pagina225.jsx */
+
 .pg225Container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  gap: 2rem;
+  padding: 2rem; /* Mantém um padding geral */
+  gap: 1.5rem; /* Espaçamento entre header e main */
   background-color: #ffffff;
 }
 
 .pg225Header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-start; /* Alinha o título e subtítulo à esquerda */
   gap: 0.5rem;
-  padding-left: 1rem;
 }
 
 .pg225Title {
-  color: #a61c28;
-  font-size: 50px;
-  font-style: italic;
+  color: #a61c28; /* Cor do título como na imagem */
+  font-size: 28px; /* Tamanho de fonte para "Dialogues" */
+  font-weight: bold;
   margin: 0;
+}
+
+.pg225SubtitleContainer {
+  display: flex;
+  align-items: center; /* Alinha o ícone com o texto */
 }
 
 .pg225Subtitle {
-  font-size: 30px;
+  font-size: 20px; /* Tamanho de fonte para o subtítulo */
   color: #000000;
   margin: 0;
-  font-weight: normal;
-  text-align: left;
+  font-weight: bold; /* Subtítulo em negrito como na imagem */
 }
 
+/* O ícone de áudio precisaria ser adicionado no JSX e estilizado aqui */
+
 .pg225DialoguesContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  display: flex; /* Alterado de grid para flex */
+  flex-direction: column; /* Diálogos em uma única coluna */
+  gap: 1.5rem; /* Espaçamento entre as caixas de diálogo */
+  align-items: flex-start; /* Alinha as caixas à esquerda */
+  width: 100%; /* O container ocupa a largura disponível */
 }
 
 .pg225DialogueBox {
-  border: 2px solid #a61c28;
-  border-radius: 10px;
-  padding: 2rem;
+  border: 2px solid #a61c28; /* Borda vermelha */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 1rem 1.5rem; /* Padding interno (vertical horizontal) */
   background-color: #ffffff;
-  min-width: 350px;
+  width: auto; /* Largura se ajusta ao conteúdo, até o máximo do container pai */
+  max-width: 600px; /* Define uma largura máxima para os balões, ajuste conforme necessário */
+  box-sizing: border-box;
 }
 
 .pg225DialogueTitle {
   color: #000000;
   font-weight: bold;
-  font-style: italic;
-  font-size: clamp(18px, 2vw, 20px);
-  margin-bottom: 1rem;
+  font-size: 18px; /* Tamanho do título do diálogo */
+  margin-bottom: 0.75rem;
   text-align: left;
+}
+
+.pg225DialogueContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Espaçamento entre as linhas do diálogo */
 }
 
 .pg225DialogueLine {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.5rem; /* Espaçamento entre Speaker e Text */
   align-items: flex-start;
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.5;
+  text-align: left;
 }
 
 .pg225SpeakerA,
 .pg225SpeakerB {
-  font-style: italic;
-  min-width: 25px;
-  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: bold; /* Speaker em negrito */
+  font-size: 16px;
   white-space: nowrap;
 }
 
 .pg225SpeakerA {
-  color: #a61c28;
+  color: #a61c28; /* Cor para Speaker A */
 }
 
 .pg225SpeakerB {
-  color: #000000;
+  color: #000000; /* Cor para Speaker B */
 }
 
 .pg225TextA,
 .pg225TextB {
-  font-style: italic;
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.5;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: pre-line; /* Respeita as quebras de linha (\n) do JSX */
 }
 
 .pg225TextA {
-  color: #a61c28;
+  color: #a61c28; /* Cor para texto de A */
 }
 
 .pg225TextB {
-  color: #000000;
+  color: #000000; /* Cor para texto de B */
 }
 
+/* Remover ou ajustar media queries se o layout é para ser fixo */
 @media (max-width: 768px) {
   .pg225Container {
     padding: 1rem;
   }
 
-  .pg225DialoguesContainer {
-    grid-template-columns: 1fr;
-  }
-
   .pg225Title {
-    font-size: 35px;
+    font-size: 24px;
   }
 
   .pg225Subtitle {
-    font-size: 25px;
+    font-size: 18px;
+  }
+
+  .pg225DialogueBox {
+    max-width: 100%; /* Em telas menores, permite ocupar toda a largura */
+    padding: 0.75rem 1rem;
   }
 
   .pg225DialogueTitle {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .pg225SpeakerA,
   .pg225SpeakerB,
   .pg225TextA,
   .pg225TextB {
-    font-size: 16px;
+    font-size: 14px;
   }
 }

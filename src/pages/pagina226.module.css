@@ -1,4 +1,4 @@
-    .pg226Container {
+.pg226Container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -31,11 +31,11 @@
 }
 
 .pg226DialoguesContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 2rem;
-  padding: 1rem;
-  margin-bottom: 2rem;
+  display: flex; /* Alterado de grid para flex */
+  flex-direction: column; /* Diálogos em uma única coluna */
+  gap: 1.5rem; /* Espaçamento entre as caixas de diálogo */
+  align-items: flex-start; /* Alinha as caixas à esquerda */
+  width: 100%; /* O container ocupa a largura disponível */
 }
 
 .pg226DialogueBox {
@@ -163,6 +163,11 @@
   font-style: italic;
   color: #000000;
   font-size: 18px;
+}
+
+.pg226DialogueBox:nth-child(6) {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 @media (max-width: 768px) {

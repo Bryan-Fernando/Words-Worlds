@@ -132,6 +132,12 @@ const Pagina109 = () => {
                             <tbody>
                                 {[
                                     { verboAux: "Don't", sujeito: "I", adverbio: "", verbo: "work", complemento: "on Mondays?", audio: pg109_audio1, tradAudio: pg109_trad1, traducao: "Eu não trabalho às segundas-feiras?" },
+                                    { verboAux: "Doesn't", sujeito: "he", adverbio: "", verbo: "work", complemento: "every day?", audio: pg109_audio2, tradAudio: pg109_trad2, traducao: "Ele não trabalha todos os dias?" },
+                                    { verboAux: "Doesn't", sujeito: "she", adverbio: "", verbo: "work", complemento: "at home?", audio: pg109_audio3, tradAudio: pg109_trad3, traducao: "Ela não trabalha em casa?" },
+                                    { verboAux: "Doesn't", sujeito: "it", adverbio: "", verbo: "work", complemento: "now?", audio: pg109_audio4, tradAudio: pg109_trad4, traducao: "Não funciona agora?" },
+                                    { verboAux: "Don't", sujeito: "we", adverbio: "", verbo: "work", complemento: "(on) weekdays?", audio: pg109_audio5, tradAudio: pg109_trad5, traducao: "Nós não trabalhamos em dias úteis?" },
+                                    { verboAux: "Don't", sujeito: "you", adverbio: "", verbo: "work", complemento: "(on) weekends?", audio: pg109_audio6, tradAudio: pg109_trad6, traducao: "Você não trabalha nos fins de semana?" },
+                                    { verboAux: "Don't", sujeito: "they", adverbio: "", verbo: "work", complemento: "on weekends?", audio: pg109_audio7, tradAudio: pg109_trad7, traducao: "Eles não trabalham nos fins de semana?" },
                                 ].map((linha, index) => (
                                     <tr key={index} onClick={() => playAudio(linha.audio)} style={{ cursor: 'pointer' }}>
                                         <td className={styles["page109__auxiliary--verb"]}>{linha.verboAux}</td>

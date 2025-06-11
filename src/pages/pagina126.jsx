@@ -50,24 +50,6 @@ const Pagina126 = () => {
         }
     };
 
-    const handleCheckClick = () => {
-        const newResults = inputValues.map((value, index) => {
-            if (!correctAnswers[index]) return false;
-
-            const isCorrect = value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
-
-            return isCorrect;
-        });
-        setResults(newResults);
-    };
-
-
-    const handleInputChange = (value, index) => {
-        const newValues = [...inputValues];
-        newValues[index] = value;
-        setInputValues(newValues);
-    };
-
     return (
         <div className={styles["page126__container"]}>
             <header className={styles["page126__header"]}>

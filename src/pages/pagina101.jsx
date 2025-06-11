@@ -111,27 +111,27 @@ const Pagina101 = () => {
 
     const correctAnswers = [
         'am', 'is', 'are', 'are', 'is', 'is', 'is', 'are', 'are', 'is',
-        'am not', 'is not', 'are not', 'are not', 'is not', 'is not', 'is not', 'are not', 'are not', 'is not'
+        'am not', 'is not', 'are not', 'are not', 'is not', 'is not', 'is not', 'is not', 'are not', 'is not'
     ];
 
     const handleCheckClick = () => {
-    const newResults = inputValues.map((value, index) => {
-        const trimmedValue = value.trim().toLowerCase();
-        const correctValue = correctAnswers[index].toLowerCase();
-        return trimmedValue !== "" && trimmedValue === correctValue;
-    });
+        const newResults = inputValues.map((value, index) => {
+            const trimmedValue = value.trim().toLowerCase();
+            const correctValue = correctAnswers[index].toLowerCase();
+            return trimmedValue !== "" && trimmedValue === correctValue;
+        });
 
-    setResults(newResults);
-};
+        setResults(newResults);
+    };
 
 
-const handleInputChange = (value, index) => {
-    setInputValues(prevValues => {
-        const newValues = [...prevValues];
-        newValues[index] = value;
-        return newValues;
-    });
-};
+    const handleInputChange = (value, index) => {
+        setInputValues(prevValues => {
+            const newValues = [...prevValues];
+            newValues[index] = value;
+            return newValues;
+        });
+    };
 
 
     const playAudio = (audioKey) => {
@@ -312,8 +312,8 @@ const handleInputChange = (value, index) => {
                                     <div className={styles["page101__input-container"]}>
                                         <input
                                             type="text"
-                                           value={inputValues[index + 10] || ""}
-onChange={(e) => handleInputChange(e.target.value, index + 10)}
+                                            value={inputValues[index + 10] || ""}
+                                            onChange={(e) => handleInputChange(e.target.value, index + 10)}
 
                                             className={styles["page101__input-box"]}
                                         />
@@ -321,8 +321,8 @@ onChange={(e) => handleInputChange(e.target.value, index + 10)}
                                     <span><em>{parts[1]}</em></span>
                                     <div className={styles["page101__icons-container"]}>
                                         {results[index + 10] !== null && (
-    <img
-        src={results[index + 10] ? correct_icon : wrong_icon}
+                                            <img
+                                                src={results[index + 10] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page101__checkmark-image"]}
                                             />

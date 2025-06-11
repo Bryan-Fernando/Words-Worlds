@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './pagina218.module.css';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
 
 const Pagina218 = () => {
+  const [inputValues, setInputValues] = useState(Array(4).fill(''));
+  const [results, setResults] = useState(Array(4).fill(null));
+
   const answers = [
     {
       id: 1,
@@ -21,24 +26,30 @@ const Pagina218 = () => {
     }
   ];
 
-  const questions = [
-    {
-      id: 1,
-      text: "Can you swim?"
-    },
-    {
-      id: 2,
-      text: "Can he cook?"
-    },
-    {
-      id: 3,
-      text: "Can they drive?"
-    },
-    {
-      id: 4,
-      text: "Can you go out tonight? ou Can we go out tonight?"
-    }
+  const correctQuestions = [
+    "Can you swim?",
+    "Can he cook?",
+    "Can they drive?",
+    "Can we go out tonight?"
   ];
+
+  const handleInputChange = (value, index) => {
+    setInputValues((prevValues) => {
+      const newValues = [...prevValues];
+      newValues[index] = value;
+      return newValues;
+    });
+  };
+
+  const handleCheckClick = () => {
+    const newResults = inputValues.map((value, index) => {
+      if (!value.trim()) return false;
+      const trimmedValue = value.trim().toLowerCase();
+      const correctValue = correctQuestions[index].toLowerCase();
+      return trimmedValue === correctValue;
+    });
+    setResults(newResults);
+  };
 
   return (
     <div className={styles.pg218Container}>
@@ -48,25 +59,35 @@ const Pagina218 = () => {
         <h2 className={styles.pg218ExerciseTitle}>5. Make questions to the given answers</h2>
         
         <div className={styles.pg218AnswersBox}>
-          {answers.map((answer) => (
+          {answers.map((answer, index) => (
             <div key={answer.id} className={styles.pg218Line}>
-              <span className={styles.pg218Number}>{answer.id}.</span>
-              <span className={styles.pg218Text}>{answer.text}</span>
+              <div className={styles.pg218SentenceWrapper}>
+                <span className={styles.pg218Number}>{answer.id}.</span>
+                <span className={styles.pg218Text}>{answer.text}</span>
+              </div>
+              <div className={styles.pg218InputWrapper}>
+                <input
+                  type="text"
+                  value={inputValues[index] || ""}
+                  onChange={(e) => handleInputChange(e.target.value, index)}
+                  className={styles.pg218Input}
+                  placeholder="Write the question"
+                />
+                {results[index] !== null && (
+                  <img
+                    src={results[index] ? correct_icon : wrong_icon}
+                    alt={results[index] ? "Correct" : "Incorrect"}
+                    className={styles.pg218CheckIcon}
+                  />
+                )}
+              </div>
             </div>
           ))}
         </div>
-      </div>
 
-      <div className={styles.pg218AnswerSection}>
-        <h2 className={styles.pg218AnswerTitle}>Check - Answer Key</h2>
-        <div className={styles.pg218QuestionsBox}>
-          {questions.map((question) => (
-            <div key={question.id} className={styles.pg218Line}>
-              <span className={styles.pg218Number}>{question.id}.</span>
-              <span className={styles.pg218Text}>{question.text}</span>
-            </div>
-          ))}
-        </div>
+        <button onClick={handleCheckClick} className={styles.pg218CheckButton}>
+          Check
+        </button>
       </div>
     </div>
   );

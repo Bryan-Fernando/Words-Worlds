@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  gap: 5rem;
+  gap: 3rem;
   background-color: #ffffff;
   align-items: flex-start;
 }
@@ -20,7 +20,6 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  margin-bottom: 6rem;
 }
 
 .pg219ExerciseTitle {
@@ -28,14 +27,20 @@
   font-style: italic;
   font-size: 18px;
   margin: 0;
-  align-self: flex-start;
+  text-align: left;
 }
 
-.pg219ColumnsContainer,
-.pg219AnswerColumns {
+.pg219Instructions {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.pg219ColumnsContainer {
   display: flex;
   justify-content: flex-start;
-  gap: 6rem;
+  gap: 4rem;
   margin-top: 1rem;
 }
 
@@ -43,17 +48,37 @@
   border: 2px solid #a61c28;
   border-radius: 8px;
   padding: 1.5rem;
-  min-width: 200px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .pg219Item {
   display: flex;
   gap: 0.5rem;
-  align-items: baseline;
-  white-space: nowrap;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  transition: all 0.2s ease;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background-color: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.selected {
+  background-color: #e3f2fd;
+  border-color: #2196f3;
+  box-shadow: 0 0 0 2px rgba(33,150,243,0.2);
 }
 
 .pg219Number,
@@ -61,6 +86,7 @@
   color: #000000;
   font-size: 16px;
   min-width: 20px;
+  font-weight: bold;
 }
 
 .pg219Text {
@@ -69,19 +95,47 @@
   font-style: italic;
 }
 
-.pg219AnswerSection {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
+.pg219Match {
+  margin-left: 1rem;
+  color: #666;
+  font-style: italic;
 }
 
-.pg219AnswerTitle {
-  color: #a61c28;
-  font-style: italic;
-  font-size: 18px;
-  margin: 0;
-  align-self: flex-start;
+.pg219ButtonContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pg219Button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #a61c28;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pg219Button:hover:not(:disabled) {
+  background-color: #8a1721;
+  transform: translateY(-1px);
+}
+
+.pg219Button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.correctMatch {
+  background-color: #e8f5e9;
+  border-color: #4caf50;
+}
+
+.incorrectMatch {
+  background-color: #ffebee;
+  border-color: #f44336;
 }
 
 @media (max-width: 768px) {
@@ -93,13 +147,15 @@
     font-size: 30px;
   }
 
-  .pg219ExerciseTitle,
-  .pg219AnswerTitle {
+  .pg219ExerciseTitle {
     font-size: 16px;
   }
 
-  .pg219ColumnsContainer,
-  .pg219AnswerColumns {
+  .pg219Instructions {
+    font-size: 14px;
+  }
+
+  .pg219ColumnsContainer {
     flex-direction: column;
     gap: 2rem;
   }
@@ -112,5 +168,14 @@
   .pg219Letter,
   .pg219Text {
     font-size: 14px;
+  }
+
+  .pg219ButtonContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .pg219Button {
+    width: 100%;
   }
 }

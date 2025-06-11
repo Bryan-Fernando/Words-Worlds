@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina114.module.css';
 
-import campainha from '../assets/icons/campainha.png';
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
@@ -10,8 +9,6 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina114_imagem1 from '../assets/images/pagina114_imagem1.webp';
 
-import bell from '../assets/audios/bell.mp3';
-import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg114_audio1 from '../assets/audios/pg114_audio1.mp3';
@@ -114,17 +111,27 @@ const pagina114 = () => {
         <header className={styles["page114__header"]}>
             <h1 className={styles["page114__header-h1"]} onClick={() => playAudio(global_grammar)} style={{ cursor: 'pointer' }}>
                 Grammar
+                <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page114__header-icon"]}
+                    onClick={() => playAudio(global_learning_le_e)}
+                />
+                <img
+                    src={ptbr_audio_icon}
+                    alt="Portuguese audio"
+                    className={styles["page114__header-icon"]}
+                    onClick={() => playAudio(global_learning_le_p)}
+                />
             </h1>
             <p className={styles["page114__text-explanatory"]}>
-                Complete the questions using the correct question words: <strong> What | Where | When | What time | How; </strong>
-                along with the verbs: <strong> am | is | are |. </strong>Then answer them with your own words.
+                Complete the questions using the correct question words: <strong> What | Where | When | What time | How;</strong>
+                along with the verbs: <strong> am| is | are |. </strong>Then answer them with your own words.
                 <br /> <br />
-                Complete as perguntas usando as palavras interrogativas corretas: <strong>/ O que / Onde / Quando / Que horas / Como;</strong> juntamente com os verbos: <strong> am / is / are. </strong> Depois, responda-as com suas próprias palavras.
+                Complete as perguntas usando as palavras interrogativas corretas: O que / Onde / Quando / Que horas / Como; juntamente com os verbos: sou / é / são. Depois, responda-as com suas próprias palavras.
             </p>
             <p className={styles["page114__text-explanatory--red"]}>
-                There can be more than one possible question and answer <br /> 
-                <img className={styles["page114__bell-img"]} onClick={() => playAudio("bell")} src={campainha} alt="" />
-             <span style={{ color: 'blue' }}>Nota: Pode haver mais de uma pergunta e resposta possíveis.</span> 
+                There can be more than one possible question and answer <br /> Nota: Pode haver mais de uma pergunta e resposta possíveis.
             </p>
         </header>
 

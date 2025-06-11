@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  gap: 5rem;
+  gap: 3rem;
   background-color: #ffffff;
   text-align: left;
 }
@@ -20,7 +20,6 @@
   flex-direction: column;
   gap: 2rem;
   width: 100%;
-  margin-bottom: 6rem;
 }
 
 .pg221ExerciseTitle {
@@ -28,7 +27,6 @@
   font-style: italic;
   font-size: 18px;
   margin: 0;
-  align-self: flex-start;
 }
 
 .pg221QuestionsContainer {
@@ -40,30 +38,20 @@
 .pg221QuestionBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .pg221Question {
   display: flex;
   gap: 0.5rem;
   align-items: baseline;
-  color: #a61c28;
-  font-style: italic;
-}
-
-.pg221Options {
-  text-align: left;
-  color: #000000;
-  font-size: 16px;
-  font-style: italic;
-  margin-left: 0;
-  padding: 0;
 }
 
 .pg221Number {
   color: #a61c28;
   font-size: 16px;
   font-style: italic;
+  min-width: 1.5rem;
 }
 
 .pg221QuestionText {
@@ -73,10 +61,78 @@
 }
 
 .pg221Options {
-  color: #000000;
+  display: flex;
+  gap: 1rem;
+  margin-left: 1.5rem;
+}
+
+.pg221Option {
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
   font-size: 16px;
   font-style: italic;
-  margin-left: 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  color: #000000;
+}
+
+.pg221Option:hover:not(:disabled) {
+  background-color: #bababa;
+}
+
+.selected {
+  background-color: #e3f2fd !important;
+}
+
+.correct {
+  background-color: #e8f5e9 !important;
+  color: #2e7d32;
+}
+
+.incorrect {
+  background-color: #ffebee !important;
+  color: #c62828;
+}
+
+.pg221ButtonsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pg221CheckButton,
+.pg221ResetButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pg221CheckButton {
+  background-color: #a61c28;
+  color: white;
+}
+
+.pg221CheckButton:hover:not(:disabled) {
+  background-color: #8a1721;
+}
+
+.pg221CheckButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pg221ResetButton {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.pg221ResetButton:hover {
+  background-color: #e0e0e0;
 }
 
 .pg221AnswerSection {

@@ -23,7 +23,9 @@ const pagina115 = () => {
         <div>
             <div className={styles["page115__container"]}>
                 <header className={styles["page115__header"]}>
-                    <h1>Tables</h1>                    
+                    <h1>Grammar</h1>
+                    <h2 className={styles["page115__header-h2"]}>Simple Present (Presente Simples)</h2>
+                    <h3>Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)</h3>
                 </header>
                 <main className={styles["page115__main"]}>
                     <div>
@@ -76,7 +78,6 @@ const pagina115 = () => {
                         </table>
 
                         {/* Tabela de Baixo */}
-                        <div className={styles["page115__table-header"]}>AFIRMATIVA</div>
                         <table className={`${styles["page115__styled-table"]} ${styles["page115__table-aligned"]}`}>
                             <colgroup>
                                 <col style={{ width: '20.2%' }} className={styles["page115__extra-column"]} />
@@ -93,55 +94,7 @@ const pagina115 = () => {
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo Auxiliar</th>
-                                    <th>Advérbio</th>
-                                    <th>Verbo(s)</th>
-                                    <th>Objeto Complemento</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {inputValuesTable2.map((row, rowIndex) => (
-                                    <tr key={rowIndex}>
-                                        <td className={styles["page115__extra-column"]}></td>
-                                        {row.map((value, colIndex) => (
-                                            <td key={colIndex}>
-                                                <textarea
-                                                    id={`table2-input-${rowIndex}-${colIndex}`}
-                                                    className={styles["page115__input-cell"]}
-                                                    value={value}
-                                                    rows="1"
-                                                    onChange={(e) =>
-                                                        handleInputChange(rowIndex, colIndex, e, setInputValuesTable2)
-                                                    }
-                                                    style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
-                                                    }}
-                                                />
-                                            </td>
-                                        ))}
-                                    </tr>
-                                ))}
-                            </tbody>
-                        </table>
-                        <div className={styles["page115__table-header"]}>NEGATIVA</div>
-                        <table className={`${styles["page115__styled-table"]} ${styles["page115__table-aligned"]}`}>
-                            <colgroup>
-                                <col style={{ width: '20.2%' }} className={styles["page115__extra-column"]} />
-                                <col style={{ width: '20.2%' }} />
-                                <col style={{ width: '13.5%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '11%' }} />
-                                <col style={{ width: '25%' }} />
-                                <col style={{ width: '33.7%' }} />
-                            </colgroup>
-                            <thead>
-                                <tr>
-                                    <th className={styles["page115__extra-column"]}></th>
-                                    <th>Introdução</th>
-                                    <th>Sujeito</th>
-                                    <th>Verbo Auxiliar</th>
-                                    <th> <span style={{ color: 'red' }}> 'Not'</span> <br />Advérbio</th>
+                                    <th><span style={{ color: 'red' }}>'Not'</span><br /> Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto Complemento</th>
                                 </tr>

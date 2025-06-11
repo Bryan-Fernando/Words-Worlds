@@ -26,55 +26,91 @@
 .pg218ExerciseTitle {
   color: #a61c28;
   font-style: italic;
-  font-size: 18px;
+  font-size: 2.2rem;
   margin: 0;
   align-self: flex-start;
 }
 
-.pg218AnswersBox,
-.pg218QuestionsBox {
-  border: 2px solid #a61c28;
-  border-radius: 8px;
+.pg218AnswersBox {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  width: fit-content;
-  min-width: 300px;
+  width: 100%;
 }
 
 .pg218Line {
   display: flex;
-  gap: 0.5rem;
-  align-items: baseline;
-  white-space: nowrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pg218SentenceWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .pg218Number {
   color: #000000;
-  font-size: 16px;
-  min-width: 20px;
+  font-size: 2.2rem;
+  min-width: 30px;
 }
 
 .pg218Text {
   color: #000000;
-  font-size: 16px;
+  font-size: 2.2rem;
   font-style: italic;
 }
 
-.pg218AnswerSection {
+.pg218InputWrapper {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  margin-left: 2.5rem;
 }
 
-.pg218AnswerTitle {
-  color: #a61c28;
+.pg218Input {
+  padding: 0.5rem 1rem;
+  font-size: 2.2rem;
+  border: none;
+  width: 400px;
   font-style: italic;
-  font-size: 18px;
-  margin: 0;
+  background-color: rgba(171, 169, 169, 0.5);
+  border-radius: 8px;
+  color: #fff;
+}
+
+.pg218Input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pg218Input:focus {
+  outline: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pg218CheckIcon {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.pg218CheckButton {
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 1.2rem 2.5rem;
+  font-size: 2.2rem;
+  cursor: pointer;
   align-self: flex-start;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.pg218CheckButton:hover {
+  background-color: #751219;
 }
 
 @media (max-width: 768px) {
@@ -86,19 +122,16 @@
     font-size: 30px;
   }
 
-  .pg218ExerciseTitle,
-  .pg218AnswerTitle {
-    font-size: 16px;
+  .pg218Line {
+    flex-direction: column;
   }
 
-  .pg218Number,
-  .pg218Text {
-    font-size: 14px;
-  }
-
-  .pg218AnswersBox,
-  .pg218QuestionsBox {
+  .pg218InputWrapper {
+    margin-left: 0;
     width: 100%;
-    min-width: auto;
+  }
+
+  .pg218Input {
+    width: 100%;
   }
 }

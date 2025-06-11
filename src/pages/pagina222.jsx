@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './pagina222.module.css';
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
 
 const Pagina222 = () => {
+  const [userAnswers, setUserAnswers] = useState(['', '', '', '']);
+  const [showResults, setShowResults] = useState(false);
+
   const exercises = [
     {
       id: 1,
@@ -24,7 +29,7 @@ const Pagina222 = () => {
   const answers = [
     {
       id: 1,
-      answer: "I can swim well."
+      answer: "I can swim well"
     },
     {
       id: 2,
@@ -32,13 +37,28 @@ const Pagina222 = () => {
     },
     {
       id: 3,
-      answer: "She can ride a bike."
+      answer: "She can ride a bike"
     },
     {
       id: 4,
-      answer: "The dog can catch the ball."
+      answer: "The dog can catch the ball"
     }
   ];
+
+  const handleInputChange = (index, value) => {
+    const newAnswers = [...userAnswers];
+    newAnswers[index] = value;
+    setUserAnswers(newAnswers);
+  };
+
+  const handleCheck = () => {
+    setShowResults(true);
+  };
+
+  const handleReset = () => {
+    setUserAnswers(['', '', '', '']);
+    setShowResults(false);
+  };
 
   return (
     <div className={styles.pg222Container}>
@@ -47,24 +67,47 @@ const Pagina222 = () => {
       <div className={styles.pg222ExerciseSection}>
         <h2 className={styles.pg222ExerciseTitle}>9. Put the words in the correct order</h2>
         <div className={styles.pg222WordsBox}>
-          {exercises.map((exercise) => (
+          {exercises.map((exercise, index) => (
             <div key={exercise.id} className={styles.pg222WordLine}>
               <span className={styles.pg222Number}>{exercise.id}.</span>
               <span className={styles.pg222Words}>{exercise.words}</span>
+              <div className={styles.pg222InputContainer}>
+                <input
+                  type="text"
+                  value={userAnswers[index]}
+                  onChange={(e) => handleInputChange(index, e.target.value)}
+                  className={styles.pg222Input}
+                  placeholder="Type your answer"
+                  disabled={showResults}
+                />
+                {showResults && (
+                  <img
+                    src={userAnswers[index].trim().toLowerCase() === answers[index].answer.toLowerCase() ? correct_icon : wrong_icon}
+                    alt={userAnswers[index].trim().toLowerCase() === answers[index].answer.toLowerCase() ? "Correct" : "Incorrect"}
+                    className={styles.pg222ResultIcon}
+                  />
+                )}
+              </div>
             </div>
           ))}
         </div>
-      </div>
 
-      <div className={styles.pg222AnswerSection}>
-        <h2 className={styles.pg222AnswerTitle}>Check - Answer Key</h2>
-        <div className={styles.pg222AnswerBox}>
-          {answers.map((answer) => (
-            <div key={answer.id} className={styles.pg222AnswerLine}>
-              <span className={styles.pg222Number}>{answer.id}.</span>
-              <span className={styles.pg222Answer}>{answer.answer}</span>
-            </div>
-          ))}
+        <div className={styles.pg222ButtonsContainer}>
+          <button
+            className={styles.pg222CheckButton}
+            onClick={handleCheck}
+            disabled={showResults || userAnswers.some(answer => !answer.trim())}
+          >
+            Check
+          </button>
+          {showResults && (
+            <button
+              className={styles.pg222ResetButton}
+              onClick={handleReset}
+            >
+              Reset
+            </button>
+          )}
         </div>
       </div>
     </div>

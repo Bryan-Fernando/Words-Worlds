@@ -2,9 +2,6 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina108.module.css';
 
-import campainha from '../assets/icons/campainha.png';
-
-import bell from '../assets/audios/bell.mp3';
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_simple_present from '../assets/audios/global_simple_present.mp3';
 import afirmativaAudio from '../assets/audios/interrogativa_a.mp3';
@@ -224,16 +221,6 @@ const Pagina108 = () => {
                         </table>
                     </div>
                 </main>
-                <aside className={styles["page108__aside"]}>
-                    <div className={styles["page108__aside--notes1--b"]}>
-                    <img className={styles["page108__aside--img--notes--b"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
-                        <p>NOTE</p>
-                    </div>
-                    <div className={styles["page108__aside--notes2--b"]}>
-                        <p> <span style={{ fontWeight: 'bold'}}>1. To work como "Trabalhar":</span> Quando uma pessoa realiza uma atividade funcional. <br />
-                        <span style={{ fontWeight: 'bold'}}>2. To work como "Funcionar":</span> Quando falamos que um sistema ou objeto está funcionando corretamente.</p>
-                    </div>
-                </aside>
             </div>
         </div>
     );

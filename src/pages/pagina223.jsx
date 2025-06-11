@@ -8,12 +8,6 @@ const Pagina223 = () => {
     { id: 3, title: "Guitar Player" }
   ];
 
-  const secondImages = [
-    { id: 4, title: "Basketball Game" },
-    { id: 5, title: "Children Playing" },
-    { id: 6, title: "Computer Repair" }
-  ];
-
   const dialoguesFirstSet = [
     {
       id: 1,
@@ -45,6 +39,12 @@ const Pagina223 = () => {
       question: "Can you ride a bike?",
       answer: "Yes, I can ride a bike."
     }
+  ];
+
+  const secondImages = [
+    { id: 4, title: "Basketball Game" },
+    { id: 5, title: "Children Playing" },
+    { id: 6, title: "Computer Repair" }
   ];
 
   const dialoguesSecondSet = [
@@ -89,36 +89,42 @@ const Pagina223 = () => {
         </h2>
       </header>
 
-      <div className={styles.pg223ImagesContainer}>
-        {firstImages.map((image) => (
-          <div key={image.id} className={styles.pg223ImagePlaceholder}></div>
-        ))}
-      </div>
-
-      <div className={styles.pg223DialoguesFirstSet}>
-        {dialoguesFirstSet.map((dialogue) => (
-          <div key={dialogue.id} className={styles.pg223DialogueContent}>
-            <h3 className={styles.pg223DialogueTitle}>{dialogue.title}</h3>
-            <p className={styles.pg223Question}>{dialogue.question}</p>
-            <p className={styles.pg223Answer}>{dialogue.answer}</p>
+      <div className={styles.pg223Content}>
+        <div className={styles.pg223Section}>
+          <div className={styles.pg223ImagesContainer}>
+            {firstImages.map((image) => (
+              <div key={image.id} className={styles.pg223ImagePlaceholder}></div>
+            ))}
           </div>
-        ))}
-      </div>
 
-      <div className={styles.pg223ImagesContainer}>
-        {secondImages.map((image) => (
-          <div key={image.id} className={styles.pg223ImagePlaceholder}></div>
-        ))}
-      </div>
-
-      <div className={styles.pg223DialoguesSecondSet}>
-        {dialoguesSecondSet.map((dialogue) => (
-          <div key={dialogue.id} className={styles.pg223DialogueContent}>
-            <h3 className={styles.pg223DialogueTitle}>{dialogue.title}</h3>
-            <p className={styles.pg223Question}>{dialogue.question}</p>
-            <p className={styles.pg223Answer}>{dialogue.answer}</p>
+          <div className={styles.pg223DialoguesContainer}>
+            {dialoguesFirstSet.map((dialogue) => (
+              <div key={dialogue.id} className={styles.pg223DialogueItem}>
+                <div className={styles.pg223DialogueTitle}>{dialogue.title}</div>
+                <div className={styles.pg223Question}>{dialogue.question}</div>
+                <div className={styles.pg223Answer}>{dialogue.answer}</div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <div className={styles.pg223Section}>
+          <div className={styles.pg223ImagesContainer}>
+            {secondImages.map((image) => (
+              <div key={image.id} className={styles.pg223ImagePlaceholder}></div>
+            ))}
+          </div>
+
+          <div className={styles.pg223DialoguesContainer}>
+            {dialoguesSecondSet.map((dialogue) => (
+              <div key={dialogue.id} className={styles.pg223DialogueItem}>
+                <div className={styles.pg223DialogueTitle}>{dialogue.title}</div>
+                <div className={styles.pg223Question}>{dialogue.question}</div>
+                <div className={styles.pg223Answer}>{dialogue.answer}</div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

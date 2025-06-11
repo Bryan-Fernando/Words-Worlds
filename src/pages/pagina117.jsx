@@ -74,7 +74,7 @@ const Pagina51 = () => {
                             </tbody>
                         </table>
 
-                       
+                        <div className={styles["page117__table-header"]}>AFFIRMATIVE</div>
                         <table className={styles["page117__styled-table"]}>
                             <colgroup>
                                 <col style={{ width: "20.2%" }} className={styles["page117__extra-column"]} />
