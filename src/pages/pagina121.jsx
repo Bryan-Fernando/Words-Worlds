@@ -135,11 +135,11 @@ const Pagina121 = () => {
                         </div>
                         
                         {[
-                            "She is cooking",
-                            "We are waiting",
-                            "He is sleeping",
-                            "They are travelling?",
-                            "The students are studying"
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
                         ].map((question, index) => {
                             const answerAudio = `pg121_audio${index + 2}`;
                             const inputAudio = `pg121_audio${index + 7}`;

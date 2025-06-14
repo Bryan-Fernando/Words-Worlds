@@ -143,7 +143,7 @@ const Pagina124 = () => {
 
                 <div className={styles["page124__container-textoa"]}>
                     <h3>Exemplos:</h3>
-                    <p>• ( <spam className={styles["page124_text-Bolder"]}>would like a sandwich, please.</spam> ) Eu <spam className={styles["highlight"]}>gostaria</spam> de um sanduíche, por
+                    <p>• ( <spam className={styles["page124_text-Bolder"]}>I would like a sandwich, please.</spam> ) Eu <spam className={styles["highlight"]}>gostaria</spam> de um sanduíche, por
                     favor</p>
                     <p>• ( <spam className={styles["page124_text-Bolder"]}>She would like to go to the park.</spam> ) Ela <spam className={styles["highlight"]}>gostaria</spam> de ir ao parque.</p>
                 </div>
