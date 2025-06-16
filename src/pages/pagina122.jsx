@@ -32,7 +32,6 @@ const Pagina122 = () => {
         global_learning_le_e,
         global_learning_le_p,
         pg122_audio1e,
-
         pg122_audio2e,
         pg122_audio3e,
         pg122_audio4e,
@@ -111,7 +110,7 @@ const Pagina122 = () => {
 
                         {[
                             "1. (is / writing / she / an email / now)",
-                            "2. (playing / they / not / soccer / are)",
+                            "2. (playing / they / now / soccer / aren't)",
                             "3. (listening / I / music / am / to)",
                             "4. (crying / is / the baby)",
                             "5. (next week / going / we / are / on vacation)"

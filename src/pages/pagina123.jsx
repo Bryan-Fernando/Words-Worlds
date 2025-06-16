@@ -134,12 +134,6 @@ const Pagina123 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index)}
                                             className={styles["page123__input-box"]}
                                         />
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page123__additional-icon"]}
-                                            onClick={() => playAudio(answerAudio)}
-                                        />
                                         {results[index] !== null ? (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
@@ -150,6 +144,13 @@ const Pagina123 = () => {
                                         ) : (
                                             <span className={styles["page123__placeholder"]}></span>
                                         )}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page123__additional-icon"]}
+                                            onClick={() => playAudio(answerAudio)}
+                                        />
+                                        
 
                                     </div>
                                     <span

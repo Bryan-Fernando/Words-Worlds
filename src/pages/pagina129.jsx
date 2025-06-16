@@ -1,7 +1,53 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina129.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import global_affirmativee from '../assets/audios/global_affirmativee.mp3';
+import global_affirmativep from '../assets/audios/global_affirmativep.mp3';
+import global_negativee from '../assets/audios/global_negativee.mp3';
+import global_negativep from '../assets/audios/global_negativep.mp3';
+import pg129_audio1e from '../assets/audios/pg129_audio1e.mp3';
+import pg129_audio2e from '../assets/audios/pg129_audio2e.mp3';
+import pg129_audio3e from '../assets/audios/pg129_audio3e.mp3';
+import pg129_audio4e from '../assets/audios/pg129_audio4e.mp3';
+import pg129_audio5e from '../assets/audios/pg129_audio5e.mp3';
+import pg129_audio6e from '../assets/audios/pg129_audio6e.mp3';
+
+
 const Pagina129 = () => {
+
+  const audioMap = {
+    pg129_audio1e, pg129_audio2e, pg129_audio3e, pg129_audio4e, pg129_audio5e, pg129_audio6e, global_affirmativee,
+    global_affirmativep, global_negativee, global_negativep,
+  };
+
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioKey) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioMap[audioKey]);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
+  const renderIcon = (engKey) => (
+    <span className={styles["page129__icons-container"]}>
+      <img
+        src={eng_audio_icon}
+        alt="English Audio"
+        className={styles["page129__icon"]}
+        onClick={() => playAudio(engKey)}
+      />
+    </span>
+  );
+
+
+
   return (
     <div className={styles.pg129__container}>
       <header className={styles.pg129__header}>
@@ -28,9 +74,9 @@ const Pagina129 = () => {
           </div>
           <div className={styles.pg129__aside_note2}>
             <ul> Usado para indicar ações que estão:
-              <li style={{ fontSize: '2rem' }}>Em andamento ou acontecendo no momento da fala;</li>
-              <li style={{ fontSize: '2rem' }}>Ações ou situações temporárias (não definitivas);</li>
-              <li style={{ fontSize: '2rem' }}>Também usado para planos futuros ou ações que acontecerão em breve.</li>
+              <li className={styles.page129__liRed}>Em andamento ou acontecendo no momento da fala;</li>
+              <li className={styles.page129__liRed}>Ações ou situações temporárias (não definitivas);</li>
+              <li className={styles.page129__liRed}>Também usado para planos futuros ou ações que acontecerão em breve.</li>
             </ul>
           </div>
         </section>
@@ -74,11 +120,20 @@ const Pagina129 = () => {
             </tbody>
           </table>
           <div className={styles.pg129__exemplos}>
-            <strong>Affirmative:</strong>
+            <strong>Affirmative: {renderIcon('global_affirmativee')}</strong>
             <ul>
-              <li>I am studying English.</li>
-              <li>She is watching TV.</li>
-              <li>They are playing soccer.</li>
+              <li>
+                I am studying English.
+                {renderIcon('pg129_audio1e')}
+              </li>
+              <li>
+                She is watching TV.
+                {renderIcon('pg129_audio2e')}
+              </li>
+              <li>
+                They are playing soccer.
+                {renderIcon('pg129_audio3e')}
+              </li>
             </ul>
           </div>
         </section>
@@ -107,11 +162,20 @@ const Pagina129 = () => {
             </tbody>
           </table>
           <div className={styles.pg129__exemplos}>
-            <strong>Negative:</strong>
+            <strong>Negative: {renderIcon('global_negativee')}</strong>
             <ul>
-              <li>I am <span style={{ color: 'red' }}>not</span> sleeping now.</li>
-              <li>He is <span style={{ color: 'red' }}>not</span> listening to music.</li>
-              <li>We are <span style={{ color: 'red' }}>not</span> going to the party.</li>
+              <li>
+                I am <span style={{ color: 'red' }}>not</span> sleeping now.
+                {renderIcon('pg129_audio4e')}
+              </li>
+              <li>
+                He is <span style={{ color: 'red' }}>not</span> listening to music.
+                {renderIcon('pg129_audio5e')}
+              </li>
+              <li>
+                We are <span style={{ color: 'red' }}>not</span> going to the party.
+                {renderIcon('pg129_audio6e')}
+              </li>
             </ul>
           </div>
         </section>

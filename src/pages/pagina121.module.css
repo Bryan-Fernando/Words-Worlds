@@ -230,3 +230,19 @@
     position: relative;
     bottom: 0.23em;
 }
+
+.page121_columnA--title{
+    position: relative;
+    bottom: 15rem;
+    left: 19rem;
+    color: red;
+    font-size: 2rem;
+}
+
+.page121_columnB--title{
+    position: relative;
+    bottom: 15rem;
+    left: 19rem;
+    color: red;
+    font-size: 2rem;
+}

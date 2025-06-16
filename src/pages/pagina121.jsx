@@ -116,6 +116,7 @@ const Pagina121 = () => {
                         </h2>
 
                         <div className={styles["page121_container-coluns"]}>
+                        <span className={styles["page121_columnA--title"]}>A</span>
                             <div className={styles["page121_container-colunsa"]}>
                                 <p>1. She is cooking</p>
                                 <p>2. We are waiting</p>
@@ -123,6 +124,7 @@ const Pagina121 = () => {
                                 <p>4. They are travelling</p>
                                 <p>5. The students are studying</p>
                             </div>
+                            <span className={styles["page121_columnB--title"]}>B</span>
                             <div className={styles["page121_container-colunsb"]}>
                                 <p>a) because he is tired.</p>
                                 <p>b) for the bus.</p>

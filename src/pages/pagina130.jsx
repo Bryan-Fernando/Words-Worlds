@@ -21,6 +21,7 @@ const Pagina130 = () => {
             <th><span style={{ color: 'red' }}>'Not'</span> <br /> Advérbio</th>
             <th>Verbo(s)</th>
             <th>Objeto <br /> Complemento</th>
+            <th>Tradução</th>
           </tr>
         </thead>
         <tbody>
@@ -28,9 +29,19 @@ const Pagina130 = () => {
             <td></td>
             <td>Am</td>
             <td>I</td>
-            <td style={{ color: 'red' }}>(not)</td>
+            <td style={{ color: 'red' }}>not</td>
             <td>go<span style={{ color: 'red' }}>ing</span></td>
             <td>to the movies with you?</td>
+            <td>Eu não vou ao cinema com vocês?</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Ain't</td>
+            <td>I</td>
+            <td></td>
+            <td>go<span style={{ color: 'red' }}>ing</span></td>
+            <td>to the movies with you?</td>
+            <td>Eu não vou ao cinema com vocês?</td>
           </tr>
         </tbody>
       </table>
@@ -55,17 +66,6 @@ const Pagina130 = () => {
         </div>
       </section>
 
-      <aside className={styles["page130__aside"]}>
-        <div className={styles["page130__aside--container"]}>
-          <div className={styles["page130__aside--note1"]}>
-            <p>Nota:</p>
-          </div>
-          <div className={styles["page130__aside--note2"]}>
-            <p>Em português, o gerúndio é a forma do verbo terminada em <strong>“ando“, “endo“, “indo“.</strong></p>
-          </div>
-        </div>
-      </aside>
-
       <section className={styles["page130__translations"]}>
         <div>
           <p>Speak - Speak<span style={{ color: '#A61C28' }}>ing</span></p>
@@ -78,6 +78,18 @@ const Pagina130 = () => {
           <p>Partir / Sair - Part<span style={{ color: '#0A3282' }}>indo</span> / Sa<span style={{ color: '#0A3282' }}>indo</span></p>
         </div>
       </section>
+
+      <aside className={styles["page130__aside"]}>
+        <div className={styles["page130__aside--container"]}>
+          <div className={styles["page130__aside--note1"]}>
+            <p>Nota:</p>
+          </div>
+          <div className={styles["page130__aside--note2"]}>
+            <p>Em português, o gerúndio é a forma do verbo terminada em <strong>“ando“, “endo“, “indo“.</strong></p>
+          </div>
+        </div>
+      </aside>
+
     </div>
   );
 };

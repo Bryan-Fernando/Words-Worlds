@@ -179,3 +179,22 @@
 .pg129__negativo_not {
   color: red !important;
 }
+
+.page129__icon{
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page119__icons-container img:hover {
+  transform: scale(1.2);
+}
+
+.page129__liRed{
+  color: red;
+  font-size: 2rem;
+}
