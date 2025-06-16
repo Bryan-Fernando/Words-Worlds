@@ -1,0 +1,92 @@
+.container {
+    padding: 2rem;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .grammarRed {
+    color: #a61c28;
+    font-weight: bold;
+  }
+  
+  .grammarBold {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  .instruction {
+    color: #1c4c9c;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  .matchBox {
+    display: flex;
+    gap: 3rem;
+    border: 3px solid #1c4c9c;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    background-color: #ffffff;
+    max-width: 450px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .leftBox, .rightBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .matchItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .definition {
+    font-size: 1.4rem;
+  }
+  
+  .input {
+    width: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  .resultIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .checkContainer {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .checkButton {
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    background-color: #a61c28;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  
+  .checkButton:hover {
+    background-color: #8a1720;
+  }
+  

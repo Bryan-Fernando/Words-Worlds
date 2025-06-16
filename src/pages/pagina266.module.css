@@ -1,0 +1,164 @@
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: white;
+}
+
+.pageContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.columnContainer {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    text-align: left;
+}
+
+.header {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.headerTitle {
+    color: #A61C28;
+    font-size: 6rem;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.subTitle {
+    color: #A61C28;
+    font-size: 2.9rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.namesBox {
+    width: 100%;
+    border: 2px solid #A61C28;
+    border-radius: 8px;
+    padding: 1.2rem 1.5rem;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.namesBox p {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.comparisonBlock {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+}
+
+
+
+.blockHeader {
+    background-color: #e6e6e6;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.5rem;
+    line-height: 1;
+}
+
+.blockHeader span {
+    display: inline;
+}
+
+.blockHeader p {
+    font-size: 1.8rem;
+    color: #333;
+    
+}
+
+.exampleBox {
+    width: 100%;
+    border: 4px solid #002f6c;
+    border-radius: 10px 10px 10px 10px;
+    padding: 1.2rem 1.5rem;
+}
+
+.exampleBox p {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+.highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.colorSubTitle {
+    color: #002f6c;
+    font-weight: bold;
+    font-size: 1.7rem;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.blockHeader {
+    background-color: #e6e6e6;
+    border-radius: 8px 8px 0 0;
+    padding: 1rem 1.5rem;
+    line-height: 1;
+}
+
+.blockHeader span {
+    display: inline;
+}
+
+.sublinhar {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #A61C28;
+}
+
+.sublinharSubTitle {
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #A61C28;
+}
+
+.translation {
+    font-style: italic;
+    color: #A61C28;
+}
+
+.imagePlaceholder {
+    width: 600px;
+    height: 400px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .headerTitle {
+        font-size: 2.8rem;
+    }
+
+    .subTitle {
+        font-size: 2.2rem;
+    }
+
+    .blockHeader p,
+    .exampleBox p {
+        font-size: 1.6rem;
+    }
+}

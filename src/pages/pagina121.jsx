@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import styles from './pagina121.module.css';
 
@@ -9,18 +9,12 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
-import pg121_audio1e from '../assets/audios/pg94_audio1e.mp3';
-import pg121_audio1p from '../assets/audios/pg94_audio1p.mp3';
-import pg121_audio2 from '../assets/audios/pg94_audio2.mp3';
-import pg121_audio3 from '../assets/audios/pg94_audio3.mp3';
-import pg121_audio4 from '../assets/audios/pg94_audio4.mp3';
-import pg121_audio5 from '../assets/audios/pg94_audio5.mp3';
-import pg121_audio6 from '../assets/audios/pg94_audio6.mp3';
-import pg121_audio7 from '../assets/audios/pg94_audio7.mp3';
-import pg121_audio8 from '../assets/audios/pg94_audio8.mp3';
-import pg121_audio9 from '../assets/audios/pg94_audio9.mp3';
-import pg121_audio10 from '../assets/audios/pg94_audio10.mp3';
-import pg121_audio11 from '../assets/audios/pg94_audio11.mp3';
+import pg121_audio1e from '../assets/audios/pg121_audio1e.mp3';
+import pg121_audio2e from '../assets/audios/pg121_audio2e.mp3';
+import pg121_audio3e from '../assets/audios/pg121_audio3e.mp3';
+import pg121_audio4e from '../assets/audios/pg121_audio4e.mp3';
+import pg121_audio5e from '../assets/audios/pg121_audio5e.mp3';
+import pg121_audio6e from '../assets/audios/pg121_audio6e.mp3';
 
 const Pagina121 = () => {
     const [inputValues, setInputValues] = useState(Array(6).fill(''));
@@ -38,27 +32,31 @@ const Pagina121 = () => {
         global_learning_le_e,
         global_learning_le_p,
         pg121_audio1e,
-        pg121_audio1p,
-        pg121_audio2,
-        pg121_audio3,
-        pg121_audio4,
-        pg121_audio5,
-        pg121_audio6,
-        pg121_audio7,
-        pg121_audio8,
-        pg121_audio9,
-        pg121_audio10,
-        pg121_audio11
+        pg121_audio2e,
+        pg121_audio3e,
+        pg121_audio4e,
+        pg121_audio5e,
+        pg121_audio6e
     };
+    
+
+    const currentAudioRef = useRef(null);
 
     const playAudio = (audioKey) => {
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+    
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
+            currentAudioRef.current = audio;
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
+    
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
@@ -141,9 +139,8 @@ const Pagina121 = () => {
                             "",
                             ""
                         ].map((question, index) => {
-                            const answerAudio = `pg121_audio${index + 2}`;
-                            const inputAudio = `pg121_audio${index + 7}`;
-
+                            const answerAudio = `pg121_audio${index + 2}e`;
+                        
                             return (
                                 <div key={index} className={styles["page121__question"]}>
                                     <div className={styles["page121__input-container"]}>
@@ -153,30 +150,22 @@ const Pagina121 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index)}
                                             className={styles["page121__input-box"]}
                                         />
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page121__additional-icon"]}
-                                            onClick={() => playAudio(inputAudio)}
-                                        />
                                         {results[index] !== null ? (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page121__checkmark-image"]}
-                                                style={{ display: "inline-block" }}
                                             />
                                         ) : (
                                             <span className={styles["page121__placeholder"]}></span>
                                         )}
-
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Audio Icon"
+                                            className={styles["page121__additional-icon"]}
+                                            onClick={() => playAudio(answerAudio)}
+                                        />
                                     </div>
-                                    <span
-                                        className={styles["page121__question-text"]}
-                                        onClick={() => playAudio(answerAudio)}
-                                    >
-                                        <em>{question}</em>
-                                    </span>
                                 </div>
                             );
                         })}

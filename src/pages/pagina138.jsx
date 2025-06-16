@@ -11,20 +11,10 @@ import adverbioAudio from '../assets/audios/adverbio.mp3';
 import verboAudio from '../assets/audios/verbo.mp3';
 import objeto_complemento_audio from '../assets/audios/objeto_complemento.mp3';
 import traducaoAudio from '../assets/audios/traducao.mp3';
-import pg108_audio1 from '../assets/audios/pg108_audio1.mp3';
-import pg108_audio2 from '../assets/audios/pg108_audio2.mp3';
-import pg108_audio3 from '../assets/audios/pg108_audio3.mp3';
+
 import pg108_audio4 from '../assets/audios/pg108_audio4.mp3';
-import pg108_audio5 from '../assets/audios/pg108_audio5.mp3';
-import pg108_audio6 from '../assets/audios/pg108_audio6.mp3';
-import pg108_audio7 from '../assets/audios/pg108_audio7.mp3';
-import pg108_trad1 from '../assets/audios/pg108_trad1.mp3';
-import pg108_trad2 from '../assets/audios/pg108_trad2.mp3';
-import pg108_trad3 from '../assets/audios/pg108_trad3.mp3';
+
 import pg108_trad4 from '../assets/audios/pg108_trad4.mp3';
-import pg108_trad5 from '../assets/audios/pg108_trad5.mp3';
-import pg108_trad6 from '../assets/audios/pg108_trad6.mp3';
-import pg108_trad7 from '../assets/audios/pg108_trad7.mp3';
 
 const Pagina108 = () => {
     const [inputValues, setInputValues] = useState(

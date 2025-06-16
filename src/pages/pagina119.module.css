@@ -61,12 +61,14 @@
 }
 
 .page119__frame--text {
-    width: 41rem;
+    width: 46rem;
     height: 12rem;
     padding: 1rem;
     text-align: left;
     border: 0.3rem solid #A61C28;
 }
+
+
 
 .page119__container--text {
     text-align: left;
@@ -99,4 +101,18 @@
 .page119__image {
     width: 65rem;
     height: 40rem;
+}
+
+.page119__icons-container img {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 0.3rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.page119__icons-container img:hover {
+    transform: scale(1.2);
 }

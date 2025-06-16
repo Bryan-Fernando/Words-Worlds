@@ -1,1 +1,60 @@
-/* Styles for pagina144 */
+.page144 {
+    display: flex;
+    min-height: 55vh;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.page144__title {
+    color: #A61C28;
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page144__subtitle {
+    font-size: 2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.page144__section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.page144__dialogue {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 1.6rem;
+    color: black;
+}
+
+.page144__dialogue__text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.page144__dialogue p {
+    margin: 0;
+    text-align: left;
+    margin-top: 1.5rem;
+}
+
+.page144__dialogue--person2 {
+    color: #A61C28;
+    font-style: italic;
+}
+
+.page144__image {
+    width: 25rem;
+    height: auto;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+}

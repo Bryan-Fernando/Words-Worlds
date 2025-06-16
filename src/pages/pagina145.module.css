@@ -1,1 +1,45 @@
-/* Styles for pagina145 */
+.page145 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 1rem;
+}
+
+.page145__title {
+    color: #A61C28;
+    font-size: 2.4rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page145__title--highlight {
+    font-weight: bold;
+}
+
+.page145__section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.page145__subtitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.page145__list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.page145__highlight {
+    color: #A61C28;
+    font-weight: normal;
+}

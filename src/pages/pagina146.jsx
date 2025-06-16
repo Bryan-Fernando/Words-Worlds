@@ -1,67 +1,132 @@
 import React, { useState } from 'react';
-import clock1 from '../assets/images/clock1.png';
-import clock2 from '../assets/images/clock2.png';
-import clock3 from '../assets/images/clock3.png';
-import clock_w from '../assets/audios/clock-w.mp3';
-import clock_1 from '../assets/audios/clock1.mp3';
-import clock_2 from '../assets/audios/clock2.mp3';
-import clock_3 from '../assets/audios/clock3.mp3';
 import styles from './pagina146.module.css';
 
-const Pagina146 = () => {
-    const [currentClock, setCurrentClock] = useState(clock1);
+import correct_icon from '../assets/icons/correct_icon.webp';
+import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-    const handleClockChange = (clockNumber) => {
-        switch (clockNumber) {
-            case 1:
-                setCurrentClock(clock1);
-                break;
-            case 2:
-                setCurrentClock(clock2);
-                break;
-            case 3:
-                setCurrentClock(clock3);
-                break;
-            default:
-                setCurrentClock(clock1);
-        }
+import pagina146_imagem1 from '../assets/images/pagina146_imagem1.webp';
+
+const Pagina146 = () => {
+    const [inputValues, setInputValues] = useState(Array(8).fill(''));
+    const [results, setResults] = useState(Array(8).fill(null));
+    const [showAnswers, setShowAnswers] = useState(false);
+
+    const correctAnswers = [
+        'is running',
+        'are having',
+        'am not watching',
+        'are you crying',
+        'are traveling',
+        'is sleeping',
+        'are always forgetting',
+        'is changing'
+    ];
+
+    const handleCheckClick = () => {
+        const newResults = inputValues.map((value, index) =>
+            value.trim().toLowerCase() === correctAnswers[index]
+        );
+        setResults(newResults);
+        setShowAnswers(true);
     };
 
-    const playAudio = (audioKey) => {
-        if (audioMap[audioKey]) {
-            const audio = new Audio(audioMap[audioKey]);
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
-        }
-    }
-
-    const audioMap = {
-        clock_w,
-        clock_1,
-        clock_2,
-        clock_3
+    const handleInputChange = (value, index) => {
+        const newValues = [...inputValues];
+        newValues[index] = value;
+        setInputValues(newValues);
     };
 
     return (
-        <div className={styles.pg91Container}>
-            <header className={styles.pg91Header}>
-                <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                <div>
-                    <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                    <p>Dizendo as horas</p>
+        <div className={styles["page146__container"]}>
+            <h1 className={styles["page146__title"]}>
+                <span className={styles["page146__title--red"]}>Exercises</span>
+                <span className={styles["page146__icons-container"]}>
+                    <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
+                </span>
+            </h1>
+
+            <h2 className={styles["page146__exercise-instruction"]}>
+                1. Fill in the blanks : Complete the sentences using the correct form of the Present Continuous in parentheses.
+                <span className={styles["page146__icons-container"]}>
+                    <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                </span>
+            </h2>
+
+            <p className={styles["page146__exercise-translation"]}>
+                Complete os espaços vazios das frases usando a forma correta do presente contínuo – Gerúndio dos verbos entre parênteses.
+            </p>
+
+            <div className={styles["page146__content"]}>
+                <div className={styles["page146__questions-container"]}>
+                    {[
+                        "1. Look! She ________ (run) in the park.",
+                        "2. We ________ (have) dinner right now.",
+                        "3. I ________ (not watch) TV at the moment.",
+                        "4. Why ________ (you / cry)?",
+                        "5. My parents ________ (travel) to Spain next month.",
+                        "6. The baby ________ (sleep) now.",
+                        "7. You ________ (always / forget) your keys!",
+                        "8. The world ________ (change) fast."
+                    ].map((question, index) => (
+                        <div key={index} className={styles["page146__question"]}>
+                            <span>{question.split('________')[0]}</span>
+                            <div className={styles["page146__input-container"]}>
+                                <input
+                                    type="text"
+                                    value={inputValues[index]}
+                                    onChange={(e) => handleInputChange(e.target.value, index)}
+                                    className={styles["page146__input-box"]}
+                                />
+                                {results[index] !== null && (
+                                    <img
+                                        src={results[index] ? correct_icon : wrong_icon}
+                                        alt={results[index] ? "Correct" : "Incorrect"}
+                                        className={styles["page146__checkmark-image"]}
+                                    />
+                                )}
+                            </div>
+
+                            <span>{question.split('________')[1]}</span>
+                            <span className={styles["page146__icons-container"]}>
+                                <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                                <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
+                            </span>
+                        </div>
+                    ))}
                 </div>
-            </header>
-            <main className={styles.pg91Main}>
-                <div className={styles.clockTextContainer}>
-                    <p onClick={() => handleClockChange(1)}> <span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_1')}> It is one o’clock</span></p>
-                    <p onClick={() => handleClockChange(2)}><span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_2')}> It is two o’clock</span></p>
-                    <p onClick={() => handleClockChange(3)}><span onClick={() => playAudio('clock_w')}>What time is it?</span><span onClick={() => playAudio('clock_3')}> It is three o’clock</span></p>
+
+                <div className={styles["page146__image-container"]}>
+                    <img
+                        src={pagina146_imagem1}
+                        alt="Running Girl"
+                        className={styles["page146__image"]}
+                    />
                 </div>
-                <div className={styles.clockImageContainer}>
-                    <img src={currentClock} alt="Clock showing selected time" />
+            </div>
+
+            <button className={styles["page146__check-button"]} onClick={handleCheckClick}>
+                <em>Check</em>
+            </button>
+            {showAnswers && (
+                <div className={styles["page146__answers-section"]}>
+                    <h2 className={styles["page146__answers-title"]}>Answers</h2>
+                    <h3 className={styles["page146__answers-subtitle"]}>1. Fill in the blanks:</h3>
+                    <ul className={styles["page146__answers-list"]}>
+                        <li>Look! She is running in the park.</li>
+                        <li>We are having dinner right now.</li>
+                        <li>I am not watching TV at the moment.</li>
+                        <li>Why are you crying?</li>
+                        <li>My parents are traveling to Spain next month.</li>
+                        <li>The baby is sleeping now.</li>
+                        <li>You are always forgetting your keys!</li>
+                        <li>The world is changing fast.</li>
+                    </ul>
                 </div>
-            </main>
+            )}
+
         </div>
     );
 };

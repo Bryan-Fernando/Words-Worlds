@@ -1,0 +1,144 @@
+.page130 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.page130__header--h1 {
+    font-size: 2.8em;
+    text-align: left;
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page130__header--h2 {
+    font-size: 2.8rem;
+    color: #A61C28;
+    text-align: left;
+}
+
+.page130__header--highlight {
+    color: #A61C28;
+}
+
+.page130__table--header {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.page130__styled--table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    table-layout: fixed;
+}
+
+.page130__styled--table th,
+.page130__styled--table td {
+    border: 0.1rem solid #A61C28;
+    padding: 0.5rem;
+    text-align: center;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.page130__styled--table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.page130__examples {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.page130__examples--block {
+    width: 45%;
+    padding-right: 1rem;
+}
+
+.page130__examples--block:first-child {
+    border-right: 0.4rem solid #A61C28;
+}
+
+.page130__examples--title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.page130__examples li {
+    font-size: 2.5rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.page130__examples--highlight {
+    color: #A61C28;
+    font-weight: bold;
+}
+
+.page130__aside--container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.page130__aside--note1 {
+    width: 80%;
+    height: fit-content;
+    border: 4px solid #103275;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    text-align: left;
+    font-weight: 600;
+    padding-left: 10px;
+    background-color: #103275;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.page130__aside--note2 {
+    width: 80%;
+    border: 4px solid #103275;
+    border-top: 1px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    text-align: left;
+    padding-left: 10px;
+    color: #103275;
+}
+
+.page130__aside--note2 p {
+    padding: 1vw;
+    font-size: 1.65rem;
+}
+
+.page130__translations {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    gap: 1rem;
+}
+
+.page130__translations p {
+    margin: 0.3rem 0;
+    font-size: 2.5rem;
+    text-align: left;
+}

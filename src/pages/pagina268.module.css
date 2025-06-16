@@ -1,0 +1,93 @@
+.container {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.grammarRed {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+.grammarBold {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.instruction {
+  color: #1c4c9c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.questionBox {
+  border: 3px solid #1c4c9c;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 650px
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  flex-wrap: wrap;
+}
+
+.input {
+  width: 240px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0.5rem;
+}
+
+.resultIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.3rem; /* bem próximo do input */
+  vertical-align: middle;
+}
+
+.checkContainer {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.checkButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 0;
+}
+
+.checkButton:hover {
+  background-color: #8a1720;
+}

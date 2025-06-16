@@ -171,6 +171,11 @@
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.page121__additional-icon:hover {
+    transform: scale(1.2);
 }
 
 .page121__input-box {

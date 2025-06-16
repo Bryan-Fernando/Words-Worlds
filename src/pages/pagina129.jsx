@@ -27,10 +27,10 @@ const Pagina129 = () => {
             <strong>Gerúndio - Forma do Presente Contínuo / Progressivo</strong>
           </div>
           <div className={styles.pg129__aside_note2}>
-            <ul>
-              <li>Em andamento ou acontecendo no momento da fala;</li>
-              <li>Ações ou situações temporárias (não definitivas);</li>
-              <li>Também usado para planos futuros ou ações que acontecerão em breve.</li>
+            <ul> Usado para indicar ações que estão:
+              <li style={{ fontSize: '2rem' }}>Em andamento ou acontecendo no momento da fala;</li>
+              <li style={{ fontSize: '2rem' }}>Ações ou situações temporárias (não definitivas);</li>
+              <li style={{ fontSize: '2rem' }}>Também usado para planos futuros ou ações que acontecerão em breve.</li>
             </ul>
           </div>
         </section>
@@ -40,13 +40,14 @@ const Pagina129 = () => {
           <h3 className={styles.pg129__estrutura_titulo}>Structure / Estrutura</h3>
           <div className={styles.pg129__estrutura_formula}>
             <span>Subject</span>
-            <span> + </span>
-            <span>Verbo be am/is/are</span>
-            <span> + </span>
-            <span>Main Verb ( ING )</span>
-            <span> + </span>
+            <span className={styles.pg129__plus}> + </span>
+            <span>Verbo be am / is / are</span>
+            <span className={styles.pg129__plus}> + </span>
+            <span>Main Verb <span className={styles.pg129__highlight_red}>( ING )</span></span>
+            <span className={styles.pg129__plus}> + </span>
             <span>Object</span>
           </div>
+
         </section>
 
         {/* Tabela Affirmative */}
@@ -56,33 +57,19 @@ const Pagina129 = () => {
             <thead>
               <tr>
                 <th>Subject</th>
-                <th>Aux</th>
+                <th>Aux. <br /> Verb</th>
                 <th>Adv</th>
                 <th>Verb (s)</th>
-                <th>Object/Complement</th>
+                <th>Object <br />Complement</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>I</td>
-                <td>am</td>
                 <td></td>
-                <td>studying</td>
-                <td>English.</td>
-              </tr>
-              <tr>
-                <td>She</td>
-                <td>is</td>
                 <td></td>
-                <td>watching</td>
-                <td>TV.</td>
-              </tr>
-              <tr>
-                <td>They</td>
-                <td>are</td>
                 <td></td>
-                <td>playing</td>
-                <td>soccer.</td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
@@ -103,38 +90,28 @@ const Pagina129 = () => {
             <thead>
               <tr>
                 <th>Subject</th>
-                <th>Aux (Not)</th>
+                <th>Aux. <br /> Verb</th>
+                <th className={styles.pg129__negativo_not}>(Not)</th>
                 <th>Verb (s)</th>
-                <th>Object/Complement</th>
+                <th>Object <br />Complement</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>I</td>
-                <td>am not</td>
-                <td>sleeping</td>
-                <td>now.</td>
-              </tr>
-              <tr>
-                <td>He</td>
-                <td>is not</td>
-                <td>listening</td>
-                <td>to music.</td>
-              </tr>
-              <tr>
-                <td>We</td>
-                <td>are not</td>
-                <td>going</td>
-                <td>to the party.</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
             </tbody>
           </table>
           <div className={styles.pg129__exemplos}>
             <strong>Negative:</strong>
             <ul>
-              <li>I am not sleeping now.</li>
-              <li>He is not listening to music.</li>
-              <li>We are not going to the party.</li>
+              <li>I am <span style={{ color: 'red' }}>not</span> sleeping now.</li>
+              <li>He is <span style={{ color: 'red' }}>not</span> listening to music.</li>
+              <li>We are <span style={{ color: 'red' }}>not</span> going to the party.</li>
             </ul>
           </div>
         </section>
