@@ -142,3 +142,16 @@
     font-size: 2.5rem;
     text-align: left;
 }
+
+.page130__icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  position: relative;
+  top: 0.3rem;
+}
+
+.page130__icon--playing {
+  animation: pulse 1s infinite;
+}

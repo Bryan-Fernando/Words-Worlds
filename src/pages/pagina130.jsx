@@ -1,7 +1,62 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina130.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
+import pg130_audio1e from '../assets/audios/pg130_audio1e.mp3';
+import pg130_audio2e from '../assets/audios/pg130_audio2e.mp3';
+import pg130_audio3e from '../assets/audios/pg130_audio3e.mp3';
+import pg130_audio4e from '../assets/audios/pg130_audio4e.mp3';
+import pg130_audio5e from '../assets/audios/pg130_audio5e.mp3';
+import pg130_audio6e from '../assets/audios/pg130_audio6e.mp3';
+import pg130_audio7e from '../assets/audios/pg130_audio7e.mp3';
+import pg130_audio8e from '../assets/audios/pg130_audio8e.mp3';
+import pg130_audio9e from '../assets/audios/pg130_audio9e.mp3';
+import pg130_audio10e from '../assets/audios/pg130_audio10e.mp3';
+import pg130_audio11e from '../assets/audios/pg130_audio11e.mp3';
+import pg130_audio12e from '../assets/audios/pg130_audio12e.mp3';
+import pg130_audio13e from '../assets/audios/pg130_audio13e.mp3';
+
 const Pagina130 = () => {
+  const audioMap = {
+    pg130_audio1e,
+    pg130_audio2e,
+    pg130_audio3e,
+    pg130_audio4e,
+    pg130_audio5e,
+    pg130_audio6e,
+    pg130_audio7e,
+    pg130_audio8e,
+    pg130_audio9e,
+    pg130_audio10e,
+    pg130_audio11e,
+    pg130_audio12e,
+    pg130_audio13e,
+  };
+
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioKey) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioMap[audioKey]);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
+  const renderIcon = (engKey) => (
+    <span className={styles["page130__icons-container"]}>
+      <img
+        src={eng_audio_icon}
+        alt="English Audio"
+        className={styles["page130__icon"]}
+        onClick={() => playAudio(engKey)}
+      />
+    </span>
+  );
+
   return (
     <div className={styles["page130"]}>
       <header className={styles["page130__header"]}>
@@ -11,7 +66,10 @@ const Pagina130 = () => {
         <h2 className={styles["page130__header--h2"]}>Gerúndio</h2>
       </header>
 
-      <div className={styles["page130__table--header"]}>Interrogative Form (+, -, ?)</div>
+      <div className={styles["page130__table--header"]}>
+        Interrogative Form (+, -, ?)
+      </div>
+
       <table className={styles["page130__styled--table"]}>
         <thead>
           <tr>
@@ -26,21 +84,21 @@ const Pagina130 = () => {
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td>Am</td>
-            <td>I</td>
-            <td style={{ color: 'red' }}>not</td>
-            <td>go<span style={{ color: 'red' }}>ing</span></td>
-            <td>to the movies with you?</td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}></td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>Am</td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>I</td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer', color: 'red' }}>not</td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>going</td>
+            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>to the movies with you?</td>
             <td>Eu não vou ao cinema com vocês?</td>
           </tr>
           <tr>
+            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}></td>
+            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>Ain't</td>
+            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>I</td>
             <td></td>
-            <td>Ain't</td>
-            <td>I</td>
-            <td></td>
-            <td>go<span style={{ color: 'red' }}>ing</span></td>
-            <td>to the movies with you?</td>
+            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>going</td>
+            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>to the movies with you?</td>
             <td>Eu não vou ao cinema com vocês?</td>
           </tr>
         </tbody>
@@ -48,34 +106,38 @@ const Pagina130 = () => {
 
       <section className={styles["page130__examples"]}>
         <div className={styles["page130__examples--block"]}>
-          <p className={styles["page130__examples--title"]}>Interrogative - Affirmative:</p>
+          <p className={styles["page130__examples--title"]}>
+            Interrogative - Affirmative: {renderIcon('pg130_audio3e')}
+          </p>
           <ul>
-            <li>Are you studying now?</li>
-            <li>Is she cooking dinner?</li>
-            <li>Am I speaking too fast?</li>
+            <li>Are you studying now? {renderIcon('pg130_audio4e')}</li>
+            <li>Is she cooking dinner? {renderIcon('pg130_audio5e')}</li>
+            <li>Am I speaking too loud? {renderIcon('pg130_audio6e')}</li>
           </ul>
         </div>
 
         <div className={styles["page130__examples--block"]}>
-          <p className={styles["page130__examples--title"]}>Interrogative - Negative:</p>
+          <p className={styles["page130__examples--title"]}>
+            Interrogative - Negative: {renderIcon('pg130_audio7e')}
+          </p>
           <ul>
-            <li><span className={styles["page130__examples--highlight"]}>Aren’t</span> you studying for the test?</li>
-            <li><span className={styles["page130__examples--highlight"]}>Isn’t</span> she cooking dinner?</li>
-            <li><span className={styles["page130__examples--highlight"]}>Ain’t</span> I speaking too fast?</li>
+            <li>Aren’t you studying for the test? {renderIcon('pg130_audio8e')}</li>
+            <li>Isn’t she cooking dinner? {renderIcon('pg130_audio9e')}</li>
+            <li>Ain’t I speaking too fast? {renderIcon('pg130_audio10e')}</li>
           </ul>
         </div>
       </section>
 
       <section className={styles["page130__translations"]}>
         <div>
-          <p>Speak - Speak<span style={{ color: '#A61C28' }}>ing</span></p>
-          <p>Eat - Eat<span style={{ color: '#A61C28' }}>ing</span></p>
-          <p>Leave - Leav<span style={{ color: '#A61C28' }}>ing</span></p>
+          <p>Speak - Speaking {renderIcon('pg130_audio11e')}</p>
+          <p>Eat - Eating {renderIcon('pg130_audio12e')}</p>
+          <p>Leave - Leaving {renderIcon('pg130_audio13e')}</p>
         </div>
         <div>
-          <p>Falar - Fal<span style={{ color: '#0A3282' }}>ando</span></p>
-          <p>Comer - Com<span style={{ color: '#0A3282' }}>endo</span></p>
-          <p>Partir / Sair - Part<span style={{ color: '#0A3282' }}>indo</span> / Sa<span style={{ color: '#0A3282' }}>indo</span></p>
+          <p>Falar - Falando</p>
+          <p>Comer - Comendo</p>
+          <p>Partir / Sair - Partindo / Saindo</p>
         </div>
       </section>
 
@@ -89,7 +151,6 @@ const Pagina130 = () => {
           </div>
         </div>
       </aside>
-
     </div>
   );
 };

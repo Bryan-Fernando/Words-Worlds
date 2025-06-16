@@ -111,11 +111,11 @@ const Pagina129 = () => {
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
               </tr>
             </tbody>
           </table>
@@ -153,11 +153,11 @@ const Pagina129 = () => {
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles.pg129__input} /></td>
               </tr>
             </tbody>
           </table>
