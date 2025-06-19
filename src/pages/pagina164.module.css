@@ -1,1 +1,98 @@
-/* Styles for pagina164 */
+.page164__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.page164__title {
+  text-align: left;
+  color: #A61C28;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.page164__title--highlight {
+  color: black;
+}
+
+.page164__translations {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.page164__translations-column {
+  width: 45%;
+}
+
+.page164__translation-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 0.4rem solid #A61C28;
+}
+
+.page164__translation-table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.6rem;
+  text-align: left;
+}
+
+.page164__translation-note {
+  font-size: 1.3rem;
+  display: block;
+  margin-top: 0.2rem;
+}
+
+.page164__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page164__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.page164__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page164__table th,
+.page164__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.6rem;
+  text-align: center;
+}
+
+.page164__table th {
+  background-color: #888A8C;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.page164__table td:nth-child(6) {
+  text-align: left;
+}
+
+.page164__text-blue {
+  color: #0A3282;
+}
+
+.page164__images-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.page164__image {
+  width: 30%;
+  height: auto;
+  border-radius: 0.5rem;
+}

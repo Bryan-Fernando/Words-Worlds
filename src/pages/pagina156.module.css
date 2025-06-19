@@ -1,1 +1,80 @@
-/* Styles for pagina156 */
+.page156__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  color: black;
+}
+
+.page156__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28;
+}
+
+.page156__title--highlight {
+  color: black;
+  font-style: italic;
+}
+
+.page156__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.page156__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.page156__table th,
+.page156__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.page156__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page156__verb-cell {
+  background-color: #A61C28;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.page156__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page156__images-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.page156__image {
+  width: 25%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}

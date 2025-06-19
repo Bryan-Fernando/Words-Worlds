@@ -49,57 +49,64 @@ const Pagina129 = () => {
 
 
   return (
-    <div className={styles.pg129__container}>
-      <header className={styles.pg129__header}>
-        <h1 className={styles.pg129__header_h1}>Grammar: <span className={styles.pg129__highlight}>Present Continuous or Progressive Form</span></h1>
-        <h2 className={styles.pg129__header_h2}>Gerúndio</h2>
+    <div className={styles["page129__container"]}>
+      <header className={styles["page129__header"]}>
+        <h1 className={styles["page129__header-title"]}>
+          Grammar: <span className={styles["page129__highlight"]}>Present Continuous or Progressive Form</span>
+        </h1>
+        <h2 className={styles["page129__header-subtitle"]}>Gerúndio</h2>
       </header>
-      <main className={styles.pg129__main}>
+
+      <main className={styles["page129__main"]}>
+
         {/* Bloco azul - Present Continuous / Progressive Form */}
-        <section className={styles.pg129__aside}>
-          <div className={styles.pg129__aside_note1}>
+        <section className={styles["page129__aside"]}>
+          <div className={styles["page129__aside-note1"]}>
             <strong>Present Continuous / Progressive Form</strong>
           </div>
-          <div className={styles.pg129__aside_note2}>
+          <div className={styles["page129__aside-note2"]}>
             <p>
-              The Present Continuous tense is used to describe actions happening right now, at the moment of speaking, or actions that are ongoing and temporary. It is also used for future plans that will happen soon.
+              The Present Continuous tense is used to describe actions happening right now, at the moment of speaking,
+              or actions that are ongoing and temporary. It is also used for future plans that will happen soon.
             </p>
           </div>
         </section>
 
         {/* Bloco azul - Gerúndio */}
-        <section className={styles.pg129__aside}>
-          <div className={styles.pg129__aside_note1}>
+        <section className={styles["page129__aside"]}>
+          <div className={styles["page129__aside-note1"]}>
             <strong>Gerúndio - Forma do Presente Contínuo / Progressivo</strong>
           </div>
-          <div className={styles.pg129__aside_note2}>
-            <ul> Usado para indicar ações que estão:
-              <li className={styles.page129__liRed}>Em andamento ou acontecendo no momento da fala;</li>
-              <li className={styles.page129__liRed}>Ações ou situações temporárias (não definitivas);</li>
-              <li className={styles.page129__liRed}>Também usado para planos futuros ou ações que acontecerão em breve.</li>
+          <div className={styles["page129__aside-note2"]}>
+            <ul>
+              Usado para indicar ações que estão:
+              <li className={styles["page129__li--red"]}>Em andamento ou acontecendo no momento da fala;</li>
+              <li className={styles["page129__li--red"]}>Ações ou situações temporárias (não definitivas);</li>
+              <li className={styles["page129__li--red"]}>Também usado para planos futuros ou ações que acontecerão em breve.</li>
             </ul>
           </div>
         </section>
 
         {/* Estrutura */}
-        <section className={styles.pg129__estrutura}>
-          <h3 className={styles.pg129__estrutura_titulo}>Structure / Estrutura</h3>
-          <div className={styles.pg129__estrutura_formula}>
+        <section className={styles["page129__structure"]}>
+          <h3 className={styles["page129__structure-title"]}>Structure / Estrutura</h3>
+          <div className={styles["page129__structure-formula"]}>
             <span>Subject</span>
-            <span className={styles.pg129__plus}> + </span>
+            <span className={styles["page129__plus"]}> + </span>
             <span>Verbo be am / is / are</span>
-            <span className={styles.pg129__plus}> + </span>
-            <span>Main Verb <span className={styles.pg129__highlight_red}>( ING )</span></span>
-            <span className={styles.pg129__plus}> + </span>
+            <span className={styles["page129__plus"]}> + </span>
+            <span>
+              Main Verb <span className={styles["page129__highlight--red"]}>( ING )</span>
+            </span>
+            <span className={styles["page129__plus"]}> + </span>
             <span>Object</span>
           </div>
-
         </section>
 
         {/* Tabela Affirmative */}
-        <section className={styles.pg129__table_afirmativa_container}>
-          <div className={styles.pg129__table_header_afirmativa}>Affirmative Form (+)</div>
-          <table className={styles.pg129__styled_table_afirmativa}>
+        <section className={styles["page129__table-afirmative-container"]}>
+          <div className={styles["page129__table-header--afirmative"]}>Affirmative Form (+)</div>
+          <table className={styles["page129__styled-table--afirmative"]}>
             <thead>
               <tr>
                 <th>Subject</th>
@@ -111,15 +118,15 @@ const Pagina129 = () => {
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
               </tr>
             </tbody>
           </table>
-          <div className={styles.pg129__exemplos}>
+          <div className={styles["page129__examples"]}>
             <strong>Affirmative: {renderIcon('global_affirmativee')}</strong>
             <ul>
               <li>
@@ -139,29 +146,29 @@ const Pagina129 = () => {
         </section>
 
         {/* Tabela Negative */}
-        <section className={styles.pg129__table_negativa_container}>
-          <div className={styles.pg129__table_header_negativa}>Negative Form (-)</div>
-          <table className={styles.pg129__styled_table_negativa}>
+        <section className={styles["page129__table-negative-container"]}>
+          <div className={styles["page129__table-header--negative"]}>Negative Form (-)</div>
+          <table className={styles["page129__styled-table--negative"]}>
             <thead>
               <tr>
                 <th>Subject</th>
                 <th>Aux. <br /> Verb</th>
-                <th className={styles.pg129__negativo_not}>(Not)</th>
+                <th className={styles["page129__negative-not"]}>(Not)</th>
                 <th>Verb (s)</th>
                 <th>Object <br />Complement</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
-                <td><input type="text" className={styles.pg129__input} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
+                <td><input type="text" className={styles["page129__input"]} /></td>
               </tr>
             </tbody>
           </table>
-          <div className={styles.pg129__exemplos}>
+          <div className={styles["page129__examples"]}>
             <strong>Negative: {renderIcon('global_negativee')}</strong>
             <ul>
               <li>

@@ -1,0 +1,78 @@
+.page82 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.page82__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28; /* Título principal em vermelho */
+}
+
+.page82__title--highlight {
+  color: black; /* Subtítulo em preto */
+  font-style: italic;
+}
+
+.page82__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0; /* Somente cantos superiores arredondados */
+}
+
+.page82__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.page82__table th,
+.page82__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.page82__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page82__bf-label {
+  color: #A61C28;
+}
+
+.page82__verb-cell {
+  background-color: #A61C28;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.page82__images {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.page82__image {
+  width: 20%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}

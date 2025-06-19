@@ -1,43 +1,43 @@
-.pg60Container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+.page78__container {
+  width: 100%;
+  padding: 2rem;
 }
 
-.pg60Header {
-    width: 100%;
-    height: 15rem;
-    text-align: left;
-    color: #A61C28;
+.page78__header {
+  text-align: left;
 }
 
-.pg60HeaderH1 {
-    font-size: 4rem;
+.page78__title {
+  color: #A61C28;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 4rem;
 }
 
-.pg60HeaderH2 {
-    font-size: 2.5rem;
+.page78__block {
+  border: 0.4rem solid #0A3282;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  color: #0A3282;
+  text-align: left;
 }
 
-.pg60Main {
-    width: 100%;
-    height: 65rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 5rem;
+.page78__highlight-red {
+  color: #A61C28;
+  font-weight: bold;
 }
 
-/* Este é um comentário */
-
-.pg60MainContainer1 {
-    padding: 1rem;
-    background-color: #F8F9F9;
-    width: 100%;
-    height: 15rem;
-    text-align: left;
-    border: 0.4rem solid #A61C28;
-    border-radius: 1.5rem;
+.page78__highlight-blue {
+  color: #0A3282;
 }
 
+.page78__ex {
+  margin-top: 1rem;
+}
+
+.page78__note {
+  margin-top: 1rem;
+  color: #A61C28;
+  font-weight: bold;
+}

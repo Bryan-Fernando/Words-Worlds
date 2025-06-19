@@ -1,186 +1,120 @@
 import React from 'react';
-
 import styles from './pagina66.module.css';
 
-import pg66IconNotes from '../assets/icons/notes_icon.webp';
-import pg66AudioIcon from '../assets/icons/eng_audio_icon.webp';
-import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
-
-import pagina66Imagem1 from '../assets/images/pagina65_imagem1.webp';
-import pagina66Imagem2 from '../assets/images/pagina65_imagem2.webp';
-import pagina66Imagem3 from '../assets/images/pagina65_imagem3.webp';
-
-import global_readComPrp from '../assets/audios/global_readComPrp.mp3';
-import global_readComPre from '../assets/audios/global_readComPre.mp3';
-import pg65_audio1_1e from "../assets/audios/pg65_audio1_1e.mp3";
-import pg65_audio1_2e from "../assets/audios/pg65_audio1_2e.mp3";
-import pg65_audio1_2p from "../assets/audios/pg65_audio1_2p.mp3";
-import pg65_audio1_3e from "../assets/audios/pg65_audio1_3e.mp3";
-import pg65_audio1_4e from "../assets/audios/pg65_audio1_4e.mp3";
-import pg65_audio1_5e from "../assets/audios/pg65_audio1_5e.mp3";
-import pg65_audio1_6e from "../assets/audios/pg65_audio1_6e.mp3";
-import pg65_audio1_7e from "../assets/audios/pg65_audio1_7e.mp3";
-import pg65_audio2_1e from "../assets/audios/pg65_audio2_1e.mp3";
-import pg65_audio2_2e from "../assets/audios/pg65_audio2_2e.mp3";
-import pg65_audio2_3e from "../assets/audios/pg65_audio2_3e.mp3";
-import pg65_audio2_4e from "../assets/audios/pg65_audio2_4e.mp3";
-import pg65_audio2_5e from "../assets/audios/pg65_audio2_5e.mp3";
-import pg65_audio2_6e from "../assets/audios/pg65_audio2_6e.mp3";
-import pg65_audio3_1e from "../assets/audios/pg65_audio3_1e.mp3";
-import pg65_audio3_2e from "../assets/audios/pg65_audio3_2e.mp3";
-import pg65_audio3_3e from "../assets/audios/pg65_audio3_3e.mp3";
-import pg65_audio3_4e from "../assets/audios/pg65_audio3_4e.mp3";
-import pg65_audio3_5e from "../assets/audios/pg65_audio3_5e.mp3";
-
-const pagina66 = () => {
-
-    const audioMap = {
-        global_readComPre: global_readComPre,
-        global_readComPrp: global_readComPrp,
-        pg65_audio1_1e: pg65_audio1_1e,
-        pg65_audio1_2e: pg65_audio1_2e,
-        pg65_audio1_2p: pg65_audio1_2p,
-        pg65_audio1_3e: pg65_audio1_3e,
-        pg65_audio1_4e: pg65_audio1_4e,
-        pg65_audio1_5e: pg65_audio1_5e,
-        pg65_audio1_6e: pg65_audio1_6e,
-        pg65_audio1_7e: pg65_audio1_7e,
-        pg65_audio2_1e: pg65_audio2_1e,
-        pg65_audio2_2e: pg65_audio2_2e,
-        pg65_audio2_3e: pg65_audio2_3e,
-        pg65_audio2_4e: pg65_audio2_4e,
-        pg65_audio2_5e: pg65_audio2_5e,
-        pg65_audio2_6e: pg65_audio2_6e,
-        pg65_audio3_1e: pg65_audio3_1e,
-        pg65_audio3_2e: pg65_audio3_2e,
-        pg65_audio3_3e: pg65_audio3_3e,
-        pg65_audio3_4e: pg65_audio3_4e,
-        pg65_audio3_5e: pg65_audio3_5e,
-    };
-
-    const playAudio = (audioKey) => {
-        const audioSrc = audioMap[audioKey];
-        if (audioSrc) {
-            const audio = new Audio(audioSrc);
-            audio.play();
-        } else {
-            console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
-        }
-    };
-
+const Pagina66 = () => {
     return (
-        <div>
-            <div className={styles["page66__container"]}>
-                <header className={styles["page66__header"]}>
-                    <h1 className={styles["page66__title"]}>
-                        Reading and Comprehension Language Practice
-                        <img
-                            src={eng_audio_icon}
-                            alt="English audio"
-                            className={styles["page66__audio-icon"]}
-                            onClick={() => playAudio('global_readComPre')}
-                        />
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese audio"
-                            className={styles["page66__audio-icon"]}
-                            onClick={() => playAudio('global_readComPrp')}
-                        />
-                    </h1>
-                </header>
-                <main className={styles["page66__main"]}>
-                    <div className={styles["page66__content"]}>
-                        <div className={styles["page66__text-container--first"]}>
-                            <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio1_1e")}>Getting to Know Brazil</span>
-                            </p>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio1_2e")}>Brazil is a beautiful country in South America.</span>
-                        <img
-                            src={eng_audio_icon}
-                            alt="English audio"
-                            className={styles["page66__audio-textIcon"]}
-                            onClick={() => playAudio('pg65_audio1_2e')}
-                        />
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese audio"
-                            className={styles["page66__audio-textIcon"]}
-                            onClick={() => playAudio('pg65_audio1_2p')}
-                        />
-                                <span onClick={() => playAudio("pg65_audio1_3e")}>It <strong>is</strong> famous for its beautiful beaches </span>
-                                <span onClick={() => playAudio("pg65_audio1_4e")}>culturally diverse</span>
-                                <span onClick={() => playAudio("pg65_audio1_5e")}>, and delicious food.</span>
-                                <span onClick={() => playAudio("pg65_audio1_6e")}>The official language of Brazil is Portuguese.</span>
-                                <span onClick={() => playAudio("pg65_audio1_7e")}> People in Brazil <strong>are</strong> friendly and welcoming</span>
-                            </p>
-                        </div>
-                        <div className={styles["page66__image-container--first"]}>
-                            <img src={pagina66Imagem1} alt="Brazil Image 1" className={styles["page66__image-small"]} />
-                        </div>
-                    </div>
+        <div className={styles["page66__container"]}>
+            <header className={styles["page66__header"]}>
+                <h1 className={styles["page66__grammar-title"]}>Grammar:</h1>
+                <h2 className={styles["page66__header--en"]}>
+                    Common Main Verbs (Base Form) – English & Portuguese
+                </h2>
+                <h3 className={styles["page66__header--pt"]}>
+                    Verbos Principais Comuns (Forma Base) – Inglês e Português
+                </h3>
+                <h4 className={styles["page66__infinitive"]}>Infinitivo</h4>
+            </header>
 
-                    <div className={styles["page66__content"]}>
-                        <div className={styles["page66__text-container--second"]}>
-                            <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio2_1e")}>My Family</span>
-                            </p>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio2_2e")}>My family is small.</span>
-                                <span onClick={() => playAudio("pg65_audio2_3e")}> There <strong>are</strong> four people in my family:</span>
-                                <span onClick={() => playAudio("pg65_audio2_4e")}> my father, my mother, my sister, and me.</span>
-                                <span onClick={() => playAudio("pg65_audio2_5e")}> My father is tall, and my mother <strong>is</strong> kind.</span> <span onClick={() => playAudio("pg65_audio2_6e")}>My sister <strong>is</strong> funny, and I <strong>am</strong> happy.</span>
-                            </p>
-                        </div>
-                        <div className={styles["page66__image-container--second"]}>
-                            <img src={pagina66Imagem2} alt="Brazil Image 2" className={styles["page66__image-small"]} />
-                        </div>
-                    </div>
+            <main className={styles["page66__main"]}>
 
-                    <div className={styles["page66__content"]}>
-                        <div className={styles["page66__text-container--third"]}>
-                            <p style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "2rem" }}>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio3_1e")}>School</span>
-                            </p>
-                            <p>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span onClick={() => playAudio("pg65_audio3_2e")}>My school is big and colorful.</span>
-                                <span onClick={() => playAudio("pg65_audio3_3e")}> There <strong>are</strong> many students and teachers.</span>
-                                <span onClick={() => playAudio("pg65_audio3_4e")}> The classrooms <strong>are</strong> bright, and the playground <strong>is</strong> fun.</span>
-                                <span onClick={() => playAudio("pg65_audio3_5e")}> I <strong>am</strong> excited to learn every day.</span>
-                            </p>
+                {/* Bloco A-B-C */}
+                <div className={styles["page66__labels"]}>
+                    <span className={styles["page66__label--leftA"]}>A</span>
+                    <span className={styles["page66__label--centerB"]}>B</span>
+                    <span className={styles["page66__label--rightC"]}>C</span>
+                </div>
+                <section className={styles["page66__block"]}>
+                    <div className={styles["page66__columns--3"]}>
+                        {/* Coluna A */}
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to ask</span><span>perguntar / fazer perguntas</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to answer</span><span>responder</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to arrive</span><span>chegar</span></div>
                         </div>
-                        <div className={styles["page66__image-container--third"]}>
-                            <img src={pagina66Imagem3} alt="School Image 3" className={styles["page66__image-small"]} />
+                        {/* Coluna B */}
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to buy</span><span>comprar</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to bring</span><span>trazer</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to begin</span><span>começar</span></div>
+                            <div className={styles["page66__row"]}>
+                                <div className={styles["page66__to-be-en"]}>to be</div>
+                                <div className={styles["page66__to-be-pt"]}>ser / estar / ter somente para idade</div>
+                            </div>
+                        </div>
+                        {/* Coluna C */}
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}>
+                                <span className={styles["page66__english"]}>to call</span>
+                                <div><span>chamar</span><br /><span className={styles["page66__highlight--red"]}>ligar / telefonar para</span></div>
+                            </div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to come</span><span>vir</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to cook</span><span>cozinhar</span></div>
                         </div>
                     </div>
+                </section>
 
-                    <div className={styles["page66__audio-section"]}>
-                        <div className={styles["page66__question-icon"]}> <strong>1</strong></div>
-                        <div className={styles["page66__audio-text"]}>
-                            <p><strong>When listening to the audio.</strong></p>
-                            <p>Separate sentence by sentence and provide its translation.</p>
-                            <p><strong>Example:</strong></p>
-                            <p> <img src={pg66AudioIcon} alt="Audio Icon" className={styles["page66__audio-icon"]} /> Getting to know Brazil.</p>
-                            <p> <img src={pg66AudioIcon} alt="Audio Icon" className={styles["page66__audio-icon"]} />Brazil is a beautiful country in South America.</p>
+                {/* Bloco D-E-F-G */}
+                <div className={styles["page66__labels"]}>
+                    <span className={styles["page66__label--leftD"]}>D</span>
+                    <span className={styles["page66__label--centerE"]}>E</span>
+                    <span className={styles["page66__label--centerF"]}>F</span>
+                    <span className={styles["page66__label--rightG"]}>G</span>
+                </div>
+                <section className={styles["page66__block"]}>
+                    <div className={styles["page66__columns--4"]}>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to dance</span><span>dançar</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to do</span><span>fazer</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to drink</span><span>beber</span></div>
+                        </div>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to eat</span><span>comer</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to enjoy</span><span>aproveitar / gostar muito / apreciar / curtir</span></div>
+                        </div>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to find</span><span>encontrar / achar</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to finish</span><span>terminar / acabar</span></div>
+                        </div>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to go</span><span>ir</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to give</span><span>dar</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to get</span><span>obter / conseguir / ter – <span style={{ color: '#A61C28'}}>( etc )</span></span></div>
                         </div>
                     </div>
-                </main>
+                </section>
 
-                <aside className={styles["page66__aside"]}>
-                    <div className={styles["page66__aside-content"]}>
-                        <div className={styles["page66__aside-note--first"]}>
-                            <img className={styles["page66__aside-note-icon"]} src={pg66IconNotes} alt="Word Bank Icon" />
-                            <p><strong>Listening Comprehension and Pronunciation</strong></p>
+                {/* Bloco H-L-M-N */}
+                <div className={styles["page66__labels"]}>
+                    <span className={styles["page66__label--leftH"]}>H</span>
+                    <span className={styles["page66__label--centerL"]}>L</span>
+                    <span className={styles["page66__label--centerM"]}>M</span>
+                    <span className={styles["page66__label--rightN"]}>N</span>
+                </div>
+                <section className={styles["page66__block"]}>
+                    <div className={styles["page66__columns--4"]}>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to have</span><span>ter / possuir</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to help</span><span>ajudar / socorrer</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to hear</span><span>ouvir</span></div>
                         </div>
-                        <div className={styles["page66__aside-note--second"]}>
-                            <p>Now, take a moment to focus on the dialogues(s). Pay attention to the way the speakers express themselves, and try to practice mimicking their pronunciation.</p>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to like</span><span>gostar</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to live</span><span>viver</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to look</span><span>olhar</span></div>
+                        </div>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to make</span><span>fazer</span></div>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to meet</span><span>encontrar / conhecer</span></div>
+                        </div>
+                        <div className={styles["page66__column"]}>
+                            <div className={styles["page66__row"]}><span className={styles["page66__english"]}>to need</span><span>precisar / necessitar</span></div>
                         </div>
                     </div>
-                </aside>
-            </div>
+                </section>
+
+            </main>
         </div>
     );
 };
 
-export default pagina66;
+export default Pagina66;

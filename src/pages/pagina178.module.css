@@ -1,1 +1,94 @@
-/* Styles for pagina178 */
+.page178__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: black;
+}
+
+.page178__header {
+  text-align: left;
+}
+
+.page178__system-title {
+  border: 0.3rem solid #0A3282;
+  color: #0A3282;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 3.8rem;
+}
+
+.page178__main-title {
+  color: #0A3282;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page178__subtitle {
+  color: #888A8C;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.page178__clock-caption {
+  text-align: center;
+  margin-bottom: -2rem;
+  color: #0A3282;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.page178__images {
+  display: flex;
+  justify-content: center;
+  gap: 10rem;
+  margin: 2rem 0;
+}
+
+.page178__image {
+  width: 15%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page178__columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  text-align: left;
+}
+
+.page178__text-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page178__blue {
+  color: #0A3282;
+  font-weight: bold;
+}
+
+.page178__red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page178__example-section {
+  margin-top: 5rem;
+}
+
+.page178__blue-italic {
+  color: #0A3282;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.page178__red-italic {
+  color: #A61C28;
+  font-style: italic;
+  font-weight: bold;
+}

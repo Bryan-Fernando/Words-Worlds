@@ -1,1 +1,85 @@
-/* Styles for pagina168 */
+.page168__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.page168__note {
+  border: 0.5rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  background-color: white;
+  overflow: hidden;
+}
+
+.page168__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+.page168__note-content {
+  padding: 1rem;
+  color: #0A3282;
+  font-size: 1.8rem;
+}
+
+.page168__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page168__examples-list {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.page168__examples-list li {
+  margin-bottom: 0.8rem;
+}
+
+.page168__summary-table-container {
+  width: 50%;
+  border: 0.3rem solid #0A3282;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+.page168__summary-title {
+  background-color: #0A3282;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 0.8rem 1rem;
+  text-align: left;
+}
+
+.page168__summary-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.page168__summary-table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.page168__summary-table td {
+  border: 0.2rem solid #0A3282;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.7rem;
+}

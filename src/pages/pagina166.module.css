@@ -1,1 +1,76 @@
-/* Styles for pagina166 */
+.page166__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+}
+
+.page166__title {
+  text-align: left;
+  color: #A61C28;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.page166__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page166__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+.page166__example-box {
+  border: 0.3rem solid #A61C28;
+  border-radius: 0.8rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+.page166__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page166__image-right img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page166__image-bottom img {
+  width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: left;
+}
+
+.page166__note {
+  border: 0.5rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: 80%;
+}
+
+.page166__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.page166__note-content {
+  padding: 1rem;
+  background-color: white;
+  color: #0A3282;
+  font-size: 1.6rem;
+}

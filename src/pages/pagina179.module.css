@@ -1,1 +1,58 @@
-/* Styles for pagina179 */
+.page179__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: black;
+}
+
+.page179__header {
+  text-align: left;
+}
+
+.page179__system-title {
+  border: 0.3rem solid #0A3282;
+  color: #0A3282;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 3.8rem;
+}
+
+.page179__main-title {
+  color: #0A3282;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page179__subtitle {
+  color: #888A8C;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.page179__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page179__example-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page179__image {
+  width: 25%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page179__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}

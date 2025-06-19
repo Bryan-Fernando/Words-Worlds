@@ -1,1 +1,100 @@
-/* Styles for pagina153 */
+.page153__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  color: black;
+}
+
+.page153__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28;
+}
+
+.page153__title--highlight {
+  color: black;
+  font-style: italic;
+}
+
+.page153__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.page153__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.page153__table th,
+.page153__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.page153__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page153__not-label {
+  color: #A61C28;
+}
+
+.page153__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page153__verb-cell {
+  background-color: #A61C28;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+/* Nota padrão azul */
+.page153__note {
+  border: 0.5rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: 40%;
+}
+
+.page153__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.page153__note-content {
+  padding: 1rem;
+  background-color: white;
+  color: #0A3282;
+  font-size: 1.7rem;
+}
+
+.page153__note-red {
+  color: #A61C28;
+  font-style: italic;
+  font-weight: bold;
+}

@@ -1,1 +1,70 @@
-/* Styles for pagina167 */
+.page167__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.page167__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 50%;
+}
+
+.page167__example-box {
+  border: 0.3rem solid #A61C28;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Texto vermelho para A: */
+.page167__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+/* Texto azul para (Singular) / (Plural) */
+.page167__text-blue {
+  color: #0A3282;
+}
+
+/* Imagem final */
+.page167__image {
+  width: 50%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+
+.page167__note {
+  border: 0.4rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: 90%;
+}
+
+.page167__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+.page167__note-content {
+  padding: 1rem;
+  background-color: white;
+  color: #0A3282;
+  font-size: 1.6rem;
+}
+
+.page167__note-content span {
+  color: #A61C28;
+  font-weight: bold;
+}

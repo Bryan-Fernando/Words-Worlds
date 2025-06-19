@@ -1,1 +1,117 @@
-/* Styles for pagina172 */
+.page172__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  color: black;
+}
+
+.page172__left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+
+.page172__header {
+  text-align: left;
+}
+
+.page172__system-title {
+  border: 0.3rem solid #A61C28;
+  color: #A61C28;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 3.8rem;
+}
+
+.page172__main-title {
+  color: #A61C28;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page172__subtitle {
+  color: #888A8C;
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
+.page172__red-box {
+  border: 0.3rem solid #A61C28;
+  border-radius: 1rem;
+  padding: 1rem;
+  color: #A61C28;
+  font-size: 1.7rem;
+}
+
+.page172__red-box-strong {
+  font-weight: bold;
+}
+
+.page172__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page172__example-block p {
+  margin: 0.4rem 0;
+  font-size: 1.7rem;
+}
+
+.page172__text-red {
+  color: #A61C28;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.page172__clock-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.page172__clock-image {
+  width: 50%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page172__note {
+  border: 0.3rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: fit-content;
+}
+
+.page172__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.page172__note-content {
+  padding: 1rem;
+  background-color: white;
+  font-size: 1.6rem;
+  color: black;
+}
+
+.page172__note-content span {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page173__text-blue {
+  color: #0A3282;
+  font-weight: bold;
+}

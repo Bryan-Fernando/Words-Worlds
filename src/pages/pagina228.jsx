@@ -1,23 +1,63 @@
 import React from 'react';
 import styles from './pagina228.module.css';
 
-const pagina228 = () => {
-    return (
-        <div>
-            <div className={styles.pg91Container}>
-                <header className={styles.pg91Header}>
-                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                    <div>
-                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                        <p>Dizendo as horas</p>
-                    </div>
-                </header>
-                <main className={styles.pg91Main}>
-                    <div></div>
-                </main>
-            </div>
+import clockYellow from '../assets/images/pagina178_imagem2.webp';
+
+const Pagina228 = () => {
+  return (
+    <div className={styles["page228__container"]}>
+
+      {/* Header */}
+      <div className={styles["page228__header"]}>
+        <div className={styles["page228__system-title"]}>Sistema Analógico</div>
+        <h1 className={styles["page228__main-title"]}>How to Ask and Tell the Time</h1>
+        <p className={styles["page228__subtitle"]}>Como Perguntar e Dizer as Horas</p>
+      </div>
+
+      {/* Exemplos */}
+      <div className={styles["page228__examples"]}>
+
+        {/* 10:35 */}
+        <div className={styles["page228__example-block"]}>
+          <div>
+            <p><strong>A:</strong> What time is it ?</p>
+            <p className={styles["page228__text-red"]}><strong>B:</strong> It’s twenty-five to eleven</p>
+          </div>
+          <img src={clockYellow} alt="Clock 10:35" className={styles["page228__image"]} />
         </div>
-    );
+
+        {/* 10:40 */}
+        <div className={styles["page228__example-block"]}>
+          <div>
+            <p><strong>A:</strong> What time is it ?</p>
+            <p className={styles["page228__text-red"]}><strong>B:</strong> It’s twenty to eleven</p>
+          </div>
+          <img src={clockYellow} alt="Clock 10:40" className={styles["page228__image"]} />
+        </div>
+
+        {/* 10:45 */}
+        <div className={styles["page228__example-block"]}>
+          <div>
+            <p><strong>A:</strong> What time is it ?</p>
+            <p className={styles["page228__text-red"]}><strong>B:</strong> It’s quarter to eleven</p>
+            <p className={styles["page228__text-red"]}><strong>B:</strong> It’s fifteen to eleven</p>
+          </div>
+          <img src={clockYellow} alt="Clock 10:45" className={styles["page228__image"]} />
+        </div>
+
+        {/* 10:50 */}
+        <div className={styles["page228__example-block"]}>
+          <div>
+            <p><strong>A:</strong> What time is it ?</p>
+            <p className={styles["page228__text-red"]}><strong>B:</strong> It’s ten to eleven</p>
+          </div>
+          <img src={clockYellow} alt="Clock 10:50" className={styles["page228__image"]} />
+        </div>
+
+      </div>
+
+    </div>
+  );
 };
 
-export default pagina228;
+export default Pagina228;

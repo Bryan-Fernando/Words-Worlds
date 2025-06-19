@@ -112,7 +112,7 @@ const Pagina130 = () => {
           <ul>
             <li>Are you studying now? {renderIcon('pg130_audio4e')}</li>
             <li>Is she cooking dinner? {renderIcon('pg130_audio5e')}</li>
-            <li>Am I speaking too loud? {renderIcon('pg130_audio6e')}</li>
+            <li>Am I speaking too fast? {renderIcon('pg130_audio6e')}</li>
           </ul>
         </div>
 
@@ -123,7 +123,7 @@ const Pagina130 = () => {
           <ul>
             <li>Aren’t you studying for the test? {renderIcon('pg130_audio8e')}</li>
             <li>Isn’t she cooking dinner? {renderIcon('pg130_audio9e')}</li>
-            <li>Ain’t I speaking too fast? {renderIcon('pg130_audio10e')}</li>
+            <li>Ain’t I speaking too loud? {renderIcon('pg130_audio10e')}</li>
           </ul>
         </div>
       </section>

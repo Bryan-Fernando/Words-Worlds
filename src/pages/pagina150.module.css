@@ -1,1 +1,112 @@
-/* Styles for pagina150 */
+.page150__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  color: black;
+}
+
+.page150__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28;
+}
+
+.page150__title--highlight {
+  color: black;
+  font-style: italic;
+}
+
+.page150__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.page150__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.page150__table th,
+.page150__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.page150__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page150__not-label {
+  color: #A61C28;
+}
+
+.page150__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page150__verb-cell {
+  background-color: #A61C28;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.page150__image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.page150__image {
+  width: 30%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* Nota padrão azul */
+.page150__note {
+  border: 0.5rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: 40%;
+}
+
+.page150__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.page150__note-content {
+  padding: 1rem;
+  background-color: white;
+  color: #0A3282;
+  font-size: 1.7rem;
+}
+
+.page150__note-red {
+  color: #A61C28;
+  font-style: italic;
+  font-weight: bold;
+}

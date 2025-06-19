@@ -1,1 +1,96 @@
-/* Styles for pagina171 */
+.page171__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 2rem;
+  color: black;
+}
+
+.page171__left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+
+.page171__header {
+  text-align: left;
+}
+
+.page171__system-title {
+  border: 0.3rem solid #A61C28;
+  color: #A61C28;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 3.8rem;
+}
+
+.page171__main-title {
+  color: #A61C28;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page171__subtitle {
+  color: #888A8C;
+  font-size: 2.7rem;
+  font-weight: bold;
+}
+
+.page171__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.page171__example-block p {
+  margin: 0.4rem 0;
+  font-size: 1.7rem;
+}
+
+.page171__text-red {
+  color: #A61C28;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.page171__clock-container {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+.page171__clock-image {
+  width: 50%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page171__note-audio {
+  border: 0.4rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: fit-content;
+}
+
+.page171__note-audio-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+}
+
+.page171__note-audio-content {
+  padding: 1rem;
+  background-color: white;
+  color: #0A3282;
+  font-size: 1.6rem;
+  font-style: italic;
+}

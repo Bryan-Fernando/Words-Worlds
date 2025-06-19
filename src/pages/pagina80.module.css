@@ -1,43 +1,78 @@
-.pg60Container {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+.page80 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
 }
 
-.pg60Header {
-    width: 100%;
-    height: 15rem;
-    text-align: left;
-    color: #A61C28;
+.page80__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28; /* Título principal em vermelho */
 }
 
-.pg60HeaderH1 {
-    font-size: 4rem;
+.page80__title--highlight {
+  color: black; /* Subtítulo em preto */
+  font-style: italic;
 }
 
-.pg60HeaderH2 {
-    font-size: 2.5rem;
+.page80__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0; /* Apenas os cantos superiores arredondados */
 }
 
-.pg60Main {
-    width: 100%;
-    height: 65rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    gap: 5rem;
+.page80__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-/* Este é um comentário */
-
-.pg60MainContainer1 {
-    padding: 1rem;
-    background-color: #F8F9F9;
-    width: 100%;
-    height: 15rem;
-    text-align: left;
-    border: 0.4rem solid #A61C28;
-    border-radius: 1.5rem;
+.page80__table th,
+.page80__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
+.page80__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.page80__bf-label {
+  color: #A61C28;
+}
+
+.page80__verb-cell {
+  background-color: #A61C28;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.3rem;
+  display: inline-block;
+}
+
+.page80__images {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page80__image {
+  width: 45%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}

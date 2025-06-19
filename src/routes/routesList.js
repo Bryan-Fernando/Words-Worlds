@@ -35,6 +35,7 @@ import Pagina34 from "../pages/pagina34";
 import Pagina35 from "../pages/pagina35";
 import Pagina36 from "../pages/pagina36";
 import Pagina37 from "../pages/pagina37";
+import Pagina38 from "../pages/pagina38";
 import Pagina39 from "../pages/pagina39";
 import Pagina40 from "../pages/pagina40";
 import Pagina41 from "../pages/pagina41";
@@ -223,6 +224,17 @@ import Pagina223 from "../pages/pagina223";
 import Pagina224 from "../pages/pagina224";
 import Pagina225 from "../pages/pagina225";
 import Pagina226 from "../pages/pagina226";
+import Pagina227 from "../pages/pagina227";
+import Pagina228 from "../pages/pagina228";
+import Pagina229 from "../pages/pagina229";
+import Pagina230 from "../pages/pagina230";
+import Pagina231 from "../pages/pagina231";
+import Pagina232 from "../pages/pagina232";
+import Pagina233 from "../pages/pagina233";
+import Pagina234 from "../pages/pagina234";
+import Pagina235 from "../pages/pagina235";
+import Pagina236 from "../pages/pagina236";
+import Pagina237 from "../pages/pagina237";
 
 const routes = [
   { path: "/", Component: Pagina1 },
@@ -289,7 +301,6 @@ const routes = [
   { path: "/pagina63", Component: Pagina63 },
   { path: "/pagina64", Component: Pagina64 },
   { path: "/pagina65", Component: Pagina65 },
-  //{ path: "/pagina66", Component: Pagina66 },
   { path: "/pagina67", Component: Pagina67 },
   { path: "/pagina68", Component: Pagina68 },
   { path: "/pagina69", Component: Pagina69 },
@@ -298,14 +309,6 @@ const routes = [
   { path: "/pagina72", Component: Pagina72 },
   { path: "/pagina73", Component: Pagina73 },
   { path: "/pagina74", Component: Pagina74 },
-  /*{ path: "/pagina75", Component: Pagina75 },
-  { path: "/pagina76", Component: Pagina76 },
-  { path: "/pagina77", Component: Pagina77 },
-  { path: "/pagina78", Component: Pagina78 },
-  { path: "/pagina79", Component: Pagina79 },
-  { path: "/pagina80", Component: Pagina80 },
-  { path: "/pagina81", Component: Pagina81 },
-  { path: "/pagina82", Component: Pagina82 },*/
   { path: "/pagina83", Component: Pagina83 },
   { path: "/pagina84", Component: Pagina84 },
   { path: "/pagina85", Component: Pagina85 },
@@ -373,7 +376,17 @@ const routes = [
   { path: "/pagina126", Component: Pagina126 },
   { path: "/pagina127", Component: Pagina127 },
   { path: "/pagina128", Component: Pagina128 },
-  /*{ path: "/pagina150", Component: Pagina150 },
+  { path: "/pagina66", Component: Pagina66 },
+  { path: "/pagina75", Component: Pagina75 },
+  { path: "/pagina76", Component: Pagina76 },
+  { path: "/pagina77", Component: Pagina77 },
+  { path: "/pagina78", Component: Pagina78 },
+  { path: "/pagina79", Component: Pagina79 },
+  { path: "/pagina80", Component: Pagina80 },
+  { path: "/pagina81", Component: Pagina81 },
+  { path: "/pagina82", Component: Pagina82 },
+  { path: "/pagina38", Component: Pagina38 },
+  { path: "/pagina150", Component: Pagina150 },
   { path: "/pagina151", Component: Pagina151 },
   { path: "/pagina152", Component: Pagina152 },
   { path: "/pagina153", Component: Pagina153 },
@@ -403,6 +416,17 @@ const routes = [
   { path: "/pagina177", Component: Pagina177 },
   { path: "/pagina178", Component: Pagina178 },
   { path: "/pagina179", Component: Pagina179 },
+  { path: "/pagina227", Component: Pagina227 },
+  { path: "/pagina228", Component: Pagina228 },
+  { path: "/pagina229", Component: Pagina229 },
+  { path: "/pagina230", Component: Pagina230 },
+  { path: "/pagina231", Component: Pagina231 },
+  { path: "/pagina232", Component: Pagina232 },
+  { path: "/pagina233", Component: Pagina233 },
+  { path: "/pagina234", Component: Pagina234 },
+  { path: "/pagina235", Component: Pagina235 },
+  { path: "/pagina236", Component: Pagina236 },
+  { path: "/pagina237", Component: Pagina237 },
   { path: "/pagina180", Component: Pagina180 },
   { path: "/pagina181", Component: Pagina181 },
   { path: "/pagina182", Component: Pagina182 },
@@ -449,7 +473,7 @@ const routes = [
   { path: "/pagina223", Component: Pagina223 },
   { path: "/pagina224", Component: Pagina224 },
   { path: "/pagina225", Component: Pagina225 },
-  { path: "/pagina226", Component: Pagina226 },*/
+  { path: "/pagina226", Component: Pagina226 },
 ];
 
 export default routes;

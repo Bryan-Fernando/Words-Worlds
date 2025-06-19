@@ -1,1 +1,101 @@
-/* Styles for pagina160 */
+.page160__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  color: black;
+}
+
+.page160__title {
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+  color: #A61C28;
+}
+
+.page160__title--highlight {
+  color: black;
+}
+
+/* BLOCO DE TRADUÇÃO (tabelas lado a lado) */
+.page160__question-translation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 2rem;
+}
+
+.page160__question-column {
+  width: 48%;
+}
+
+.page160__question-table {
+  border-collapse: collapse;
+  border: 0.2rem solid #A61C28; /* Borda externa geral */
+}
+
+.page160__question-table td {
+  border: 0.4rem solid #A61C28; /* Bordas internas das células */
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.page160__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+
+.page160__text-blue {
+  color: #0A3282;
+  font-weight: bold;
+}
+
+/* TABELA PRINCIPAL */
+.page160__table-header {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  width: 100%;
+  font-size: 1.5rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.page160__table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.page160__table th,
+.page160__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 0.5rem;
+  text-align: left;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.page160__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* IMAGENS */
+.page160__images-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.page160__image {
+  width: 40%;
+  height: auto;
+  border-radius: 0.5rem;
+}
