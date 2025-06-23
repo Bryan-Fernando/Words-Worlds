@@ -426,7 +426,7 @@ const routes = [
   { path: "/pagina234", Component: Pagina234 },
   { path: "/pagina235", Component: Pagina235 },
   { path: "/pagina236", Component: Pagina236 },
-  { path: "/pagina237", Component: Pagina237 },
+ // { path: "/pagina237", Component: Pagina237 },
   { path: "/pagina180", Component: Pagina180 },
   { path: "/pagina181", Component: Pagina181 },
   { path: "/pagina182", Component: Pagina182 },
@@ -435,14 +435,14 @@ const routes = [
   { path: "/pagina185", Component: Pagina185 },
   { path: "/pagina186", Component: Pagina186 },
   { path: "/pagina187", Component: Pagina187 },
-  { path: "/pagina188", Component: Pagina188 },
+ // { path: "/pagina188", Component: Pagina188 },
   { path: "/pagina189", Component: Pagina189 },
   { path: "/pagina190", Component: Pagina190 },
   { path: "/pagina191", Component: Pagina191 },
   { path: "/pagina192", Component: Pagina192 },
   { path: "/pagina193", Component: Pagina193 },
   { path: "/pagina194", Component: Pagina194 },
-  { path: "/pagina195", Component: Pagina195 },
+  /*{ path: "/pagina195", Component: Pagina195 },
   { path: "/pagina196", Component: Pagina196 },
   { path: "/pagina197", Component: Pagina197 },
   { path: "/pagina198", Component: Pagina198 },
@@ -473,7 +473,7 @@ const routes = [
   { path: "/pagina223", Component: Pagina223 },
   { path: "/pagina224", Component: Pagina224 },
   { path: "/pagina225", Component: Pagina225 },
-  { path: "/pagina226", Component: Pagina226 },
+  { path: "/pagina226", Component: Pagina226 },*/
 ];
 
 export default routes;
