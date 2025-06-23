@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styles from './pagina146.module.css';
 
 import correct_icon from '../assets/icons/correct_icon.webp';
@@ -8,16 +8,42 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina146_imagem1 from '../assets/images/pagina146_imagem1.webp';
 
+import global_exercise_e from '../assets/audios/global_exercise_e.mp3';
+import pg146_audio1e from '../assets/audios/pg146_audio1e.mp3';
+import pg146_audio2e from '../assets/audios/pg146_audio2e.mp3';
+import pg146_audio3e from '../assets/audios/pg146_audio3e.mp3';
+import pg146_audio4e from '../assets/audios/pg146_audio4e.mp3';
+import pg146_audio5e from '../assets/audios/pg146_audio5e.mp3';
+import pg146_audio6e from '../assets/audios/pg146_audio6e.mp3';
+import pg146_audio7e from '../assets/audios/pg146_audio7e.mp3';
+import pg146_audio8e from '../assets/audios/pg146_audio8e.mp3';
+import pg146_audio9e from '../assets/audios/pg146_audio9e.mp3';
+
+const audioMap = {
+    global_exercise_e,
+    pg146_audio1e,
+    pg146_audio2e,
+    pg146_audio3e,
+    pg146_audio4e,
+    pg146_audio5e,
+    pg146_audio6e,
+    pg146_audio7e,
+    pg146_audio8e,
+    pg146_audio9e
+};
+
 const Pagina146 = () => {
     const [inputValues, setInputValues] = useState(Array(8).fill(''));
     const [results, setResults] = useState(Array(8).fill(null));
     const [showAnswers, setShowAnswers] = useState(false);
 
+    const currentAudioRef = useRef(null);
+
     const correctAnswers = [
         'is running',
         'are having',
         'am not watching',
-        'are you crying',
+        'are you crying?',
         'are traveling',
         'is sleeping',
         'are always forgetting',
@@ -38,12 +64,27 @@ const Pagina146 = () => {
         setInputValues(newValues);
     };
 
+    const playAudio = (audioKey) => {
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+        const audio = new Audio(audioMap[audioKey]);
+        currentAudioRef.current = audio;
+        audio.play();
+    };
+
     return (
         <div className={styles["page146__container"]}>
             <h1 className={styles["page146__title"]}>
                 <span className={styles["page146__title--red"]}>Exercises</span>
                 <span className={styles["page146__icons-container"]}>
-                    <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                    <img
+                        src={eng_audio_icon}
+                        alt="English Audio"
+                        className={styles["page146__icon"]}
+                        onClick={() => playAudio('global_exercise_e')}
+                    />
                     <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
                 </span>
             </h1>
@@ -51,7 +92,12 @@ const Pagina146 = () => {
             <h2 className={styles["page146__exercise-instruction"]}>
                 1. Fill in the blanks : Complete the sentences using the correct form of the Present Continuous in parentheses.
                 <span className={styles["page146__icons-container"]}>
-                    <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                    <img
+                        src={eng_audio_icon}
+                        alt="English Audio"
+                        className={styles["page146__icon"]}
+                        onClick={() => playAudio('pg146_audio1e')}
+                    />
                 </span>
             </h2>
 
@@ -91,7 +137,12 @@ const Pagina146 = () => {
 
                             <span>{question.split('________')[1]}</span>
                             <span className={styles["page146__icons-container"]}>
-                                <img src={eng_audio_icon} alt="English Audio" className={styles["page146__icon"]} />
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page146__icon"]}
+                                    onClick={() => playAudio(`pg146_audio${index + 2}e`)}
+                                />
                                 <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
                             </span>
                         </div>
@@ -126,7 +177,6 @@ const Pagina146 = () => {
                     </ul>
                 </div>
             )}
-
         </div>
     );
 };

@@ -3,8 +3,32 @@ import styles from './pagina145.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
+import pg145_audio1e from '../assets/audios/pg145_audio1e.mp3';
+import pg145_audio2e from '../assets/audios/pg145_audio2e.mp3';
+import pg145_audio3e from '../assets/audios/pg145_audio3e.mp3';
+import pg145_audio4e from '../assets/audios/pg145_audio4e.mp3';
+import pg145_audio5e from '../assets/audios/pg145_audio5e.mp3';
+import pg145_audio6e from '../assets/audios/pg145_audio6e.mp3';
+import pg145_audio7e from '../assets/audios/pg145_audio7e.mp3';
+import pg145_audio8e from '../assets/audios/pg145_audio8e.mp3';
+import pg145_audio9e from '../assets/audios/pg145_audio9e.mp3';
+import pg145_audio10e from '../assets/audios/pg145_audio10e.mp3';
+
 const Pagina145 = () => {
     const currentAudioRef = useRef(null);
+
+    const audioMap = {
+        pg145_audio1e,
+        pg145_audio2e,
+        pg145_audio3e,
+        pg145_audio4e,
+        pg145_audio5e,
+        pg145_audio6e,
+        pg145_audio7e,
+        pg145_audio8e,
+        pg145_audio9e,
+        pg145_audio10e
+    };
 
     const playAudio = (audioKey) => {
         if (currentAudioRef.current) {
@@ -36,7 +60,7 @@ const Pagina145 = () => {
                 <h2 className={styles["page145__subtitle"]}>
                     <span className={styles["page145__highlight"]}>
                         <strong>1. Actions happening now</strong> {renderEngIcon('pg145_audio2')} –
-                    </span> 
+                    </span>
                     <span className={styles["page145__subtitle--translation"]}> Ações que estão acontecendo agora:</span>
                 </h2>
                 <ul className={styles["page145__list"]}>
