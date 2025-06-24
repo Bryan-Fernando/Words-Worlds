@@ -7,6 +7,7 @@ Configurações Globais
 
 Estilização da página
 */
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     height: auto;
@@ -59,18 +60,17 @@ aside {
     box-shadow: .5rem .5rem 1.5rem #0235357a;
     width: 85%;
     min-width: 85%;
-    height: 100%;
+    min-height: 100vh;
     margin: auto;
     display: flex;
     position: relative;
     flex-wrap: nowrap;
+    align-items: stretch;
     overflow: hidden;
 }
 
 .side {
     width: 8%;
-    height: auto;
-    min-height: auto;
     background-color: #A61C28;
     position: relative;
     border-top-right-radius: 1rem;
@@ -78,10 +78,29 @@ aside {
     writing-mode: vertical-rl;
     rotate: 180deg;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     z-index: 10;
+    align-self: stretch;
+}
+
+
+@-moz-document url-prefix() {
+  .mainEstrutura {
+    position: relative;
+  }
+
+  .side {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .Content {
+    margin-left: 8%;
+  }
 }
 
 .wordside {
@@ -113,13 +132,9 @@ aside {
 .navButtons {
     display: flex;
     justify-content: flex-end;
-    /* Garante alinhamento à direita */
     gap: 2rem;
-    /* Espaçamento entre os botões */
     margin-top: 10%;
-    /* Empurra os botões para o final do contêiner */
     align-items: center;
-    /* Centraliza os botões verticalmente */
     width: 100%;
     padding-top: 4%;
     padding-bottom: 2%;
@@ -130,14 +145,13 @@ aside {
     color: white;
     border: none;
     margin: 1% 2%;
-    min-width: 8rem;
     cursor: pointer;
     border-radius: .5rem;
     font-weight: bold;
     box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    width: 20%;
-    font-size: calc(6px + .8vw);
+    width: 17%;
+    font-size: 2rem;
 }
 
 .navButton:hover {
@@ -145,6 +159,8 @@ aside {
 }
 
 .marcador-pagina {
+    display: flex;
+    place-content: center;
     background-color: #A61C28;
     color: white;
     border-radius: 25%;
@@ -152,15 +168,16 @@ aside {
     text-align: center;
     align-items: center;
     z-index: 10;
-    width: 7%;
-    font-size: calc(6px + 1.8vw);
+    width: 5%;
+    font-size: 2rem;
+    padding: 1.2rem 2.4rem;
 }
 
 .pageSelector {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .pageSelector label {

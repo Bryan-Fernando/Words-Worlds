@@ -29,10 +29,24 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
   const handlePageChangeKeyPress = (e) => {
     if (e.key === 'Enter') {
       const selectedPage = parseInt(pageInput, 10) - 1;
+  
       if (selectedPage === 36) {
         userNavigate(routes[35]?.path);
         return;
       }
+  
+      if (selectedPage === 37) {
+        const respostasUsuario = localStorage.getItem('respostasPagina36')
+          ? JSON.parse(localStorage.getItem('respostasPagina36'))
+          : [];
+        const resultado = localStorage.getItem('resultadoPagina36')
+          ? JSON.parse(localStorage.getItem('resultadoPagina36'))
+          : [];
+  
+        userNavigate(routes[36]?.path, { respostasUsuario, resultado });
+        return;
+      }
+  
       if (selectedPage >= 0 && selectedPage < routes.length) {
         userNavigate(routes[selectedPage]?.path);
       } else {
@@ -40,19 +54,25 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
       }
     }
   };
-
+  
   const handleAvancar = () => {
     if (location.pathname === '/pagina36' && !paginaValida) {
       alert('Por favor, valide as respostas antes de avançar.');
       return;
     }
-    if (currentIndex >= 0 && currentIndex < routes.length - 1) {
+  
+    if (pageInput && parseInt(pageInput, 10) - 1 !== currentIndex) {
+      handlePageChangeKeyPress({ key: 'Enter' }); 
+    } else if (currentIndex >= 0 && currentIndex < routes.length - 1) {
       userNavigate(routes[currentIndex + 1]?.path);
     }
   };
+  
 
   const handleVoltar = () => {
-    if (currentIndex > 0) {
+    if (pageInput && parseInt(pageInput, 10) - 1 !== currentIndex) {
+      handlePageChangeKeyPress({ key: 'Enter' }); 
+    } else if (currentIndex > 0) {
       const previousPage = routes[currentIndex - 1]?.path;
       if (previousPage === '/pagina37') {
         const respostasUsuario = localStorage.getItem('respostasPagina36')
@@ -61,13 +81,14 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
         const resultado = localStorage.getItem('resultadoPagina36')
           ? JSON.parse(localStorage.getItem('resultadoPagina36'))
           : [];
-
+  
         userNavigate(previousPage, { respostasUsuario, resultado });
       } else {
         userNavigate(previousPage);
       }
     }
   };
+  
 
   const contentClass = location.pathname === '/pagina42' ? 'pagina42' : location.pathname === '/' ? 'pagina1' : '';
 
@@ -76,7 +97,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
       <main
         className="mainEstrutura"
         style={{ backgroundColor: backgroundColor || 'white' }}
-      >
+       >
         <div className="side">
           <p className="wordside">Words and Worlds</p>
           <p className="englishside">ENGLISH COURSE</p>
@@ -102,7 +123,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
                   if (e.key === 'Enter') handlePageChangeKeyPress(e);
                 }}
                 style={{
-                  width: '40px',
+                  width: '7rem',
                   textAlign: 'center',
                   padding: '5px',
                 }}
