@@ -2,11 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* 
-Configurações Globais 
-
-Estilização da página
-*/
+/* Configurações Globais */
 * {
     font-family: Arial, Helvetica, sans-serif;
     height: auto;
@@ -48,12 +44,12 @@ aside {
     grid-area: aside;
     background-color: white;
     display: flex;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
-/* Estilização da estrutura padrão de todas as páginas */
+/* Estrutura padrão de todas as páginas */
 
-.mainEstrutura {
+.main_estrutura {
     background-color: #EEF4ED;
     border-radius: 1rem;
     box-shadow: .5rem .5rem 1.5rem #0235357a;
@@ -96,21 +92,20 @@ aside {
     font-weight: bold;
 }
 
-.Content {
+.content {
     padding-right: 4%;
     padding-left: 4%;
     padding-bottom: 3%;
     padding-top: 3%;
     display: flex;
     width: calc(100% - 45px);
-    /* Subtrai o padding-right */
     position: relative;
     overflow: visible;
     box-sizing: border-box;
     flex-direction: column;
 }
 
-.navButtons {
+.nav_buttons {
     display: flex;
     justify-content: flex-end;
     gap: 2rem;
@@ -121,7 +116,7 @@ aside {
     padding-bottom: 2%;
 }
 
-.navButton {
+.nav_button {
     background-color: #A61C28;
     color: white;
     border: none;
@@ -135,11 +130,11 @@ aside {
     font-size: 2rem;
 }
 
-.navButton:hover {
+.nav_button:hover {
     background-color: #870F21;
 }
 
-.marcador-pagina {
+.marcador_pagina {
     display: flex;
     place-content: center;
     background-color: #A61C28;
@@ -154,36 +149,35 @@ aside {
     padding: 1.2rem 2.4rem;
 }
 
-.pageSelector {
+.page_selector {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
 }
 
-.pageSelector label {
+.page_selector label {
     font-size: 2rem;
     font-weight: bold;
 }
 
-
-.pageSelector span {
+.page_selector span {
     font-size: 2rem;
     font-weight: bold;
 }
 
-.pagina42Content,
-.pagina1Content {
+.pagina42_content,
+.pagina1_content {
     padding-left: 0;
     padding-right: 0;
 }
 
-.pagina1Content {
+.pagina1_content {
     padding-top: 0;
 }
 
-.pagina42navButtons,
-.pagina1navButtons {
+.pagina42_nav_buttons,
+.pagina1_nav_buttons {
     padding-right: 4%;
 }
 
@@ -200,7 +194,7 @@ aside {
         width: 10%;
     }
 
-    .mainEstrutura {
+    .main_estrutura {
         background-color: #EEF4ED;
         width: 100%;
         height: 100%;
@@ -213,11 +207,11 @@ aside {
         border-radius: 0;
     }
 
-    .Content {
+    .content {
         padding-top: 10%;
     }
 
-    .pagina1Content {
+    .pagina1_content {
         padding-top: 0;
     }
 
