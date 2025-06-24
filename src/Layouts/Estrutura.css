@@ -113,9 +113,13 @@ aside {
 .navButtons {
     display: flex;
     justify-content: flex-end;
+    /* Garante alinhamento à direita */
     gap: 2rem;
+    /* Espaçamento entre os botões */
     margin-top: 10%;
+    /* Empurra os botões para o final do contêiner */
     align-items: center;
+    /* Centraliza os botões verticalmente */
     width: 100%;
     padding-top: 4%;
     padding-bottom: 2%;
@@ -126,13 +130,14 @@ aside {
     color: white;
     border: none;
     margin: 1% 2%;
+    min-width: 8rem;
     cursor: pointer;
     border-radius: .5rem;
     font-weight: bold;
     box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    width: 17%;
-    font-size: 2rem;
+    width: 20%;
+    font-size: calc(6px + .8vw);
 }
 
 .navButton:hover {
@@ -140,8 +145,6 @@ aside {
 }
 
 .marcador-pagina {
-    display: flex;
-    place-content: center;
     background-color: #A61C28;
     color: white;
     border-radius: 25%;
@@ -149,16 +152,15 @@ aside {
     text-align: center;
     align-items: center;
     z-index: 10;
-    width: 5%;
-    font-size: 2rem;
-    padding: 1.2rem 2.4rem;
+    width: 7%;
+    font-size: calc(6px + 1.8vw);
 }
 
 .pageSelector {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 10px;
 }
 
 .pageSelector label {
