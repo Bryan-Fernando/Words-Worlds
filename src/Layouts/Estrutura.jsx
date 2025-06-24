@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+
 import './Estrutura.css';
+
 import { useNavigate, useLocation } from 'react-router-dom';
 
 function Estrutura({ children, backgroundColor, routes = [] }) {
@@ -7,6 +9,7 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
   const location = useLocation();
 
   const currentIndex = routes.findIndex((route) => route.path === location.pathname);
+
   const [paginaValida, setPaginaValida] = useState(false);
   const [pageInput, setPageInput] = useState(currentIndex + 1);
 
@@ -26,12 +29,12 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
   const handlePageChangeKeyPress = (e) => {
     if (e.key === 'Enter') {
       const selectedPage = parseInt(pageInput, 10) - 1;
-
+  
       if (selectedPage === 36) {
         userNavigate(routes[35]?.path);
         return;
       }
-
+  
       if (selectedPage === 37) {
         const respostasUsuario = localStorage.getItem('respostasPagina36')
           ? JSON.parse(localStorage.getItem('respostasPagina36'))
@@ -39,11 +42,11 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
         const resultado = localStorage.getItem('resultadoPagina36')
           ? JSON.parse(localStorage.getItem('resultadoPagina36'))
           : [];
-
+  
         userNavigate(routes[36]?.path, { respostasUsuario, resultado });
         return;
       }
-
+  
       if (selectedPage >= 0 && selectedPage < routes.length) {
         userNavigate(routes[selectedPage]?.path);
       } else {
@@ -51,23 +54,24 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
       }
     }
   };
-
+  
   const handleAvancar = () => {
     if (location.pathname === '/pagina36' && !paginaValida) {
       alert('Por favor, valide as respostas antes de avançar.');
       return;
     }
-
+  
     if (pageInput && parseInt(pageInput, 10) - 1 !== currentIndex) {
-      handlePageChangeKeyPress({ key: 'Enter' });
+      handlePageChangeKeyPress({ key: 'Enter' }); 
     } else if (currentIndex >= 0 && currentIndex < routes.length - 1) {
       userNavigate(routes[currentIndex + 1]?.path);
     }
   };
+  
 
   const handleVoltar = () => {
     if (pageInput && parseInt(pageInput, 10) - 1 !== currentIndex) {
-      handlePageChangeKeyPress({ key: 'Enter' });
+      handlePageChangeKeyPress({ key: 'Enter' }); 
     } else if (currentIndex > 0) {
       const previousPage = routes[currentIndex - 1]?.path;
       if (previousPage === '/pagina37') {
@@ -77,39 +81,35 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
         const resultado = localStorage.getItem('resultadoPagina36')
           ? JSON.parse(localStorage.getItem('resultadoPagina36'))
           : [];
-
+  
         userNavigate(previousPage, { respostasUsuario, resultado });
       } else {
         userNavigate(previousPage);
       }
     }
   };
+  
 
-  const contentClass =
-    location.pathname === '/pagina42'
-      ? 'pagina42'
-      : location.pathname === '/'
-      ? 'pagina1'
-      : '';
+  const contentClass = location.pathname === '/pagina42' ? 'pagina42' : location.pathname === '/' ? 'pagina1' : '';
 
   return (
     <div>
       <main
-        className="main_estrutura"
+        className="mainEstrutura"
         style={{ backgroundColor: backgroundColor || 'white' }}
-      >
+       >
         <div className="side">
           <p className="wordside">Words and Worlds</p>
           <p className="englishside">ENGLISH COURSE</p>
         </div>
-
-        <div className={`content ${contentClass}_content`}>
+        <div className={`Content ${contentClass}Content`}>
           <div>
             {React.cloneElement(children, { onValidar: handleValidarPagina })}
           </div>
 
-          <div className={`nav_buttons ${contentClass}_nav_buttons`}>
-            <div className="page_selector">
+
+          <div className={`navButtons  ${contentClass}navButtons`}>
+            <div className="pageSelector">
               <label htmlFor="pageInput">Página</label>
               <input
                 id="pageInput"
@@ -130,9 +130,8 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
               />
               <span> / {routes.length}</span>
             </div>
-
             <button
-              className="nav_button"
+              className="navButton"
               onClick={handleVoltar}
               disabled={currentIndex <= 0}
             >
@@ -140,14 +139,14 @@ function Estrutura({ children, backgroundColor, routes = [] }) {
             </button>
 
             <button
-              className="nav_button"
+              className="navButton"
               onClick={handleAvancar}
               disabled={currentIndex >= routes.length - 1}
             >
               Avançar
             </button>
 
-            <div className="marcador_pagina">
+            <div className="marcador-pagina">
               <strong>{currentIndex + 1}</strong>
             </div>
           </div>
