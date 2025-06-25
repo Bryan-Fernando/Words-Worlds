@@ -28,11 +28,11 @@ const Pagina122 = () => {
     const currentAudioRef = useRef(null);
 
     const correctAnswers = [
-        'She is writing an email now.',
-        'They aren’t playing soccer now.',
-        'I’m listening to music.',
-        'The baby is crying.',
-        'We are going on vacation next week.'
+        "She is writing an email now.",
+        "They aren't playing soccer now.",
+        "I'm listening to music.",
+        "The baby is crying.",
+        "We are going on vacation next week."
     ];
 
     const audioMap = {
@@ -132,6 +132,9 @@ const Pagina122 = () => {
                             const ptKey = `pg122_audio${index + 2}p`;
                             return (
                                 <div key={index} className={styles["page122__question"]}>
+                                    <span className={styles["page122__question-text"]}>
+                                        <em>{question}</em>
+                                    </span>
                                     <div className={styles["page122__input-container"]}>
                                         <input
                                             type="text"
@@ -159,9 +162,6 @@ const Pagina122 = () => {
                                             onClick={() => playAudio(ptKey)}
                                         />
                                     </div>
-                                    <span className={styles["page122__question-text"]}>
-                                        <em>{question}</em>
-                                    </span>
                                 </div>
                             );
                         })}

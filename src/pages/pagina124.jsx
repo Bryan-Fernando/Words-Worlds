@@ -1,44 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './pagina124.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
-import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
-import pg124_audio1e from '../assets/audios/pg94_audio1e.mp3';
-import pg124_audio1p from '../assets/audios/pg94_audio1p.mp3';
-import pg124_audio2 from '../assets/audios/pg94_audio2.mp3';
-import pg124_audio3 from '../assets/audios/pg94_audio3.mp3';
-import pg124_audio4 from '../assets/audios/pg94_audio4.mp3';
-import pg124_audio5 from '../assets/audios/pg94_audio5.mp3';
-import pg124_audio6 from '../assets/audios/pg94_audio6.mp3';
-import pg124_audio7 from '../assets/audios/pg94_audio7.mp3';
-import pg124_audio8 from '../assets/audios/pg94_audio8.mp3';
-import pg124_audio9 from '../assets/audios/pg94_audio9.mp3';
-import pg124_audio10 from '../assets/audios/pg94_audio10.mp3';
-import pg124_audio11 from '../assets/audios/pg94_audio11.mp3';
+import global_grammar_wo from '../assets/audios/global_grammar_wo.mp3';
+import pg124_audio1e from '../assets/audios/pg124_audio1e.mp3';
+import pg124_audio2e from '../assets/audios/pg124_audio2e.mp3';
+import pg124_audio3e from '../assets/audios/pg124_audio3e.mp3';
+import pg124_audio4e from '../assets/audios/pg124_audio4e.mp3';
 
 const Pagina124 = () => {
-    const [inputValues, setInputValues] = useState(Array(6).fill(''));
-    const [results, setResults] = useState(Array(6).fill(null));
-
     const audioMap = {
-        global_learning_le_e,
-        global_learning_le_p,
+        global_grammar_wo,
         pg124_audio1e,
-        pg124_audio1p,
-        pg124_audio2,
-        pg124_audio3,
-        pg124_audio4,
-        pg124_audio5,
-        pg124_audio6,
-        pg124_audio7,
-        pg124_audio8,
-        pg124_audio9,
-        pg124_audio10,
-        pg124_audio11
+        pg124_audio2e,
+        pg124_audio3e,
+        pg124_audio4e
     };
 
     const playAudio = (audioKey) => {
@@ -54,18 +32,12 @@ const Pagina124 = () => {
         <div className={styles["page124__container"]}>
             <header className={styles["page124__header"]}>
                 <h1 className={styles["page124__title"]}>
-                    Grammar - <spam className={styles["page124__text-black"]}>Would</spam>
+                    Grammar - <span className={styles["page124__text-black"]}>Would</span>
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page124__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles["page124__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        onClick={() => playAudio("global_grammar_wo")}
                     />
                 </h1>
             </header>
@@ -77,11 +49,14 @@ const Pagina124 = () => {
                         </div>
                         <div className={styles.pg124AsideNotes2}>
                             <p>
-                                “Would“ é um Verbo Modal / Auxiliar que não tem uma tradução
+                                <span style={{ color: 'red' }}>"Would"</span> é um
+                                <span style={{ color: 'red' }}> Verbo Modal / Auxiliar </span> que não tem uma tradução
                                 exata, mas que coloca o verbo principal no futuro do pretérito
-                                com a terminação de “ria“.“Would“ é um Verbo Modal / Auxiliar que não tem uma tradução
+                                com a terminação de <span style={{ color: 'red' }}>"ria"</span>.
+                                <span style={{ color: 'red' }}>"Would"</span> é um
+                                <span style={{ color: 'red' }}> Verbo Modal / Auxiliar </span> que não tem uma tradução
                                 exata, mas que coloca o verbo principal no futuro do pretérito
-                                com a terminação de “ria“.
+                                com a terminação de <span style={{ color: 'red' }}>"ria"</span>.
                             </p>
                         </div>
                     </div>
@@ -101,11 +76,23 @@ const Pagina124 = () => {
                             </tr>
                             <tr className={styles["page124__table-row"]}>
                                 <th className={styles["page124__celulacolor"]}></th>
-                                <th className={styles["page124__celulacolor"]}>Would</th>
-                                <th className={styles["page124__celulacolor"]}>you</th>
+                                <th className={styles["page124__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio1e")}>Would</th>
+                                <th className={styles["page124__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio1e")}>you</th>
                                 <th className={styles["page124__celulacolor"]}></th>
-                                <th className={styles["page124__celulacolor"]}>like</th>
-                                <th className={styles["page124__celulacolor"]}>some tea ?</th>
+                                <th className={styles["page124__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio1e")}>like</th>
+                                <th
+                                    className={styles["page124__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio1e")}
+                                >
+                                    some tea ?
+                                </th>
                             </tr>
                         </thead>
                     </table>
@@ -113,8 +100,28 @@ const Pagina124 = () => {
 
                 <div className={styles["page124__container-textoa"]}>
                     <h3>Exemplos:</h3>
-                    <p>• ( <spam className={styles["page124_text-Bolder"]}>Would you like some tea ?</spam> ) Você <spam className={styles["highlight"]}>gostaria</spam> de um pouco de chá ?</p>
-                    <p>• ( <spam className={styles["page124_text-Bolder"]}>Would you help me, please ?</spam> ) Você <spam className={styles["highlight"]}>me ajudaria</spam>, por favor ?</p>
+                    <p>
+                        • ( <span className={styles["page124_text-Bolder"]}>Would you like some tea ?</span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page124__additional-icon"]}
+                            onClick={() => playAudio("pg124_audio1e")}
+                        /> Você <span className={styles["highlight"]}>gostaria</span> de um pouco de chá ?
+
+                    </p>
+                    <p>
+                        • ( <span className={styles["page124_text-Bolder"]}>Would you help me, please ?</span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page124__additional-icon"]}
+                            onClick={() => playAudio("pg124_audio2e")}
+                            style={{ cursor: 'pointer', marginLeft: '8px' }}
+                        />
+                        Você <span className={styles["highlight"]}>me ajudaria</span>, por favor ?
+
+                    </p>
                 </div>
 
                 <div className={styles.pg124tabelaAfirmativaContainer}>
@@ -131,11 +138,20 @@ const Pagina124 = () => {
                             </tr>
                             <tr className={styles.pg124celulatable}>
                                 <th className={styles["page124__celulacolor"]}>I</th>
+                                <th className={styles["page124__celulacolor"]} style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio3e")}></th>
+                                <th className={styles["page124__celulacolor"]} style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio3e")}>would</th>
                                 <th className={styles["page124__celulacolor"]}></th>
-                                <th className={styles["page124__celulacolor"]}>would</th>
-                                <th className={styles["page124__celulacolor"]}></th>
-                                <th className={styles["page124__celulacolor"]}>like</th>
-                                <th className={styles["page124__celulacolor"]}>a sandwich, please.</th>
+                                <th className={styles["page124__celulacolor"]} style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio3e")}>like</th>
+                                <th
+                                    className={styles["page124__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg124_audio3e")}
+                                >
+                                    a sandwich, please.
+                                </th>
                             </tr>
                         </thead>
                     </table>
@@ -143,9 +159,30 @@ const Pagina124 = () => {
 
                 <div className={styles["page124__container-textoa"]}>
                     <h3>Exemplos:</h3>
-                    <p>• ( <spam className={styles["page124_text-Bolder"]}>I would like a sandwich, please.</spam> ) Eu <spam className={styles["highlight"]}>gostaria</spam> de um sanduíche, por
-                    favor</p>
-                    <p>• ( <spam className={styles["page124_text-Bolder"]}>She would like to go to the park.</spam> ) Ela <spam className={styles["highlight"]}>gostaria</spam> de ir ao parque.</p>
+                    <p>
+                        • ( <span className={styles["page124_text-Bolder"]}>I would like a sandwich, please.</span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page124__additional-icon"]}
+                            onClick={() => playAudio("pg124_audio3e")}
+                            style={{ cursor: 'pointer', marginLeft: '8px' }}
+                        />
+                        Eu <span className={styles["highlight"]}>gostaria</span> de um sanduíche, por favor
+
+                    </p>
+                    <p>
+                        • ( <span className={styles["page124_text-Bolder"]}>She would like to go to the park.</span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page124__additional-icon"]}
+                            onClick={() => playAudio("pg124_audio4e")}
+                            style={{ cursor: 'pointer', marginLeft: '8px' }}
+                        />
+                        Ela <span className={styles["highlight"]}>gostaria</span> de ir ao parque.
+
+                    </p>
                 </div>
             </main>
         </div>

@@ -131,15 +131,6 @@
     color: #A61C28;
 }
 
-/*th {
-    background-color: #888A8C;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: 1px solid #A61C28;
-}*/
-
 .page124__container-textoa{
     text-align: left;
 }
@@ -181,4 +172,19 @@
 .page124__celulacolor{
     background-color: white;
     color: black !important; 
+}
+
+.page124__additional-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    transition: transform 0.2s ease;
+    position: relative;
+    top: 0.5rem;
+}
+
+.page124__additional-icon:hover {
+    transform: scale(1.2);
 }

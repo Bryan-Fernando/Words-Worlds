@@ -124,6 +124,9 @@ const Pagina120 = () => {
                             { text: "I am go to the supermarket later.", eng: "pg120_audio6e", pt: "pg120_audio6p" }
                         ].map((item, index) => (
                             <div key={index} className={styles["page120__question"]}>
+                                <span className={styles["page120__question-text"]}>
+                                    <em>{item.text}</em>
+                                </span>
                                 <div className={styles["page120__input-container"]}>
                                     <input
                                         type="text"
@@ -153,9 +156,7 @@ const Pagina120 = () => {
                                         onClick={() => playAudio(item.pt)}
                                     />
                                 </div>
-                                <span className={styles["page120__question-text"]}>
-                                    <em>{item.text}</em>
-                                </span>
+                                
                             </div>
                         ))}
 

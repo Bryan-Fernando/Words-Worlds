@@ -112,20 +112,6 @@ const Pagina148 = () => {
           <div className={styles["page148__question"]}>
             <span>
               1. He is working in the office.
-              <span className={styles["page148__icons-container"]}>
-                <img
-                  src={eng_audio_icon}
-                  alt="English Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio2e')}
-                />
-                <img
-                  src={ptbr_audio_icon}
-                  alt="Portuguese Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio2p')}
-                />
-              </span>
             </span>
             <div className={styles["page148__input-container"]}>
               <input
@@ -141,26 +127,26 @@ const Pagina148 = () => {
                   className={styles["page148__checkmark-image"]}
                 />
               )}
+              <span className={styles["page148__icons-container"]}>
+                <img
+                  src={eng_audio_icon}
+                  alt="English Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio2e')}
+                />
+                <img
+                  src={ptbr_audio_icon}
+                  alt="Portuguese Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio2p')}
+                />
+              </span>
             </div>
           </div>
 
           <div className={styles["page148__question"]}>
             <span>
               2. They are playing soccer now.
-              <span className={styles["page148__icons-container"]}>
-                <img
-                  src={eng_audio_icon}
-                  alt="English Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio3e')}
-                />
-                <img
-                  src={ptbr_audio_icon}
-                  alt="Portuguese Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio3p')}
-                />
-              </span>
             </span>
             <div className={styles["page148__input-container"]}>
               <input
@@ -176,26 +162,26 @@ const Pagina148 = () => {
                   className={styles["page148__checkmark-image"]}
                 />
               )}
+              <span className={styles["page148__icons-container"]}>
+                <img
+                  src={eng_audio_icon}
+                  alt="English Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio3e')}
+                />
+                <img
+                  src={ptbr_audio_icon}
+                  alt="Portuguese Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio3p')}
+                />
+              </span>
             </div>
           </div>
 
           <div className={styles["page148__question"]}>
             <span>
               3. I am studying for my test.
-              <span className={styles["page148__icons-container"]}>
-                <img
-                  src={eng_audio_icon}
-                  alt="English Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio4e')}
-                />
-                <img
-                  src={ptbr_audio_icon}
-                  alt="Portuguese Audio"
-                  className={styles["page148__icon"]}
-                  onClick={() => playAudio('pg148_audio4p')}
-                />
-              </span>
             </span>
             <div className={styles["page148__input-container"]}>
               <input
@@ -211,6 +197,20 @@ const Pagina148 = () => {
                   className={styles["page148__checkmark-image"]}
                 />
               )}
+              <span className={styles["page148__icons-container"]}>
+                <img
+                  src={eng_audio_icon}
+                  alt="English Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio4e')}
+                />
+                <img
+                  src={ptbr_audio_icon}
+                  alt="Portuguese Audio"
+                  className={styles["page148__icon"]}
+                  onClick={() => playAudio('pg148_audio4p')}
+                />
+              </span>
             </div>
           </div>
         </div>

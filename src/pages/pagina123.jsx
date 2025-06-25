@@ -141,6 +141,11 @@ const Pagina123 = () => {
 
                             return (
                                 <div key={index} className={styles["page123__question"]}>
+                                    <span
+                                        className={styles["page123__question-text"]}
+                                    >
+                                        <em>{question}</em>
+                                    </span>
                                     <div className={styles["page123__input-container"]}>
                                         <input
                                             type="text"
@@ -158,25 +163,19 @@ const Pagina123 = () => {
                                         ) : (
                                             <span className={styles["page123__placeholder"]}></span>
                                         )}
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="English Audio"
-                                            className={styles["page123__additional-icon"]}
-                                            onClick={() => playAudio(engKey)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Portuguese Audio"
-                                            className={styles["page123__additional-icon"]}
-                                            onClick={() => playAudio(ptKey)}
-                                        />
+                                            <img
+                                                src={eng_audio_icon}
+                                                alt="English Audio"
+                                                className={styles["page123__additional-icon"]}
+                                                onClick={() => playAudio(engKey)}
+                                            />
+                                            <img
+                                                src={ptbr_audio_icon}
+                                                alt="Portuguese Audio"
+                                                className={styles["page123__additional-icon"]}
+                                                onClick={() => playAudio(ptKey)}
+                                            />
                                     </div>
-                                    <span
-                                        className={styles["page123__question-text"]}
-                                        onClick={() => playAudio(engKey)}
-                                    >
-                                        <em>{question}</em>
-                                    </span>
                                 </div>
                             );
                         })}

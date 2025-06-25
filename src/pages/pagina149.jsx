@@ -117,20 +117,6 @@ const Pagina149 = () => {
             <div key={index} className={styles["page149__question"]}>
               <span>
                 {question}
-                <span className={styles["page149__icons-container"]}>
-                  <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page149__icon"]}
-                    onClick={() => playAudio(`pg149_audio${index + 2}e`)}
-                  />
-                  <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles["page149__icon"]}
-                    onClick={() => playAudio(`pg149_audio${index + 2}p`)}
-                  />
-                </span>
               </span>
 
               <div className={styles["page149__input-container"]}>
@@ -147,6 +133,20 @@ const Pagina149 = () => {
                     className={styles["page149__checkmark-image"]}
                   />
                 )}
+                <span className={styles["page149__icons-container"]}>
+                  <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page149__icon"]}
+                    onClick={() => playAudio(`pg149_audio${index + 2}e`)}
+                  />
+                  <img
+                    src={ptbr_audio_icon}
+                    alt="Portuguese Audio"
+                    className={styles["page149__icon"]}
+                    onClick={() => playAudio(`pg149_audio${index + 2}p`)}
+                  />
+                </span>
               </div>
             </div>
           ))}

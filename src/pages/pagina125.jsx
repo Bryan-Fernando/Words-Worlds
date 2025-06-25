@@ -3,50 +3,30 @@ import React, { useState } from 'react';
 import styles from './pagina125.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
-import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
-import pg124_audio1e from '../assets/audios/pg94_audio1e.mp3';
-import pg124_audio1p from '../assets/audios/pg94_audio1p.mp3';
-import pg124_audio2 from '../assets/audios/pg94_audio2.mp3';
-import pg124_audio3 from '../assets/audios/pg94_audio3.mp3';
-import pg124_audio4 from '../assets/audios/pg94_audio4.mp3';
-import pg124_audio5 from '../assets/audios/pg94_audio5.mp3';
-import pg124_audio6 from '../assets/audios/pg94_audio6.mp3';
-import pg124_audio7 from '../assets/audios/pg94_audio7.mp3';
-import pg124_audio8 from '../assets/audios/pg94_audio8.mp3';
-import pg124_audio9 from '../assets/audios/pg94_audio9.mp3';
-import pg124_audio10 from '../assets/audios/pg94_audio10.mp3';
-import pg124_audio11 from '../assets/audios/pg94_audio11.mp3';
+import global_grammar_wo from '../assets/audios/global_grammar_wo.mp3';
+import pg125_audio1e from '../assets/audios/pg125_audio1e.mp3';
+import pg125_audio2e from '../assets/audios/pg125_audio2e.mp3';
+import pg125_audio3e from '../assets/audios/pg125_audio3e.mp3';
+import pg125_audio4e from '../assets/audios/pg125_audio4e.mp3';
+import pg125_audio5e from '../assets/audios/pg125_audio5e.mp3';
+import pg125_audio6e from '../assets/audios/pg125_audio6e.mp3';
 
 const Pagina125 = () => {
-    const [inputValues, setInputValues] = useState(Array(6).fill(''));
-    const [results, setResults] = useState(Array(6).fill(null));
-
     const audioMap = {
-        global_learning_le_e,
-        global_learning_le_p,
-        pg124_audio1e,
-        pg124_audio1p,
-        pg124_audio2,
-        pg124_audio3,
-        pg124_audio4,
-        pg124_audio5,
-        pg124_audio6,
-        pg124_audio7,
-        pg124_audio8,
-        pg124_audio9,
-        pg124_audio10,
-        pg124_audio11
+        global_grammar_wo,
+        pg125_audio1e,
+        pg125_audio2e,
+        pg125_audio3e,
+        pg125_audio4e,
+        pg125_audio5e,
+        pg125_audio6e
     };
 
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
 
@@ -54,27 +34,21 @@ const Pagina125 = () => {
         <div className={styles["page125__container"]}>
             <header className={styles["page125__header"]}>
                 <h1 className={styles["page125__title"]}>
-                    Grammar - <spam className={styles["page125__text-black"]}>Would</spam>
+                    Grammar - <span className={styles["page125__text-black"]}>Would</span>
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
                         className={styles["page125__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles["page125__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_p")}
+                        onClick={() => playAudio("global_grammar_wo")}
                     />
                 </h1>
             </header>
-            <main className={styles["page125__main"]}>
 
+            <main className={styles["page125__main"]}>
                 <div className={styles.pg125tabelaNegativaContainer}>
                     <div className={styles.pg125tableHeaderNegativa}>NEGATIVE FORM (-)</div>
                     <table className={styles.pg125styledTableNegativa}>
-                        <thead className={styles.pg125Thead}>
+                        <thead className={styles.page125Thead}>
                             <tr className={styles.pg125celulatable}>
                                 <th>Introdução</th>
                                 <th>Sujeito</th>
@@ -82,23 +56,66 @@ const Pagina125 = () => {
                                 <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                 <th>Verbo(s)</th>
                                 <th>Objeto <br /> Complemento</th>
+                                <th>Tradução</th>
                             </tr>
                             <tr className={styles.pg125celulatable}>
                                 <th className={styles["page125__celulacolor"]}></th>
-                                <th className={styles["page125__celulacolor"]}>I</th>
-                                <th className={styles["page125__celulacolor"]}>wouldn’t</th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1e")}
+                                >I</th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1e")}
+                                >wouldn’t</th>
                                 <th className={styles["page125__celulacolor"]}></th>
-                                <th className={styles["page125__celulacolor"]}>like</th>
-                                <th className={styles["page125__celulacolor"]}>a sandwich, please.</th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1e")}
+                                >like to move </th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1e")}
+                                >to Lisbon.</th>
+                                <th className={styles["page125__celulacolor"]}
+                                >Eu não gostaria de <br /> me mudar para Lisboa.</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
 
                 <div className={styles["page125__container-textoa"]}>
-                    <h3><spam style={{ color: '#A61C28' }}>3 -</spam> Would - Negative</h3>
-                    <p>• ( <spam className={styles["page125_text-Bolder"]}>I would not go out in this heavy rain.</spam> ) <br /> Eu <spam className={styles["highlight"]}>não sairia</spam> nessa chuva forte.</p>
-                    <p>• ( <spam className={styles["page125_text-Bolder"]}>She wouldn’t go to the movies because she is working on Saturday.</spam> ) <br /> Ela <spam className={styles["highlight"]}> não</spam>iria ao cinema porque ela está trabalhando aos sábados.</p>
+                    <h3 style={{ display: 'flex', alignItems: 'center' }}>
+                        <span style={{ color: '#A61C28' }}>3 -</span> Would - Negative Form
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page125__additional-icon"]}
+                            onClick={() => playAudio("pg125_audio2e")}
+                        />
+                    </h3>
+                    <p>
+                        • ( <span className={styles["page125_text-Bolder"]}>I would not go out in this heavy rain.</span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page125__additional-icon"]}
+                            onClick={() => playAudio("pg125_audio3e")}
+                        /> <br />
+                        Eu <span className={styles["highlight"]}>não sairia</span> nessa chuva forte.
+                    </p>
+                    <p>
+                        • ( <span className={styles["page125_text-Bolder"]}>
+                            She wouldn’t go to the movies because she is working on Saturday.
+                        </span> )
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles["page125__additional-icon"]}
+                            onClick={() => playAudio("pg125_audio4e")}
+                        /> <br />
+                        Ela <span className={styles["highlight"]}>não</span> iria ao cinema porque ela está trabalhando aos sábados.
+                    </p>
                 </div>
 
                 <aside className={styles.pg125Aside}>
@@ -107,22 +124,21 @@ const Pagina125 = () => {
                             <p>Nota:</p>
                         </div>
                         <div className={styles.pg125AsideNotes2}>
-                            <p>• <spam className={styles["highlight"]}>Would </spam> é uma palavra especial que usamos para sermos gentis ou falar sobre o que
-                            queremos.</p>
+                            <p>• <span className={styles["highlight"]}>Would </span> é uma palavra especial que usamos para sermos gentis ou falar sobre o que queremos.</p>
                             <p>• Usamos “would“ para expressar o que queremos ou preferimos de forma mais educada. </p>
-                            <p>• Usado também para <span className={styles["highlight"]}>Pedidos</span>, <spam className={styles["highlight"]}>Solicitações</spam> e <spam className={styles["highlight"]}>Ofertas</spam>.</p>
+                            <p>• Usado também para <span className={styles["highlight"]}>Pedidos</span>, <span className={styles["highlight"]}>Solicitações</span> e <span className={styles["highlight"]}>Ofertas</span>.</p>
                         </div>
                     </div>
                 </aside>
 
                 <div>
                     <div className={styles["page125__titulo-table"]}>
-                        <h3>Forma Contraída: Interrogativa Negativa</h3>
+                        <h3>Forma Contraída: Afirmativa</h3>
                     </div>
                     <div className={styles.pg125tabelaAfirmativaContainer}>
                         <div className={styles.pg125tableHeaderAfirmativa}>Forma contraída: Aﬁrmativa</div>
                         <table className={styles.pg125styledTableAfirmativa}>
-                            <thead className={styles.pg125Thead}>
+                            <thead className={styles.page125Thead}>
                                 <tr className={styles.pg125celulatable}>
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
@@ -130,28 +146,55 @@ const Pagina125 = () => {
                                     <th>Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
+                                    <th>Tradução</th>
                                 </tr>
                                 <tr className={styles.pg125celulatable}>
                                     <th className={styles["page125__celulacolor"]}></th>
-                                    <th className={styles["page125__celulacolor"]}>I‘</th>
-                                    <th className={styles["page125__celulacolor"]}>d</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio6e")}
+                                    >I</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio6e")}
+                                    >would</th>
                                     <th className={styles["page125__celulacolor"]}></th>
-                                    <th className={styles["page125__celulacolor"]}>like</th>
-                                    <th className={styles["page125__celulacolor"]}>a sandwich, please.</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio6e")}
+                                    >like</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio6e")}
+                                    >a ham and cheese <br />sandwich.</th>
+                                    <th className={styles["page125__celulacolor"]}
+
+                                    > Eu gostaria de um misto</th>
                                 </tr>
                                 <tr className={styles.pg125celulatable}>
                                     <th className={styles["page125__celulacolor"]}></th>
-                                    <th className={styles["page125__celulacolor"]}>I</th>
-                                    <th className={styles["page125__celulacolor"]}>would</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio5e")} 
+                                    >I‘d</th>
+                                    <th className={styles["page125__celulacolor"]} >-</th>
                                     <th className={styles["page125__celulacolor"]}></th>
-                                    <th className={styles["page125__celulacolor"]}>like</th>
-                                    <th className={styles["page125__celulacolor"]}>a sandwich, please.</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio5e")}
+                                    >like</th>
+                                    <th className={styles["page125__celulacolor"]}
+                                        style={{ cursor: 'pointer' }}
+                                        onClick={() => playAudio("pg125_audio5e")}
+                                    >a ham and cheese <br />sandwich.</th>
+                                    <th className={styles["page125__celulacolor"]}
+
+                                    > Eu gostaria de um misto de <br /> presunto e queijo.</th>
                                 </tr>
                             </thead>
                         </table>
                     </div>
                 </div>
-
             </main>
         </div>
     );

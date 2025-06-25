@@ -107,7 +107,6 @@
 .page123__question-text {
     font-size: 2rem;
     font-weight: 400;
-    cursor: pointer;
 }
 
 .page123__image-container {
@@ -128,6 +127,7 @@
     display: flex;
     align-items: right;
     gap: 1rem;
+    
 }
 
 .page123__additional-icon {
@@ -152,6 +152,7 @@
     font-weight: bold;
     text-align: left;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 8rem;
 }
 
 .page123__button--check {
