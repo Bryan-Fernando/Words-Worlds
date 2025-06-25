@@ -491,7 +491,8 @@ const routes = [
   { path: "/pagina192", Component: Pagina192 },
   { path: "/pagina193", Component: Pagina193 },
   { path: "/pagina194", Component: Pagina194 },
-  { path: "/pagina195", Component: Pagina195 },
+  { path: "/pagina227", Component: Pagina227 },
+  /*{ path: "/pagina195", Component: Pagina195 },
   { path: "/pagina196", Component: Pagina196 },
   { path: "/pagina197", Component: Pagina197 },
   { path: "/pagina198", Component: Pagina198 },
@@ -523,7 +524,7 @@ const routes = [
   { path: "/pagina224", Component: Pagina224 },
   { path: "/pagina225", Component: Pagina225 },
   { path: "/pagina226", Component: Pagina226 },
-  { path: "/pagina227", Component: Pagina227 },
+  
   { path: "/pagina228", Component: Pagina228 },
   { path: "/pagina229", Component: Pagina229 },
   { path: "/pagina230", Component: Pagina230 },
@@ -533,7 +534,7 @@ const routes = [
   { path: "/pagina234", Component: Pagina234 },
   { path: "/pagina235", Component: Pagina235 },
   { path: "/pagina236", Component: Pagina236 },
-  { path: "/pagina237", Component: Pagina237 },
+  { path: "/pagina237", Component: Pagina237 },*/
   /*{ path: "/pagina238", Component: Pagina238 },
   { path: "/pagina239", Component: Pagina239 },
   { path: "/pagina240", Component: Pagina240 },
