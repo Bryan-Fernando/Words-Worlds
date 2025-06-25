@@ -9,27 +9,38 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import pagina146_imagem1 from '../assets/images/pagina146_imagem1.webp';
 
 import global_exercise_e from '../assets/audios/global_exercise_e.mp3';
+import global_exercise_p from '../assets/audios/global_exercise_p.mp3';
+
 import pg146_audio1e from '../assets/audios/pg146_audio1e.mp3';
 import pg146_audio2e from '../assets/audios/pg146_audio2e.mp3';
+import pg146_audio2p from '../assets/audios/pg146_audio2p.mp3';
 import pg146_audio3e from '../assets/audios/pg146_audio3e.mp3';
+import pg146_audio3p from '../assets/audios/pg146_audio3p.mp3';
 import pg146_audio4e from '../assets/audios/pg146_audio4e.mp3';
+import pg146_audio4p from '../assets/audios/pg146_audio4p.mp3';
 import pg146_audio5e from '../assets/audios/pg146_audio5e.mp3';
+import pg146_audio5p from '../assets/audios/pg146_audio5p.mp3';
 import pg146_audio6e from '../assets/audios/pg146_audio6e.mp3';
+import pg146_audio6p from '../assets/audios/pg146_audio6p.mp3';
 import pg146_audio7e from '../assets/audios/pg146_audio7e.mp3';
+import pg146_audio7p from '../assets/audios/pg146_audio7p.mp3';
 import pg146_audio8e from '../assets/audios/pg146_audio8e.mp3';
+import pg146_audio8p from '../assets/audios/pg146_audio8p.mp3';
 import pg146_audio9e from '../assets/audios/pg146_audio9e.mp3';
+import pg146_audio9p from '../assets/audios/pg146_audio9p.mp3';
 
 const audioMap = {
     global_exercise_e,
+    global_exercise_p,
     pg146_audio1e,
-    pg146_audio2e,
-    pg146_audio3e,
-    pg146_audio4e,
-    pg146_audio5e,
-    pg146_audio6e,
-    pg146_audio7e,
-    pg146_audio8e,
-    pg146_audio9e
+    pg146_audio2e, pg146_audio2p,
+    pg146_audio3e, pg146_audio3p,
+    pg146_audio4e, pg146_audio4p,
+    pg146_audio5e, pg146_audio5p,
+    pg146_audio6e, pg146_audio6p,
+    pg146_audio7e, pg146_audio7p,
+    pg146_audio8e, pg146_audio8p,
+    pg146_audio9e, pg146_audio9p
 };
 
 const Pagina146 = () => {
@@ -74,31 +85,37 @@ const Pagina146 = () => {
         audio.play();
     };
 
+    const renderIcons = (engKey, ptKey) => (
+        <span className={styles["page146__icons-container"]}>
+            {engKey && audioMap[engKey] && (
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page146__icon"]}
+                    onClick={() => playAudio(engKey)}
+                />
+            )}
+            {ptKey && audioMap[ptKey] && (
+                <img
+                    src={ptbr_audio_icon}
+                    alt="Portuguese Audio"
+                    className={styles["page146__icon"]}
+                    onClick={() => playAudio(ptKey)}
+                />
+            )}
+        </span>
+    );
+
     return (
         <div className={styles["page146__container"]}>
             <h1 className={styles["page146__title"]}>
                 <span className={styles["page146__title--red"]}>Exercises</span>
-                <span className={styles["page146__icons-container"]}>
-                    <img
-                        src={eng_audio_icon}
-                        alt="English Audio"
-                        className={styles["page146__icon"]}
-                        onClick={() => playAudio('global_exercise_e')}
-                    />
-                    <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
-                </span>
+                {renderIcons('global_exercise_e', 'global_exercise_p')}
             </h1>
 
             <h2 className={styles["page146__exercise-instruction"]}>
                 1. Fill in the blanks : Complete the sentences using the correct form of the Present Continuous in parentheses.
-                <span className={styles["page146__icons-container"]}>
-                    <img
-                        src={eng_audio_icon}
-                        alt="English Audio"
-                        className={styles["page146__icon"]}
-                        onClick={() => playAudio('pg146_audio1e')}
-                    />
-                </span>
+                {renderIcons('pg146_audio1e', null)}
             </h2>
 
             <p className={styles["page146__exercise-translation"]}>
@@ -134,17 +151,8 @@ const Pagina146 = () => {
                                     />
                                 )}
                             </div>
-
                             <span>{question.split('________')[1]}</span>
-                            <span className={styles["page146__icons-container"]}>
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="English Audio"
-                                    className={styles["page146__icon"]}
-                                    onClick={() => playAudio(`pg146_audio${index + 2}e`)}
-                                />
-                                <img src={ptbr_audio_icon} alt="Portuguese Audio" className={styles["page146__icon"]} />
-                            </span>
+                            {renderIcons(`pg146_audio${index + 2}e`, `pg146_audio${index + 2}p`)}
                         </div>
                     ))}
                 </div>
@@ -161,6 +169,7 @@ const Pagina146 = () => {
             <button className={styles["page146__check-button"]} onClick={handleCheckClick}>
                 <em>Check</em>
             </button>
+
             {showAnswers && (
                 <div className={styles["page146__answers-section"]}>
                     <h2 className={styles["page146__answers-title"]}>Answers</h2>

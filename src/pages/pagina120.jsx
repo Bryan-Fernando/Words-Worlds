@@ -10,18 +10,22 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import global_learning_le_e from '../assets/audios/global_learning_le_e.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';
 import pg120_audio1e from '../assets/audios/pg120_audio1e.mp3';
+import pg120_audio1p from '../assets/audios/pg120_audio1p.mp3';
 import pg120_audio2e from '../assets/audios/pg120_audio2e.mp3';
+import pg120_audio2p from '../assets/audios/pg120_audio2p.mp3';
 import pg120_audio3e from '../assets/audios/pg120_audio3e.mp3';
+import pg120_audio3p from '../assets/audios/pg120_audio3p.mp3';
 import pg120_audio4e from '../assets/audios/pg120_audio4e.mp3';
+import pg120_audio4p from '../assets/audios/pg120_audio4p.mp3';
 import pg120_audio5e from '../assets/audios/pg120_audio5e.mp3';
+import pg120_audio5p from '../assets/audios/pg120_audio5p.mp3';
 import pg120_audio6e from '../assets/audios/pg120_audio6e.mp3';
+import pg120_audio6p from '../assets/audios/pg120_audio6p.mp3';
 
 const Pagina120 = () => {
     const [inputValues, setInputValues] = useState(Array(5).fill(''));
     const [results, setResults] = useState(Array(5).fill(null));
-    const currentAudioRef = useRef(null);  // Para controlar o áudio atual
-
-    
+    const currentAudioRef = useRef(null);
 
     const correctAnswers = [
         'She is watching a movie now.',
@@ -35,11 +39,17 @@ const Pagina120 = () => {
         global_learning_le_e,
         global_learning_le_p,
         pg120_audio1e,
+        pg120_audio1p,
         pg120_audio2e,
+        pg120_audio2p,
         pg120_audio3e,
+        pg120_audio3p,
         pg120_audio4e,
+        pg120_audio4p,
         pg120_audio5e,
+        pg120_audio5p,
         pg120_audio6e,
+        pg120_audio6p,
     };
 
     const playAudio = (audioKey) => {
@@ -55,14 +65,10 @@ const Pagina120 = () => {
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
-
-            const isCorrect = value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
-
-            return isCorrect;
+            return value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
         });
         setResults(newResults);
     };
-
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -89,6 +95,7 @@ const Pagina120 = () => {
                     />
                 </h1>
             </header>
+
             <main className={styles["page120__main"]}>
                 <div className={styles["page120__content-flex"]}>
                     <div className={styles["page120__questions-container"]}>
@@ -110,12 +117,12 @@ const Pagina120 = () => {
                         </h2>
 
                         {[
-                            { text: "She are watching a movie now.", audio: "pg120_audio2e" },
-                            { text: "We is studying for the test.", audio: "pg120_audio3e" },
-                            { text: "They not are playing football at the moment.", audio: "pg120_audio4e" },
-                            { text: "Why you is crying?", audio: "pg120_audio5e" },
-                            { text: "I am go to the supermarket later.", audio: "pg120_audio6e" }
-                        ].map((questionItem, index) => (
+                            { text: "She are watching a movie now.", eng: "pg120_audio2e", pt: "pg120_audio2p" },
+                            { text: "We is studying for the test.", eng: "pg120_audio3e", pt: "pg120_audio3p" },
+                            { text: "They not are playing football at the moment.", eng: "pg120_audio4e", pt: "pg120_audio4p" },
+                            { text: "Why you is crying?", eng: "pg120_audio5e", pt: "pg120_audio5p" },
+                            { text: "I am go to the supermarket later.", eng: "pg120_audio6e", pt: "pg120_audio6p" }
+                        ].map((item, index) => (
                             <div key={index} className={styles["page120__question"]}>
                                 <div className={styles["page120__input-container"]}>
                                     <input
@@ -135,17 +142,23 @@ const Pagina120 = () => {
                                     )}
                                     <img
                                         src={eng_audio_icon}
-                                        alt="Audio Icon"
+                                        alt="English Audio"
                                         className={styles["page120__additional-icon"]}
-                                        onClick={() => playAudio(questionItem.audio)}
+                                        onClick={() => playAudio(item.eng)}
                                     />
-                                    
+                                    <img
+                                        src={ptbr_audio_icon}
+                                        alt="Portuguese Audio"
+                                        className={styles["page120__additional-icon"]}
+                                        onClick={() => playAudio(item.pt)}
+                                    />
                                 </div>
                                 <span className={styles["page120__question-text"]}>
-                                    <em>{questionItem.text}</em>
+                                    <em>{item.text}</em>
                                 </span>
                             </div>
                         ))}
+
                         <button className={styles["page120__button--check"]} onClick={handleCheckClick}>
                             <em>Check</em>
                         </button>

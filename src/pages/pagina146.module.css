@@ -91,6 +91,21 @@
   top: 0.3rem;
 }
 
+.page146__icon {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 0.3rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.page146__icon:hover {
+    transform: scale(1.2);
+}
+
+
 .page146__image-container {
   flex-shrink: 0;
 }

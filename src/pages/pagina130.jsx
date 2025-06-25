@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import styles from './pagina130.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pg130_audio1e from '../assets/audios/pg130_audio1e.mp3';
 import pg130_audio2e from '../assets/audios/pg130_audio2e.mp3';
@@ -17,18 +18,27 @@ import pg130_audio11e from '../assets/audios/pg130_audio11e.mp3';
 import pg130_audio12e from '../assets/audios/pg130_audio12e.mp3';
 import pg130_audio13e from '../assets/audios/pg130_audio13e.mp3';
 
+import pg130_audio3p from '../assets/audios/pg130_audio3p.mp3';
+import pg130_audio4p from '../assets/audios/pg130_audio4p.mp3';
+import pg130_audio5p from '../assets/audios/pg130_audio5p.mp3';
+import pg130_audio6p from '../assets/audios/pg130_audio6p.mp3';
+import pg130_audio7p from '../assets/audios/pg130_audio7p.mp3';
+import pg130_audio8p from '../assets/audios/pg130_audio8p.mp3';
+import pg130_audio9p from '../assets/audios/pg130_audio9p.mp3';
+import pg130_audio10p from '../assets/audios/pg130_audio10p.mp3';
+
 const Pagina130 = () => {
   const audioMap = {
     pg130_audio1e,
     pg130_audio2e,
-    pg130_audio3e,
-    pg130_audio4e,
-    pg130_audio5e,
-    pg130_audio6e,
-    pg130_audio7e,
-    pg130_audio8e,
-    pg130_audio9e,
-    pg130_audio10e,
+    pg130_audio3e, pg130_audio3p,
+    pg130_audio4e, pg130_audio4p,
+    pg130_audio5e, pg130_audio5p,
+    pg130_audio6e, pg130_audio6p,
+    pg130_audio7e, pg130_audio7p,
+    pg130_audio8e, pg130_audio8p,
+    pg130_audio9e, pg130_audio9p,
+    pg130_audio10e, pg130_audio10p,
     pg130_audio11e,
     pg130_audio12e,
     pg130_audio13e,
@@ -46,7 +56,7 @@ const Pagina130 = () => {
     audio.play();
   };
 
-  const renderIcon = (engKey) => (
+  const renderIcon = (engKey, ptKey) => (
     <span className={styles["page130__icons-container"]}>
       <img
         src={eng_audio_icon}
@@ -54,6 +64,14 @@ const Pagina130 = () => {
         className={styles["page130__icon"]}
         onClick={() => playAudio(engKey)}
       />
+      {ptKey && (
+        <img
+          src={ptbr_audio_icon}
+          alt="Portuguese Audio"
+          className={styles["page130__icon"]}
+          onClick={() => playAudio(ptKey)}
+        />
+      )}
     </span>
   );
 
@@ -107,23 +125,23 @@ const Pagina130 = () => {
       <section className={styles["page130__examples"]}>
         <div className={styles["page130__examples--block"]}>
           <p className={styles["page130__examples--title"]}>
-            Interrogative - Affirmative: {renderIcon('pg130_audio3e')}
+            Interrogative - Affirmative: {renderIcon('pg130_audio3e', 'pg130_audio3p')}
           </p>
           <ul>
-            <li>Are you studying now? {renderIcon('pg130_audio4e')}</li>
-            <li>Is she cooking dinner? {renderIcon('pg130_audio5e')}</li>
-            <li>Am I speaking too fast? {renderIcon('pg130_audio6e')}</li>
+            <li>Are you studying now? {renderIcon('pg130_audio4e', 'pg130_audio4p')}</li>
+            <li>Is she cooking dinner? {renderIcon('pg130_audio5e', 'pg130_audio5p')}</li>
+            <li>Am I speaking too fast? {renderIcon('pg130_audio6e', 'pg130_audio6p')}</li>
           </ul>
         </div>
 
         <div className={styles["page130__examples--block"]}>
           <p className={styles["page130__examples--title"]}>
-            Interrogative - Negative: {renderIcon('pg130_audio7e')}
+            Interrogative - Negative: {renderIcon('pg130_audio7e', 'pg130_audio7p')}
           </p>
           <ul>
-            <li>Aren’t you studying for the test? {renderIcon('pg130_audio8e')}</li>
-            <li>Isn’t she cooking dinner? {renderIcon('pg130_audio9e')}</li>
-            <li>Ain’t I speaking too loud? {renderIcon('pg130_audio10e')}</li>
+            <li>Aren’t you studying for the test? {renderIcon('pg130_audio8e', 'pg130_audio8p')}</li>
+            <li>Isn’t she cooking dinner? {renderIcon('pg130_audio9e', 'pg130_audio9p')}</li>
+            <li>Ain’t I speaking too loud? {renderIcon('pg130_audio10e', 'pg130_audio10p')}</li>
           </ul>
         </div>
       </section>

@@ -14,13 +14,20 @@ import pg129_audio3e from '../assets/audios/pg129_audio3e.mp3';
 import pg129_audio4e from '../assets/audios/pg129_audio4e.mp3';
 import pg129_audio5e from '../assets/audios/pg129_audio5e.mp3';
 import pg129_audio6e from '../assets/audios/pg129_audio6e.mp3';
-
+import pg129_audio1p from '../assets/audios/pg129_audio1p.mp3';
+import pg129_audio2p from '../assets/audios/pg129_audio2p.mp3';
+import pg129_audio3p from '../assets/audios/pg129_audio3p.mp3';
+import pg129_audio4p from '../assets/audios/pg129_audio4p.mp3';
+import pg129_audio5p from '../assets/audios/pg129_audio5p.mp3';
+import pg129_audio6p from '../assets/audios/pg129_audio6p.mp3';
 
 const Pagina129 = () => {
 
   const audioMap = {
-    pg129_audio1e, pg129_audio2e, pg129_audio3e, pg129_audio4e, pg129_audio5e, pg129_audio6e, global_affirmativee,
-    global_affirmativep, global_negativee, global_negativep,
+    pg129_audio1e, pg129_audio2e, pg129_audio3e, pg129_audio4e, pg129_audio5e, pg129_audio6e,
+    pg129_audio1p, pg129_audio2p, pg129_audio3p, pg129_audio4p, pg129_audio5p, pg129_audio6p,
+    global_affirmativee, global_affirmativep,
+    global_negativee, global_negativep,
   };
 
   const currentAudioRef = useRef(null);
@@ -35,7 +42,7 @@ const Pagina129 = () => {
     audio.play();
   };
 
-  const renderIcon = (engKey) => (
+  const renderIcon = (engKey, ptKey) => (
     <span className={styles["page129__icons-container"]}>
       <img
         src={eng_audio_icon}
@@ -43,10 +50,14 @@ const Pagina129 = () => {
         className={styles["page129__icon"]}
         onClick={() => playAudio(engKey)}
       />
+      <img
+        src={ptbr_audio_icon}
+        alt="Portuguese Audio"
+        className={styles["page129__icon"]}
+        onClick={() => playAudio(ptKey)}
+      />
     </span>
   );
-
-
 
   return (
     <div className={styles["page129__container"]}>
@@ -58,7 +69,6 @@ const Pagina129 = () => {
       </header>
 
       <main className={styles["page129__main"]}>
-
         {/* Bloco azul - Present Continuous / Progressive Form */}
         <section className={styles["page129__aside"]}>
           <div className={styles["page129__aside-note1"]}>
@@ -127,19 +137,19 @@ const Pagina129 = () => {
             </tbody>
           </table>
           <div className={styles["page129__examples"]}>
-            <strong>Affirmative: {renderIcon('global_affirmativee')}</strong>
+            <strong>Affirmative: {renderIcon('global_affirmativee', 'global_affirmativep')}</strong>
             <ul>
               <li>
                 I am studying English.
-                {renderIcon('pg129_audio1e')}
+                {renderIcon('pg129_audio1e', 'pg129_audio1p')}
               </li>
               <li>
                 She is watching TV.
-                {renderIcon('pg129_audio2e')}
+                {renderIcon('pg129_audio2e', 'pg129_audio2p')}
               </li>
               <li>
                 They are playing soccer.
-                {renderIcon('pg129_audio3e')}
+                {renderIcon('pg129_audio3e', 'pg129_audio3p')}
               </li>
             </ul>
           </div>
@@ -169,19 +179,19 @@ const Pagina129 = () => {
             </tbody>
           </table>
           <div className={styles["page129__examples"]}>
-            <strong>Negative: {renderIcon('global_negativee')}</strong>
+            <strong>Negative: {renderIcon('global_negativee', 'global_negativep')}</strong>
             <ul>
               <li>
                 I am <span style={{ color: 'red' }}>not</span> sleeping now.
-                {renderIcon('pg129_audio4e')}
+                {renderIcon('pg129_audio4e', 'pg129_audio4p')}
               </li>
               <li>
                 He is <span style={{ color: 'red' }}>not</span> listening to music.
-                {renderIcon('pg129_audio5e')}
+                {renderIcon('pg129_audio5e', 'pg129_audio5p')}
               </li>
               <li>
                 We are <span style={{ color: 'red' }}>not</span> going to the party.
-                {renderIcon('pg129_audio6e')}
+                {renderIcon('pg129_audio6e', 'pg129_audio6p')}
               </li>
             </ul>
           </div>

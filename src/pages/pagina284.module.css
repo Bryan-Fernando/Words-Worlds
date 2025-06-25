@@ -1,0 +1,37 @@
+.page284__container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-family: Arial, sans-serif;
+}
+
+.page284__title {
+  color: #A61C28;
+  font-size: 3rem;
+  text-align: left;
+  font-weight: bold;
+}
+
+.page284__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page284__text {
+  width: 60%;
+  text-align: left;
+}
+
+.page284__image {
+  width: 35%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.page284__red {
+  color: #A61C28;
+  font-style: italic;
+}

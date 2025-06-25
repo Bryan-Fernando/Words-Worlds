@@ -27,6 +27,7 @@
 .page103__main {
     display: flex;
     flex-direction: column;
+    height: 50rem;
     gap: 7rem;
 }
 

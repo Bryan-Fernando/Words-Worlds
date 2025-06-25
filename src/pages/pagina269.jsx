@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './pagina269Pagina269.module.css';
+import styles from './pagina269.module.css';
 import correctIcon from '../assets/icons/correct_icon.webp';
 import wrongIcon from '../assets/icons/wrong_icon.webp';
 

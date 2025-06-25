@@ -1,0 +1,58 @@
+.page279__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: black;
+}
+
+.page279__header {
+  text-align: left;
+}
+
+.page279__system-title {
+  border: 0.3rem solid #0A3282;
+  color: #0A3282;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  font-size: 3.8rem;
+}
+
+.page279__main-title {
+  color: #0A3282;
+  font-size: 2.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.page279__subtitle {
+  color: #888A8C;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.page279__examples {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page279__example-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page279__image {
+  width: 25%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page279__text-red {
+  color: #A61C28;
+  font-weight: bold;
+}

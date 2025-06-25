@@ -36,35 +36,61 @@ import pg143_audio23e from '../assets/audios/pg143_audio23e.mp3';
 import pg143_audio24e from '../assets/audios/pg143_audio24e.mp3';
 import pg143_audio25e from '../assets/audios/pg143_audio25e.mp3';
 
+import pg143_audio1p from '../assets/audios/pg143_audio1p.mp3';
+import pg143_audio2p from '../assets/audios/pg143_audio2p.mp3';
+import pg143_audio3p from '../assets/audios/pg143_audio3p.mp3';
+import pg143_audio4p from '../assets/audios/pg143_audio4p.mp3';
+import pg143_audio5p from '../assets/audios/pg143_audio5p.mp3';
+import pg143_audio6p from '../assets/audios/pg143_audio6p.mp3';
+import pg143_audio7p from '../assets/audios/pg143_audio7p.mp3';
+import pg143_audio8p from '../assets/audios/pg143_audio8p.mp3';
+import pg143_audio9p from '../assets/audios/pg143_audio9p.mp3';
+import pg143_audio10p from '../assets/audios/pg143_audio10p.mp3';
+import pg143_audio11p from '../assets/audios/pg143_audio11p.mp3';
+import pg143_audio12p from '../assets/audios/pg143_audio12p.mp3';
+import pg143_audio13p from '../assets/audios/pg143_audio13p.mp3';
+import pg143_audio14p from '../assets/audios/pg143_audio14p.mp3';
+import pg143_audio15p from '../assets/audios/pg143_audio15p.mp3';
+import pg143_audio16p from '../assets/audios/pg143_audio16p.mp3';
+import pg143_audio17p from '../assets/audios/pg143_audio17p.mp3';
+import pg143_audio18p from '../assets/audios/pg143_audio18p.mp3';
+import pg143_audio19p from '../assets/audios/pg143_audio19p.mp3';
+import pg143_audio20p from '../assets/audios/pg143_audio20p.mp3';
+import pg143_audio21p from '../assets/audios/pg143_audio21p.mp3';
+import pg143_audio22p from '../assets/audios/pg143_audio22p.mp3';
+import pg143_audio23p from '../assets/audios/pg143_audio23p.mp3';
+import pg143_audio24p from '../assets/audios/pg143_audio24p.mp3';
+import pg143_audio25p from '../assets/audios/pg143_audio25p.mp3';
+
 const Pagina143 = () => {
     const currentAudioRef = useRef(null);
 
     const audioMap = {
-        pg143_audio1e,
-        pg143_audio2e,
-        pg143_audio3e,
-        pg143_audio4e,
-        pg143_audio5e,
-        pg143_audio6e,
-        pg143_audio7e,
-        pg143_audio8e,
-        pg143_audio9e,
-        pg143_audio10e,
-        pg143_audio11e,
-        pg143_audio12e,
-        pg143_audio13e,
-        pg143_audio14e,
-        pg143_audio15e,
-        pg143_audio16e,
-        pg143_audio17e,
-        pg143_audio18e,
-        pg143_audio19e,
-        pg143_audio20e,
-        pg143_audio21e,
-        pg143_audio22e,
-        pg143_audio23e,
-        pg143_audio24e,
-        pg143_audio25e,
+        pg143_audio1e, pg143_audio1p,
+        pg143_audio2e, pg143_audio2p,
+        pg143_audio3e, pg143_audio3p,
+        pg143_audio4e, pg143_audio4p,
+        pg143_audio5e, pg143_audio5p,
+        pg143_audio6e, pg143_audio6p,
+        pg143_audio7e, pg143_audio7p,
+        pg143_audio8e, pg143_audio8p,
+        pg143_audio9e, pg143_audio9p,
+        pg143_audio10e, pg143_audio10p,
+        pg143_audio11e, pg143_audio11p,
+        pg143_audio12e, pg143_audio12p,
+        pg143_audio13e, pg143_audio13p,
+        pg143_audio14e, pg143_audio14p,
+        pg143_audio15e, pg143_audio15p,
+        pg143_audio16e, pg143_audio16p,
+        pg143_audio17e, pg143_audio17p,
+        pg143_audio18e, pg143_audio18p,
+        pg143_audio19e, pg143_audio19p,
+        pg143_audio20e, pg143_audio20p,
+        pg143_audio21e, pg143_audio21p,
+        pg143_audio22e, pg143_audio22p,
+        pg143_audio23e, pg143_audio23p,
+        pg143_audio24e, pg143_audio24p,
+        pg143_audio25e, pg143_audio25p,
     };
 
 

@@ -18,7 +18,7 @@ import pg108_audio3 from '../assets/audios/pg108_audio3.mp3';
 import pg108_trad2 from '../assets/audios/pg108_trad2.mp3';
 
 
-const Pagina108 = () => {
+const Pagina137 = () => {
     const [inputValues, setInputValues] = useState(
         Array(3).fill(Array(6).fill(''))
     );
@@ -219,4 +219,4 @@ const Pagina108 = () => {
     );
 };
 
-export default Pagina108;
+export default Pagina137;

@@ -59,7 +59,7 @@ const Pagina145 = () => {
             <section className={styles["page145__section"]}>
                 <h2 className={styles["page145__subtitle"]}>
                     <span className={styles["page145__highlight"]}>
-                        <strong>1. Actions happening now</strong> {renderEngIcon('pg145_audio2')} –
+                        <strong>1. Actions happening now</strong> {renderEngIcon('pg145_audio1e')} –
                     </span>
                     <span className={styles["page145__subtitle--translation"]}> Ações que estão acontecendo agora:</span>
                 </h2>
@@ -67,13 +67,13 @@ const Pagina145 = () => {
                     <li>
                         <span className={styles["page145__example--english"]}>
                             She <span className={styles["page145__highlight"]}>is talking</span> on the phone
-                            {renderEngIcon('pg145_audio3')}
+                            {renderEngIcon('pg145_audio2e')}
                         </span> – “Ela <strong>está falando</strong> ao telefone.”
                     </li>
                     <li>
                         <span className={styles["page145__example--english"]}>
                             We <span className={styles["page145__highlight"]}>are waiting</span> for the bus.
-                            {renderEngIcon('pg145_audio4')}
+                            {renderEngIcon('pg145_audio3e')}
                         </span> – “Nós <strong>estamos esperando</strong> o ônibus.”
                     </li>
                 </ul>
@@ -83,7 +83,7 @@ const Pagina145 = () => {
             <section className={styles["page145__section"]}>
                 <h2 className={styles["page145__subtitle"]}>
                     <span className={styles["page145__highlight"]}>
-                        <strong>2. Temporary actions</strong> {renderEngIcon('pg145_audio5')} –
+                        <strong>2. Temporary actions</strong> {renderEngIcon('pg145_audio4e')} –
                     </span>
                     <span className={styles["page145__subtitle--translation"]}> Ações temporárias:</span>
                 </h2>
@@ -91,7 +91,7 @@ const Pagina145 = () => {
                     <li>
                         <span className={styles["page145__example--english"]}>
                             I <span className={styles["page145__highlight"]}>am staying</span> at my friend’s house this week.
-                            {renderEngIcon('pg145_audio6')}
+                            {renderEngIcon('pg145_audio5e')}
                         </span> → “Eu <strong>estou ficando</strong> na casa do meu amigo esta semana.”
                     </li>
                 </ul>
@@ -101,7 +101,7 @@ const Pagina145 = () => {
             <section className={styles["page145__section"]}>
                 <h2 className={styles["page145__subtitle"]}>
                     <span className={styles["page145__highlight"]}>
-                        <strong>3. Future plans (arrangements)</strong> {renderEngIcon('pg145_audio7')} –
+                        <strong>3. Future plans (arrangements)</strong> {renderEngIcon('pg145_audio6e')} –
                     </span>
                     <span className={styles["page145__subtitle--translation"]}> Planos futuros (com horário definido):</span>
                 </h2>
@@ -109,7 +109,7 @@ const Pagina145 = () => {
                     <li>
                         <span className={styles["page145__example--english"]}>
                             They <span className={styles["page145__highlight"]}>are traveling</span> to Spain next month.
-                            {renderEngIcon('pg145_audio8')}
+                            {renderEngIcon('pg145_audio7e')}
                         </span> – “Eles <strong>estão viajando</strong> para a Espanha no próximo mês.”
                     </li>
                 </ul>
@@ -119,7 +119,7 @@ const Pagina145 = () => {
             <section className={styles["page145__section"]}>
                 <h2 className={styles["page145__subtitle"]}>
                     <span className={styles["page145__highlight"]}>
-                        <strong>4. Changing situations</strong> {renderEngIcon('pg145_audio9')} –
+                        <strong>4. Changing situations</strong> {renderEngIcon('pg145_audio8e')} –
                     </span>
                     <span className={styles["page145__subtitle--translation"]}> Mudanças de estado:</span>
                 </h2>
@@ -127,13 +127,13 @@ const Pagina145 = () => {
                     <li>
                         <span className={styles["page145__example--english"]}>
                             The climate <span className={styles["page145__highlight"]}>is getting</span> warmer.
-                            {renderEngIcon('pg145_audio10')}
+                            {renderEngIcon('pg145_audio9e')}
                         </span> – “O clima <strong>está ficando</strong> mais quente.”
                     </li>
                     <li>
                         <span className={styles["page145__example--english"]}>
                             My English <span className={styles["page145__highlight"]}>is improving</span> every day.
-                            {renderEngIcon('pg145_audio11')}
+                            {renderEngIcon('pg145_audio10e')}
                         </span> – “Meu inglês <strong>está melhorando</strong> a cada dia.”
                     </li>
                 </ul>

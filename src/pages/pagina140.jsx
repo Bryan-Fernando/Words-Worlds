@@ -20,7 +20,7 @@ import pg109_trad3 from '../assets/audios/pg109_trad3.mp3';
 
 
 
-const Pagina109 = () => {
+const Pagina140 = () => {
     const [inputValues, setInputValues] = useState(
         Array(6).fill(Array(6).fill(''))
     );
@@ -175,4 +175,4 @@ const Pagina109 = () => {
     );
 };
 
-export default Pagina109;
+export default Pagina140;

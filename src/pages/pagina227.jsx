@@ -1,56 +1,39 @@
 import React from 'react';
 import styles from './pagina227.module.css';
 
-import clockYellow from '../assets/images/pagina178_imagem2.webp';
-import conversationImage from '../assets/images/pagina227_imagem1.webp';
+import gif1 from '../assets/images/gif1.gif';
+import gif2 from '../assets/images/gif2.gif';
+import gif3 from '../assets/images/gif3.gif';
+
+const sections = [
+    {
+        gif: gif1,
+        text: "The present continuous tense is used for actions happening right now. For example: 'She is eating lunch.'"
+    },
+    {
+        gif: gif2,
+        text: "It is also used for future plans. For example: 'They are going to the cinema tonight.'"
+    },
+    {
+        gif: gif3,
+        text: "We form it with the verb 'to be' + verb + -ing. Example: 'I am studying English.'"
+    }
+];
 
 const Pagina227 = () => {
-  return (
-    <div className={styles["page227__container"]}>
-
-      {/* Header */}
-      <div className={styles["page227__header"]}>
-        <div className={styles["page227__system-title"]}>Sistema Analógico</div>
-        <h1 className={styles["page227__main-title"]}>How to Ask and Tell the Time</h1>
-        <p className={styles["page227__subtitle"]}>Como Perguntar e Dizer as Horas</p>
-      </div>
-
-      {/* Exemplos de horários */}
-      <div className={styles["page227__examples"]}>
-
-        {/* 10:25 */}
-        <div className={styles["page227__example-block"]}>
-          <div>
-            <p><strong>A:</strong> What time is it ?</p>
-            <p className={styles["page227__text-red"]}><strong>B:</strong> It’s twenty-five past / after ten.</p>
-          </div>
-          <img src={clockYellow} alt="Clock 10:25" className={styles["page227__image"]} />
+    return (
+        <div className={styles.page227__container}>
+            <h1 className={styles.page227__title}>Understanding the Present Continuous</h1>
+            <div className={styles.page227__content}>
+                {sections.map((section, index) => (
+                    <div key={index} className={styles.page227__section}>
+                        <img src={section.gif} alt={`Illustration ${index + 1}`} className={styles.page227__gif} />
+                        <p className={styles.page227__text}>{section.text}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-
-        {/* 10:30 */}
-        <div className={styles["page227__example-block"]}>
-          <div>
-            <p><strong>A:</strong> What time is it ?</p>
-            <p className={styles["page227__text-red"]}><strong>B:</strong> It’s half past ten.</p>
-          </div>
-          <img src={clockYellow} alt="Clock 10:30" className={styles["page227__image"]} />
-        </div>
-
-      </div>
-
-      {/* Conversa com balões */}
-      <div className={styles["page227__conversation"]}>
-        <div className={styles["page227__speech-left"]}>
-          Could you tell me the time, please?
-        </div>
-        <div className={styles["page227__speech-right"]}>
-          Sure, it’s 20 past 10.<br /> (20 after 10)
-        </div>
-        <img src={conversationImage} alt="People talking" className={styles["page227__conversation-image"]} />
-      </div>
-
-    </div>
-  );
+    );
 };
 
 export default Pagina227;

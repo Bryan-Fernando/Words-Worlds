@@ -1,0 +1,37 @@
+.page283__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  color: black;
+}
+
+.page283__title {
+  color: #A61C28;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: left;
+}
+
+.page283__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page283__text {
+  width: 60%;
+  text-align: left;
+}
+
+.page283__image {
+  width: 30%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover; 
+}
+
+.page283__red {
+  color: #A61C28;
+}

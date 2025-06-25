@@ -16,9 +16,17 @@ import pg121_audio4e from '../assets/audios/pg121_audio4e.mp3';
 import pg121_audio5e from '../assets/audios/pg121_audio5e.mp3';
 import pg121_audio6e from '../assets/audios/pg121_audio6e.mp3';
 
+import pg121_audio1p from '../assets/audios/pg121_audio1p.mp3';
+import pg121_audio2p from '../assets/audios/pg121_audio2p.mp3';
+import pg121_audio3p from '../assets/audios/pg121_audio3p.mp3';
+import pg121_audio4p from '../assets/audios/pg121_audio4p.mp3';
+import pg121_audio5p from '../assets/audios/pg121_audio5p.mp3';
+import pg121_audio6p from '../assets/audios/pg121_audio6p.mp3';
+
 const Pagina121 = () => {
-    const [inputValues, setInputValues] = useState(Array(6).fill(''));
-    const [results, setResults] = useState(Array(6).fill(null));
+    const [inputValues, setInputValues] = useState(Array(5).fill(''));
+    const [results, setResults] = useState(Array(5).fill(null));
+    const currentAudioRef = useRef(null);
 
     const correctAnswers = [
         'She is cooking dinner in the kitchen.',
@@ -32,22 +40,25 @@ const Pagina121 = () => {
         global_learning_le_e,
         global_learning_le_p,
         pg121_audio1e,
+        pg121_audio1p,
         pg121_audio2e,
+        pg121_audio2p,
         pg121_audio3e,
+        pg121_audio3p,
         pg121_audio4e,
+        pg121_audio4p,
         pg121_audio5e,
-        pg121_audio6e
+        pg121_audio5p,
+        pg121_audio6e,
+        pg121_audio6p
     };
-    
-
-    const currentAudioRef = useRef(null);
 
     const playAudio = (audioKey) => {
         if (currentAudioRef.current) {
             currentAudioRef.current.pause();
             currentAudioRef.current.currentTime = 0;
         }
-    
+
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
             currentAudioRef.current = audio;
@@ -56,19 +67,14 @@ const Pagina121 = () => {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
-    
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
-
-            const isCorrect = value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
-
-            return isCorrect;
+            return value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
         });
         setResults(newResults);
     };
-
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -77,7 +83,7 @@ const Pagina121 = () => {
     };
 
     return (
-        <div className={styles["page120__container"]}>
+        <div className={styles["page121__container"]}>
             <header className={styles["page121__header"]}>
                 <h1 className={styles["page121__title"]}>
                     Learning Language Exercises
@@ -99,8 +105,8 @@ const Pagina121 = () => {
                 <div className={styles["page121__content-flex"]}>
                     <div className={styles["page121__questions-container"]}>
                         <h2 className={styles["page121__questions-title"]}>
-                        <span className={styles["page121__text-red"]}>2. Match the Sentence Halves</span>
-                        <br /> Match the first part of the sentence (Column A) with the correct ending (Column B).  
+                            <span className={styles["page121__text-red"]}>2. Match the Sentence Halves</span>
+                            <br /> Match the first part of the sentence (Column A) with the correct ending (Column B).
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
@@ -116,7 +122,7 @@ const Pagina121 = () => {
                         </h2>
 
                         <div className={styles["page121_container-coluns"]}>
-                        <span className={styles["page121_columnA--title"]}>A</span>
+                            <span className={styles["page121_columnA--title"]}>A</span>
                             <div className={styles["page121_container-colunsa"]}>
                                 <p>1. She is cooking</p>
                                 <p>2. We are waiting</p>
@@ -129,20 +135,15 @@ const Pagina121 = () => {
                                 <p>a) because he is tired.</p>
                                 <p>b) for the bus.</p>
                                 <p>c) dinner in the kitchen.</p>
-                                <p>d) for the ﬁnal exam.</p>
+                                <p>d) for the final exam.</p>
                                 <p>e) for their honeymoon.</p>
                             </div>
                         </div>
-                        
-                        {[
-                            "",
-                            "",
-                            "",
-                            "",
-                            ""
-                        ].map((question, index) => {
-                            const answerAudio = `pg121_audio${index + 2}e`;
-                        
+
+                        {[0, 1, 2, 3, 4].map((_, index) => {
+                            const answerAudioEng = `pg121_audio${index + 2}e`;
+                            const answerAudioPt = `pg121_audio${index + 2}p`;
+
                             return (
                                 <div key={index} className={styles["page121__question"]}>
                                     <div className={styles["page121__input-container"]}>
@@ -152,20 +153,24 @@ const Pagina121 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index)}
                                             className={styles["page121__input-box"]}
                                         />
-                                        {results[index] !== null ? (
+                                        {results[index] !== null && (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
                                                 alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page121__checkmark-image"]}
                                             />
-                                        ) : (
-                                            <span className={styles["page121__placeholder"]}></span>
                                         )}
                                         <img
                                             src={eng_audio_icon}
-                                            alt="Audio Icon"
+                                            alt="English Audio"
                                             className={styles["page121__additional-icon"]}
-                                            onClick={() => playAudio(answerAudio)}
+                                            onClick={() => playAudio(answerAudioEng)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles["page121__additional-icon"]}
+                                            onClick={() => playAudio(answerAudioPt)}
                                         />
                                     </div>
                                 </div>

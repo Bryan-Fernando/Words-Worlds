@@ -1,0 +1,40 @@
+.page281__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  color: black;
+}
+
+.page281__title {
+  color: #A61C28;
+  font-size: 3rem;
+  border-left: 0.8rem solid #A61C28;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.page281__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.page281__text {
+  width: 50%;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.page281__image {
+  width: 45%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.page281__red {
+  color: #A61C28;
+  font-style: italic;
+}

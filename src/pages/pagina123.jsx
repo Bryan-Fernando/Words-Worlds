@@ -18,6 +18,13 @@ import pg123_audio3e from '../assets/audios/pg123_audio3e.mp3';
 import pg123_audio4e from '../assets/audios/pg123_audio4e.mp3';
 import pg123_audio5e from '../assets/audios/pg123_audio5e.mp3';
 import pg123_audio6e from '../assets/audios/pg123_audio6e.mp3';
+import pg123_audio1p from '../assets/audios/pg123_audio1p.mp3';
+import pg123_audio2p from '../assets/audios/pg123_audio2p.mp3';
+import pg123_audio3p from '../assets/audios/pg123_audio3p.mp3';
+import pg123_audio4p from '../assets/audios/pg123_audio4p.mp3';
+import pg123_audio5p from '../assets/audios/pg123_audio5p.mp3';
+import pg123_audio6p from '../assets/audios/pg123_audio6p.mp3';
+
 
 const Pagina123 = () => {
     const [inputValues, setInputValues] = useState(Array(6).fill(''));
@@ -39,8 +46,14 @@ const Pagina123 = () => {
         pg123_audio3e,
         pg123_audio4e,
         pg123_audio5e,
-        pg123_audio6e
-    };    
+        pg123_audio6e,
+        pg123_audio1p,
+        pg123_audio2p,
+        pg123_audio3p,
+        pg123_audio4p,
+        pg123_audio5p,
+        pg123_audio6p
+    };
 
     const currentAudioRef = useRef(null);
 
@@ -57,7 +70,7 @@ const Pagina123 = () => {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
-    
+
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
@@ -100,8 +113,8 @@ const Pagina123 = () => {
                 <div className={styles["page123__content-flex"]}>
                     <div className={styles["page123__questions-container"]}>
                         <h2 className={styles["page123__questions-title"]}>
-                        <span className={styles["page123__text-red"]}>4. Sentence Ordering</span>
-                        <br /> ( Put the words in the correct order to form a sentence )   
+                            <span className={styles["page123__text-red"]}>4. Sentence Ordering</span>
+                            <br /> ( Put the words in the correct order to form a sentence )
                             <img
                                 src={eng_audio_icon}
                                 alt="English audio"
@@ -112,6 +125,7 @@ const Pagina123 = () => {
                                 src={ptbr_audio_icon}
                                 alt="Portuguese audio"
                                 className={styles["page123__header-icon"]}
+                                onClick={() => playAudio("pg123_audio1p")}
                             />
                         </h2>
 
@@ -122,8 +136,8 @@ const Pagina123 = () => {
                             "4. (playing / the guitar / he / is / in his room)",
                             "5. (to the library / they / walking / are / now)"
                         ].map((question, index) => {
-                            const answerAudio = `pg123_audio${index + 2}e`;
-                            
+                            const engKey = `pg123_audio${index + 2}e`;
+                            const ptKey = `pg123_audio${index + 2}p`;
 
                             return (
                                 <div key={index} className={styles["page123__question"]}>
@@ -146,16 +160,20 @@ const Pagina123 = () => {
                                         )}
                                         <img
                                             src={eng_audio_icon}
-                                            alt="Audio Icon"
+                                            alt="English Audio"
                                             className={styles["page123__additional-icon"]}
-                                            onClick={() => playAudio(answerAudio)}
+                                            onClick={() => playAudio(engKey)}
                                         />
-                                        
-
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles["page123__additional-icon"]}
+                                            onClick={() => playAudio(ptKey)}
+                                        />
                                     </div>
                                     <span
                                         className={styles["page123__question-text"]}
-                                        onClick={() => playAudio(answerAudio)}
+                                        onClick={() => playAudio(engKey)}
                                     >
                                         <em>{question}</em>
                                     </span>
@@ -163,18 +181,19 @@ const Pagina123 = () => {
                             );
                         })}
 
+
                         <button className={styles["page123__button--check"]} onClick={handleCheckClick}>
                             <em>Check</em>
                         </button>
                     </div>
                 </div>
                 <div className={styles["page123__container-image"]}>
-                        <div className={styles["page123__container-imagea"]}>
-                            <img className={styles["page123__image"]} src={pagina233_imagem1} alt="" />
-                        </div>
-                        <div className={styles["page123__container-imagea"]}>
-                            <img className={styles["page123__image"]} src={pagina233_imagem2} alt="" />
-                        </div>
+                    <div className={styles["page123__container-imagea"]}>
+                        <img className={styles["page123__image"]} src={pagina233_imagem1} alt="" />
+                    </div>
+                    <div className={styles["page123__container-imagea"]}>
+                        <img className={styles["page123__image"]} src={pagina233_imagem2} alt="" />
+                    </div>
                 </div>
             </main>
         </div>

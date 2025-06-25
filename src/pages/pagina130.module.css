@@ -146,12 +146,13 @@
 .page130__icon {
   width: 2rem;
   height: 2rem;
-  cursor: pointer;
-  transition: transform 0.2s;
   position: relative;
   top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.page130__icon--playing {
-  animation: pulse 1s infinite;
+.page130__icons-container img:hover {
+  transform: scale(1.2);
 }

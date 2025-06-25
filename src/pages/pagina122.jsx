@@ -15,6 +15,13 @@ import pg122_audio4e from '../assets/audios/pg122_audio4e.mp3';
 import pg122_audio5e from '../assets/audios/pg122_audio5e.mp3';
 import pg122_audio6e from '../assets/audios/pg122_audio6e.mp3';
 
+import pg122_audio1p from '../assets/audios/pg122_audio1p.mp3';
+import pg122_audio2p from '../assets/audios/pg122_audio2p.mp3';
+import pg122_audio3p from '../assets/audios/pg122_audio3p.mp3';
+import pg122_audio4p from '../assets/audios/pg122_audio4p.mp3';
+import pg122_audio5p from '../assets/audios/pg122_audio5p.mp3';
+import pg122_audio6p from '../assets/audios/pg122_audio6p.mp3';
+
 const Pagina122 = () => {
     const [inputValues, setInputValues] = useState(Array(5).fill(''));
     const [results, setResults] = useState(Array(5).fill(null));
@@ -32,11 +39,17 @@ const Pagina122 = () => {
         global_learning_le_e,
         global_learning_le_p,
         pg122_audio1e,
+        pg122_audio1p,
         pg122_audio2e,
+        pg122_audio2p,
         pg122_audio3e,
+        pg122_audio3p,
         pg122_audio4e,
+        pg122_audio4p,
         pg122_audio5e,
-        pg122_audio6e
+        pg122_audio5p,
+        pg122_audio6e,
+        pg122_audio6p
     };
 
     const playAudio = (audioKey) => {
@@ -115,7 +128,8 @@ const Pagina122 = () => {
                             "4. (crying / is / the baby)",
                             "5. (next week / going / we / are / on vacation)"
                         ].map((question, index) => {
-                            const answerAudio = `pg122_audio${index + 2}e`;
+                            const engKey = `pg122_audio${index + 2}e`;
+                            const ptKey = `pg122_audio${index + 2}p`;
                             return (
                                 <div key={index} className={styles["page122__question"]}>
                                     <div className={styles["page122__input-container"]}>
@@ -134,9 +148,15 @@ const Pagina122 = () => {
                                         )}
                                         <img
                                             src={eng_audio_icon}
-                                            alt="Audio Icon"
+                                            alt="English Audio"
                                             className={styles["page122__additional-icon"]}
-                                            onClick={() => playAudio(answerAudio)}
+                                            onClick={() => playAudio(engKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles["page122__additional-icon"]}
+                                            onClick={() => playAudio(ptKey)}
                                         />
                                     </div>
                                     <span className={styles["page122__question-text"]}>

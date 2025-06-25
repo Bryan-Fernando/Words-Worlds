@@ -1,0 +1,156 @@
+.page285__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem;
+}
+
+.page285__title {
+  font-size: 3rem;
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #0A3282;
+  font-weight: bold;
+}
+
+.page285__subtitle {
+  font-size: 2rem;
+  text-align: left;
+  font-weight: bold;
+  color: #0A3282;
+}
+
+.page285__questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+  font-size: 1.8rem;
+}
+
+.page285__question-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 0.2rem solid #A61C28;
+  padding-bottom: 1rem;
+}
+
+.page285__input-box {
+  width: 30rem;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.page285__answer-column {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-top: 0.2rem solid #A61C28;
+  padding-top: 1rem;
+}
+
+.page285__answer-option {
+  padding: 0.5rem 1rem;
+  background-color: #E0E0E0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 2rem;
+  border: 0.15rem solid transparent;
+}
+
+.page285__answer-option.selected {
+  background-color: #A61C28;
+  color: white;
+}
+
+.page285__check-button {
+  background-color: #A61C28;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  width: fit-content;
+  margin-top: 2rem;
+}
+
+.page285__answers-section {
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.page285__answers-title {
+  color: #A61C28;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.page285__answers-list {
+  list-style-type: lower-alpha;
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.page285__answers-list li {
+  margin-bottom: 0.8rem;
+}
+
+.page285__input-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.page285__result-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.page285__note {
+  border: 0.4rem solid #0A3282;
+  border-radius: 1rem;
+  text-align: left;
+  width: fit-content;
+  margin-top: 3rem;
+}
+
+.page285__note-header {
+  background-color: #0A3282;
+  color: white;
+  padding: 0.8rem 1rem;
+  font-size: 1.9rem;
+  font-weight: bold;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+}
+
+.page285__note-content {
+  padding: 1rem;
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+}
+
+.page285__red-bold {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page285__blue-bold {
+  color: #0A3282;
+  font-weight: bold;
+}
