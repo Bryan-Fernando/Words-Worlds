@@ -39,45 +39,45 @@ const Pagina175 = () => {
 
                         {/* 10:10 */}
                         <div className={styles["page175__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page175__text-red"]}
                                 onClick={() => handleShowClock('10:10')}
                             >
-                                <strong>B:</strong> It’s ten ten
+                                B: It’s ten ten
                             </p>
                         </div>
 
                         {/* 10:15 */}
                         <div className={styles["page175__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page175__text-red"]}
                                 onClick={() => handleShowClock('10:15')}
                             >
-                                <strong>B:</strong> It’s ten fifteen
+                                B: It’s ten fifteen
                             </p>
                         </div>
 
                         {/* 10:20 */}
                         <div className={styles["page175__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page175__text-red"]}
                                 onClick={() => handleShowClock('10:20')}
                             >
-                                <strong>B:</strong> It’s ten twenty
+                                B: It’s ten twenty
                             </p>
                         </div>
 
                         {/* 10:25 */}
                         <div className={styles["page175__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page175__text-red"]}
                                 onClick={() => handleShowClock('10:25')}
                             >
-                                <strong>B:</strong> It’s ten twenty-five
+                                B: It’s ten twenty-five
                             </p>
                         </div>
                     </div>

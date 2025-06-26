@@ -12,6 +12,9 @@
   flex-direction: column;
   gap: 2rem;
   width: 50%;
+  align-items: flex-start;     
+  padding-left: 0;           
+  margin-left: 0; 
 }
 
 .page171__header {
@@ -48,8 +51,9 @@
 }
 
 .page171__example-block p {
-  margin: 0.4rem 0;
-  font-size: 1.7rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .page171__text-red {

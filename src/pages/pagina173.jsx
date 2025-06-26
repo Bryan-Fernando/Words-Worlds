@@ -39,34 +39,34 @@ const Pagina173 = () => {
 
                         {/* Exemplo 10:04 */}
                         <div className={styles["page173__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page173__text-red"]}
                                 onClick={() => handleShowClock('10:04')}
                             >
-                                <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span> four
+                                B: It’s ten <span className={styles["page173__text-blue"]}>oh</span> four
                             </p>
                         </div>
 
                         {/* Exemplo 10:05 */}
                         <div className={styles["page173__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page173__text-red"]}
                                 onClick={() => handleShowClock('10:05')}
                             >
-                                <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span> five
+                                B: It’s ten <span className={styles["page173__text-blue"]}>oh</span> five
                             </p>
                         </div>
 
                         {/* Exemplo 10:06 */}
                         <div className={styles["page173__example-block"]}>
-                            <p><strong>A:</strong> What time is it?</p>
+                            <p>A: What time is it?</p>
                             <p
                                 className={styles["page173__text-red"]}
                                 onClick={() => handleShowClock('10:06')}
                             >
-                                <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span> six
+                                B: It’s ten <span className={styles["page173__text-blue"]}>oh</span> six
                             </p>
                         </div>
                     </div>

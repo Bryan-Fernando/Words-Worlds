@@ -333,7 +333,7 @@ const Pagina68 = () => {
                         </p>
 
                         <p>
-                            <strong>B:</strong> It is 355-6927.
+                            B: It is 355-6927.
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"
@@ -365,7 +365,7 @@ const Pagina68 = () => {
                         </p>
 
                         <p>
-                            <strong>B:</strong> No, 355-6927.
+                            B: No, 355-6927.
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"
@@ -397,7 +397,7 @@ const Pagina68 = () => {
                         </p>
 
                         <p>
-                            <strong>B:</strong> It’s john2023@gmail.com
+                            B: It’s john2023@gmail.com
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"

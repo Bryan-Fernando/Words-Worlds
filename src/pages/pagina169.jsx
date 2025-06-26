@@ -38,45 +38,45 @@ const Pagina169 = () => {
 
           {/* Exemplo 1 */}
           <div className={styles["page169__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page169__text-red"]}
               onClick={() => handleShowClock(1)}
             >
-              <strong>B:</strong> It is one o'clock
+              B: It is one o'clock
             </p>
           </div>
 
           {/* Exemplo 2 */}
           <div className={styles["page169__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page169__text-red"]}
               onClick={() => handleShowClock(2)}
             >
-              <strong>B:</strong> It is two o'clock
+              B: It is two o'clock
             </p>
           </div>
 
           {/* Exemplo 3 */}
           <div className={styles["page169__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page169__text-red"]}
               onClick={() => handleShowClock(3)}
             >
-              <strong>B:</strong> It is three o'clock
+              B: It is three o'clock
             </p>
           </div>
 
           {/* Exemplo 4 */}
           <div className={styles["page169__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page169__text-red"]}
               onClick={() => handleShowClock(4)}
             >
-              <strong>B:</strong> It is four o'clock
+              B: It is four o'clock
             </p>
           </div>
 

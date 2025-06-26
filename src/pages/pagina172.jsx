@@ -44,45 +44,45 @@ const Pagina172 = () => {
 
           {/* 10:00 */}
           <div className={styles["page172__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page172__text-red"]}
               onClick={() => handleShowClock('10:00')}
             >
-              <strong>B:</strong> It’s ten o’clock
+              B: It’s ten o’clock
             </p>
           </div>
 
           {/* 10:01 */}
           <div className={styles["page172__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page172__text-red"]}
               onClick={() => handleShowClock('10:01')}
             >
-              <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span>  one
+              B: It’s ten <span className={styles["page173__text-blue"]}>oh</span>  one
             </p>
           </div>
 
           {/* 10:02 */}
           <div className={styles["page172__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page172__text-red"]}
               onClick={() => handleShowClock('10:02')}
             >
-              <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span>  two
+              B: It’s ten <span className={styles["page173__text-blue"]}>oh</span>  two
             </p>
           </div>
 
           {/* 10:03 */}
           <div className={styles["page172__example-block"]}>
-            <p><strong>A:</strong> What time is it?</p>
+            <p>A: What time is it?</p>
             <p
               className={styles["page172__text-red"]}
               onClick={() => handleShowClock('10:03')}
             >
-              <strong>B:</strong> It’s ten <span className={styles["page173__text-blue"]}>oh</span>  three
+              B: It’s ten <span className={styles["page173__text-blue"]}>oh</span>  three
             </p>
           </div>
         </div>

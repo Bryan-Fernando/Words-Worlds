@@ -37,23 +37,23 @@ const Pagina177 = () => {
 
             {/* 10:50 */}
             <div className={styles["page177__example-block"]}>
-              <p><strong>A:</strong> What time is it?</p>
+              <p>A: What time is it?</p>
               <p
                 className={styles["page177__text-red"]}
                 onClick={() => handleShowClock('10:50')}
               >
-                <strong>B:</strong> It’s ten fifty
+                B: It’s ten fifty
               </p>
             </div>
 
             {/* 10:55 */}
             <div className={styles["page177__example-block"]}>
-              <p><strong>A:</strong> What time is it?</p>
+              <p>A: What time is it?</p>
               <p
                 className={styles["page177__text-red"]}
                 onClick={() => handleShowClock('10:55')}
               >
-                <strong>B:</strong> It’s ten fifty-five
+                B: It’s ten fifty-five
               </p>
             </div>
           </div>
