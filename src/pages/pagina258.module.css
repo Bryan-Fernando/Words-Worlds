@@ -1,0 +1,286 @@
+.pageContainer {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  text-align: left;
+  font-size: 16px; /* Tamanho base */
+}
+
+.titleContainer {
+  margin-bottom: 24px;
+  font-size: 6rem; /* Aplicando o mesmo tamanho da página 256 */
+  font-weight: 700;
+  text-align: left;
+}
+
+.grammarText {
+  color: #a61c28;
+}
+
+.dashText {
+  color: #000;
+}
+
+.adjectivesText {
+  color: #000;
+  font-style: italic;
+}
+
+.comparativesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.comparativeSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparativesSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.7rem; /* Aplicando tamanho da página 256 */
+  margin: 10px 0;
+}
+
+.sectionTitle1 {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.5rem; /* Aplicando tamanho da página 256 */
+  margin: 7px 0 20px 0;
+  background-color: #e7e6e6;
+  border: 2px solid #cecece;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #000000;
+}
+
+.redSquare {
+  width: 12px;
+  height: 12px;
+  background-color: #a61c28;
+}
+
+.redText {
+  font-weight: 900;
+  color: #a61c28 !important;
+}
+
+.redText1 {
+  color: #a61c28;
+}
+
+.noteBox {
+  background: #dfdfdf;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  margin: 5px 0 20px 0;
+}
+
+.noteContent {
+  padding: 8px 16px;
+  font-size: 1.5rem; /* Aplicando tamanho da página 256 */
+}
+
+.noteContenter {
+  color: red;
+}
+
+.contextmain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.contextBlock1 {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contextBlock1::before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: -15px;
+  top: 15px;
+}
+
+.contextBlock2 {
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.contextBlock2::before {
+  content: "•";
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  left: -15px;
+  top: 15px;
+}
+
+.contextBox {
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0 20px 0 20px;
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.5rem; /* Aplicando tamanho da página 256 */
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.noteText {
+  color: #333;
+  font-style: italic;
+  font-size: 1rem; /* Aumentado de 0.95rem */
+  line-height: 1.4;
+}
+
+.redText1 {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+.exampleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.exampleItem {
+  padding: 10px;
+}
+
+.exampleItem1 {
+  padding: 10px;
+  background-color: #e7e6e6;
+  border: 2px solid #cecece;
+  border-radius: 10px;
+  color: #a61c28;
+}
+
+.exampleItem:last-child {
+  margin-bottom: 0;
+}
+
+.englishSentence {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #000;
+  font-size: 1.4rem; /* Aplicando tamanho da página 256 */
+}
+
+.translationText {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 8px;
+  font-size: 1.4rem; /* Aplicando tamanho da página 256 */
+}
+
+.redItalicBold {
+  color: #a61c28;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+  max-width: 50%;
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 1.5rem; /* Aplicando tamanho da página 256 */
+}
+
+@media (max-width: 768px) {
+  .titleContainer {
+    font-size: 4rem; /* Responsivo para mobile */
+  }
+  
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  
+  .sectionTitle1 {
+    font-size: 1.2rem;
+  }
+  
+  .contextTitle {
+    font-size: 1.2rem;
+  }
+  
+  .noteContent {
+    font-size: 1.2rem;
+  }
+  
+  .contextmain {
+    font-size: 1.2rem;
+  }
+  
+  .englishSentence {
+    font-size: 1.1rem;
+  }
+  
+  .translationText {
+    font-size: 1.1rem;
+  }
+  
+  .exampleItem1 {
+    font-size: 1.1rem;
+  }
+  
+  .noteText {
+    font-size: 1.2rem;
+  }
+  
+  .pageContainer {
+    font-size: 14px; /* Menor em mobile */
+  }
+  
+  .comparativesContainer {
+    gap: 20px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}

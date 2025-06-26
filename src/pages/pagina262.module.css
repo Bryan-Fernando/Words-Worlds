@@ -1,0 +1,180 @@
+.pageContainer {
+  font-size: 16px;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+.titleContainer {
+  font-size: 6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.grammarText {
+  color: #a61c28;
+  font-style: italic;
+}
+
+.dashText {
+  color: #000;
+}
+
+.adjectivesText {
+  color: #000;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.subtitle h2 {
+  color: #000000;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.subtitle p {
+  color: #666;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.comparativesContainer {
+  border: 3px solid #dfdfdf;
+  background-color: #f1f0f0;
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  width: 55%;
+}
+
+/* Segundo comparativesContainer com width de 75% */
+.noteBox + .comparativesContainer {
+  width: 65%;
+}
+
+.comparativeSection {
+  margin-bottom: 2rem;
+}
+
+.comparativeSection:last-child {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  color: #a61c28;
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.exampleItem {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.exampleItem:last-child {
+  margin-bottom: 0;
+}
+
+.englishSentence {
+  font-size: 1.4rem;
+  margin: 0.5rem 0;
+  line-height: 1.4;
+  text-align: left;
+  color: #000;
+}
+
+.translationText1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.translationText {
+  font-size: 1.4rem;
+  color: #000000;
+  font-style: italic;
+  margin: 0.3rem 0;
+  text-align: left;
+}
+
+.redText {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+/* Estilo dos quadrados das notas baseado na página 260 */
+.noteBox {
+  background: #dfdfdf;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  margin: 2rem 0;
+  font-size: 1.6rem;
+  text-align: left;
+  width: 75%;
+  box-sizing: border-box;
+}
+
+.noteTitle {
+  background-color: #a61c28;
+  font-weight: bold;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  color: white;
+  word-wrap: break-word;
+}
+
+.noteContent {
+  padding: 8px 16px;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+    font-size: 14px;
+  }
+
+  .titleContainer {
+    font-size: 3rem;
+  }
+
+  .subtitle h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle p {
+    font-size: 1.2rem;
+  }
+
+  .comparativesContainer {
+    padding: 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .englishSentence,
+  .translationText {
+    font-size: 1.2rem;
+  }
+
+  .noteBox {
+    font-size: 1.2rem;
+  }
+
+  .noteTitle,
+  .noteContent {
+    padding: 6px 12px;
+  }
+}

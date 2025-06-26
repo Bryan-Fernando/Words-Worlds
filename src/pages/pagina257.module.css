@@ -1,0 +1,217 @@
+.pageContainer {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  text-align: left;
+  font-size: 16px; /* Base font size */
+}
+
+.titleContainer {
+  margin-bottom: 24px;
+  font-size: 6rem; /* Matching page 256 main title */
+  font-weight: 700;
+  text-align: left;
+}
+
+.grammarText {
+  color: #a61c28;
+}
+
+.dashText {
+  color: #000;
+}
+
+.adjectivesText {
+  color: #000;
+  font-style: italic;
+}
+
+.comparativesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.comparativeSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparativesSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.7rem; /* Matching page 256 section titles */
+  margin: 10px 0;
+}
+
+.sectionTitle1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.5rem; /* Matching page 256 secondary section titles */
+  margin: 7px 0;
+  background-color: #e7e6e6;
+  border: 2px solid #cecece;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #a61c28;
+}
+
+.redSquare {
+  width: 12px;
+  height: 12px;
+  background-color: #a61c28;
+}
+
+.redText {
+  font-weight: 900;
+  color: #a61c28 !important;
+}
+
+.noteBox {
+  background: #dfdfdf;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+  margin: 5px 0 20px 0;
+}
+
+.noteTitle {
+  background-color: #a61c28;
+  font-weight: bold;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  color: white;
+}
+
+.noteContent {
+  padding: 8px 16px;
+  font-size: 1.5rem; /* Matching page 256 note content */
+}
+
+.noteContenter {
+  color: red;
+}
+
+.contextmain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.5rem; /* Matching page 256 main context */
+}
+
+.exampleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.exampleItem {
+  padding: 10px;
+}
+
+.exampleItem1 {
+  padding: 10px;
+  background-color: #e7e6e6;
+  border: 2px solid #cecece;
+  border-radius: 10px;
+  color: #a61c28;
+  font-size: 1.4rem; /* Matching page 256 examples */
+}
+
+.exampleItem:last-child {
+  margin-bottom: 0;
+}
+
+.englishSentence {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #000;
+  font-size: 1.4rem; /* Matching page 256 English phrases */
+}
+
+.translationText {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 8px;
+  font-size: 1.4rem; /* Matching page 256 translations */
+}
+
+.redItalicBold {
+  color: #a61c28;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 50%;
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-size: 1.5rem; /* Matching page 256 context titles */
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .pageContainer {
+    font-size: 14px;
+  }
+  
+  .titleContainer {
+    font-size: 3rem;
+  }
+  
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .sectionTitle1 {
+    font-size: 1.2rem;
+  }
+  
+  .noteContent,
+  .contextmain,
+  .contextTitle {
+    font-size: 1.2rem;
+  }
+  
+  .exampleItem1,
+  .englishSentence,
+  .translationText {
+    font-size: 1.1rem;
+  }
+  
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}

@@ -1,0 +1,111 @@
+.pageContainer {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.header h1 {
+    font-size: 5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.grammar {
+    color: #a61c28;
+    font-style: italic;
+}
+
+.dash {
+    color: #000;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.subtitle {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.subtitle h2 {
+    color: #a61c28;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle p {
+    color: #666;
+    font-size: 2rem;
+}
+
+.comparativeSection {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.sectionTitle {
+    color: #a61c28;
+    font-size: 1.7rem;
+    font-weight: 800;
+    padding: 0.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: left;
+}
+
+.exampleBox {
+    border: 2px solid #a61c28;
+    border-radius: 14px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.example {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.example:last-child {
+    margin-bottom: 0;
+}
+
+.bullet {
+    color: #000000;
+    margin-right: 0.5rem;
+}
+
+.highlight {
+    color: #a61c28;
+    font-weight: bold;
+}
+
+.translation {
+    color: #666;
+    margin-top: 0.25rem;
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.blackUnderlined {
+    color: #000000;
+    text-decoration: underline;
+    text-decoration-color: #a61c28;
+    font-weight: normal;
+}
+
+.redText {
+    color: #a61c28;
+    font-weight: normal;
+}

@@ -1,0 +1,3370 @@
+.pageContainer {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+}
+
+.sidebar {
+  position: relative;
+  background: linear-gradient(180deg, #a1242b 60%, #8b1b3f 100%);
+  height: 100%;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+.mainContent {
+  flex: 1;
+}
+
+.titleContainer {
+  margin-bottom: 16px;
+  font-size: 6rem;
+  font-weight: 700;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.grammarText {
+  color: #a1242b;
+  font-weight: bold;
+}
+
+.dashText {
+  color: #000;
+  font-weight: bold;
+}
+
+.adjectivesText {
+  color: #000;
+  font-weight: bold;
+}
+
+.redText {
+  color: #a1242b;
+  font-weight: bold;
+}
+
+.mredText {
+  font-size: 3rem;
+  color: #a1242b;
+  font-weight: bold;
+}
+
+.noteBox {
+  display: flex;
+  width: fit-content;
+  border: 2px solid #a1242b;
+  border-radius: 12px;
+  margin: 16px 0;
+  padding: 16px;
+  background: transparent;
+  margin: 5px 0 20px 0;
+}
+
+.noteContent {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  gap: 12px;
+  font-size: 1.5rem;
+}
+
+.noteContent > div {
+  display: flex;
+  gap: 5px;
+  align-self: start;
+  text-align: left;
+}
+
+.noteContentex {
+  display: flex;
+  flex-direction: column;
+}
+
+.noteContent .ponto {
+  align-items: center;
+}
+
+.redItalicBold > div,
+.englishSentence > div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ponto::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.noteContenter {
+  font-weight: bold;
+  color: inherit;
+}
+
+.comparativesContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.redSquare {
+  width: 8px;
+  height: 8px;
+  background-color: #a1242b;
+}
+
+.exampleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.exampleItem1 {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 16px;
+  border: none;
+  color: inherit;
+  font-size: 1.4rem;
+}
+
+.englishSentence {
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.translationText {
+  color: #666;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.redItalicBold {
+  font-weight: bold;
+  color: inherit;
+}
+
+.blackText {
+  color: #000000;
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .pageContainer {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .comparativesContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.comparativeSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.comparativesSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 10px 0;
+  font-size: 1.7rem;
+}
+
+.sectionTitle1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 7px 0;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.redSquare {
+  width: 12px;
+  height: 12px;
+  background-color: #a61c28;
+}
+
+.redText {
+  font-weight: 900;
+}
+
+.noteTitle {
+  background-color: #a61c28;
+  font-weight: bold;
+  margin-bottom: 4px;
+  padding: 8px 16px;
+  color: white;
+}
+.noteContenter {
+  color: red;
+}
+
+.contextmain {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #a61c28;
+  border-radius: 8px;
+  padding: 10px;
+  width: fit-content;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.exampleCard {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.exampleItem {
+  padding: 10px 0px;
+}
+
+.exampleItem1 {
+  padding: 10px;
+  background-color: #e7e6e6;
+  border: 2px solid #cecece;
+  border-radius: 10px;
+  color: #a61c28;
+  text-align: left;
+  max-width: 90%;
+}
+
+.exampleItem:last-child {
+  margin-bottom: 0;
+}
+
+.englishSentence {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #a61c28;
+}
+
+.translationText {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.blackTextUnderlined {
+  color: #000000;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #a1242b;
+}
+
+.redText {
+  color: #a1242b;
+  font-weight: bold;
+}
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.redItalicBold {
+  color: #000000;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contextBox {
+}
+
+.contextTitle {
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.contextExamples {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.noteText {
+  color: #666;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .comparativesContainer {
+    gap: 24px;
+  }
+
+  .exampleCard {
+    margin-bottom: 16px;
+  }
+}
+
+.redTextUnderlined {
+  color: #a1242b;
+}

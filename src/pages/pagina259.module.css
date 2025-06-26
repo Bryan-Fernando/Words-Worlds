@@ -1,0 +1,250 @@
+.pageContainer {
+    display: flex;
+    background-color: white;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.contentArea {
+    flex: 1;
+    padding: 20px;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: clamp(2rem, 5vw, 5rem);
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.comparativeTitle {
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+    border: 1px solid #ccc;
+    background: #dfdfdf;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #991b1b;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.examplesTitle {
+    font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.grammar {
+    color: #991b1b;
+}
+
+.adjectives {
+    color: black;
+    font-weight: bold;
+}
+
+.comparativeSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Responsividade para telas menores que 1025px */
+@media (max-width: 1024px) {
+    .pageContainer {
+        display: block;
+        min-height: auto;
+    }
+    
+    .comparativeSection {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contentArea {
+        padding: 15px;
+    }
+    
+    .header {
+        margin: 0; /* Garante margin zero em telas pequenas */
+    }
+    
+    .header h1 {
+        text-align: center;
+        margin: 0; /* Remove qualquer margin do h1 */
+    }
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+    .comparativeSection {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .contentArea {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        text-align: center;
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+    .contentArea {
+        padding: 10px;
+    }
+    
+    .comparativeSection {
+        gap: 10px;
+    }
+    
+    .comparativeBlock {
+        padding: 10px;
+    }
+    
+    .exampleItem {
+        padding: 15px 8px;
+    }
+}
+
+.comparativeBlock {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.noteBox {
+    background: #dfdfdf;
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+    margin: 15px 0 20px 0;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.noteTitle {
+    background-color: #a61c28;
+    font-weight: bold;
+    margin-bottom: 4px;
+    padding: 8px 16px;
+    color: white;
+    word-wrap: break-word;
+}
+
+.noteContent {
+    padding: 8px 16px;
+    word-wrap: break-word;
+}
+
+.noteContenter {
+    color: red;
+}
+
+.ruleContent {
+    padding: 8px 16px;
+}
+
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+
+.noteIcon {
+    margin-right: 10px;
+}
+
+.rule {
+    font-weight: bold;
+}
+
+.examples {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.examples p {
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    margin: 10px 0;
+    color: black;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+.exampleItem {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    background-color: #dfdfdf;
+    border-radius: 8px;
+    text-align: left;
+    padding: 20px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsividade específica para textos pequenos */
+@media (max-width: 320px) {
+    .examples p {
+        font-size: 1rem;
+        line-height: 1.3;
+    }
+    
+    .noteBox {
+        font-size: 1rem;
+    }
+    
+    .noteTitle, .noteContent {
+        padding: 6px 12px;
+    }
+}
+
+.normalText {
+    color: black;
+}
+
+.redText {
+    color: red;
+}
+
+.underlinedText {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.translation {
+    color: #666;
+    font-style: italic;
+    margin-top: 5px;
+    word-wrap: break-word;
+}
+
+.adjectiveHighlight {
+    color: #991b1b;
+    font-weight: bold;
+}
+
+.exampleItem p:first-child {
+    color: black;
+}
+
+.adjectiveHighlight {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.exampleItem p:first-child span.adjectiveHighlight {
+    color: #B22222;
+}

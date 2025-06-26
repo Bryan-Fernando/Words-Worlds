@@ -1,0 +1,320 @@
+.pageContainer {
+  background: #fff;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px 16px 0 16px;
+}
+.header {
+  font-size: 6rem;
+  text-align: left;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.tableHeader {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  background: #888a8c;
+}
+
+.grammarContent {
+  background-color: #d1cfcf;
+  padding: 0;
+}
+
+.grammarRow {
+  display: grid;
+  grid-template-columns: 1.2fr 1.1fr 1.5fr 1.5fr 2.2fr;
+}
+
+.grammarRow span {
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  border-right: 1px solid #ddd;
+  color: #990000;
+}
+
+.grammarRow span:last-child {
+  border-right: none;
+}
+
+.headerType,
+.tableHeader > div {
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  padding: 13px 8px 13px 8px;
+  border-right: 1px solid #fff;
+  border-bottom: 2px solid #a61c28;
+  box-sizing: border-box;
+}
+.tableHeader > div:last-child {
+  border-right: none;
+}
+.typeRow {
+  display: contents;
+}
+.typeLabelBox {
+  grid-column: 1 / -1;
+  background: #fff;
+  border: 2px solid #1e3a8a;
+  border-radius: 7px;
+  padding: 8px 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.grammar {
+  color: #a61c28;
+  font-style: italic;
+}
+.dash {
+  color: #000;
+  margin: 0 0.3rem;
+}
+.adjectives {
+  color: #222;
+  font-style: italic;
+}
+
+.tablemenu {
+  background: #a61c28;
+  border: 3px solid #a61c28;
+  border-radius: 15px 15px 8px 8px;
+  background-color: none;
+}
+
+.tableWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.tableTitle {
+  border-radius: 16px 16px 0 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  padding: 14px 0 12px 20px;
+  letter-spacing: 0.5px;
+  border: 3px solid #a61c28;
+}
+
+.tableGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tableGrid > div {
+  display: grid;
+  grid-template-columns: 1.2fr 1.1fr 1.5fr 1.5fr 2.2fr;
+  width: 100%;
+  border: 2px solid #a61c28;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: subgrid;
+  border-bottom: 1px solid #ccc;
+}
+
+.tableCell {
+  padding: 13px 8px;
+  font-size: 1rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  border-right: 1px solid #ccc;
+}
+.typeLabelText {
+  color: #a61c28;
+  font-style: italic;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+}
+.tableRow {
+  display: contents;
+}
+.tableCell {
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 13px 8px 13px 8px;
+  font-size: 1rem;
+  vertical-align: middle;
+  display: flex;
+  flex-direction: column;
+  min-height: 48px;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+.tableCell:last-child {
+  border-right: none;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.englishRed {
+  color: #a61c28;
+  font-weight: 700;
+  font-size: 1rem;
+  font-style: normal;
+}
+.portuguese {
+  color: #222;
+  font-size: 0.97rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 2px;
+}
+.noteBox {
+  background: #1e3a8a;
+  border-radius: 10px;
+}
+.noteTitle {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.noteList {
+  list-style: disc inside;
+  color: #222;
+  font-size: 1rem;
+  margin: 0;
+  padding-left: 18px;
+}
+.noteList li {
+  color: #222;
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+
+.noteRed {
+  color: #a61c28;
+  font-weight: 700;
+  font-style: normal;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+.noteRedItalic {
+  color: #a61c28;
+  font-weight: 700;
+  font-style: italic;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+.footer {
+  text-align: center;
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px) {
+  .pageContainer {
+    padding: 8px 2px 0 2px;
+  }
+  .tableGrid {
+    font-size: 0.93rem;
+    grid-template-columns: 1.3fr 1.2fr 1.6fr 1.6fr 2.5fr;
+  }
+  .tableTitle {
+    font-size: 1.05rem;
+  }
+  .header {
+    font-size: 1.1rem;
+  }
+  .noteBox {
+    padding: 0;
+  }
+
+  .grammarRow span {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .grammarRow span:last-child {
+    border-bottom: none;
+  }
+}
+
+.noteBox {
+  width: 70%;
+  background: #fff;
+  border: 2px solid #1e3c72;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.noteTitle {
+  background: #1e3c72;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.noteList {
+  list-style: none;
+  margin: 0;
+  padding: 18px 24px;
+}
+
+.noteList li {
+  color: #000;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+}
+
+.noteList li::before {
+  content: "•";
+  margin-right: 8px;
+  color: #000;
+}
+
+.redBold {
+  color: #a61c28;
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.redBoldItalic {
+  color: #a61c28;
+  font-weight: 700;
+  font-style: italic;
+}
+.adjSeparator {
+  height: 2rem;
+  grid-column: 1 / -1;
+  border-bottom: 1px solid #ccc;
+  margin: 1rem 0;
+}
