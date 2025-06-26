@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import styles from './pagina124.module.css';
 
@@ -11,6 +11,8 @@ import pg124_audio3e from '../assets/audios/pg124_audio3e.mp3';
 import pg124_audio4e from '../assets/audios/pg124_audio4e.mp3';
 
 const Pagina124 = () => {
+    const currentAudioRef = useRef(null);
+
     const audioMap = {
         global_grammar_wo,
         pg124_audio1e,
@@ -20,8 +22,14 @@ const Pagina124 = () => {
     };
 
     const playAudio = (audioKey) => {
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
+            currentAudioRef.current = audio;
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);

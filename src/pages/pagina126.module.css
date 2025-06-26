@@ -42,6 +42,7 @@
 .pg126tabelaNegativaContainer {
     width: 100%;
     height: 16rem;
+    margin-bottom: 2rem;
 }
 
 .pg126tableHeaderNegativa {
@@ -62,15 +63,6 @@
     table-layout: auto;
     margin-bottom: 0.5rem;
 }
-
-/*th {
-    background-color: #888A8C;
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    border: 1px solid #A61C28;
-}*/
 
 .pg126celulatable {
     height: 5rem;
@@ -102,6 +94,11 @@
 
 .page126__thead {
     border: 0.3rem solid #A61C28;
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 1.5rem;
 }
 
 .highlight {
@@ -111,6 +108,13 @@
 .page126__titulo-table{
     text-align: left;
     color: #103275;
+    margin-top: 2rem;
+}
+
+.page126__titulo-table2{
+    text-align: left;
+    color: #103275;
+    margin-top: 10rem;
 }
 
 .page126__celulacolor{

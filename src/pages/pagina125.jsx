@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 import styles from './pagina125.module.css';
 
@@ -6,6 +6,7 @@ import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
 import global_grammar_wo from '../assets/audios/global_grammar_wo.mp3';
 import pg125_audio1e from '../assets/audios/pg125_audio1e.mp3';
+import pg125_audio1_2e from '../assets/audios/pg125_audio1_2e.mp3';
 import pg125_audio2e from '../assets/audios/pg125_audio2e.mp3';
 import pg125_audio3e from '../assets/audios/pg125_audio3e.mp3';
 import pg125_audio4e from '../assets/audios/pg125_audio4e.mp3';
@@ -13,9 +14,12 @@ import pg125_audio5e from '../assets/audios/pg125_audio5e.mp3';
 import pg125_audio6e from '../assets/audios/pg125_audio6e.mp3';
 
 const Pagina125 = () => {
+    const currentAudioRef = useRef(null);
+
     const audioMap = {
         global_grammar_wo,
         pg125_audio1e,
+        pg125_audio1_2e,
         pg125_audio2e,
         pg125_audio3e,
         pg125_audio4e,
@@ -24,9 +28,17 @@ const Pagina125 = () => {
     };
 
     const playAudio = (audioKey) => {
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
+            currentAudioRef.current = audio;
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
+        } else {
+            console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
 
@@ -80,6 +92,29 @@ const Pagina125 = () => {
                                 <th className={styles["page125__celulacolor"]}
                                 >Eu não gostaria de <br /> me mudar para Lisboa.</th>
                             </tr>
+                            <tr className={styles.pg125celulatable}>
+                                <th className={styles["page125__celulacolor"]}></th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1_2e")}
+                                >I</th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1_2e")}
+                                >would</th>
+                                <th className={styles["page125__celulacolor"]} style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1_2e")}>not</th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1_2e")}
+                                >like to move </th>
+                                <th className={styles["page125__celulacolor"]}
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => playAudio("pg125_audio1_2e")}
+                                >to Lisbon.</th>
+                                <th className={styles["page125__celulacolor"]}
+                                >Eu não gostaria de <br /> me mudar para Lisboa.</th>
+                            </tr>
                         </thead>
                     </table>
                 </div>
@@ -124,9 +159,9 @@ const Pagina125 = () => {
                             <p>Nota:</p>
                         </div>
                         <div className={styles.pg125AsideNotes2}>
-                            <p>• <span className={styles["highlight"]}>Would </span> é uma palavra especial que usamos para sermos gentis ou falar sobre o que queremos.</p>
-                            <p>• Usamos “would“ para expressar o que queremos ou preferimos de forma mais educada. </p>
-                            <p>• Usado também para <span className={styles["highlight"]}>Pedidos</span>, <span className={styles["highlight"]}>Solicitações</span> e <span className={styles["highlight"]}>Ofertas</span>.</p>
+                            <p>• <span className={styles["highlight"]}>Would </span> é uma palavra especial que usamos para sermos gentis ou falar sobre o que queremos. <br />
+                            • Usamos “would“ para expressar o que queremos ou preferimos de forma mais educada. <br />
+                            • Usado também para <span className={styles["highlight"]}>Pedidos</span>, <span className={styles["highlight"]}>Solicitações</span> e <span className={styles["highlight"]}>Ofertas</span>.</p>
                         </div>
                     </div>
                 </aside>
@@ -175,7 +210,7 @@ const Pagina125 = () => {
                                     <th className={styles["page125__celulacolor"]}></th>
                                     <th className={styles["page125__celulacolor"]}
                                         style={{ cursor: 'pointer' }}
-                                        onClick={() => playAudio("pg125_audio5e")} 
+                                        onClick={() => playAudio("pg125_audio5e")}
                                     >I‘d</th>
                                     <th className={styles["page125__celulacolor"]} >-</th>
                                     <th className={styles["page125__celulacolor"]}></th>

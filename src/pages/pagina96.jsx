@@ -106,7 +106,6 @@ const Pagina96 = () => {
         pg96_audio8p,
         pg96_audio9p,
         pg96_audio10p,
-        pg96_audio11e,
         pg96_audio12p,
         pg96_audio13p,
         pg96_audio14p,
