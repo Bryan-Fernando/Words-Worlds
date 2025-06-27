@@ -61,14 +61,12 @@
 }
 
 .page119__frame--text {
-    width: 46rem;
+    width: 48rem;
     height: 12rem;
     padding: 1rem;
     text-align: left;
     border: 0.3rem solid #A61C28;
 }
-
-
 
 .page119__container--text {
     text-align: left;
@@ -79,7 +77,7 @@
 }
 
 .page119__frame--text--gray {
-    width: 74%;
+    width: 85%;
     height: 6rem;
     background-color: #F7F7F7;
     border: 0.4rem solid #A61C28;
@@ -109,6 +107,7 @@
     position: relative;
     top: 0.3rem;
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
     cursor: pointer;
     transition: transform 0.2s ease;
 }

@@ -265,7 +265,7 @@ const pagina128 = () => {
                                 </span>
 
                                 <span>
-                                    <br /> <span className={styles["page128__paragraph-red"]}>Anna: Yes! I would love to play.</span>
+                                    <br /> <span className={styles["page128__paragraph-red"]}>Anna: Yes! <strong>I would love to.</strong> (play soccer)</span>
                                     <img
                                         src={eng_audio_icon}
                                         alt="Play English Audio"

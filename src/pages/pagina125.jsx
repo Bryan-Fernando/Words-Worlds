@@ -201,7 +201,7 @@ const Pagina125 = () => {
                                     <th className={styles["page125__celulacolor"]}
                                         style={{ cursor: 'pointer' }}
                                         onClick={() => playAudio("pg125_audio6e")}
-                                    >a ham and cheese <br />sandwich.</th>
+                                    >a ham and cheese sandwich.</th>
                                     <th className={styles["page125__celulacolor"]}
 
                                     > Eu gostaria de um misto</th>
@@ -221,7 +221,7 @@ const Pagina125 = () => {
                                     <th className={styles["page125__celulacolor"]}
                                         style={{ cursor: 'pointer' }}
                                         onClick={() => playAudio("pg125_audio5e")}
-                                    >a ham and cheese <br />sandwich.</th>
+                                    >a ham and cheese sandwich.</th>
                                     <th className={styles["page125__celulacolor"]}
 
                                     > Eu gostaria de um misto de <br /> presunto e queijo.</th>

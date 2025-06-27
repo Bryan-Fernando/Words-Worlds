@@ -76,13 +76,13 @@ const Pagina127 = () => {
                     <img
                         src={eng_audio_icon}
                         alt="English Audio"
-                        className={styles["page127__icon--additional"]}
+                        className={styles["page127__icon--additional-h"]}
                         onClick={() => playAudio(global_exercise_e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese Audio"
-                        className={styles["page127__icon--additional"]}
+                        className={styles["page127__icon--additional-h"]}
                         onClick={() => playAudio(global_exercise_p)}
                     />
                 </span>
@@ -94,13 +94,13 @@ const Pagina127 = () => {
                     <img
                         src={eng_audio_icon}
                         alt="English Audio"
-                        className={styles["page127__icon--additional"]}
+                        className={styles["page127__icon--additional-h"]}
                         onClick={() => playAudio(pg127_audio1e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese Audio"
-                        className={styles["page127__icon--additional"]}
+                        className={styles["page127__icon--additional-h"]}
                         onClick={() => playAudio(pg127_audio1p)}
                     />
                 </span>
@@ -109,7 +109,7 @@ const Pagina127 = () => {
             <div className={styles["page127__questions-container"]}>
                 {[
                     "____ you like some tea?",
-                    "I ____ like a pizza, please.",
+                    "I ____ like a pepperoni pizza, please.",
                     "____ you help me with my homework?",
                     "She ____ like to go to the beach.",
                     "____ you like to play a game?"

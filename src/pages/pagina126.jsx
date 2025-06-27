@@ -114,7 +114,7 @@ const Pagina126 = () => {
                                 <th className={styles["page126__celulacolor"]}></th>
                                 <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio3e")}>like</th>
                                 <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio3e")}>some tea?</th>
-                                <th className={styles["page126__celulacolor"]}>Você não gostaria <br /> de um pouco de chá?</th>
+                                <th className={styles["page126__celulacolor"]}>Você não gostaria de um pouco de chá?</th>
                             </tr>
                             <tr className={styles.pg126celulatable}>
                                 <th className={styles["page126__celulacolor"]}></th>
@@ -122,8 +122,8 @@ const Pagina126 = () => {
                                 <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio4e")}>you</th>
                                 <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio4e")}>not</th>
                                 <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio4e")}>like</th>
-                                <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio4e")}>some tea? (Antiquado)</th>
-                                <th className={styles["page126__celulacolor"]}>Você não gostaria <br /> de um pouco de chá? (forma antiquada)</th>
+                                <th className={styles["page126__celulacolor"]} style={{ cursor: 'pointer' }} onClick={() => playAudio("pg126_audio4e")}>some tea?</th>
+                                <th className={styles["page126__celulacolor"]}>Você não gostaria de um pouco de chá? (forma antiquada)</th>
                             </tr>
                         </thead>
                     </table>

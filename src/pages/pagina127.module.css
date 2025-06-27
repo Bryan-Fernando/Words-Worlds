@@ -97,6 +97,17 @@
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    margin: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.page127__icon--additional-h {
+    width: 6rem;
+    height: 6rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    position: relative;
+    top: 0.6rem;
     transition: transform 0.3s ease;
 }
 
@@ -104,9 +115,18 @@
     animation: pulse 1s infinite;
 }
 
+.page127__icon--additional-h.page127__icon--additional-h--pulsing{
+    animation: pulse 1s infinite;  
+}
+
 .page127__icon--additional:hover {
     transform: scale(1.2);
 }
+
+.page127__icon--additional-h:hover {
+    transform: scale(1.2);
+}
+
 
 .page127__title,
 .page127__exercise-title {
