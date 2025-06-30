@@ -111,7 +111,7 @@ const pagina128 = () => {
                 <main className={styles["page128__main"]}>
                     <div className={styles["page128__main-container"]}>
                         <div className={styles["page128__text-container1"]}>
-                            <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem' }}>
+                            <p style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '2rem'}}>
                                 <span>
                                     Dialogue 1 – <span className={styles["page128__titulo-red"]}>Ordering at a Café</span>
                                     <img

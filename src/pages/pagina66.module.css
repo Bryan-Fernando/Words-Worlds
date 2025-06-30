@@ -178,3 +178,17 @@
   position: relative;
   left: 35%;
 }
+
+.page66__audio-icon {
+  position: relative;
+  top: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page66__audio-icon:hover {
+  transform: scale(1.1);
+}

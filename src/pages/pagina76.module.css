@@ -152,3 +152,17 @@
   color: #A61C28;
   font-weight: bold;
 }
+
+.page76__audio-icon {
+  position: relative;
+  top: 0.3rem;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page76__audio-icon:hover {
+  transform: scale(1.1);
+}

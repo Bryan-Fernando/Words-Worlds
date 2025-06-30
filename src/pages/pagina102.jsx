@@ -287,7 +287,7 @@ const Pagina102 = () => {
                 {/* Negative */}
                 <div className={styles["page102__container-questoes"]}>
                     <div className={styles["page102__questions2"]}>
-                        <h2 className={styles["page102__h2"]}>Negative:</h2>
+                        <h2 className={styles["page102__h2"]} style={{ color: 'red'}}>Negative:</h2>
                         {[
                             "I ____ a teacher.",
                             "She ____ my mother.",
@@ -370,8 +370,8 @@ const Pagina102 = () => {
                             "they at the park?"
                         ].map((sentence, index) => {
                             const realIndex = index + 10;
-                            const audioKey = `pg102_audio${realIndex - 2}`;
-                            const audioKeyP = `pg102_audio${realIndex - 2}p`;
+                            const audioKey = `pg102_audio${realIndex + 2}`;
+                            const audioKeyP = `pg102_audio${realIndex + 2}p`;
 
                             return (
                                 <div key={realIndex} className={styles["page102__question"]}>
