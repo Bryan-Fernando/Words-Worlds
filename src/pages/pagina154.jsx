@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina154.module.css';
 import pagina154_imagem1 from '../assets/images/pagina154_imagem1.webp';
 
+import pg154_audio1e from '../assets/audios/pg154_audio1e.mp3';
+import pg154_audio2e from '../assets/audios/pg154_audio2e.mp3';
+import pg154_audio3e from '../assets/audios/pg154_audio3e.mp3';
+import pg154_audio4e from '../assets/audios/pg154_audio4e.mp3';
+import pg154_audio5e from '../assets/audios/pg154_audio5e.mp3';
+
 const Pagina154 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page154__container"]}>
       <h1 className={styles["page154__title"]}>
@@ -12,7 +30,6 @@ const Pagina154 = () => {
         </span>
       </h1>
 
-      {/* Tabela 1 */}
       <section>
         <div className={styles["page154__table-header"]}>Interrogative Form</div>
         <table className={styles["page154__table"]}>
@@ -28,18 +45,27 @@ const Pagina154 = () => {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td><span className={styles["page154__verb-cell"]}>Do</span></td>
-              <td>I</td>
-              <td></td>
-              <td>work</td>
-              <td>on weekends ?</td>
+              {[
+                "",
+                <span className={styles["page154__verb-cell"]}>Do</span>,
+                "I",
+                "",
+                "work",
+                "on weekends ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg154_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 2 */}
       <section>
         <div className={styles["page154__table-header"]}>Interrogative Form</div>
         <table className={styles["page154__table"]}>
@@ -55,42 +81,81 @@ const Pagina154 = () => {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td><span className={styles["page154__verb-cell"]}>Am</span></td>
-              <td>I</td>
-              <td></td>
-              <td>late</td>
-              <td>?</td>
+              {[
+                "",
+                <span className={styles["page154__verb-cell"]}>Am</span>,
+                "I",
+                "",
+                "late",
+                "?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg154_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page154__verb-cell"]}>Do</span></td>
-              <td>I</td>
-              <td></td>
-              <td>need to work</td>
-              <td>on Sunday ?</td>
+              {[
+                "",
+                <span className={styles["page154__verb-cell"]}>Do</span>,
+                "I",
+                "",
+                "need to work",
+                "on Sunday ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg154_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page154__verb-cell"]}>Do</span></td>
-              <td>I</td>
-              <td></td>
-              <td>travel</td>
-              <td>at 7:00 a.m. or at 7:00 p.m. ?</td>
+              {[
+                "",
+                <span className={styles["page154__verb-cell"]}>Do</span>,
+                "I",
+                "",
+                "travel",
+                "at 7:00 a.m. or at 7:00 p.m. ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg154_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page154__verb-cell"]}>Do</span></td>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td>look like him ?</td>
+              {[
+                "",
+                <span className={styles["page154__verb-cell"]}>Do</span>,
+                "I",
+                "",
+                "",
+                "look like him ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg154_audio5e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Imagem */}
       <section className={styles["page154__image-container"]}>
         <img src={pagina154_imagem1} alt="Pessoa com mala no aeroporto" className={styles["page154__image"]} />
       </section>

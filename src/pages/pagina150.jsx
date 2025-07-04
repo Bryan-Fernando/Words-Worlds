@@ -1,8 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina150.module.css';
 import pagina150_imagem1 from '../assets/images/pagina150_imagem1.webp';
 
+import pg150_audio1e from '../assets/audios/pg150_audio1e.mp3';
+import pg150_audio2e from '../assets/audios/pg150_audio2e.mp3';
+import pg150_audio3e from '../assets/audios/pg150_audio3e.mp3';
+import pg150_audio4e from '../assets/audios/pg150_audio4e.mp3';
+import pg150_audio5e from '../assets/audios/pg150_audio5e.mp3';
+
 const Pagina150 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page150__container"]}>
       <h1 className={styles["page150__title"]}>
@@ -27,11 +45,15 @@ const Pagina150 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>I</td>
-              <td><span className={styles["page150__text-red"]}>don’t</span></td> 
-              <td></td>
-              <td>eat</td>
-              <td>fruit for breakfast</td>
+              {["I", <span className={styles["page150__text-red"]}>don’t</span>, "", "eat", "fruit for breakfast"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg150_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
@@ -52,32 +74,48 @@ const Pagina150 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>I</td>
-              <td>am</td>
-              <td><span className={styles["page150__text-red"]}>not</span></td>
-              <td></td>
-              <td>at home.</td>
+              {["I", "am", <span className={styles["page150__text-red"]}>not</span>, "", "at home."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg150_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td><span className={styles["page150__verb-cell"]}>don’t</span></td>
-              <td></td>
-              <td>arrive</td>
-              <td>at work at 8:00 a.m.</td>
+              {["I", <span className={styles["page150__verb-cell"]}>don’t</span>, "", "arrive", "at work at 8:00 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg150_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td><span className={styles["page150__verb-cell"]}>don’t</span></td>
-              <td></td>
-              <td>begin</td>
-              <td>my day with a coffee.</td>
+              {["I", <span className={styles["page150__verb-cell"]}>don’t</span>, "", "begin", "my day with a coffee."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg150_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td><span className={styles["page150__verb-cell"]}>don’t</span></td>
-              <td></td>
-              <td>need to be</td>
-              <td>at the office before 9:00 a.m.</td>
+              {["I", <span className={styles["page150__verb-cell"]}>don’t</span>, "", "need to be", "at the office before 9:00 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg150_audio5e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>

@@ -1,8 +1,25 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina152.module.css';
 import pagina152_imagem1 from '../assets/images/pagina152_imagem1.webp';
 
+import pg152_audio1e from '../assets/audios/pg152_audio1e.mp3';
+import pg152_audio2e from '../assets/audios/pg152_audio2e.mp3';
+import pg152_audio3e from '../assets/audios/pg152_audio3e.mp3';
+import pg152_audio4e from '../assets/audios/pg152_audio4e.mp3';
+
 const Pagina152 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page152__container"]}>
       <h1 className={styles["page152__title"]}>
@@ -12,7 +29,6 @@ const Pagina152 = () => {
         </span>
       </h1>
 
-      {/* Tabela 1 */}
       <section>
         <div className={styles["page152__table-header"]}>Negative Form</div>
         <table className={styles["page152__table"]}>
@@ -27,17 +43,26 @@ const Pagina152 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Lucas</td>
-              <td><span className={styles["page152__text-red"]}>doesn’t</span></td> {/* Apenas vermelho texto simples */}
-              <td></td>
-              <td>live</td>
-              <td>in São Paulo</td>
+              {[
+                "Lucas",
+                <span className={styles["page152__text-red"]}>doesn’t</span>,
+                "",
+                "live",
+                "in São Paulo"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg152_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 2 */}
       <section>
         <div className={styles["page152__table-header"]}>Negative Form</div>
         <table className={styles["page152__table"]}>
@@ -52,36 +77,64 @@ const Pagina152 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>He</td>
-              <td><span className={styles["page152__verb-cell"]}>doesn’t</span></td>
-              <td></td>
-              <td>work</td>
-              <td>at home.</td>
+              {[
+                "He",
+                <span className={styles["page152__verb-cell"]}>doesn’t</span>,
+                "",
+                "work",
+                "at home."
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg152_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>She</td>
-              <td><span className={styles["page152__verb-cell"]}>doesn’t</span></td>
-              <td></td>
-              <td>drink</td>
-              <td>coffee.</td>
+              {[
+                "She",
+                <span className={styles["page152__verb-cell"]}>doesn’t</span>,
+                "",
+                "drink",
+                "coffee."
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg152_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>It</td>
-              <td><span className={styles["page152__verb-cell"]}>doesn’t</span></td>
-              <td></td>
-              <td>open</td>
-              <td>at 8:00 a.m</td>
+              {[
+                "It",
+                <span className={styles["page152__verb-cell"]}>doesn’t</span>,
+                "",
+                "open",
+                "at 8:00 a.m"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg152_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Imagem */}
       <section className={styles["page152__image-container"]}>
         <img src={pagina152_imagem1} alt="Mulher bebendo suco" className={styles["page152__image"]} />
       </section>
 
-      {/* Nota */}
       <section className={styles["page152__note"]}>
         <div className={styles["page152__note-header"]}>Nota:</div>
         <div className={styles["page152__note-content"]}>

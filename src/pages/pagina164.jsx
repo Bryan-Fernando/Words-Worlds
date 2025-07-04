@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina164.module.css';
 
 import pagina164_imagem1 from '../assets/images/pagina164_imagem1.webp';
 import pagina164_imagem2 from '../assets/images/pagina164_imagem2.webp';
 
+import pg164_audio1e from '../assets/audios/pg164_audio1e.mp3'; // How much
+import pg164_audio2e from '../assets/audios/pg164_audio2e.mp3'; // How many
+import pg164_audio3e from '../assets/audios/pg164_audio3e.mp3'; // How long
+import pg164_audio4e from '../assets/audios/pg164_audio4e.mp3'; // How much longer
+import pg164_audio5e from '../assets/audios/pg164_audio5e.mp3'; // Row 1
+import pg164_audio6e from '../assets/audios/pg164_audio6e.mp3'; // Row 2
+import pg164_audio7e from '../assets/audios/pg164_audio7e.mp3'; // Row 3
+import pg164_audio8e from '../assets/audios/pg164_audio8e.mp3'; // Row 4
+
 const Pagina164 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page164__container"]}>
       <h1 className={styles["page164__title"]}>
@@ -12,23 +33,38 @@ const Pagina164 = () => {
         <span className={styles["page164__title--highlight"]}>Question Words</span>
       </h1>
 
-      {/* Traduções */}
       <section className={styles["page164__translations"]}>
         <div className={styles["page164__translations-column"]}>
           <table className={styles["page164__translation-table"]}>
             <tbody>
               <tr>
-                <td className={styles["page164__text-red"]}>How much</td>
+                <td
+                  className={styles["page164__text-red"]}
+                  onClick={() => playAudio(pg164_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  How much
+                </td>
                 <td>
                   Quanto / quanta / quanto de <br />
-                  <span className={styles["page164__translation-note"]}>( <span className={styles["page164__text-red"]}>substantivos</span> incontáveis)</span>
+                  <span className={styles["page164__translation-note"]}>
+                    ( <span className={styles["page164__text-red"]}>substantivos</span> incontáveis )
+                  </span>
                 </td>
               </tr>
               <tr>
-                <td className={styles["page164__text-red"]}>How many</td>
+                <td
+                  className={styles["page164__text-red"]}
+                  onClick={() => playAudio(pg164_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  How many
+                </td>
                 <td>
                   Quantos / quantas <br />
-                  <span className={styles["page164__translation-note"]}>(<span className={styles["page164__text-red"]}>substantivos</span> contáveis)</span>
+                  <span className={styles["page164__translation-note"]}>
+                    (<span className={styles["page164__text-red"]}>substantivos</span> contáveis)
+                  </span>
                 </td>
               </tr>
             </tbody>
@@ -39,21 +75,34 @@ const Pagina164 = () => {
           <table className={styles["page164__translation-table"]}>
             <tbody>
               <tr>
-                <td className={styles["page164__text-red"]}>How long</td>
+                <td
+                  className={styles["page164__text-red"]}
+                  onClick={() => playAudio(pg164_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  How long
+                </td>
                 <td>
                   Quanto tempo <br />
                   <span className={styles["page164__translation-note"]}>
-                    ( usado para perguntar sobre a <span className={styles["page164__text-red"]}>duração total</span> de algo, seja uma ação, estado ou situação do início ao fim. )
+                    ( usado para perguntar sobre a{" "}
+                    <span className={styles["page164__text-red"]}>duração total</span> de algo )
                   </span>
                 </td>
               </tr>
               <tr>
-                <td className={styles["page164__text-red"]}>How much longer</td>
+                <td
+                  className={styles["page164__text-red"]}
+                  onClick={() => playAudio(pg164_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  How much longer
+                </td>
                 <td>
                   Quanto tempo mais <br />
                   Quanto tempo ainda <br />
                   <span className={styles["page164__translation-note"]}>
-                    ( usado para perguntar quanto tempo ainda resta até que algo termine ou aconteça. Ou seja, é o foco no <span className={styles["page164__text-red"]}>tempo restante</span>, e não na duração total. )
+                    ( usado para perguntar quanto tempo ainda resta até que algo termine )
                   </span>
                 </td>
               </tr>
@@ -62,7 +111,6 @@ const Pagina164 = () => {
         </div>
       </section>
 
-      {/* Tabela Principal */}
       <section>
         <div className={styles["page164__table-header"]}>Question Words</div>
         <table className={styles["page164__table"]}>
@@ -78,42 +126,85 @@ const Pagina164 = () => {
           </thead>
           <tbody>
             <tr>
-              <td><span className={styles["page164__text-red"]}>How much</span> water</td>
-              <td className={styles["page164__text-blue"]}>do</td>
-              <td>you</td>
-              <td></td>
-              <td>drink</td>
-              <td>every day ?</td>
+              {[
+                <>
+                  <span className={styles["page164__text-red"]}>How much</span> water
+                </>,
+                <span className={styles["page164__text-blue"]}>do</span>,
+                "you",
+                "",
+                "drink",
+                "every day ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg164_audio5e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td><span className={styles["page164__text-red"]}>How many</span> books</td>
-              <td className={styles["page164__text-blue"]}>does</td>
-              <td>Bryan</td>
-              <td></td>
-              <td>read</td>
-              <td>a month ?</td>
+              {[
+                <>
+                  <span className={styles["page164__text-red"]}>How many</span> books
+                </>,
+                <span className={styles["page164__text-blue"]}>does</span>,
+                "Bryan",
+                "",
+                "read",
+                "a month ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg164_audio6e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td><span className={styles["page164__text-red"]}>How long</span></td>
-              <td className={styles["page164__text-blue"]}>do</td>
-              <td>you</td>
-              <td></td>
-              <td>stay</td>
-              <td>in Brazil ?</td>
+              {[
+                <span className={styles["page164__text-red"]}>How long</span>,
+                <span className={styles["page164__text-blue"]}>do</span>,
+                "you",
+                "",
+                "stay",
+                "in Brazil ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg164_audio7e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td><span className={styles["page164__text-red"]}>How much longer</span></td>
-              <td className={styles["page164__text-blue"]}>do</td>
-              <td>we</td>
-              <td></td>
-              <td>have to wait ?</td>
-              <td></td>
+              {[
+                <span className={styles["page164__text-red"]}>How much longer</span>,
+                <span className={styles["page164__text-blue"]}>do</span>,
+                "we",
+                "",
+                "have to wait ?",
+                ""
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg164_audio8e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Imagens */}
       <section className={styles["page164__images-container"]}>
         <img src={pagina164_imagem1} alt="Imagem 1" className={styles["page164__image"]} />
         <img src={pagina164_imagem2} alt="Imagem 2" className={styles["page164__image"]} />

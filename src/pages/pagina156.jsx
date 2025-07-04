@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina156.module.css';
 import pagina156_imagem1 from '../assets/images/pagina156_imagem1.webp';
 import pagina156_imagem2 from '../assets/images/pagina156_imagem2.webp';
 
+import pg156_audio1e from '../assets/audios/pg156_audio1e.mp3';
+import pg156_audio2e from '../assets/audios/pg156_audio2e.mp3';
+import pg156_audio3e from '../assets/audios/pg156_audio3e.mp3';
+import pg156_audio4e from '../assets/audios/pg156_audio4e.mp3';
+import pg156_audio5e from '../assets/audios/pg156_audio5e.mp3';
+import pg156_audio6e from '../assets/audios/pg156_audio6e.mp3';
+import pg156_audio7e from '../assets/audios/pg156_audio7e.mp3';
+import pg156_audio8e from '../assets/audios/pg156_audio8e.mp3';
+import pg156_audio9e from '../assets/audios/pg156_audio9e.mp3';
+import pg156_audio10e from '../assets/audios/pg156_audio10e.mp3';
+
 const Pagina156 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page156__container"]}>
       <h1 className={styles["page156__title"]}>
@@ -12,7 +35,7 @@ const Pagina156 = () => {
           Simple Present ( Be and Common Main Verbs )
         </span>
       </h1>
-      {/* Tabela 1 */}
+
       <section>
         <div className={styles["page156__table-header"]}>Interrogative Form</div>
         <table className={styles["page156__table"]}>
@@ -28,18 +51,27 @@ const Pagina156 = () => {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__text-red"]}>Do</span></td> {/* Só vermelho, sem fundo */}
-              <td>you and I</td>
-              <td></td>
-              <td>work</td>
-              <td>on weekends ?</td>
+              {[
+                "",
+                <span className={styles["page156__text-red"]}>Do</span>,
+                "you and I",
+                "",
+                "work",
+                "on weekends ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 2 */}
       <section>
         <div className={styles["page156__table-header"]}>Interrogative Form</div>
         <table className={styles["page156__table"]}>
@@ -55,42 +87,45 @@ const Pagina156 = () => {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>you and I</td>
-              <td></td>
-              <td>have to work</td>
-              <td>on Sunday ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "you and I",
+                "",
+                "have to work",
+                "on Sunday ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>you</td>
-              <td></td>
-              <td>need to go</td>
-              <td>to Miami on Friday ?</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>you and Bia</td>
-              <td></td>
-              <td>travel</td>
-              <td>very often to Miami ?</td>
-            </tr>
-            <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>they</td>
-              <td></td>
-              <td>live</td>
-              <td>in New York city ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "you and Bia",
+                "",
+                "travel",
+                "very often to Miami ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 3 */}
       <section>
         <div className={styles["page156__table-header"]}>Interrogative Form</div>
         <table className={styles["page156__table"]}>
@@ -106,50 +141,99 @@ const Pagina156 = () => {
           </thead>
           <tbody>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__text-red"]}>Are</span></td> {/* Apenas texto vermelho */}
-              <td>we</td>
-              <td></td>
-              <td></td>
-              <td>on time ?</td>
+              {[
+                "",
+                <span className={styles["page156__text-red"]}>Are</span>,
+                "we",
+                "",
+                "",
+                "on time ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio6e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>we</td>
-              <td></td>
-              <td>have to work</td>
-              <td>on Sunday ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "we",
+                "",
+                "have to work",
+                "on Sunday ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio7e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>you</td>
-              <td></td>
-              <td>need to go</td>
-              <td>to Miami on Friday ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "you",
+                "",
+                "need to go",
+                "to Miami on Friday ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio8e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>y’all</td>
-              <td></td>
-              <td>travel</td>
-              <td>very often to Miami ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "y’all",
+                "",
+                "travel",
+                "very often to Miami ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio9e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td></td>
-              <td><span className={styles["page156__verb-cell"]}>Do</span></td>
-              <td>they</td>
-              <td></td>
-              <td>live</td>
-              <td>in New York city ?</td>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "they",
+                "",
+                "live",
+                "in New York city ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio10e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Imagens */}
       <section className={styles["page156__images-container"]}>
         <img src={pagina156_imagem1} alt="Times Square" className={styles["page156__image"]} />
         <img src={pagina156_imagem2} alt="Casa de praia" className={styles["page156__image"]} />

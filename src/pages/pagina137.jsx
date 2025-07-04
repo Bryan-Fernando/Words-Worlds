@@ -122,7 +122,7 @@ const Pagina137 = () => {
                             <tbody>
                                 {[
                                     { sujeito: "Does", verboAux: "he", adverbio: "", verbo: "work", complemento: "every day?", audio: pg108_audio2, tradAudio: pg108_trad2, traducao: "Ele trabalha todos os dias?" },
-                                    { sujeito: "Does", verboAux: "she", adverbio: "", verbo: "work", complemento: "at home?", audio: pg108_audio3, tradAudio: pg108_trad3, traducao: "Ela trabalha em casa?" },
+                                    { sujeito: "Does", verboAux: "she", adverbio: "", verbo: "work", complemento: "at home?", audio: pg108_audio3, traducao: "Ela trabalha em casa?" },
                                 ].map((linha, index) => (
                                     <tr key={index} onClick={() => playAudio(linha.audio)} style={{ cursor: 'pointer' }}>
                                         <td className={styles["page108__subject"]}>{linha.sujeito}</td>
