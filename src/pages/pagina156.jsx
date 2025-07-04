@@ -108,6 +108,24 @@ const Pagina156 = () => {
               {[
                 "",
                 <span className={styles["page156__verb-cell"]}>Do</span>,
+                "you",
+                "",
+                "need to go",
+                "to California on Friday ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+            <tr>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
                 "you and Bia",
                 "",
                 "travel",
@@ -116,6 +134,24 @@ const Pagina156 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg156_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
+            </tr>
+            <tr>
+              {[
+                "",
+                <span className={styles["page156__verb-cell"]}>Do</span>,
+                "Lucas and Eric",
+                "",
+                "live",
+                "in New York City ?"
+              ].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg156_audio5e)}
                   style={{ cursor: 'pointer' }}
                 >
                   {cell}
@@ -143,7 +179,7 @@ const Pagina156 = () => {
             <tr>
               {[
                 "",
-                <span className={styles["page156__text-red"]}>Are</span>,
+                <span style={{ color: "blue", fontWeight: "bold" }}>Are</span>,
                 "we",
                 "",
                 "",

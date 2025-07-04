@@ -97,7 +97,11 @@ const Pagina153 = () => {
                   onClick={() => playAudio(pg153_audio2e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "aren’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
@@ -206,7 +210,7 @@ const Pagina153 = () => {
             <tr>
               {[
                 "We",
-                <span className={styles["page153__text-red"]}>aren’t</span>,
+                "aren’t",
                 "",
                 "",
                 "in Brazil"
@@ -216,7 +220,11 @@ const Pagina153 = () => {
                   onClick={() => playAudio(pg153_audio8e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "aren’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>

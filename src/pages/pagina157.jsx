@@ -56,9 +56,16 @@ const Pagina157 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg157_audio1e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
@@ -83,7 +90,7 @@ const Pagina157 = () => {
             <tr>
               {[
                 "",
-                <span className={styles["page157__text-red"]}>Ain’t</span>,
+                "Ain’t",
                 "I",
                 "",
                 "",
@@ -92,12 +99,22 @@ const Pagina157 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg157_audio2e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "Ain’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
+
             <tr>
               {[
                 "",
@@ -110,12 +127,20 @@ const Pagina157 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg157_audio3e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
+
             <tr>
               {[
                 "",
@@ -128,12 +153,20 @@ const Pagina157 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg157_audio4e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
+
             <tr>
               {[
                 "",
@@ -146,12 +179,20 @@ const Pagina157 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg157_audio5e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
+
           </tbody>
         </table>
       </section>

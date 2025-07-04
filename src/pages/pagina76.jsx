@@ -207,16 +207,27 @@ const Pagina76 = () => {
   const pronouns = (
     <div className={styles["page76__pronoun-group"]}>
       <div className={styles["page76__pronoun--left"]}>
-        <span onClick={() => playAudio('global_I')}>I</span> <br />
-        <span onClick={() => playAudio('global_we')}>We</span> -{" "}
-        <span onClick={() => playAudio('global_you')}>You</span> -{" "}
-        <span onClick={() => playAudio('global_they')}>They</span>
+      <div className="page76__labels">
+  <div>
+    <span onClick={() => playAudio('global_I')} style={{ cursor: "pointer" }}>
+      I
+    </span>
+    <div>
+      <span onClick={() => playAudio('global_we')} style={{ cursor: "pointer" }}>We</span>{" "}
+      -{" "}
+      <span onClick={() => playAudio('global_you')} style={{ cursor: "pointer" }}>You</span>{" "}
+      -{" "}
+      <span onClick={() => playAudio('global_they')} style={{ cursor: "pointer" }}>They</span>
+    </div>
+  </div>
+</div>
+
       </div>
       <div className={styles["page76__pronoun--right"]}>
         <em>
-          <span onClick={() => playAudio('global_he')}>He</span> -{" "}
-          <span onClick={() => playAudio('global_she')}>She</span> -{" "}
-          <span onClick={() => playAudio('global_it')}>It</span>
+          <span onClick={() => playAudio('global_he')} style={{cursor: "pointer"}}>He</span> -{" "}
+          <span onClick={() => playAudio('global_she')} style={{cursor: "pointer"}}>She</span> -{" "}
+          <span onClick={() => playAudio('global_it')} style={{cursor: "pointer"}}>It</span>
         </em>
       </div>
     </div>
@@ -225,7 +236,7 @@ const Pagina76 = () => {
   return (
     <div className={styles["page76__container"]}>
       <header className={styles["page76__header"]}>
-        <h1 className={styles["page76__grammar-title"]}>Grammar:</h1>
+        <h1 className={styles["page76__grammar-title"]} >Grammar:</h1>
         <h2 className={styles["page76__header--en"]}>Common Main Verbs</h2>
         <h3 className={styles["page76__header--pt"]}>Simple Present - Affirmative Form</h3>
       </header>

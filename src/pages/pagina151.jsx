@@ -90,7 +90,11 @@ const Pagina151 = () => {
                   onClick={() => playAudio(pg151_audio2e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "isn’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>

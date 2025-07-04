@@ -49,9 +49,12 @@ const Pagina150 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg150_audio1e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? <strong>{cell}</strong> : cell}
                 </td>
               ))}
             </tr>
@@ -78,9 +81,18 @@ const Pagina150 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg150_audio2e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? (
+                    <strong>{cell}</strong>
+                  ) : cell === "am" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
@@ -89,9 +101,12 @@ const Pagina150 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg150_audio3e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? <strong>{cell}</strong> : cell}
                 </td>
               ))}
             </tr>
@@ -100,9 +115,12 @@ const Pagina150 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg150_audio4e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? <strong>{cell}</strong> : cell}
                 </td>
               ))}
             </tr>
@@ -111,9 +129,12 @@ const Pagina150 = () => {
                 <td
                   key={i}
                   onClick={() => playAudio(pg150_audio5e)}
-                  style={{ cursor: 'pointer' }}
+                  style={{
+                    cursor: 'pointer',
+                    textAlign: cell === "I" ? "center" : undefined
+                  }}
                 >
-                  {cell}
+                  {cell === "I" ? <strong>{cell}</strong> : cell}
                 </td>
               ))}
             </tr>

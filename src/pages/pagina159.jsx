@@ -88,7 +88,7 @@ const Pagina159 = () => {
             <tr>
               {[
                 "",
-                <span className={styles["page159__text-red"]}>Aren’t</span>,
+                "Aren’t",
                 "you and me",
                 "",
                 "",
@@ -99,10 +99,15 @@ const Pagina159 = () => {
                   onClick={() => playAudio(pg159_audio2e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "Aren’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
+
             <tr>
               {[
                 "",
@@ -128,7 +133,7 @@ const Pagina159 = () => {
                 "you",
                 "",
                 "need to go",
-                "to Miami on Friday ?"
+                "to Losangeles on Friday ?"
               ].map((cell, i) => (
                 <td
                   key={i}
@@ -161,7 +166,7 @@ const Pagina159 = () => {
               {[
                 "",
                 <span className={styles["page159__verb-cell"]}>Don’t</span>,
-                "they",
+                "Bia and Michel",
                 "",
                 "live",
                 "in New York city ?"

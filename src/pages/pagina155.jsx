@@ -35,6 +35,7 @@ const Pagina155 = () => {
         </span>
       </h1>
 
+      {/* Tabela 1 */}
       <section>
         <div className={styles["page155__table-header"]}>Interrogative Form</div>
         <table className={styles["page155__table"]}>
@@ -71,6 +72,7 @@ const Pagina155 = () => {
         </table>
       </section>
 
+      {/* Tabela 2 */}
       <section>
         <div className={styles["page155__table-header"]}>Interrogative Form</div>
         <table className={styles["page155__table"]}>
@@ -99,7 +101,11 @@ const Pagina155 = () => {
                   onClick={() => playAudio(pg155_audio2e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "Is" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
@@ -161,6 +167,7 @@ const Pagina155 = () => {
         </table>
       </section>
 
+      {/* Tabela 3 */}
       <section>
         <div className={styles["page155__table-header"]}>Interrogative Form</div>
         <table className={styles["page155__table"]}>
@@ -243,7 +250,11 @@ const Pagina155 = () => {
                   onClick={() => playAudio(pg155_audio9e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "Is" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>
@@ -251,11 +262,21 @@ const Pagina155 = () => {
         </table>
       </section>
 
+      {/* Imagens */}
       <section className={styles["page155__images-container"]}>
-        <img src={pagina155_imagem1} alt="Shopping à noite" className={styles["page155__image"]} />
-        <img src={pagina155_imagem2} alt="Homem malhando" className={styles["page155__image"]} />
+        <img
+          src={pagina155_imagem1}
+          alt="Shopping à noite"
+          className={styles["page155__image"]}
+        />
+        <img
+          src={pagina155_imagem2}
+          alt="Homem malhando"
+          className={styles["page155__image"]}
+        />
       </section>
     </div>
+
   );
 };
 

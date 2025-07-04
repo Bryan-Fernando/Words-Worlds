@@ -86,7 +86,7 @@ const Pagina158 = () => {
             <tr>
               {[
                 "",
-                <span className={styles["page158__text-red"]}>Isn’t</span>,
+                "Isn’t",
                 "Nicole",
                 "",
                 "",
@@ -97,7 +97,11 @@ const Pagina158 = () => {
                   onClick={() => playAudio(pg158_audio2e)}
                   style={{ cursor: 'pointer' }}
                 >
-                  {cell}
+                  {cell === "Isn’t" ? (
+                    <span style={{ color: "blue", fontWeight: "bold" }}>{cell}</span>
+                  ) : (
+                    cell
+                  )}
                 </td>
               ))}
             </tr>

@@ -108,14 +108,14 @@
 .page76__pronoun--left,
 .page76__pronoun--right {
   background-color: #D9D9D9;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.4rem;
   color: black;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2rem; 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .page76__pronoun--right em {
