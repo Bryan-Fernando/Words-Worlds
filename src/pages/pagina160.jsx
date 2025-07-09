@@ -109,7 +109,7 @@ const Pagina160 = () => {
                 <span className={styles["page160__text-blue"]}>do</span>,
                 "you ( sg )",
                 "usually",
-                "eat",
+                "have",
                 "for breakfast?"
               ].map((cell, i) => (
                 <td

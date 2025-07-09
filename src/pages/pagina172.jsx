@@ -3,8 +3,8 @@ import styles from './pagina172.module.css';
 
 import clock10_00 from '../assets/images/pagina172_imagem1.webp';
 import clock10_01 from '../assets/images/pagina172_imagem2.webp';
-import clock10_02 from '../assets/images/pagina172_imagem3.webp';
-import clock10_03 from '../assets/images/pagina172_imagem4.webp';
+import clock10_02 from '../assets/images/pagina172_imagem4.webp';
+import clock10_03 from '../assets/images/pagina172_imagem3.webp';
 
 // Ícones
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
