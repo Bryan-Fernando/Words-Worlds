@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styles from './pagina161.module.css';
 
-import pagina161_imagem1 from '../assets/images/pagina161_imagem1.webp';
+import pagina161_imagem1 from '../assets/images/pagina161_imagem1.gif';
 import pagina161_imagem2 from '../assets/images/pagina161_imagem2.webp';
 
 import pg161_audio1e from '../assets/audios/pg161_audio1e.mp3'; // Why

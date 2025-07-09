@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import styles from './pagina157.module.css';
-import pagina157_imagem1 from '../assets/images/pagina157_imagem1.webp';
+import pagina157_imagem1 from '../assets/images/pagina157_imagem1.gif';
 
 import pg157_audio1e from '../assets/audios/pg157_audio1e.mp3';
 import pg157_audio2e from '../assets/audios/pg157_audio2e.mp3';

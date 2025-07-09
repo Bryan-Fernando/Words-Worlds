@@ -29,32 +29,60 @@
 
 .page278__subtitle {
   color: #888A8C;
-  font-size: 2rem;
+  font-size: 2.7rem;
   font-style: italic;
+  font-weight: bold;
+}
+
+.page278__content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.page278__left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 55%;
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .page278__examples {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-
-.page278__example-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 2rem;
 }
 
-.page278__image {
-  width: 25%;
-  height: auto;
-  border-radius: 0.5rem;
+.page278__example-block p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .page278__text-red {
   color: #A61C28;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.page278__clock-container {
+  width: 35%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 0;
+}
+
+.page278__clock-image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  top: 0;
+  border-radius: 0.5rem;
 }
 
 .page278__conversation {
@@ -79,7 +107,7 @@
   border-radius: 1.5rem;
   width: fit-content;
   position: absolute;
-  left: 5%
+  left: 5%;
 }
 
 .page278__speech-left::after {
@@ -102,7 +130,7 @@
   border-radius: 1.5rem;
   width: fit-content;
   position: absolute;
-  right: 15%
+  right: 15%;
 }
 
 .page278__speech-right::after {
@@ -113,4 +141,17 @@
   border-width: 1rem;
   border-style: solid;
   border-color: #F9E0E0 transparent transparent transparent;
+}
+
+.page278__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.page278__audio-icon:hover {
+  transform: scale(1.2);
 }

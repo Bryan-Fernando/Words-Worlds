@@ -4,7 +4,7 @@ import styles from './pagina119.module.css';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import pagina118_imagem1 from '../assets/images/pagina118_imagem1.jpg';
+import pagina118_imagem1 from '../assets/images/pagina119_imagem1.gif';
 
 // Áudios inglês
 import pg119_audio1 from '../assets/audios/pg119_audio1.mp3';

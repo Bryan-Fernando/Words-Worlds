@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from './pagina165.module.css';
 
 import pagina165_imagem1 from '../assets/images/pagina165_imagem1.webp';
-import pagina165_imagem2 from '../assets/images/pagina165_imagem2.webp';
+import pagina165_imagem2 from '../assets/images/pagina165_imagem2.gif';
 
 import pg165_audio1e from '../assets/audios/pg165_audio1e.mp3'; // How many times
 import pg165_audio2e from '../assets/audios/pg165_audio2e.mp3'; // How many times a day

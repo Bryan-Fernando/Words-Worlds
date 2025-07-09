@@ -29,30 +29,72 @@
 
 .page179__subtitle {
   color: #888A8C;
-  font-size: 2rem;
+  font-size: 2.7rem;
   font-style: italic;
+  font-weight: bold;
+}
+
+.page179__content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  /* Aproxima as colunas */
+  gap: 3rem;                /* Espaço entre texto e relógio */
+}
+
+.page179__left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 55%;              /* Deixa o texto mais centralizado */
+  align-items: flex-start;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .page179__examples {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-}
-
-.page179__example-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
   gap: 2rem;
 }
 
-.page179__image {
-  width: 25%;
-  height: auto;
-  border-radius: 0.5rem;
+.page179__example-block p {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
 }
 
 .page179__text-red {
   color: #A61C28;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.page179__clock-container {
+  width: 35%;              
+  display: flex;
+  align-items: flex-start; 
+  justify-content: center;
+  margin-top: 0;          
+}
+
+.page179__clock-image {
+  width: 100%;             
+  height: auto;
+  position: relative;
+  top: 0;                 
+  border-radius: 0.5rem;
+}
+
+.page179__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page179__audio-icon:hover {
+  transform: scale(1.2);
 }

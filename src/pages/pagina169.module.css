@@ -97,3 +97,17 @@
 .page169__note strong {
   font-weight: bold;
 }
+
+.page169__audio-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page169__audio-icon:hover {
+  transform: scale(1.2);
+}

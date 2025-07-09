@@ -1,43 +1,105 @@
 .page227__container {
-    padding: 2rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.page227__title {
-    text-align: left;
-    font-size: 2.5rem; /* Aumentado */
-    font-weight: bold;
-    margin-bottom: 2.5rem;
-}
-
-.page227__content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-}
-
-.page227__section {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.page227__gif {
-    width: 26rem;    
-    height: auto;
-    border-radius: 8px;
-    flex-shrink: 0;
-}
-
-.page227__text {
-    font-size: 2rem; 
-    line-height: 1.8;
+    padding: 2rem;
+  }
+  
+  .page227__header {
+    width: 100%;
+  }
+  
+  .page227__title {
+    font-size: 5rem;
+    color: #A61C28;
     font-weight: bold;
-}
+  }
+  
+  .page227__title_black {
+    color: black;
+  }
+  
+  .page227__subtitle {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .page227__highlight {
+    border: 0.2rem solid #A61C28;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .page227__main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .page227__tableSection {
+    width: 100%;
+  }
+  
+  .page227__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  
+  .page227__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  .page227__table th,
+  .page227__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+  .page227__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .page227__translation {
+    font-size: 1.2rem;
+    font-style: italic;
+    display: block;
+  }
+  
+  .page227__red {
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .page227__title {
+      font-size: 3.5rem;
+    }
+  
+    .page227__subtitle {
+      font-size: 1.6rem;
+    }
+  
+    .page227__table th,
+    .page227__table td {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
+  
+    .page227__translation {
+      font-size: 1rem;
+    }
+  }
+  

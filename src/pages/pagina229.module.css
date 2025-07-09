@@ -1,0 +1,105 @@
+.page229__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .page229__header {
+    width: 100%;
+  }
+  
+  .page229__title {
+    font-size: 5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .page229__title_black {
+    color: black;
+  }
+  
+  .page229__subtitle {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .page229__highlight {
+    border: 0.2rem solid #A61C28;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .page229__main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .page229__tableSection {
+    width: 100%;
+  }
+  
+  .page229__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  
+  .page229__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  .page229__table th,
+  .page229__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+  .page229__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .page229__translation {
+    font-size: 1.2rem;
+    font-style: italic;
+    display: block;
+  }
+  
+  .page229__red {
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 1024px) {
+    .page229__title {
+      font-size: 3.5rem;
+    }
+  
+    .page229__subtitle {
+      font-size: 1.6rem;
+    }
+  
+    .page229__table th,
+    .page229__table td {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
+  
+    .page229__translation {
+      font-size: 1rem;
+    }
+  }
+  

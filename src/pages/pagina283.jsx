@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './pagina283.module.css';
 
 import img1 from '../assets/images/pagina283_imagem1.webp';
-import img2 from '../assets/images/pagina283_imagem2.webp';
+import img2 from '../assets/images/pagina283_imagem2.gif';
 import img3 from '../assets/images/pagina283_imagem3.webp';
 
 const Pagina283 = () => {

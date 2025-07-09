@@ -2,8 +2,8 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina123.module.css';
 
-import pagina233_imagem1 from '../assets/images/pagina233_imagem1.jpg';
-import pagina233_imagem2 from '../assets/images/pagina233_imagem2.jpg';
+import pagina233_imagem1 from '../assets/images/pagina123_imagem1.gif';
+import pagina233_imagem2 from '../assets/images/pagina123_imagem2.gif';
 
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';

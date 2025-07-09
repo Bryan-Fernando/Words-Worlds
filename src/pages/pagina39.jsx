@@ -9,11 +9,11 @@ import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
 
-import pagina39_imagem1 from '../assets/images/pagina39_imagem1.webp';
-import pagina39_imagem2 from '../assets/images/pagina39_imagem2.webp';
-import pagina39_imagem3 from '../assets/images/pagina39_imagem3.webp';
-import pagina39_imagem4 from '../assets/images/pagina39_imagem4.webp';
-import pagina39_imagem5 from '../assets/images/pagina39_imagem5.webp';
+import pagina39_imagem1 from '../assets/images/pagina39_imagem1.gif';
+import pagina39_imagem2 from '../assets/images/pagina39_imagem2.gif';
+import pagina39_imagem3 from '../assets/images/pagina39_imagem3.gif';
+import pagina39_imagem4 from '../assets/images/pagina39_imagem4.gif';
+import pagina39_imagem5 from '../assets/images/pagina39_imagem5.gif';
 
 import bell from '../assets/audios/bell.mp3';
 import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';

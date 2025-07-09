@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina80.module.css';
 
 import pagina80_imagem1 from '../assets/images/pagina80_imagem1.webp';
-import pagina80_imagem2 from '../assets/images/pagina80_imagem2.webp';
+import pagina80_imagem2 from '../assets/images/pagina80_imagem2.gif';
+
+import pg80_audio1e from '../assets/audios/pg80_audio1e.mp3';
+import pg80_audio2e from '../assets/audios/pg80_audio2e.mp3';
+import pg80_audio3e from '../assets/audios/pg80_audio3e.mp3';
+import pg80_audio4e from '../assets/audios/pg80_audio4e.mp3';
+import pg80_audio5e from '../assets/audios/pg80_audio5e.mp3';
+import pg80_audio6e from '../assets/audios/pg80_audio6e.mp3';
+import pg80_audio7e from '../assets/audios/pg80_audio7e.mp3';
+import pg80_audio8e from '../assets/audios/pg80_audio8e.mp3';
+import pg80_audio9e from '../assets/audios/pg80_audio9e.mp3';
+import pg80_audio10e from '../assets/audios/pg80_audio10e.mp3';
+import pg80_audio11e from '../assets/audios/pg80_audio11e.mp3';
 
 const Pagina80 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page80"]}>
       <h1 className={styles["page80__title"]}>
@@ -29,11 +53,15 @@ const Pagina80 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td>live</td>
-              <td>in São Paulo</td>
+              {["I", "", "", "live", "in São Paulo"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
@@ -54,39 +82,59 @@ const Pagina80 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>I</td>
-              <td><span className={styles["page80__verb-cell"]}>am</span></td>
-              <td></td>
-              <td></td>
-              <td>happy</td>
+              {["I", <span className={styles["page80__verb-cell"]}>am</span>, "", "", "happy"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>call</span></td>
-              <td>my friends on weekends</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>call</span>, "my friends on weekends"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>begin</span></td>
-              <td>my day with a coffee</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>begin</span>, "my day with a coffee"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>need to eat</span></td>
-              <td>fruit for breakfast</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>need to eat</span>, "fruit for breakfast"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio5e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>have to go to work</span></td>
-              <td>at 7:00 a.m.</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>have to go to work</span>, "at 7:00 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio6e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
@@ -107,39 +155,59 @@ const Pagina80 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>have</span></td>
-              <td>a big family</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>have</span>, "a big family"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio7e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>finish</span></td>
-              <td>my work before 5 a.m.</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>finish</span>, "my work before 5 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio8e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>call</span></td>
-              <td>my friends on weekends</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>call</span>, "my friends on weekends"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio9e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>eat</span></td>
-              <td>fruit for breakfast</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>eat</span>, "fruit for breakfast"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio10e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page80__verb-cell"]}>like to go</span></td>
-              <td>to the gym in the morning</td>
+              {["I", "", "", <span className={styles["page80__verb-cell"]}>like to go</span>, "to the gym in the morning"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg80_audio11e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>

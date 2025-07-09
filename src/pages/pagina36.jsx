@@ -9,7 +9,7 @@ import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina36_imagem1 from '../assets/images/pagina36_imagem1.webp';
-import pagina36_imagem2 from '../assets/images/pagina36_imagem2.webp';
+import pagina36_imagem2 from '../assets/images/pagina36_imagem2.gif';
 
 import bell from '../assets/audios/bell.mp3';
 import global_learning_le_p from '../assets/audios/global_learning_le_p.mp3';

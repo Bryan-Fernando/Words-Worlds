@@ -4,11 +4,11 @@ import styles from './pagina143.module.css';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import pagina143_imagem1 from '../assets/images/pagina143_imagem1.webp';
-import pagina143_imagem2 from '../assets/images/pagina143_imagem2.webp';
-import pagina143_imagem3 from '../assets/images/pagina143_imagem3.webp';
+import pagina143_imagem1 from '../assets/images/pagina143_imagem1.gif';
+import pagina143_imagem2 from '../assets/images/pagina143_imagem2.gif';
+import pagina143_imagem3 from '../assets/images/pagina143_imagem3.gif';
 import pagina143_imagem4 from '../assets/images/pagina143_imagem4.webp';
-import pagina143_imagem5 from '../assets/images/pagina143_imagem5.webp';
+import pagina143_imagem5 from '../assets/images/pagina143_imagem5.gif';
 
 import pg143_audio1e from '../assets/audios/pg143_audio1e.mp3';
 import pg143_audio2e from '../assets/audios/pg143_audio2e.mp3';

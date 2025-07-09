@@ -74,3 +74,17 @@
   color: #0A3282;
   font-size: 1.6rem;
 }
+
+.page166__icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page166__icon:hover {
+  transform: scale(1.2);
+}

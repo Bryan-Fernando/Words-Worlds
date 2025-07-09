@@ -122,3 +122,17 @@
     bottom: 40rem;
     left: 25rem;
 }
+
+.page174__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+  top: 0.3rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.page174__audio-icon:hover {
+  transform: scale(1.2);
+}

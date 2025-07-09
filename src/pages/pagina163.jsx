@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import styles from './pagina163.module.css';
 
 import pagina163_imagem1 from '../assets/images/pagina163_imagem1.webp';
-import pagina163_imagem2 from '../assets/images/pagina163_imagem2.webp';
+import pagina163_imagem2 from '../assets/images/pagina163_imagem2.gif';
 
 import pg163_audio1e from '../assets/audios/pg163_audio1e.mp3'; // How
 import pg163_audio2e from '../assets/audios/pg163_audio2e.mp3'; // How far

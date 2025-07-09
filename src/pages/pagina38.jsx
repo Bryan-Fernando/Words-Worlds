@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina38.module.css';
 
 import pagina38_imagem1 from '../assets/images/pagina38_imagem1.webp';
 
+import pg38_audio1e from '../assets/audios/pg38_audio1e.mp3';
+import pg38_audio2e from '../assets/audios/pg38_audio2e.mp3';
+import pg38_audio3e from '../assets/audios/pg38_audio3e.mp3';
+import pg38_audio4e from '../assets/audios/pg38_audio4e.mp3';
+import pg38_audio5e from '../assets/audios/pg38_audio5e.mp3';
+import pg38_audio6e from '../assets/audios/pg38_audio6e.mp3';
+import pg38_audio7e from '../assets/audios/pg38_audio7e.mp3';
+import pg38_audio8e from '../assets/audios/pg38_audio8e.mp3';
+import pg38_audio9e from '../assets/audios/pg38_audio9e.mp3';
+import pg38_audio10e from '../assets/audios/pg38_audio10e.mp3';
+import pg38_audio11e from '../assets/audios/pg38_audio11e.mp3';
+import pg38_audio12e from '../assets/audios/pg38_audio12e.mp3';
+import pg38_audio13e from '../assets/audios/pg38_audio13e.mp3';
+
 const Pagina38 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(audioFile);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles["page38"]}>
       <h1 className={styles["page38__title"]}>
@@ -13,7 +39,6 @@ const Pagina38 = () => {
         </span>
       </h1>
 
-      {/* Tabela 1 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -28,17 +53,20 @@ const Pagina38 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Lucas and I</td>
-              <td></td>
-              <td></td>
-              <td>live</td>
-              <td>in São Paulo</td>
+              {["Lucas and I", "", "", "live", "in São Paulo"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio1e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 2 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -53,52 +81,75 @@ const Pagina38 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>Marcia and I</td>
-              <td><span className={styles["page38__verb-cell"]}>are</span></td>
-              <td></td>
-              <td></td>
-              <td>happy</td>
+              {["Marcia and I", <span className={styles["page38__verb-cell"]}>are</span>, "", "", "happy"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio2e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>Lucas, Pam and I</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>live</span></td>
-              <td>in Brazil</td>
+              {["Lucas, Pam and I", "", "", <span className={styles["page38__verb-cell"]}>live</span>, "in Brazil"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio3e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>You</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>make</span></td>
-              <td>delicious pancakes</td>
+              {["You", "", "", <span className={styles["page38__verb-cell"]}>make</span>, "delicious pancakes"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio4e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>You, Luca and Bia</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>need</span></td>
-              <td>a new phone</td>
+              {["You, Luca and Bia", "", "", <span className={styles["page38__verb-cell"]}>need</span>, "a new phone"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio5e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>Isa, Talita and Eric</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>travel</span></td>
-              <td>by bus</td>
+              {["Isa, Talita and Eric", "", "", <span className={styles["page38__verb-cell"]}>travel</span>, "by bus"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio6e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>Banks</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>open</span></td>
-              <td>at 8:00 a.m.</td>
+              {["Banks", "", "", <span className={styles["page38__verb-cell"]}>open</span>, "at 8:00 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio7e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Tabela 3 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -113,52 +164,75 @@ const Pagina38 = () => {
           </thead>
           <tbody>
             <tr>
-              <td>We</td>
-              <td><span className={styles["page38__verb-cell"]}>are</span></td>
-              <td></td>
-              <td></td>
-              <td>happy</td>
+              {["We", <span className={styles["page38__verb-cell"]}>are</span>, "", "", "happy"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio8e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>We</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>live</span></td>
-              <td>in Brazil</td>
+              {["We", "", "", <span className={styles["page38__verb-cell"]}>live</span>, "in Brazil"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio9e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>You</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>make</span></td>
-              <td>delicious pancakes</td>
+              {["You", "", "", <span className={styles["page38__verb-cell"]}>make</span>, "delicious pancakes"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio10e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>Y’all</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>need</span></td>
-              <td>a new phone</td>
+              {["Y’all", "", "", <span className={styles["page38__verb-cell"]}>need</span>, "a new phone"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio11e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>They</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>travel</span></td>
-              <td>by plane</td>
+              {["They", "", "", <span className={styles["page38__verb-cell"]}>travel</span>, "by plane"].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio12e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
             <tr>
-              <td>They</td>
-              <td></td>
-              <td></td>
-              <td><span className={styles["page38__verb-cell"]}>open</span></td>
-              <td>at 8:00 a.m.</td>
+              {["They", "", "", <span className={styles["page38__verb-cell"]}>open</span>, "at 8:00 a.m."].map((cell, i) => (
+                <td
+                  key={i}
+                  onClick={() => playAudio(pg38_audio13e)}
+                  style={{ cursor: 'pointer' }}
+                >
+                  {cell}
+                </td>
+              ))}
             </tr>
           </tbody>
         </table>
       </section>
 
-      {/* Imagem */}
       <section className={styles["page38__image-container"]}>
         <img src={pagina38_imagem1} alt="Grupo de amigos" className={styles["page38__image"]} />
       </section>

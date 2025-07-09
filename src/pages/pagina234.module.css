@@ -1,0 +1,100 @@
+.page234__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .page234__header {
+    width: 100%;
+  }
+  
+  .page234__title {
+    font-size: 5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .page234__title_black {
+    color: black;
+  }
+  
+  .page234__subtitle {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+  
+  .page234__highlight {
+    border: 0.2rem solid #A61C28;
+    padding: 0.3rem 0.8rem;
+    border-radius: 0.5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .page234__main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  
+  .page234__tableSection {
+    width: 100%;
+  }
+  
+  .page234__tableTitle {
+    background-color: #A61C28;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    border-radius: 0.4rem 0.4rem 0 0;
+  }
+  
+  .page234__table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  .page234__table th,
+  .page234__table td {
+    border: 0.1rem solid #A61C28;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+  
+  .page234__table th {
+    background-color: #888A8C;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .translation {
+    font-size: 1.2rem;
+    font-style: italic;
+    display: block;
+  }
+  
+  @media (max-width: 1024px) {
+    .page234__title {
+      font-size: 3.5rem;
+    }
+  
+    .page234__subtitle {
+      font-size: 1.6rem;
+    }
+  
+    .page234__table th,
+    .page234__table td {
+      font-size: 1.4rem;
+      padding: 0.8rem;
+    }
+  
+    .translation {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,17 +1,17 @@
 import React, { useRef } from 'react';
 import styles from './pagina160.module.css';
 
-import pagina160_imagem1 from '../assets/images/pagina160_imagem1.webp';
-import pagina160_imagem2 from '../assets/images/pagina160_imagem2.webp';
+import pagina160_imagem1 from '../assets/images/pagina160_imagem1.gif';
+import pagina160_imagem2 from '../assets/images/pagina160_imagem2.gif';
 
-import pg160_audio1e from '../assets/audios/pg160_audio1e.mp3'; // What
-import pg160_audio2e from '../assets/audios/pg160_audio2e.mp3'; // Where
-import pg160_audio3e from '../assets/audios/pg160_audio3e.mp3'; // When
-import pg160_audio4e from '../assets/audios/pg160_audio4e.mp3'; // What time
-import pg160_audio5e from '../assets/audios/pg160_audio5e.mp3'; // Row 1
-import pg160_audio6e from '../assets/audios/pg160_audio6e.mp3'; // Row 2
-import pg160_audio7e from '../assets/audios/pg160_audio7e.mp3'; // Row 3
-import pg160_audio8e from '../assets/audios/pg160_audio8e.mp3'; // Row 4
+import pg160_audio1e from '../assets/audios/pg160_audio1e.mp3'; 
+import pg160_audio2e from '../assets/audios/pg160_audio2e.mp3';
+import pg160_audio3e from '../assets/audios/pg160_audio3e.mp3';
+import pg160_audio4e from '../assets/audios/pg160_audio4e.mp3';
+import pg160_audio5e from '../assets/audios/pg160_audio5e.mp3';
+import pg160_audio6e from '../assets/audios/pg160_audio6e.mp3';
+import pg160_audio7e from '../assets/audios/pg160_audio7e.mp3';
+import pg160_audio8e from '../assets/audios/pg160_audio8e.mp3';
 
 const Pagina160 = () => {
   const currentAudioRef = useRef(null);

@@ -6,7 +6,7 @@ import wrong_icon from '../assets/icons/wrong_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import pagina149_imagem1 from '../assets/images/pagina149_imagem1.webp';
+import pagina149_imagem1 from '../assets/images/pagina149_imagem1.gif';
 
 import global_exercise_e from '../assets/audios/global_exercise_e.mp3';
 import global_exercise_p from '../assets/audios/global_exercise_p.mp3';

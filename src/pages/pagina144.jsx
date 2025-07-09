@@ -4,7 +4,7 @@ import styles from './pagina144.module.css';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-import pagina144_imagem1 from '../assets/images/pagina144_imagem1.webp';
+import pagina144_imagem1 from '../assets/images/pagina144_imagem1.gif';
 
 import pg144_audio1e from '../assets/audios/pg144_audio1e.mp3';
 import pg144_audio1p from '../assets/audios/pg144_audio1p.mp3';

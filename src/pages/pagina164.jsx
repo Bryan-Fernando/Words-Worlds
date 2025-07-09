@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import styles from './pagina164.module.css';
 
-import pagina164_imagem1 from '../assets/images/pagina164_imagem1.webp';
+import pagina164_imagem1 from '../assets/images/pagina164_imagem1.gif';
 import pagina164_imagem2 from '../assets/images/pagina164_imagem2.webp';
 
 import pg164_audio1e from '../assets/audios/pg164_audio1e.mp3'; // How much

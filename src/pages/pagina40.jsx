@@ -8,11 +8,11 @@ import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import slow_audio_icon from '../assets/icons/slow_audio_icon.webp';
 
-import pagina40_imagem1 from '../assets/images/pagina40_imagem1.webp';
-import pagina40_imagem2 from '../assets/images/pagina40_imagem2.webp';
-import pagina40_imagem3 from '../assets/images/pagina40_imagem3.webp';
-import pagina40_imagem4 from '../assets/images/pagina40_imagem4.webp';
-import pagina40_imagem5 from '../assets/images/pagina40_imagem5.webp';
+import pagina40_imagem1 from '../assets/images/pagina40_imagem1.gif';
+import pagina40_imagem2 from '../assets/images/pagina40_imagem2.gif';
+import pagina40_imagem3 from '../assets/images/pagina40_imagem3.gif';
+import pagina40_imagem4 from '../assets/images/pagina40_imagem4.gif';
+import pagina40_imagem5 from '../assets/images/pagina40_imagem5.gif';
 
 import pg39_audio1e from '../assets/audios/pg39_audio1e.mp3';
 import pg39_audio1p from '../assets/audios/pg39_audio1p.mp3';

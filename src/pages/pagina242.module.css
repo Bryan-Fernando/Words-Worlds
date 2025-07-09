@@ -1,0 +1,106 @@
+.page242__container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .page242__header {
+    text-align: left;
+  }
+  
+  .page242__title {
+    font-size: 4.5rem;
+    color: #A61C28;
+    font-weight: bold;
+  }
+  
+  .black {
+    color: black;
+  }
+  
+  .red {
+    color: #A61C28;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 2rem;
+    font-style: italic;
+  }
+  
+  .vocabularySection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .vocabBox {
+    border: 2px solid #A61C28;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #A61C28;
+  }
+  
+  .vocabTrans {
+    display: block;
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    color: black;
+  }
+  
+  .tableSection {
+    margin-top: 2rem;
+  }
+  
+  .tableTitle {
+    background-color: #A61C28;
+    color: white;
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .subTitle {
+    background-color: #f2f2f2;
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .grammarTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  .grammarTable th,
+  .grammarTable td {
+    border: 1px solid #A61C28;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-align: left;
+  }
+  
+  .grammarTable th {
+    background-color: #888A8C;
+    color: white;
+    text-align: center;
+  }
+  
+  .noteBox {
+    background-color: #002868;
+    color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+  }
+  
