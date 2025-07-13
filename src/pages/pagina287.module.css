@@ -92,3 +92,17 @@
   text-decoration: underline;
   color: #A61C28;
 }
+
+.page287__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page287__audio-icon:hover {
+  transform: scale(1.2);
+}

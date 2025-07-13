@@ -98,6 +98,21 @@
     margin-top: 0.5rem;
 }
 
+.page181__audioIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page181__audioIcon:hover {
+  transform: scale(1.2);
+}
+
+
 @media (max-width: 1024px) {
     .page181__container {
         padding: 1rem;

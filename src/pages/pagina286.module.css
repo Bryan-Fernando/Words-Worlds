@@ -112,3 +112,17 @@
 .page286__question span {
   font-size: 2rem;
 }
+
+.page286__audio-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page286__audio-icon:hover {
+  transform: scale(1.2);
+}

@@ -1,12 +1,50 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './pagina286.module.css';
 
 import correct_icon from '../assets/icons/correct_icon.webp';
 import wrong_icon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import audio1e from '../assets/audios/pg286_audio1e.mp3';
+import audio1p from '../assets/audios/pg286_audio1p.mp3';
+import audio2e from '../assets/audios/pg286_audio2e.mp3';
+import audio3e from '../assets/audios/pg286_audio3e.mp3';
+import audio4e from '../assets/audios/pg286_audio4e.mp3';
+import audio5e from '../assets/audios/pg286_audio5e.mp3';
+import audio6e from '../assets/audios/pg286_audio6e.mp3';
 
 const Pagina286 = () => {
+  const currentAudio = useRef(null);
+
+  const playAudio = (id) => {
+    if (currentAudio.current) {
+      currentAudio.current.pause();
+      currentAudio.current.currentTime = 0;
+    }
+    const audio = new Audio(audioMap[id]);
+    currentAudio.current = audio;
+    audio.play();
+  };
+
+  const audioMap = {
+    'pg286_audio1e': audio1e,
+    'pg286_audio1p': audio1p,
+    'pg286_audio2e': audio2e,
+    'pg286_audio3e': audio3e,
+    'pg286_audio4e': audio4e,
+    'pg286_audio5e': audio5e,
+    'pg286_audio6e': audio6e,
+  };
+
   const leftColumn = ["1. 3:00", "2. 6:00", "3. 8:00", "4. 7:00", "5. 9:00"];
-  const rightColumn = ["a) Nine o’clock", "b) Eight o’clock", "c) Seven o’clock", "d) Six o’clock", "e) Three o’clock"];
+  const rightColumn = [
+    "a) Nine o’clock",
+    "b) Eight o’clock",
+    "c) Seven o’clock",
+    "d) Six o’clock",
+    "e) Three o’clock"
+  ];
   const correctMatches = ["e", "d", "b", "c", "a"];
 
   const [selectedOptions, setSelectedOptions] = useState(Array(5).fill(''));
@@ -48,7 +86,21 @@ const Pagina286 = () => {
     <div className={styles["page286__container"]}>
       <h1 className={styles["page286__title"]}>Exercises</h1>
 
-      <h2 className={styles["page286__subtitle"]}>2. Match the time:</h2>
+      <h2 className={styles["page286__subtitle"]}>
+        2. Match the time:
+        <img
+          src={eng_audio_icon}
+          alt=""
+          className={styles["page286__audio-icon"]}
+          onClick={() => playAudio("pg286_audio1e")}
+        />
+        <img
+          src={ptbr_audio_icon}
+          alt=""
+          className={styles["page286__audio-icon"]}
+          onClick={() => playAudio("pg286_audio1p")}
+        />
+      </h2>
 
       <div className={styles["page286__content"]}>
         <div className={styles["page286__left-column"]}>
@@ -59,6 +111,12 @@ const Pagina286 = () => {
                 <div className={styles["page286__input-box"]}>
                   {selectedOptions[idx]}
                 </div>
+                <img
+                  src={eng_audio_icon}
+                  alt=""
+                  className={styles["page286__audio-icon"]}
+                  onClick={() => playAudio(`pg286_audio${idx + 2}e`)}
+                />
                 {results[idx] !== null && (
                   <img
                     src={results[idx] ? correct_icon : wrong_icon}

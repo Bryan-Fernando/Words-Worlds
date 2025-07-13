@@ -101,6 +101,21 @@
     font-weight: bold;
 }
 
+.page185__audioIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page185__audioIcon:hover {
+  transform: scale(1.2);
+}
+
+
 @media (max-width: 1024px) {
     .page185__container {
         padding: 1rem;
