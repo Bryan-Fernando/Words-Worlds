@@ -10,6 +10,11 @@ import pagina3_imagem2 from '../assets/images/pagina3_imagem2.gif';
 import pagina3_imagem3 from '../assets/images/pagina3_imagem3.gif';
 import pagina3_imagem4 from '../assets/images/pagina3_imagem4.gif';
 
+import pagina3_imagem1_img from '../assets/images/pagina3_imagem1.webp';
+import pagina3_imagem2_img from '../assets/images/pagina3_imagem2.webp';
+import pagina3_imagem3_img from '../assets/images/pagina3_imagem3.webp';
+import pagina3_imagem4_img from '../assets/images/pagina3_imagem4.webp';
+
 import pg3Audio1e from '../assets/audios/pg3_audio1e.mp3';
 import pg3Audio1p from '../assets/audios/pg3_audio1p.mp3';
 import pg3Audio2e from '../assets/audios/pg3_audio2e.mp3';
@@ -25,14 +30,24 @@ import pg3Audio6p from '../assets/audios/pg3_audio6p.mp3';
 
 const Pagina3 = () => {
     const [currentAudio, setCurrentAudio] = useState(null);
+    const [activeGif, setActiveGif] = useState(null);
 
-    const playAudio = (audioSrc) => {
+    const playAudio = (audioSrc, imageId) => {
         if (currentAudio) {
             currentAudio.pause();
             currentAudio.currentTime = 0;
         }
 
         const newAudio = new Audio(audioSrc);
+
+        if (imageId) {
+            setActiveGif(imageId);
+
+            newAudio.onended = () => {
+                setActiveGif(null);
+            };
+        }
+
         newAudio.play();
         setCurrentAudio(newAudio);
     };
@@ -65,10 +80,26 @@ const Pagina3 = () => {
                 </header>
 
                 <main className={styles["page3__main"]}>
-                    <img src={pagina3_imagem1} alt="People 1" className={styles["page3__image"]} />
-                    <img src={pagina3_imagem2} alt="People 2" className={styles["page3__image"]} />
-                    <img src={pagina3_imagem3} alt="People 3" className={styles["page3__image"]} />
-                    <img src={pagina3_imagem4} alt="People 4" className={styles["page3__image"]} />
+                    <img
+                        src={activeGif === 1 ? pagina3_imagem1 : pagina3_imagem1_img}
+                        alt="Person 1"
+                        className={styles["page3__image"]}
+                    />
+                    <img
+                        src={activeGif === 2 ? pagina3_imagem2 : pagina3_imagem2_img}
+                        alt="Person 2"
+                        className={styles["page3__image"]}
+                    />
+                    <img
+                        src={activeGif === 3 ? pagina3_imagem3 : pagina3_imagem3_img}
+                        alt="Person 3"
+                        className={styles["page3__image"]}
+                    />
+                    <img
+                        src={activeGif === 4 ? pagina3_imagem4 : pagina3_imagem4_img}
+                        alt="Person 4"
+                        className={styles["page3__image"]}
+                    />
                 </main>
 
                 <aside className={styles["page3__aside"]}>
@@ -106,7 +137,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio3e);
+                                        playAudio(pg3Audio3e, 1);
                                     }}
                                 />
                                 <img
@@ -115,7 +146,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio3p);
+                                        playAudio(pg3Audio3p, 1);
                                     }}
                                 />
                             </li>
@@ -127,7 +158,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio4e);
+                                        playAudio(pg3Audio4e, 2);
                                     }}
                                 />
                                 <img
@@ -136,7 +167,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio4p);
+                                        playAudio(pg3Audio4p, 2);
                                     }}
                                 />
                             </li>
@@ -148,7 +179,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio5e);
+                                        playAudio(pg3Audio5e, 3);
                                     }}
                                 />
                                 <img
@@ -157,7 +188,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio5p);
+                                        playAudio(pg3Audio5p, 3);
                                     }}
                                 />
                             </li>
@@ -169,7 +200,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio6e);
+                                        playAudio(pg3Audio6e, 4);
                                     }}
                                 />
                                 <img
@@ -178,7 +209,7 @@ const Pagina3 = () => {
                                     className={styles["page3__icon"]}
                                     onClick={(e) => {
                                         e.stopPropagation();
-                                        playAudio(pg3Audio6p);
+                                        playAudio(pg3Audio6p, 4);
                                     }}
                                 />
                             </li>
@@ -188,7 +219,6 @@ const Pagina3 = () => {
             </div>
         </div>
     );
-
 };
 
 export default Pagina3;
