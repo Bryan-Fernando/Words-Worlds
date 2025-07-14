@@ -40,3 +40,10 @@ yarn.lock
 
 
 .vercel
+
+# Firebase config
+/src/firebaseConfig.js
+
+# Login components
+/src/login.jsx
+/src/login.module.css
