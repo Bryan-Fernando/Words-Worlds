@@ -193,7 +193,7 @@ const Pagina3 = () => {
                                 />
                             </li>
                             <li className={styles["page3__list-item"]}>
-                                Hello, I am Rafael Vargas. I am a musician, a singer and songwriter.
+                            Hiya! I am Rafael, a 19-year-old English tutor.
                                 <img
                                     src={eng_audio_icon}
                                     alt="English Audio"

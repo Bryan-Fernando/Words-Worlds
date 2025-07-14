@@ -1,4 +1,3 @@
-// pagina275.js
 import React, { useState } from 'react';
 import styles from './pagina275.module.css';
 
