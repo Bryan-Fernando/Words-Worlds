@@ -29,33 +29,33 @@ const Pagina230 = () => {
             <tbody>
               {/* We */}
               <tr>
-                <td><strong>We</strong><br /><span className={styles.page230__translation}>Nós</span></td>
-                <td>are / aren’t</td>
-                <td>not</td>
+                <td><spam className={styles.page230__red}>We</spam><br /><spam className={styles.page230__red}>We</spam><br /><span>Nós <br /> Nós <br /> Nós</span></td>
+                <td><spam className={styles.page230__red}>are</spam><br /> <spam className={styles.page230__red}>aren’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page230__red}>not</spam> <br /> <br /> somos <br /> estamos <br /> temos</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* You (sg) */}
               <tr>
-                <td><span className={styles.page230__red}>You (sg)</span><br /><span className={styles.page230__translation}>Você</span></td>
-                <td>are / aren’t</td>
-                <td>not</td>
+                <td><span className={styles.page230__red}>You (sg)</span><br /><span className={styles.page230__red}>You</span><br /><span>Você <br /> Você <br /> Você</span></td>
+                <td><spam className={styles.page230__red}>are</spam><br /> <spam className={styles.page230__red}>aren’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page230__red}>not</spam> <br /> <br /> é <br /> está <br /> tem</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* You all (pl) */}
               <tr>
-                <td><span className={styles.page230__red}>You all (pl)</span><br /><span className={styles.page230__translation}>Vocês</span></td>
-                <td>are / aren’t</td>
-                <td>not</td>
+                <td><span className={styles.page230__red}>You all (pl)</span><br /><span className={styles.page230__red}>You all</span><br /><span>Vocês <br /> Vocês <br /> Vocês</span></td>
+                <td><spam className={styles.page230__red}>are</spam><br /> <spam className={styles.page230__red}>aren’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page230__red}>not</spam> <br /> <br /> são <br /> estão <br /> têm</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* They */}
               <tr>
-                <td><span className={styles.page230__red}>They</span><br /><span className={styles.page230__translation}>Eles / Elas</span></td>
-                <td>are / aren’t</td>
-                <td>not</td>
+                <td><span className={styles.page230__red}>They</span><br /><span className={styles.page230__red}>They</span><br /><span>Eles / Elas <br /> Eles / Elas <br /> Eles / Elas</span></td>
+                <td><spam className={styles.page230__red}>are</spam><br /> <spam className={styles.page230__red}>aren’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page230__red}>not</spam> <br /> <br /> são <br /> estão <br /> têm</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>

@@ -13,6 +13,7 @@
     font-size: 5rem;
     color: #A61C28;
     font-weight: bold;
+    text-align: left;
   }
   
   .page230__title_black {
@@ -22,6 +23,7 @@
   .page230__subtitle {
     font-size: 2rem;
     margin-top: 1rem;
+    text-align: left;
   }
   
   .page230__highlight {
@@ -90,6 +92,7 @@
     border-left: 0.5rem solid #1F3C8C;
     font-size: 1.4rem;
     font-style: italic;
+    text-align: left;
   }
   
   .page230__noteLabel {

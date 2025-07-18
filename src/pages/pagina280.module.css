@@ -79,8 +79,22 @@
   border-radius: 1.5rem;
   width: fit-content;
   position: absolute;
+  right: 0;
+  font-size: 1.5rem;
+}
+
+.page280__speech-left2 {
+  background-color: #E0E8F9;
+  border: 0.3rem solid #0A3282;
+  color: #0A3282;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: fit-content;
+  position: absolute;
   top: 7rem;
   left: 0;
+  font-size: 1.5rem;
 }
 
 .page280__speech-right-red {
@@ -92,7 +106,22 @@
   border-radius: 1.5rem;
   width: fit-content;
   position: absolute;
+  top: 7rem;
+  left: 0;
+  font-size: 1.5rem;
+}
+
+.page280__speech-right-red2 {
+  background-color: #F9E0E0;
+  border: 0.3rem solid #A61C28;
+  color: #A61C28;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  width: fit-content;
+  position: absolute;
   right: 0;
+  font-size: 1.5rem;
 }
 
 .page280__note {

@@ -29,55 +29,121 @@ const Pagina234 = () => {
             <tbody>
               {/* I */}
               <tr>
-                <td><strong>Am</strong><br />Ain’t</td>
-                <td>I<br /><span className={styles.translation}>Eu</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page234__red}>Am</spam><br /><spam className={styles.page234__red}>Ain’t</spam></td>
+                <td className={styles.page234__red}>I <br /> I</td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td><td></td><td></td>
+                <td>Eu</td>
+                <td>não</td>
+                <td>sou</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td><td></td><td></td>
+                <td>Eu</td>
+                <td>não</td>
+                <td>estou</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+              <tr>
+                <td>Eu</td>
+                <td>não</td>
+                <td>tenho</td>
                 <td>—</td>
                 <td>(somente para idade) ...?</td>
               </tr>
 
               {/* He */}
               <tr>
-                <td><strong>Is</strong><br />Isn’t</td>
-                <td>he<br /><span className={styles.translation}>Ele</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page234__red}>Is</spam><br /><spam className={styles.page234__red}>Isn’t</spam></td>
+                <td className={styles.page234__red}>he<br /><span>he</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
-
+              <tr>
+                <td>Ele</td>
+                <td>não</td>
+                <td>é</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+               <tr>
+                <td>Ele</td>
+                <td>não</td>
+                <td>está</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+              <tr>
+                <td>Ele</td>
+                <td>não</td>
+                <td>tem</td>
+                <td>—</td>
+                <td>(somente para idade) ...?</td>
+              </tr>
               {/* She */}
               <tr>
-                <td><strong>Is</strong><br />Isn’t</td>
-                <td>she<br /><span className={styles.translation}>Ela</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page234__red}>Is</spam><br /><spam className={styles.page234__red}>Isn’t</spam></td>
+                <td className={styles.page234__red}>she<br /><span>she</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
-
+              <tr>
+                <td>Ela</td>
+                <td>não</td>
+                <td>é</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+                <tr>
+                <td>Ela</td>
+                <td>não</td>
+                <td>está</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+              <tr>
+                <td>Ela</td>
+                <td>não</td>
+                <td>tem</td>
+                <td>—</td>
+                <td>(somente para idade) ...?</td>
+              </tr>
               {/* It */}
               <tr>
-                <td><strong>Is</strong><br />Isn’t</td>
-                <td>it<br /><span className={styles.translation}>—</span></td>
-                <td>not<br />Não</td>
+                <td><spam className={styles.page234__red}>Is</spam><br /><spam className={styles.page234__red}>Isn’t</spam></td>
+                <td className={styles.page234__red}>it<br /><span>—</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
+              <tr>
+                <td></td>
+                <td>Não</td>
+                <td>é</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Não</td>
+                <td>está</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>Não</td>
+                <td>tem</td>
+                <td>—</td>
+                <td>(somente para idade) ...?</td>
+              </tr>
             </tbody>
           </table>
         </section>

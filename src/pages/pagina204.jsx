@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina204.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
+import audio1e from '../assets/audios/pg204_audio1e.mp3';
+import audio2e from '../assets/audios/pg204_audio2e.mp3';
+import audio3e from '../assets/audios/pg204_audio3e.mp3';
+import audio4e from '../assets/audios/pg204_audio4e.mp3';
+
 const Pagina204 = () => {
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        const audioMap = {
+            pg204_audio1e: audio1e,
+            pg204_audio2e: audio2e,
+            pg204_audio3e: audio3e,
+            pg204_audio4e: audio4e,
+        };
+
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.pageContainer}>
@@ -25,20 +52,30 @@ const Pagina204 = () => {
                         </div>
                     </section>
 
+                    {/* REQUESTS */}
                     <section className={styles.exampleSection}>
                         <div className={styles.sectionHeader}>
                             <em className={styles.exampleTitle}>Requests</em>
+                            <img
+                                src={eng_audio_icon}
+                                alt="Audio English"
+                                className={styles.page204__audio_icon}
+                                onClick={() => playAudio('pg204_audio1e')}
+                            />
                             <span className={styles.separator}>/</span>
                             <em className={styles.titleTranslation}>Solicitações ou Pedidos</em>
                         </div>
                         <div className={styles.exampleBox}>
-                            <div className={styles.exampleRow}>
+                            <div
+                                className={styles.exampleRow}
+                                onClick={() => playAudio('pg204_audio2e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <span>Can</span>
                                 <span>you</span>
                                 <span>—</span>
                                 <span className={styles.verbCell}>help</span>
                                 <span>me with this project?</span>
-
                             </div>
                             <div className={styles.exampleRow}>
                                 <span>Você</span>
@@ -46,25 +83,34 @@ const Pagina204 = () => {
                                 <span>—</span>
                                 <span className={styles.verbCell}>me ajudar</span>
                                 <span>com este projeto?</span>
-
                             </div>
                         </div>
                     </section>
 
+                    {/* ABILITY */}
                     <section className={styles.exampleSection}>
                         <div className={styles.sectionHeader}>
                             <em className={styles.exampleTitle}>Ability</em>
+                            <img
+                                src={eng_audio_icon}
+                                alt="Audio English"
+                                className={styles.page204__audio_icon}
+                                onClick={() => playAudio('pg204_audio3e')}
+                            />
                             <span className={styles.separator}>/</span>
                             <em className={styles.titleTranslation}>Habilidade</em>
                         </div>
                         <div className={styles.exampleBox}>
-                            <div className={styles.exampleRow}>
+                            <div
+                                className={styles.exampleRow}
+                                onClick={() => playAudio('pg204_audio4e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <span>Can</span>
                                 <span>she</span>
                                 <span>—</span>
                                 <span className={styles.verbCell}>drive</span>
                                 <span>a car?</span>
-
                             </div>
                             <div className={styles.exampleRow}>
                                 <span>Ela</span>
@@ -72,26 +118,13 @@ const Pagina204 = () => {
                                 <span>—</span>
                                 <span className={styles.verbCell}>dirigir</span>
                                 <span>um carro?</span>
-
                             </div>
                         </div>
                     </section>
 
                     <section className={styles.imagesSection}>
-                        <div className={styles.imagePlaceholder}>
-                            { /*  <img 
-                                src="/imagens_reference/helping-child.jpg" 
-                                alt="Person helping child with poster" 
-                                className={styles.exampleImage}
-                            />*/}
-                        </div>
-                        <div className={styles.imagePlaceholder}>
-                            { /* < img 
-                                src="/imagens_reference/driving-car.jpg" 
-                                alt="Person driving car with GPS" 
-                                className={styles.exampleImage}
-                            /> */}
-                        </div>
+                        <div className={styles.imagePlaceholder}></div>
+                        <div className={styles.imagePlaceholder}></div>
                     </section>
                 </main>
             </div>

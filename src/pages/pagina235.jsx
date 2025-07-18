@@ -29,47 +29,51 @@ const Pagina235 = () => {
             <tbody>
               {/* We */}
               <tr>
-                <td><strong>Are</strong><br />Aren’t</td>
-                <td>we<br /><span className={styles.translation}>Nós</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
+                <td className={styles.page235__red}>we<br /><span>we</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
+              <tr><td>Nós</td><td>não</td><td>somos</td><td>—</td><td>...?</td></tr>
+              <tr><td>Nós</td><td>não</td><td>estamos</td><td>—</td><td>...?</td></tr>
+              <tr><td>Nós</td><td>não</td><td>temos</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
               {/* You (sg) */}
               <tr>
-                <td><strong>Are</strong><br />Aren’t</td>
-                <td>you <span className={styles.sg}>(sg)</span><br /><span className={styles.translation}>Você</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
+                <td className={styles.page235__red}>you <span>(sg)</span><br /><span>you</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
+              <tr><td>Você</td><td>não</td><td>é</td><td>—</td><td>...?</td></tr>
+              <tr><td>Você</td><td>não</td><td>está</td><td>—</td><td>...?</td></tr>
+              <tr><td>você</td><td>não</td><td>tem</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
               {/* You all (pl) */}
               <tr>
-                <td><strong>Are</strong><br />Aren’t</td>
-                <td>you all <span className={styles.sg}>(pl)</span><br /><span className={styles.translation}>Vocês</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
+                <td className={styles.page235__red}>you all <span>(pl)</span><br /><span>you all</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
+              <tr><td>Vocês</td><td>não</td><td>são</td><td>—</td><td>...?</td></tr>
+              <tr><td>Vocês</td><td>não</td><td>stão</td><td>—</td><td>...?</td></tr>
+              <tr><td>Vocês</td><td>não</td><td>têm</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
               {/* They */}
               <tr>
-                <td><strong>Are</strong><br />Aren’t</td>
-                <td>they<br /><span className={styles.translation}>Eles / Elas</span></td>
-                <td>not<br />não</td>
+                <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
+                <td className={styles.page235__red}>they<br /><span>they</span></td>
+                <td>not<br />—</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>...?</td></tr>
-              <tr><td></td><td></td><td></td><td>—</td><td>(somente para idade) ...?</td></tr>
+              <tr><td>Eles/Elas</td><td>não</td><td>são</td><td>—</td><td>...?</td></tr>
+              <tr><td>Eles/Elas</td><td>não</td><td>estão</td><td>—</td><td>...?</td></tr>
+              <tr><td>Eles/Elas</td><td>não</td><td>têm</td><td>—</td><td>(somente para idade) ...?</td></tr>
             </tbody>
           </table>
         </section>

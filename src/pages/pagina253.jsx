@@ -5,8 +5,8 @@ const Pagina253 = () => {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <h1>
-          Grammar - <span className={styles.black}>Question Words</span>
+        <h1 className={styles.title}>
+          Grammar - <span >Question Words</span>
         </h1>
         <p className={styles.subtitle}>
           <span className={styles.red}>Verb To Be</span> <span className={styles.bold}>Simple Present</span>

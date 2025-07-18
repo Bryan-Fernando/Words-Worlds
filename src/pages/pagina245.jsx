@@ -46,10 +46,10 @@ const Pagina245 = () => {
             <tr>
               <td>What type of student</td>
               <td>is</td>
+              <td>—</td>
+              <td>—</td>
+              <td>—</td>
               <td>she?</td>
-              <td>—</td>
-              <td>—</td>
-              <td>—</td>
             </tr>
             <tr>
               <td>What sort of animal</td>

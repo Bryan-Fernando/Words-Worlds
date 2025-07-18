@@ -6,27 +6,41 @@ import { auth } from "./firebaseConfig";
 import AppRoutes from "./routes/Routes";
 import Login from "./login";
 
-function App() {
+export default function App() {
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-      setLoading(false);
+      if (currentUser) {
+        
+        const loginTime = localStorage.getItem("loginTime");
+        if (loginTime) {
+          const now = Date.now();
+          const diffMs = now - parseInt(loginTime, 10);
+          const twoHoursMs = 2 * 60 * 60 * 1000;
+
+          if (diffMs > twoHoursMs) {
+           
+            signOut(auth).then(() => {
+              localStorage.removeItem("loginTime");
+              setUser(null);
+            });
+            return; 
+          }
+        }
+
+        setUser(currentUser);
+      } else {
+        setUser(null);
+      }
     });
+
     return () => unsubscribe();
   }, []);
 
-  if (loading) {
-    return <p>Carregando...</p>;
-  }
-
   return (
     <Router>
-      {user ? <AppRoutes /> : <Login onLogin={() => {}} />}
+      {user ? <AppRoutes /> : <Login />}
     </Router>
   );
 }
-
-export default App;

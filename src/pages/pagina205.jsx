@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina205.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
+import audio1e from '../assets/audios/pg205_audio1e.mp3';
+import audio2e from '../assets/audios/pg205_audio2e.mp3';
+import audio3e from '../assets/audios/pg205_audio3e.mp3';
+import audio4e from '../assets/audios/pg205_audio4e.mp3';
+
 const Pagina205 = () => {
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        const audioMap = {
+            pg205_audio1e: audio1e,
+            pg205_audio2e: audio2e,
+            pg205_audio3e: audio3e,
+            pg205_audio4e: audio4e,
+        };
+
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.pageContainer}>
@@ -25,14 +52,25 @@ const Pagina205 = () => {
                         </div>
                     </section>
 
+                    {/* PERMISSION */}
                     <section className={styles.exampleSection}>
                         <div className={styles.sectionHeader}>
                             <em className={styles.exampleTitle}>Permission</em>
+                            <img
+                                src={eng_audio_icon}
+                                alt="Audio English"
+                                className={styles.page205__audio_icon}
+                                onClick={() => playAudio('pg205_audio1e')}
+                            />
                             <span className={styles.separator}>/</span>
                             <em className={styles.titleTranslation}>Permissão</em>
                         </div>
                         <div className={styles.exampleBox}>
-                            <div className={styles.exampleRow}>
+                            <div
+                                className={styles.exampleRow}
+                                onClick={() => playAudio('pg205_audio2e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <span>Can</span>
                                 <span>we</span>
                                 <span>—</span>
@@ -49,14 +87,25 @@ const Pagina205 = () => {
                         </div>
                     </section>
 
+                    {/* SUGGESTIONS */}
                     <section className={styles.exampleSection}>
                         <div className={styles.sectionHeader}>
                             <em className={styles.exampleTitle}>Suggestions</em>
+                            <img
+                                src={eng_audio_icon}
+                                alt="Audio English"
+                                className={styles.page205__audio_icon}
+                                onClick={() => playAudio('pg205_audio3e')}
+                            />
                             <span className={styles.separator}>/</span>
                             <em className={styles.titleTranslation}>Sugestões</em>
                         </div>
                         <div className={styles.exampleBox}>
-                            <div className={styles.exampleRow}>
+                            <div
+                                className={styles.exampleRow}
+                                onClick={() => playAudio('pg205_audio4e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <span>Can</span>
                                 <span>I</span>
                                 <span>—</span>
@@ -74,20 +123,8 @@ const Pagina205 = () => {
                     </section>
 
                     <section className={styles.imagesSection}>
-                        <div className={styles.imagePlaceholder}>
-                            {/* <img 
-                                src="/imagens_reference/leaving-early.jpg" 
-                                alt="Person walking down stairs with bag" 
-                                className={styles.exampleImage}
-                            /> */}
-                        </div>
-                        <div className={styles.imagePlaceholder}>
-                            {/* <img 
-                                src="/imagens_reference/giving-advice.jpg" 
-                                alt="Women working together at laptop" 
-                                className={styles.exampleImage}
-                            /> */}
-                        </div>
+                        <div className={styles.imagePlaceholder}></div>
+                        <div className={styles.imagePlaceholder}></div>
                     </section>
                 </main>
             </div>

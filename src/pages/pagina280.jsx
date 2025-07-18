@@ -151,7 +151,7 @@ const Pagina280 = () => {
 
         {/* Segundo grupo */}
         <div className={styles["page280__image-wrapper"]}>
-          <div className={styles["page280__speech-left"]}>
+          <div className={styles["page280__speech-left2"]}>
             Do you have the time, please?
             <img
               src={eng_audio_icon}
@@ -166,7 +166,7 @@ const Pagina280 = () => {
               onClick={() => playAudio('pg280_audio6p')}
             />
           </div>
-          <div className={styles["page280__speech-right-red"]}>
+          <div className={styles["page280__speech-right-red2"]}>
             It’s 10:00. 
             <img
               src={eng_audio_icon}

@@ -13,6 +13,7 @@
     font-size: 5rem;
     color: #A61C28;
     font-weight: bold;
+    text-align: left;
   }
   
   .page227__title_black {
@@ -22,6 +23,7 @@
   .page227__subtitle {
     font-size: 2rem;
     margin-top: 1rem;
+    text-align: left;
   }
   
   .page227__highlight {
@@ -81,6 +83,10 @@
   .page227__red {
     color: #A61C28;
     font-weight: bold;
+  }
+
+  .page227__tablae__title{
+    text-align: center;
   }
   
   @media (max-width: 1024px) {

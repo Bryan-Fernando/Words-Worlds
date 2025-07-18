@@ -41,7 +41,7 @@ const Pagina238 = () => {
               <td>the class</td>
               <td>—</td>
               <td>—</td>
-              <td>free?</td>
+              <td>—</td>
             </tr>
             <tr>
               <td>When</td>
@@ -49,7 +49,7 @@ const Pagina238 = () => {
               <td>we</td>
               <td>—</td>
               <td>—</td>
-              <td>—</td>
+              <td>free?</td>
             </tr>
             <tr>
               <td>When</td>

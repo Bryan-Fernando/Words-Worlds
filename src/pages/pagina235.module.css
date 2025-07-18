@@ -78,10 +78,10 @@
     display: block;
   }
   
-  .sg {
-    font-size: 1.2rem;
-    font-style: italic;
+
+    .page235__red {
     color: #A61C28;
+    font-weight: bold;
   }
   
   @media (max-width: 1024px) {

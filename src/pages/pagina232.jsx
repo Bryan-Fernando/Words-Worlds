@@ -28,60 +28,78 @@ const Pagina232 = () => {
             <tbody>
               {/* I */}
               <tr>
-                <td><strong>Am</strong><br /><span className={styles.page232__translation}>Eu</span></td>
-                <td><strong>I</strong></td>
+                <td><spam className={styles.page232__red}>Am</spam><br /><span>Eu</span></td>
+                <td><spam className={styles.page232__red}>I</spam></td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Eu</td>
+                <td>sou</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+               <tr>
+                <td>Eu</td>
+                <td>estou</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Eu</td>
+                <td>tenho</td>
                 <td>—</td>
                 <td>(somente para idade) ...?</td>
               </tr>
 
               {/* He */}
               <tr>
-                <td><span className={styles.page232__red}>Is</span><br /><span className={styles.page232__translation}>Ele</span></td>
+                <td><span className={styles.page232__red}>Is</span><br /><span>Ele</span></td>
                 <td><span className={styles.page232__red}>he</span></td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Ele</td>
+                <td>é</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+               <tr>
+                <td>Ele</td>
+                <td>está</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Ele</td>
+                <td>tem</td>
                 <td>—</td>
                 <td>(somente para idade) ...?</td>
               </tr>
 
               {/* She */}
               <tr>
-                <td><span className={styles.page232__red}>Is</span><br /><span className={styles.page232__translation}>Ela</span></td>
+                <td><span className={styles.page232__red}>Is</span><br /><span>Ela</span></td>
                 <td><span className={styles.page232__red}>she</span></td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Ela</td>
+                <td>é</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+               <tr>
+                <td>Ela</td>
+                <td>está</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>Ela</td>
+                <td>tem</td>
                 <td>—</td>
                 <td>(somente para idade) ...?</td>
               </tr>
@@ -94,14 +112,20 @@ const Pagina232 = () => {
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>—</td>
+                <td>É</td>
+                <td>—</td>
+                <td>...?</td>
+              </tr>
+               <tr>
+                <td>—</td>
+                <td>Está</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
-                <td></td>
-                <td></td>
+                <td>—</td>
+                <td>Tem</td>
                 <td>—</td>
                 <td>(somente para idade) ...?</td>
               </tr>

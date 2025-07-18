@@ -1,7 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina206.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
+import audio1e from '../assets/audios/pg206_audio1e.mp3';
+import audio2e from '../assets/audios/pg206_audio2e.mp3';
+import audio3e from '../assets/audios/pg206_audio3e.mp3';
+import audio4e from '../assets/audios/pg206_audio4e.mp3';
+import audio5e from '../assets/audios/pg206_audio5e.mp3';
+
 const Pagina206 = () => {
+    const currentAudio = useRef(null);
+
+    const playAudio = (audioId) => {
+        const audioMap = {
+            pg206_audio1e: audio1e,
+            pg206_audio2e: audio2e,
+            pg206_audio3e: audio3e,
+            pg206_audio4e: audio4e,
+            pg206_audio5e: audio5e,
+        };
+
+        if (currentAudio.current) {
+            currentAudio.current.pause();
+            currentAudio.current.currentTime = 0;
+        }
+
+        const audio = new Audio(audioMap[audioId]);
+        currentAudio.current = audio;
+        audio.play();
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.pageContainer}>
@@ -12,7 +41,16 @@ const Pagina206 = () => {
                 <main className={styles.mainContent}>
                     <section className={styles.grammarIntro}>
                         <div className={styles.modalVerb}>
-                            <h2><span>Can</span><span> - Modal Verb</span></h2>
+                            <h2>
+                                <span>Can</span>
+                                <span> - Modal Verb</span>
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="Audio icon"
+                                    className={styles.page206__audio_icon}
+                                    onClick={() => playAudio('pg206_audio1e')}
+                                />
+                            </h2>
                             <p><span>Can</span><span> - Verbo Modal</span></p>
                         </div>
 
@@ -20,8 +58,12 @@ const Pagina206 = () => {
                             <p><strong>Simple Present - </strong>Presente do Indicativo</p>
                         </div>
 
-                        <div className={styles.explanationBox}>
-                            <p><span>Can</span> é um verbo auxiliar ou modal que significa <strong>poder, saber ou conseguir</strong> e só pode ser usado / conjugado no presente simples.</p>
+                        <div
+                            className={styles.explanationBox}
+                        >
+                            <p>
+                                <span>Can</span> é um verbo auxiliar ou modal que significa <strong>poder, saber ou conseguir</strong> e só pode ser usado / conjugado no presente simples.
+                            </p>
                         </div>
                     </section>
 
@@ -40,8 +82,11 @@ const Pagina206 = () => {
                         </div>
                     </section>
 
-                    <section className={styles.translationSection}>
-                      
+                    <section
+                        className={styles.translationSection}
+                        onClick={() => playAudio('pg206_audio2e')}
+                        style={{ cursor: 'pointer' }}
+                    >
                         <div className={styles.translationContent}>
                             <div className={styles.translationColumn}>
                                 <span className={`${styles.translationItem} ${styles.red}`}>I</span>
@@ -78,8 +123,12 @@ const Pagina206 = () => {
 
                     <section className={styles.tableContent}>
                         <div className={styles.tableGroup}>
-                            {/* bloco do "He" */}
-                            <div className={styles.tableRow}>
+                            {/* He */}
+                            <div
+                                className={styles.tableRow}
+                                onClick={() => playAudio('pg206_audio3e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Red}>He</span>
                                     <span className={styles.pg213Black}>Ele</span>
@@ -102,9 +151,14 @@ const Pagina206 = () => {
                                 </div>
                             </div>
                         </div>
+
                         <div className={styles.tableGroup}>
-                            {/* bloco do "She" */}
-                            <div className={styles.tableRow}>
+                            {/* She */}
+                            <div
+                                className={styles.tableRow}
+                                onClick={() => playAudio('pg206_audio4e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Red}>She</span>
                                     <span className={styles.pg213Black}>Ela</span>
@@ -116,7 +170,6 @@ const Pagina206 = () => {
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Dash}>—</span>
                                     <span className={styles.pg213Dash}>—</span>
-                                  
                                 </div>
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Red}>speak</span>
@@ -127,55 +180,39 @@ const Pagina206 = () => {
                                     <span className={styles.pg213Black}>três idiomas</span>
                                 </div>
                             </div>
+
+                            {/* Traduções She */}
                             <div className={styles.tableRow}>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>Ela</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>pode</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
-                           
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>falar</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>três idiomas</span>
-                                </div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>Ela</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>pode</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Dash}>—</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>falar</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>três idiomas</span></div>
                             </div>
                             <div className={styles.tableRow}>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>Ela</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>consegue</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>falar</span>
-                                </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Black}>três idiomas</span>
-                                </div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>Ela</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>consegue</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Dash}>—</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>falar</span></div>
+                                <div className={styles.pg213Cell}><span className={styles.pg213Black}>três idiomas</span></div>
                             </div>
                         </div>
+
                         <div className={styles.tableGroup}>
-                            {/* bloco do "It" */}
-                            <div className={styles.tableRow}>
+                            {/* It */}
+                            <div
+                                className={styles.tableRow}
+                                onClick={() => playAudio('pg206_audio5e')}
+                                style={{ cursor: 'pointer' }}
+                            >
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Red}>It</span>
-                                    <span className={styles.pg213Black}></span>
                                 </div>
                                 <div className={styles.pg213Cell}>
                                     <span className={styles.pg213Red}>can</span>
                                     <span className={styles.pg213Black}>pode</span>
                                 </div>
                                 <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
                                     <span className={styles.pg213Dash}>—</span>
                                 </div>
                                 <div className={styles.pg213Cell}>

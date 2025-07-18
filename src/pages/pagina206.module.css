@@ -334,3 +334,17 @@
 .translationItem.black {
     color: #000;
 }
+
+.page206__audio_icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page206__audio_icon:hover {
+  transform: scale(1.2);
+}

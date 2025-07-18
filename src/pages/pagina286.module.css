@@ -20,34 +20,47 @@
   text-align: left;
 }
 
-.page286__content {
-  display: flex;
-  justify-content: flex-start;
-  gap: 31rem;
-  align-items: flex-start;
+.page286__audioIcon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
 }
 
-.page286__left-column {
+.page286__audioIcon:hover {
+  transform: scale(1.2);
+}
+
+.page286__rows {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
 }
 
-.page286__question {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.page286__input-container {
+.page286__row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
+  font-size: 2rem;
 }
 
-.page286__input-box {
-  width: 5rem;
-  height: 4rem;
+.page286__time {
+  width: 6rem;
+  font-weight: 500;
+}
+
+.page286__inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.page286__inputBox {
+  width: 4.5rem;
+  height: 3.5rem;
   background-color: #E0E0E0;
   border-radius: 0.5rem;
   display: flex;
@@ -57,26 +70,18 @@
   font-size: 1.8rem;
 }
 
-.page286__result-icon {
+.page286__resultIcon {
   width: 2rem;
   height: 2rem;
 }
 
-.page286__right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: flex-start;
-}
-
 .page286__option {
-  padding: 0.6rem 1rem;
   background-color: #E0E0E0;
+  padding: 0.6rem 1rem;
   border-radius: 0.5rem;
   cursor: pointer;
   font-size: 1.8rem;
   border: 0.15rem solid transparent;
-  width: fit-content;
 }
 
 .page286__option.selected {
@@ -85,7 +90,7 @@
   font-weight: bold;
 }
 
-.page286__check-button {
+.page286__checkButton {
   background-color: #A61C28;
   color: white;
   border: none;
@@ -98,31 +103,13 @@
   margin-top: 2rem;
 }
 
-.page286__answer-key {
+.page286__answerKey {
   margin-top: 3rem;
   text-align: left;
 }
 
-.page286__answer-key-title {
+.page286__answerKeyTitle {
   color: #0A3282;
   font-weight: bold;
   font-size: 2rem;
-}
-
-.page286__question span {
-  font-size: 2rem;
-}
-
-.page286__audio-icon {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  position: relative;
-  top: 0.3rem;
-  transition: transform 0.2s ease;
-}
-
-.page286__audio-icon:hover {
-  transform: scale(1.2);
 }

@@ -168,7 +168,7 @@ const Pagina283 = () => {
             <img src={ptbr_audio_icon} alt="" className={styles["page283__audio-icon"]} onClick={() => playAudio("pg283_audio10p")} />
           </p>
         </div>
-        <img src={img2} alt="Class Schedule" className={styles["page283__image"]} />
+        <img src={img3} alt="Train Departure" className={styles["page283__image"]} />
       </div>
 
       <div className={styles["page283__block"]}>
@@ -199,7 +199,7 @@ const Pagina283 = () => {
             <img src={ptbr_audio_icon} alt="" className={styles["page283__audio-icon"]} onClick={() => playAudio("pg283_audio15p")} />
           </p>
         </div>
-        <img src={img3} alt="Train Departure" className={styles["page283__image"]} />
+        <img src={img2} alt="Class Schedule" className={styles["page283__image"]} />
       </div>
 
       <div className={styles["page283__block"]}>

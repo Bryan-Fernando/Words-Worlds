@@ -76,7 +76,7 @@
 .page185__subtitleSection {
     background-color: #f0f0f0;
     padding: 1rem;
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: bold;
     border-bottom: 1px solid #ddd;
 }
@@ -92,7 +92,7 @@
     border: 0.1rem solid #A61C28;
     padding: 1rem;
     text-align: left;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
 
 .page185__table th {

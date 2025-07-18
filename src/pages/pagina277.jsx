@@ -1,23 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './pagina277.module.css';
 
-const pagina277 = () => {
-    return (
-        <div>
-            <div className={styles.pg91Container}>
-                <header className={styles.pg91Header}>
-                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                    <div>
-                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                        <p>Dizendo as horas</p>
-                    </div>
-                </header>
-                <main className={styles.pg91Main}>
-                    <div></div>
-                </main>
+import pagina277_imagem1 from '../assets/images/pagina275_imagem1.webp';
+import pagina277_imagem2 from '../assets/images/pagina277_imagem1.webp';
+
+import map3 from '../assets/images/map3.mp4';
+
+const Pagina277 = () => {
+  const [videoSrc, setVideoSrc] = useState(null);
+
+  const handlePlayVideo = (map) => {
+    setVideoSrc(map);
+  };
+
+  const handleCloseVideo = () => {
+    setVideoSrc(null);
+  };
+
+  return (
+    <div className={styles.container}>
+      <img src={pagina277_imagem1} alt="Map 3" className={styles.mapImage} />
+
+      <div className={styles.dialogueWrapper}>
+        <div className={styles.dialogueNumber}>3</div>
+
+        <section className={styles.dialogueSection}>
+          <div className={styles.dialogueImageContainer}>
+            <img src={pagina277_imagem2} alt="Dialogue Image" className={styles.dialogueImage} />
+          </div>
+
+          <div className={styles.textBlock}>
+            <div>
+              <span className={styles.nameBlue}>Nick</span>
+              <div className={styles.speechBubble}>
+                Hi there! Can you help me find the nearest ATM?
+                <em>Olá! Você pode me ajudar a encontrar o caixa eletrônico mais próximo?</em>
+              </div>
             </div>
+
+            <div>
+              <span className={styles.nameRed}>Margaret</span>
+              <div
+                className={`${styles.speechBubble} ${styles.directions}`}
+                onClick={() => handlePlayVideo(map3)}
+              >
+                Hi! Of course, there’s an ATM around the corner. Just walk straight ahead and take first right.
+                You’ll see it across the Avenue.
+                <em>Oi! Claro, há um caixa eletrônico na esquina. Apenas ande em frente e vire na primeira à direita. Você vai ver do outro lado da Avenida.</em>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {videoSrc && (
+        <div className={styles.videoOverlay} onClick={handleCloseVideo}>
+          <video src={videoSrc} controls autoPlay className={styles.videoPlayer} />
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
-export default pagina277;
+export default Pagina277;

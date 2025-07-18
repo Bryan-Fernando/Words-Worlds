@@ -13,6 +13,7 @@
     font-size: 5rem;
     color: #A61C28;
     font-weight: bold;
+    text-align: left;
   }
   
   .page228__title_black {
@@ -22,6 +23,7 @@
   .page228__subtitle {
     font-size: 2rem;
     margin-top: 1rem;
+    text-align: left;
   }
   
   .page228__highlight {

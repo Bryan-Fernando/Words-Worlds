@@ -29,24 +29,24 @@ const Pagina227 = () => {
             <tbody>
               {/* I */}
               <tr>
-                <td><strong>I</strong><br /><span className={styles.page227__translation}>Eu</span></td>
-                <td><strong>am</strong><br /><span className={styles.page227__translation}>sou / estou / tenho</span></td>
+                <td><strong>I</strong><br /><span>Eu <br />Eu <br /> Eu</span></td>
+                <td>am<br />sou <br /> estou <br /> tenho</td>
                 <td>I’m</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* He */}
               <tr>
-                <td><span className={styles.page227__red}>He</span><br /><span className={styles.page227__translation}>Ele</span></td>
-                <td>is</td>
+                <td><span className={styles.page227__red}>He</span><br />Ele <br /> Ele <br /> Ele</td>
+                <td>is <br /> é <br /> está <br /> tem</td>
                 <td>He’s</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* She */}
               <tr>
-                <td><span className={styles.page227__red}>She</span><br /><span className={styles.page227__translation}>Ela</span></td>
-                <td>is</td>
+                <td><span className={styles.page227__red}>She</span><br />Ela <br /> Ela <br /> Ela</td>
+                <td>is <br /> é <br /> está <br /> tem</td>
                 <td>She’s</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
@@ -54,7 +54,7 @@ const Pagina227 = () => {
               {/* It */}
               <tr>
                 <td><span className={styles.page227__red}>It</span></td>
-                <td>is</td>
+                <td><div> is <br /> é <br /> está <br/> tem</div></td>
                 <td>It’s</td>
                 <td>—</td>
                 <td>(somente para idade)</td>

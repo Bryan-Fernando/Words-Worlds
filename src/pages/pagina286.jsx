@@ -28,17 +28,17 @@ const Pagina286 = () => {
   };
 
   const audioMap = {
-    'pg286_audio1e': audio1e,
-    'pg286_audio1p': audio1p,
-    'pg286_audio2e': audio2e,
-    'pg286_audio3e': audio3e,
-    'pg286_audio4e': audio4e,
-    'pg286_audio5e': audio5e,
-    'pg286_audio6e': audio6e,
+    pg286_audio1e: audio1e,
+    pg286_audio1p: audio1p,
+    pg286_audio2e: audio2e,
+    pg286_audio3e: audio3e,
+    pg286_audio4e: audio4e,
+    pg286_audio5e: audio5e,
+    pg286_audio6e: audio6e,
   };
 
-  const leftColumn = ["1. 3:00", "2. 6:00", "3. 8:00", "4. 7:00", "5. 9:00"];
-  const rightColumn = [
+  const times = ["3:00", "6:00", "8:00", "7:00", "9:00"];
+  const answerOptions = [
     "a) Nine o’clock",
     "b) Eight o’clock",
     "c) Seven o’clock",
@@ -49,118 +49,91 @@ const Pagina286 = () => {
 
   const [selectedOptions, setSelectedOptions] = useState(Array(5).fill(''));
   const [results, setResults] = useState(Array(5).fill(null));
-  const [shuffledRight, setShuffledRight] = useState([]);
-  const [showAnswerKey, setShowAnswerKey] = useState(false);
+  const [shuffledAnswers, setShuffledAnswers] = useState([]);
 
   useEffect(() => {
-    const shuffled = [...rightColumn].sort(() => Math.random() - 0.5);
-    setShuffledRight(shuffled);
+    const shuffled = [...answerOptions].sort(() => Math.random() - 0.5);
+    setShuffledAnswers(shuffled);
   }, []);
 
-  const getOptionLetter = (optionText) => optionText.charAt(0);
+  const getLetter = (text) => text.charAt(0);
 
-  const handleSelect = (optionLetter) => {
-    const alreadySelectedIndex = selectedOptions.indexOf(optionLetter);
-
-    if (alreadySelectedIndex !== -1) {
+  const handleSelect = (letter) => {
+    const indexInInputs = selectedOptions.indexOf(letter);
+    if (indexInInputs !== -1) {
       const newSelections = [...selectedOptions];
-      newSelections[alreadySelectedIndex] = '';
+      newSelections[indexInInputs] = '';
       setSelectedOptions(newSelections);
     } else {
-      const firstEmpty = selectedOptions.findIndex((val) => val === '');
+      const firstEmpty = selectedOptions.findIndex(val => val === '');
       if (firstEmpty !== -1) {
         const newSelections = [...selectedOptions];
-        newSelections[firstEmpty] = optionLetter;
+        newSelections[firstEmpty] = letter;
         setSelectedOptions(newSelections);
       }
     }
   };
 
   const handleCheckClick = () => {
-    const newResults = selectedOptions.map((value, index) => value === correctMatches[index]);
+    const newResults = selectedOptions.map((val, i) => val === correctMatches[i]);
     setResults(newResults);
-    setShowAnswerKey(true);
   };
 
   return (
-    <div className={styles["page286__container"]}>
-      <h1 className={styles["page286__title"]}>Exercises</h1>
+    <div className={styles.page286__container}>
+      <h1 className={styles.page286__title}>Exercises</h1>
 
-      <h2 className={styles["page286__subtitle"]}>
-        2. Match the time:
+      <h2 className={styles.page286__subtitle}>
+        2. <i>Match the time:</i>
         <img
           src={eng_audio_icon}
           alt=""
-          className={styles["page286__audio-icon"]}
+          className={styles.page286__audioIcon}
           onClick={() => playAudio("pg286_audio1e")}
         />
         <img
           src={ptbr_audio_icon}
           alt=""
-          className={styles["page286__audio-icon"]}
+          className={styles.page286__audioIcon}
           onClick={() => playAudio("pg286_audio1p")}
         />
       </h2>
 
-      <div className={styles["page286__content"]}>
-        <div className={styles["page286__left-column"]}>
-          {leftColumn.map((question, idx) => (
-            <div key={idx} className={styles["page286__question"]}>
-              <span>{question}</span>
-              <div className={styles["page286__input-container"]}>
-                <div className={styles["page286__input-box"]}>
-                  {selectedOptions[idx]}
-                </div>
+      <div className={styles.page286__rows}>
+        {times.map((time, i) => (
+          <div key={i} className={styles.page286__row}>
+            <span className={styles.page286__time}>{time}</span>
+            <div className={styles.page286__inputWrapper}>
+              <div className={styles.page286__inputBox}>
+                {selectedOptions[i]}
+              </div>
+              <img
+                src={eng_audio_icon}
+                alt=""
+                className={styles.page286__audioIcon}
+                onClick={() => playAudio(`pg286_audio${i + 2}e`)}
+              />
+              {results[i] !== null && (
                 <img
-                  src={eng_audio_icon}
-                  alt=""
-                  className={styles["page286__audio-icon"]}
-                  onClick={() => playAudio(`pg286_audio${idx + 2}e`)}
+                  src={results[i] ? correct_icon : wrong_icon}
+                  alt={results[i] ? "Correct" : "Incorrect"}
+                  className={styles.page286__resultIcon}
                 />
-                {results[idx] !== null && (
-                  <img
-                    src={results[idx] ? correct_icon : wrong_icon}
-                    alt={results[idx] ? "Correct" : "Incorrect"}
-                    className={styles["page286__result-icon"]}
-                  />
-                )}
-              </div>
+              )}
             </div>
-          ))}
-        </div>
-
-        <div className={styles["page286__right-column"]}>
-          {shuffledRight.map((option, idx) => {
-            const letter = getOptionLetter(option);
-            const isSelected = selectedOptions.includes(letter);
-
-            return (
-              <div
-                key={idx}
-                onClick={() => handleSelect(letter)}
-                className={`${styles["page286__option"]} ${isSelected ? styles["selected"] : ""}`}
-              >
-                {option}
-              </div>
-            );
-          })}
-        </div>
+            <div
+              className={`${styles.page286__option} ${selectedOptions.includes(getLetter(shuffledAnswers[i])) ? styles.selected : ''}`}
+              onClick={() => handleSelect(getLetter(shuffledAnswers[i]))}
+            >
+              {shuffledAnswers[i]}
+            </div>
+          </div>
+        ))}
       </div>
 
-      <button className={styles["page286__check-button"]} onClick={handleCheckClick}>
+      <button className={styles.page286__checkButton} onClick={handleCheckClick}>
         <em>Check</em>
       </button>
-
-      {showAnswerKey && (
-        <div className={styles["page286__answer-key"]}>
-          <h2 className={styles["page286__answer-key-title"]}>Check - Answer Key</h2>
-          <p>1. 3:00 - e) Three o’clock</p>
-          <p>2. 6:00 - d) Six o’clock</p>
-          <p>3. 8:00 - b) Eight o’clock</p>
-          <p>4. 7:00 - c) Seven o’clock</p>
-          <p>5. 9:00 - a) Nine o’clock</p>
-        </div>
-      )}
     </div>
   );
 };

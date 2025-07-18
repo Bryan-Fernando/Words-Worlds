@@ -125,6 +125,20 @@
     font-size: 1.8rem;  /* Aumentado de 1.5rem */
 }
 
+.page199__audio_icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page199__audio_icon:hover {
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 16px;

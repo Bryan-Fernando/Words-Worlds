@@ -29,33 +29,33 @@ const Pagina229 = () => {
             <tbody>
               {/* I */}
               <tr>
-                <td><strong>I</strong><br /><span className={styles.page229__translation}>Eu</span></td>
-                <td>am / <span className={styles.page229__red}>ain’t</span></td>
-                <td>not</td>
+                <td><span className={styles.page229__red}>I</span> <br /><span className={styles.page229__red}>I</span><br /><span>Eu <br /> Eu <br /> Eu</span></td>
+                <td><span className={styles.page229__red}>am</span> <br /> <span className={styles.page229__red}>ain’t</span><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page229__red}>not</spam> <br /> <br />sou <br /> estou <br /> tenho</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* He */}
               <tr>
-                <td><span className={styles.page229__red}>He</span><br /><span className={styles.page229__translation}>Ele</span></td>
-                <td>is / isn’t</td>
-                <td>not</td>
+                <td><span className={styles.page229__red}>He</span> <br /><span className={styles.page229__red}>He</span><br /><span>Ele <br /> Ele <br /> Ele</span></td>
+                <td><spam className={styles.page229__red}>is</spam><br />  <spam className={styles.page229__red}>isn’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page229__red}>not</spam><br /> <br />é <br /> está <br /> tem</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* She */}
               <tr>
-                <td><span className={styles.page229__red}>She</span><br /><span className={styles.page229__translation}>Ela</span></td>
-                <td>is / isn’t</td>
-                <td>not</td>
+                <td><span className={styles.page229__red}>She</span><br /><span>Ela <br /> Ela <br /> Ela</span></td>
+                <td><spam className={styles.page229__red}>is </spam><br /> <spam className={styles.page229__red}>isn’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page229__red}>not</spam><br /> <br /> é <br /> está <br /> tem</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* It */}
               <tr>
                 <td><span className={styles.page229__red}>It</span></td>
-                <td>is / isn’t</td>
-                <td>not</td>
+                <td><spam className={styles.page229__red}>is</spam> <br /> <spam className={styles.page229__red}>isn’t</spam><br /> não <br /> não <br /> não</td>
+                <td><spam className={styles.page229__red}>not</spam><br /> <br /> é <br /> está <br /> tem</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>

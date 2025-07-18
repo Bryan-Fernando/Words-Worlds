@@ -29,32 +29,32 @@ const Pagina228 = () => {
             <tbody>
               {/* We */}
               <tr>
-                <td><strong>We</strong><br /><span className={styles.page228__translation}>Nós</span></td>
-                <td>are</td>
+                <td><strong>We</strong><br /><span>Nós <br /> Nós <br /> Nós</span></td>
+                <td>are <br /> somos <br /> estamos <br /> temos</td>
                 <td>We’re</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* You (sg) */}
               <tr>
-                <td><span className={styles.page228__red}>You (sg)</span><br /><span className={styles.page228__translation}>Você</span></td>
-                <td>are</td>
+                <td><span className={styles.page228__red}>You (sg)</span><br /><span>Você <br /> Você <br /> Você</span></td>
+                <td>are <br /> é <br /> está <br /> tem</td>
                 <td>You’re</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* You all (pl) */}
               <tr>
-                <td><span className={styles.page228__red}>You all (pl)</span><br /><span className={styles.page228__translation}>Vocês</span></td>
-                <td>are</td>
+                <td><span className={styles.page228__red}>You all (pl)</span><br /><span>Vocês <br /> Vocês <br /> Vocês</span></td>
+                <td>are <br /> são <br /> estão <br /> têm</td>
                 <td>You all’re</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
               {/* They */}
               <tr>
-                <td><span className={styles.page228__red}>They</span><br /><span className={styles.page228__translation}>Eles / Elas</span></td>
-                <td>are</td>
+                <td><span className={styles.page228__red}>They</span><br /><span>Eles / Elas <br /> Eles / Elas <br /> Eles / Elas</span></td>
+                <td>are <br /> são <br /> estão <br /> têm</td>
                 <td>They’re</td>
                 <td>—</td>
                 <td>(somente para idade)</td>
