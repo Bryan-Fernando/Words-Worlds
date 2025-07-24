@@ -188,10 +188,10 @@ const Pagina123 = () => {
                 </div>
                 <div className={styles["page123__container-image"]}>
                     <div className={styles["page123__container-imagea"]}>
-                        <img className={styles["page123__image"]} src={pagina123_imagem1} alt="" />
+                        <img className={styles["page123__image"]} src={pagina233_imagem1} alt="" />
                     </div>
                     <div className={styles["page123__container-imagea"]}>
-                        <img className={styles["page123__image"]} src={pagina123_imagem2} alt="" />
+                        <img className={styles["page123__image"]} src={pagina233_imagem2} alt="" />
                     </div>
                 </div>
             </main>
