@@ -1,1 +1,185 @@
-﻿
+﻿.container {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.exercisesRed {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+.instructionRed {
+  color: #a61c28;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.instructionSubtitle {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #000;
+}
+
+.questionBox {
+  border: 3px solid #a61c28;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 650px; 
+}
+
+/* Estilos para o exercício de diálogos */
+.dialoguesContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Essencial: Alinha a letra (a,b,c,d) e todo o conteúdo da questão na mesma linha */
+.dialogueItem {
+  display: flex;
+  align-items: baseline; /* Alinha a letra e o conteúdo pela linha de base */
+  margin-bottom: 1.2rem; /* Espaçamento entre os itens principais */
+  flex-wrap: wrap; /* Permite que o item quebre se for muito longo */
+  gap: 0.2rem; /* Espaçamento bem pequeno entre a letra e o conteúdo */
+}
+
+/* Contêiner da letra (a, b, c, d) */
+.itemNumberContainer {
+  flex-shrink: 0; /* Impede que a letra encolha */
+  padding-right: 0.3rem; /* Espaço à direita da letra */
+}
+
+.itemNumber {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-align: right;
+  line-height: 1.4; /* Consistência de line-height */
+}
+
+.itemNumberPlaceholder { /* Mantido para consistência de estrutura, mas não renderizado diretamente */
+  min-width: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Wrapper para todo o conteúdo do diálogo (texto + inputs) após a letra */
+.dialogueContentWrapper {
+  /* display: flex; */
+  align-items: baseline; /* Alinha o conteúdo do diálogo pela linha de base */
+  flex-wrap: wrap; /* ESSENCIAL: Permite que o conteúdo do diálogo *dentro do item* quebre se for muito longo */
+  gap: 0.4rem; /* Espaçamento entre as 'dialoguePart's */
+  flex-grow: 1; /* Permite que este wrapper ocupe o espaço restante */
+  min-width: 0; /* Permite que este contêiner encolha se precisar quebrar */
+}
+
+/* Cada segmento de texto/input/ícone */
+.dialoguePart {
+  display: flex;
+  align-items: baseline; /* ESSENCIAL: Garante alinhamento interno de texto/input/ícone */
+  gap: 0.2rem; /* Espaçamento bem justo entre texto/input/ícone */
+  flex-shrink: 0; /* Impede que as partes do diálogo encolham indesejadamente */
+}
+
+.dialogueText {
+  font-size: 1.4rem; /* AUMENTADO: Tamanho para o texto da pergunta */
+  line-height: 1.4; /* ESSENCIAL: Consistência de line-height */
+  /* Removido white-space: nowrap; para permitir quebra flexível */
+}
+
+.dialogueTextIndent {
+  font-size: 1.4rem; /* AUMENTADO: Para texto indentado */
+  line-height: 1.4; /* ESSENCIAL: Consistência de line-height */
+  margin-left: 1.5rem; /* Indentação para respostas/falas subsequentes */
+  /* Removido white-space: nowrap; para permitir quebra flexível */
+}
+
+.dialogueInput {
+  width: 50px;
+  height: 28px; /* Altura ajustada para harmonizar */
+  padding: 0.2rem 0.3rem;
+  font-size: 1.3rem; /* Tamanho da letra dentro do campo */
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: normal;
+  color: #333;
+  line-height: 1.4; /* ESSENCIAL: Consistência de line-height */
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.resultIcon {
+  width: 22px;
+  height: 22px;
+  margin-left: 0.3rem;
+  flex-shrink: 0;
+  align-self: center; /* Alinha o ícone no centro vertical da linha */
+}
+
+.divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1.2rem 0;
+}
+
+.checkContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+}
+
+.checkButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.checkButton:hover {
+  background-color: #8a1720;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .questionBox {
+    padding: 0.8rem;
+  }
+  .dialogueText,
+  .dialogueTextIndent {
+    font-size: 1rem;
+  }
+  .dialogueInput {
+    width: 45px;
+    height: 26px;
+    font-size: 1.1rem;
+  }
+  .itemNumber {
+    font-size: 1.1rem;
+  }
+  .dialogueLine {
+    gap: 0.4rem;
+  }
+  .dialogueTextIndent {
+    margin-left: 1rem;
+  }
+  .resultIcon {
+    width: 20px;
+    height: 20px;
+  }
+}

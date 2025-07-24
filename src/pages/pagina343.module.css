@@ -1,1 +1,155 @@
-﻿
+﻿.container {
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.exercisesRed {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+.instruction {
+  color: #1c4c9c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.instructionRed {
+  color: #a61c28;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.questionBox {
+  border: 3px solid #a61c28;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 650px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: normal;
+  color: #333;
+}
+
+.resultIcon {
+  width: 24px;
+  height: 24px;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.checkContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.checkButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+  margin-left: 0;
+}
+
+.checkButton:hover {
+  background-color: #8a1720;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #ccc;
+  margin: 2rem 0;
+  max-width: 650px;
+}
+
+/* Estilos para múltipla escolha */
+.multipleChoiceQuestion {
+  margin-bottom: 1.5rem;
+}
+
+.questionText {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-left: 1.5rem;
+}
+
+.optionItem {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+.radioInput {
+  margin-right: 0.8rem;
+  cursor: pointer;
+}
+
+.radioLabel {
+  cursor: pointer;
+  font-weight: normal;
+}
+
+.chosenAnswer {
+  font-weight: normal;
+  font-style: normal;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.blankPlaceholder {
+  margin: 0 0.5rem;
+}
