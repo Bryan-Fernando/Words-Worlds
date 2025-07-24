@@ -1,12 +1,26 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './pagina275.module.css';
 
 import mapImage from '../assets/images/pagina275_imagem1.webp';
 import dialogueImage from '../assets/images/pagina275_imagem2.webp';
 import video1 from '../assets/images/map1.mp4';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import audio1 from '../assets/audios/pg275_audio1e.mp3'; // Seu único áudio
+
 const Pagina275 = () => {
   const [videoSrc, setVideoSrc] = useState(null);
+  const currentAudio = useRef(null);
+
+  const playAudio = () => {
+    if (currentAudio.current) {
+      currentAudio.current.pause();
+      currentAudio.current.currentTime = 0;
+    }
+    const audio = new Audio(audio1);
+    currentAudio.current = audio;
+    audio.play();
+  };
 
   const handlePlayVideo = () => {
     setVideoSrc(video1);
@@ -31,7 +45,13 @@ const Pagina275 = () => {
           <div className={styles.textBlock}>
             <h4 className={styles.nameBlue}>Mathew</h4>
             <p className={styles.speechBubble}>
-              Excuse me, can you tell me how to get to the subway station?<br />
+              Excuse me, can you tell me how to get to the subway station?
+              <img
+                src={eng_audio_icon}
+                alt="Play audio"
+                className={styles.audioIcon}
+                onClick={playAudio}
+              /><br />
               <em>Com licença, você pode me dizer como chegar à estação de metrô?</em>
             </p>
 
