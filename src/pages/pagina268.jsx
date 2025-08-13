@@ -34,28 +34,28 @@ const Pagina268 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.grammarRed}>Grammar</span> - <span className={styles.grammarBold}>Adjectives</span></h1>
+    <div className={styles.page268__container}>
+      <header className={styles.page268__header}>
+        <h1><span className={styles.page268__grammarRed}>Grammar</span> - <span className={styles.page268__grammarBold}>Adjectives</span></h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page268__instruction}>
         <strong>1.</strong> Fill in the blanks with the correct form of the adjective:
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page268__questionBox}>
+        <main className={styles.page268__main}>
           {questions.map((q, index) => {
             const [beforeBlank, afterBlank] = q.sentence.split('__________');
 
             return (
-              <div key={index} className={styles.question}>
+              <div key={index} className={styles.page268__question}>
                 <span>{beforeBlank}</span>
                 <input
                   type="text"
                   value={inputValues[index]}
                   onChange={(e) => handleInputChange(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page268__input}
                 />
                 <span>{afterBlank}</span>
 
@@ -63,7 +63,7 @@ const Pagina268 = () => {
                   <img
                     src={results[index] ? correctIcon : wrongIcon}
                     alt={results[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page268__resultIcon}
                   />
                 )}
               </div>
@@ -73,8 +73,8 @@ const Pagina268 = () => {
       </div>
 
       {/* ✅ Aqui está a correção aplicada */}
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page268__checkContainer}>
+        <button className={styles.page268__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

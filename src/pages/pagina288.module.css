@@ -1,1 +1,145 @@
-﻿
+﻿.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.pageContainer {
+  width: 100%;
+  max-width: 1800px;
+  margin: 0;
+  padding: 2rem;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.headerTitle {
+  color: #a61c28;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2rem;
+  margin-bottom: 1.5em;
+}
+
+.modalHighlight {
+  color: #a61c28;
+  font-style: italic;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.grammarSection {
+  border: 2px solid #990000;
+  border-radius: 22px 22px 8px 8px;
+  overflow: hidden;
+}
+
+.grammarHeaderNegative {
+  background-color: #990000;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+
+.grammarTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.grammarContentNegative {
+  background-color: #d1cfcf;
+}
+
+.grammarRowNegative {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+}
+
+.grammarRowNegative span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  border-right: 1px solid #ddd;
+  color: #990000;
+}
+.grammarRowNegative span:last-child {
+  border-right: none;
+}
+
+.tableContent {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 3rem;
+}
+
+.tableGroup {
+  position: relative;
+  padding: 0;
+  border: 3px solid #990000;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.tableGroup:last-child {
+  margin-bottom: 0;
+}
+
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+  position: relative;
+  border-bottom: 1px solid #00000063;
+  text-align: left;
+}
+.tableRow:last-child {
+  border-bottom: none;
+}
+.pg413Cell {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  font-size: 1.6rem;
+  border-right: 1px solid #00000053;
+}
+.pg413Cell:last-child {
+  border-right: none;
+}
+
+.pg413Red {
+  color: #a61c28;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+.pg413Black {
+  color: #222;
+  font-size: 1.5rem;
+}
+
+.sgplBlue {
+  color: #2351a2;
+}
+
+@media (max-width: 900px) {
+  .headerTitle {
+    font-size: 2.5rem;
+  }
+  .grammarRowNegative span,
+  .pg413Cell {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+}

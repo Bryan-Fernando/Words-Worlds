@@ -42,38 +42,38 @@ const Pagina346 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page346__container}>
+      <header className={styles.page346__header}>
+        <h1><span className={styles.page346__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 7: Question Formation */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page346__instructionRed}>
         <strong>7. Question Formation</strong>
       </p>
-      <p className={styles.instruction}>
+      <p className={styles.page346__instruction}>
         Write a question using "Will" and the words provided.
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page346__questionBox}>
+        <main className={styles.page346__main}>
           {questionFormationQuestions.map((q, index) => (
-            <div key={q.id} className={styles.question}>
+            <div key={q.id} className={styles.page346__question}>
               <span>{q.id}. {q.words}</span>
-              <div className={styles.inputContainer}>
-                <span className={styles.arrow}>→</span>
+              <div className={styles.page346__inputContainer}>
+                <span className={styles.page346__arrow}>→</span>
                 <input
                   type="text"
                   value={inputValuesEx7[index]}
                   onChange={(e) => handleInputChangeEx7(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page346__input}
                   placeholder={inputValuesEx7[index] === '' ? "Type the question" : ""}
                 />
                 {resultsEx7[index] !== null && (
                   <img
                     src={resultsEx7[index] ? correctIcon : wrongIcon}
                     alt={resultsEx7[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page346__resultIcon}
                   />
                 )}
               </div>
@@ -82,8 +82,8 @@ const Pagina346 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx7}>
+      <div className={styles.page346__checkContainer}>
+        <button className={styles.page346__checkButton} onClick={handleCheckClickEx7}>
           Check
         </button>
       </div>

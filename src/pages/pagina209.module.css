@@ -1,12 +1,12 @@
 /* Base Layout */
-.container {
+.page209__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page209__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
@@ -14,11 +14,11 @@
 }
 
 /* Header */
-.header {
+.page209__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page209__headerTitle {
     color: #A61C28;
     font-size: 4.8rem;
     text-align: left;
@@ -26,14 +26,14 @@
 }
 
 /* Layout principal */
-.mainContent {
+.page209__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
 /* Seção de introdução */
-.grammarIntro {
+.page209__grammarIntro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -41,104 +41,104 @@
 }
 
 /* Estilos do verbo modal */
-.modalVerb {
+.page209__modalVerb {
     text-align: left;
 }
 
-.modalVerb h2 {
+.page209__modalVerb h2 {
     font-size: 2.8rem;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 0.5rem;
 }
 
-.modalVerb h2 span:first-child,
-.modalVerb p span:first-child {
+.page209__modalVerb h2 span:first-child,
+.page209__modalVerb p span:first-child {
     color: #990000;
 }
 
-.modalVerb h2 span:last-child,
-.modalVerb p span:last-child {
+.page209__modalVerb h2 span:last-child,
+.page209__modalVerb p span:last-child {
     color: #000;
 }
 
-.modalVerb p {
+.page209__modalVerb p {
     color: #000;
     font-size: 2.4rem;
     font-style: italic;
 }
 
 /* Grammar Section */
-.grammarSection {
+.page209__grammarSection {
     border: 2px solid #A61C28;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.grammarHeader {
+.page209__grammarHeader {
     background-color: #A61C28;
     padding: 1rem 2rem;
 }
 
-.grammarTitle {
+.page209__grammarTitle {
     color: white;
     font-size: 1.8rem;
 }
 
-.grammarContent {
+.page209__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page209__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page209__grammarRow span {
     padding: 1.5rem;
     font-size: 1.6rem;
     text-align: center;
     border-right: 1px solid #ddd;
 }
 
-.grammarRow span:nth-child(4) {
+.page209__grammarRow span:nth-child(4) {
     white-space: nowrap;
 }
 
-.grammarRow span:nth-child(4)::after {
+.page209__grammarRow span:nth-child(4)::after {
     content: "(BF)";
     color: #A61C28;
     margin-left: 1px;
 }
 
-.grammarRow span:last-child {
+.page209__grammarRow span:last-child {
     border-right: none;
 }
 
 /* Table Content */
-.tableContent {
+.page209__tableContent {
     border: 2px solid #A61C28;
     border-radius: 8px;
     overflow: hidden;
     background-color: #ffffff;
 }
 
-.tableGroup {
+.page209__tableGroup {
     border-bottom: 1px solid #ddd;
 }
 
-.tableGroup:last-child {
+.page209__tableGroup:last-child {
     border-bottom: none;
 }
 
-.tableRow {
+.page209__tableRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.pg213Cell {
+.page209__pg213Cell {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,36 +146,36 @@
     border-right: 1px solid #ddd;
 }
 
-.pg213Cell:last-child {
+.page209__pg213Cell:last-child {
     border-right: none;
 }
 
 /* Text Styles */
-.pg213Red {
+.page209__pg213Red {
     color: #A61C28;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Black {
+.page209__pg213Black {
     color: #000000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Dash {
+.page209__pg213Dash {
     color: #000000;
     font-style: normal;
     font-size: 2.2rem;
 }
 
-.blueText {
+.page209__blueText {
     color: #104b86;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.redNot {
+.page209__redNot {
     color: #A61C28;
     font-weight: bold;
     font-style: italic;
@@ -199,23 +199,23 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
-    .headerTitle {
+    .page209__headerTitle {
         font-size: 3.2rem;
     }
 
-    .grammarRow, 
-    .tableRow {
+    .page209__grammarRow, 
+    .page209__tableRow {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow span,
-    .pg213Cell {
+    .page209__grammarRow span,
+    .page209__pg213Cell {
         border-right: none;
         border-bottom: 1px solid #ddd;
     }
 
-    .grammarRow span:last-child,
-    .pg213Cell:last-child {
+    .page209__grammarRow span:last-child,
+    .page209__pg213Cell:last-child {
         border-bottom: none;
     }
 }

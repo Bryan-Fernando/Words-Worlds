@@ -75,49 +75,49 @@ const Pagina352 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page352__container}>
+      <header className={styles.page352__header}>
+        <h1><span className={styles.page352__exercisesRed}>Exercises</span></h1>
       </header>
 
-      <p className={styles.instructionRed}>
+      <p className={styles.page352__instructionRed}>
         <strong>13. Fill in the blanks with "will"</strong>
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.dialoguesContainer}>
+      <div className={styles.page352__questionBox}>
+        <main className={styles.page352__dialoguesContainer}>
           {questionsEx13.map((question, questionIndex) => (
-            <div key={question.id} className={styles.dialogueItem}>
-              <div className={styles.itemNumberContainer}>
-                <span className={styles.itemNumber}>{question.id})</span>
+            <div key={question.id} className={styles.page352__dialogueItem}>
+              <div className={styles.page352__itemNumberContainer}>
+                <span className={styles.page352__itemNumber}>{question.id})</span>
               </div>
               
-              <div className={styles.dialogueContentWrapper}>
+              <div className={styles.page352__dialogueContentWrapper}>
                 {question.parts.map((part, partIndex) => (
-                  <div key={`${question.id}-${partIndex}`} className={styles.dialoguePart}>
+                  <div key={`${question.id}-${partIndex}`} className={styles.page352__dialoguePart}>
                     {partIndex === 0 ? (
                       // Primeira parte (pergunta)
                       <>
-                        <span className={styles.dialogueText}>{part.textBefore}</span>
+                        <span className={styles.page352__dialogueText}>{part.textBefore}</span>
                         <input
                           type="text"
                           value={inputValuesEx13[questionIndex][partIndex]}
                           onChange={(e) => handleInputChangeEx13(questionIndex, partIndex, e.target.value)}
-                          className={styles.dialogueInput}
+                          className={styles.page352__dialogueInput}
                         />
-                        <span className={styles.dialogueText}>{part.textAfter}</span>
+                        <span className={styles.page352__dialogueText}>{part.textAfter}</span>
                       </>
                     ) : (
                       // Partes subsequentes (respostas)
                       <>
-                        <span className={styles.dialogueTextIndent}>{part.textBefore}</span>
+                        <span className={styles.page352__dialogueTextIndent}>{part.textBefore}</span>
                         <input
                           type="text"
                           value={inputValuesEx13[questionIndex][partIndex]}
                           onChange={(e) => handleInputChangeEx13(questionIndex, partIndex, e.target.value)}
-                          className={styles.dialogueInput}
+                          className={styles.page352__dialogueInput}
                         />
-                        <span className={styles.dialogueText}>{part.textAfter}</span>
+                        <span className={styles.page352__dialogueText}>{part.textAfter}</span>
                       </>
                     )}
                   </div>
@@ -127,18 +127,18 @@ const Pagina352 = () => {
                   <img
                     src={resultsEx13[questionIndex] ? correctIcon : wrongIcon}
                     alt={resultsEx13[questionIndex] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page352__resultIcon}
                   />
                 )}
               </div>
-              {questionIndex < questionsEx13.length - 1 && <hr className={styles.divider} />}
+              {questionIndex < questionsEx13.length - 1 && <hr className={styles.page352__divider} />}
             </div>
           ))}
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx13}>
+      <div className={styles.page352__checkContainer}>
+        <button className={styles.page352__checkButton} onClick={handleCheckClickEx13}>
           Check
         </button>
       </div>

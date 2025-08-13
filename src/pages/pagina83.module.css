@@ -188,8 +188,10 @@
 }
 
 .page83__header--icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
     margin-left: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;

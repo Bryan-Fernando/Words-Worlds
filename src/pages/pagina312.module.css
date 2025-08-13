@@ -1,1 +1,244 @@
-﻿
+﻿/* Container principal */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteúdo principal */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+
+/* Cabeçalho Examples */
+.headerSection {
+    background-color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+}
+
+.examplesTitle {
+    color: #222;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    text-align: left;
+}
+
+/* Seção de conteúdo principal */
+.contentSection {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    flex: 1;
+}
+
+/* Cabeçalho da seção */
+.sectionHeader {
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+}
+
+.numberText {
+    color: #222;
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+
+.actionText {
+    color: #A61C28;
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.translationText {
+    color: #222;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+/* Linhas de exemplo */
+.exampleRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.exampleRow:last-child {
+    margin-bottom: 0;
+}
+
+/* Blocos de texto */
+.textBlock {
+    flex: 1;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.englishSentence {
+    color: #A61C28;
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.portugueseSentence {
+    color: #222;
+    font-size: 2.2rem;
+    font-style: italic;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Blocos de imagem */
+.imageBlock {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.exampleImage {
+    width: 280px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+    .examplesTitle {
+        font-size: 2.8rem;
+    }
+    
+    .numberText,
+    .actionText,
+    .translationText {
+        font-size: 2rem;
+    }
+    
+    .englishSentence {
+        font-size: 2.2rem;
+    }
+    
+    .portugueseSentence {
+        font-size: 2rem;
+    }
+    
+    .imageBlock {
+        flex: 0 0 240px;
+    }
+    
+    .exampleImage {
+        width: 240px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exampleRow {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    /* Reorganizar a segunda exampleRow para texto primeiro, depois imagem */
+    .exampleRow:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+    
+    .imageBlock {
+        flex: none;
+        width: 100%;
+    }
+    
+    .exampleImage {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .examplesTitle {
+        font-size: 3rem;
+    }
+    
+    .numberText,
+    .actionText,
+    .translationText {
+        font-size: 2.2rem;
+    }
+    
+    .englishSentence {
+        font-size: 2.4rem;
+    }
+    
+    .portugueseSentence {
+        font-size: 2.2rem;
+    }
+    
+    .sectionHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .examplesTitle {
+        font-size: 3.1rem;
+    }
+    
+    .numberText,
+    .actionText,
+    .translationText {
+        font-size: 2.3rem;
+    }
+    
+    .englishSentence {
+        font-size: 2.5rem;
+    }
+    
+    .portugueseSentence {
+        font-size: 2.3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .examplesTitle {
+        font-size: 3.2rem;
+    }
+    
+    .numberText,
+    .actionText,
+    .translationText {
+        font-size: 2.4rem;
+    }
+    
+    .englishSentence {
+        font-size: 2.6rem;
+    }
+    
+    .portugueseSentence {
+        font-size: 2.4rem;
+    }
+}

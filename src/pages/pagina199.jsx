@@ -26,14 +26,14 @@ const Pagina199 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Grammar</h1>
-                    <div className={styles.headerContent}>
-                        <h2 className={styles.headerSubtitle}>
-                            <span className={styles.modalVerb}>Can</span>
-                            <span className={styles.subtitle}> – Modal Verb</span>
+        <div className={styles.page199__container}>
+            <div className={styles.page199__pageContainer}>
+                <header className={styles.page199__header}>
+                    <h1 className={styles.page199__headerTitle}>Grammar</h1>
+                    <div className={styles.page199__headerContent}>
+                        <h2 className={styles.page199__headerSubtitle}>
+                            <span className={styles.page199__modalVerb}>Can</span>
+                            <span className={styles.page199__subtitle}> – Modal Verb</span>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
@@ -41,7 +41,7 @@ const Pagina199 = () => {
                                 onClick={() => playAudio('pg199_audio1e')}
                             />
                         </h2>
-                        <div className={styles.simplePresent}>
+                        <div className={styles.page199__simplePresent}>
                             Simple Present – Presente do Indicativo
                             <img
                                 src={eng_audio_icon}
@@ -53,15 +53,15 @@ const Pagina199 = () => {
                     </div>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.canExplanation}>
+                <main className={styles.page199__mainContent}>
+                    <section className={styles.page199__canExplanation}>
                         <p className={styles.canText}>
-                            <span className={styles.modalVerb}>Can</span> é um verbo auxiliar/modal versátil usado no Present Simple (presente do indicativo) com os significados de <strong>poder</strong>, <strong>saber</strong> ou <strong>conseguir</strong>, dependendo do contexto. É utilizado para expressar ou falar de:
+                            <span className={styles.page199__modalVerb}>Can</span> é um verbo auxiliar/modal versátil usado no Present Simple (presente do indicativo) com os significados de <strong>poder</strong>, <strong>saber</strong> ou <strong>conseguir</strong>, dependendo do contexto. É utilizado para expressar ou falar de:
                         </p>
                     </section>
 
-                    <section className={styles.usageBox}>
-                        <ul className={styles.usageList}>
+                    <section className={styles.page199__usageBox}>
+                        <ul className={styles.page199__usageList}>
                             <li>Conselhos</li>
                             <li>Sugestões</li>
                             <li>Habilidades</li>
@@ -72,11 +72,11 @@ const Pagina199 = () => {
                         </ul>
                     </section>
 
-                    <div className={styles.noteBox}>
-                        <div className={styles.noteTitle}>
+                    <div className={styles.page199__noteBox}>
+                        <div className={styles.page199__noteTitle}>
                             Nota
                         </div>
-                        <div className={styles.noteContent}>
+                        <div className={styles.page199__noteContent}>
                             <p>Não necessariamente na ordem acima</p>
                         </div>
                     </div>

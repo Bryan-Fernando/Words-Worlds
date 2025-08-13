@@ -32,15 +32,15 @@ const Pagina208 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Grammar</h1>
+        <div className={styles.page208__container}>
+            <div className={styles.page208__pageContainer}>
+                <header className={styles.page208__header}>
+                    <h1 className={styles.page208__headerTitle}>Grammar</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarIntro}>
-                        <div className={styles.modalVerb}>
+                <main className={styles.page208__mainContent}>
+                    <section className={styles.page208__grammarIntro}>
+                        <div className={styles.page208__modalVerb}>
                             <h2>
                                 <span>Can</span>
                                 <span> - Modal Verb</span>
@@ -55,15 +55,15 @@ const Pagina208 = () => {
                         </div>
                     </section>
 
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Negative Form</h2>
+                    <section className={styles.page208__grammarSection}>
+                        <div className={styles.page208__grammarHeader}>
+                            <h2 className={styles.page208__grammarTitle}>Negative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page208__grammarContent}>
+                            <div className={styles.page208__grammarRow}>
                                 <span>Subject</span>
                                 <span>Aux. Verb</span>
-                                <span className={styles.redNot}>not</span>
+                                <span className={styles.page208__redNot}>not</span>
                                 <span>Verb</span>
                                 <span>Object / Complement</span>
                             </div>
@@ -71,133 +71,165 @@ const Pagina208 = () => {
                     </section>
 
                     <section
-                        className={styles.translationSection}
+                        className={styles.page208__translationSection}
                         onClick={() => playAudio('pg208_audio2e')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <div className={styles.translationContent}>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>I</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>Eu</span>
+                        <div className={styles.page208__translationContent}>
+                            <div className={styles.page208__translationColumn}>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__red}`}>I</span>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__black}`}>Eu</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>can't</span>
-                                <span className={styles.blueText}>não <span className={`${styles.translationItem} ${styles.black}`}>sei</span></span>
+                            <div className={styles.page208__translationColumn}>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__red}`}>can't</span>
+                                <span className={styles.page208__blueText}>não <span className={`${styles.page208__translationItem} ${styles.page208__black}`}>sei</span></span>
+                                
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>—</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>—</span>
+                            <div className={styles.page208__translationColumn}>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__red}`}>—</span>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__black}`}>—</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>drive</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>dirigir</span>
+                            <div className={styles.page208__translationColumn}>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__red}`}>drive</span>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__black}`}>dirigir</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>a car</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>um carro</span>
+                            <div className={styles.page208__translationColumn}>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__red}`}>a car</span>
+                                <span className={`${styles.page208__translationItem} ${styles.page208__black}`}>um carro</span>
+
+
                             </div>
                         </div>
                     </section>
 
-                    <section className={styles.tableContent}>
-                        <div className={styles.tableGroup}>
+                    <section className={styles.page208__tableContent}>
+                        <div className={styles.page208__tableGroup}>
                             <div
-                                className={styles.tableRow}
+                                className={styles.page208__tableRow}
                                 onClick={() => playAudio('pg208_audio3e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>He</span>
-                                    <span className={styles.pg213Black}>Ele</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>He</span>
+                                    <span className={styles.page208__pg213Black}>Ele</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>can't</span>
-                                    <span className={styles.blueText}>não <span className={styles.pg213Black}>sabe</span></span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>can't</span>                              
+                                    <span className={styles.page208__blueText}>não <span className={styles.page208__pg213Black}> sabe</span></span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Dash}>—</span>
+                                    <span className={styles.page208__pg213Dash}>—</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>cook</span>
-                                    <span className={styles.pg213Black}>cozinhar</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>cook</span>
+                                    <span className={styles.page208__pg213Black}>cozinhar</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>italian food</span>
-                                    <span className={styles.pg213Black}>comida italiana</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>italian food</span>
+                                    <span className={styles.page208__pg213Black}>comida italiana.</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page208__tableGroup}>
                             <div
-                                className={styles.tableRow}
+                                className={styles.page208__tableRow}
                                 onClick={() => playAudio('pg208_audio4e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>She</span>
-                                    <span className={styles.pg213Black}>Ela</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>She</span>
+                                    <span className={styles.page208__pg213Black}>Ela</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>can't</span>
-                                    <span className={styles.blueText}>não <span className={styles.pg213Black}>sabe</span></span>
-                                    <span className={styles.blueText}>não <span className={styles.pg213Black}>consegue</span></span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>can't</span>
+                                    <span className={styles.page208__blueText}>não <span className={styles.page208__pg213Black}> sabe</span></span>
+                                    <span className={styles.page208__blueText}>não <span className={styles.page208__pg213Black}> consegue</span></span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Dash}>—</span>
+                                    <span className={styles.page208__pg213Dash}>—</span>
+                                    <span className={styles.page208__pg213Dash}>—</span>
+
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>swim</span>
-                                    <span className={styles.pg213Black}>nadar</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>swim</span>
+                                    <span className={styles.page208__pg213Black}>nadar</span>
+                                    <span className={styles.page208__pg213Black}>nadar</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>very well</span>
-                                    <span className={styles.pg213Black}>muito bem</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>very well</span>
+                                    <span className={styles.page208__pg213Black}>muito bom</span>
+                                    <span className={styles.page208__pg213Black}>muito bom</span>
                                 </div>
+
+
+
+
                             </div>
+
+
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page208__tableGroup}>
                             <div
-                                className={styles.tableRow}
+                                className={styles.page208__tableRow}
                                 onClick={() => playAudio('pg208_audio5e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>It</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>It</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>can't</span>
-                                    <span className={styles.blueText}>não <span className={styles.pg213Black}>pode</span></span>
-                                    <span className={styles.blueText}>não <span className={styles.pg213Black}>consegue</span></span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>can't</span>
+                                    <span className={styles.page208__blueText}>não <span className={styles.page208__pg213Black}> pode</span></span>
+                                    <span className={styles.page208__blueText}>não <span className={styles.page208__pg213Black}> consegue</span></span>                         
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Dash}>—</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Dash}>—</span>
+                                    <span className={styles.page208__pg213Dash}>—</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>work</span>
-                                    <span className={styles.pg213Black}>funcionar</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>work</span>
+                                    <span className={styles.page208__pg213Black}>funcionar</span>
+                                    <span className={styles.page208__pg213Black}>funcionar</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>without batteries</span>
-                                    <span className={styles.pg213Black}>sem pilhas</span>
+                                <div className={styles.page208__pg213Cell}>
+                                    <span className={styles.page208__pg213Red}>without batteries</span>
+                                    <span className={styles.page208__pg213Black}>sem pilhas</span>
+                                    <span className={styles.page208__pg213Black}>sem pilhas</span>
                                 </div>
                             </div>
-                        </div>
-                    </section>
 
-                    <div className={styles.noteBox}>
-                        <div className={styles.noteTitle}>Nota</div>
-                        <div className={styles.noteContent}>
-                            <div className={styles.noteRow}>
+                        </div>
+
+
+
+
+
+
+
+
+                    </section>
+                    <div className={styles.page208__noteBox}>
+                        <div className={styles.page208__noteTitle}>
+                            Nota
+                        </div>
+                        <div className={styles.page208__noteContent}>
+                            <div className={styles.page208__noteRow}>
                                 <span>Full Form</span>
                                 <span>Contracted Form</span>
                             </div>
-                            <div className={styles.noteFormula}>
-                                <span>Can + not = Can’t</span>
+                            <div className={styles.page208__noteFormula}>
+                               <span> Can + not = Can't</span>
                             </div>
                         </div>
                     </div>
+
+
+
+
                 </main>
             </div>
         </div>

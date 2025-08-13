@@ -30,19 +30,19 @@ const Pagina204 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Examples</h1>
+        <div className={styles.page204__container}>
+            <div className={styles.page204__pageContainer}>
+                <header className={styles.page204__header}>
+                    <h1 className={styles.page204__headerTitle}>Examples</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Interrogative Form</h2>
+                <main className={styles.page204__mainContent}>
+                    <section className={styles.page204__grammarSection}>
+                        <div className={styles.page204__grammarHeader}>
+                            <h2 className={styles.page204__grammarTitle}>Interrogative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page204__grammarContent}>
+                            <div className={styles.page204__grammarRow}>
                                 <span>Aux. Verb</span>
                                 <span>Subject</span>
                                 <span>Adv</span>
@@ -53,78 +53,82 @@ const Pagina204 = () => {
                     </section>
 
                     {/* REQUESTS */}
-                    <section className={styles.exampleSection}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Requests</em>
+                    <section className={styles.page204__exampleSection}>
+                        <div className={styles.page204__sectionHeader}>
+                            <em className={styles.page204__exampleTitle}>Requests</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page204__audio_icon}
                                 onClick={() => playAudio('pg204_audio1e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Solicitações ou Pedidos</em>
+                            <span className={styles.page204__separator}>/</span>
+                            <em className={styles.page204__titleTranslation}>Solicitações ou Pedidos</em>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page204__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page204__exampleRow}
                                 onClick={() => playAudio('pg204_audio2e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>Can</span>
                                 <span>you</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>help</span>
+                                <span className={styles.page204__verbCell}>help</span>
                                 <span>me with this project?</span>
+
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page204__exampleRow}>
                                 <span>Você</span>
                                 <span>pode</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>me ajudar</span>
+                                <span className={styles.page204__verbCell}>me ajudar</span>
                                 <span>com este projeto?</span>
+
                             </div>
                         </div>
                     </section>
 
                     {/* ABILITY */}
-                    <section className={styles.exampleSection}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Ability</em>
+                    <section className={styles.page204__exampleSection}>
+                        <div className={styles.page204__sectionHeader}>
+                            <em className={styles.page204__exampleTitle}>Ability</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page204__audio_icon}
                                 onClick={() => playAudio('pg204_audio3e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Habilidade</em>
+                            <span className={styles.page204__separator}>/</span>
+                            <em className={styles.page204__titleTranslation}>Habilidade</em>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page204__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page204__exampleRow}
                                 onClick={() => playAudio('pg204_audio4e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>Can</span>
                                 <span>she</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>drive</span>
+                                <span className={styles.page204__verbCell}>drive</span>
                                 <span>a car?</span>
+
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page204__exampleRow}>
                                 <span>Ela</span>
                                 <span>sabe</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>dirigir</span>
+                                <span className={styles.page204__verbCell}>dirigir</span>
                                 <span>um carro?</span>
+
                             </div>
                         </div>
                     </section>
 
-                    <section className={styles.imagesSection}>
-                        <div className={styles.imagePlaceholder}></div>
-                        <div className={styles.imagePlaceholder}></div>
+                    <section className={styles.page204__imagesSection}>
+                        <div className={styles.page204__imagePlaceholder}></div>
+                        <div className={styles.page204__imagePlaceholder}></div>
                     </section>
                 </main>
             </div>

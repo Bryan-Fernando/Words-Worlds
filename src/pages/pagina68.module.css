@@ -208,11 +208,11 @@
 /* Ícones de áudio */
 .page68__audio-icon {
     cursor: pointer;
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     transition: transform 0.2s ease-in-out;
     position: relative;
-    top: 0.3rem;
+    top: 1rem;
 }
 
 /* Efeito Hover nos Ícones */

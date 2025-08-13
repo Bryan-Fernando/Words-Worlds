@@ -1,1 +1,380 @@
-﻿
+﻿/* Container principal */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+/* Título */
+.exercisesTitle {
+  color: #a61c28;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0 0 0 0;
+  font-style: italic;
+  text-align: left;
+}
+
+/* Caixa de instrução */
+.instructionBox {
+  padding: 2rem 0;
+}
+
+.instructionText {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: left;
+}
+
+/* Seção da tabela */
+.tableSection {
+  margin-bottom: 3rem;
+}
+
+.tableHeader {
+  background-color: #a61c28;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.headerText {
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.tableContent {
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+}
+
+.tableHeaderRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 2fr;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  gap: .7rem;
+}
+
+.tableHeaderCell {
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  background-color: #e0e0e0;
+}
+
+.tableHeaderCell:last-child {
+  border-right: none;
+}
+
+/* Linhas de questões */
+.questionRow {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.questionRow:last-child {
+  border-bottom: none;
+}
+
+.questionNumber {
+  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  min-width: 2rem;
+}
+
+.questionText {
+  color: #333;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+.answerInput {
+  border: none;
+  border-bottom: 2px solid #333;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  color: #333;
+  min-width: 200px;
+  text-align: center;
+  font-style: italic;
+}
+
+.answerInput:focus {
+  outline: none;
+  border-bottom-color: #a61c28;
+}
+
+.answerInput::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Botão de verificação */
+.checkButtonContainer {
+  text-align: left;
+  margin: 10rem 0 3rem 0;
+}
+
+.checkButton {
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkButton:hover {
+  background-color: #8a1520;
+}
+
+/* Número da página */
+.pageNumber {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #a61c28;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Estilos para feedback de respostas */
+.correct {
+  border: 2px solid #28a745 !important;
+  background-color: #d4edda !important;
+}
+
+.incorrect {
+  border: 2px solid #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+.feedback {
+  display: flex;
+  margin-left: 1rem;
+  align-items: center;
+}
+
+.correctFeedback {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.incorrectFeedback {
+  color: #dc3545;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+.resultsContainer {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.resultsText {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #a61c28;
+  text-align: left;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .exercisesTitle {
+    font-size: 3.6rem;
+  }
+
+  .instructionText {
+    font-size: 2.2rem;
+  }
+
+  .headerText {
+    font-size: 2.6rem;
+  }
+
+  .tableHeaderCell {
+    font-size: 2.2rem;
+  }
+
+  .questionNumber {
+    font-size: 2.4rem;
+  }
+
+  .questionText {
+    font-size: 2.4rem;
+  }
+
+  .answerInput {
+    font-size: 2.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .exercisesTitle {
+    font-size: 3.8rem;
+  }
+
+  .instructionText {
+    font-size: 2.4rem;
+  }
+
+  .headerText {
+    font-size: 2.8rem;
+  }
+
+  .tableHeaderRow {
+    display: none; /* Esconde cabeçalho da tabela em mobile */
+  }
+
+  .questionRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .questionNumber {
+    font-size: 2.6rem;
+  }
+
+  .questionText {
+    font-size: 2.6rem;
+  }
+
+  .answerInput {
+    font-size: 2.6rem;
+    min-width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .feedback {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .correctFeedback,
+  .incorrectFeedback {
+    font-size: 2.2rem;
+  }
+
+  .resultsText {
+    font-size: 2.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .exercisesTitle {
+    font-size: 4rem;
+  }
+
+  .instructionText {
+    font-size: 2.6rem;
+  }
+
+  .headerText {
+    font-size: 3rem;
+  }
+
+  .questionNumber {
+    font-size: 2.8rem;
+  }
+
+  .questionText {
+    font-size: 2.8rem;
+  }
+
+  .answerInput {
+    font-size: 2.8rem;
+  }
+
+  .checkButton {
+    font-size: 2.4rem;
+    padding: 1.2rem 2.5rem;
+  }
+  
+  .correctFeedback,
+  .incorrectFeedback {
+    font-size: 2.4rem;
+  }
+
+  .resultsText {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .exercisesTitle {
+    font-size: 4.1rem;
+  }
+
+  .instructionText {
+    font-size: 2.7rem;
+  }
+
+  .headerText {
+    font-size: 3.1rem;
+  }
+
+  .questionNumber {
+    font-size: 2.9rem;
+  }
+
+  .questionText {
+    font-size: 2.9rem;
+  }
+
+  .answerInput {
+    font-size: 2.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .exercisesTitle {
+    font-size: 4.2rem;
+  }
+
+  .instructionText {
+    font-size: 2.8rem;
+  }
+
+  .headerText {
+    font-size: 3.2rem;
+  }
+
+  .questionNumber {
+    font-size: 3rem;
+  }
+
+  .questionText {
+    font-size: 3rem;
+  }
+
+  .answerInput {
+    font-size: 3rem;
+  }
+}

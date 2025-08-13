@@ -1,32 +1,32 @@
-.container {
+.page203__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page203__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
     padding: 2rem;
 }
 
-.grammarRow, .exampleRow {
+.page203__grammarRow, .page203__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span, .exampleRow span {
+.page203__grammarRow span, .page203__exampleRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
 }
 
-.header {
+.page203__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page203__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -34,41 +34,41 @@
     margin-left: 2rem;
 }
 
-.mainContent {
+.page203__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.grammarSection {
+.page203__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grammarHeader {
+.page203__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page203__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page203__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page203__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page203__grammarRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -77,15 +77,15 @@
     font-weight: 500;
 }
 
-.grammarRow span:nth-child(3) {
+.page203__grammarRow span:nth-child(3) {
     color: #990000;
 }
 
-.grammarRow span:last-child {
+.page203__grammarRow span:last-child {
     border-right: none;
 }
 
-.sectionHeader {
+.page203__sectionHeader {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1rem 2rem;
@@ -95,44 +95,44 @@
     gap: 0.5rem;
 }
 
-.exampleTitle {
+.page203__exampleTitle {
     color: #990000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.separator {
+.page203__separator {
     color: #000;
     margin: 0 1rem;
     font-size: 2rem;
 }
 
-.titleTranslation {
+.page203__titleTranslation {
     color: #000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.exampleBox {
+.page203__exampleBox {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.exampleRow {
+.page203__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     border-bottom: 1px solid #ddd;
 }
 
 /* Nova estrutura para 5 colunas */
-.fiveColumnSection .exampleRow {
+.page203__fiveColumnSection .page203__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     border-bottom: 1px solid #ddd;
 }
 
-.fiveColumnSection .exampleRow span {
+.page203__fiveColumnSection .page203__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -140,20 +140,20 @@
     border-right: 1px solid #ddd;
 }
 
-.fiveColumnSection .exampleRow:last-child span {
+.page203__fiveColumnSection .page203__exampleRow:last-child span {
     color: #000000;
 }
 
-.fiveColumnSection .exampleRow span:last-child {
+.page203__fiveColumnSection .page203__exampleRow span:last-child {
     border-right: none;
 }
 
-.fiveColumnSection .verbCell {
+.page203__fiveColumnSection .page203__verbCell {
     text-align: center;
     background-color: white;
 }
 
-.fiveColumnSection .objectCell {
+.page203__fiveColumnSection .page203__objectCell {
     text-align: left;
     padding-left: 2rem;
     white-space: pre-line;
@@ -161,7 +161,7 @@
     border-right: none;
 }
 
-.exampleSection:nth-child(4) .exampleRow .objectCell {
+.page203__exampleSection:nth-child(4) .page203__exampleRow .page203__objectCell {
     text-align: center;
     padding: 1.2rem;
     white-space: pre-line;
@@ -169,25 +169,25 @@
     border-right: none;
 }
 
-.exampleSection:nth-child(4) .exampleRow span {
+.page203__exampleSection:nth-child(4) .page203__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
 }
 
-.exampleSection:nth-child(4) .exampleRow .verbCell {
+.page203__exampleSection:nth-child(4) .page203__exampleRow .page203__verbCell {
     text-align: center;
 }
 
-.exampleSection:nth-child(4) .exampleRow .objectCell {
+.page203__exampleSection:nth-child(4) .page203__exampleRow .page203__objectCell {
     text-align: center;
 }
 
-.exampleRow:last-child {
+.page203__exampleRow:last-child {
     border-bottom: none;
 }
 
-.exampleRow span {
+.page203__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -195,7 +195,7 @@
     color: #990000;
 }
 
-.exampleRow:nth-child(2) span {
+.page203__exampleRow:nth-child(2) span {
     color: #000000;
 }
 
@@ -203,27 +203,27 @@
     background-color: white;
 }
 
-.objectCell {
+.page203__objectCell {
     text-align: left;
     padding-left: 2rem;
     border-right: none;
 }
 
-.imagesSection {
+.page203__imagesSection {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.imagePlaceholder {
+.page203__imagePlaceholder {
     width: 45%;
     height: 280px;
     background-color: #f0f0f0;
     border-radius: 10px;
 }
 
-.exampleImage {
+.page203__exampleImage {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -245,25 +245,25 @@
 }
 
 @media (max-width: 768px) {
-    .imagePlaceholder {
+    .page203__imagePlaceholder {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .headerTitle {
+    .page203__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .exampleRow {
+    .page203__grammarRow, .page203__exampleRow {
         grid-template-columns: 1fr;
     }
 
-    .imagesSection {
+    .page203__imagesSection {
         flex-direction: column;
     }
 
-    .exampleImage {
+    .page203__exampleImage {
         width: 100%;
         height: auto;
         margin-bottom: 1.5rem;

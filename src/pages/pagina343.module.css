@@ -1,20 +1,20 @@
-﻿.container {
+﻿.page343__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page343__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page343__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instruction {
+.page343__instruction {
   color: #1c4c9c;
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,7 +22,7 @@
   text-align: left;
 }
 
-.instructionRed {
+.page343__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -30,7 +30,7 @@
   text-align: left;
 }
 
-.questionBox {
+.page343__questionBox {
   border: 3px solid #a61c28;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -39,13 +39,13 @@
   max-width: 650px;
 }
 
-.main {
+.page343__main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.question {
+.page343__question {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -53,12 +53,12 @@
   gap: 0.5rem;
 }
 
-.inputContainer {
+.page343__inputContainer {
   display: flex;
   align-items: center;
 }
 
-.input {
+.page343__input {
   width: 100%;
   max-width: 400px;
   padding: 0.5rem;
@@ -70,19 +70,19 @@
   color: #333;
 }
 
-.resultIcon {
+.page343__resultIcon {
   width: 24px;
   height: 24px;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-.checkContainer {
+.page343__checkContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.checkButton {
+.page343__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -94,11 +94,11 @@
   margin-left: 0;
 }
 
-.checkButton:hover {
+.page343__checkButton:hover {
   background-color: #8a1720;
 }
 
-.divider {
+.page343__divider {
   border: 0;
   height: 1px;
   background-color: #ccc;
@@ -107,11 +107,11 @@
 }
 
 /* Estilos para múltipla escolha */
-.multipleChoiceQuestion {
+.page343__multipleChoiceQuestion {
   margin-bottom: 1.5rem;
 }
 
-.questionText {
+.page343__questionText {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
@@ -120,36 +120,36 @@
   gap: 0.5rem;
 }
 
-.optionsContainer {
+.page343__optionsContainer {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
   margin-left: 1.5rem;
 }
 
-.optionItem {
+.page343__optionItem {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
 }
 
-.radioInput {
+.page343__radioInput {
   margin-right: 0.8rem;
   cursor: pointer;
 }
 
-.radioLabel {
+.page343__radioLabel {
   cursor: pointer;
   font-weight: normal;
 }
 
-.chosenAnswer {
+.page343__chosenAnswer {
   font-weight: normal;
   font-style: normal;
   color: #000;
   font-size: 1.5rem;
 }
 
-.blankPlaceholder {
+.page343__blankPlaceholder {
   margin: 0 0.5rem;
 }

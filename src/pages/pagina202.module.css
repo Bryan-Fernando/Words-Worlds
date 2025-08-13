@@ -1,4 +1,4 @@
-.container {
+.page202__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
@@ -6,28 +6,28 @@
     text-align: left;
 }
 
-.pageContainer {
+.page202__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
     padding: 2rem;
 }
 
-.grammarRow, .exampleRow {
+.page202__grammarRow, .page202__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span, .exampleRow span {
+.page202__grammarRow span, .page202__exampleRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
 }
 
-.header {
+.page202__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page202__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -35,41 +35,41 @@
     margin-left: 2rem;
 }
 
-.mainContent {
+.page202__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.grammarSection {
+.page202__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grammarHeader {
+.page202__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page202__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page202__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page202__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page202__grammarRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -78,15 +78,15 @@
     font-weight: 500;
 }
 
-.grammarRow span:nth-child(3) {
+.page202__grammarRow span:nth-child(3) {
     color: #990000;
 }
 
-.grammarRow span:last-child {
+.page202__grammarRow span:last-child {
     border-right: none;
 }
 
-.sectionHeader {
+.page202__sectionHeader {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1rem 2rem;
@@ -96,41 +96,41 @@
     gap: 0.5rem;
 }
 
-.exampleTitle {
+.page202__exampleTitle {
     color: #990000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.separator, .titleTranslation {
+.page202__separator, .page202__titleTranslation {
     color: #000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.separator:nth-last-child(1),
-.separator:nth-last-child(3) {
+.page202__separator:nth-last-child(1),
+.page202__separator:nth-last-child(3) {
     color: #990000;
     margin: 0 0.2rem;
 }
 
-.exampleBox {
+.page202__exampleBox {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.exampleRow {
+.page202__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     border-bottom: 1px solid #ddd;
 }
 
-.exampleRow:last-child {
+.page202__exampleRow:last-child {
     border-bottom: none;
 }
 
-.exampleRow span {
+.page202__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -138,32 +138,32 @@
     color: #990000;
 }
 
-.exampleRow:nth-child(2) span {
+.page202__exampleRow:nth-child(2) span {
     color: #000000;
 }
 
-.exampleRow:last-child span {
+.page202__exampleRow:last-child span {
     color: #000000;
 }
 
-.verbCell {
+.page202__verbCell {
     background-color: white;
 }
 
-.objectCell {
+.page202__objectCell {
     text-align: left;
     padding-left: 2rem;
     border-right: none;
 }
 
-.imagesSection {
+.page202__imagesSection {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.imagePlaceholder {
+.page202__imagePlaceholder {
     width: 45%;
     height: 280px;
     background-color: #f0f0f0;
@@ -185,19 +185,19 @@
 }
 
 @media (max-width: 768px) {
-    .headerTitle {
+    .page202__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .exampleRow {
+    .page202__grammarRow, .page202__exampleRow {
         grid-template-columns: 1fr;
     }
 
-    .imagesSection {
+    .page202__imagesSection {
         flex-direction: column;
     }
 
-    .imagePlaceholder {
+    .page202__imagePlaceholder {
         width: 100%;
     }
 }

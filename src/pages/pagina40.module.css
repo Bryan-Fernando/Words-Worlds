@@ -123,7 +123,14 @@
 }
 
 .page40__audio--icon,
-.page40__portuguese--audio--icon,
+.page40__portuguese--audio--icon{
+    margin: 0 0.5%;
+    width: auto;
+    height: 2.5rem;
+    cursor: pointer;
+    width: 3.5rem;
+    height: 3.5rem;
+}
 .page40__volume--audio--icon {
     margin: 0 0.5%;
     width: auto;
@@ -199,8 +206,8 @@
 }
 
 .page40__header img {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
 }
 

@@ -80,6 +80,7 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 2rem;
+    text-align: left;
 }
 
 .page92__questions-container p {
@@ -89,7 +90,7 @@
     font-size: 2rem;
 }
 
-.page92__questions-container div {
+.page92__input-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -104,10 +105,8 @@
 .page92__answer-text {
     font-size: 2rem;
     font-weight: bold;
-    text-align: left;
     color: black;
 }
-
 
 .page92__image-container {
     display: flex;
@@ -251,22 +250,20 @@
     left: 21rem;
 }
 
+.page92__icons-group {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+}
+
 .page92__additional-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 2.3rem;
+    height: 2.3rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-}
-
-.page92__additional-icon:nth-child(1) {
-    position: relative;
-    top: 2.3rem
-}
-
-.page92__additional-icon:nth-child(2) {
-    position: relative;
-    left: 3rem;
-    top: 0.1rem
+    position: static;
 }
 
 .page92__icon--pulsing {
@@ -277,29 +274,30 @@
     0% {
         transform: scale(1);
     }
-
     50% {
         transform: scale(1.2);
     }
-
     100% {
         transform: scale(1);
     }
 }
 
 .page92__eng_audio_icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
 }
 
 .page92__header-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
     margin-left: 0.5rem;
 }
-
 
 @media (max-width: 1024px) {
     .page92__aside-content {
@@ -312,16 +310,13 @@
     .page92__table--interrogative th {
         font-size: 2rem;
     }
-
     .page92__image-container p {
         font-weight: lighter;
         font-size: 2rem;
     }
-
     .page92__image-container strong {
         font-size: 2rem;
     }
-
     .page92__notice img {
         height: 1.9rem;
     }

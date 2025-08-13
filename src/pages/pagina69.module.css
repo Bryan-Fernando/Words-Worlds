@@ -140,8 +140,8 @@
 .icon--low-volume {
     cursor: pointer;
     margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }
 
 .page69__chip {
@@ -246,7 +246,7 @@
 
 /* Ícones de Áudio no Cabeçalho */
 .page69__audio-icon {
-    width: 2.5rem; /* Tamanho fixo para os ícones */
+    width: 3.5rem; /* Tamanho fixo para os ícones */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;

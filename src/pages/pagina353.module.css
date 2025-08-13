@@ -1,20 +1,20 @@
-﻿.container {
+﻿.page353__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page353__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page353__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instructionRed {
+.page353__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,14 +22,14 @@
   text-align: left;
 }
 
-.subInstruction {
+.page353__subInstruction {
   font-style: italic;
   font-size: 1.3rem;
   margin-bottom: 1rem;
   color: #333;
 }
 
-.subtitleCorrectAnswer {
+.page353__subtitleCorrectAnswer {
     font-size: 1.35rem; 
     font-weight: bold; 
     text-align: left; 
@@ -37,7 +37,7 @@
     max-width: 650px;
 }
 
-.questionBox {
+.page353__questionBox {
   border: 3px solid #a61c28;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -46,17 +46,17 @@
   max-width: 650px;
 }
 
-.main {
+.page353__main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.multipleChoiceQuestion {
+.page353__multipleChoiceQuestion {
   margin-bottom: 1rem;
 }
 
-.questionText {
+.page353__questionText {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
@@ -64,51 +64,51 @@
   align-items: center;
 }
 
-.optionsContainer {
+.page353__optionsContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1.5rem;
 }
 
-.optionItem {
+.page353__optionItem {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
 }
 
-.radioInput {
+.page353__radioInput {
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.radioLabel {
+.page353__radioLabel {
   cursor: pointer;
 }
 
-.chosenAnswer {
+.page353__chosenAnswer {
   font-weight: bold;
   color: #333;
   margin: 0 0.5rem;
 }
 
-.blankPlaceholder {
+.page353__blankPlaceholder {
   margin: 0 0.5rem;
 }
 
-.resultIcon {
+.page353__resultIcon {
   width: 24px;
   height: 24px;
   margin-left: 0.3rem;
   vertical-align: middle;
 }
 
-.checkContainer {
+.page353__checkContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.checkButton {
+.page353__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -120,11 +120,11 @@
   margin-left: 0;
 }
 
-.checkButton:hover {
+.page353__checkButton:hover {
   background-color: #8a1720;
 }
 
-.dividerInsideBox {
+.page353__dividerInsideBox {
   border: 0;
   height: 1px;
   background-color: #ccc;

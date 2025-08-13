@@ -1,12 +1,12 @@
 ﻿/* Configurações básicas */
-.container {
+.page339__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page339__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
@@ -14,11 +14,11 @@
 }
 
 /* Cabeçalho */
-.header {
+.page339__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page339__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -27,14 +27,14 @@
 }
 
 /* Layout principal */
-.mainContent {
+.page339__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
 /* Seção de introdução */
-.grammarIntro {
+.page339__grammarIntro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -42,11 +42,11 @@
 }
 
 /* Estilos do verbo Will */
-.willVerb {
+.page339__willVerb {
     text-align: left;
 }
 
-.willVerb h2 {
+.page339__willVerb h2 {
     font-size: 2.8rem;
     font-weight: bold;
     font-style: italic;
@@ -56,7 +56,7 @@
     align-items: center;
 }
 
-.willBullet {
+.page339__willBullet {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -65,36 +65,36 @@
 }
 
 /* Seção de gramática */
-.grammarSection {
+.page339__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.grammarHeader {
+.page339__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page339__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page339__grammarContent {
     background-color: #b0aeae;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page339__grammarRow {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page339__grammarRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
     text-align: center;
@@ -103,12 +103,12 @@
     border-right: 1px solid #ddd;
 }
 
-.grammarRow span:last-child {
+.page339__grammarRow span:last-child {
     border-right: none;
 }
 
 /* Tabela de conteúdo */
-.tableContent {
+.page339__tableContent {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
@@ -116,23 +116,23 @@
     background-color: #ffffff;
 }
 
-.tableGroup {
+.page339__tableGroup {
     position: relative;
     padding: 1rem 0;
     border-bottom: 1px solid #ddd;
 }
 
-.tableGroup:last-child {
+.page339__tableGroup:last-child {
     border-bottom: none;
 }
 
-.tableRow {
+.page339__tableRow {
     display: grid;
     grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
 }
 
-.pg338Cell {
+.page339__pg338Cell {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -142,7 +142,7 @@
     position: relative;
 }
 
-.pg338Cell:not(:last-child)::after {
+.page339__pg338Cell:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -152,30 +152,30 @@
     background-color: #ddd;
 }
 
-.pg338Cell:last-child {
+.page339__pg338Cell:last-child {
     border-right: none;
 }
 
-.pg338Red {
+.page339__pg338Red {
     color: #990000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg338Black {
+.page339__pg338Black {
     color: #000000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg338Dash {
+.page339__pg338Dash {
     color: #000000;
     font-style: normal;
     font-size: 2.2rem;
 }
 
 /* Caixa de Nota */
-.noteBox {
+.page339__noteBox {
     width: 600px;
     margin: 2rem 0;
     background-color: white;
@@ -184,7 +184,7 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.noteTitle {
+.page339__noteTitle {
     background-color: #002f6c;
     color: white;
     font-weight: bold;
@@ -198,19 +198,33 @@
     align-items: center;
 }
 
-.lightIcon {
+.page339__lightIcon {
     margin-left: 5px;
 }
 
-.noteContent {
+.page339__noteContent {
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.noteFormula {
+.page339__noteFormula {
     color: #0f3f6e;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.page339__blueText {
+    color: #104b86;
+    font-style: italic;
+    font-size: 2.2rem;
+}
+
+.page339__redText {
+    color: #A61C28;
     font-style: italic;
     font-weight: bold;
     font-size: 1.6rem;
@@ -219,23 +233,23 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .headerTitle {
+    .page339__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .tableRow {
+    .page339__grammarRow, .page339__tableRow {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow span {
+    .page339__grammarRow span {
         border-bottom: 1px solid #ddd;
     }
 
-    .grammarRow span:last-child {
+    .page339__grammarRow span:last-child {
         border-bottom: none;
     }
     
-    .noteBox {
+    .page339__noteBox {
         width: 100%;
     }
 }

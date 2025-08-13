@@ -30,19 +30,19 @@ const Pagina202 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Examples</h1>
+        <div className={styles.page202__container}>
+            <div className={styles.page202__pageContainer}>
+                <header className={styles.page202__header}>
+                    <h1 className={styles.page202__headerTitle}>Examples</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Negative Form</h2>
+                <main className={styles.page202__mainContent}>
+                    <section className={styles.page202__grammarSection}>
+                        <div className={styles.page202__grammarHeader}>
+                            <h2 className={styles.page202__grammarTitle}>Negative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page202__grammarContent}>
+                            <div className={styles.page202__grammarRow}>
                                 <span>Subject</span>
                                 <span>Aux. Verb</span>
                                 <span>Not</span>
@@ -53,81 +53,81 @@ const Pagina202 = () => {
                     </section>
 
                     {/* AVAILABILITY */}
-                    <section className={styles.exampleSection}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Availability</em>
+                    <section className={styles.page202__exampleSection}>
+                        <div className={styles.page202__sectionHeader}>
+                            <em className={styles.page202__exampleTitle}>Availability</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page202__audio_icon}
                                 onClick={() => playAudio('pg202_audio1e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Disponibilidade</em>
+                            <span className={styles.page202__separator}>/</span>
+                            <em className={styles.page202__titleTranslation}>Disponibilidade</em>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page202__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page202__exampleRow}
                                 onClick={() => playAudio('pg202_audio2e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>They</span>
-                                <span className={styles.highlight}>can't</span>
+                                <span className={styles.page202__highlight}>can't</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>come</span>
-                                <span className={styles.objectCell}>to the meeting</span>
+                                <span className={styles.page202__verbCell}>come</span>
+                                <span className={styles.page202__objectCell}>to the meeting</span>
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page202__exampleRow}>
                                 <span>Eles</span>
-                                <span className={styles.highlight}>não podem</span>
+                                <span className={styles.page202__highlight}>não podem</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>vir</span>
-                                <span className={styles.objectCell}>à reunião</span>
+                                <span className={styles.page202__verbCell}>vir</span>
+                                <span className={styles.page202__objectCell}>à reunião</span>
                             </div>
                         </div>
                     </section>
 
                     {/* REQUESTS */}
-                    <section className={styles.exampleSection}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Requests</em>
+                    <section className={styles.page202__exampleSection}>
+                        <div className={styles.page202__sectionHeader}>
+                            <em className={styles.page202__exampleTitle}>Requests</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page202__audio_icon}
                                 onClick={() => playAudio('pg202_audio3e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Solicitações ou Pedidos</em>
-                            <span className={styles.separator}>(</span>
-                            <em className={styles.exampleTitle}>Recusados</em>
-                            <span className={styles.separator}>)</span>
+                            <span className={styles.page202__separator}>/</span>
+                            <em className={styles.page202__titleTranslation}>Solicitações ou Pedidos</em>
+                            <span className={styles.page202__separator}>(</span>
+                            <em className={styles.page202__exampleTitle}>Recusados</em>
+                            <span className={styles.page202__separator}>)</span>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page202__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page202__exampleRow}
                                 onClick={() => playAudio('pg202_audio4e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>We</span>
-                                <span className={styles.highlight}>can't</span>
+                                <span className={styles.page202__highlight}>can't</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>help</span>
-                                <span className={styles.objectCell}>you right now</span>
+                                <span className={styles.page202__verbCell}>help</span>
+                                <span className={styles.page202__objectCell}>you right now</span>
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page202__exampleRow}>
                                 <span>Nós</span>
-                                <span className={styles.highlight}>não podemos</span>
+                                <span className={styles.page202__highlight}>não podemos</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>te ajudar</span>
-                                <span className={styles.objectCell}>agora</span>
+                                <span className={styles.page202__verbCell}>te ajudar</span>
+                                <span className={styles.page202__objectCell}>agora</span>
                             </div>
                         </div>
                     </section>
 
-                    <section className={styles.imagesSection}>
-                        <div className={styles.imagePlaceholder}></div>
-                        <div className={styles.imagePlaceholder}></div>
+                    <section className={styles.page202__imagesSection}>
+                        <div className={styles.page202__imagePlaceholder}></div>
+                        <div className={styles.page202__imagePlaceholder}></div>
                     </section>
                 </main>
             </div>

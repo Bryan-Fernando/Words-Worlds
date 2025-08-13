@@ -3,25 +3,25 @@ import styles from "./pagina340.module.css";
 
 const pagina340 = () => {
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Grammar - Simple Future</h1>
+        <div className={styles.page340__container}>
+            <div className={styles.page340__pageContainer}>
+                <header className={styles.page340__header}>
+                    <h1 className={styles.page340__headerTitle}>Grammar - Simple Future</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarIntro}>
-                        <div className={styles.willVerb}>
-                            <h2><span className={styles.willBullet}></span>Will</h2>
+                <main className={styles.page340__mainContent}>
+                    <section className={styles.page340__grammarIntro}>
+                        <div className={styles.page340__willVerb}>
+                            <h2><span className={styles.page340__willBullet}></span>Will</h2>
                         </div>
                     </section>
 
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Negative Interrogative Form</h2>
+                    <section className={styles.page340__grammarSection}>
+                        <div className={styles.page340__grammarHeader}>
+                            <h2 className={styles.page340__grammarTitle}>Negative Interrogative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page340__grammarContent}>
+                            <div className={styles.page340__grammarRow}>
                                 <span>Palavras interrogativas</span>
                                 <span>Aux. Verb</span>
                                 <span>Subject</span>
@@ -31,131 +31,131 @@ const pagina340 = () => {
                         </div>
                     </section>
 
-                    <section className={styles.tableContent}>
-                        <div className={styles.tableGroup}>
+                    <section className={styles.page340__tableContent}>
+                        <div className={styles.page340__tableGroup}>
                             {/* bloco do "I" */}
-                            <div className={styles.tableRow}>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>—</span>
+                            <div className={styles.page340__tableRow}>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>—</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>Won't</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>Won't</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>I</span>
-                                    <span className={styles.pg338Black}>Eu</span>
-                                    <span className={styles.pg338Black}>Eu</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>I</span>
+                                    <span className={styles.page340__pg338Black}>Eu</span>
+                                    <span className={styles.page340__pg338Black}>Eu</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>have</span>
-                                    <span className={styles.pg338Black}>  <span className={styles.blueText}>não</span> terei</span>
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>não </span> vou ter</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>have</span>
+                                    <span className={styles.page340__pg338Black}>  <span className={styles.page340__blueText}>não</span> terei</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>não </span> vou ter</span>
                                     
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>class tomorrow?</span>
-                                    <span className={styles.pg338Black}>aula amanhã?</span>
-                                    <span className={styles.pg338Black}>aula amanhã?</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>class tomorrow?</span>
+                                    <span className={styles.page340__pg338Black}>aula amanhã?</span>
+                                    <span className={styles.page340__pg338Black}>aula amanhã?</span>
                                 </div>
                             </div>
                         </div>
                     </section>
-                    <section className={styles.tableContent}>
+                    <section className={styles.page340__tableContent}>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page340__tableGroup}>
                             {/* bloco do "He" */}
-                            <div className={styles.tableRow}>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>—</span>
+                            <div className={styles.page340__tableRow}>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>—</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>Won't</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>Won't</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>He</span>
-                                    <span className={styles.pg338Black}>Ele</span>
-                                    <span className={styles.pg338Black}>Ele</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>He</span>
+                                    <span className={styles.page340__pg338Black}>Ele</span>
+                                    <span className={styles.page340__pg338Black}>Ele</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>travel</span>
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>não </span> viajará</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>travel</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>não </span> viajará</span>
                                     
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>não </span> vai viajar</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>não </span> vai viajar</span>
                                     
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>next week?</span>
-                                    <span className={styles.pg338Black}>na semana que vem?</span>
-                                    <span className={styles.pg338Black}>na semana que vem?</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>next week?</span>
+                                    <span className={styles.page340__pg338Black}>na semana que vem?</span>
+                                    <span className={styles.page340__pg338Black}>na semana que vem?</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page340__tableGroup}>
                             {/* bloco do "She" */}
-                            <div className={styles.tableRow}>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>—</span>
+                            <div className={styles.page340__tableRow}>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>—</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>Won't</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>Won't</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>she</span>
-                                    <span className={styles.pg338Black}>Ela</span>
-                                    <span className={styles.pg338Black}>Ela</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>she</span>
+                                    <span className={styles.page340__pg338Black}>Ela</span>
+                                    <span className={styles.page340__pg338Black}>Ela</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>call</span>
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>não </span> ligará</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>call</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>não </span> ligará</span>
                                     
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>não </span> vai ligar</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>não </span> vai ligar</span>
                                     
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>you later?</span>
-                                    <span className={styles.pg338Black}>para você mais tarde?</span>
-                                    <span className={styles.pg338Black}>para você mais tarde?</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>you later?</span>
+                                    <span className={styles.page340__pg338Black}>para você mais tarde?</span>
+                                    <span className={styles.page340__pg338Black}>para você mais tarde?</span>
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page340__tableGroup}>
                             {/* bloco do "It" */}
-                            <div className={styles.tableRow}>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>—</span>
+                            <div className={styles.page340__tableRow}>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>—</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>Won't</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>Won't</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>it</span>
-                                    <span className={styles.pg338Black}>-</span>
-                                    <span className={styles.pg338Black}>-</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>it</span>
+                                    <span className={styles.page340__pg338Black}>-</span>
+                                    <span className={styles.page340__pg338Black}>-</span>
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>open</span>
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>Não </span> abrirá</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>open</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>Não </span> abrirá</span>
                                     
-                                    <span className={styles.pg338Black}><span className={styles.blueText}>Não </span> vai abrir</span>
+                                    <span className={styles.page340__pg338Black}><span className={styles.page340__blueText}>Não </span> vai abrir</span>
                                     
                                 </div>
-                                <div className={styles.pg338Cell}>
-                                    <span className={styles.pg338Red}>at 10:00 a.m.?</span>
-                                    <span className={styles.pg338Black}>às 10:00 da manhã?</span>
-                                    <span className={styles.pg338Black}>às 10:00 da manhã?</span>
+                                <div className={styles.page340__pg338Cell}>
+                                    <span className={styles.page340__pg338Red}>at 10:00 a.m.?</span>
+                                    <span className={styles.page340__pg338Black}>às 10:00 da manhã?</span>
+                                    <span className={styles.page340__pg338Black}>às 10:00 da manhã?</span>
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <div className={styles.noteBox}>
-                        <div className={styles.noteTitle}>
-                            Nota: <span className={styles.lightIcon}>💡</span>
+                    <div className={styles.page340__noteBox}>
+                        <div className={styles.page340__noteTitle}>
+                            Nota: <span className={styles.page340__lightIcon}>💡</span>
                         </div>
-                        <div className={styles.noteContent}>
-                            <div className={styles.noteFormula}>
+                        <div className={styles.page340__noteContent}>
+                            <div className={styles.page340__noteFormula}>
                                 <span>• Conforme a tabela acima, não se esqueça de que o verbo auxiliar troca de posição com o sujeito nas perguntas.</span>
                             </div>
                         </div>

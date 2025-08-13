@@ -1,21 +1,21 @@
 ﻿/* --- Estilos Gerais (Mantidos) --- */
-.container {
+.page351__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page351__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page351__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instructionRed {
+.page351__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -23,7 +23,7 @@
   text-align: left;
 }
 
-.instructionSubtitle {
+.page351__instructionSubtitle {
   font-style: italic;
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -31,7 +31,7 @@
   color: #000;
 }
 
-.questionBox {
+.page351__questionBox {
   border: 3px solid #a61c28;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -41,114 +41,109 @@
 }
 
 /* --- Estilos para o Exercício de Diálogos (Foco nas Correções) --- */
-.dialoguesContainer {
+.page351__dialoguesContainer {
   display: flex;
   flex-direction: column;
 }
 
 /* Alinha o número (1.) com o conteúdo da primeira linha e as empilha */
-.dialogueItem {
+.page351__dialogueItem {
   display: flex;
-  align-items: baseline; /* Alinha o número e o conteúdo da primeira linha pela linha de base */
-  margin-bottom: 1.5rem; /* Espaço entre os itens principais (1, 2, 3...) */
-  flex-wrap: wrap; /* Permite que o ITEM COMPLETO quebre se for muito longo */
-  gap: 0.5rem; /* Espaçamento entre o .itemNumberContainer e o .dialogueContentWrapper */
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 /* Contêiner da letra/número da questão (1, 2, etc.) */
-.itemNumberContainer {
-  flex-shrink: 0; /* Impede que encolha */
-  padding-right: 0.3rem; /* Espaço à direita do número */
+.page351__itemNumberContainer {
+  flex-shrink: 0;
+  padding-right: 0.3rem;
 }
 
-.itemNumber {
+.page351__itemNumber {
   font-weight: bold;
   font-size: 1.25rem;
   text-align: right;
-  line-height: 1.4; /* Consistência de line-height */
+  line-height: 1.4;
 }
 
-.itemNumberPlaceholder { /* Mantido para consistência de estrutura */
+.page351__itemNumberPlaceholder {
   min-width: 1.5rem;
   flex-shrink: 0;
 }
 
 /* Wrapper para o conteúdo do diálogo (texto + inputs) APÓS o número */
-.dialogueContentWrapper {
+.page351__dialogueContentWrapper {
   display: flex;
-  flex-direction: column; /* CRUCIAL: Empilha as dialoguePart (linhas de diálogo) verticalmente */
-  flex-grow: 1; /* Permite que este wrapper ocupe o espaço restante horizontalmente */
-  min-width: 0; /* Permite que encolha para quebra de linha flexível */
-  /* Removido gap horizontal e flex-wrap daqui, pois o flex-direction: column já controla */
+  flex-direction: column;
+  flex-grow: 1;
+  min-width: 0;
 }
 
 /* Cada segmento de texto/input/ícone - Agora representa uma "linha" dentro do diálogo */
-.dialoguePart {
-  display: flex; /* Faz os elementos dentro de cada linha (texto, input) fluírem horizontalmente */
-  align-items: baseline; /* Garante alinhamento vertical de texto/input na linha de base */
-  flex-wrap: wrap; /* Permite que os elementos *dentro desta linha* quebrem se muito longos */
-  gap: 0.4rem; /* Espaçamento entre texto/input/ícone dentro da mesma linha */
-  margin-bottom: 0.3rem; /* Espaçamento vertical entre as "linhas de diálogo" (partes) */
+.page351__dialoguePart {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
-.dialogueText {
-  font-size: 1.4rem; /* Tamanho do texto da pergunta */
-  line-height: 1.4; /* Consistência de line-height */
+.page351__dialogueText {
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 /* Indentação para a segunda linha (resposta) */
-.dialogueTextIndent {
-  font-size: 1.4rem; /* Tamanho para texto indentado */
-  line-height: 1.4; /* Consistência de line-height */
-  /* Removida margin-left direta; a indentação será feita no .dialoguePart como um todo */
+.page351__dialogueTextIndent {
+  font-size: 1.4rem;
+  line-height: 1.4;
 }
 
 /* APLICAR INDENTAÇÃO À SEGUNDA LINHA (e subsequentes) DO DIÁLOGO INTEIRO */
-/* Isso fará com que a linha "Sure, I..." comece indentada */
-.dialogueContentWrapper .dialoguePart:not(:first-child) {
-  margin-left: 2rem; /* Valor da indentação - AJUSTAR CONFORME NECESSÁRIO */
-  /* Se precisar de um alinhamento mais complexo, pode ser necessário ajustar padding-left */
+.page351__dialogueContentWrapper .page351__dialoguePart:not(:first-child) {
+  margin-left: 2rem;
 }
 
-
-.dialogueInput {
+.page351__dialogueInput {
   width: 50px;
   height: 28px;
   padding: 0.2rem 0.3rem;
-  font-size: 1.3rem; /* Tamanho da letra dentro do campo */
+  font-size: 1.3rem;
   text-align: center;
   border-radius: 4px;
   border: 1px solid #ccc;
   background-color: #fff;
   font-weight: normal;
   color: #333;
-  line-height: 1.4; /* Consistência de line-height */
+  line-height: 1.4;
   flex-shrink: 0;
   flex-grow: 0;
 }
 
-.resultIcon {
+.page351__resultIcon {
   width: 22px;
   height: 22px;
   margin-left: 0.3rem;
   flex-shrink: 0;
-  align-self: center; /* Alinha o ícone no centro vertical da linha */
+  align-self: center;
 }
 
-.divider {
+.page351__divider {
   width: 100%;
   border: none;
   border-top: 1px solid #ccc;
   margin: 1.2rem 0;
 }
 
-.checkContainer {
+.page351__checkContainer {
   display: flex;
   justify-content: flex-start;
   margin-bottom: 2rem;
 }
 
-.checkButton {
+.page351__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -159,34 +154,34 @@
   width: fit-content;
 }
 
-.checkButton:hover {
+.page351__checkButton:hover {
   background-color: #8a1720;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .questionBox {
+  .page351__questionBox {
     padding: 0.8rem;
   }
-  .dialogueText,
-  .dialogueTextIndent {
+  .page351__dialogueText,
+  .page351__dialogueTextIndent {
     font-size: 1rem;
   }
-  .dialogueInput {
+  .page351__dialogueInput {
     width: 45px;
     height: 26px;
     font-size: 1.1rem;
   }
-  .itemNumber {
+  .page351__itemNumber {
     font-size: 1.1rem;
   }
-  .dialogueLine {
+  .page351__dialogueLine {
     gap: 0.4rem;
   }
-  .dialogueTextIndent {
+  .page351__dialogueTextIndent {
     margin-left: 1rem;
   }
-  .resultIcon {
+  .page351__resultIcon {
     width: 20px;
     height: 20px;
   }

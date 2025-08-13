@@ -43,32 +43,32 @@ const Pagina271 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.grammarRed}>Grammar</span> - <span className={styles.grammarBold}>Adjectives</span></h1>
+    <div className={styles.page271__container}>
+      <header className={styles.page271__header}>
+        <h1><span className={styles.page271__grammarRed}>Grammar</span> - <span className={styles.page271__grammarBold}>Adjectives</span></h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page271__instruction}>
         <strong>4.</strong> Rewrite the sentence using the word in parentheses:
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page271__questionBox}>
+        <main className={styles.page271__main}>
           {questions.map((q, index) => (
-            <div key={index} className={styles.question}>
-              <span className={styles.original}>{q.original}</span>
-              <div className={styles.inputWrapper}>
+            <div key={index} className={styles.page271__question}>
+              <span className={styles.page271__original}>{q.original}</span>
+              <div className={styles.page271__inputWrapper}>
                 <input
                   type="text"
                   value={inputValues[index]}
                   onChange={(e) => handleInputChange(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page271__input}
                 />
                 {results[index] !== null && (
                   <img
                     src={results[index] ? correctIcon : wrongIcon}
                     alt={results[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page271__resultIcon}
                   />
                 )}
               </div>
@@ -77,8 +77,8 @@ const Pagina271 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page271__checkContainer}>
+        <button className={styles.page271__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

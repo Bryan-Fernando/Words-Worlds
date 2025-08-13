@@ -83,19 +83,19 @@
   position: static; /* REMOVA o absolute */
 }
 .page146__icons-container img {
-  width: 2rem;
-  height: 2rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: relative;
   margin-left: 0.5rem;
   cursor: pointer;
   position: relative;
-  top: 0.3rem;
 }
 
 .page146__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     position: relative;
-    top: 0.3rem;
+    top: 0.5rem;
     margin-left: 0.5rem;
     cursor: pointer;
     transition: transform 0.2s ease;

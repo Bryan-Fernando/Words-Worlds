@@ -1,1 +1,231 @@
-﻿
+﻿/* Container principal */
+.container {
+  min-height: 100vh;
+  background-color: white;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Título principal */
+.dialoguesTitle {
+  color: #c53030;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 6rem;
+  margin-top: 3rem;
+  font-style: italic;
+}
+
+/* Seção de diálogos */
+.dialoguesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.dialogueBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+/* Blocos de imagem */
+.imageContainer {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dialogueImage {
+  width: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dialogueContent {
+  flex: 1;
+}
+
+.dialogueLine {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.speaker {
+  color: #333;
+  font-weight: bold;
+  font-size: 2.2rem;
+  min-width: 20px;
+}
+
+.englishText {
+  color: #333;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.portugueseText {
+  color: #c53030;
+  font-size: 2.2rem;
+  font-style: italic;
+  text-align: left;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .dialoguesTitle {
+    font-size: 3.6rem;
+  }
+
+  .speaker {
+    font-size: 2.6rem;
+  }
+
+  .englishText {
+    font-size: 2.6rem;
+  }
+
+  .portugueseText {
+    font-size: 2.6rem;
+  }
+
+  .imageContainer {
+    flex: 0 0 240px;
+  }
+
+  .dialogueImage {
+    width: 240px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .unitHeader {
+    position: static;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .dialoguesTitle {
+    font-size: 3.8rem;
+    text-align: center;
+  }
+
+  .speaker {
+    font-size: 2.8rem;
+  }
+
+  .englishText {
+    font-size: 2.8rem;
+  }
+
+  .portugueseText {
+    font-size: 2.8rem;
+  }
+
+  .dialogueBlock {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .imageContainer {
+    flex: none;
+    width: 100%;
+    align-self: center;
+  }
+
+  .dialogueImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .dialogueBlock:nth-child(2) {
+  flex-direction: column-reverse;
+}
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .dialoguesTitle {
+    font-size: 4rem;
+  }
+
+  .speaker {
+    font-size: 3rem;
+  }
+
+  .englishText {
+    font-size: 3rem;
+  }
+
+  .portugueseText {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  .dialoguesSection {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0.8rem;
+  }
+
+  .dialoguesTitle {
+    font-size: 4.1rem;
+  }
+
+  .speaker {
+    font-size: 3.1rem;
+  }
+
+  .englishText {
+    font-size: 3.1rem;
+  }
+
+  .portugueseText {
+    font-size: 3.1rem;
+    margin-left: 1.5rem;
+  }
+
+  .dialogueLine {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .dialoguesTitle {
+    font-size: 4.2rem;
+  }
+
+  .speaker {
+    font-size: 3.2rem;
+  }
+
+  .englishText {
+    font-size: 3.2rem;
+  }
+
+  .portugueseText {
+    font-size: 3.2rem;
+    margin-left: 1rem;
+  }
+}

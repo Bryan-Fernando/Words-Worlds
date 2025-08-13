@@ -1,20 +1,20 @@
-﻿.container {
+﻿.page342__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page342__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page342__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instruction {
+.page342__instruction {
   color: #1c4c9c;
   font-size: 1.5rem;
   font-weight: bold;
@@ -23,7 +23,7 @@
 }
 
 /* Nova classe para os títulos em vermelho */
-.instructionRed {
+.page342__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -31,7 +31,7 @@
   text-align: left;
 }
 
-.questionBox {
+.page342__questionBox {
   border: 3px solid #a61c28;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -40,13 +40,13 @@
   max-width: 650px;
 }
 
-.main {
+.page342__main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.question {
+.page342__question {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -54,7 +54,7 @@
   flex-wrap: wrap;
 }
 
-.input {
+.page342__input {
   width: 240px;
   padding: 0.5rem;
   font-size: 1.3rem;
@@ -66,19 +66,19 @@
   margin: 0 0.5rem;
 }
 
-.resultIcon {
+.page342__resultIcon {
   width: 24px;
   height: 24px;
   margin-left: 0.3rem;
   vertical-align: middle;
 }
 
-.checkContainer {
+.page342__checkContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.checkButton {
+.page342__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -90,18 +90,18 @@
   margin-left: 0;
 }
 
-.checkButton:hover {
+.page342__checkButton:hover {
   background-color: #8a1720;
 }
 
 /* Estilos para a seção de respostas */
-.answersSection {
+.page342__answersSection {
   margin-top: 1.5rem;
   margin-bottom: 2rem;
   max-width: 650px;
 }
 
-.checkTitle {
+.page342__checkTitle {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -109,19 +109,19 @@
   text-decoration: underline;
 }
 
-.answers {
+.page342__answers {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
 
-.answer {
+.page342__answer {
   font-size: 1.4rem;
   font-weight: bold;
 }
 
 /* Estilos para o divisor */
-.divider {
+.page342__divider {
   border: 0;
   height: 1px;
   background-color: #ccc;
@@ -130,11 +130,11 @@
 }
 
 /* Estilos para múltipla escolha */
-.multipleChoiceQuestion {
+.page342__multipleChoiceQuestion {
   margin-bottom: 1.5rem;
 }
 
-.questionText {
+.page342__questionText {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 0.8rem;
@@ -142,35 +142,35 @@
   align-items: center;
 }
 
-.optionsContainer {
+.page342__optionsContainer {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   margin-left: 1.5rem;
 }
 
-.optionItem {
+.page342__optionItem {
   display: flex;
   align-items: center;
   font-size: 1.4rem;
 }
 
-.radioInput {
+.page342__radioInput {
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-.radioLabel {
+.page342__radioLabel {
   cursor: pointer;
 }
 
 /* Estilo para a resposta escolhida no exercício de múltipla escolha */
-.chosenAnswer {
+.page342__chosenAnswer {
   font-weight: bold;
   color: #333;
   margin: 0 0.5rem;
 }
 
-.blankPlaceholder {
+.page342__blankPlaceholder {
   margin: 0 0.5rem;
 }

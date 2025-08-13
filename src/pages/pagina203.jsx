@@ -30,19 +30,19 @@ const Pagina203 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Examples</h1>
+        <div className={styles.page203__container}>
+            <div className={styles.page203__pageContainer}>
+                <header className={styles.page203__header}>
+                    <h1 className={styles.page203__headerTitle}>Examples</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Negative Form</h2>
+                <main className={styles.page203__mainContent}>
+                    <section className={styles.page203__grammarSection}>
+                        <div className={styles.page203__grammarHeader}>
+                            <h2 className={styles.page203__grammarTitle}>Negative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page203__grammarContent}>
+                            <div className={styles.page203__grammarRow}>
                                 <span>Subject</span>
                                 <span>Aux. Verb</span>
                                 <span>Not</span>
@@ -53,78 +53,78 @@ const Pagina203 = () => {
                     </section>
 
                     {/* PROHIBITION */}
-                    <section className={styles.exampleSection}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Prohibition</em>
+                    <section className={styles.page203__exampleSection}>
+                        <div className={styles.page203__sectionHeader}>
+                            <em className={styles.page203__exampleTitle}>Prohibition</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page203__audio_icon}
                                 onClick={() => playAudio('pg203_audio1e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Proibição</em>
+                            <span className={styles.page203__separator}>/</span>
+                            <em className={styles.page203__titleTranslation}>Proibição</em>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page203__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page203__exampleRow}
                                 onClick={() => playAudio('pg203_audio2e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>You</span>
-                                <span className={styles.highlight}>can't</span>
+                                <span className={styles.page203__highlight}>can't</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>park</span>
-                                <span className={styles.objectCell}>here</span>
+                                <span className={styles.page203__verbCell}>park</span>
+                                <span className={styles.page203__objectCell}>here</span>
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page203__exampleRow}>
                                 <span>Você</span>
-                                <span className={styles.highlight}>não pode</span>
+                                <span className={styles.page203__highlight}>não pode</span>
                                 <span>—</span>
-                                <span className={styles.verbCell}>estacionar</span>
-                                <span className={styles.objectCell}>aqui</span>
+                                <span className={styles.page203__verbCell}>estacionar</span>
+                                <span className={styles.page203__objectCell}>aqui</span>
                             </div>
                         </div>
                     </section>
 
                     {/* ADVICE */}
-                    <section className={`${styles.exampleSection} ${styles.fiveColumnSection}`}>
-                        <div className={styles.sectionHeader}>
-                            <em className={styles.exampleTitle}>Advice</em>
+                    <section className={`${styles.page203__exampleSection} ${styles.page203__fiveColumnSection}`}>
+                        <div className={styles.page203__sectionHeader}>
+                            <em className={styles.page203__exampleTitle}>Advice</em>
                             <img
                                 src={eng_audio_icon}
                                 alt="Audio English"
                                 className={styles.page203__audio_icon}
                                 onClick={() => playAudio('pg203_audio3e')}
                             />
-                            <span className={styles.separator}>/</span>
-                            <em className={styles.titleTranslation}>Conselho</em>
+                            <span className={styles.page203__separator}>/</span>
+                            <em className={styles.page203__titleTranslation}>Conselho</em>
                         </div>
-                        <div className={styles.exampleBox}>
+                        <div className={styles.page203__exampleBox}>
                             <div
-                                className={styles.exampleRow}
+                                className={styles.page203__exampleRow}
                                 onClick={() => playAudio('pg203_audio4e')}
                                 style={{ cursor: 'pointer' }}
                             >
                                 <span>You</span>
-                                <span className={styles.highlight}>can't</span>
-                                <span className={styles.highlight}>always</span>
-                                <span className={styles.verbCell}>get</span>
-                                <span className={styles.objectCell}>what you want</span>
+                                <span className={styles.page203__highlight}>can't</span>
+                                <span className={styles.page203__highlight}>always</span>
+                                <span className={styles.page203__verbCell}>get want</span>
+                                <span className={styles.page203__objectCell}>what you</span>
                             </div>
-                            <div className={styles.exampleRow}>
+                            <div className={styles.page203__exampleRow}>
                                 <span>Você</span>
-                                <span className={styles.highlight}>nem</span>
-                                <span className={styles.highlight}>sempre</span>
-                                <span className={styles.verbCell}>pode conseguir quer</span>
-                                <span className={styles.objectCell}>o que você</span>
+                                <span className={styles.page203__highlight}>nem</span>
+                                <span className={styles.page203__highlight}>sempre</span>
+                                <span className={styles.page203__verbCell}>pode conseguir quer</span>
+                                <span className={styles.page203__objectCell}>o que você</span>
                             </div>
                         </div>
                     </section>
 
-                    <section className={styles.imagesSection}>
-                        <div className={styles.imagePlaceholder}></div>
-                        <div className={styles.imagePlaceholder}></div>
+                    <section className={styles.page203__imagesSection}>
+                        <div className={styles.page203__imagePlaceholder}></div>
+                        <div className={styles.page203__imagePlaceholder}></div>
                     </section>
                 </main>
             </div>

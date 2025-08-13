@@ -1,1 +1,284 @@
-﻿
+﻿.pageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exercisesTitle {
+  font-size: 3rem;
+  color: #003366;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.exerciseSection {
+  margin-bottom: 2rem;
+}
+
+.exerciseTitle {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+.matchContainer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.leftColumn {
+  flex: 1;
+  border-bottom: 2px solid #003366;
+  border-top: 2px solid #003366;
+  padding-bottom: 1rem;
+}
+
+.rightColumn {
+  flex: 1;
+  border-bottom: 2px solid #003366;
+  border-top: 2px solid #003366;
+  padding-bottom: 1rem;
+}
+
+.leftItem {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.rightItem {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  border-radius: 4px;
+}
+
+.letterLabel {
+  font-weight: bold;
+  color: #003366;
+}
+
+.connectionsArea {
+  flex: 0 0 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.8rem;
+}
+
+.connectionLine {
+  padding: 0.3rem 0.8rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+}
+
+.selectionArea {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.selectionArea h3 {
+  margin-bottom: 1rem;
+  color: #003366;
+  font-size: 1.2rem;
+}
+
+.selectionRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.selectBox {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #003366;
+  border-radius: 4px;
+  background-color: white;
+  min-width: 120px;
+  color: rgb(29, 29, 29);
+}
+
+.selectBox:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.checkButton {
+  background-color: #8a1720;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.checkButton:hover {
+  background-color: #6a121a;
+}
+
+.correct {
+  background-color: #d4edda !important;
+  border-left: 4px solid #28a745;
+}
+
+.incorrect {
+  background-color: #f8d7da !important;
+  border-left: 4px solid #dc3545;
+}
+
+/* Seção Check */
+.checkSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #003366;
+}
+
+.checkTitle {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.checkContainer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.checkLeftColumn {
+  flex: 1;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 1rem;
+}
+
+.checkRightColumn {
+  flex: 1;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 1rem;
+}
+
+.checkLeftItem {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+.checkRightItem {
+  padding: 0.8rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Imagens */
+.imagesContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.imageLeft,
+.imageRight {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageLeft img,
+.imageRight img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .graySquare {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .imagesContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .imageLeft,
+  .imageRight {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .graySquare {
+    width: 220px;
+    height: 160px;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .graySquare {
+    width: 180px;
+    height: 140px;
+  }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 360px) {
+  .graySquare {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+/* Telas extremamente pequenas */
+@media (max-width: 320px) {
+  .graySquare {
+    width: 130px;
+    height: 100px;
+  }
+}

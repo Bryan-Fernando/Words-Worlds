@@ -37,50 +37,50 @@ const Pagina272 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.grammarRed}>Grammar</span> - <span className={styles.grammarBold}>Adjectives</span></h1>
+    <div className={styles.page272__container}>
+      <header className={styles.page272__header}>
+        <h1><span className={styles.page272__grammarRed}>Grammar</span> - <span className={styles.page272__grammarBold}>Adjectives</span></h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page272__instruction}>
         <strong>5.</strong> Match the adjective to its meaning:
       </p>
 
-      <div className={styles.matchBox}>
-        <div className={styles.leftBox}>
+      <div className={styles.page272__matchBox}>
+        <div className={styles.page272__leftBox}>
           {leftItems.map((item, index) => (
-            <div key={item.id} className={styles.matchItem}>
+            <div key={item.id} className={styles.page272__matchItem}>
               <span>{item.id} -</span>
               <input
                 type="text"
                 maxLength={1}
                 value={inputs[index]}
                 onChange={(e) => handleInputChange(e.target.value, index)}
-                className={styles.input}
+                className={styles.page272__input}
               />
               <span>{item.word}</span>
               {results[index] !== null && (
                 <img
                   src={results[index] ? correctIcon : wrongIcon}
                   alt={results[index] ? "Correct" : "Incorrect"}
-                  className={styles.resultIcon}
+                  className={styles.page272__resultIcon}
                 />
               )}
             </div>
           ))}
         </div>
 
-        <div className={styles.rightBox}>
+        <div className={styles.page272__rightBox}>
           {rightItems.map((item) => (
-            <div key={item.letter} className={styles.definition}>
+            <div key={item.letter} className={styles.page272__definition}>
               <span>{item.letter}) {item.meaning}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page272__checkContainer}>
+        <button className={styles.page272__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

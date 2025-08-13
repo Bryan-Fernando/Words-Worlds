@@ -50,31 +50,31 @@ const Pagina274 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
+    <div className={styles.page274__container}>
+      <header className={styles.page274__header}>
         <h1>
-          <span className={styles.grammarRed}>Grammar</span> -{' '}
-          <span className={styles.grammarBold}>Adjectives</span>
+          <span className={styles.page274__grammarRed}>Grammar</span> -{' '}
+          <span className={styles.page274__grammarBold}>Adjectives</span>
         </h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page274__instruction}>
         <strong>7.</strong> Complete the dialogue using the correct form of the adjectives:
       </p>
 
-      <div className={styles.dialogueBox}>
+      <div className={styles.page274__dialogueBox}>
         {questions.map((q, index) => {
           const isCorrect = results[index] === true;
-          const speakerClass = q.speaker === "tom" ? styles.tomText : styles.lilyText;
+          const speakerClass = q.speaker === "tom" ? styles.page274__tomText : styles.page274__lilyText;
           const inputClass =
             isCorrect && q.speaker === "tom"
-              ? styles.inputTomCorrect
+              ? styles.page274__inputTomCorrect
               : isCorrect && q.speaker === "lily"
-              ? styles.inputLilyCorrect
-              : styles.input;
+              ? styles.page274__inputLilyCorrect
+              : styles.page274__input;
 
           return (
-            <div key={index} className={styles.line}>
+            <div key={index} className={styles.page274__line}>
               <span className={speakerClass}>{q.textBefore}</span>
 
               <input
@@ -90,7 +90,7 @@ const Pagina274 = () => {
                 <img
                   src={results[index] ? correctIcon : wrongIcon}
                   alt={results[index] ? "Correct" : "Incorrect"}
-                  className={styles.resultIcon}
+                  className={styles.page274__resultIcon}
                 />
               )}
             </div>
@@ -98,8 +98,8 @@ const Pagina274 = () => {
         })}
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page274__checkContainer}>
+        <button className={styles.page274__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

@@ -1,25 +1,25 @@
-.container {
+.page272__container {
     padding: 2rem;
     font-family: 'Arial', sans-serif;
   }
   
-  .header h1 {
+  .page272__header h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     text-align: left;
   }
   
-  .grammarRed {
+  .page272__grammarRed {
     color: #a61c28;
     font-weight: bold;
   }
   
-  .grammarBold {
+  .page272__grammarBold {
     font-weight: bold;
     font-style: italic;
   }
   
-  .instruction {
+  .page272__instruction {
     color: #1c4c9c;
     font-size: 1.5rem;
     font-weight: bold;
@@ -27,7 +27,7 @@
     text-align: left;
   }
   
-  .matchBox {
+  .page272__matchBox {
     display: flex;
     gap: 3rem;
     border: 3px solid #1c4c9c;
@@ -38,24 +38,24 @@
     margin-bottom: 1.5rem;
   }
   
-  .leftBox, .rightBox {
+  .page272__leftBox, .page272__rightBox {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     font-size: 1.4rem;
   }
   
-  .matchItem {
+  .page272__matchItem {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
   
-  .definition {
+  .page272__definition {
     font-size: 1.4rem;
   }
   
-  .input {
+  .page272__input {
     width: 2rem;
     text-align: center;
     font-weight: bold;
@@ -65,17 +65,17 @@
     background-color: #fff;
   }
   
-  .resultIcon {
+  .page272__resultIcon {
     width: 20px;
     height: 20px;
   }
   
-  .checkContainer {
+  .page272__checkContainer {
     display: flex;
     justify-content: flex-start;
   }
   
-  .checkButton {
+  .page272__checkButton {
     padding: 0.8rem 1.5rem;
     font-size: 1.3rem;
     background-color: #a61c28;
@@ -86,7 +86,7 @@
     width: fit-content;
   }
   
-  .checkButton:hover {
+  .page272__checkButton:hover {
     background-color: #8a1720;
   }
   

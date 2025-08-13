@@ -1,32 +1,32 @@
-.container {
+.page199__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
 }
 
-.pageContainer {
+.page199__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
     padding: 2rem;
 }
 
-.grammarRow, .exampleRow {
+.page199__grammarRow, .page199__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span, .exampleRow span {
+.page199__grammarRow span, .page199__exampleRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
 }
 
-.header {
+.page199__header {
     margin-bottom: 2.5rem;
     text-align: left;
 }
 
-.headerTitle {
+.page199__headerTitle {
     color: #b02c2c;
     font-size: 6rem;  /* Aumentado de 24px para 6rem */
     font-weight: bold; /* Ajustado de 500 para bold */
@@ -34,23 +34,23 @@
     margin-bottom: 1rem;
 }
 
-.headerSubtitle {
+.page199__headerSubtitle {
     font-size: 32px;
     line-height: 1.4;
     margin-bottom: 12px;
 }
 
-.modalVerb {
+.page199__modalVerb {
     color: #b02c2c;
     font-weight: bold;
 }
 
-.subtitle {
+.page199__subtitle {
     color: #000;
     font-weight: bold;
 }
 
-.simplePresent {
+.page199__simplePresent {
     background-color: #f0f0f0;
     padding: 8px 16px;
     border-radius: 4px;
@@ -59,13 +59,13 @@
     margin-top: 8px;
 }
 
-.mainContent {
+.page199__mainContent {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.canExplanation {
+.page199__canExplanation {
     border: 2px solid #A61C28;
     border-radius: 8px;
     padding: 1.8rem 2rem;
@@ -73,12 +73,12 @@
     text-align: left;
 }
 
-.canText {
+.page199__canText {
     font-size: 18px;
     line-height: 1.5;
 }
 
-.usageList {
+.page199__usageList {
     list-style-type: none;
     padding-left: 0;
     margin: 16px 0;
@@ -87,14 +87,14 @@
     align-items: flex-start;
 }
 
-.usageList li {
+.page199__usageList li {
     font-size: 2.4rem;  /* Aumentado de 18px */
     font-weight: bold;
     margin: 12px 0;  /* Aumentado de 6px */
     color: #000;
 }
 
-.noteBox {
+.page199__noteBox {
     width: 400px;  /* Aumentado de 300px */
     margin: 2rem 0;
     background-color: white;
@@ -103,7 +103,7 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.noteTitle {
+.page199__noteTitle {
     background-color: #002f6c;
     color: white;
     font-weight: bold;
@@ -114,11 +114,11 @@
     text-align: left;
 }
 
-.noteContent {
+.page199__noteContent {
     padding: 1.5rem 1.8rem;  /* Aumentado */
 }
 
-.noteContent p {
+.page199__noteContent p {
     margin: 0;
     font-style: italic;
     color: #333;
@@ -140,20 +140,20 @@
 }
 
 @media (max-width: 768px) {
-    .container {
+    .page199__container {
         padding: 16px;
     }
 
-    .headerTitle {
+    .page199__headerTitle {
         font-size: 20px;
     }
 
-    .headerSubtitle {
+    .page199__headerSubtitle {
         font-size: 24px;
     }
 
-    .canText,
-    .usageList li {
+    .page199__canText,
+    .page199__usageList li {
         font-size: 16px;
     }
 }

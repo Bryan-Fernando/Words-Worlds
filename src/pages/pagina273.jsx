@@ -39,35 +39,35 @@ const Pagina273 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
+    <div className={styles.page273__container}>
+      <header className={styles.page273__header}>
         <h1>
-          <span className={styles.grammarRed}>Grammar</span> -{' '}
-          <span className={styles.grammarBold}>Adjectives</span>
+          <span className={styles.page273__grammarRed}>Grammar</span> -{' '}
+          <span className={styles.page273__grammarBold}>Adjectives</span>
         </h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page273__instruction}>
         <strong>6.</strong> Make a sentence using the given adjective:
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page273__questionBox}>
+        <main className={styles.page273__main}>
           {questions.map((q, index) => (
-            <div key={index} className={styles.question}>
-              <span className={styles.prompt}>{q.prompt}</span>
-              <div className={styles.inputWrapper}>
+            <div key={index} className={styles.page273__question}>
+              <span className={styles.page273__prompt}>{q.prompt}</span>
+              <div className={styles.page273__inputWrapper}>
                 <input
                   type="text"
                   value={inputs[index]}
                   onChange={(e) => handleInputChange(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page273__input}
                 />
                 {results[index] !== null && (
                   <img
                     src={results[index] ? correctIcon : wrongIcon}
                     alt={results[index] ? 'Correct' : 'Incorrect'}
-                    className={styles.resultIcon}
+                    className={styles.page273__resultIcon}
                   />
                 )}
               </div>
@@ -76,8 +76,8 @@ const Pagina273 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page273__checkContainer}>
+        <button className={styles.page273__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

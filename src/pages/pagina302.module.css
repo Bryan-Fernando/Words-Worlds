@@ -1,1 +1,269 @@
-﻿
+﻿/* Container principal */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+.exercisesTitle {
+  font-size: 4rem;
+  color: #003366;
+  text-align: left;
+  margin-bottom: 6rem;
+  font-weight: bold;
+}
+
+/* Seção do exercício */
+.exerciseSection {
+  margin-bottom: 3rem;
+}
+
+.exerciseContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.exerciseContent {
+  flex: 1;
+}
+
+/* Seção de diálogo */
+.dialogueSection {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Container do diálogo */
+.dialogueContainer {
+  margin-bottom: 5rem;
+}
+
+.dialogueLine {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  flex-wrap: wrap;
+}
+
+.dialogueLine:last-child {
+  margin-bottom: 0;
+}
+
+/* Speakers específicos com cores */
+.speakerAnna {
+  font-weight: bold;
+  color: #003366; /* Azul */
+}
+
+.speakerBen {
+  font-weight: bold;
+  color: #8a1720; /* Vermelho */
+}
+
+.speakerTom {
+  font-weight: bold;
+  color: #003366; /* Azul */
+}
+
+.speakerLisa {
+  font-weight: bold;
+  color: #8a1720; /* Vermelho */
+}
+
+.speakerSara {
+  font-weight: bold;
+  color: #003366; /* Azul */
+}
+
+.speakerPaul {
+  font-weight: bold;
+  color: #8a1720; /* Vermelho */
+}
+
+.speakerMom {
+  font-weight: bold;
+  color: #8a1720; /* Vermelho */
+}
+
+.speakerChild {
+  font-weight: bold;
+  color: #003366; /* Azul */
+}
+
+.speakerDad {
+  font-weight: bold;
+  color: #003366; /* Azul */
+}
+
+.speakerSon {
+  font-weight: bold;
+  color: #8a1720; /* Vermelho */
+}
+
+/* Quadrado cinza */
+.graySquare {
+  width: 300px;
+  height: 220px;
+  background-color: #808080;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .pageContainer {
+    padding: 1.5rem;
+  }
+
+  .exercisesTitle {
+    font-size: 3.4rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.0rem;
+  }
+
+  .dialogueLine {
+    font-size: 1.3rem;
+  }
+
+  .exerciseContainer {
+    gap: 1.5rem;
+  }
+
+  .graySquare {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .exercisesTitle {
+    font-size: 3.6rem;
+  }
+
+  .exerciseContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .graySquare {
+    width: 200px;
+    height: 150px;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .dialogueLine {
+    font-size: 1.5rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 0.8rem;
+  }
+
+  .exercisesTitle {
+    font-size: 3.8rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.4rem;
+  }
+
+  .dialogueLine {
+    font-size: 1.7rem;
+  }
+
+  .graySquare {
+    width: 150px;
+    height: 120px;
+  }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 360px) {
+  .exercisesTitle {
+    font-size: 4.0rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.6rem;
+  }
+
+  .dialogueLine {
+    font-size: 1.9rem;
+  }
+
+  .graySquare {
+    width: 120px;
+    height: 100px;
+  }
+}
+
+/* Cores para linhas completas baseadas no speaker */
+.dialogueLine[data-speaker="Anna"] {
+  color: #003366; /* Azul */
+}
+
+.dialogueLine[data-speaker="Ben"] {
+  color: #8a1720; /* Vermelho */
+}
+
+.dialogueLine[data-speaker="Tom"] {
+  color: #003366; /* Azul */
+}
+
+.dialogueLine[data-speaker="Lisa"] {
+  color: #8a1720; /* Vermelho */
+}
+
+.dialogueLine[data-speaker="Sara"] {
+  color: #003366; /* Azul */
+}
+
+.dialogueLine[data-speaker="Paul"] {
+  color: #8a1720; /* Vermelho */
+}
+
+.dialogueLine[data-speaker="Mom"] {
+  color: #8a1720; /* Vermelho */
+}
+
+.dialogueLine[data-speaker="Child"] {
+  color: #003366; /* Azul */
+}
+
+.dialogueLine[data-speaker="Dad"] {
+  color: #003366; /* Azul */
+}
+
+.dialogueLine[data-speaker="Son"] {
+  color: #8a1720; /* Vermelho */
+}

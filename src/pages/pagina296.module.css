@@ -1,1 +1,118 @@
-﻿
+﻿.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 0 0 3rem 0;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.examplesTitle {
+  color: #a61c28;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+.grammarSection {
+  border: 3px solid #990000;
+  border-radius: 22px 22px 8px 8px;
+  overflow: hidden;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.grammarHeaderQuestionWords {
+  background-color: #990000;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+.grammarTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.grammarRowQuestionWords {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
+  background: #d1cfcf;
+  
+  color: black;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid #990000;
+}
+.grammarRowHeader span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0.5rem;
+  border-right: 1px solid #fff;
+  text-align: center;
+}
+.grammarRowHeader span:last-child {
+  border-right: none;
+}
+.questionWordColumn {
+  font-size: 1.1rem;
+}
+.tableGroup {
+  border: 3px solid #990000;
+  border-radius: 12px;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
+  border-bottom: 1px solid #00000063;
+}
+.tableRow:last-child {
+  border-bottom: none;
+}
+.pg413Cell {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0.7rem 2.2rem 0.7rem;
+  font-size: 1.3rem;
+  border-right: 1px solid #00000043;
+  color: #a61c28;
+  justify-content: center;
+}
+.pg413Cell:last-child {
+  border-right: none;
+}
+.pg413Red {
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  .examplesTitle {
+    font-size: 1.7rem;
+  }
+  .grammarTitle {
+    font-size: 1.2rem;
+  }
+  .pg413Cell {
+    font-size: 1rem;
+    padding: 0.7rem 0.3rem;
+  }
+  .grammarRowQuestionWords {
+    font-size: 1rem;
+  }
+  .questionWordColumn {
+    font-size: 0.9rem;
+  }
+}

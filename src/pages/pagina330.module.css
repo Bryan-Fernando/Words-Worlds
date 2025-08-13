@@ -1,1 +1,303 @@
-﻿
+﻿/* Container principal */
+
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  background-color: white;
+}
+
+/* Cabeçalho do exercício */
+.exerciseHeader {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.exerciseNumber {
+  font-size: 1.8rem;
+  color: #dc3545; /* Vermelho */
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.exerciseTitle {
+  font-size: 1.8rem;
+  color: #000000; /* Preto */
+  font-weight: bold;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.exerciseInstructions {
+  font-size: 1.1rem;
+  color: #000000;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.redtext {
+  color: #8b0000;
+}
+
+/* Tabela */
+.tableContainer {
+  margin-bottom: 2rem;
+}
+
+.tableHeader {
+  background-color: #8b0000; /* Vermelho escuro */
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.grammarTable {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+.grammarTable th {
+  background-color: #f5f5f5;
+  padding: 0.5rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.grammarTable th p {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+}
+
+/* Container do diálogo */
+.dialogueContainer {
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.dialogue {
+  line-height: 1.6;
+  color: #000;
+  text-align: left;
+}
+
+.dialogueLine {
+  margin-bottom: 1rem;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+/* Inputs do diálogo */
+.dialogueInput {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  width: 180px;
+  text-align: left;
+  transition: border-color 0.3s ease;
+  background-color: white;
+  color: #000;
+  font-style: normal;
+}
+
+.dialogueInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+.dialogueInput.correct {
+  border-color: #28a745;
+  background-color: #d4edda;
+}
+
+.dialogueInput.incorrect {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+/* Container das imagens */
+.imagesContainer {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.imageBox {
+  flex: 0 0 250px;
+}
+
+.placeholderImage {
+  width: 250px;
+  height: 180px;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Botão de verificação */
+.checkButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.checkButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.7rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+  background-color: #0056b3;
+}
+
+/* Container de resultados */
+.resultsContainer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.resultsTitle {
+  font-size: 1.3rem;
+  color: #000;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.resultsText {
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .exerciseNumber,
+  .exerciseTitle {
+    font-size: 1.5rem;
+  }
+
+  .exerciseInstructions {
+    font-size: 1rem;
+  }
+
+  .dialogue {
+    font-size: 1rem;
+  }
+
+  .dialogueInput {
+    font-size: 0.9rem;
+    width: 150px;
+  }
+
+  .imagesContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .placeholderImage {
+    width: 200px;
+    height: 150px;
+  }
+
+  .grammarTable th {
+    font-size: 0.7rem;
+    padding: 0.3rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .exerciseNumber,
+  .exerciseTitle {
+    font-size: 1.3rem;
+  }
+
+  .exerciseInstructions {
+    font-size: 0.95rem;
+  }
+
+  .dialogue {
+    font-size: 0.95rem;
+  }
+
+  .dialogueInput {
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+    width: 120px;
+  }
+
+  .checkButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .placeholderImage {
+    width: 180px;
+    height: 130px;
+  }
+
+  .resultsContainer {
+    padding: 1rem;
+  }
+
+  .resultsTitle {
+    font-size: 1.1rem;
+  }
+
+  .resultsText {
+    font-size: 1rem;
+  }
+
+  .grammarTable th {
+    font-size: 0.6rem;
+    padding: 0.2rem;
+  }
+}
+
+.exerciseImage {
+  width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* responsivo */
+@media (max-width: 768px) {
+  .exerciseImage {
+    width: 200px;
+    height: 150px;
+  }
+}

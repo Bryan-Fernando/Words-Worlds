@@ -42,34 +42,34 @@ const Pagina345 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page345__container}>
+      <header className={styles.page345__header}>
+        <h1><span className={styles.page345__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 6: Word Order */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page345__instructionRed}>
         <strong>6. Word Order</strong>
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page345__questionBox}>
+        <main className={styles.page345__main}>
           {wordOrderQuestionsEx6.map((q, index) => (
-            <div key={q.id} className={styles.question}>
+            <div key={q.id} className={styles.page345__question}>
               <span>{q.id}. {q.words}</span>
-              <div className={styles.inputContainer}>
+              <div className={styles.page345__inputContainer}>
                 <input
                   type="text"
                   value={inputValuesEx6[index]}
                   onChange={(e) => handleInputChangeEx6(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page345__input}
                   placeholder={inputValuesEx6[index] === '' ? "Type the correct order" : ""}
                 />
                 {resultsEx6[index] !== null && (
                   <img
                     src={resultsEx6[index] ? correctIcon : wrongIcon}
                     alt={resultsEx6[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page345__resultIcon}
                   />
                 )}
               </div>
@@ -78,8 +78,8 @@ const Pagina345 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx6}>
+      <div className={styles.page345__checkContainer}>
+        <button className={styles.page345__checkButton} onClick={handleCheckClickEx6}>
           Check
         </button>
       </div>

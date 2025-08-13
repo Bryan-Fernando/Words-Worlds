@@ -179,13 +179,13 @@ const Pagina39 = () => {
                     <img
                         src={eng_audio_icon}
                         alt="English Audio"
-                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        style={{ width: '3.5rem', height: '3.5rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio3e)}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese Audio"
-                        style={{ width: '2rem', height: '2rem', marginLeft: '0.5rem', cursor: 'pointer' }}
+                        style={{ width: '3.5rem', height: '3.5rem', marginLeft: '0.5rem', cursor: 'pointer' }}
                         onClick={() => tocarAudio(pg39_audio3p)}
                     />
                 </p>

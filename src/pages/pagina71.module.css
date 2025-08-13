@@ -129,7 +129,7 @@
 }
 
 .page71__question {
-    width: 30%;
+    width: 40%;
     font-size: 1.7rem;
     margin-bottom: 0.8rem;
 }
@@ -285,8 +285,8 @@
 
 .page71__eng-audio-icon, .page71__ptbr-audio-icon, .page71__slow-audio-icon {
     position: absolute;
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
 }
 
@@ -304,12 +304,12 @@
 }
 
 .page71__audio-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     position: relative;
-    top: 0.4rem;
+    top: 1rem;
     margin-left: 0.4rem;
 }
 
@@ -318,8 +318,8 @@
 }
 
 .page71__audio-icon-input {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     position: relative;

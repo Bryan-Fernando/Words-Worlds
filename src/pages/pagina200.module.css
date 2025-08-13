@@ -1,32 +1,32 @@
-.container {
+.page200__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page200__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
     padding: 2rem;
 }
 
-.grammarRow, .exampleRow {
+.page200__grammarRow, .page200__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span, .exampleRow span {
+.page200__grammarRow span, .page200__exampleRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
 }
 
-.header {
+.page200__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page200__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -34,31 +34,31 @@
     margin-left: 2rem;
 }
 
-.mainContent {
+.page200__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.grammarSection {
+.page200__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grammarHeader {
+.page200__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page200__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.sectionHeader {
+.page200__sectionHeader {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1rem 2rem;
@@ -68,44 +68,44 @@
     gap: 0.5rem;
 }
 
-.exampleTitle {
+.page200__exampleTitle {
     color: #990000;
     font-size: 2rem;
     font-style: italic;
     text-align: left;
 }
 
-.separator, .titleTranslation {
+.page200__separator, .page200__titleTranslation {
     color: #000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.separator {
+.page200__separator {
     color: #000;
     margin: 0 1rem;
     font-size: 2rem;
 }
 
-.exampleBox {
+.page200__exampleBox {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
     background-color: #ffffff;
 }
 
-.exampleRow {
+.page200__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
     border-bottom: 1px solid #ffffff;
 }
 
-.exampleRow:last-child {
+.page200__exampleRow:last-child {
     border-bottom: none;
 }
 
-.exampleRow span {
+.page200__exampleRow span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,23 +115,23 @@
     border-right: 1px solid #ddd;
 }
 
-.exampleRow span:last-child {
+.page200__exampleRow span:last-child {
     border-right: none;
 }
 
-.highlight {
+.page200__highlight {
     color: #990000;
 }
 
-.exampleRow:last-child span {
+.page200__exampleRow:last-child span {
     color: #000000;
 }
 
-.exampleRow:nth-child(2) span {
+.page200__exampleRow:nth-child(2) span {
     color: #000000;
 }
 
-.exampleRow span {
+.page200__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -139,12 +139,12 @@
     color: #990000;
 }
 
-.verbCell {
+.page200__verbCell {
     background-color: white;
     color: #990000;
 }
 
-.objectCell {
+.page200__objectCell {
     text-align: left;
     padding-left: 2rem;
     border-right: none;
@@ -152,14 +152,14 @@
     background-color: white;
 }
 
-.imagesSection {
+.page200__imagesSection {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.imagePlaceholder {
+.page200__imagePlaceholder {
     width: 45%;
     height: 280px;
     background-color: #f0f0f0;
@@ -167,34 +167,34 @@
 }
 
 @media (max-width: 768px) {
-    .headerTitle {
+    .page200__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .exampleRow {
+    .page200__grammarRow, .exampleRow {
         grid-template-columns: 1fr;
     }
 
-    .imagesSection {
+    .page200__imagesSection {
         flex-direction: column;
     }
 
-    .imagePlaceholder {
+    .page200__imagePlaceholder {
         width: 100%;
     }
 }
 
-.grammarContent {
+.page200__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page200__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page200__grammarRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -203,7 +203,7 @@
     font-weight: 500;
 }
 
-.grammarRow span:last-child {
+.page200__grammarRow span:last-child {
     border-right: none;
 }
 

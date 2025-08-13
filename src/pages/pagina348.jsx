@@ -71,38 +71,38 @@ const Pagina348 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page348__container}>
+      <header className={styles.page348__header}>
+        <h1><span className={styles.page348__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 9: Make Promises or Offers */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page348__instructionRed}>
         <strong>9. Make Promises or Offers</strong>
       </p>
-      <p className={styles.instruction}>
+      <p className={styles.page348__instruction}>
         Write sentences using "I will..." to make a promise or an offer. Example: (help you) → I will help you / I'll help you
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page348__questionBox}>
+        <main className={styles.page348__main}>
           {promisesOffersEx9.map((item, index) => (
-            <div key={item.id} className={styles.question}>
+            <div key={item.id} className={styles.page348__question}>
               <span>{item.id}. {item.phrase}</span>
-              <div className={styles.inputContainer}>
-                <span className={styles.arrow}>→</span>
+              <div className={styles.page348__inputContainer}>
+                <span className={styles.page348__arrow}>→</span>
                 <input
                   type="text"
                   value={inputValuesEx9[index]}
                   onChange={(e) => handleInputChangeEx9(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page348__input}
                   placeholder={inputValuesEx9[index] === '' ? "Type your answer" : ""}
                 />
                 {resultsEx9[index] !== null && (
                   <img
                     src={resultsEx9[index] ? correctIcon : wrongIcon}
                     alt={resultsEx9[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page348__resultIcon}
                   />
                 )}
               </div>
@@ -111,8 +111,8 @@ const Pagina348 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx9}>
+      <div className={styles.page348__checkContainer}>
+        <button className={styles.page348__checkButton} onClick={handleCheckClickEx9}>
           Check
         </button>
       </div>

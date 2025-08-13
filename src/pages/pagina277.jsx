@@ -1,83 +1,186 @@
-import React, { useRef, useState } from 'react';
-import styles from './pagina277.module.css';
-
-import pagina277_imagem1 from '../assets/images/pagina275_imagem1.webp';
-import pagina277_imagem2 from '../assets/images/pagina277_imagem1.webp';
-
-import map3 from '../assets/images/map3.mp4';
-
-import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-import audio1 from '../assets/audios/pg277_audio1e.mp3'; // Novo áudio
+import React from "react";
+import styles from "./pagina277.module.css";
 
 const Pagina277 = () => {
-  const [videoSrc, setVideoSrc] = useState(null);
-  const currentAudio = useRef(null);
-
-  const playAudio = () => {
-    if (currentAudio.current) {
-      currentAudio.current.pause();
-      currentAudio.current.currentTime = 0;
-    }
-    const audio = new Audio(audio1);
-    currentAudio.current = audio;
-    audio.play();
-  };
-
-  const handlePlayVideo = (map) => {
-    setVideoSrc(map);
-  };
-
-  const handleCloseVideo = () => {
-    setVideoSrc(null);
-  };
-
   return (
     <div className={styles.container}>
-      <img src={pagina277_imagem1} alt="Map 3" className={styles.mapImage} />
-
-      <div className={styles.dialogueWrapper}>
-        <div className={styles.dialogueNumber}>3</div>
-
-        <section className={styles.dialogueSection}>
-          <div className={styles.dialogueImageContainer}>
-            <img src={pagina277_imagem2} alt="Dialogue Image" className={styles.dialogueImage} />
-          </div>
-
-          <div className={styles.textBlock}>
-            <div>
-              <span className={styles.nameBlue}>Nick</span>
-              <div className={styles.speechBubble}>
-                Hi there! Can you help me find the nearest ATM?
-                <img
-                  src={eng_audio_icon}
-                  alt="Play audio"
-                  className={styles.audioIcon}
-                  onClick={playAudio}
-                />
-                <em>Olá! Você pode me ajudar a encontrar o caixa eletrônico mais próximo?</em>
+      <div className={styles.pageContainer}>
+        <header className={styles.header}>
+          <h1 className={styles.headerTitle}>
+            Grammar - <span className={styles.modalHighlight}>Should</span>
+          </h1>
+        </header>
+        <main className={styles.mainContent}>
+          <section className={styles.grammarSection}>
+            <div className={styles.grammarHeaderNegative}>
+              <h2 className={styles.grammarTitle}>Interrogative Form</h2>
+            </div>
+            <div className={styles.grammarContentNegative}>
+              <div className={styles.grammarRowNegative}>
+                <span>Subject</span>
+                <span>Aux. Verb</span>
+                <span>Adv</span>
+                <span>Main Verb</span>
+                <span>Object <br/> Complement</span>
               </div>
             </div>
-
-            <div>
-              <span className={styles.nameRed}>Margaret</span>
-              <div
-                className={`${styles.speechBubble} ${styles.directions}`}
-                onClick={() => handlePlayVideo(map3)}
-              >
-                Hi! Of course, there’s an ATM around the corner. Just walk straight ahead and take first right.
-                You’ll see it across the Avenue.
-                <em>Oi! Claro, há um caixa eletrônico na esquina. Apenas ande em frente e vire na primeira à direita. Você vai ver do outro lado da Avenida.</em>
+          </section>
+          <section className={styles.tableContent}>
+            {/* I */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>I</em></span>
+                  <span className={styles.pg413Black}><em>Eu deveria</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>go</em></span>
+                  <span className={styles.pg413Black}><em>ir</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>now?</em></span>
+                  <span className={styles.pg413Black}><em>agora?</em></span>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+            {/* He, She, It */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>he</em></span>
+                  <span className={styles.pg413Black}><em>Ele deveria</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>take</em></span>
+                  <span className={styles.pg413Black}><em>pegar</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>the bus or the City train?</em></span>
+                  <span className={styles.pg413Black}><em>o ônibus ou o trem?</em></span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>she</em></span>
+                  <span className={styles.pg413Black}><em>Ela deveria</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>invite</em></span>
+                  <span className={styles.pg413Black}><em>convidá-los</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>them to the party?</em></span>
+                  <span className={styles.pg413Black}><em>para a festa?</em></span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>it</em></span>
+                  <span className={styles.pg413Black}><em>Deveria</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>be</em></span>
+                  <span className={styles.pg413Black}><em>ser</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>fixed?</em></span>
+                  <span className={styles.pg413Black}><em>consertado?</em></span>
+                </div>
+              </div>
+            </div>
+            {/* We, You, They */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>we</em></span>
+                  <span className={styles.pg413Black}><em>Nós deveríamos</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>leave</em></span>
+                  <span className={styles.pg413Black}><em>sair</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>early?</em></span>
+                  <span className={styles.pg413Black}><em>cedo?</em></span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>you <span className={styles.sgplBlue}>(sg)</span></em></span>
+                  <span className={styles.pg413Black}><em>Você deveria</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>call</em></span>
+                  <span className={styles.pg413Black}><em>chamá-la?</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>her?</em></span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>you guys <span className={styles.sgplBlue}>(pl)</span></em></span>
+                  <span className={styles.pg413Black}><em>Vocês deveriam</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>visit</em></span>
+                  <span className={styles.pg413Black}><em>visitar</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>the museum today?</em></span>
+                  <span className={styles.pg413Black}><em>o museu hoje?</em></span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>Should</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>they</em></span>
+                  <span className={styles.pg413Black}><em>Eles / Elas deveriam</em></span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>come</em></span>
+                  <span className={styles.pg413Black}><em>vir</em></span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}><em>too?</em></span>
+                  <span className={styles.pg413Black}><em>também?</em></span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-
-      {videoSrc && (
-        <div className={styles.videoOverlay} onClick={handleCloseVideo}>
-          <video src={videoSrc} controls autoPlay className={styles.videoPlayer} />
-        </div>
-      )}
     </div>
   );
 };

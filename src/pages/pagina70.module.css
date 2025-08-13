@@ -113,7 +113,7 @@
 
 .page70__input-frase .page70__eng-audio-icon {
     position: absolute;
-    right: 15%;
+    right: 18%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -130,15 +130,6 @@
     right: 19%;
     top: 50%;
     transform: translateY(-50%);
-}
-
-.page70__eng-audio-icon,
-.page70__ptbr-audio-icon,
-.page70__slow-audio-icon {
-    cursor: pointer;
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
 }
 
 .page70__chip {
@@ -261,7 +252,7 @@
 }
 
 .page70__audio-icon {
-    width: 2.5rem; /* Tamanho fixo para os ícones */
+    width: 3.5rem; /* Tamanho fixo para os ícones */
     height: auto;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
@@ -277,7 +268,6 @@
 .page70__ptbr-audio-icon,
 .page70__slow-audio-icon {
     cursor: pointer;
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
 }

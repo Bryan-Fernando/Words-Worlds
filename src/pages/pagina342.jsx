@@ -99,29 +99,29 @@ const Pagina342 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page342__container}>
+      <header className={styles.page342__header}>
+        <h1><span className={styles.page342__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 1: Fill in the blanks */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page342__instructionRed}>
         <strong>1. Fill in the blanks using "will" ( Full Form )</strong>
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page342__questionBox}>
+        <main className={styles.page342__main}>
           {fillInBlanksQuestions.map((q, index) => {
             const [beforeBlank, afterBlank] = q.sentence.split('__________');
 
             return (
-              <div key={index} className={styles.question}>
+              <div key={index} className={styles.page342__question}>
                 <span>{beforeBlank}</span>
                 <input
                   type="text"
                   value={inputValuesEx1[index]}
                   onChange={(e) => handleInputChangeEx1(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page342__input}
                 />
                 <span>{afterBlank}</span>
 
@@ -129,7 +129,7 @@ const Pagina342 = () => {
                   <img
                     src={resultsEx1[index] ? correctIcon : wrongIcon}
                     alt={resultsEx1[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page342__resultIcon}
                   />
                 )}
               </div>
@@ -138,46 +138,46 @@ const Pagina342 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx1}>
+      <div className={styles.page342__checkContainer}>
+        <button className={styles.page342__checkButton} onClick={handleCheckClickEx1}>
           Check
         </button>
       </div>
 
-      <hr className={styles.divider} />
+      <hr className={styles.page342__divider} />
 
       {/* Exercício 2: Multiple Choice */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page342__instructionRed}>
         <strong>2. Multiple Choice</strong>
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page342__questionBox}>
+        <main className={styles.page342__main}>
           {multipleChoiceQuestions.map((question) => {
             const [beforeBlank, afterBlank] = question.question.split('__________');
             const displayedAnswer = displayedAnswersEx2[question.id];
             
             return (
-              <div key={question.id} className={styles.multipleChoiceQuestion}>
-                <div className={styles.questionText}>
+              <div key={question.id} className={styles.page342__multipleChoiceQuestion}>
+                <div className={styles.page342__questionText}>
                   <span>{beforeBlank}</span>
                   {displayedAnswer ? (
-                    <span className={styles.chosenAnswer}>{displayedAnswer}</span>
+                    <span className={styles.page342__chosenAnswer}>{displayedAnswer}</span>
                   ) : (
-                    <span className={styles.blankPlaceholder}>__________</span>
+                    <span className={styles.page342__blankPlaceholder}>__________</span>
                   )}
                   <span>{afterBlank}</span>
                   {resultsEx2[question.id] !== undefined && (
                     <img
                       src={resultsEx2[question.id] ? correctIcon : wrongIcon}
                       alt={resultsEx2[question.id] ? "Correct" : "Incorrect"}
-                      className={styles.resultIcon}
+                      className={styles.page342__resultIcon}
                     />
                   )}
                 </div>
-                <div className={styles.optionsContainer}>
+                <div className={styles.page342__optionsContainer}>
                   {question.options.map((option) => (
-                    <div key={option.id} className={styles.optionItem}>
+                    <div key={option.id} className={styles.page342__optionItem}>
                       <input
                         type="radio"
                         id={`q${question.id}-${option.id}`}
@@ -185,9 +185,9 @@ const Pagina342 = () => {
                         value={option.id}
                         checked={selectedOptionsEx2[question.id] === option.id}
                         onChange={() => handleOptionChangeEx2(question.id, option.id)}
-                        className={styles.radioInput}
+                        className={styles.page342__radioInput}
                       />
-                      <label htmlFor={`q${question.id}-${option.id}`} className={styles.radioLabel}>
+                      <label htmlFor={`q${question.id}-${option.id}`} className={styles.page342__radioLabel}>
                         {option.id}) {option.text}
                       </label>
                     </div>
@@ -199,8 +199,8 @@ const Pagina342 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx2}>
+      <div className={styles.page342__checkContainer}>
+        <button className={styles.page342__checkButton} onClick={handleCheckClickEx2}>
           Check
         </button>
       </div>

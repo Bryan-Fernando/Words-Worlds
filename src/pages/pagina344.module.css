@@ -1,20 +1,20 @@
-﻿.container {
+﻿.page344__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page344__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page344__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instructionRed {
+.page344__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,7 +22,7 @@
   text-align: left;
 }
 
-.matchBox {
+.page344__matchBox {
   display: flex;
   gap: 3.8rem; /* Reduzido de 5rem para 3.8rem */
   border: 3px solid #a61c28;
@@ -33,14 +33,14 @@
   margin-bottom: 1.5rem;
 }
 
-.leftBox, .rightBox {
+.page344__leftBox, .page344__rightBox {
   display: flex;
   flex-direction: column;
   gap: 1.4rem; /* Reduzido de 1.8rem para 1.4rem */
   font-size: 1.6rem; /* Reduzido de 1.8rem para 1.6rem */
 }
 
-.matchItem {
+.page344__matchItem {
   display: flex;
   align-items: center;
   gap: 0.6rem; /* Reduzido de 0.8rem para 0.6rem */
@@ -48,13 +48,13 @@
   border-bottom: 1px solid #ccc;
 }
 
-.definition {
+.page344__definition {
   font-size: 1.6rem; /* Reduzido de 1.8rem para 1.6rem */
   padding-bottom: 0.7rem; /* Reduzido de 0.8rem para 0.7rem */
   border-bottom: 1px solid #ccc;
 }
 
-.input {
+.page344__input {
   width: 2.8rem; /* Reduzido de 3.2rem para 2.8rem */
   height: 2.8rem; /* Reduzido de 3.2rem para 2.8rem */
   text-align: center;
@@ -65,18 +65,18 @@
   background-color: #fff;
 }
 
-.resultIcon {
+.page344__resultIcon {
   width: 25px; /* Reduzido de 30px para 25px */
   height: 25px; /* Reduzido de 30px para 25px */
   margin-left: 0.4rem; /* Reduzido de 0.5rem para 0.4rem */
 }
 
-.checkContainer {
+.page344__checkContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.checkButton {
+.page344__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -87,6 +87,6 @@
   width: fit-content;
 }
 
-.checkButton:hover {
+.page344__checkButton:hover {
   background-color: #8a1720;
 }

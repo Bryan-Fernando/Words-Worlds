@@ -1,25 +1,25 @@
-.container {
+.page274__container {
     padding: 2rem;
     font-family: 'Arial', sans-serif;
   }
   
-  .header h1 {
+  .page274__header h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     text-align: left;
   }
   
-  .grammarRed {
+  .page274__grammarRed {
     color: #a61c28;
     font-weight: bold;
   }
   
-  .grammarBold {
+  .page274__grammarBold {
     font-weight: bold;
     font-style: italic;
   }
   
-  .instruction {
+  .page274__instruction {
     color: #1c4c9c;
     font-size: 1.5rem;
     font-weight: bold;
@@ -27,7 +27,7 @@
     text-align: left;
   }
   
-  .dialogueBox {
+  .page274__dialogueBox {
     border: 3px solid #1c4c9c;
     border-radius: 12px;
     padding: 1.2rem 1rem;
@@ -40,7 +40,7 @@
     gap: 1.3rem;
   }
   
-  .line {
+  .page274__line {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -49,7 +49,7 @@
     font-weight: 500;
   }
   
-  .input {
+  .page274__input {
     width: 200px;
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -60,37 +60,37 @@
     color: black;
   }
   
-  .inputTomCorrect {
-    composes: input;
+  .page274__inputTomCorrect {
+    composes: page274__input;
     color: #a61c28;
   }
   
-  .inputLilyCorrect {
-    composes: input;
+  .page274__inputLilyCorrect {
+    composes: page274__input;
     color: black;
   }
   
-  .resultIcon {
+  .page274__resultIcon {
     width: 24px;
     height: 24px;
     margin-left: 0.5rem;
     vertical-align: middle;
   }
   
-  .tomText {
+  .page274__tomText {
     color: #a61c28;
   }
   
-  .lilyText {
+  .page274__lilyText {
     color: #1a1a1a;
   }
   
-  .checkContainer {
+  .page274__checkContainer {
     display: flex;
     justify-content: flex-start;
   }
   
-  .checkButton {
+  .page274__checkButton {
     padding: 0.8rem 1.5rem;
     font-size: 1.3rem;
     background-color: #a61c28;
@@ -101,7 +101,7 @@
     width: fit-content;
   }
   
-  .checkButton:hover {
+  .page274__checkButton:hover {
     background-color: #8a1720;
   }
   

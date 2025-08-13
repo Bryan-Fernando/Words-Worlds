@@ -174,7 +174,12 @@
 }
 
 .page39__audio--icon,
-.page39__portugueseng--audio--icon,
+.page39__portugueseng--audio--icon{
+    margin: 0 0.5%;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+}
 .page39__volumeng--audio--icon {
     margin: 0 0.5%;
     width: auto;
@@ -251,8 +256,8 @@
 }
 
 .page39__header img {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
 }
 
@@ -272,6 +277,6 @@
 
 .page39__header--icon2{
     position: relative;
-    top: 0.3rem;
+    top: 1rem;
     margin-right: 0.3rem;
 }

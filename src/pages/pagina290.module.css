@@ -1,1 +1,140 @@
-﻿
+﻿.pageContainer {
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding: 0 0 3rem 0;
+}
+.header {
+  margin-bottom: 2rem;
+}
+.examplesTitle {
+  color: #a61c28;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 100%;
+}
+.grammarSection {
+  border: 3px solid #990000;
+  border-radius: 22px 22px 8px 8px;
+  overflow: hidden;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grammarHeaderAffirmative {
+  background-color: #990000;
+  padding: 1rem 2rem;
+  text-align: left;
+}
+.grammarTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.grammarRowAffirmative {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+  background: #d1cfcf;
+  color: #990000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-bottom: 1px solid #990000;
+}
+.grammarRowHeader span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem 0.5rem;
+  border-right: 1px solid #fff;
+}
+.grammarRowHeader span:last-child {
+  border-right: none;
+}
+.sectionLabel {
+  box-sizing: border-box;
+  border: 2px solid #a6192e;
+  border-radius: 7px;
+  margin: 0;
+  padding: 16px 18px 16px 18px;
+  font-weight: 600;
+  color: #a6192e;
+  background: #fff;
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.8em;
+}
+
+.tableGroup {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #a6192e;
+  border-radius: 7px;
+  background: #fff;
+  overflow-x: auto;
+}
+.sectionLabelPt {
+  font-weight: normal;
+  color: #222;
+}
+.tableGroup {
+  border: 3px solid #990000;
+  border-radius: 12px;
+  text-align: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.tableRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+  border-bottom: 1px solid #00000063;
+}
+.tableRow:last-child {
+  border-bottom: none;
+}
+.pg413Cell {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 0.7rem 2.2rem 0.7rem;
+  font-size: 1.3rem;
+  border-right: 1px solid #00000043;
+  color: #222;
+  justify-content: center;
+}
+.pg413Cell:last-child {
+  border-right: none;
+}
+.pg413Red {
+  color: #a61c28;
+  font-weight: bold;
+}
+@media (max-width: 900px) {
+  .examplesTitle {
+    font-size: 1.7rem;
+  }
+  .grammarTitle {
+    font-size: 1.2rem;
+  }
+  .pg413Cell {
+    font-size: 1rem;
+    padding: 0.7rem 0.3rem;
+  }
+  .grammarRowAffirmative {
+    font-size: 1rem;
+  }
+}

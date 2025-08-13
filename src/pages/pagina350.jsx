@@ -45,30 +45,30 @@ const Pagina350 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page350__container}>
+      <header className={styles.page350__header}>
+        <h1><span className={styles.page350__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 11: Dialogue Completion */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page350__instructionRed}>
         <strong>11. Dialogue Completion</strong>
       </p>
-      <p className={styles.instructionSubtitle}>
+      <p className={styles.page350__instructionSubtitle}>
         Complete the conversation using polite questions and answers with "will."
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page350__questionBox}>
+        <main className={styles.page350__main}>
           {dialogueQuestionsEx11.map((q, index) => (
-            <div key={q.id} className={styles.dialogueLine}>
-              <div className={styles.dialogueContent}>
+            <div key={q.id} className={styles.page350__dialogueLine}>
+              <div className={styles.page350__dialogueContent}>
                 <span>{q.textBefore}</span>
                 <input
                   type="text"
                   value={inputValuesEx11[index]}
                   onChange={(e) => handleInputChangeEx11(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page350__input}
                 />
                 <span>{q.textAfter}</span>
 
@@ -76,27 +76,27 @@ const Pagina350 = () => {
                   <img
                     src={resultsEx11[index] ? correctIcon : wrongIcon}
                     alt={resultsEx11[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page350__resultIcon}
                   />
                 )}
               </div>
-              {index < dialogueQuestionsEx11.length - 1 && <hr className={styles.divider} />}
+              {index < dialogueQuestionsEx11.length - 1 && <hr className={styles.page350__divider} />}
             </div>
           ))}
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx11}>
+      <div className={styles.page350__checkContainer}>
+        <button className={styles.page350__checkButton} onClick={handleCheckClickEx11}>
           Check
         </button>
       </div>
 
       {/* Seção de placeholders para imagens */}
-      <div className={styles.imagePlaceholdersContainer}>
-        <div className={styles.imagePlaceholderBox}>
+      <div className={styles.page350__imagePlaceholdersContainer}>
+        <div className={styles.page350__imagePlaceholderBox}>
         </div>
-        <div className={styles.imagePlaceholderBox}>
+        <div className={styles.page350__imagePlaceholderBox}>
         </div>
       </div>
     </div>

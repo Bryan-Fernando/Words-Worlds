@@ -74,45 +74,45 @@ const Pagina353 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page353__container}>
+      <header className={styles.page353__header}>
+        <h1><span className={styles.page353__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercise 14: Choose the correct option */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page353__instructionRed}>
         <strong>14. Choose the correct option</strong>
       </p>
-      <p className={styles.subtitleCorrectAnswer}>Choose the correct answer.</p>
+      <p className={styles.page353__subtitleCorrectAnswer}>Choose the correct answer.</p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page353__questionBox}>
+        <main className={styles.page353__main}>
           {questionsEx14.map((question, index) => {
             const [beforeBlank, afterBlank] = question.question.split('__________');
             const displayedAnswer = displayedAnswersEx14[question.id];
             
             return (
               <React.Fragment key={question.id}>
-                <div className={styles.multipleChoiceQuestion}>
-                  <div className={styles.questionText}>
+                <div className={styles.page353__multipleChoiceQuestion}>
+                  <div className={styles.page353__questionText}>
                     <span>{beforeBlank}</span>
                     {displayedAnswer ? (
-                      <span className={styles.chosenAnswer}>{displayedAnswer}</span>
+                      <span className={styles.page353__chosenAnswer}>{displayedAnswer}</span>
                     ) : (
-                      <span className={styles.blankPlaceholder}>__________</span>
+                      <span className={styles.page353__blankPlaceholder}>__________</span>
                     )}
                     <span>{afterBlank}</span>
                     {resultsEx14[question.id] !== undefined && (
                       <img
                         src={resultsEx14[question.id] ? correctIcon : wrongIcon}
                         alt={resultsEx14[question.id] ? "Correct" : "Incorrect"}
-                        className={styles.resultIcon}
+                        className={styles.page353__resultIcon}
                       />
                     )}
                   </div>
-                  <div className={styles.optionsContainer}>
+                  <div className={styles.page353__optionsContainer}>
                     {question.options.map((option) => (
-                      <div key={option.id} className={styles.optionItem}>
+                      <div key={option.id} className={styles.page353__optionItem}>
                         <input
                           type="radio"
                           id={`q${question.id}-${option.id}`}
@@ -120,24 +120,24 @@ const Pagina353 = () => {
                           value={option.id}
                           checked={selectedOptionsEx14[question.id] === option.id}
                           onChange={() => handleOptionChangeEx14(question.id, option.id)}
-                          className={styles.radioInput}
+                          className={styles.page353__radioInput}
                         />
-                        <label htmlFor={`q${question.id}-${option.id}`} className={styles.radioLabel}>
+                        <label htmlFor={`q${question.id}-${option.id}`} className={styles.page353__radioLabel}>
                           {option.id}) {option.text}
                         </label>
                       </div>
                     ))}
                   </div>
                 </div>
-                {index < questionsEx14.length - 1 && <hr className={styles.dividerInsideBox} />}
+                {index < questionsEx14.length - 1 && <hr className={styles.page353__dividerInsideBox} />}
               </React.Fragment>
             );
           })}
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx14}>
+      <div className={styles.page353__checkContainer}>
+        <button className={styles.page353__checkButton} onClick={handleCheckClickEx14}>
           Check
         </button>
       </div>

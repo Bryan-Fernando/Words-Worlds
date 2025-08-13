@@ -32,15 +32,15 @@ const Pagina210 = () => {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.pageContainer}>
-                <header className={styles.header}>
-                    <h1 className={styles.headerTitle}>Grammar</h1>
+        <div className={styles.page210__container}>
+            <div className={styles.page210__pageContainer}>
+                <header className={styles.page210__header}>
+                    <h1 className={styles.page210__headerTitle}>Grammar</h1>
                 </header>
 
-                <main className={styles.mainContent}>
-                    <section className={styles.grammarIntro}>
-                        <div className={styles.modalVerb}>
+                <main className={styles.page210__mainContent}>
+                    <section className={styles.page210__grammarIntro}>
+                        <div className={styles.page210__modalVerb}>
                             <h2>
                                 <span>Can</span>
                                 <span> - Modal Verb</span>
@@ -55,12 +55,12 @@ const Pagina210 = () => {
                         </div>
                     </section>
 
-                    <section className={styles.grammarSection}>
-                        <div className={styles.grammarHeader}>
-                            <h2 className={styles.grammarTitle}>Negative Form</h2>
+                    <section className={styles.page210__grammarSection}>
+                        <div className={styles.page210__grammarHeader}>
+                            <h2 className={styles.page210__grammarTitle}>Negative Form</h2>
                         </div>
-                        <div className={styles.grammarContent}>
-                            <div className={styles.grammarRow}>
+                        <div className={styles.page210__grammarContent}>
+                            <div className={styles.page210__grammarRow}>
                                 <span>Aux. Verb</span>
                                 <span>Subject</span>
                                 <span>Adv</span>
@@ -71,120 +71,132 @@ const Pagina210 = () => {
                     </section>
 
                     <section
-                        className={styles.translationSection}
+                        className={styles.page210__translationSection}
                         onClick={() => playAudio('pg210_audio2e')}
                         style={{ cursor: 'pointer' }}
                     >
-                        <div className={styles.translationContent}>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>can</span>
+                        <div className={styles.page210__translationContent}>
+                            <div className={styles.page210__translationColumn}>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__red}`}>can</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>It</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>Eu</span>
+                            <div className={styles.page210__translationColumn}>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__red}`}>It</span>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__black}`}>Eu</span>
+                                
+                                
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>—</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>—</span>
+                            <div className={styles.page210__translationColumn}>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__red}`}>—</span>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__black}`}>—</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>clean</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>posso limpar</span>
+                            <div className={styles.page210__translationColumn}>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__red}`}>clean</span>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__black}`}>posso limpar</span>
                             </div>
-                            <div className={styles.translationColumn}>
-                                <span className={`${styles.translationItem} ${styles.red}`}>the kitchen now?</span>
-                                <span className={`${styles.translationItem} ${styles.black}`}>a cozinha agora?</span>
+                            <div className={styles.page210__translationColumn}>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__red}`}>the kitchen now?</span>
+                                <span className={`${styles.page210__translationItem} ${styles.page210__black}`}>a cozinha agora?</span>
+
+
                             </div>
                         </div>
                     </section>
 
-                    <section className={styles.tableContent}>
-                        <div className={styles.tableGroup}>
+                    <section className={styles.page210__tableContent}>
+                        <div className={styles.page210__tableGroup}>
                             {/* He */}
                             <div
-                                className={styles.tableRow}
+                                className={styles.page210__tableRow}
                                 onClick={() => playAudio('pg210_audio3e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>can</span>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>can</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>he</span>
-                                    <span className={styles.pg213Black}>Ele</span>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>he</span>
+                                    <span className={styles.page210__pg213Black}>Ele</span>
                                 </div>
-                                <div className={styles.pg213Cell}><span className={styles.pg213Dash}>—</span></div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>help</span>
-                                    <span className={styles.pg213Black}>pode nos ajudar?</span>
+                                <div className={styles.page210__pg213Cell}><span className={styles.page210__pg213Dash}>—</span></div>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>help</span>
+                                    <span className={styles.page210__pg213Black}>pode nos ajudar?</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>us?</span>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>us?</span>
+                             
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page210__tableGroup}>
                             {/* She */}
                             <div
-                                className={styles.tableRow}
+                                className={styles.page210__tableRow}
                                 onClick={() => playAudio('pg210_audio4e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}><span className={styles.pg213Red}>Can</span></div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>She</span>
-                                    <span className={styles.pg213Black}>Ela</span>
+                                <div className={styles.page210__pg213Cell}><span className={styles.page210__pg213Red}>Can</span></div>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>She</span>
+                                    <span className={styles.page210__pg213Black}>Ela</span>
                                 </div>
-                                <div className={styles.pg213Cell}><span className={styles.pg213Dash}>—</span></div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>understand</span>
-                                    <span className={styles.pg213Black}>consegue entender</span>
+                                <div className={styles.page210__pg213Cell}><span className={styles.page210__pg213Dash}>—</span></div>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>understand</span>
+                                    <span className={styles.page210__pg213Black}>consegue entender</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>Spanish?</span>
-                                    <span className={styles.pg213Black}>espanhol?</span>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>Spanihs?</span>
+                                    <span className={styles.page210__pg213Black}>espanhol?</span>
+                                   
                                 </div>
                             </div>
                         </div>
 
-                        <div className={styles.tableGroup}>
+                        <div className={styles.page210__tableGroup}>
                             {/* It */}
                             <div
-                                className={styles.tableRow}
+                                className={styles.page210__tableRow}
                                 onClick={() => playAudio('pg210_audio5e')}
                                 style={{ cursor: 'pointer' }}
                             >
-                                <div className={styles.pg213Cell}><span className={styles.pg213Red}>Can</span></div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>it</span>
-                                    <span className={styles.pg213Black}>-</span>
+                                <div className={styles.page210__pg213Cell}><span className={styles.page210__pg213Red}>Can</span></div>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>it</span>
+                                    <span className={styles.page210__pg213Black}>-</span>
                                 </div>
-                                <div className={styles.pg213Cell}><span className={styles.pg213Dash}>—</span></div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>be</span>
-                                    <span className={styles.pg213Black}>Pode ser</span>
+                                <div className={styles.page210__pg213Cell}><span className={styles.page210__pg213Dash}>—</span></div>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>be</span>
+                                    <span className={styles.page210__pg213Black}>Pode ser</span>
                                 </div>
-                                <div className={styles.pg213Cell}>
-                                    <span className={styles.pg213Red}>true?</span>
-                                    <span className={styles.pg213Black}>verdade?</span>
+                                <div className={styles.page210__pg213Cell}>
+                                    <span className={styles.page210__pg213Red}>true?</span>
+                                    <span className={styles.page210__pg213Black}>verdade?</span>
+                            
                                 </div>
                             </div>
                         </div>
                     </section>
-
-                    <div className={styles.noteBox}>
-                        <div className={styles.noteTitle}>Nota</div>
-                        <div className={styles.noteContent}>
-                            <div className={styles.noteRow}>
+                    <div className={styles.page210__noteBox}>
+                        <div className={styles.page210__noteTitle}>
+                            Nota
+                        </div>
+                        <div className={styles.page210__noteContent}>
+                            <div className={styles.page210__noteRow}>
                                 <span>Full Form</span>
                                 <span>Contracted Form</span>
                             </div>
-                            <div className={styles.noteFormula}>
-                                <span>Can + not = Can’t</span>
+                            <div className={styles.page210__noteFormula}>
+                               <span> Can + not = Can't</span>
                             </div>
                         </div>
                     </div>
+
+
+
+
                 </main>
             </div>
         </div>

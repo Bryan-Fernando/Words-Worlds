@@ -1,1 +1,422 @@
-﻿
+﻿/* Container principal */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar vermelha */
+.sidebar {
+  width: 80px;
+  background-color: #c53030;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.sidebarText {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sidebarSubtext {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+/* Conteúdo principal */
+.mainContent {
+  flex: 1;
+  padding: 2rem;
+  background-color: white;
+}
+
+/* Cabeçalho */
+.header {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Cabeçalho principal */
+.dialoguesTitle {
+  color: #c53030;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-style: italic;
+}
+
+/* Seção de gramática */
+.grammarSection {
+  border: 2px solid #c53030;
+  border-radius: 22px 22px 8px 8px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.grammarHeader {
+  background-color: white;
+  padding: 1rem 2rem;
+  text-align: left;
+  border-bottom: 2px solid #c53030;
+}
+
+.grammarTitle {
+  color: #c53030;
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.grammarContent {
+  background-color: #d1cfcf;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.grammarRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.8fr 1.2fr 1.5fr;
+}
+
+.headerCell {
+  padding: 1.5rem;
+  border-right: 1px solid #c53030;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.headerCell:last-child {
+  border-right: none;
+}
+
+/* Tabela de exemplo */
+.exampleTable {
+  border: 2px solid #c53030;
+  border-radius: 8px;
+  margin-bottom: 5rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.exampleRow {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 0.8fr 1.2fr 1.5fr;
+}
+
+.exampleCell {
+  padding: 1.5rem;
+  border-right: 1px solid #c53030;
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exampleCell:last-child {
+  border-right: none;
+}
+
+/* Seção de diálogos */
+.dialoguesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.dialogueBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+/* Blocos de imagem - igual da página 313 */
+.imageContainer {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 0.5rem;
+}
+
+.dialogueImage {
+  width: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dialogueContent {
+  flex: 1;
+}
+
+.dialogueLine {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.speaker {
+  color: #333;
+  font-weight: bold;
+  font-size: 2.2rem;
+  min-width: 20px;
+}
+
+.englishText {
+  color: #c53030;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.portugueseText {
+  color: #666;
+  font-size: 2.2rem;
+  font-style: italic;
+  text-align: left;
+  margin-left: 4rem;
+  margin-bottom: 1rem;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .dialoguesTitle {
+    font-size: 3.6rem;
+  }
+
+  .grammarTitle {
+    font-size: 2.6rem;
+  }
+
+  .headerCell,
+  .exampleCell {
+    font-size: 2.6rem;
+    padding: 1.2rem;
+  }
+
+  .speaker {
+    font-size: 2.6rem;
+  }
+
+  .englishText {
+    font-size: 2.6rem;
+  }
+
+  .portugueseText {
+    font-size: 2.6rem;
+  }
+
+  .imageContainer {
+    flex: 0 0 240px;
+  }
+
+  .dialogueImage {
+    width: 240px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 60px;
+  }
+
+  .sidebarText {
+    writing-mode: horizontal-tb;
+    text-orientation: initial;
+    flex-direction: row;
+  }
+
+  .dialoguesTitle {
+    font-size: 3.8rem;
+  }
+
+  .grammarTitle {
+    font-size: 2.8rem;
+  }
+
+  .headerCell,
+  .exampleCell {
+    font-size: 2.8rem;
+    padding: 1rem;
+  }
+
+  .speaker {
+    font-size: 2.8rem;
+  }
+
+  .englishText {
+    font-size: 2.8rem;
+  }
+
+  .portugueseText {
+    font-size: 2.8rem;
+  }
+
+  .dialogueBlock {
+    flex-direction: column;
+  }
+
+  .imageContainer {
+    flex: none;
+    width: 100%;
+    align-self: center;
+  }
+
+  .dialogueImage {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .grammarContent,
+  .exampleTable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grammarRow,
+  .exampleRow {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainContent {
+    padding: 1rem;
+  }
+
+  .dialoguesTitle {
+    font-size: 4rem;
+  }
+
+  .grammarTitle {
+    font-size: 3rem;
+  }
+
+  .headerCell,
+  .exampleCell {
+    font-size: 3rem;
+    padding: 0.8rem;
+  }
+
+  .speaker {
+    font-size: 3rem;
+  }
+
+  .englishText {
+    font-size: 3rem;
+  }
+
+  .portugueseText {
+    font-size: 3rem;
+    margin-left: 2rem;
+  }
+
+  .grammarRow,
+  .exampleRow {
+    min-width: 500px;
+  }
+}
+
+@media (max-width: 360px) {
+  .mainContent {
+    padding: 0.8rem;
+  }
+
+  .dialoguesTitle {
+    font-size: 4.1rem;
+  }
+
+  .grammarTitle {
+    font-size: 3.1rem;
+  }
+
+  .headerCell,
+  .exampleCell {
+    font-size: 3.1rem;
+    padding: 0.6rem;
+  }
+
+  .speaker {
+    font-size: 3.1rem;
+  }
+
+  .englishText {
+    font-size: 3.1rem;
+  }
+
+  .portugueseText {
+    font-size: 3.1rem;
+    margin-left: 1.5rem;
+  }
+
+  .dialogueLine {
+    gap: 0.5rem;
+  }
+
+  .grammarRow,
+  .exampleRow {
+    min-width: 450px;
+  }
+}
+
+@media (max-width: 320px) {
+  .dialoguesTitle {
+    font-size: 4.2rem;
+  }
+
+  .grammarTitle {
+    font-size: 3.2rem;
+  }
+
+  .headerCell,
+  .exampleCell {
+    font-size: 3.2rem;
+    padding: 0.5rem;
+  }
+
+  .speaker {
+    font-size: 3.2rem;
+  }
+
+  .englishText {
+    font-size: 3.2rem;
+  }
+
+  .portugueseText {
+    font-size: 3.2rem;
+    margin-left: 1rem;
+  }
+
+  .grammarRow,
+  .exampleRow {
+    min-width: 400px;
+  }
+}

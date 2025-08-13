@@ -82,7 +82,7 @@
   }
   
   .page47__main-texto {
-    width: 40%;
+    width: 41%;
     background-color: #f7f9fa;
     border: 0.1rem solid #ddd;
     padding: 2rem;
@@ -385,11 +385,11 @@
 }
 
 .page47__audio-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
     position: relative;
-    top: 0.3rem;
+    top: 1rem;
     left: 0.5rem;
     transition: transform 0.2s ease-in-out;
 }

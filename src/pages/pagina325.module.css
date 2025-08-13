@@ -1,1 +1,279 @@
-﻿
+﻿/* Container principal */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+.exercisesTitle {
+  font-size: 3rem;
+  color: #000000;
+  text-align: left;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+/* Seção do exercício */
+.exerciseSection {
+  margin-bottom: 3rem;
+}
+
+.exerciseContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.exerciseContent {
+  flex: 1;
+}
+
+.exerciseTitle {
+  font-size: 1.8rem;
+  color: #000000;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Container das questões */
+.questionsContainer {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+/* Seções das histórias */
+.storySection {
+  margin-bottom: 2.5rem;
+}
+
+.storySection:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.storyTitle {
+  font-size: 1.3rem;
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.storyText {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #000;
+  text-align: justify;
+}
+
+/* Caixas de input */
+.inputBox {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  width: 120px;
+  margin: 0 0.2rem;
+  text-align: center;
+  transition: border-color 0.3s ease;
+  background-color: #b4b4b449;
+}
+
+.inputBox:focus {
+  outline: none;
+  border-color: #003366;
+  box-shadow: 0 0 0 2px rgba(0, 51, 102, 0.1);
+}
+
+.inputBox.correct {
+  border-color: #28a745;
+  background-color: #d4edda;
+}
+
+.inputBox.incorrect {
+  border-color: #dc3545;
+  background-color: #f8d7da;
+}
+
+/* Quadrado cinza para imagem */
+.graySquare {
+  width: 280px;
+  height: 200px;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 1rem;
+}
+
+/* Botão de verificação */
+.checkButtonContainer {
+  display: flex;
+  justify-content: left;
+  margin-top: 2rem;
+}
+
+.checkButton {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+  background-color: #004080;
+}
+
+/* Container de resultados */
+.resultsContainer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  text-align: center;
+}
+
+.resultsTitle {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.resultsText {
+  font-size: 1.1rem;
+  color: #495057;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .pageContainer {
+    padding: 1.5rem;
+  }
+
+  .exercisesTitle {
+    font-size: 3.4rem;
+  }
+
+  .exerciseContainer {
+    gap: 1.5rem;
+  }
+
+  .exerciseTitle {
+    font-size: 1.6rem;
+  }
+
+  .graySquare {
+    width: 250px;
+    height: 180px;
+  }
+
+  .inputBox {
+    width: 100px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .pageContainer {
+    padding: 1rem;
+  }
+
+  .exercisesTitle {
+    font-size: 3.6rem;
+  }
+
+  .exerciseContainer {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .exerciseTitle {
+    font-size: 1.5rem;
+  }
+
+  .questionsContainer {
+    padding: 1.5rem;
+  }
+
+  .storyText {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .inputBox {
+    width: 90px;
+    font-size: 0.9rem;
+    margin: 0.1rem;
+  }
+
+  .checkButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .exercisesTitle {
+    font-size: 4rem;
+  }
+
+  .exerciseTitle {
+    font-size: 1.3rem;
+  }
+
+  .questionsContainer {
+    padding: 1rem;
+  }
+
+  .storyText {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .inputBox {
+    width: 80px;
+    font-size: 0.85rem;
+    padding: 0.2rem 0.3rem;
+  }
+
+  .checkButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .graySquare {
+    width: 180px;
+    height: 130px;
+  }
+
+  .resultsContainer {
+    padding: 1rem;
+  }
+
+  .resultsTitle {
+    font-size: 1.1rem;
+  }
+
+  .resultsText {
+    font-size: 1rem;
+  }
+}

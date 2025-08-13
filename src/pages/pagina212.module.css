@@ -1,12 +1,12 @@
 /* Mantém as configurações básicas */
-.container {
+.page212__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page212__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
@@ -14,11 +14,11 @@
 }
 
 /* Cabeçalho */
-.header {
+.page212__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page212__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -27,14 +27,14 @@
 }
 
 /* Layout principal */
-.mainContent {
+.page212__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
 /* Seção de introdução */
-.grammarIntro {
+.page212__grammarIntro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -42,35 +42,35 @@
 }
 
 /* Estilos do verbo modal */
-.modalVerb {
+.page212__modalVerb {
     text-align: left;
 }
 
-.modalVerb h2 {
+.page212__modalVerb h2 {
     font-size: 2.8rem;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 0.5rem;
 }
 
-.modalVerb h2 span:first-child,
-.modalVerb p span:first-child {
+.page212__modalVerb h2 span:first-child,
+.page212__modalVerb p span:first-child {
     color: #990000;
 }
 
-.modalVerb h2 span:last-child,
-.modalVerb p span:last-child {
+.page212__modalVerb h2 span:last-child,
+.page212__modalVerb p span:last-child {
     color: #000;
 }
 
-.modalVerb p {
+.page212__modalVerb p {
     color: #000;
     font-size: 2.4rem;
     font-style: italic;
 }
 
 /* Caixas de informação */
-.tenseBox {
+.page212__tenseBox {
     background-color: #f5f5f5;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -80,14 +80,14 @@
     margin: 1rem 0;
 }
 
-.tenseBox p {
+.page212__tenseBox p {
     font-size: 2rem;
     color: #333;
     font-style: italic;
     white-space: nowrap;
 }
 
-.explanationBox {
+.page212__explanationBox {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1.8rem 2rem;
@@ -95,42 +95,42 @@
     text-align: left;
 }
 
-.explanationBox p {
+.page212__explanationBox p {
     font-size: 1.8rem;
     line-height: 1.5;
 }
 
 /* Seção de gramática */
-.grammarSection {
+.page212__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.grammarHeader {
+.page212__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page212__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page212__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page212__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page212__grammarRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
     text-align: center;
@@ -139,18 +139,18 @@
     border-right: 1px solid #ddd;
 }
 
-.grammarRow span:last-child {
+.page212__grammarRow span:last-child {
     border-right: none;
 }
 
-.grammarRow span:nth-child(4)::after {
+.page212__grammarRow span:nth-child(4)::after {
     content: "(BF)";
     color: #990000;
     margin-left: 0;
 }
 
 /* Tabela de conteúdo */
-.tableContent {
+.page212__tableContent {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
@@ -158,13 +158,13 @@
     background-color: #ffffff;
 }
 
-.tableGroup {
+.page212__tableGroup {
     position: relative;
     padding: 1rem 0;
     border-bottom: 1px solid #ddd;
 }
 
-.translationColumn:not(:last-child)::after {
+.page212__translationColumn:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -175,17 +175,17 @@
     z-index: 1;
 }
 
-.tableGroup:last-child {
+.page212__tableGroup:last-child {
     border-bottom: none;
 }
 
-.tableRow {
+.page212__tableRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
 }
 
-.pg213Cell {
+.page212__pg213Cell {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +195,7 @@
     position: relative;
 }
 
-.pg213Cell:not(:last-child)::after {
+.page212__pg213Cell:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -205,31 +205,31 @@
     background-color: #ddd;
 }
 
-.pg213Cell:last-child {
+.page212__pg213Cell:last-child {
     border-right: none;
 }
 
 /* Visual separation for the "I" block */
-.firstBlock {
+.page212__firstBlock {
     margin-bottom: 2rem;
     /* Optionally, add a subtle border or shadow for more emphasis: */
     /* border-bottom: 2px solid #a61c28; */
     /* box-shadow: 0 4px 8px -8px #a61c28; */
 }
 
-.pg213Red {
+.page212__pg213Red {
     color: #990000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Black {
+.page212__pg213Black {
     color: #000000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Dash {
+.page212__pg213Dash {
     color: #000000;
     font-style: normal;
     font-size: 2.2rem;
@@ -237,25 +237,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .headerTitle {
+    .page212__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .tableRow {
+    .page212__grammarRow, .page212__tableRow {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow span {
+    .page212__grammarRow span {
         border-bottom: 1px solid #ddd;
     }
 
-    .grammarRow span:last-child {
+    .page212__grammarRow span:last-child {
         border-bottom: none;
     }
 }
 
 /* Translation Section - Updated */
-.translationSection {
+.page212__translationSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
@@ -263,14 +263,14 @@
     background-color: #f5f5f5;
 }
 
-.translationContent {
+.page212__translationContent {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
     background-color: #ffffff;
 }
 
-.translationColumn {
+.page212__translationColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,7 +279,7 @@
     position: relative;
 }
 
-.translationColumn:not(:last-child)::after {
+.page212__translationColumn:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -289,11 +289,11 @@
     background-color: #ddd;  /* Changed to gray */
 }
 
-.translationItem {
+.page212__translationItem {
     font-size: 2.2rem;
     font-style: italic;
 }
-.noteBox {
+.page212__noteBox {
     width: 700px;
     margin: 2rem 0;
     background-color: white;
@@ -302,7 +302,7 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.noteTitle {
+.page212__noteTitle {
     background-color: #002f6c;
     color: white;
     font-weight: bold;
@@ -314,7 +314,7 @@
     font-style: italic;
 }
 
-.noteContent {
+.page212__noteContent {
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -322,7 +322,7 @@
     text-align: left;
 }
 
-.noteRow {
+.page212__noteRow {
     display: flex;
     justify-content: space-between;
     font-style: italic;
@@ -330,7 +330,7 @@
     font-size: 1.6rem;
 }
 
-.noteFormula {
+.page212__noteFormula {
     font-style: italic;
     font-weight: bold;
     font-size: 1.6rem;
@@ -338,8 +338,8 @@
 }
 
 /* Remove these classes as they're no longer needed */
-.translationHeader,
-.translationTitle {
+.page212__translationHeader,
+.page212__translationTitle {
     display: none;
 
     padding: 2rem;
@@ -348,34 +348,30 @@
     gap: 2rem;
 }
 
-.translationColumn {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.translationItem {
-    font-size: 2rem;
-    font-style: italic;
-}
-
-.translationItem.red {
+.page212__translationItem.page212__red {
     color: #990000;
 }
 
-.translationItem.black {
+.page212__translationItem.page212__black {
     color: #000;
 }
 
-.blueText {
+.page212__red {
+    color: #990000;
+}
+
+.page212__black {
+    color: #000;
+}
+
+.page212__blueText {
     color: #104b86;
     font-style: italic;
     font-size: 2.2rem;
 
 }
 
-.blueTextNote {
+.page212__blueTextNote {
     color: #092949;
     font-style: italic;
     font-size: 2.2rem;
@@ -383,7 +379,7 @@
 }
 
 
-.redNot {
+.page212__redNot {
     color: #A61C28;
     font-weight: bold;
     font-style: italic;

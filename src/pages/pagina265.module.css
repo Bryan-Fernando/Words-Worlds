@@ -1,43 +1,43 @@
-.container {
+.page265__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page265__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.mainContent {
+.page265__mainContent {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.header {
+.page265__header {
     margin-bottom: 3rem;
     font-size: 1.6rem;
     text-align: left;
 }
 
-.grammarText {
+.page265__grammarText {
     font-style: italic;
     color: #A61C28;
 }
 
 /* Seção de gramática */
-.grammarSection {
+.page265__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.grammarHeader {
+.page265__grammarHeader {
     background-color: #990000;
     padding: 1.5rem;
     text-align: center;
@@ -45,7 +45,7 @@
     border-top-right-radius: 8px;
 }
 
-.grammarTitle {
+.page265__grammarTitle {
     color: white;
     font-size: 2.4rem;
     text-align: center;
@@ -54,13 +54,13 @@
     margin: 0;
 }
 
-.grammarContent {
+.page265__grammarContent {
     background-color: #d1cfcf;
     padding: 0.2rem 0;
     /* Reduzido para eliminar espaço extra */
 }
 
-.grammarRow {
+.page265__grammarRow {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -72,7 +72,7 @@
     color: #A61C28;
 }
 
-.tableContent {
+.page265__tableContent {
     background-color: white;
     border: 2px solid #990000;
     border-radius: 8px;
@@ -80,7 +80,7 @@
     position: relative;
 }
 
-.tableContent::after {
+.page265__tableContent::after {
     content: '';
     position: absolute;
     top: 0;
@@ -91,7 +91,7 @@
     z-index: 1;
 }
 
-.row {
+.page265__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
@@ -100,39 +100,39 @@
 }
 
 /* Remova estas propriedades pois agora a linha vertical será controlada pelo pseudo-elemento */
-.row span:first-child {
+.page265__row span:first-child {
     padding-right: 1rem;
 }
-.row:last-child {
+.page265__row:last-child {
     border-bottom: none;
 }
 
-.row span {
+.page265__row span {
     font-size: 1.6rem;
     text-align: left;
     padding: 0.8rem;
 }
 
-.grammarRow span {
+.page265__grammarRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
     text-align: left;
 }
 
-.grammarRow span:first-child,
-.row span:first-child {
+.page265__grammarRow span:first-child,
+.page265__row span:first-child {
     padding-right: 1rem;
 }
 
-.grammarRow span:last-child {
+.page265__grammarRow span:last-child {
     padding-left: 1rem;
 }
 
-.row span:last-child {
+.page265__row span:last-child {
     border-right: none;
 }
 
-.adjectivesSection {
+.page265__adjectivesSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
@@ -140,47 +140,47 @@
 
 }
 
-.columnContainer {
+.page265__columnContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.translation {
+.page265__translation {
     font-style: italic;
     color: #A61C28;
 }
 
 @media (max-width: 768px) {
-    .adjectivesSection {
+    .page265__adjectivesSection {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow {
+    .page265__grammarRow {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow span {
+    .page265__grammarRow span {
         border-right: none;
         border-bottom: 1px solid #ddd;
     }
 
-    .grammarRow span:last-child {
+    .page265__grammarRow span:last-child {
         border-bottom: none;
     }
 }
 
 @media (max-width: 768px) {
-    .headerTitle {
+    .page265__headerTitle {
         font-size: 3.2rem;
     }
 
-    .adjectivesSection {
+    .page265__adjectivesSection {
         grid-template-columns: 1fr;
     }
 
-    .row span {
+    .page265__row span {
         font-size: 1.4rem;
     }
 }

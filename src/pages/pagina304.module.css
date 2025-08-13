@@ -1,1 +1,259 @@
-﻿
+﻿/* Container principal */
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+/* Título principal */
+.exercisesTitle {
+  font-size: 3rem;
+  color: #003366;
+  text-align: left;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+/* Seção do exercício */
+.exerciseSection {
+  margin-bottom: 8rem;
+}
+
+.exerciseSection2 {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: left;
+}
+
+.exerciseContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  align-items: flex-start;
+}
+
+.exerciseContent {
+  flex: 1;
+}
+
+.exerciseImageRight {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 2rem;
+}
+
+/* >>> Imagem responsiva (substitui o quadrado cinza) <<< */
+.exerciseImage {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.exerciseTitle {
+  font-size: 1.8rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  font-style: italic;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Question words em vermelho */
+.questionWords {
+  color: #8a1720;
+  font-weight: bold;
+}
+
+/* Traços em azul */
+.dash {
+  color: #003366;
+  font-weight: bold;
+  margin: 0 0.3rem;
+}
+
+/* Container das questões */
+.questionsContainer {
+  border-bottom: 2px solid #003366;
+  border-top: 2px solid #003366;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.questionLine {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.questionLine:last-child {
+  margin-bottom: 0;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.questionLetter {
+  font-weight: bold;
+  color: #000;
+}
+
+.questionText {
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.inputBox {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: rgb(29, 29, 29);
+  background-color: white;
+}
+
+.inputBox:focus {
+  outline: none;
+  border-color: #0066cc;
+}
+
+.inputBox::placeholder {
+  color: #999;
+}
+
+/* Estilos para funcionalidade check */
+.checkButton {
+  background-color: #8a1720;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkButton:hover {
+  background-color: #004080;
+}
+
+.correct {
+  border: 2px solid #28a745 !important;
+  background-color: #d4edda !important;
+}
+
+.incorrect {
+  border: 2px solid #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+
+.feedback {
+  width: 100%;
+  text-align: left;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.correctFeedback {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.incorrectFeedback {
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Quadrado cinza */
+.graySquare {
+  width: 300px;
+  height: 220px;
+  background-color: #808080;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets grandes */
+@media (max-width: 1024px) {
+  .pageContainer { padding: 1.5rem; }
+  .exercisesTitle { font-size: 3.4rem; }
+  .exerciseContainer { gap: 3rem; }
+  .exerciseTitle { font-size: 2.0rem; }
+  .questionLine { font-size: 1.3rem; }
+  .inputBox { font-size: 1.2rem; }
+  .checkButton { font-size: 1.3rem; }
+  .feedback { font-size: 1.1rem; }
+
+  .graySquare { width: 250px; height: 180px; }
+  .exerciseImage { max-width: 250px; } /* acompanha o quadrado */
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .pageContainer { padding: 1rem; }
+  .exercisesTitle { font-size: 3.6rem; }
+  .exerciseContainer { flex-direction: column; }
+
+  .exerciseImageRight {
+    flex: none;
+    align-self: left;
+    order: 1;
+  }
+
+  .exerciseTitle { font-size: 2.2rem; }
+  .questionsContainer { padding: 1.5rem; }
+  .questionLine { font-size: 1.5rem; }
+  .inputBox { font-size: 1.4rem; }
+  .checkButton { font-size: 1.5rem; }
+  .feedback { font-size: 1.3rem; }
+
+  .graySquare { width: 200px; height: 150px; }
+  .exerciseImage { max-width: 200px; }
+
+  .exerciseSection2 { justify-content: left; }
+}
+
+/* Smartphones */
+@media (max-width: 480px) {
+  .pageContainer { padding: 0.8rem; }
+  .exercisesTitle { font-size: 3.8rem; }
+  .exerciseTitle { font-size: 2.4rem; }
+  .questionsContainer { padding: 1rem; }
+  .questionLine { font-size: 1.7rem; }
+  .inputBox { font-size: 1.6rem; }
+  .checkButton { font-size: 1.7rem; }
+  .feedback { font-size: 1.5rem; }
+
+  .graySquare { width: 150px; height: 120px; }
+  .exerciseImage { max-width: 150px; }
+}
+
+/* Smartphones muito pequenos */
+@media (max-width: 360px) {
+  .exercisesTitle { font-size: 4.0rem; }
+  .exerciseTitle { font-size: 2.6rem; }
+  .questionLine { font-size: 1.9rem; }
+  .inputBox { font-size: 1.8rem; }
+  .checkButton { font-size: 1.9rem; }
+  .feedback { font-size: 1.7rem; }
+
+  .graySquare { width: 120px; height: 100px; }
+  .exerciseImage { max-width: 120px; }
+}

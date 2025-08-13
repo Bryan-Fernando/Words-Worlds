@@ -479,7 +479,7 @@ const Pagina96 = () => {
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                className={styles["page95__audio-icon-p"]}
+                                className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio12p")}
                             />
                             <em><strong>a.</strong> She finishes her homework before dinner.</em>
@@ -504,7 +504,7 @@ const Pagina96 = () => {
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                className={styles["page95__audio-icon-p"]}
+                                className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio13p")}
                             />
                             <em><strong>b.</strong> They clean the house every Saturday.</em>
@@ -527,7 +527,7 @@ const Pagina96 = () => {
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                className={styles["page95__audio-icon-p"]}
+                                className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio14p")}
                             />
                             <em><strong>c.</strong> The shop opens at 9:00 AM.</em>
@@ -551,7 +551,7 @@ const Pagina96 = () => {
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                className={styles["page95__audio-icon-p"]}
+                                className={styles["page96__q3-icon"]}
                                 onClick={() => playAudio("pg96_audio15p")}
                             />
                             <em><strong>d.</strong> I cook dinner for my family.</em>

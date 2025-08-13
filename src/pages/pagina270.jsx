@@ -47,28 +47,28 @@ const Pagina270 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.grammarRed}>Grammar</span> - <span className={styles.grammarBold}>Adjectives</span></h1>
+    <div className={styles.page270__container}>
+      <header className={styles.page270__header}>
+        <h1><span className={styles.page270__grammarRed}>Grammar</span> - <span className={styles.page270__grammarBold}>Adjectives</span></h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page270__instruction}>
         <strong>3.</strong> Choose the correct option:
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page270__questionBox}>
+        <main className={styles.page270__main}>
           {questions.map((q, index) => {
             const [before, after] = q.sentence.split('__________');
 
             return (
-              <div key={index} className={styles.question}>
+              <div key={index} className={styles.page270__question}>
                 <span>{before}</span>
                 <input
                   type="text"
                   value={inputValues[index]}
                   onChange={(e) => handleInputChange(e.target.value, index)}
-                  className={styles.input}
+                  className={styles.page270__input}
                 />
                 <span>{after}</span>
 
@@ -76,7 +76,7 @@ const Pagina270 = () => {
                   <img
                     src={results[index] ? correctIcon : wrongIcon}
                     alt={results[index] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page270__resultIcon}
                   />
                 )}
               </div>
@@ -85,8 +85,8 @@ const Pagina270 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page270__checkContainer}>
+        <button className={styles.page270__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

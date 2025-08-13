@@ -1,74 +1,234 @@
-import React, { useRef, useState } from 'react';
-import styles from './pagina276.module.css';
-
-import mapImage from '../assets/images/pagina275_imagem1.webp';
-import dialogueImage from '../assets/images/pagina276_imagem1.webp';
-import video2 from '../assets/images/map2.mp4';
-
-import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-import audio1 from '../assets/audios/pg276_audio1e.mp3'; // Novo áudio
+import React from "react";
+import styles from "./pagina276.module.css";
 
 const Pagina276 = () => {
-  const [videoSrc, setVideoSrc] = useState(null);
-  const currentAudio = useRef(null);
-
-  const playAudio = () => {
-    if (currentAudio.current) {
-      currentAudio.current.pause();
-      currentAudio.current.currentTime = 0;
-    }
-    const audio = new Audio(audio1);
-    currentAudio.current = audio;
-    audio.play();
-  };
-
-  const handlePlayVideo = () => {
-    setVideoSrc(video2);
-  };
-
-  const handleCloseVideo = () => {
-    setVideoSrc(null);
-  };
-
   return (
     <div className={styles.container}>
-      <img src={mapImage} alt="Mapa da rota 2" className={styles.mapImage} />
-
-      <div className={styles.dialogueWrapper}>
-        <div className={styles.dialogueNumber}>2</div>
-
-        <div className={styles.dialogueSection}>
-          <div className={styles.dialogueImageContainer}>
-            <img src={dialogueImage} alt="Diálogo Bonnie e Stephany" className={styles.dialogueImage} />
-          </div>
-
-          <div className={styles.textBlock}>
-            <h4 className={styles.nameBlue}>Bonnie</h4>
-            <p className={styles.speechBubble}>
-              Good afternoon! Can you tell me how to get to “La Trattoria Italian restaurant”, please?
-              <img
-                src={eng_audio_icon}
-                alt="Play audio"
-                className={styles.audioIcon}
-                onClick={playAudio}
-              /><br />
-              <em>Boa tarde! Você pode me dizer como chegar ao “restaurante italiano La Trattoria”, por favor?</em>
-            </p>
-
-            <h4 className={styles.nameRed}>Stephany</h4>
-            <p className={`${styles.speechBubble} ${styles.directions}`} onClick={handlePlayVideo}>
-              Good afternoon! Yes, go straight ahead up to 1st Ave. Then make a right. Go to the corner of 5th St. Turn left. You can’t miss it.<br />
-              <em>Boa tarde! Sim, siga em frente até a 1st Ave. Em seguida, vire à direita. Vá para a esquina da 5th St. Vire à esquerda. Não tem como errar.</em>
-            </p>
-          </div>
-        </div>
+      <div className={styles.pageContainer}>
+        <header className={styles.header}>
+          <h1 className={styles.headerTitle}>
+            Grammar - <span className={styles.modalHighlight}>Should</span>
+          </h1>
+        </header>
+        <main className={styles.mainContent}>
+          <section className={styles.grammarSection}>
+            <div className={styles.grammarHeaderNegative}>
+              <h2 className={styles.grammarTitle}>Negative Form</h2>
+            </div>
+            <div className={styles.grammarContentNegative}>
+              <div className={styles.grammarRowNegative}>
+                <span>Subject</span>
+                <span>Aux. Verb</span>
+                <span>Not</span>
+                <span>Main Verb</span>
+                <span>Object <br/> Complement</span>
+              </div>
+            </div>
+          </section>
+          <section className={styles.tableContent}>
+            {/* I */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    <em>I</em>
+                  </span>
+                  <span className={styles.pg413Red}>
+                    <em>I</em>
+                  </span>
+                  <span className={styles.pg413Black}>
+                    <em>Eu</em>
+                  </span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    <em>should</em>
+                  </span>
+                  <span className={styles.pg413Red}>
+                    <em>shouldn't</em>
+                  </span>
+                  <span className={styles.pg413Black}>
+                    <em>não deveria</em>
+                  </span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    <em> <strong>not</strong> </em>
+                  </span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    <em>eat</em>
+                  </span>
+                  <span className={styles.pg413Red}>
+                    <em>eat</em>
+                  </span>
+                  <span className={styles.pg413Black}>
+                    <em>comer</em>
+                  </span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    <em>too much candy</em>
+                  </span>
+                  <span className={styles.pg413Red}>
+                    <em>too much candy</em>
+                  </span>
+                  <span className={styles.pg413Black}>
+                    <em>tanto doce</em>
+                  </span>
+                </div>
+              </div>
+            </div>
+            {/* He, She, It */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>He</span>
+                  <span className={styles.pg413Black}>Ele</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>shouldn't</span>
+                  <span className={styles.pg413Black}>não deveria</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>play</span>
+                  <span className={styles.pg413Black}>jogar</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>videogames all night</span>
+                  <span className={styles.pg413Black}>
+                    videogames a noite toda
+                  </span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>She</span>
+                  <span className={styles.pg413Black}>Ela</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>shouldn't</span>
+                  <span className={styles.pg413Black}>não devia</span>
+                   <span className={styles.pg413Black}>não deveria</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>forget to do</span>
+                  <span className={styles.pg413Black}>esquecer de fazer</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>her homework</span>
+                  <span className={styles.pg413Black}>sua lição de casa</span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>It</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>shouldn't</span>
+                  <span className={styles.pg413Black}>não devia</span>
+                   <span className={styles.pg413Black}>não deveria</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>make</span>
+                  <span className={styles.pg413Black}>fazer</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>that noise</span>
+                  <span className={styles.pg413Black}>esse barulho</span>
+                </div>
+              </div>
+            </div>
+            {/* We, You, They */}
+            <div className={styles.tableGroup}>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>We</span>
+                  <span className={styles.pg413Black}>Nós</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>shouldn't</span>
+                  <span className={styles.pg413Black}>não deveríamos</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>run</span>
+                  <span className={styles.pg413Black}>correr</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>in the hallway</span>
+                  <span className={styles.pg413Black}>no corredor</span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>You</span>
+                  <span className={styles.pg413Black}>Você</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    shouldn't <span className={styles.sgplBlue}>(sg)</span>
+                  </span>
+                  <span className={styles.pg413Black}>não deveria</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>skip</span>
+                  <span className={styles.pg413Black}>matar / cabular</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>class</span>
+                  <span className={styles.pg413Black}>aula</span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>You all</span>
+                  <span className={styles.pg413Black}>Vocês</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>
+                    shouldn't <span className={styles.sgplBlue}>(pl)</span>
+                  </span>
+                  <span className={styles.pg413Black}>não deveriam</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>talk</span>
+                  <span className={styles.pg413Black}>falar</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>so loudly</span>
+                  <span className={styles.pg413Black}>tão alto</span>
+                </div>
+              </div>
+              <div className={styles.tableRow}>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>They</span>
+                  <span className={styles.pg413Black}>Eles / Elas</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>shouldn't</span>
+                  <span className={styles.pg413Black}>não deveriam</span>
+                </div>
+                <div className={styles.pg413Cell}></div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>go out</span>
+                  <span className={styles.pg413Black}>sair</span>
+                </div>
+                <div className={styles.pg413Cell}>
+                  <span className={styles.pg413Red}>without a jacket</span>
+                  <span className={styles.pg413Black}>sem casaco</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
       </div>
-
-      {videoSrc && (
-        <div className={styles.videoOverlay} onClick={handleCloseVideo}>
-          <video src={videoSrc} controls autoPlay className={styles.videoPlayer} />
-        </div>
-      )}
     </div>
   );
 };

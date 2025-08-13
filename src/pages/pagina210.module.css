@@ -1,12 +1,12 @@
 /* Mantém as configurações básicas */
-.container {
+.page210__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page210__pageContainer {
     width: 100%;
     max-width: 1800px;
     margin: 0;
@@ -14,11 +14,11 @@
 }
 
 /* Cabeçalho */
-.header {
+.page210__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page210__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -27,14 +27,14 @@
 }
 
 /* Layout principal */
-.mainContent {
+.page210__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
 /* Seção de introdução */
-.grammarIntro {
+.page210__grammarIntro {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -42,35 +42,35 @@
 }
 
 /* Estilos do verbo modal */
-.modalVerb {
+.page210__modalVerb {
     text-align: left;
 }
 
-.modalVerb h2 {
+.page210__modalVerb h2 {
     font-size: 2.8rem;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 0.5rem;
 }
 
-.modalVerb h2 span:first-child,
-.modalVerb p span:first-child {
+.page210__modalVerb h2 span:first-child,
+.page210__modalVerb p span:first-child {
     color: #990000;
 }
 
-.modalVerb h2 span:last-child,
-.modalVerb p span:last-child {
+.page210__modalVerb h2 span:last-child,
+.page210__modalVerb p span:last-child {
     color: #000;
 }
 
-.modalVerb p {
+.page210__modalVerb p {
     color: #000;
     font-size: 2.4rem;
     font-style: italic;
 }
 
 /* Caixas de informação */
-.tenseBox {
+.page210__tenseBox {
     background-color: #f5f5f5;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -80,14 +80,14 @@
     margin: 1rem 0;
 }
 
-.tenseBox p {
+.page210__tenseBox p {
     font-size: 2rem;
     color: #333;
     font-style: italic;
     white-space: nowrap;
 }
 
-.explanationBox {
+.page210__explanationBox {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1.8rem 2rem;
@@ -95,42 +95,42 @@
     text-align: left;
 }
 
-.explanationBox p {
+.page210__explanationBox p {
     font-size: 1.8rem;
     line-height: 1.5;
 }
 
 /* Seção de gramática */
-.grammarSection {
+.page210__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 3rem;
 }
 
-.grammarHeader {
+.page210__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page210__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page210__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page210__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page210__grammarRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
     text-align: center;
@@ -139,18 +139,18 @@
     border-right: 1px solid #ddd;
 }
 
-.grammarRow span:last-child {
+.page210__grammarRow span:last-child {
     border-right: none;
 }
 
-.grammarRow span:nth-child(4)::after {
+.page210__grammarRow span:nth-child(4)::after {
     content: "(BF)";
     color: #990000;
     margin-left: 0;
 }
 
 /* Tabela de conteúdo */
-.tableContent {
+.page210__tableContent {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
@@ -158,13 +158,13 @@
     background-color: #ffffff;
 }
 
-.tableGroup {
+.page210__tableGroup {
     position: relative;
     padding: 1rem 0;
     border-bottom: 1px solid #ddd;
 }
 
-.translationColumn:not(:last-child)::after {
+.page210__translationColumn:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -175,17 +175,17 @@
     z-index: 1;
 }
 
-.tableGroup:last-child {
+.page210__tableGroup:last-child {
     border-bottom: none;
 }
 
-.tableRow {
+.page210__tableRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
 }
 
-.pg213Cell {
+.page210__pg213Cell {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +195,7 @@
     position: relative;
 }
 
-.pg213Cell:not(:last-child)::after {
+.page210__pg213Cell:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -205,31 +205,31 @@
     background-color: #ddd;
 }
 
-.pg213Cell:last-child {
+.page210__pg213Cell:last-child {
     border-right: none;
 }
 
 /* Visual separation for the "I" block */
-.firstBlock {
+.page210__firstBlock {
     margin-bottom: 2rem;
     /* Optionally, add a subtle border or shadow for more emphasis: */
     /* border-bottom: 2px solid #a61c28; */
     /* box-shadow: 0 4px 8px -8px #a61c28; */
 }
 
-.pg213Red {
+.page210__pg213Red {
     color: #990000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Black {
+.page210__pg213Black {
     color: #000000;
     font-style: italic;
     font-size: 2.2rem;
 }
 
-.pg213Dash {
+.page210__pg213Dash {
     color: #000000;
     font-style: normal;
     font-size: 2.2rem;
@@ -237,25 +237,25 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .headerTitle {
+    .page210__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .tableRow {
+    .page210__grammarRow, .page210__tableRow {
         grid-template-columns: 1fr;
     }
 
-    .grammarRow span {
+    .page210__grammarRow span {
         border-bottom: 1px solid #ddd;
     }
 
-    .grammarRow span:last-child {
+    .page210__grammarRow span:last-child {
         border-bottom: none;
     }
 }
 
 /* Translation Section - Updated */
-.translationSection {
+.page210__translationSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
@@ -263,14 +263,14 @@
     background-color: #f5f5f5;
 }
 
-.translationContent {
+.page210__translationContent {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     position: relative;
     background-color: #ffffff;
 }
 
-.translationColumn {
+.page210__translationColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -279,7 +279,7 @@
     position: relative;
 }
 
-.translationColumn:not(:last-child)::after {
+.page210__translationColumn:not(:last-child)::after {
     content: '';
     position: absolute;
     right: 0;
@@ -289,11 +289,11 @@
     background-color: #ddd;  /* Changed to gray */
 }
 
-.translationItem {
+.page210__translationItem {
     font-size: 2.2rem;
     font-style: italic;
 }
-.noteBox {
+.page210__noteBox {
     width: 250px;
     margin: 2rem 0;
     background-color: white;
@@ -302,7 +302,7 @@
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.noteTitle {
+.page210__noteTitle {
     background-color: #002f6c;
     color: white;
     font-weight: bold;
@@ -314,14 +314,14 @@
     font-style: italic;
 }
 
-.noteContent {
+.page210__noteContent {
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-.noteRow {
+.page210__noteRow {
     display: flex;
     justify-content: space-between;
     font-style: italic;
@@ -329,7 +329,7 @@
     font-size: 1.6rem;
 }
 
-.noteFormula {
+.page210__noteFormula {
     font-style: italic;
     font-weight: bold;
     font-size: 1.6rem;
@@ -337,8 +337,8 @@
 }
 
 /* Remove these classes as they're no longer needed */
-.translationHeader,
-.translationTitle {
+.page210__translationHeader,
+.page210__translationTitle {
     display: none;
 
     padding: 2rem;
@@ -347,34 +347,34 @@
     gap: 2rem;
 }
 
-.translationColumn {
+.page210__translationColumn {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.translationItem {
+.page210__translationItem {
     font-size: 2rem;
     font-style: italic;
 }
 
-.translationItem.red {
+.page210__translationItem.red {
     color: #990000;
 }
 
-.translationItem.black {
+.page210__black {
     color: #000;
 }
 
-.blueText {
+.page210__blueText {
     color: #104b86;
     font-style: italic;
     font-size: 2.2rem;
 
 }
 
-.redNot {
+.page210__redNot {
     color: #A61C28;
     font-weight: bold;
     font-style: italic;

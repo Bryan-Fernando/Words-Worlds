@@ -1,25 +1,25 @@
-.container {
+.page268__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page268__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.grammarRed {
+.page268__grammarRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.grammarBold {
+.page268__grammarBold {
   font-weight: bold;
   font-style: italic;
 }
 
-.instruction {
+.page268__instruction {
   color: #1c4c9c;
   font-size: 1.5rem;
   font-weight: bold;
@@ -27,7 +27,7 @@
   text-align: left;
 }
 
-.questionBox {
+.page268__questionBox {
   border: 3px solid #1c4c9c;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -37,13 +37,13 @@
   max-width: 650px
 }
 
-.main {
+.page268__main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.question {
+.page268__question {
   display: flex;
   align-items: center;
   font-size: 1.5rem;
@@ -51,7 +51,7 @@
   flex-wrap: wrap;
 }
 
-.input {
+.page268__input {
   width: 240px;
   padding: 0.5rem;
   font-size: 1.3rem;
@@ -63,20 +63,20 @@
   margin: 0 0.5rem;
 }
 
-.resultIcon {
+.page268__resultIcon {
   width: 24px;
   height: 24px;
   margin-left: 0.3rem; /* bem próximo do input */
   vertical-align: middle;
 }
 
-.checkContainer {
+.page268__checkContainer {
   display: flex;
   justify-content: flex-start;
 
 }
 
-.checkButton {
+.page268__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -88,6 +88,6 @@
   margin-left: 0;
 }
 
-.checkButton:hover {
+.page268__checkButton:hover {
   background-color: #8a1720;
 }

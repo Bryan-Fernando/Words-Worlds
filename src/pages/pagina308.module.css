@@ -1,1 +1,342 @@
-﻿
+﻿/* Container principal */
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: white;
+}
+
+.pageContainer {
+    width: 100%;
+    max-width: 1800px;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Cabeçalho */
+.header {
+    margin-bottom: 3rem;
+}
+
+.headerTitle {
+    color: #A61C28;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 2rem;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Layout principal */
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+/* Seção de gramática */
+.grammarSection {
+    border: 2px solid #A61C28;
+    border-radius: 22px 22px 8px 8px;
+    overflow: hidden;
+}
+
+.grammarHeader {
+    padding: 1rem 2rem;
+    text-align: left;
+    border-bottom: 2px solid #A61C28;
+}
+
+.grammarTitle {
+    color: #A61C28;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.grammarContent {
+    background-color: #d1cfcf;
+}
+
+.grammarRow {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+}
+
+.grammarRow span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 2.2rem;
+    text-align: center;
+    white-space: normal; /* Alterado de nowrap para normal */
+    letter-spacing: -0.5px;
+    border-right: 1px solid #ddd;
+    font-weight: bold;
+    flex-direction: column; /* Adicionado para empilhar verticalmente */
+}
+
+.grammarRow span:last-child {
+    border-right: none;
+}
+
+/* Estilos de texto */
+.redText {
+    color: #A61C28;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.blackText {
+    color: #222;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.blueText {
+    color: #104b86;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+/* Tabelas de conteúdo */
+.tableContent {
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 3rem;
+}
+
+.tableGroup {
+    position: relative;
+    padding: 0;
+    border: 3px solid #A61C28;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+.tableGroup:last-child {
+    margin-bottom: 0;
+}
+
+.tableRow {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.2fr 1.5fr 2.5fr;
+    position: relative;
+    border-bottom: 1px solid #00000063;
+    text-align: left;
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableCell {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    font-size: 2.2rem;
+    border-right: 1px solid #00000053;
+}
+
+.tableCell:last-child {
+    border-right: none;
+}
+
+/* Estilos de texto */
+.redText {
+    color: #A61C28;
+    font-weight: bold;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.blackText {
+    color: #222;
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.blueText {
+    color: #2351a2 !important;
+    font-size: 2.2rem;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+    .headerTitle {
+        font-size: 3.6rem;
+    }
+    
+    .grammarTitle {
+        font-size: 2.6rem;
+    }
+    
+    .grammarRow span {
+        font-size: 2.6rem;
+    }
+    
+    .tableCell {
+        font-size: 2.6rem;
+    }
+    
+    .redText {
+        font-size: 2.6rem;
+    }
+    
+    .blackText {
+        font-size: 2.6rem;
+    }
+    
+    .blueText {
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .headerTitle {
+        font-size: 3.8rem;
+    }
+    
+    .grammarTitle {
+        font-size: 2.8rem;
+    }
+    
+    .grammarRow span {
+        font-size: 2.8rem;
+    }
+    
+    .tableCell {
+        font-size: 2.8rem;
+        padding: 1.5rem 0.8rem;
+    }
+    
+    .redText {
+        font-size: 2.8rem;
+    }
+    
+    .blackText {
+        font-size: 2.8rem;
+    }
+    
+    .blueText {
+        font-size: 2.8rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .headerTitle {
+        font-size: 4rem;
+    }
+    
+    .grammarTitle {
+        font-size: 3rem;
+    }
+    
+    .grammarRow span {
+        font-size: 3rem;
+    }
+    
+    .tableCell {
+        font-size: 3rem;
+    }
+    
+    .redText {
+        font-size: 3rem;
+    }
+    
+    .blackText {
+        font-size: 3rem;
+    }
+    
+    .blueText {
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 360px) {
+    .headerTitle {
+        font-size: 4.1rem;
+    }
+    
+    .grammarTitle {
+        font-size: 3.1rem;
+    }
+    
+    .grammarRow span {
+        font-size: 3.1rem;
+    }
+    
+    .tableCell {
+        font-size: 3.1rem;
+    }
+    
+    .redText {
+        font-size: 3.1rem;
+    }
+    
+    .blackText {
+        font-size: 3.1rem;
+    }
+    
+    .blueText {
+        font-size: 3.1rem;
+    }
+
+        
+    .grammarRow,
+    .tableRow {
+        grid-template-columns: 1fr;
+    }
+    
+    .grammarRow span {
+        border-bottom: 1px solid #ddd;
+        border-right: none;
+    }
+    
+    .grammarRow span:last-child {
+        border-bottom: none;
+    }
+    
+    .tableCell {
+        border-bottom: 1px solid #00000053;
+        border-right: none;
+    }
+    
+    .tableRow:last-child .tableCell {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 320px) {
+    .headerTitle {
+        font-size: 4.2rem;
+    }
+    
+    .grammarTitle {
+        font-size: 3.2rem;
+    }
+    
+    .grammarRow span {
+        font-size: 3.2rem;
+    }
+    
+    .tableCell {
+        font-size: 3.2rem;
+    }
+    
+    .redText {
+        font-size: 3.2rem;
+    }
+    
+    .blackText {
+        font-size: 3.2rem;
+    }
+    
+    .blueText {
+        font-size: 3.2rem;
+    }
+}

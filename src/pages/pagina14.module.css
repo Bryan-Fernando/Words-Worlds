@@ -112,12 +112,12 @@
 }
 
 .page14__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
     margin-left: 0.5rem;
     position: relative;
-    top: 0.3rem;
+    top: 1rem;
     transition: transform 0.2s ease-in-out;
 }
 

@@ -129,13 +129,13 @@ const Pagina43 = () => {
                             <img
                                 src={eng_audio_icon}
                                 alt="English Audio"
-                                style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                                style={{ width: '3.5rem', height: '3.5rem', cursor: 'pointer', position: 'relative', top: '1rem' }}
                                 onClick={() => playHeaderAudio(global_intro_e)}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                                style={{ width: '3.5rem', height: '3.5rem', marginLeft: '0.3rem', cursor: 'pointer', position: 'relative', top: '1rem' }}
                                 onClick={() => playHeaderAudio(global_intro_p)}
                             />
                         </span>

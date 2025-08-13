@@ -63,54 +63,54 @@ const Pagina349 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page349__container}>
+      <header className={styles.page349__header}>
+        <h1><span className={styles.page349__exercisesRed}>Exercises</span></h1>
       </header>
 
       {/* Exercício 10: Matching – Questions and Responses */}
-      <p className={styles.instructionRed}>
+      <p className={styles.page349__instructionRed}>
         <strong>10. Matching – Questions and Responses</strong>
       </p>
-      <p className={styles.instruction}>
+      <p className={styles.page349__instruction}>
         Match the questions (A) with the most appropriate responses (B).
       </p>
 
-      <div className={styles.matchBox}>
-        <div className={styles.leftBox}>
+      <div className={styles.page349__matchBox}>
+        <div className={styles.page349__leftBox}>
           {matchingQuestionsEx10.map((item, index) => (
-            <div key={item.id} className={styles.matchItem}>
+            <div key={item.id} className={styles.page349__matchItem}>
               <span>{item.id}.</span>
               <input
                 type="text"
                 maxLength={1}
                 value={inputValuesEx10[index]}
                 onChange={(e) => handleInputChangeEx10(e.target.value, index)}
-                className={styles.input}
+                className={styles.page349__input}
               />
               <span>{item.question}</span>
               {resultsEx10[index] !== null && (
                 <img
                   src={resultsEx10[index] ? correctIcon : wrongIcon}
                   alt={resultsEx10[index] ? "Correct" : "Incorrect"}
-                  className={styles.resultIcon}
+                  className={styles.page349__resultIcon}
                 />
               )}
             </div>
           ))}
         </div>
 
-        <div className={styles.rightBox}>
+        <div className={styles.page349__rightBox}>
           {responseOptionsEx10.map((item) => (
-            <div key={item.letter} className={styles.definition}>
+            <div key={item.letter} className={styles.page349__definition}>
               <span>{item.letter}. {item.text}</span>
             </div>
           ))}
         </div>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx10}>
+      <div className={styles.page349__checkContainer}>
+        <button className={styles.page349__checkButton} onClick={handleCheckClickEx10}>
           Check
         </button>
       </div>

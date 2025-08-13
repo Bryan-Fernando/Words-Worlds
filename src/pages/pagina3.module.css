@@ -47,6 +47,8 @@
     height: 3rem;
     margin-left: 0.5rem;
     cursor: pointer;
+    position: relative;
+    top: 1rem;
     transition: transform 0.2s ease-in-out;
 }
 

@@ -82,49 +82,49 @@ const Pagina351 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.exercisesRed}>Exercises</span></h1>
+    <div className={styles.page351__container}>
+      <header className={styles.page351__header}>
+        <h1><span className={styles.page351__exercisesRed}>Exercises</span></h1>
       </header>
 
-      <p className={styles.instructionRed}>
+      <p className={styles.page351__instructionRed}>
         <strong>12. Complete the dialogues with "will"</strong>
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.dialoguesContainer}>
+      <div className={styles.page351__questionBox}>
+        <main className={styles.page351__dialoguesContainer}>
           {dialoguesEx12.map((dialogue, dialogueIndex) => (
-            <div key={dialogue.id} className={styles.dialogueItem}> {/* Contêiner para cada item numerado */}
-              <div className={styles.itemNumberContainer}>
-                <span className={styles.itemNumber}>{dialogue.id}.</span>
+            <div key={dialogue.id} className={styles.page351__dialogueItem}>
+              <div className={styles.page351__itemNumberContainer}>
+                <span className={styles.page351__itemNumber}>{dialogue.id}.</span>
               </div>
               
-              <div className={styles.dialogueContentWrapper}> {/* Wrapper para o conteúdo do diálogo */}
+              <div className={styles.page351__dialogueContentWrapper}>
                 {dialogue.parts.map((part, partIndex) => (
-                  <div key={`${dialogue.id}-${partIndex}`} className={styles.dialoguePart}> {/* Cada segmento de texto/input */}
+                  <div key={`${dialogue.id}-${partIndex}`} className={styles.page351__dialoguePart}>
                     {partIndex === 0 ? (
                       // Primeira parte (pergunta)
                       <>
-                        <span className={styles.dialogueText}>{part.textBefore}</span>
+                        <span className={styles.page351__dialogueText}>{part.textBefore}</span>
                         <input
                           type="text"
                           value={inputValuesEx12[dialogueIndex][partIndex]}
                           onChange={(e) => handleInputChangeEx12(dialogueIndex, partIndex, e.target.value)}
-                          className={styles.dialogueInput}
+                          className={styles.page351__dialogueInput}
                         />
-                        <span className={styles.dialogueText}>{part.textAfter}</span>
+                        <span className={styles.page351__dialogueText}>{part.textAfter}</span>
                       </>
                     ) : (
                       // Partes subsequentes (respostas)
                       <>
-                        <span className={styles.dialogueTextIndent}>{part.textBefore}</span>
+                        <span className={styles.page351__dialogueTextIndent}>{part.textBefore}</span>
                         <input
                           type="text"
                           value={inputValuesEx12[dialogueIndex][partIndex]}
                           onChange={(e) => handleInputChangeEx12(dialogueIndex, partIndex, e.target.value)}
-                          className={styles.dialogueInput}
+                          className={styles.page351__dialogueInput}
                         />
-                        <span className={styles.dialogueText}>{part.textAfter}</span>
+                        <span className={styles.page351__dialogueText}>{part.textAfter}</span>
                       </>
                     )}
                   </div>
@@ -134,18 +134,18 @@ const Pagina351 = () => {
                   <img
                     src={resultsEx12[dialogueIndex] ? correctIcon : wrongIcon}
                     alt={resultsEx12[dialogueIndex] ? "Correct" : "Incorrect"}
-                    className={styles.resultIcon}
+                    className={styles.page351__resultIcon}
                   />
                 )}
               </div>
-              {dialogueIndex < dialoguesEx12.length - 1 && <hr className={styles.divider} />}
+              {dialogueIndex < dialoguesEx12.length - 1 && <hr className={styles.page351__divider} />}
             </div>
           ))}
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClickEx12}>
+      <div className={styles.page351__checkContainer}>
+        <button className={styles.page351__checkButton} onClick={handleCheckClickEx12}>
           Check
         </button>
       </div>

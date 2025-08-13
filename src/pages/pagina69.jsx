@@ -143,7 +143,7 @@ const playAudio = (audioKey, speed = 1.0) => {
         const audioSrc = audioMap[audioKey];
         if (audioSrc) {
             const audio = new Audio(audioSrc);
-            audio.playbackRate = speed; // Define a velocidade do áudio (1.0 = normal, 0.75x = reduzida)
+            audio.playbackRate = speed;
             audio.play();
         } else {
             console.warn(`Áudio não encontrado para a chave: ${audioKey}`);

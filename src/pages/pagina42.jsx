@@ -55,6 +55,12 @@ import audio19e from '../assets/audios/pg42_audio19e.mp3';
 import audio19p from '../assets/audios/pg42_audio19p.mp3';
 import audio20e from '../assets/audios/pg42_audio20e.mp3';
 import audio20p from '../assets/audios/pg42_audio20p.mp3';
+import audio21e from '../assets/audios/pg42_audio21e.mp3';
+import audio22e from '../assets/audios/pg42_audio22e.mp3';
+import audio23e from '../assets/audios/pg42_audio23e.mp3';
+import audio24e from '../assets/audios/pg42_audio24e.mp3';
+import audio25e from '../assets/audios/pg42_audio25e.mp3';
+
 
 const Pagina42 = () => {
     const audioMap = {
@@ -98,6 +104,11 @@ const Pagina42 = () => {
         'pg42_audio19p': audio19p,
         'pg42_audio20e': audio20e,
         'pg42_audio20p': audio20p,
+        'pg42_audio21e': audio21e,
+        'pg42_audio22e': audio22e,
+        'pg42_audio23e': audio23e,
+        'pg42_audio24e': audio24e,
+        'pg42_audio25e': audio25e,
     };
 
     const currentAudio = useRef(null);
@@ -130,13 +141,13 @@ const Pagina42 = () => {
                             <img
                                 src={eng_audio_icon}
                                 alt="English Audio"
-                                style={{ width: '1.8rem', height: '1.8rem', cursor: 'pointer' }}
+                                style={{ width: '3.5rem', height: '3.5rem', cursor: 'pointer', position: 'relative', top: '1rem' }}
                                 onClick={() => playHeaderAudio(global_intro_e)}
                             />
                             <img
                                 src={ptbr_audio_icon}
                                 alt="Portuguese Audio"
-                                style={{ width: '1.8rem', height: '1.8rem', marginLeft: '0.3rem', cursor: 'pointer' }}
+                                style={{ width: '3.5rem', height: '3.5rem', marginLeft: '0.3rem', cursor: 'pointer', position: 'relative', top: '1rem' }}
                                 onClick={() => playHeaderAudio(global_intro_p)}
                             />
                         </span>
@@ -481,17 +492,37 @@ const Pagina42 = () => {
                 <aside className={styles['page42__aside']}>
                     <div className={styles['page42__aside-container']}>
                         <div className={styles['page42__aside-notes--1']}>
-                            <img className={styles['page42__aside-image-notes']} src={pg42IconNotes} alt="" />
+                            <img
+                                className={styles['page42__aside-image-notes']}
+                                src={pg42IconNotes}
+                                alt=""
+                            />
                             <p>Word Bank</p>
                         </div>
+
                         <div className={styles['page42__aside-notes--2']}>
                             <p className={styles['page42__aside-notes--2-bold']}>
-                                Name <br />
-                                Age <br />
-                                Nationality <br />
-                                City <br />
-                                Country
+                                <span onClick={() => playAudio('pg42_audio21e')} style={{ cursor: 'pointer' }}>
+                                    Name
+                                </span>
+                                <br />
+                                <span onClick={() => playAudio('pg42_audio22e')} style={{ cursor: 'pointer' }}>
+                                    Age
+                                </span>
+                                <br />
+                                <span onClick={() => playAudio('pg42_audio23e')} style={{ cursor: 'pointer' }}>
+                                    Nationality
+                                </span>
+                                <br />
+                                <span onClick={() => playAudio('pg42_audio24e')} style={{ cursor: 'pointer' }}>
+                                    City
+                                </span>
+                                <br />
+                                <span onClick={() => playAudio('pg42_audio25e')} style={{ cursor: 'pointer' }}>
+                                    Country
+                                </span>
                             </p>
+
                             <p>
                                 Nome <br />
                                 Idade <br />
@@ -502,7 +533,6 @@ const Pagina42 = () => {
                         </div>
                     </div>
                 </aside>
-
             </div>
 
         </div>

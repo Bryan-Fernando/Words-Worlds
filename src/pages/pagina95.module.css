@@ -284,8 +284,8 @@
 }
 
 .page95__additional--icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     margin-left: 0.8rem;
@@ -325,11 +325,13 @@
 }
 
 .page95__header--icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    top: 0.5rem;
 }
 
 .page95__header--icon:hover {

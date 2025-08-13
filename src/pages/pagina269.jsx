@@ -43,31 +43,31 @@ const Pagina269 = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <header className={styles.header}>
-        <h1><span className={styles.grammarRed}>Grammar</span> - <span className={styles.grammarBold}>Adjectives</span></h1>
+    <div className={styles.page269__container}>
+      <header className={styles.page269__header}>
+        <h1><span className={styles.page269__grammarRed}>Grammar</span> - <span className={styles.page269__grammarBold}>Adjectives</span></h1>
       </header>
 
-      <p className={styles.instruction}>
+      <p className={styles.page269__instruction}>
         <strong>2.</strong> Put the words in the correct order:
       </p>
 
-      <div className={styles.questionBox}>
-        <main className={styles.main}>
+      <div className={styles.page269__questionBox}>
+        <main className={styles.page269__main}>
           {questions.map((q, index) => (
-            <div key={index} className={styles.question}>
+            <div key={index} className={styles.page269__question}>
               <span>{q.scrambled}</span>
               <input
                 type="text"
                 value={inputValues[index]}
                 onChange={(e) => handleInputChange(e.target.value, index)}
-                className={styles.input}
+                className={styles.page269__input}
               />
               {results[index] !== null && (
                 <img
                   src={results[index] ? correctIcon : wrongIcon}
                   alt={results[index] ? "Correct" : "Incorrect"}
-                  className={styles.resultIcon}
+                  className={styles.page269__resultIcon}
                 />
               )}
             </div>
@@ -75,8 +75,8 @@ const Pagina269 = () => {
         </main>
       </div>
 
-      <div className={styles.checkContainer}>
-        <button className={styles.checkButton} onClick={handleCheckClick}>
+      <div className={styles.page269__checkContainer}>
+        <button className={styles.page269__checkButton} onClick={handleCheckClick}>
           Check
         </button>
       </div>

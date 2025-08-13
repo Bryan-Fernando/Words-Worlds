@@ -246,8 +246,8 @@
 }
 
 .page96__icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 23rem;
     position: relative;
     top: 0.4rem;
     left: 1rem;
@@ -255,25 +255,25 @@
 
 .page96__icon-position {
     position: relative;
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     left: 42rem;
     bottom: 2.8rem;
 }
 
 .page96__header-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1rem;
     position: relative;
-    top: 0.4rem;
+    top: 0.5rem;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
 .page96__q3-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     position: relative;
     top: 0.4rem;
     cursor: pointer;
@@ -285,23 +285,22 @@
 }
 
 .page95__audio-icon {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1rem;
     cursor: pointer;
     position: relative;
-    top: 0.5rem;
+    top: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 
 .page95__audio-icon-p {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     margin-left: 1rem;
     cursor: pointer;
     position: relative;
-    top: 0.35rem;
-    right: 1.2rem;
+    top: 1rem;
     transition: transform 0.3s ease-in-out;
 }
 

@@ -1,20 +1,20 @@
-﻿.container {
+﻿.page354__container {
   padding: 2rem;
   font-family: 'Arial', sans-serif;
 }
 
-.header h1 {
+.page354__header h1 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   text-align: left;
 }
 
-.exercisesRed {
+.page354__exercisesRed {
   color: #a61c28;
   font-weight: bold;
 }
 
-.instructionRed {
+.page354__instructionRed {
   color: #a61c28;
   font-size: 1.5rem;
   font-weight: bold;
@@ -22,7 +22,7 @@
   text-align: left;
 }
 
-.questionBox {
+.page354__questionBox {
   border: 3px solid #a61c28;
   border-radius: 12px;
   padding: 1.2rem 1rem;
@@ -31,13 +31,13 @@
   max-width: 650px;
 }
 
-.main {
+.page354__main {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-.question {
+.page354__question {
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
@@ -45,12 +45,12 @@
   gap: 0.5rem;
 }
 
-.inputContainer {
+.page354__inputContainer {
   display: flex;
   align-items: center;
 }
 
-.input {
+.page354__input {
   width: 100%;
   max-width: 400px;
   padding: 0.5rem;
@@ -62,19 +62,19 @@
   color: #333;
 }
 
-.resultIcon {
+.page354__resultIcon {
   width: 24px;
   height: 24px;
   margin-left: 0.5rem;
   vertical-align: middle;
 }
 
-.checkContainer {
+.page354__checkContainer {
   display: flex;
   justify-content: flex-start;
 }
 
-.checkButton {
+.page354__checkButton {
   padding: 0.8rem 1.5rem;
   font-size: 1.3rem;
   background-color: #a61c28;
@@ -86,6 +86,6 @@
   margin-left: 0;
 }
 
-.checkButton:hover {
+.page354__checkButton:hover {
   background-color: #8a1720;
 }

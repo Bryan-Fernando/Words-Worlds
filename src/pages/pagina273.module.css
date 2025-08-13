@@ -1,25 +1,25 @@
-.container {
+.page273__container {
     padding: 2rem;
     font-family: 'Arial', sans-serif;
   }
   
-  .header h1 {
+  .page273__header h1 {
     font-size: 2.8rem;
     margin-bottom: 1rem;
     text-align: left;
   }
   
-  .grammarRed {
+  .page273__grammarRed {
     color: #a61c28;
     font-weight: bold;
   }
   
-  .grammarBold {
+  .page273__grammarBold {
     font-weight: bold;
     font-style: italic;
   }
   
-  .instruction {
+  .page273__instruction {
     color: #1c4c9c;
     font-size: 1.5rem;
     font-weight: bold;
@@ -27,7 +27,7 @@
     text-align: left;
   }
   
-  .questionBox {
+  .page273__questionBox {
     border: 3px solid #1c4c9c;
     border-radius: 12px;
     padding: 1.2rem 1rem;
@@ -37,30 +37,30 @@
     max-width: 450px;
   }
   
-  .main {
+  .page273__main {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
   }
   
-  .question {
+  .page273__question {
     display: flex;
     flex-direction: column;
     font-size: 1.4rem;
     font-weight: 500;
   }
   
-  .prompt {
+  .page273__prompt {
     margin-bottom: 0.4rem;
   }
   
-  .inputWrapper {
+  .page273__inputWrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
   }
   
-  .input {
+  .page273__input {
     width: 400px;
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -70,17 +70,17 @@
     font-weight: bold;
   }
   
-  .resultIcon {
+  .page273__resultIcon {
     width: 24px;
     height: 24px;
   }
   
-  .checkContainer {
+  .page273__checkContainer {
     display: flex;
     justify-content: flex-start;
   }
   
-  .checkButton {
+  .page273__checkButton {
     padding: 0.8rem 1.5rem;
     font-size: 1.3rem;
     background-color: #a61c28;
@@ -91,7 +91,7 @@
     width: fit-content;
   }
   
-  .checkButton:hover {
+  .page273__checkButton:hover {
     background-color: #8a1720;
   }
   

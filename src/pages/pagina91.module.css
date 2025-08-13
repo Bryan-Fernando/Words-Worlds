@@ -182,8 +182,9 @@
 }
 
 .page91__header-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    position: relative;
     cursor: pointer;
     margin-left: 0.5rem;
     vertical-align: middle;

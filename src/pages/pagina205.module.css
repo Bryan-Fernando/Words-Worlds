@@ -1,33 +1,33 @@
-.container {
+.page205__container {
     width: 100%;
     min-height: 100vh;
     padding: 20px;
     background-color: white;
 }
 
-.pageContainer {
+.page205__pageContainer {
     width: 100%;
     max-width: 1800px; /* Aumentado para ocupar mais espaço */
     margin: 0;
     padding: 2rem;
 }
 
-.grammarRow, .exampleRow {
+.page205__grammarRow, .page205__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr; /* Proporções maiores */
 }
 
 /* Ajuste no tamanho das fontes para acompanhar o aumento do container */
-.grammarRow span, .exampleRow span {
+.page205__grammarRow span, .page205__exampleRow span {
     padding: 1.5rem;
     font-size: 1.8rem;
 }
 
-.header {
+.page205__header {
     margin-bottom: 3rem;
 }
 
-.headerTitle {
+.page205__headerTitle {
     color: #A61C28;
     font-size: 6rem;
     font-weight: bold;
@@ -35,41 +35,41 @@
     margin-left: 2rem;
 }
 
-.mainContent {
+.page205__mainContent {
     display: flex;
     flex-direction: column;
     gap: 3rem;
 }
 
-.grammarSection {
+.page205__grammarSection {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.grammarHeader {
+.page205__grammarHeader {
     background-color: #990000;
     padding: 1rem 2rem;
     text-align: left;
 }
 
-.grammarTitle {
+.page205__grammarTitle {
     color: white;
     font-size: 2rem;
     font-weight: 500;
 }
 
-.grammarContent {
+.page205__grammarContent {
     background-color: #d1cfcf;
     padding: 1.5rem;
 }
 
-.grammarRow {
+.page205__grammarRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
 }
 
-.grammarRow span {
+.page205__grammarRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -78,15 +78,15 @@
     font-weight: 500;
 }
 
-.grammarRow span:nth-child(3) {
+.page205__grammarRow span:nth-child(3) {
     color: #990000;
 }
 
-.grammarRow span:last-child {
+.page205__grammarRow span:last-child {
     border-right: none;
 }
 
-.sectionHeader {
+.page205__sectionHeader {
     border: 2px solid #990000;
     border-radius: 8px;
     padding: 1rem 2rem;
@@ -96,41 +96,41 @@
     gap: 0.5rem;
 }
 
-.exampleTitle {
+.page205__exampleTitle {
     color: #990000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.separator {
+.page205__separator {
     color: #000;
     margin: 0 1rem;
     font-size: 2rem;
 }
 
-.titleTranslation {
+.page205__titleTranslation {
     color: #000;
     font-size: 2rem;
     font-style: italic;
 }
 
-.exampleBox {
+.page205__exampleBox {
     border: 2px solid #990000;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.exampleRow {
+.page205__exampleRow {
     display: grid;
     grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 2.5fr;
     border-bottom: 1px solid #ddd;
 }
 
-.exampleRow:last-child {
+.page205__exampleRow:last-child {
     border-bottom: none;
 }
 
-.exampleRow span {
+.page205__exampleRow span {
     padding: 1.2rem;
     font-size: 1.6rem;
     text-align: center;
@@ -138,29 +138,29 @@
     color: #990000;
 }
 
-.exampleRow:nth-child(2) span {
+.page205__exampleRow:nth-child(2) span {
     color: #000000;
 }
 
-.verbCell {
+.page205__verbCell {
     background-color: white;
     text-align: center;
 }
 
-.objectCell {
+.page205__objectCell {
     text-align: left;
     padding-left: 2rem;
     border-right: none;
 }
 
-.imagesSection {
+.page205__imagesSection {
     display: flex;
     justify-content: space-between;
     gap: 2rem;
     margin-top: 3rem;
 }
 
-.imagePlaceholder {
+.page205__imagePlaceholder {
     width: 45%;
     height: 280px;
     background-color: #f0f0f0;
@@ -181,21 +181,20 @@
   transform: scale(1.2);
 }
 
-
 @media (max-width: 768px) {
-    .headerTitle {
+    .page205__headerTitle {
         font-size: 4rem;
     }
 
-    .grammarRow, .exampleRow {
+    .page205__grammarRow, .page205__exampleRow {
         grid-template-columns: 1fr;
     }
 
-    .imagesSection {
+    .page205__imagesSection {
         flex-direction: column;
     }
 
-    .imagePlaceholder {
+    .page205__imagePlaceholder {
         width: 100%;
     }
 }
