@@ -345,6 +345,19 @@
   color: #000000; /* Cor para texto de B */
 }
 
+.page225__audio_icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page225__audio_icon:hover {
+  transform: scale(1.2);
+}
+
 /* Remover ou ajustar media queries se o layout é para ser fixo */
 @media (max-width: 768px) {
   .pg225Container {

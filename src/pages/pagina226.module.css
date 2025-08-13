@@ -224,6 +224,19 @@
   color: #a61c28;
 }
 
+.page226__audio_icon {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  position: relative;
+  top: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.page226__audio_icon:hover {
+  transform: scale(1.2);
+}
+
 @media (max-width: 768px) {
   .pg226Container {
     padding: 1rem;
