@@ -98,10 +98,11 @@ const Pagina51 = () => {
                     </h1>
                     <div className={styles["page51__header--h2-h3"]}>
                         <h2 className={styles["page51__header--h2"]}>
-                            This = Este / Esta / Esse / Essa
+                            <span style={{ color: '#A61C28' }}>This</span> = Este / Esta / Esse / Essa
                         </h2>
                     </div>
                 </header>
+
                 <main className={styles["page51__main"]}>
                     <div className={styles["page51__container--1"]}>
                         <div>
@@ -109,120 +110,203 @@ const Pagina51 = () => {
                                 <img src={pagina51_imagem1} alt="Imagem 1" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio2_1e')}><strong>Best Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio2_2e')}>This is my best friend, Alex.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio2p')}
-                                    />
-                                </span>
+                                <strong>Best Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio2_1e')}
+                                />
+                                <br />
+                                This is my best friend, Alex.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio2_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio2p')}
+                                />
                             </p>
                         </div>
+
                         <div>
                             <div className={styles["page51__div--2-container-1"]}>
                                 <img src={pagina51_imagem3} alt="Imagem 3" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio3_1e')}><strong>Work Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio3_2e')}>This is my work friend, James. He is very helpful and kind.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio3p')}
-                                    />
-                                </span>
+                                <strong>Work Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio3_1e')}
+                                />
+                                <br />
+                                This is my work friend, James. He is very helpful and kind.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio3_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio3p')}
+                                />
                             </p>
                         </div>
+
                         <div>
                             <div className={styles["page51__div--3-container-1"]}>
                                 <img src={pagina51_imagem5} alt="Imagem 5" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio4_1e')}><strong>Gym Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio4_2e')}>This is my gym friend, David. He motivates me to stay fit.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio4p')}
-                                    />
-                                </span>
+                                <strong>Gym Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio4_1e')}
+                                />
+                                <br />
+                                This is my gym friend, David. He motivates me to stay fit.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio4_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio4p')}
+                                />
                             </p>
                         </div>
+
                         <div>
                             <div className={styles["page51__div--4-container-1"]}>
                                 <img src={pagina51_imagem7} alt="Imagem 4" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio5_1e')}><strong>Online Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio5_2e')}>This is my online friend, Sam.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio5p')}
-                                    />
-                                </span>
+                                <strong>Online Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio5_1e')}
+                                />
+                                <br />
+                                This is my online friend, Sam.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio5_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio5p')}
+                                />
                             </p>
                         </div>
                     </div>
+
                     <div className={styles["page51__container--2"]}>
                         <div>
                             <div className={styles["page51__div--1-container-2"]}>
                                 <img src={pagina51_imagem2} alt="Imagem 5" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio6_1e')}><strong>School Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio6_2e')}>This is my school friend, Emma. She is very good at math.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio6p')}
-                                    />
-                                </span>
+                                <strong>School Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio6_1e')}
+                                />
+                                <br />
+                                This is my school friend, Emma. She is very good at math.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio6_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio6p')}
+                                />
                             </p>
                         </div>
+
                         <div>
                             <div className={styles["page51__div--2-container-2"]}>
                                 <img src={pagina51_imagem4} alt="Imagem 6" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio7_1e')}><strong>Neighbor Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio7_2e')}>This is my neighbor friend, Sarah. We often go jogging together.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio7p')}
-                                    />
-                                </span>
+                                <strong>Neighbor Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio7_1e')}
+                                />
+                                <br />
+                                This is my neighbor friend, Sarah. We often go jogging together.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio7_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio7p')}
+                                />
                             </p>
                         </div>
+
                         <div>
                             <div className={styles["page51__div--3-container-2"]}>
                                 <img src={pagina51_imagem6} alt="Imagem 7" className={styles["page51__img"]} />
                             </div>
                             <p className={styles["page51__paragrafo--div"]}>
-                                <span onClick={() => playAudio('pg51_audio8_1e')}><strong>College Friend</strong></span><br />
-                                <span onClick={() => playAudio('pg51_audio8_2e')}>This is my college friend, Rachel.</span>
-                                <span>
-                                    <img
-                                        src={iconeP}
-                                        alt="Portuguese Audio"
-                                        className={styles["page51__icon"]}
-                                        onClick={() => playAudio('pg51_audio8p')}
-                                    />
-                                </span>
+                                <strong>College Friend</strong>
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio8_1e')}
+                                />
+                                <br />
+                                This is my college friend, Rachel.
+                                <img
+                                    src={iconeE}
+                                    alt="English Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio8_2e')}
+                                />
+                                <img
+                                    src={iconeP}
+                                    alt="Portuguese Audio"
+                                    className={styles["page51__icon"]}
+                                    onClick={() => playAudio('pg51_audio8p')}
+                                />
                             </p>
                         </div>
                     </div>

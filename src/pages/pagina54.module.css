@@ -80,7 +80,9 @@
 }
 
 .page54__text {
+    margin-top: 1rem;
     text-align: left;
+    font-weight: bold;
 }
 
 .page54__image {

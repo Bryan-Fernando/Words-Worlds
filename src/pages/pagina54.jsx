@@ -23,7 +23,7 @@ import pg54Audio3p from '../assets/audios/pg54_audio3p.mp3';
 import pg54Audio4p from '../assets/audios/pg54_audio4p.mp3';
 
 const Pagina54 = () => {
-    
+
     const audioMap = {
         "pg50-audio1e": pg50Audio1e,
         "pg50-audio1p": pg50Audio1p,
@@ -78,7 +78,7 @@ const Pagina54 = () => {
                     <div className={styles["page54__subtitle-container"]}>
                         <h2
                             className={styles["page54__subtitle"]}>
-                            Those = Aqueles / Aquelas
+                            <span style={{ color: '#A61C28' }}>Those</span> = Aqueles / Aquelas
                         </h2>
                     </div>
                 </header>

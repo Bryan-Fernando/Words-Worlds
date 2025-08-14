@@ -77,7 +77,7 @@ const Pagina53 = () => {
                     <div className={styles["page53__subtitle-container"]}>
                         <h2
                             className={styles["page53__subtitle"]}>
-                            These = Estes / Estas / Esses / Essas
+                        <span style={{ color: '#A61C28' }}>These</span> = Estes / Estas / Esses / Essas
                         </h2>
                     </div>
                 </header>

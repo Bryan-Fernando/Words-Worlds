@@ -29,9 +29,10 @@
 }
 
 .page51__paragrafo--div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     max-width: 40rem;
     text-align: left;
-    cursor: pointer;
 }
 
 /* Este é um comentário */

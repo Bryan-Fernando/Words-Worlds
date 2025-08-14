@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import styles from './pagina3.module.css';
 
 import eng_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
-import ptbr_audio_icon from '../assets/icons/ENG_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
 import pagina3_imagem1 from '../assets/images/pagina3_imagem1.gif';
 import pagina3_imagem2 from '../assets/images/pagina3_imagem2.gif';

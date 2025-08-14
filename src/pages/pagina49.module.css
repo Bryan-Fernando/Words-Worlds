@@ -57,7 +57,6 @@
     text-align: left;
     align-content: center;
     height: 100%;
-    cursor: pointer;
     width: 25%;
 }
 
@@ -112,7 +111,6 @@
 
 .page49__text--red {
     font-size: 2rem;
-    cursor: pointer;
     color: #A61C28;
 }
 
@@ -120,14 +118,16 @@
     text-decoration: underline;
 }
 
-.page49__header--h1 {
+.page49__audio-icon {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
+    left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
 }
 
-.page49__header--h2 {
-    cursor: pointer;
-}
-
-.page49__header--h3 {
-    cursor: pointer;
+.page49__audio-icon:hover {
+    transform: scale(1.1);
 }

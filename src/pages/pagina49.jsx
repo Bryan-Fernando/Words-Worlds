@@ -2,6 +2,9 @@ import React from 'react';
 
 import styles from './pagina49.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import pg49_audio1 from '../assets/audios/pg49_audio1.mp3';
 import pg49_audio2 from '../assets/audios/pg49_audio2.mp3';
@@ -68,118 +71,258 @@ const playAudio = (audioKey) => {
 const Pagina49 = () => {
     return (
         <div>
-            <div className={styles["page49__container"]}>
-                <header className={styles["page49__header"]}>
-                    <h1 className={styles["page49__header--h1"]} onClick={() => playAudio('global_grammar')}>
+            <div className={styles['page49__container']}>
+                <header className={styles['page49__header']}>
+                    <h1 className={styles['page49__header--h1']}>
                         Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles['page49__audio-icon']}
+                            onClick={() => playAudio('global_grammar')}
+                        />
                     </h1>
-                    <div className={styles["page49__header--h2-h3"]}>
-                        <h2 className={styles["page49__header--h2"]} onClick={() => playAudio('pg49_audio1')}>
+                    <div className={styles['page49__header--h2-h3']}>
+                        <h2 className={styles['page49__header--h2']}>
                             Demonstrative Pronouns
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio1')}
+                            />
                         </h2>
-                        <h3 className={styles["page49__header--h3"]} onClick={() => playAudio('pg49_audio2')}>
+                        <h3 className={styles['page49__header--h3']}>
                             Pronomes Demonstrativos
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio2')}
+                            />
                         </h3>
                     </div>
                 </header>
-                <main className={styles["page49__main"]}>
-                    <div className={styles["page49__main--div1"]}>
-                        <p onClick={() => playAudio('pg49_audio3')}>
-                            <span style={{ color: '#A61C28' }}>This</span> <br />
-                            Este, esta, isto
+
+                <main className={styles['page49__main']}>
+                    <div className={styles['page49__main--div1']}>
+                        <p>
+                            <span style={{ color: '#A61C28' }}>This</span> <br /> Este, esta, isto
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio3')}
+                            />
                         </p>
-                        <p onClick={() => playAudio('pg49_audio4')}>
-                            <span style={{ color: '#A61C28' }}>That</span> <br />
-                            Aquele, aquela, aquilo
+                        <p>
+                            <span style={{ color: '#A61C28' }}>That</span> <br /> Aquele, aquela, aquilo
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio4')}
+                            />
                         </p>
-                        <p onClick={() => playAudio('pg49_audio5')}>
-                            <span style={{ color: '#A61C28' }}>These</span> <br />
-                            Estes, estas
+                        <p>
+                            <span style={{ color: '#A61C28' }}>These</span> <br /> Estes, estas
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio5')}
+                            />
                         </p>
-                        <p onClick={() => playAudio('pg49_audio6')}>
-                            <span style={{ color: '#A61C28' }}>Those</span> <br />
-                            Aqueles, aquelas
+                        <p>
+                            <span style={{ color: '#A61C28' }}>Those</span> <br /> Aqueles, aquelas
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page49__audio-icon']}
+                                onClick={() => playAudio('pg49_audio6')}
+                            />
                         </p>
                     </div>
+
                     <div>
-                        <p className={styles["page49__exemplo"]}>Exemplos:</p>
-                        <div className={styles["page49__container--divs"]}>
-                            <div className={styles["page49__main--div2"]}>
-                                <ul className={styles["page49__listas"]}>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio7')}>
-                                        <span className={styles["page49__text--red"]}>This is <span className={styles["page49__underline"]}>my</span> cat.</span>
+                        <p className={styles['page49__exemplo']}>Exemplos:</p>
+                        <div className={styles['page49__container--divs']}>
+                            <div className={styles['page49__main--div2']}>
+                                <ul className={styles['page49__listas']}>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            This is <span className={styles['page49__underline']}>my</span> cat.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio7')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Esta é <span className={styles["page49__underline"]}>minha</span> gata.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Esta é <span className={styles['page49__underline']}>minha</span> gata.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio9')}>
-                                        <span className={styles["page49__text--red"]}>These are <span className={styles["page49__underline"]}>his</span> friends.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            These are <span className={styles['page49__underline']}>his</span> friends.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio9')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Estes são os amigos <span className={styles["page49__underline"]}>dele</span>.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Estes são os amigos <span className={styles['page49__underline']}>dele</span>.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio11')}>
-                                        <span className={styles["page49__text--red"]}>Those are <span className={styles["page49__underline"]}>my</span> parents.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            Those are <span className={styles['page49__underline']}>my</span> parents.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio11')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aqueles são <span className={styles["page49__underline"]}>meus</span> pais.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aqueles são <span className={styles['page49__underline']}>meus</span> pais.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio13')}>
-                                        <span className={styles["page49__text--red"]}>Those are <span className={styles["page49__underline"]}>your</span> shoes.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            Those are <span className={styles['page49__underline']}>your</span> shoes.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio13')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aqueles são <span className={styles["page49__underline"]}>seus</span> sapatos.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aqueles são <span className={styles['page49__underline']}>seus</span> sapatos.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio15')}>
-                                        <span className={styles["page49__text--red"]}>This is <span className={styles["page49__underline"]}>our</span> school.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            This is <span className={styles['page49__underline']}>our</span> school.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio15')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Este é <span className={styles["page49__underline"]}>nosso</span> colégio.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Este é <span className={styles['page49__underline']}>nosso</span> colégio.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
-                            <div className={styles["page49__main--div3"]}>
-                                <ul className={styles["page49__listas"]}>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio17')}>
-                                        <span className={styles["page49__text--red"]}>Those are <span className={styles["page49__underline"]}>his</span> sunglasses.</span>
+
+                            <div className={styles['page49__main--div3']}>
+                                <ul className={styles['page49__listas']}>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            Those are <span className={styles['page49__underline']}>his</span> sunglasses.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio17')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aqueles são os óculos de sol <span className={styles["page49__underline"]}>dele</span>.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aqueles são os óculos de sol <span className={styles['page49__underline']}>dele</span>.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio19')}>
-                                        <span className={styles["page49__text--red"]}>These are <span className={styles["page49__underline"]}>their</span> favorite flowers.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            These are <span className={styles['page49__underline']}>their</span> favorite flowers.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio19')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Estas são as flores favoritas <span className={styles["page49__underline"]}>deles</span>.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Estas são as flores favoritas <span className={styles['page49__underline']}>deles</span>.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio21')}>
-                                        <span className={styles["page49__text--red"]}>That is <span className={styles["page49__underline"]}>her</span> laptop.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            That is <span className={styles['page49__underline']}>her</span> laptop.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio21')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aquele é o laptop <span className={styles["page49__underline"]}>dela</span>.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aquele é o laptop <span className={styles['page49__underline']}>dela</span>.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio23')}>
-                                        <span className={styles["page49__text--red"]}>Those are <span className={styles["page49__underline"]}>our</span> classmates.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            Those are <span className={styles['page49__underline']}>our</span> classmates.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio23')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aqueles são <span className={styles["page49__underline"]}>nossos</span> colegas de classe.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aqueles são <span className={styles['page49__underline']}>nossos</span> colegas de classe.
+                                        </span>
                                     </li>
-                                    <li className={styles["page49__item"]} onClick={() => playAudio('pg49_audio25')}>
-                                        <span className={styles["page49__text--red"]}>That is not <span className={styles["page49__underline"]}>your</span> umbrella.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span className={styles['page49__text--red']}>
+                                            That is not <span className={styles['page49__underline']}>your</span> umbrella.
+                                        </span>
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page49__audio-icon']}
+                                            onClick={() => playAudio('pg49_audio25')}
+                                        />
                                     </li>
-                                    <li className={styles["page49__item"]}>
-                                        <span>Aquele não é <span className={styles["page49__underline"]}>seu</span> guarda-chuva.</span>
+                                    <li className={styles['page49__item']}>
+                                        <span>
+                                            Aquele não é <span className={styles['page49__underline']}>seu</span> guarda-chuva.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </main>
             </div>
-
         </div>
     );
+
 };
 
 export default Pagina49;

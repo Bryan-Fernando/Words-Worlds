@@ -132,6 +132,9 @@
     width: 3.5rem;
     height: 3.5rem;
     cursor: pointer;
+    position: relative;
+    top: 1rem;
+    margin-left: 0.5rem;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -140,5 +143,6 @@
 }
 
 .page55__text {
-    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
 }

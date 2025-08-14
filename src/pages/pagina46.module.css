@@ -57,10 +57,9 @@
 }
 
 .page46__table th {
-  width: 20%;
+  width: 25%;
   background-color: #A61C28;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .page46__table td {
@@ -194,12 +193,6 @@
   padding: 1rem;
 }
 
-.page46__header-h1,
-.page46__header-h2,
-.page46__header-h3 {
-  cursor: pointer;
-}
-
 .page46__icon-1 {
   position: relative;
   right: 0.5rem;
@@ -252,4 +245,13 @@
   font-size: 1.5rem;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+.page46__audio-icon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 1rem;
 }

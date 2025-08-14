@@ -60,7 +60,6 @@
     width: 20%;
     background-color: #A61C28;
     font-weight: bold;
-    cursor: pointer;
 }
 
 .page45__table td {
@@ -123,7 +122,6 @@
     position: absolute;
     top: 4vw;
     left: 5%;
-    cursor: pointer;
     top: 68%;
     left: 52%;
 }
@@ -164,7 +162,6 @@
     position: absolute;
     top: -12%;
     right: 15%;
-    cursor: pointer;
 }
 
 .page45__container-asidetexto {
@@ -181,7 +178,6 @@
     align-items: center;
     border-radius: 1.5rem;
     padding: 1rem;
-    cursor: pointer;
 }
 
 .page45__aside-traducao-2 {
@@ -193,11 +189,13 @@
     align-items: center;
     border-radius: 15px;
     padding: 1rem;
-    cursor: pointer;
 }
 
-.page45__header-h1,
-.page45__header-h2,
-.page45__header-h3 {
+.page45__audio-icon {
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
+    margin-left: 0.5rem;
+    position: relative;
+    top: 1rem;
 }

@@ -5,6 +5,9 @@ import styles from './pagina45.module.css';
 import pagina45_imagem1 from '../assets/images/pagina45_imagem1.webp';
 import pagina45_imagem2 from '../assets/images/pagina45_imagem2.webp';
 
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_posse_ae from '../assets/audios/global_posse_ae.mp3';
 import global_posse_ap from '../assets/audios/global_posse_ap.mp3';
@@ -24,25 +27,25 @@ import audio2p from '../assets/audios/pg45_audio2p.mp3';
 
 const Pagina45 = () => {
     const audioMap = {
-        'my_audio': my_audio,
-        'his_audio': his_audio,
-        'her_audio': her_audio,
-        'its_audio': its_audio,
-        'our_audio': our_audio,
-        'your_audio': your_audio,
-        'their_audio': their_audio,
-        'pg45_audio1_1e': audio1_1e,
-        'pg45_audio1_2e': audio1_2e,
-        'pg45_audio2_1e': audio2_1e,
-        'pg45_audio2_2e': audio2_2e,
-        'pg45_audio1p': audio1p,
-        'pg45_audio2p': audio2p,
+        my_audio,
+        his_audio,
+        her_audio,
+        its_audio,
+        our_audio,
+        your_audio,
+        their_audio,
+        pg45_audio1_1e: audio1_1e,
+        pg45_audio1_2e: audio1_2e,
+        pg45_audio2_1e: audio2_1e,
+        pg45_audio2_2e: audio2_2e,
+        pg45_audio1p: audio1p,
+        pg45_audio2p: audio2p,
     };
 
     const globalAudioMap = {
-        'global_grammar': global_grammar,
-        'global_posse_ae': global_posse_ae,
-        'global_posse_ap': global_posse_ap
+        global_grammar,
+        global_posse_ae,
+        global_posse_ap,
     };
 
     const playGlobalAudio = (audioKey) => {
@@ -57,7 +60,6 @@ const Pagina45 = () => {
             currentAudio.current.pause();
             currentAudio.current.currentTime = 0;
         }
-
         const audio = new Audio(audioMap[audioId]);
         currentAudio.current = audio;
         audio.play();
@@ -67,102 +69,217 @@ const Pagina45 = () => {
         <div>
             <div className={styles['page45__container']}>
                 <header className={styles['page45__header']}>
-                    <h1 className={styles['page45__header-h1']} onClick={() => playGlobalAudio('global_grammar')}>
+                    <h1 className={styles['page45__header-h1']}>
                         Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English audio"
+                            className={styles['page45__audio-icon']}
+                            onClick={() => playGlobalAudio('global_grammar')}
+                        />
                     </h1>
+
                     <div className={styles['page45__header-h2-h3']}>
-                        <h2 className={styles['page45__header-h2']} onClick={() => playGlobalAudio('global_posse_ae')}>
+                        <h2 className={styles['page45__header-h2']}>
                             Possessive Adjectives
+                            <img
+                                src={eng_audio_icon}
+                                alt="English audio"
+                                className={styles['page45__audio-icon']}
+                                onClick={() => playGlobalAudio('global_posse_ae')}
+                            />
                         </h2>
-                        <h3 className={styles['page45__header-h3']} onClick={() => playGlobalAudio('global_posse_ap')}>
+
+                        <h3 className={styles['page45__header-h3']}>
                             Pronomes possessivos
+                            <img
+                                src={ptbr_audio_icon}
+                                alt="Portuguese audio"
+                                className={styles['page45__audio-icon']}
+                                onClick={() => playGlobalAudio('global_posse_ap')}
+                            />
                         </h3>
                     </div>
                 </header>
+
                 <main className={styles['page45__main']}>
                     <div className={styles['page45__table-container']}>
                         <table className={styles['page45__table']}>
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio('my_audio')}>My</th>
+                                    <th>
+                                        My
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('my_audio')}
+                                        />
+                                    </th>
                                     <td>meu(s), minha(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('his_audio')}>His</th>
+                                    <th>
+                                        His
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('his_audio')}
+                                        />
+                                    </th>
                                     <td>dele (seu/s/sua/s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('her_audio')}>Her</th>
+                                    <th>
+                                        Her
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('her_audio')}
+                                        />
+                                    </th>
                                     <td>dela (seu/s/sua/s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('its_audio')}>Its</th>
+                                    <th>
+                                        Its
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('its_audio')}
+                                        />
+                                    </th>
                                     <td>seu(s), sua(s) - coisas/animais/plantas</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('our_audio')}>Our</th>
+                                    <th>
+                                        Our
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('our_audio')}
+                                        />
+                                    </th>
                                     <td>nosso(s), nossa(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('your_audio')}>Your</th>
+                                    <th>
+                                        Your
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('your_audio')}
+                                        />
+                                    </th>
                                     <td>seu(s), sua(s), teu(s), tua(s)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('your_audio')}>Your</th>
+                                    <th>
+                                        Your
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('your_audio')}
+                                        />
+                                    </th>
                                     <td>seus, suas, teus, tuas (de vocês)</td>
                                 </tr>
                                 <tr>
-                                    <th onClick={() => playAudio('their_audio')}>Their</th>
+                                    <th>
+                                        Their
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English audio"
+                                            className={styles['page45__audio-icon']}
+                                            onClick={() => playAudio('their_audio')}
+                                        />
+                                    </th>
                                     <td>deles, delas, seus, suas</td>
                                 </tr>
                             </thead>
                         </table>
                     </div>
                 </main>
+
                 <aside className={styles['page45__aside']}>
                     <div className={styles['page45__example']}>
                         <p><strong>Exemplo:</strong></p>
                         <div className={styles['page45__example-img']}>
                             <div className={styles['page45__aside-texto-1']}>
                                 <p>
-                                    <span onClick={() => playAudio('pg45_audio2_1e')} style={{ cursor: 'pointer' }}>
-                                        Laura: I know, it's hard to concentrate with <br /> all that noise.
-                                    </span>
-                                    <span onClick={() => playAudio('pg45_audio2_2e')} style={{ cursor: 'pointer' }}>
-                                        I'll talk to them about it.
-                                    </span>
+                                    Laura: I know, it's hard to concentrate with <br /> all that noise.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles['page45__audio-icon']}
+                                        onClick={() => playAudio('pg45_audio2_1e')}
+                                    />
+                                    I'll talk to them about it.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles['page45__audio-icon']}
+                                        onClick={() => playAudio('pg45_audio2_2e')}
+                                    />
                                 </p>
                             </div>
+
                             <div className={styles['page45__aside-texto-2']}>
                                 <p>
-                                    <span onClick={() => playAudio('pg45_audio1_1e')} style={{ cursor: 'pointer' }}>
-                                        Mark: The neighbors are having a party.
-                                    </span>
+                                    Mark: The neighbors are having a party.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles['page45__audio-icon']}
+                                        onClick={() => playAudio('pg45_audio1_1e')}
+                                    />
                                     <br />
-                                    <span onClick={() => playAudio('pg45_audio1_2e')} style={{ cursor: 'pointer' }}>
-                                        <strong>Their</strong> music is so loud!
-                                    </span>
+                                    <strong>Their</strong> music is so loud!
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English audio"
+                                        className={styles['page45__audio-icon']}
+                                        onClick={() => playAudio('pg45_audio1_2e')}
+                                    />
                                 </p>
                             </div>
+
                             <img className={styles['page45__aside-img-1']} src={pagina45_imagem1} alt="" />
                             <img className={styles['page45__aside-img-2']} src={pagina45_imagem2} alt="" />
                         </div>
                     </div>
+
                     <div className={styles['page45__translation']}>
                         <p><strong>Tradução:</strong></p>
-                        <div
-                            className={styles['page45__aside-traducao-1']}
-                            onClick={() => playAudio('pg45_audio1p')}
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <p>Mark: Os vizinhos estão dando uma festa. A música <strong>deles</strong> está tão alta!</p>
+
+                        <div className={styles['page45__aside-traducao-1']}>
+                            <p>
+                                Mark: Os vizinhos estão dando uma festa. A música <strong>deles</strong> está tão alta!
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese audio"
+                                    className={styles['page45__audio-icon']}
+                                    onClick={() => playAudio('pg45_audio1p')}
+                                />
+                            </p>
                         </div>
-                        <div
-                            className={styles['page45__aside-traducao-2']}
-                            onClick={() => playAudio('pg45_audio2p')}
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <p>Laura: Eu sei, é difícil se concentrar com tanto barulho. Vou falar com eles sobre isso.</p>
+
+                        <div className={styles['page45__aside-traducao-2']}>
+                            <p>
+                                Laura: Eu sei, é difícil se concentrar com tanto barulho. Vou falar com eles sobre isso.
+                                <img
+                                    src={ptbr_audio_icon}
+                                    alt="Portuguese audio"
+                                    className={styles['page45__audio-icon']}
+                                    onClick={() => playAudio('pg45_audio2p')}
+                                />
+                            </p>
                         </div>
                     </div>
                 </aside>

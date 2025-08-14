@@ -70,7 +70,7 @@ const Pagina52 = () => {
                     </h1>
                     <div className={styles["page52__header--h2-h3"]}>
                         <h2 className={styles["page52__header--h2"]}>
-                            That = Aquele / Aquela
+                          <span style={{ color: '#A61C28' }}>That</span> = Aquele / Aquela
                         </h2>
                     </div>
                 </header>

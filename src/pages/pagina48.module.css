@@ -195,8 +195,16 @@
     margin-top: 2%;
 }
 
-.page48__header-h1,
-.page48__header-h2,
-.page48__header-h3 {
+.page48__audio-icon {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
+    left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page48__audio-icon:hover {
+    transform: scale(1.1);
 }
