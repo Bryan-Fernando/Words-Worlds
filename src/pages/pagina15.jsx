@@ -61,6 +61,7 @@ const Pagina15 = () => {
                             onClick={() => playAudio(global_grammar)}
                         />
                     </h1>
+
                     <h2 className={styles["page15__audio-text"]} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
                         <img
@@ -70,16 +71,13 @@ const Pagina15 = () => {
                             onClick={() => playAudio(global_simple_present)}
                         />
                     </h2>
+
                     <h3 className={styles["page15__audio-text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese Audio"
-                            className={styles["page15__icon"]}
-                            onClick={() => playAudio(global_verbo_to_be)}
-                        />
+                        
                     </h3>
                 </header>
+
                 <main className={styles["page15__main"]}>
                     <div>
                         <div
@@ -94,6 +92,7 @@ const Pagina15 = () => {
                             />
                             NEGATIVE
                         </div>
+
                         <table className={styles["page15__table"]}>
                             <colgroup>
                                 <col className={styles["page15__table-subject"]} />
@@ -127,109 +126,96 @@ const Pagina15 = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td
-                                        className={styles["page15__table-subject"]}
-                                        onClick={() => playAudio(pg15Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
+                                    <td className={styles["page15__table-subject"]} style={{ textAlign: "center" }}>
                                         He
                                     </td>
-                                    <td
-                                        className={styles["page15__table-auxiliary"]}
-                                        onClick={() => playAudio(pg15Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
+                                    <td className={styles["page15__table-auxiliary"]} style={{ textAlign: "center" }}>
                                         is
                                     </td>
-                                    <td
-                                        className={styles["page15__table-adverb"]}
-                                        onClick={() => playAudio(pg15Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
-                                    >
+                                    <td className={styles["page15__table-adverb"]} style={{ textAlign: "center", color: "red" }}>
                                         not
                                     </td>
                                     <td className={styles["page15__table-verb"]}></td>
-                                    <td
-                                        className={styles["page15__table-complement"]}
-                                        onClick={() => playAudio(pg15Audio1)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Mr. Black
+                                    <td className={styles["page15__table-complement"]}>
+                                        Mr. Black{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(pg15Audio1)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page15__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio1)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Ele <span style={{ color: "red" }}>não</span> é o senhor Black
+                                    <td className={styles["page15__table-translation"]}>
+                                        Ele <span style={{ color: "red" }}>não</span> é o senhor Black{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(traducaoAudio1)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page15__table-subject"]}
-                                        onClick={() => playAudio(pg15Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
+                                    <td className={styles["page15__table-subject"]} style={{ textAlign: "center" }}>
                                         He
                                     </td>
-                                    <td
-                                        className={styles["page15__table-auxiliary"]}
-                                        onClick={() => playAudio(pg15Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red"   }}
-                                    >
+                                    <td className={styles["page15__table-auxiliary"]} style={{ textAlign: "center", color: "red" }}>
                                         isn't
                                     </td>
                                     <td className={styles["page15__table-adverb"]}></td>
                                     <td className={styles["page15__table-verb"]}></td>
-                                    <td
-                                        className={styles["page15__table-complement"]}
-                                        onClick={() => playAudio(pg15Audio2)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        at the bank
+                                    <td className={styles["page15__table-complement"]}>
+                                        at the bank{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(pg15Audio2)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page15__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio2)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Ele <span style={{ color: "red" }}>não</span> está no banco
+                                    <td className={styles["page15__table-translation"]}>
+                                        Ele <span style={{ color: "red" }}>não</span> está no banco{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(traducaoAudio2)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page15__table-subject"]}
-                                        onClick={() => playAudio(pg15Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
+                                    <td className={styles["page15__table-subject"]} style={{ textAlign: "center" }}>
                                         He
                                     </td>
-                                    <td
-                                        className={styles["page15__table-auxiliary"]}
-                                        onClick={() => playAudio(pg15Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center", color: "red"  }}
-                                    >
-                                       ain't
+                                    <td className={styles["page15__table-auxiliary"]} style={{ textAlign: "center", color: "red" }}>
+                                        ain't
                                     </td>
                                     <td className={styles["page15__table-adverb"]}></td>
                                     <td className={styles["page15__table-verb"]}></td>
-                                    <td
-                                        className={styles["page15__table-complement"]}
-                                        onClick={() => playAudio(pg15Audio3)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        29 years old
+                                    <td className={styles["page15__table-complement"]}>
+                                        29 years old{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(pg15Audio3)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page15__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio3)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Ele <span style={{ color: "red" }}>não</span> tem 29 anos
+                                    <td className={styles["page15__table-translation"]}>
+                                        Ele <span style={{ color: "red" }}>não</span> tem 29 anos{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page15__icon"]}
+                                            onClick={() => playAudio(traducaoAudio3)}
+                                        />
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+
                         <table className={styles["page15__table"]}>
                             <colgroup>
                                 <col className={styles["page15__table-subject"]} />

@@ -9,6 +9,8 @@ import pagina90_imagem4 from '../assets/images/pagina90_imagem4.webp';
 import pagina90_imagem5 from '../assets/images/pagina90_imagem5.webp';
 import pagina90_imagem6 from '../assets/images/pagina90_imagem6.webp';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import pg90_audio1 from '../assets/audios/pg90_audio1.mp3';
 import pg90_audio2 from '../assets/audios/pg90_audio2.mp3';
@@ -38,16 +40,17 @@ const Pagina90 = () => {
         }
     };
 
-
     return (
         <div className={styles["page90__container"]}>
             <header className={styles["page90__header"]}>
-                <h1
-                    className={styles["page90__title"]}
-                    onClick={() => playAudio("global_grammar")}
-                    style={{ cursor: "pointer" }}
-                >
+                <h1 className={styles["page90__title"]}>
                     Grammar
+                    <img
+                        src={eng_audio_icon}
+                        alt="English audio"
+                        className={styles["page90__audio-icon"]}
+                        onClick={() => playAudio("global_grammar")}
+                    />
                 </h1>
                 <div>
                     <h2 className={styles["page90__subtitle"]}>No Indefinite Articles (Plural) - Vocabulary</h2>
@@ -59,34 +62,40 @@ const Pagina90 = () => {
                     <div className={styles["page90__images-row"]}>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem1} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio1")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 sneakers
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio1")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>tênis</p>
                         </div>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem2} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio2")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 flip-flops
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio2")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>chinelos</p>
                         </div>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem3} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio3")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 sunglasses
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio3")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>óculos de sol</p>
                         </div>
@@ -95,41 +104,46 @@ const Pagina90 = () => {
                     <div className={styles["page90__images-row"]}>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem4} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio4")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 pants
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio4")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>calças</p>
                         </div>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem5} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio5")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 gloves
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio5")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>luvas</p>
                         </div>
                         <div>
                             <img className={styles["page90__image"]} src={pagina90_imagem6} alt="" />
-                            <p
-                                className={styles["page90__text--red"]}
-                                onClick={() => playAudio("pg90_audio6")}
-                                style={{ cursor: "pointer" }}
-                            >
+                            <p className={styles["page90__text--red"]}>
                                 sandals
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English audio"
+                                    className={styles["page90__audio-icon"]}
+                                    onClick={() => playAudio("pg90_audio6")}
+                                />
                             </p>
                             <p className={styles["page90__text--black"]}>sandálias</p>
                         </div>
                     </div>
                 </div>
             </main>
-
         </div>
     );
 };

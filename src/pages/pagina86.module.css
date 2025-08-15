@@ -12,13 +12,11 @@
 .page86__header--title {
     font-size: 4rem;
     color: #A61C28;
-    cursor: pointer;
 }
 
 .page86__header--subtitle {
     font-size: 2.5rem;
     color: #A61C28;
-    cursor: pointer;
 }
 
 .page86__main {
@@ -101,12 +99,29 @@
 }
 
 .page86__text--red {
-    cursor: pointer;
     color: #A61C28;
 }
 
 .page86__text--black {
     font-size: 1.8rem;
+}
+
+.page86__icon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.page86__icon--pulsing {
+    animation: pulse 1s infinite;
+}
+
+.page86__icon:hover {
+    transform: scale(1.2);
 }
 
 @media (max-width: 1024px) {

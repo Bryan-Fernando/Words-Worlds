@@ -92,6 +92,15 @@ import pg71_audio28p from "../assets/audios/pg71_audio28p.mp3";
 import pg71_audio29p from "../assets/audios/pg71_audio29p.mp3";
 import pg71_audio30p from "../assets/audios/pg71_audio30p.mp3";
 import pg71_audio31p from "../assets/audios/pg71_audio31p.mp3";
+import pg71_audio32e from "../assets/audios/pg71_audio32e.mp3";
+import pg71_audio33e from "../assets/audios/pg71_audio33e.mp3";
+import pg71_audio34e from "../assets/audios/pg71_audio34e.mp3";
+import pg71_audio35e from "../assets/audios/pg71_audio35e.mp3";
+import pg71_audio36e from "../assets/audios/pg71_audio36e.mp3";
+import pg71_audio37e from "../assets/audios/pg71_audio37e.mp3";
+import pg71_audio38e from "../assets/audios/pg71_audio38e.mp3";
+import pg71_audio39e from "../assets/audios/pg71_audio39e.mp3";
+import pg71_audio40e from "../assets/audios/pg71_audio40e.mp3";
 
 const Pagina71 = () => {
     const correctAnswers = [
@@ -191,7 +200,16 @@ const Pagina71 = () => {
         pg71_audio29p,
         pg71_audio30p,
         pg71_audio31p,
-        bell
+        bell,
+        pg71_audio32e,
+        pg71_audio33e,
+        pg71_audio34e,
+        pg71_audio35e,
+        pg71_audio36e,
+        pg71_audio37e,
+        pg71_audio38e,
+        pg71_audio39e,
+        pg71_audio40e,
     };
 
 
@@ -473,24 +491,124 @@ const Pagina71 = () => {
                     </div>
                     <div className={styles["page71__word-bank-content"]}>
                         <div className={styles["page71__word-row"]}>
-                            <div className={styles["page71__word-column"]}>
-                                <p><strong>Hello/Hi</strong> <span>Olá/Oi</span></p>
-                                <p><strong>Good morning</strong> <span>Bom dia</span></p>
-                            </div>
-                            <div className={styles["page71__word-column"]}>
-                                <p><strong>Good afternoon</strong> <span>Boa tarde</span></p>
-                                <p><strong>Good evening</strong> <span>Boa noite</span></p>
-                            </div>
-                            <div className={styles["page71__word-column"]}>
-                                <p><strong>Bye</strong> <span>Tchau</span></p>
-                                <p><strong>Goodbye</strong> <span>Adeus</span></p>
-                                <p><strong>See you (see ya)</strong> <span>Até logo</span></p>
-                            </div>
-                            <div className={styles["page71__word-column"]}>
-                                <p><strong>See you later</strong> <span>Até mais tarde</span></p>
-                                <p><strong>Good night</strong> <span>Boa noite</span></p>
-                            </div>
-                        </div>
+  <div className={styles["page71__word-column"]}>
+    <p>
+      <strong>
+        Hello/Hi
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio32e')}
+        />
+      </strong>
+      <span>Olá/Oi</span>
+    </p>
+    <p>
+      <strong>
+        Good morning
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio33e')}
+        />
+      </strong>
+      <span>Bom dia</span>
+    </p>
+  </div>
+  <div className={styles["page71__word-column"]}>
+    <p>
+      <strong>
+        Good afternoon
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio34e')}
+        />
+      </strong>
+      <span>Boa tarde</span>
+    </p>
+    <p>
+      <strong>
+        Good evening
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio35e')}
+        />
+      </strong>
+      <span>Boa noite</span>
+    </p>
+  </div>
+  <div className={styles["page71__word-column"]}>
+    <p>
+      <strong>
+        Bye
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio36e')}
+        />
+      </strong>
+      <span>Tchau</span>
+    </p>
+    <p>
+      <strong>
+        Goodbye
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio37e')}
+        />
+      </strong>
+      <span>Adeus</span>
+    </p>
+    <p>
+      <strong>
+        See you (see ya)
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio38e')}
+        />
+      </strong>
+      <span>Até logo</span>
+    </p>
+  </div>
+  <div className={styles["page71__word-column"]}>
+    <p>
+      <strong>
+        See you later
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio39e')}
+        />
+      </strong>
+      <span>Até mais tarde</span>
+    </p>
+    <p>
+      <strong>
+        Good night
+        <img
+          src={eng_audio_icon}
+          alt="English Audio"
+          className={styles["page71__icon"]}
+          onClick={() => playAudio('pg71_audio40e')}
+        />
+      </strong>
+      <span>Boa noite</span>
+    </p>
+  </div>
+</div>
+
                     </div>
                 </div>
             </aside>

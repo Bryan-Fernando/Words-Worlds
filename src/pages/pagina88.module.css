@@ -74,3 +74,21 @@
     text-align: left;
     color: #103275;
 }
+
+.page88__icon {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    position: relative;
+    top: 1rem;
+    margin-left: 0.5rem;
+}
+
+.page88__icon--pulsing {
+    animation: pulse 1s infinite;
+}
+
+.page88__icon:hover {
+    transform: scale(1.2);
+}

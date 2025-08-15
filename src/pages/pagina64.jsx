@@ -105,149 +105,95 @@ const Pagina64 = () => {
       </div>
 
       <div className={styles["page64__main"]}>
-
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--my-family"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--my-family"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={segundaImagem}
-              alt="Imagem 2"
-              className={styles["page64__image"]}
-            />
+            <img src={segundaImagem} alt="Imagem 2" className={styles["page64__image"]} />
           </div>
-          <div
-            className={`${styles["page64__text-box"]} ${styles["page64__text--my-family"]}`}
-          >
+          <div className={`${styles["page64__text-box"]} ${styles["page64__text--my-family"]}`}>
             <p>
-              <span onClick={() => playAudio("pg64_audio2_1e")}><strong>My Family.</strong></span> <br />
-              <span onClick={() => playAudio("pg64_audio2_2e")}>Hi! I'm Indira Alves França. </span>
-              <span onClick={() => playAudio("pg64_audio2_3e")}>I'm an educator/pedagogue.</span>
-              <span onClick={() => playAudio("pg64_audio2_4e")}>I am from Paraty – Brazil. </span>
-              <span onClick={() => playAudio("pg64_audio2_5e")}>I'm Brazilian. </span>
-              <span onClick={() => playAudio("pg64_audio2_6e")}>I'm 37 years old.</span>
-              <img
-                src={ptbr_audio_icon}
-                alt="Play Portuguese Audio"
-                className={styles["page64__audio-icon"]}
-                onClick={() => playAudio('pg64_audio2p')}
-              />
+              <strong>My Family.</strong>
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_1e")} /> <br />
+              Hi! I'm Indira Alves França.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_2e")} />
+              I'm an educator/pedagogue.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_3e")} />
+              I am from Paraty – Brazil.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_4e")} />
+              I'm Brazilian.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_5e")} />
+              I'm 37 years old.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio2_6e")} />
+              <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio('pg64_audio2p')} />
             </p>
-
           </div>
         </div>
 
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--married"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--married"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={terceiraImagem}
-              alt="Imagem 3"
-              className={styles["page64__image"]}
-            />
+            <img src={terceiraImagem} alt="Imagem 3" className={styles["page64__image"]} />
           </div>
-          <div
-            className={`${styles["page64__text-box"]} ${styles["page64__text--married"]}`}
-          >
-            <p onClick={() => playAudio("pg64_audio3")} style={{ cursor: "pointer" }}>
-              <span onClick={() => playAudio("pg64_audio3_1e")}>I am married to Sergio França. </span>
-              <span onClick={() => playAudio("pg64_audio3_2e")}>He is a journalist. </span>
-              <span onClick={() => playAudio("pg64_audio3_3e")}>He is also Brazilian, from Paraty. </span>
-              <span onClick={() => playAudio("pg64_audio3_4e")}>He is 39 years old. </span>
-              <img
-                src={ptbr_audio_icon}
-                alt="Play Portuguese Audio"
-                className={styles["page64__audio-icon"]}
-                onClick={() => playAudio('pg64_audio3p')}
-              />
+          <div className={`${styles["page64__text-box"]} ${styles["page64__text--married"]}`}>
+            <p>
+              I am married to Sergio França.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio3_1e")} />
+              He is a journalist.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio3_2e")} />
+              He is also Brazilian, from Paraty.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio3_3e")} />
+              He is 39 years old.
+              <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio3_4e")} />
+              <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio('pg64_audio3p')} />
             </p>
-
           </div>
         </div>
 
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--children"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--children"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={quartaImagem}
-              alt="Imagem 4"
-              className={styles["page64__image"]}
-            />
+            <img src={quartaImagem} alt="Imagem 4" className={styles["page64__image"]} />
           </div>
           <div className={styles["page64__text-wrapper"]}>
-            <div
-              className={`${styles["page64__text-box"]} ${styles["page64__text--children"]}`}
-            >
-              <p onClick={() => playAudio("pg64_audio4")} style={{ cursor: "pointer" }}>
-                <span onClick={() => playAudio("pg64_audio4_1e")}>We have two children. </span>
-                <span onClick={() => playAudio("pg64_audio4_2e")}>Our son, Eduardo is 10 (ten) years old. </span>
-                <span onClick={() => playAudio("pg64_audio4_3e")}>Our daughter, Alice is 9 (nine) years old. </span>
-                <span onClick={() => playAudio("pg64_audio4_4e")}>They're both in elementary school.</span>
-                <img
-                  src={ptbr_audio_icon}
-                  alt="Play Portuguese Audio"
-                  className={styles["page64__audio-icon"]}
-                  onClick={() => playAudio('pg64_audio4p')}
-                />
+            <div className={`${styles["page64__text-box"]} ${styles["page64__text--children"]}`}>
+              <p>
+                We have two children.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio4_1e")} />
+                Our son, Eduardo is 10 (ten) years old.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio4_2e")} />
+                Our daughter, Alice is 9 (nine) years old.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio4_3e")} />
+                They're both in elementary school.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio4_4e")} />
+                <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio('pg64_audio4p')} />
               </p>
-
             </div>
           </div>
         </div>
 
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--sister"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--sister"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={quintaImagem}
-              alt="Imagem 5"
-              className={styles["page64__image"]}
-            />
+            <img src={quintaImagem} alt="Imagem 5" className={styles["page64__image"]} />
           </div>
-
           <div className={styles["page64__text-wrapper"]}>
-            <div
-              className={`${styles["page64__text-box"]} ${styles["page64__text--sister"]}`}
-            >
-              <p onClick={() => playAudio("pg64_audio5")} style={{ cursor: "pointer" }}>
-                <span onClick={() => playAudio("pg64_audio5_1e")}>My sister Marilia Alves is single. </span>
-                <span onClick={() => playAudio("pg64_audio5_2e")}>Currently in the Bahamas, on vacation.</span>
-                <img
-                  src={ptbr_audio_icon}
-                  alt="Play Portuguese Audio"
-                  className={styles["page64__audio-icon"]}
-                  onClick={() => playAudio('pg64_audio5p')}
-                />
+            <div className={`${styles["page64__text-box"]} ${styles["page64__text--sister"]}`}>
+              <p>
+                My sister Marilia Alves is single.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio5_1e")} />
+                Currently in the Bahamas, on vacation.
+                <img src={eng_audio_icon} alt="English Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio("pg64_audio5_2e")} />
+                <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles["page64__audio-icon"]} onClick={() => playAudio('pg64_audio5p')} />
               </p>
-
             </div>
           </div>
         </div>
 
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation1"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation1"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={sextaImagem}
-              alt="Imagem 6"
-              className={styles["page64__image"]}
-            />
+            <img src={sextaImagem} alt="Imagem 6" className={styles["page64__image"]} />
           </div>
         </div>
 
-        <div
-          className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation2"]}`}
-        >
+        <div className={`${styles["page64__image-wrapper"]} ${styles["page64__image--vacation2"]}`}>
           <div className={styles["page64__image-container"]}>
-            <img
-              src={setimaImagem}
-              alt="Imagem 7"
-              className={styles["page64__image"]}
-            />
+            <img src={setimaImagem} alt="Imagem 7" className={styles["page64__image"]} />
           </div>
         </div>
       </div>

@@ -175,36 +175,110 @@ const Pagina57 = () => {
                     <div className={styles["page57__contacts"]}>
                         <div className={styles["page57__contacts-content"]}>
                             <div>
-                                <h2 className={styles["page57__title--phone"]} onClick={() => playAudio('pg57_audio13')} style={{ cursor: 'pointer' }}>
+                                <h2 className={styles["page57__title--phone"]}>
                                     Phone numbers and email addresses
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English Audio"
+                                        className={styles["page57__icon"]}
+                                        onClick={() => playAudio('pg57_audio13')}
+                                    />
                                 </h2>
                             </div>
+
                             <p>
-                                <span onClick={() => playAudio('pg57_audio14')} style={{ cursor: 'pointer' }}> Ana: Hey, Julie. What’s your cell phone number?</span> <br />
+                                Ana: Hey, Julie. What’s your cell phone number?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio14')}
+                                />
+                                <br />
 
-                                <span onClick={() => playAudio('pg57_audio15')} style={{ cursor: 'pointer' }}>Julie: It’s 308-187-0745. </span> <br />
+                                Julie: It’s 308-187-0745.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio15')}
+                                />
+                                <br />
 
-                                <span onClick={() => playAudio('pg57_audio16')} style={{ cursor: 'pointer' }}>Ana: What’s your email address? </span><br />
+                                Ana: What’s your email address?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio16')}
+                                />
+                                <br />
 
-                                <span onClick={() => playAudio('pg57_audio17')} style={{ cursor: 'pointer' }}>Julie: It’s <span className={styles["page57__email"]}>julie@gmail.com.</span> <br /></span>
+                                Julie: It’s <span className={styles["page57__email"]}>julie@gmail.com.</span>
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio17')}
+                                />
+                                <br />
 
-                                <span onClick={() => playAudio('pg57_audio18')} style={{ cursor: 'pointer' }}>Ana: Thanks!</span>
+                                Ana: Thanks!
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio18')}
+                                />
                             </p>
-                            <div className={styles["page57__gray-box"]} style={{ fontWeight: "bold"}}>
-                                <p >Nos endereços de email:</p>
+
+                            <div className={styles["page57__gray-box"]} style={{ fontWeight: "bold" }}>
+                                <p>Nos endereços de email:</p>
                                 <ul>
-                                    <li onClick={() => playAudio('pg57_audio53')}>‘‘.’’ = ‘‘dot’’</li>
-                                    <li onClick={() => playAudio('pg57_audio54')}>‘‘@’’ = ‘‘at’’</li>
-                                    <li onClick={() => playAudio('pg57_audio55')}>‘‘_’’ = ‘‘underscore’’</li>
+                                    <li>
+                                        ‘‘.’’ = ‘‘dot’’
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page57__icon"]}
+                                            onClick={() => playAudio('pg57_audio53')}
+                                        />
+                                    </li>
+                                    <li>
+                                        ‘‘@’’ = ‘‘at’’
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page57__icon"]}
+                                            onClick={() => playAudio('pg57_audio54')}
+                                        />
+                                    </li>
+                                    <li>
+                                        ‘‘_’’ = ‘‘underscore’’
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page57__icon"]}
+                                            onClick={() => playAudio('pg57_audio55')}
+                                        />
+                                    </li>
                                 </ul>
                             </div>
                         </div>
+
                         <img className={styles["page57__image"]} src={pagina57_imagem1} alt="Duas pessoas conversando" />
                     </div>
 
-                    <h2 className={styles["page57__title--alphabet"]} onClick={() => playAudio('pg57_audio19')} style={{ cursor: 'pointer' }}>
+                    <h2 className={styles["page57__title--alphabet"]}>
                         Vocabulary: The alphabet
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page57__icon"]}
+                            onClick={() => playAudio('pg57_audio19')}
+                        />
                     </h2>
+
                     <div className={styles["page57__alphabet"]}>
                         <div className={styles["page57__letters"]}>
                             {[...'ABCDEFGHIJKLM'].map((letter, index) => (
@@ -229,54 +303,93 @@ const Pagina57 = () => {
                     <div className={styles["page57__spelling"]}>
                         <div className={styles["page57__spelling-content"]}>
                             <div>
-                                <h2 className={styles["page57__title--spelling"]} onClick={() => playAudio('pg57_audio46')} style={{ cursor: 'pointer' }}>
-                                    Spelling names (Soletrando nomes)
+                                <h2 className={styles["page57__title--spelling"]}>
+                                    Spelling names / Soletrando nomes
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English Audio"
+                                        className={styles["page57__icon"]}
+                                        onClick={() => playAudio('pg57_audio46')}
+                                    />
                                 </h2>
                             </div>
                             <p>
-                                <span onClick={() => playAudio('pg57_audio47')} style={{ cursor: 'pointer' }}> John: Hello. My name is John Black.</span> <br />
+                                John: Hello. My name is John Black.
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio47')}
+                                />
+                                <br />
 
-                                <span onClick={() => playAudio('pg57_audio48')} style={{ cursor: 'pointer' }}>Clerk: How do you spell your first name? <br /></span>
+                                Clerk: How do you spell your first name?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio48')}
+                                />
+                                <br />
 
-                                John: <span className={styles["page57__spelling-word"]} onClick={() => playAudio('pg57_audio49')} style={{ cursor: 'pointer' }}>
+                                John:
+                                <span className={styles["page57__spelling-word"]}>
                                     J-O-H-N
-                                </span> <br />
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English Audio"
+                                        className={styles["page57__icon"]}
+                                        onClick={() => playAudio('pg57_audio49')}
+                                    />
+                                </span>
+                                <br />
 
-                                Clerk: <span onClick={() => playAudio('pg57_audio50')} style={{ cursor: 'pointer' }}>And how do you spell your last name?</span> <br />
-                                
-                                John: <span className={styles["page57__spelling-word"]} onClick={() => playAudio('pg57_audio51')} style={{ cursor: 'pointer' }}>
+                                Clerk: And how do you spell your last name?
+                                <img
+                                    src={eng_audio_icon}
+                                    alt="English Audio"
+                                    className={styles["page57__icon"]}
+                                    onClick={() => playAudio('pg57_audio50')}
+                                />
+                                <br />
+
+                                John:
+                                <span className={styles["page57__spelling-word"]}>
                                     B-L-A-C-K.
+                                    <img
+                                        src={eng_audio_icon}
+                                        alt="English Audio"
+                                        className={styles["page57__icon"]}
+                                        onClick={() => playAudio('pg57_audio51')}
+                                    />
                                 </span>
                             </p>
                         </div>
-
-                      
-
                         <img className={styles["page57__image"]} src={pagina57_imagem2} alt="Pessoa sendo atendida" />
                     </div>
 
 
                 </main>
                 <div className={styles["page57__alphabet"]}>
-                        <div className={styles["page57__letters"]}>
-                            {[...'ABCDEFGHIJKLM'].map((letter, index) => (
-                                <div key={letter} onClick={() => playAudio(`pg57_audio${20 + index}`)} style={{ cursor: 'pointer' }}>
-                                    <div className={styles["page57__letter-box"]}>
-                                        <p>{letter.toLowerCase()}</p>
-                                    </div>
+                    <div className={styles["page57__letters"]}>
+                        {[...'ABCDEFGHIJKLM'].map((letter, index) => (
+                            <div key={letter} onClick={() => playAudio(`pg57_audio${20 + index}`)} style={{ cursor: 'pointer' }}>
+                                <div className={styles["page57__letter-box"]}>
+                                    <p>{letter.toLowerCase()}</p>
                                 </div>
-                            ))}
-                        </div>
-                        <div className={styles["page57__letters"]}>
-                            {[...'NOPQRSTUVWXYZ'].map((letter, index) => (
-                                <div key={letter} onClick={() => playAudio(`pg57_audio${33 + index}`)} style={{ cursor: 'pointer' }}>
-                                    <div className={styles["page57__letter-box"]}>
-                                        <p>{letter.toLowerCase()}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
+                    <div className={styles["page57__letters"]}>
+                        {[...'NOPQRSTUVWXYZ'].map((letter, index) => (
+                            <div key={letter} onClick={() => playAudio(`pg57_audio${33 + index}`)} style={{ cursor: 'pointer' }}>
+                                <div className={styles["page57__letter-box"]}>
+                                    <p>{letter.toLowerCase()}</p>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     );

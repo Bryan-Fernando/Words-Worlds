@@ -493,11 +493,11 @@ const routes = [
   { path: "/pagina56", Component: Pagina56 },
   { path: "/pagina57", Component: Pagina57 },
   { path: "/pagina58", Component: Pagina58 },
-  { path: "/pagina59", Component: Pagina59 },
+/*  { path: "/pagina59", Component: Pagina59 },
   { path: "/pagina60", Component: Pagina60 },
   { path: "/pagina61", Component: Pagina61 },
   { path: "/pagina62", Component: Pagina62 },
-  { path: "/pagina63", Component: Pagina63 },
+  { path: "/pagina63", Component: Pagina63 },*/
   { path: "/pagina64", Component: Pagina64 },
   { path: "/pagina65", Component: Pagina65 },
   { path: "/pagina67", Component: Pagina67 },

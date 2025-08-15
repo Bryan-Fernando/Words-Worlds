@@ -79,7 +79,6 @@
 
 /* Caixa de texto branca separada */
 .page64__text-box {
-  cursor: pointer;
   position: absolute;
   top: 85%;
   left: 50%;
@@ -102,9 +101,10 @@
 
 /* Ícones de Áudio no Cabeçalho */
 .page64__audio-icon {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
   position: relative;
   top: 1rem;
   cursor: pointer;

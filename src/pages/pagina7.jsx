@@ -63,6 +63,7 @@ const Pagina7 = () => {
                             onClick={() => playAudio(global_grammar)}
                         />
                     </h1>
+
                     <h2 className={styles["page7__audio-text"]} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
                         <img
@@ -72,14 +73,10 @@ const Pagina7 = () => {
                             onClick={() => playAudio(global_simple_present)}
                         />
                     </h2>
+
                     <h3 className={styles["page7__audio-text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese Audio"
-                            className={styles["page7__icon"]}
-                            onClick={() => playAudio(global_verbo_to_be)}
-                        />
+                        
                     </h3>
                 </header>
 
@@ -88,7 +85,7 @@ const Pagina7 = () => {
                         <div
                             className={styles["page7__table-header"]}
                             onClick={() => playAudio(interrogativa_audio)}
-                            style={{ cursor: 'pointer' }}
+                            style={{ cursor: "pointer" }}
                         >
                             <img
                                 src={white_play_icon}
@@ -97,6 +94,7 @@ const Pagina7 = () => {
                             />
                             AFFIRMATIVE INTERROGATIVE
                         </div>
+
                         <table className={styles["page7__table"]}>
                             <colgroup>
                                 <col className={styles["page7__table-subject"]} />
@@ -106,115 +104,115 @@ const Pagina7 = () => {
                                 <col className={styles["page7__table-complement"]} />
                                 <col className={styles["page7__table-translation"]} />
                             </colgroup>
+
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
-                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
-                                        Object  <br /> Complement
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
+                                        Subject
                                     </th>
-                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
+                                        Adverb
+                                    </th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
+                                        Verb(s)
+                                    </th>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
+                                        Object <br /> Complement
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
+                                        Translation
+                                    </th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
-                                    <td
-                                        className={styles["page7__table-subject"]}
-                                        onClick={() => playAudio(pg7Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-subject"]} style={{ textAlign: "center" }}>
                                         Am
                                     </td>
-                                    <td
-                                        className={styles["page7__table-auxiliary"]}
-                                        onClick={() => playAudio(pg7Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-auxiliary"]} style={{ textAlign: "center" }}>
                                         I
                                     </td>
                                     <td className={styles["page7__table-adverb"]}></td>
                                     <td className={styles["page7__table-verb"]}></td>
-                                    <td
-                                        className={styles["page7__table-complement"]}
-                                        onClick={() => playAudio(pg7Audio1)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        a good student?
+                                    <td className={styles["page7__table-complement"]}>
+                                        a good student?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(pg7Audio1)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page7__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio1)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Eu sou um bom aluno?
+                                    <td className={styles["page7__table-translation"]}>
+                                        Eu sou um bom aluno?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(traducaoAudio1)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page7__table-subject"]}
-                                        onClick={() => playAudio(pg7Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-subject"]} style={{ textAlign: "center" }}>
                                         Am
                                     </td>
-                                    <td
-                                        className={styles["page7__table-auxiliary"]}
-                                        onClick={() => playAudio(pg7Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-auxiliary"]} style={{ textAlign: "center" }}>
                                         I
                                     </td>
                                     <td className={styles["page7__table-adverb"]}></td>
                                     <td className={styles["page7__table-verb"]}></td>
-                                    <td
-                                        className={styles["page7__table-complement"]}
-                                        onClick={() => playAudio(pg7Audio2)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        in class A or B?
+                                    <td className={styles["page7__table-complement"]}>
+                                        in class A or B?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(pg7Audio2)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page7__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio2)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Eu estou na sala de aula (turma/classe) A ou B?
+                                    <td className={styles["page7__table-translation"]}>
+                                        Eu estou na sala de aula (turma/classe) A ou B?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(traducaoAudio2)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page7__table-subject"]}
-                                        onClick={() => playAudio(pg7Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-subject"]} style={{ textAlign: "center" }}>
                                         Am
                                     </td>
-                                    <td
-                                        className={styles["page7__table-auxiliary"]}
-                                        onClick={() => playAudio(pg7Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page7__table-auxiliary"]} style={{ textAlign: "center" }}>
                                         I
                                     </td>
                                     <td className={styles["page7__table-adverb"]}></td>
                                     <td className={styles["page7__table-verb"]}></td>
-                                    <td
-                                        className={styles["page7__table-complement"]}
-                                        onClick={() => playAudio(pg7Audio3)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        over 3?
+                                    <td className={styles["page7__table-complement"]}>
+                                        over 3?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(pg7Audio3)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page7__table-translation"]}
-                                        onClick={() => playAudio(traducaoAudio3)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Eu tenho mais de 3 anos?
+                                    <td className={styles["page7__table-translation"]}>
+                                        Eu tenho mais de 3 anos?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page7__icon"]}
+                                            onClick={() => playAudio(traducaoAudio3)}
+                                        />
                                     </td>
                                 </tr>
                             </tbody>
@@ -222,13 +220,19 @@ const Pagina7 = () => {
 
                         <aside className={styles["page7__aside"]}>
                             <div className={styles["page7__new-aside-notes1"]}>
-                                <img className={styles["page7__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
+                                <img
+                                    className={styles["page7__aside-img"]}
+                                    onClick={() => playAudio(bell)}
+                                    src={campainha}
+                                    alt=""
+                                />
                                 <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
                             </div>
                             <div className={styles["page7__new-aside-notes2"]}>
                                 <p style={{ fontSize: "2rem" }}>
-                                <span style={{ fontWeight: "bold" }}> Conforme a tabela acima,</span> não se esqueça de que o <span style={{ fontWeight: "bold" }}>verbo auxiliar</span> troca de posição com o <span style={{ fontWeight: "bold" }}>sujeito</span> nas perguntas.
-                                    
+                                    <span style={{ fontWeight: "bold" }}>Conforme a tabela acima,</span> não se esqueça de que o{" "}
+                                    <span style={{ fontWeight: "bold" }}>verbo auxiliar</span> troca de posição com o{" "}
+                                    <span style={{ fontWeight: "bold" }}>sujeito</span> nas perguntas.
                                 </p>
                             </div>
                         </aside>
@@ -244,16 +248,24 @@ const Pagina7 = () => {
                             </colgroup>
                             <thead>
                                 <tr>
-                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
-                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
-                                        Object  <br /> Complement
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
+                                        Subject
                                     </th>
-                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
+                                        Adverb
+                                    </th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
+                                        Verb(s)
+                                    </th>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
+                                        Object <br /> Complement
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
+                                        Translation
+                                    </th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -268,9 +280,9 @@ const Pagina7 = () => {
                                                     rows="1"
                                                     onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                                                     style={{
-                                                        resize: 'none',
-                                                        overflowWrap: 'break-word',
-                                                        wordWrap: 'break-word',
+                                                        resize: "none",
+                                                        overflowWrap: "break-word",
+                                                        wordWrap: "break-word",
                                                     }}
                                                 />
                                             </td>
@@ -283,7 +295,6 @@ const Pagina7 = () => {
                 </main>
             </div>
         </div>
-
     );
 };
 

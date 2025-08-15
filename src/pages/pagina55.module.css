@@ -82,9 +82,10 @@
 }
 
 .page55__aside-img-notes {
-    height: calc(1rem + 0.8vw);
-    width: 2rem;
+    height: calc(2rem + 1vw);
+    width: 4rem;
     padding-right: 0.5rem;
+    cursor: pointer;
 }
 
 .page55__aside-notes2 {

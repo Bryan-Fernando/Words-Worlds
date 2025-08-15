@@ -27,7 +27,7 @@
 }
 
 .page57__title--phone {
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-align: left;
 }
 
@@ -190,18 +190,15 @@
 }
 
 .page57__icon {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
     position: relative;
     top: 1rem;
+    margin-left: 0.5rem;
 }
 
 .page57__icon:hover {
     transform: scale(1.1);
-}
-
-.page57__gray-box ul li {
-    cursor: pointer;
 }

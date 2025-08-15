@@ -285,7 +285,7 @@ const Pagina68 = () => {
                                 value={inputValues[5]}
                                 onChange={(e) => handleInputChange(e.target.value, 5)}
                                 className={styles["page68__input-box"]}
-                                placeholder="It is john2023@email.com"
+                                placeholder="It is john2023@gmail.com"
                                 disabled
                             />
                         </div>

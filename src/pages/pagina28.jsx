@@ -71,14 +71,9 @@ const Pagina28 = () => {
                     </h2>
                     <h3 className={styles["page28__audio-text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese Audio"
-                            className={styles["page28__icon"]}
-                            onClick={() => playAudio(global_verbo_to_be)}
-                        />
                     </h3>
                 </header>
+
                 <main className={styles["page28__main"]}>
                     <div>
                         <div
@@ -93,6 +88,7 @@ const Pagina28 = () => {
                             />
                             AFFIRMATIVE INTERROGATIVE
                         </div>
+
                         <table className={styles["page28__table"]}>
                             <colgroup>
                                 <col className={styles["page28__auxiliary--verb"]} />
@@ -107,118 +103,88 @@ const Pagina28 = () => {
                                     <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
-                                        Subject
-                                    </th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
-                                        Adverb
-                                    </th>
-                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
-                                        Verb(s)
-                                    </th>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>Subject</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>Adverb</th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
                                         Object <br /> Complement
                                     </th>
-                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
-                                        Translation
-                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>Translation</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td
-                                        className={styles["page28__auxiliary--verb"]}
-                                        onClick={() => playAudio(pg28Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        Are
-                                    </td>
-                                    <td
-                                        className={styles["page28__subject"]}
-                                        onClick={() => playAudio(pg28Audio1)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        we
-                                    </td>
+                                    <td className={styles["page28__auxiliary--verb"]} style={{ textAlign: "center" }}>Are</td>
+                                    <td className={styles["page28__subject"]} style={{ textAlign: "center" }}>we</td>
                                     <td className={styles["page28__adverb"]}></td>
                                     <td className={styles["page28__verb"]}></td>
-                                    <td
-                                        className={styles["page28__objective--complement"]}
-                                        onClick={() => playAudio(pg28Audio1)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        good students?
+                                    <td className={styles["page28__objective--complement"]}>
+                                        good students?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(pg28Audio1)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page28__translation"]}
-                                        onClick={() => playAudio(traducaoAudio1)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Somos bons alunos?
+                                    <td className={styles["page28__translation"]}>
+                                        Somos bons alunos?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(traducaoAudio1)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page28__auxiliary--verb"]}
-                                        onClick={() => playAudio(pg28Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        Are
-                                    </td>
-                                    <td
-                                        className={styles["page28__subject"]}
-                                        onClick={() => playAudio(pg28Audio2)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        we
-                                    </td>
+                                    <td className={styles["page28__auxiliary--verb"]} style={{ textAlign: "center" }}>Are</td>
+                                    <td className={styles["page28__subject"]} style={{ textAlign: "center" }}>we</td>
                                     <td className={styles["page28__adverb"]}></td>
                                     <td className={styles["page28__verb"]}></td>
-                                    <td
-                                        className={styles["page28__objective--complement"]}
-                                        onClick={() => playAudio(pg28Audio2)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        late?
+                                    <td className={styles["page28__objective--complement"]}>
+                                        late?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(pg28Audio2)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page28__translation"]}
-                                        onClick={() => playAudio(traducaoAudio2)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Estamos atrasados?
+                                    <td className={styles["page28__translation"]}>
+                                        Estamos atrasados?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(traducaoAudio2)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page28__auxiliary--verb"]}
-                                        onClick={() => playAudio(pg28Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        Are
-                                    </td>
-                                    <td
-                                        className={styles["page28__subject"]}
-                                        onClick={() => playAudio(pg28Audio3)}
-                                        style={{ cursor: "pointer", textAlign: "center" }}
-                                    >
-                                        we
-                                    </td>
+                                    <td className={styles["page28__auxiliary--verb"]} style={{ textAlign: "center" }}>Are</td>
+                                    <td className={styles["page28__subject"]} style={{ textAlign: "center" }}>we</td>
                                     <td className={styles["page28__adverb"]}></td>
                                     <td className={styles["page28__verb"]}></td>
-                                    <td
-                                        className={styles["page28__objective--complement"]}
-                                        onClick={() => playAudio(pg28Audio3)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        4 or 5 years old?
+                                    <td className={styles["page28__objective--complement"]}>
+                                        4 or 5 years old?{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(pg28Audio3)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page28__translation"]}
-                                        onClick={() => playAudio(traducaoAudio3)}
-                                        style={{ cursor: "pointer" }}
-                                    >
-                                        Temos 4 ou 5 anos?
+                                    <td className={styles["page28__translation"]}>
+                                        Temos 4 ou 5 anos?{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese"
+                                            className={styles["page28__icon"]}
+                                            onClick={() => playAudio(traducaoAudio3)}
+                                        />
                                     </td>
                                 </tr>
                             </tbody>
@@ -238,21 +204,13 @@ const Pagina28 = () => {
                                     <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
                                         Auxiliary <br /> Verb
                                     </th>
-                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
-                                        Subject
-                                    </th>
-                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
-                                        Adverb
-                                    </th>
-                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
-                                        Verb(s)
-                                    </th>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>Subject</th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>Adverb</th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>Verb(s)</th>
                                     <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
                                         Object <br /> Complement
                                     </th>
-                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
-                                        Translation
-                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>Translation</th>
                                 </tr>
                             </thead>
                             <tbody>

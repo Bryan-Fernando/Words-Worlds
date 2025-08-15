@@ -5,6 +5,7 @@ import styles from './pagina55.module.css';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import pg55IconNotes from '../assets/icons/notes_icon.webp';
+import campainha from '../assets/icons/campainha.png';
 
 import pagina55Imagem1 from '../assets/images/pagina55_imagem1.webp';
 import pagina55Imagem2 from '../assets/images/pagina55_imagem2.webp';
@@ -19,6 +20,7 @@ import pg55Audio3 from '../assets/audios/pg55_audio3.mp3';
 import pg55Audio4 from '../assets/audios/pg55_audio4.mp3';
 import pg55Audio5 from '../assets/audios/pg55_audio5.mp3';
 import pg55Audio6 from '../assets/audios/pg55_audio6.mp3';
+import bell from '../assets/audios/bell.mp3';
 
 const Pagina55 = () => {
   const audioMap = {
@@ -29,6 +31,7 @@ const Pagina55 = () => {
     'pg55-audio4': pg55Audio4,
     'pg55-audio5': pg55Audio5,
     'pg55-audio6': pg55Audio6,
+    'bell': bell,
   };
 
   const currentAudio = useRef(null);
@@ -149,7 +152,12 @@ const Pagina55 = () => {
         <aside className={styles['page55__aside']}>
           <div className={styles['page55__aside-container']}>
             <div className={styles['page55__aside-notes1']}>
-              <img className={styles['page55__aside-img-notes']} src={pg55IconNotes} alt="Word Bank Icon" />
+              <img
+                className={styles["page55__aside-img-notes"]}
+                onClick={() => playAudio('bell')}
+                src={campainha}
+                alt=""
+              />
               <p>Word Bank</p>
             </div>
             <div className={styles['page55__aside-notes2']}>

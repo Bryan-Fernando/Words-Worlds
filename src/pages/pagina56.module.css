@@ -169,4 +169,19 @@
   height: 2.5rem;
   width: auto;
   margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.page56__icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    position: relative;
+    top: 1rem;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.page56__icon:hover {
+    transform: scale(1.1);
 }

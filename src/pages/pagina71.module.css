@@ -130,8 +130,8 @@
 
 .page71__question {
     width: 40%;
-    font-size: 1.7rem;
     margin-bottom: 0.8rem;
+    font-weight: bold;
 }
 
 .page71__check-button {
@@ -345,4 +345,18 @@
 
 .page71__clickable-text {
     cursor: pointer;
+}
+
+.page71__icon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page71__icon:hover {
+  transform: scale(1.1);
 }

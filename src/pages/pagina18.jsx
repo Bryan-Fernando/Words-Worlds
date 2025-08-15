@@ -61,6 +61,7 @@ const Pagina18 = () => {
                             onClick={() => playAudio(global_grammar)}
                         />
                     </h1>
+
                     <h2 className={styles["page18__audio-text"]} style={{ color: "black" }}>
                         Simple Present (Presente Simples)
                         <img
@@ -70,16 +71,12 @@ const Pagina18 = () => {
                             onClick={() => playAudio(global_simple_present)}
                         />
                     </h2>
+
                     <h3 className={styles["page18__audio-text"]}>
                         Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
-                        <img
-                            src={ptbr_audio_icon}
-                            alt="Portuguese Audio"
-                            className={styles["page18__icon"]}
-                            onClick={() => playAudio(global_verbo_to_be)}
-                        />
                     </h3>
                 </header>
+
                 <main className={styles["page18__main"]}>
                     <div>
                         <div
@@ -94,6 +91,7 @@ const Pagina18 = () => {
                             />
                             AFFIRMATIVE
                         </div>
+
                         <table className={styles["page18__table"]}>
                             <colgroup>
                                 <col className={styles["page18__subject"]} />
@@ -119,99 +117,89 @@ const Pagina18 = () => {
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td
-                                        className={styles["page18__subject"]}
-                                        onClick={() => playAudio(pg18Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__subject"]} style={{ textAlign: 'center' }}>
                                         She
                                     </td>
-                                    <td
-                                        className={styles["page18__auxiliary-verb"]}
-                                        onClick={() => playAudio(pg18Audio1)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__auxiliary-verb"]} style={{ textAlign: 'center' }}>
                                         is
                                     </td>
                                     <td className={styles["page18__adverb"]}></td>
                                     <td className={styles["page18__verb"]}></td>
-                                    <td
-                                        className={styles["page18__objective-complement"]}
-                                        onClick={() => playAudio(pg18Audio1)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Miss Debora
+                                    <td className={styles["page18__objective-complement"]}>
+                                        Miss Debora{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(pg18Audio1)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page18__translation"]}
-                                        onClick={() => playAudio(traducaoAudio1)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Ela é a Srta. Debora
+                                    <td className={styles["page18__translation"]}>
+                                        Ela é a Srta. Debora{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(traducaoAudio1)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page18__subject"]}
-                                        onClick={() => playAudio(pg18Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__subject"]} style={{ textAlign: 'center' }}>
                                         She
                                     </td>
-                                    <td
-                                        className={styles["page18__auxiliary-verb"]}
-                                        onClick={() => playAudio(pg18Audio2)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__auxiliary-verb"]} style={{ textAlign: 'center' }}>
                                         is
                                     </td>
                                     <td className={styles["page18__adverb"]}></td>
                                     <td className={styles["page18__verb"]}></td>
-                                    <td
-                                        className={styles["page18__objective-complement"]}
-                                        onClick={() => playAudio(pg18Audio2)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        at the gym
+                                    <td className={styles["page18__objective-complement"]}>
+                                        at the gym{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(pg18Audio2)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page18__translation"]}
-                                        onClick={() => playAudio(traducaoAudio2)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Ela está na academia
+                                    <td className={styles["page18__translation"]}>
+                                        Ela está na academia{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(traducaoAudio2)}
+                                        />
                                     </td>
                                 </tr>
+
                                 <tr>
-                                    <td
-                                        className={styles["page18__subject"]}
-                                        onClick={() => playAudio(pg18Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__subject"]} style={{ textAlign: 'center' }}>
                                         She
                                     </td>
-                                    <td
-                                        className={styles["page18__auxiliary-verb"]}
-                                        onClick={() => playAudio(pg18Audio3)}
-                                        style={{ cursor: 'pointer', textAlign: 'center' }}
-                                    >
+                                    <td className={styles["page18__auxiliary-verb"]} style={{ textAlign: 'center' }}>
                                         is
                                     </td>
                                     <td className={styles["page18__adverb"]}></td>
                                     <td className={styles["page18__verb"]}></td>
-                                    <td
-                                        className={styles["page18__objective-complement"]}
-                                        onClick={() => playAudio(pg18Audio3)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        27 years old
+                                    <td className={styles["page18__objective-complement"]}>
+                                        27 years old{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(pg18Audio3)}
+                                        />
                                     </td>
-                                    <td
-                                        className={styles["page18__translation"]}
-                                        onClick={() => playAudio(traducaoAudio3)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
-                                        Ela tem 27 anos
+                                    <td className={styles["page18__translation"]}>
+                                        Ela tem 27 anos{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Play Portuguese translation"
+                                            className={styles["page18__icon"]}
+                                            onClick={() => playAudio(traducaoAudio3)}
+                                        />
                                     </td>
                                 </tr>
                             </tbody>

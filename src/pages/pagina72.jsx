@@ -38,7 +38,19 @@ import pg72_audio9p from '../assets/audios/pg72_audio9p.mp3';
 import pg72_audio10p from '../assets/audios/pg72_audio10p.mp3';
 import pg72_audio11p from '../assets/audios/pg72_audio11p.mp3';
 import pg72_audio12p from '../assets/audios/pg72_audio12p.mp3';
-
+import pg72_audio13e from '../assets/audios/pg72_audio13e.mp3';
+import pg72_audio14e from '../assets/audios/pg72_audio14e.mp3';
+import pg72_audio15e from '../assets/audios/pg72_audio15e.mp3';
+import pg72_audio16e from '../assets/audios/pg72_audio16e.mp3';
+import pg72_audio17e from '../assets/audios/pg72_audio17e.mp3';
+import pg72_audio18e from '../assets/audios/pg72_audio18e.mp3';
+import pg72_audio19e from '../assets/audios/pg72_audio19e.mp3';
+import pg72_audio20e from '../assets/audios/pg72_audio20e.mp3';
+import pg72_audio21e from '../assets/audios/pg72_audio21e.mp3';
+import pg72_audio22e from '../assets/audios/pg72_audio22e.mp3';
+import pg72_audio23e from '../assets/audios/pg72_audio23e.mp3';
+import pg72_audio24e from '../assets/audios/pg72_audio24e.mp3';
+import pg72_audio25e from '../assets/audios/pg72_audio25e.mp3';
 
 const audioMap = {
     global_learning_le_e,
@@ -69,7 +81,19 @@ const audioMap = {
     pg72_audio10p,
     pg72_audio11p,
     pg72_audio12p,
-
+    pg72_audio13e,
+    pg72_audio14e,
+    pg72_audio15e,
+    pg72_audio16e,
+    pg72_audio17e,
+    pg72_audio18e,
+    pg72_audio19e,
+    pg72_audio20e,
+    pg72_audio21e,
+    pg72_audio22e,
+    pg72_audio23e,
+    pg72_audio24e,
+    pg72_audio25e,
 };
 
 
@@ -175,6 +199,8 @@ const pagina72 = () => {
                         onClick={() => playAudio("global_exercise_fill_blankp")}
                     />
                 </p>
+                <p className={styles["page72__p"]}>Use as formas completas do verbo.
+                    E as tabelas para formar as frases corretas.</p>
             </header>
 
             <main className={styles["page72__main"]}>
@@ -402,24 +428,156 @@ const pagina72 = () => {
                     </div>
                     <div className={styles["page72__word-bank-content"]}>
                         <div className={styles["page72__word-row"]}>
-                            <div className={styles["page72__word-column"]}>
-                                <p><strong className={styles["page72__red-text"]}>Friendly</strong> <span>(amigável)</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Happy</strong> <span>(feliz)</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Hardworking</strong> <span>(trabalhador(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Outgoing</strong> <span>(extrovertido(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Creative</strong> <span>(criativo(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Intelligent</strong> <span>(inteligente)</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Ambitious</strong> <span>(ambicioso(a))</span></p>
-                            </div>
-                            <div className={styles["page72__word-column"]}>
-                                <p><strong className={styles["page72__red-text"]}>Helpful</strong> <span>(prestativo(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Talkative</strong> <span>(pessoa que fala muito)</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Organized</strong> <span>(organizado(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Shy</strong> <span>(tímido(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Lazy</strong> <span>(preguiçoso(a))</span></p>
-                                <p><strong className={styles["page72__red-text"]}>Disrespectful</strong> <span>(desrespeitoso(a))</span></p>
-                            </div>
-                        </div>
+    <div className={styles["page72__word-column"]}>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Friendly
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio13e')}
+                />
+            </strong> <span>(amigável)</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Happy
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio14e')}
+                />
+            </strong> <span>(feliz)</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Hardworking
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio15e')}
+                />
+            </strong> <span>(trabalhador(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Outgoing
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio16e')}
+                />
+            </strong> <span>(extrovertido(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Creative
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio17e')}
+                />
+            </strong> <span>(criativo(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Intelligent
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio18e')}
+                />
+            </strong> <span>(inteligente)</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Ambitious
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio19e')}
+                />
+            </strong> <span>(ambicioso(a))</span>
+        </p>
+    </div>
+
+    <div className={styles["page72__word-column"]}>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Helpful
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio20e')}
+                />
+            </strong> <span>(prestativo(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Talkative
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio21e')}
+                />
+            </strong> <span>(pessoa que fala muito)</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Organized
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio22e')}
+                />
+            </strong> <span>(organizado(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Shy
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio23e')}
+                />
+            </strong> <span>(tímido(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Lazy
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio24e')}
+                />
+            </strong> <span>(preguiçoso(a))</span>
+        </p>
+        <p>
+            <strong className={styles["page72__red-text"]}>
+                Disrespectful
+                <img
+                    src={eng_audio_icon}
+                    alt="English Audio"
+                    className={styles["page72__icon"]}
+                    onClick={() => playAudio('pg72_audio25e')}
+                />
+            </strong> <span>(desrespeitoso(a))</span>
+        </p>
+    </div>
+</div>
+
                     </div>
                 </div>
             </aside>

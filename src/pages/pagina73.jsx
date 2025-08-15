@@ -274,6 +274,10 @@ const pagina73 = () => {
                 <div className={styles["page73__container-questoes"]}>
 
                     <div className={styles["page73__questions2"]}>
+                        <div className={styles["page73__word-bank-header-1"]}>
+                            <p>Use as formas completas do verbo. <br /> 
+                            E as tabelas para formar as frases corretas.</p>
+                        </div>
                         <p className={styles["pg84__a-titulo-question"]}>
                             Negative:
                             <img

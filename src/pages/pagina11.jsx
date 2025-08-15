@@ -51,230 +51,240 @@ const Pagina11 = () => {
 
     return (
         <div>
-    <div className={styles["page11__container"]}>
-        <header className={styles["page11__header"]}>
-            <h1 className={styles["page11__audio-text"]}>
-                Grammar
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page11__icon"]}
-                    onClick={() => playAudio(global_grammar)}
-                />
-            </h1>
-            <h2 className={styles["page11__audio-text"]} style={{ color: "black" }}>
-                Simple Present (Presente Simples)
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page11__icon"]}
-                    onClick={() => playAudio(global_simple_present)}
-                />
-            </h2>
-            <h3 className={styles["page11__audio-text"]}>
-                Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
-                <img
-                    src={ptbr_audio_icon}
-                    alt="Portuguese Audio"
-                    className={styles["page11__icon"]}
-                    onClick={() => playAudio(global_verbo_to_be)}
-                />
-            </h3>
-        </header>
-        <main className={styles["page11__main"]}>
-            <div>
-                <div
-                    className={styles["page11__table-header"]}
-                    onClick={() => playAudio(afirmativaAudio)}
-                    style={{ cursor: 'pointer' }}
-                >
-                    <img
-                        src={white_play_icon}
-                        alt="White icon"
-                        className={styles["page11__icon-left"]}
-                    />
-                    AFFIRMATIVE
-                </div>
-                <table className={styles["page11__table"]}>
-                    <colgroup>
-                        <col className={styles["page11__table-subject"]} />
-                        <col className={styles["page11__table-auxiliary"]} />
-                        <col className={styles["page11__table-adverb"]} />
-                        <col className={styles["page11__table-verb"]} />
-                        <col className={styles["page11__table-complement"]} />
-                        <col className={styles["page11__table-translation"]} />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-                            <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
-                                Auxiliary <br /> Verb
-                            </th>
-                            <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
-                            <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-                            <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
-                                Object <br /> Complement
-                            </th>
-                            <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td
-                                className={styles["page11__table-subject"]}
-                                onClick={() => playAudio(pg11Audio1)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                You and Pedro
-                            </td>
-                            <td
-                                className={styles["page11__table-auxiliary"]}
-                                onClick={() => playAudio(pg11Audio1)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                are
-                            </td>
-                            <td className={styles["page11__table-adverb"]}></td>
-                            <td className={styles["page11__table-verb"]}></td>
-                            <td
-                                className={styles["page11__table-complement"]}
-                                onClick={() => playAudio(pg11Audio1)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                great students
-                            </td>
-                            <td
-                                className={styles["page11__table-translation"]}
-                                onClick={() => playAudio(traducaoAudio1)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                Você e Pedro são ótimos alunos.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td
-                                className={styles["page11__table-subject"]}
-                                onClick={() => playAudio(pg11Audio2)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                You all
-                            </td>
-                            <td
-                                className={styles["page11__table-auxiliary"]}
-                                onClick={() => playAudio(pg11Audio2)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                are
-                            </td>
-                            <td className={styles["page11__table-adverb"]}></td>
-                            <td className={styles["page11__table-verb"]}></td>
-                            <td
-                                className={styles["page11__table-complement"]}
-                                onClick={() => playAudio(pg11Audio2)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                in class B
-                            </td>
-                            <td
-                                className={styles["page11__table-translation"]}
-                                onClick={() => playAudio(traducaoAudio2)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                Vocês todos estão na sala de aula (turma/classe) B.
-                            </td>
-                        </tr>
-                        <tr>
-                            <td
-                                className={styles["page11__table-subject"]}
-                                onClick={() => playAudio(pg11Audio3)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                All of You
-                            </td>
-                            <td
-                                className={styles["page11__table-auxiliary"]}
-                                onClick={() => playAudio(pg11Audio3)}
-                                style={{ cursor: 'pointer', textAlign: 'center' }}
-                            >
-                                are
-                            </td>
-                            <td className={styles["page11__table-adverb"]}></td>
-                            <td className={styles["page11__table-verb"]}></td>
-                            <td
-                                className={styles["page11__table-complement"]}
-                                onClick={() => playAudio(pg11Audio3)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                12 years old
-                            </td>
-                            <td
-                                className={styles["page11__table-translation"]}
-                                onClick={() => playAudio(traducaoAudio3)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                Todos vocês têm 12 anos de idade.
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table className={styles["page11__table"]}>
-    <colgroup>
-        <col className={styles["page11__table-subject"]} />
-        <col className={styles["page11__table-auxiliary"]} />
-        <col className={styles["page11__table-adverb"]} />
-        <col className={styles["page11__table-verb"]} />
-        <col className={styles["page11__table-complement"]} />
-        <col className={styles["page11__table-translation"]} />
-    </colgroup>
-    <thead>
-        <tr>
-            <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: 'pointer' }}>Subject</th>
-            <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: 'pointer' }}>
-                Auxiliary <br /> Verb
-            </th>
-            <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: 'pointer' }}>Adverb</th>
-            <th onClick={() => playAudio(verboAudio)} style={{ cursor: 'pointer' }}>Verb(s)</th>
-            <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: 'pointer' }}>
-                Object <br /> Complement
-            </th>
-            <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: 'pointer' }}>Translation</th>
-        </tr>
-    </thead>
-    <tbody>
-        {inputValues.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-                {row.map((value, colIndex) => (
-                    <td key={colIndex}>
-                        <textarea
-                            id={`input-${rowIndex}-${colIndex}`}
-                            className={styles["page11__table-input"]}
-                            value={value}
-                            rows="1"
-                            onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
-                            style={{
-                                resize: 'none',
-                                overflowWrap: 'break-word',
-                                wordWrap: 'break-word',
-                            }}
+            <div className={styles["page11__container"]}>
+                <header className={styles["page11__header"]}>
+                    <h1 className={styles["page11__audio-text"]}>
+                        Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page11__icon"]}
+                            onClick={() => playAudio(global_grammar)}
                         />
-                    </td>
-                ))}
-            </tr>
-        ))}
-    </tbody>
-</table>
-</div>
-</main>
-<aside className={styles["page11__aside"]}>
-    <div className={styles["page11__aside-notes1"]}>
-        <img className={styles["page11__aside-img-notes"]} src={pg11IconNotes} alt="" />
-        <p>NOTE: Forma simples / Coloquial</p>
-    </div>
-    <div className={styles["page11__aside-notes2"]}>
-        <p>y’all = contração de you + all</p>
-    </div>
-</aside>
+                    </h1>
 
+                    <h2 className={styles["page11__audio-text"]} style={{ color: "black" }}>
+                        Simple Present (Presente Simples)
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page11__icon"]}
+                            onClick={() => playAudio(global_simple_present)}
+                        />
+                    </h2>
+
+                    <h3 className={styles["page11__audio-text"]}>
+                        Verbo To Be (Ser, Estar, Ou Ter Somente Para Idade)
+                        
+                    </h3>
+                </header>
+
+                <main className={styles["page11__main"]}>
+                    <div>
+                        <div
+                            className={styles["page11__table-header"]}
+                            onClick={() => playAudio(afirmativaAudio)}
+                            style={{ cursor: "pointer" }}
+                        >
+                            <img
+                                src={white_play_icon}
+                                alt="White icon"
+                                className={styles["page11__icon-left"]}
+                            />
+                            AFFIRMATIVE
+                        </div>
+
+                        <table className={styles["page11__table"]}>
+                            <colgroup>
+                                <col className={styles["page11__table-subject"]} />
+                                <col className={styles["page11__table-auxiliary"]} />
+                                <col className={styles["page11__table-adverb"]} />
+                                <col className={styles["page11__table-verb"]} />
+                                <col className={styles["page11__table-complement"]} />
+                                <col className={styles["page11__table-translation"]} />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
+                                        Subject
+                                    </th>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
+                                        Auxiliary <br /> Verb
+                                    </th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
+                                        Adverb
+                                    </th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
+                                        Verb(s)
+                                    </th>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
+                                        Object <br /> Complement
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
+                                        Translation
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td className={styles["page11__table-subject"]} style={{ textAlign: "center" }}>
+                                        You and Pedro
+                                    </td>
+                                    <td className={styles["page11__table-auxiliary"]} style={{ textAlign: "center" }}>
+                                        are
+                                    </td>
+                                    <td className={styles["page11__table-adverb"]}></td>
+                                    <td className={styles["page11__table-verb"]}></td>
+                                    <td className={styles["page11__table-complement"]}>
+                                        great students{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(pg11Audio1)}
+                                        />
+                                    </td>
+                                    <td className={styles["page11__table-translation"]}>
+                                        Você e Pedro são ótimos alunos.{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(traducaoAudio1)}
+                                        />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className={styles["page11__table-subject"]} style={{ textAlign: "center" }}>
+                                        You all
+                                    </td>
+                                    <td className={styles["page11__table-auxiliary"]} style={{ textAlign: "center" }}>
+                                        are
+                                    </td>
+                                    <td className={styles["page11__table-adverb"]}></td>
+                                    <td className={styles["page11__table-verb"]}></td>
+                                    <td className={styles["page11__table-complement"]}>
+                                        in class B{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(pg11Audio2)}
+                                        />
+                                    </td>
+                                    <td className={styles["page11__table-translation"]}>
+                                        Vocês todos estão na sala de aula (turma/classe) B.{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(traducaoAudio2)}
+                                        />
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td className={styles["page11__table-subject"]} style={{ textAlign: "center" }}>
+                                        All of You
+                                    </td>
+                                    <td className={styles["page11__table-auxiliary"]} style={{ textAlign: "center" }}>
+                                        are
+                                    </td>
+                                    <td className={styles["page11__table-adverb"]}></td>
+                                    <td className={styles["page11__table-verb"]}></td>
+                                    <td className={styles["page11__table-complement"]}>
+                                        12 years old{" "}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="Play English sentence"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(pg11Audio3)}
+                                        />
+                                    </td>
+                                    <td className={styles["page11__table-translation"]}>
+                                        Todos vocês têm 12 anos de idade.{" "}
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Reproduzir tradução em português"
+                                            className={styles["page11__icon"]}
+                                            onClick={() => playAudio(traducaoAudio3)}
+                                        />
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table className={styles["page11__table"]}>
+                            <colgroup>
+                                <col className={styles["page11__table-subject"]} />
+                                <col className={styles["page11__table-auxiliary"]} />
+                                <col className={styles["page11__table-adverb"]} />
+                                <col className={styles["page11__table-verb"]} />
+                                <col className={styles["page11__table-complement"]} />
+                                <col className={styles["page11__table-translation"]} />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th onClick={() => playAudio(sujeitoAudio)} style={{ cursor: "pointer" }}>
+                                        Subject
+                                    </th>
+                                    <th onClick={() => playAudio(verbo_auxiliarAudio)} style={{ cursor: "pointer" }}>
+                                        Auxiliary <br /> Verb
+                                    </th>
+                                    <th onClick={() => playAudio(adverbioAudio)} style={{ cursor: "pointer" }}>
+                                        Adverb
+                                    </th>
+                                    <th onClick={() => playAudio(verboAudio)} style={{ cursor: "pointer" }}>
+                                        Verb(s)
+                                    </th>
+                                    <th onClick={() => playAudio(objeto_complemento_audio)} style={{ cursor: "pointer" }}>
+                                        Object <br /> Complement
+                                    </th>
+                                    <th onClick={() => playAudio(traducaoAudio)} style={{ cursor: "pointer" }}>
+                                        Translation
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {inputValues.map((row, rowIndex) => (
+                                    <tr key={rowIndex}>
+                                        {row.map((value, colIndex) => (
+                                            <td key={colIndex}>
+                                                <textarea
+                                                    id={`input-${rowIndex}-${colIndex}`}
+                                                    className={styles["page11__table-input"]}
+                                                    value={value}
+                                                    rows="1"
+                                                    onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
+                                                    style={{
+                                                        resize: "none",
+                                                        overflowWrap: "break-word",
+                                                        wordWrap: "break-word",
+                                                    }}
+                                                />
+                                            </td>
+                                        ))}
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+
+                <aside className={styles["page11__aside"]}>
+                    <div className={styles["page11__aside-notes1"]}>
+                        <img
+                            className={styles["page11__aside-img-notes"]}
+                            src={pg11IconNotes}
+                            alt=""
+                        />
+                        <p>NOTE: Forma simples / Coloquial</p>
+                    </div>
+                    <div className={styles["page11__aside-notes2"]}>
+                        <p>y’all = contração de you + all</p>
+                    </div>
+                </aside>
             </div>
         </div>
     );
