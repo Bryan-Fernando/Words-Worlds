@@ -94,41 +94,44 @@ const Pagina98 = () => {
     const [inputValues, setInputValues] = useState(Array(15).fill(''));
     const [results, setResults] = useState(Array(15).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
-
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'reads', 'play', 'drinks', 'rises', 'study', // Bloco 1
         'wake up', 'walks', 'practices', 'arrives', 'go', // Bloco 2
-        ['Does', 'like'], // Bloco 3, linha 1
-        ['Do', 'study'],  // Bloco 3, linha 2
-        ['Does', 'work'], // Bloco 3, linha 3
-        ['Do', 'play'],   // Bloco 3, linha 4
-        ['Do', 'speak'],  // Bloco 3, linha 5
+        ['Does', 'like'],   // Bloco 3, linha 1
+        ['Do', 'study'],    // Bloco 3, linha 2
+        ['Does', 'work'],   // Bloco 3, linha 3
+        ['Do', 'play'],     // Bloco 3, linha 4
+        ['Do', 'speak'],    // Bloco 3, linha 5
     ];
-
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
-            if (Array.isArray(correctAnswers[index])) {
-
-                return Array.isArray(value) && correctAnswers[index].every(
-                    (answer, subIndex) =>
-                        value[subIndex]?.trim() === answer
+            const key = correctAnswers[index];
+            if (Array.isArray(key)) {
+                // Perguntas (duas lacunas): comparar cada parte em lowercase/trim
+                if (!Array.isArray(value)) return false;
+                return key.every((answer, subIndex) =>
+                    (value[subIndex] ?? '').trim().toLowerCase() === answer.toLowerCase()
                 );
             }
-
-            return value?.trim() === correctAnswers[index];
+            // Uma lacuna
+            return (value ?? '').trim().toLowerCase() === key.toLowerCase();
         });
-        setResults(newResults.map((res) => res !== true ? false : true));
+        setResults(newResults);
     };
 
+    const handleReset = () => {
+        setInputValues(Array(15).fill(''));
+        setResults(Array(15).fill(null));
+        // não mexo no isSpeedReduced
+    };
 
     const handleInputChange = (value, index, subIndex = null) => {
         const newValues = [...inputValues];
         if (subIndex !== null) {
-            if (!Array.isArray(newValues[index])) {
-                newValues[index] = ['', ''];
-            }
+            if (!Array.isArray(newValues[index])) newValues[index] = ['', ''];
             newValues[index][subIndex] = value;
         } else {
             newValues[index] = value;
@@ -139,25 +142,36 @@ const Pagina98 = () => {
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
 
-
-
     const toggleSpeedReduction = (audioKey) => {
-        setIsSpeedReduced((prevState) => ({
-            ...prevState,
-            [audioKey]: !prevState[audioKey]
-        }));
+        setIsSpeedReduced((prev) => ({ ...prev, [audioKey]: !prev[audioKey] }));
     };
 
+    // Answers Key (lista renderizada)
+    const answersKeyItems = [
+        "She reads a book every night before bed.",
+        "They play basketball every Saturday morning.",
+        "He drinks a glass of water after every meal.",
+        "The sun rises in the east.",
+        "We study English at school.",
+        "Every morning, I wake up at 6:00 AM.",
+        "My father walks the dog after dinner.",
+        "Sarah practices piano for an hour every day.",
+        "The bus arrives at the station at 7:30 AM.",
+        "They go to the gym three times a week.",
+        "Does she like coffee?",
+        "Do they study French at school?",
+        "Does he work on Saturdays?",
+        "Do the children play every afternoon?",
+        "Do you speak Spanish fluently?",
+    ];
 
     return (
         <div className={styles["page98__container"]}>
@@ -178,6 +192,7 @@ const Pagina98 = () => {
                     />
                 </h1>
             </header>
+
             <main className={styles["page98__main"]}>
                 <div className={styles["page98__tabela-afirmativa-container"]}>
                     <div className={styles["page98__table-header-afirmativa"]}>AFIRMATIVA</div>
@@ -198,7 +213,9 @@ const Pagina98 = () => {
                 <div className={styles["page98__primeiras-questoes"]}>
                     <div className={styles["page98__container-questoes"]}>
                         <div className={styles["page98__questions-1"]}>
-                            <p style={{color: '#0A3282', fontWeight: 'bold'}}>Um clique no auto falante diminui a velocidade do áudio.</p>
+                            <p style={{ color: '#0A3282', fontWeight: 'bold' }}>
+                                Um clique no auto falante diminui a velocidade do áudio.
+                            </p>
                             <p className={styles["page98__a-titulo-question"]}>
                                 Fill in the blanks with the correct form of the verb in the simple present tense:
                                 <img
@@ -215,14 +232,16 @@ const Pagina98 = () => {
                                 />
                             </p>
                             <p className={styles["page98__numero-question"]}>1.</p>
-                            {["She ____ (read) a book every night before bed.",
+
+                            {[
+                                "She ____ (read) a book every night before bed.",
                                 "They ____ (play) basketball every Saturday morning.",
                                 "He ____ (drink) a glass of water after every meal.",
                                 "The sun ____ (rise) in the east.",
                                 "We ____ (study) English at school."
                             ].map((question, index) => {
                                 const parts = question.split('____');
-                                const audioKey = `pg98_audio${index + 2}`; // Define corretamente os áudios
+                                const audioKey = `pg98_audio${index + 2}`;
                                 const audioKeyP = `pg98_audio${index + 2}p`;
 
                                 return (
@@ -272,6 +291,7 @@ const Pagina98 = () => {
                                 );
                             })}
                         </div>
+
                         <div className={styles["page98__container-imagem"]}>
                             <img className={styles["page98__imagem"]} src={pagina98_imagem1} alt="" />
                         </div>
@@ -295,6 +315,7 @@ const Pagina98 = () => {
                                 />
                             </p>
                             <p className={styles["page98__numero-question"]}>2.</p>
+
                             {[
                                 "Every morning, I ____ (wake up) at 6:00 AM.",
                                 "My father ____ (walk) the dog after dinner.",
@@ -303,7 +324,7 @@ const Pagina98 = () => {
                                 "They ____ (go) to the gym three times a week."
                             ].map((question, index) => {
                                 const parts = question.split('____');
-                                const audioKey = `pg98_audio${index + 8}`; // Começa no pg98_audio8
+                                const audioKey = `pg98_audio${index + 8}`;
                                 const audioKeyP = `pg98_audio${index + 8}p`;
 
                                 return (
@@ -353,6 +374,7 @@ const Pagina98 = () => {
                                 );
                             })}
                         </div>
+
                         <div className={styles["page98__container-imagem"]}>
                             <img className={styles["page98__imagem"]} src={pagina98_imagem2} alt="" />
                         </div>
@@ -386,7 +408,7 @@ const Pagina98 = () => {
                             "____ you ____ (speak) Spanish fluently?"
                         ].map((question, index) => {
                             const parts = question.split('____');
-                            const audioKey = `pg98_audio${index + 13}`; // Começa no pg98_audio13
+                            const audioKey = `pg98_audio${index + 13}`;
                             const audioKeyP = `pg98_audio${index + 13}p`;
 
                             return (
@@ -396,6 +418,7 @@ const Pagina98 = () => {
                                             <strong>{String.fromCharCode(97 + index)}.</strong>
                                         </em>
                                     </span>
+
                                     {parts.map((part, fieldIndex) => (
                                         <React.Fragment key={fieldIndex}>
                                             {fieldIndex === 0 && (
@@ -408,6 +431,7 @@ const Pagina98 = () => {
                                                     />
                                                 </span>
                                             )}
+
                                             {fieldIndex > 0 && fieldIndex < parts.length - 1 && (
                                                 <>
                                                     <span>{part}</span>
@@ -421,9 +445,11 @@ const Pagina98 = () => {
                                                     </span>
                                                 </>
                                             )}
+
                                             {fieldIndex === parts.length - 1 && <span>{part}</span>}
                                         </React.Fragment>
                                     ))}
+
                                     <div className={styles["page98__icons-container"]}>
                                         {results[index + 10] !== null && (
                                             <img
@@ -456,10 +482,40 @@ const Pagina98 = () => {
                         })}
                     </div>
                 </div>
+
+                {/* Ações: Check → Reset → Answers Key */}
+                <div className={styles["page98__actions"]}>
+                    <button className={styles["page98__check-button"]} onClick={handleCheckClick}>
+                        <em>Check</em>
+                    </button>
+
+                    <button className={styles["page98__reset--button"]} onClick={handleReset}>
+                        Reset
+                    </button>
+
+                    <button
+                        className={styles["page98__answersKey--button"]}
+                        aria-pressed={showAnswersKey ? "true" : "false"}
+                        onClick={() => setShowAnswersKey((v) => !v)}
+                    >
+                        Answers Key
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div className={styles["page98__answersKey-box"]}>
+                        {answersKeyItems.map((txt, i) => (
+                            <div key={i} className={styles["page98__answersKey-item"]}>
+                                <span className={styles["page98__answersKey-num"]}>{i + 1}.</span>
+                                <span className={styles["page98__answersKey-text"]}>{txt}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
-            <button className={styles["page98__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
         </div>
     );
 };
 
 export default Pagina98;
+

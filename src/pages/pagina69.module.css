@@ -167,13 +167,13 @@
     background-color: #A61C28;
     color: white;
     border: none;
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
+    margin-top: 2rem;
     cursor: pointer;
     border-radius: .5rem;
     font-weight: bold;
     font-size: 2rem;
-    width: 25%;
+    height: 4.7rem;
+    width: 12rem;
 }
 
 .page69__check-button:hover {
@@ -281,4 +281,87 @@
     align-items: center;
     gap: 8px; /* Ajusta o espaçamento entre os ícones */
     background-color: #4E4E4E;
+}
+
+.page69__buttons-container {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.page69__reset-button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.page69__reset-button:hover { background: #821a22; }
+.page69__reset-button:active { transform: translateY(1px); }
+.page69__reset-button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+.page69__answersKey-button {
+  background: #0A3282;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,.3);
+  transition: background-color 0.3s;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 4.7rem;
+  margin-top: 2rem;
+}
+.page69__answersKey-button:hover { background: #072861; }
+.page69__answersKey-button:active { transform: translateY(1px); }
+.page69__answersKey-button:focus-visible {
+  outline: 3px solid #cbd9ff;
+  outline-offset: 3px;
+}
+
+.page69__answersKey-box {
+  margin-top: 2rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 2rem;
+  background: #fffaf9;
+  max-width: 100%;
+  font-size: 2rem;
+}
+.page69__answersKey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+  text-align: left;
+}
+.page69__answersKey-item:last-child { border-bottom: none; }
+.page69__answersKey-num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+.page69__answersKey-text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
 }

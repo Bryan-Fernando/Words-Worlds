@@ -4,7 +4,6 @@ import styles from "./pagina64.module.css";
 
 import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
 import ptbr_audio_icon from "../assets/icons/ptbr_audio_icon.webp";
-import white_play_icon from '../assets/icons/white_play_icon.png';
 
 import imagemUnica from "../assets/images/pagina64_imagem1.webp";
 import segundaImagem from "../assets/images/pagina64_imagem2.webp";
@@ -82,13 +81,13 @@ const Pagina64 = () => {
         <h1 className={styles["page64__title"]}>
           Reading and Comprehension
           <img
-            src={white_play_icon}
+            src={eng_audio_icon}
             alt="English audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1e')}
           />
           <img
-            src={white_play_icon}
+            src={ptbr_audio_icon}
             alt="Portuguese audio"
             className={styles["page64__audio-icon"]}
             onClick={() => playAudio('pg64_audio1p')}

@@ -73,10 +73,24 @@ const Pagina83 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswers, setShowAnswers] = useState(false);
 
     const correctAnswers = [
         'is', 'are', 'am', 'are', 'is',
         'is not', 'is not', 'are not', 'are not', 'is not'
+    ];
+
+    const answersKey = [
+        'The new project is exciting.',
+        'They are from Canada.',
+        'I am a good swimmer.',
+        'My parents are proud of me.',
+        'That car is fast.',
+        'The meeting is not boring.',
+        'She is not at home right now.',
+        'We are not late for the train.',
+        'The kittens are not hungry.',
+        'My phone is not old.'
     ];
 
     const handleCheckClick = () => {
@@ -85,7 +99,11 @@ const Pagina83 = () => {
         ));
     };
 
-
+    const handleReset = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setShowAnswers(false);
+    };
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -96,16 +114,13 @@ const Pagina83 = () => {
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-
             audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
-
 
     const toggleSpeedReduction = (audioKey) => {
         setIsSpeedReduced((prevState) => ({
@@ -135,7 +150,6 @@ const Pagina83 = () => {
                 <h2 className={styles["page83__header--h2"]}>
                     Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
                 </h2>
-
             </header>
 
             <main className={styles["page83__main"]}>
@@ -183,7 +197,6 @@ const Pagina83 = () => {
                             "That car ____ fast"
                         ].map((question, index) => {
                             const audioKey = `pg83_audio${index + 1}`;
-
                             return (
                                 <div key={index} className={styles["page83__question"]}>
                                     <span>
@@ -201,7 +214,6 @@ const Pagina83 = () => {
                                     </div>
                                     <span><em>{question.split("____")[1]}</em></span>
                                     <div className={styles["page83__icons--container"]}>
-                                        {/* Ícones de Correção */}
                                         {results[index] !== null && (
                                             <img
                                                 src={results[index] ? correct_icon : wrong_icon}
@@ -209,23 +221,18 @@ const Pagina83 = () => {
                                                 className={styles["page83__checkmark--image"]}
                                             />
                                         )}
-
-                                        {/* Ícone de Áudio */}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page83__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
-
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
                                             className={styles["page83__additional--icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
-
-                                        {/* Ícone de Volume Reduzido */}
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
@@ -237,7 +244,9 @@ const Pagina83 = () => {
                             );
                         })}
                     </div>
-                    <div className={styles["page83__container--imagem"]}> <img className={styles["page83__image"]} src={pagina83_imagem1} alt="" /></div>
+                    <div className={styles["page83__container--imagem"]}>
+                        <img className={styles["page83__image"]} src={pagina83_imagem1} alt="" />
+                    </div>
                 </div>
 
                 <div className={styles["page83__table--negativa--container"]}>
@@ -284,7 +293,6 @@ const Pagina83 = () => {
                             "My phone ____ old."
                         ].map((question, index) => {
                             const audioKey = `pg83_audio${index + 6}`;
-
                             return (
                                 <div key={index + 5} className={styles["page83__question"]}>
                                     <span>
@@ -302,7 +310,6 @@ const Pagina83 = () => {
                                     </div>
                                     <span><em>{question.split("____")[1]}</em></span>
                                     <div className={styles["page83__icons--container"]}>
-                                        {/* Ícones de Correção */}
                                         {results[index + 5] !== null && (
                                             <img
                                                 src={results[index + 5] ? correct_icon : wrong_icon}
@@ -310,23 +317,18 @@ const Pagina83 = () => {
                                                 className={styles["page83__checkmark--image"]}
                                             />
                                         )}
-
-                                        {/* Ícone de Áudio */}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page83__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
-
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
                                             className={styles["page83__additional--icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
-
-                                        {/* Ícone de Volume Reduzido */}
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
@@ -338,11 +340,34 @@ const Pagina83 = () => {
                             );
                         })}
                     </div>
-                    <div className={styles["page83__container--imagem"]}><img className={styles["page83__image"]} src={pagina83_imagem2} alt="" /></div>
+                    <div className={styles["page83__container--imagem"]}>
+                        <img className={styles["page83__image"]} src={pagina83_imagem2} alt="" />
+                    </div>
                 </div>
 
-                <button className={styles["page83__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+                <div className={styles["page83__actions"]}>
+                    
+                    <button className={styles["page83__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+                    <button className={styles["page83__reset--button"]} onClick={handleReset}>Reset</button>
+                    <button
+                        className={styles["page83__answersKey--button"]}
+                        onClick={() => setShowAnswers((s) => !s)}
+                        aria-pressed={showAnswers}
+                    >
+                        Answers Key
+                    </button>
+                </div>
 
+                {showAnswers && (
+                    <div className={styles["page83__answersKey-box"]}>
+                        {answersKey.map((txt, i) => (
+                            <div key={i} className={styles["page83__answersKey-item"]}>
+                                <span className={styles["page83__answersKey-num"]}>{i + 1}.</span>
+                                <span className={styles["page83__answersKey-text"]}>{txt}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );

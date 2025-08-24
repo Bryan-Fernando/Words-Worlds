@@ -37,6 +37,7 @@ const Pagina92 = () => {
     const [inputValues, setInputValues] = useState(Array(9).fill(''));
     const [results, setResults] = useState(Array(9).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         "What is your name?",
@@ -76,9 +77,17 @@ const Pagina92 = () => {
     };
 
     const handleCheckClick = () => {
-        setResults(inputValues.map((value, index) =>
-            value.trim() === correctAnswers[index]
-        ));
+        setResults(
+            inputValues.map((value, index) =>
+                value.trim().toLowerCase() === correctAnswers[index].trim().toLowerCase()
+            )
+        );
+    };
+
+    const handleResetClick = () => {
+        setInputValues(Array(9).fill(''));
+        setResults(Array(9).fill(null));
+        setShowAnswersKey(false);
     };
 
     const handleInputChange = (value, index) => {
@@ -105,8 +114,6 @@ const Pagina92 = () => {
         }));
     };
 
-
-
     return (
         <div className={styles["page92__container"]}>
             <header className={styles["page92__header"]}>
@@ -126,6 +133,7 @@ const Pagina92 = () => {
                     />
                 </h1>
             </header>
+
             <main className={styles["page92__main"]}>
                 <div className={styles["page92__table-interrogative-container"]}>
                     <div className={styles["page92__table-header-interrogative"]}>INTERROGATIVA</div>
@@ -142,6 +150,7 @@ const Pagina92 = () => {
                         </thead>
                     </table>
                 </div>
+
                 <div className={styles["page92__flex-container"]}>
                     <div className={styles["page92__questions-container"]}>
                         <p className={styles["page92__questions-title"]}>
@@ -177,7 +186,6 @@ const Pagina92 = () => {
                             return (
                                 <div key={index} className={styles["page92__question-item"]}>
                                     <div className={styles["page92__input-container"]}>
-
                                         <div className={styles["page92__icons-group"]}>
                                             <img
                                                 src={eng_audio_icon}
@@ -199,7 +207,6 @@ const Pagina92 = () => {
                                             />
                                         </div>
 
-
                                         <input
                                             type="text"
                                             value={inputValues[index]}
@@ -220,9 +227,36 @@ const Pagina92 = () => {
                             );
                         })}
 
-                        <button className={styles["page92__button--check"]} onClick={handleCheckClick}>
-                            <em>Check</em>
-                        </button>
+                        {/* AÇÕES: Check → Reset → Answers Key */}
+                        <div className={styles["page92__actions"]}>
+                            <button className={styles["page92__button--check"]} onClick={handleCheckClick}>
+                                <em>Check</em>
+                            </button>
+
+                            <button className={styles["page92__reset--button"]} onClick={handleResetClick}>
+                                Reset
+                            </button>
+
+                            <button
+                                className={styles["page92__answersKey--button"]}
+                                aria-pressed={showAnswersKey}
+                                onClick={() => setShowAnswersKey((v) => !v)}
+                            >
+                                Answers Key
+                            </button>
+                        </div>
+
+                        {/* Answers Key */}
+                        {showAnswersKey && (
+                            <div className={styles["page92__answersKey-box"]}>
+                                {correctAnswers.map((ans, i) => (
+                                    <div key={i} className={styles["page92__answersKey-item"]}>
+                                        <span className={styles["page92__answersKey-num"]}>{i + 1}.</span>
+                                        <span className={styles["page92__answersKey-text"]}>{ans}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     <div className={styles["page92__image-container"]}>
@@ -265,3 +299,4 @@ const Pagina92 = () => {
 };
 
 export default Pagina92;
+

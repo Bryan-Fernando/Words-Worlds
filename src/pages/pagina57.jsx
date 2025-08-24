@@ -304,7 +304,7 @@ const Pagina57 = () => {
                         <div className={styles["page57__spelling-content"]}>
                             <div>
                                 <h2 className={styles["page57__title--spelling"]}>
-                                    Spelling names / Soletrando nomes
+                                    Spelling names / Soletrando (Escrevendo) nomes
                                     <img
                                         src={eng_audio_icon}
                                         alt="English Audio"

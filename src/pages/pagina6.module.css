@@ -177,9 +177,10 @@
 }
 
 .page6__aside-img {
-    height: calc(10px + 0.8vw);
-    width: 2rem;
+    height: calc(2rem + 0.8vw);
+    width: 4rem;
     padding-right: 0.5rem;
+    cursor: pointer;
 }
 
 .page6__aside-notes2 {

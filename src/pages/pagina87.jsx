@@ -43,20 +43,33 @@ const audioMap = {
 };
 
 const Pagina87 = () => {
-    const [inputValues, setInputValues] = useState(Array(6).fill(''));
-    const [results, setResults] = useState(Array(6).fill(null));
+    const [inputValues, setInputValues] = useState(Array(5).fill(''));
+    const [results, setResults] = useState(Array(5).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = ['The', 'The', 'The', 'The', 'The'];
 
+    const answersKeyItems = [
+        'The alarm clock is set for 6:00 AM every day.',
+        'The cat is on the roof.',
+        'The sky is blue today.',
+        'The laptop is on my desk.',
+        'The dog is sleeping under the tree.'
+    ];
+
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) => {
-
             const userAnswer = (value && value.trim()) ? value.trim() : '';
             const correctAnswer = correctAnswers[index] ? correctAnswers[index].trim() : '';
-
             return userAnswer === correctAnswer;
         }));
+    };
+
+    const handleReset = () => {
+        setInputValues(Array(5).fill(''));
+        setResults(Array(5).fill(null));
+        setShowAnswersKey(false);
     };
 
     const handleInputChange = (value, index) => {
@@ -128,7 +141,6 @@ const Pagina87 = () => {
                 </div>
 
                 <div className={styles["page87__questions--container"]}>
-
                     <div className={styles["page87__questions--list"]}>
                         {[
                             " ____ alarm clock is set for 6:00 AM every day.",
@@ -138,12 +150,13 @@ const Pagina87 = () => {
                             " ____ dog is sleeping under the tree."
                         ].map((question, index) => {
                             const audioKey = `pg87_audio${index + 1}`;
+                            const [before, after] = question.split('____');
 
                             return (
                                 <div key={index} className={styles["page87__question--item"]}>
                                     <span>
                                         <em>
-                                            <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
+                                            <strong>{String.fromCharCode(97 + index)}.</strong> {before}
                                         </em>
                                     </span>
                                     <div className={styles["page87__input--container"]}>
@@ -154,7 +167,7 @@ const Pagina87 = () => {
                                             className={styles["page87__input"]}
                                         />
                                     </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
+                                    <span><em>{after}</em></span>
                                     <div className={styles["page87__icons--container"]}>
                                         {results[index] !== null && (
                                             <img
@@ -200,13 +213,33 @@ const Pagina87 = () => {
                     </div>
                 </div>
 
-                <button className={styles["page87__button--check"]} onClick={handleCheckClick}>
-                    <em>Check</em>
-                </button>
+                {/* Ações: ordem Check → Reset → Answers Key */}
+                <div className={styles["page87__actions"]}>
+                    <button className={styles["page87__button--check"]} onClick={handleCheckClick}><em>Check</em></button>
+                    <button className={styles["page87__reset--button"]} onClick={handleReset}><em>Reset</em></button>
+                    <button
+                        className={styles["page87__answersKey--button"]}
+                        aria-pressed={showAnswersKey ? "true" : "false"}
+                        onClick={() => setShowAnswersKey(prev => !prev)}
+                    >
+                        <em>Answers Key</em>
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div className={styles["page87__answersKey-box"]}>
+                        {answersKeyItems.map((ans, i) => (
+                            <div key={i} className={styles["page87__answersKey-item"]}>
+                                <span className={styles["page87__answersKey-num"]}>{String.fromCharCode(97 + i)}.</span>
+                                <span className={styles["page87__answersKey-text"]}>{ans}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
-
     );
 };
 
 export default Pagina87;
+

@@ -21,6 +21,7 @@
     text-align: left;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #0A3282;
 }
 
 .page72__main {
@@ -353,6 +354,97 @@
 .page72__icon:hover {
   transform: scale(1.1);
 }
+
+/* Botões (container opcional, caso tenha usado) */
+.page72__buttons-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Reset */
+.page72__reset--button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease-in-out;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.page72__reset--button:hover { background: #821a22; }
+.page72__reset--button:active { transform: translateY(1px); }
+.page72__reset--button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+/* Answers Key (botão) */
+.page72__answersKey--button {
+  background: #0A3282;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.25s ease-in-out;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem; /* conforme pedido */
+  height: 4.7rem;
+}
+.page72__answersKey--button:hover { background: #072763; }
+.page72__answersKey--button:active { transform: translateY(1px); }
+.page72__answersKey--button:focus-visible {
+  outline: 3px solid #bfd7ff;
+  outline-offset: 3px;
+}
+
+/* Answers Key (caixa e itens) */
+
+.page72__answersKey-box {
+  margin-top: 2rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 2rem;
+  background: #fffaf9;
+  max-width: 100%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page72__answersKey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+  text-align: left;
+}
+.page72__answersKey-item:last-child { border-bottom: none; }
+
+.page72__answersKey-num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.page72__answersKey-text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
+  text-align: left;
+}
+
 
 @keyframes pulse {
     0% {

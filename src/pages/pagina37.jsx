@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import styles from './pagina37.module.css';
 
@@ -52,9 +52,13 @@ const audios = {
 
 function pg37() {
     const location = useLocation();
-    const { respostasUsuario, resultado } = location.state || {};
+    const navigate = useNavigate();
+
+    const { respostasUsuario = {}, resultado = [] } = location.state || {};
+
     const [isSpeedReduced, setIsSpeedReduced] = useState(false);
     const [playingAudio, setPlayingAudio] = useState(null);
+    const [showKey, setShowKey] = useState(false);
 
     const respostasCorretas = [
         'There is a bird in the nest',
@@ -72,16 +76,11 @@ function pg37() {
             playingAudio.pause();
             playingAudio.currentTime = 0;
         }
-
         const audioToPlay = audios[language][index];
-
         setTimeout(() => {
             audioToPlay.play();
             setPlayingAudio(audioToPlay);
-
-            audioToPlay.onended = () => {
-                setPlayingAudio(null);
-            };
+            audioToPlay.onended = () => setPlayingAudio(null);
         }, 700);
     };
 
@@ -94,7 +93,7 @@ function pg37() {
         setIsSpeedReduced(!isSpeedReduced);
     };
 
-    const correctCount = resultado.filter(Boolean).length;
+    const correctCount = (resultado || []).filter(Boolean).length;
     const totalCount = respostasCorretas.length;
     const percentage = (correctCount / totalCount) * 100;
 
@@ -103,12 +102,13 @@ function pg37() {
             <header className={styles["page37__header"]}>
                 <h1 className={styles["page37__title"]}>Answers</h1>
                 <h2 className={styles["page37__instruction"]}>
-                    Para reduzir a velocidade da reprodução para 0.75x, clique no{' '}
+                    Para reduzir a velocidade da reprodução para 0.75x, clique no{" "}
                     <span className={styles["page37__speed--container"]}>
                         <img
                             src={slow_audio_icon}
                             className={styles["page37__volumeng--audio--icon"]}
                             alt="Speed icon"
+                            onClick={reduzirVelocidade}
                         />
                     </span>
                 </h2>
@@ -116,47 +116,87 @@ function pg37() {
 
             <main className={styles["page37__main"]}>
                 <div className={styles["page37__list--respostas"]}>
-                    {respostasCorretas.map((respostaCorreta, index) => (
-                        <div key={index} className={styles["page37__resposta--item"]}>
-                            <input
-                                type="text"
-                                className={styles["page37__input"]}
-                                value={respostasUsuario[index]?.join(' ') || ''}
-                                readOnly
-                            />
-                            <img
-                                src={resultado[index] ? correct_icon : wrong_icon}
-                                alt={resultado[index] ? 'Correct' : 'Incorrect'}
-                                className={`${styles["page37__status"]} ${resultado[index] ? styles["page37__status--correto"] : styles["page37__status--errado"]}`}
-                            />
-                            {resultado[index] && (
-                                <>
-                                    <img
-                                        className={styles["page37__audio--icon"]}
-                                        src={eng_audio_icon}
-                                        alt="Play English Audio"
-                                        onClick={() => playAudio(index, 'english')}
-                                    />
-                                    <img
-                                        className={styles["page37__audio--icon"]}
-                                        src={portugueseng_audio_icon}
-                                        alt="Play Portuguese Audio"
-                                        onClick={() => playAudio(index, 'portuguese')}
-                                    />
-                                    <img
-                                        className={styles["page37__volumeng--audio--icon"]}
-                                        src={slow_audio_icon}
-                                        alt="Toggle Speed"
-                                        onClick={reduzirVelocidade}
-                                    />
-                                </>
-                            )}
-                        </div>
-                    ))}
+                    {respostasCorretas.map((_, index) => {
+                        const userAnswer = respostasUsuario[index]?.join(' ') || '';
+                        const isCorrect = !!resultado[index];
+
+                        return (
+                            <div key={index} className={styles["page37__resposta--item"]}>
+                                <input
+                                    type="text"
+                                    className={styles["page37__input"]}
+                                    value={userAnswer}
+                                    readOnly
+                                />
+                                <img
+                                    src={isCorrect ? correct_icon : wrong_icon}
+                                    alt={isCorrect ? 'Correct' : 'Incorrect'}
+                                    className={`${styles["page37__status"]} ${isCorrect ? styles["page37__status--correto"] : styles["page37__status--errado"]}`}
+                                />
+                                {isCorrect && (
+                                    <>
+                                        <img
+                                            className={styles["page37__audio--icon"]}
+                                            src={eng_audio_icon}
+                                            alt="Play English Audio"
+                                            onClick={() => playAudio(index, 'english')}
+                                        />
+                                        <img
+                                            className={styles["page37__audio--icon"]}
+                                            src={portugueseng_audio_icon}
+                                            alt="Play Portuguese Audio"
+                                            onClick={() => playAudio(index, 'portuguese')}
+                                        />
+                                        <img
+                                            className={styles["page37__volumeng--audio--icon"]}
+                                            src={slow_audio_icon}
+                                            alt="Toggle Speed"
+                                            onClick={reduzirVelocidade}
+                                        />
+                                    </>
+                                )}
+                            </div>
+                        );
+                    })}
                 </div>
+
                 <div className={styles["page37__percentual--acertos"]}>
                     <span>{Math.round(percentage)}% Out of 100</span>
                 </div>
+
+                <div className={styles["page37__footer--actions"]}>
+                    <button
+                        className={styles["page37__btn--answersKey"]}
+                        onClick={() => setShowKey((v) => !v)}
+                        aria-expanded={showKey}
+                        aria-controls="answers-key-box"
+                    >
+                        Answers Key
+                    </button>
+
+                    <button
+                        className={styles["page37__btnTentarNovamente"]}
+                        onClick={() => navigate('/pagina36')}
+                    >
+                        Tentar novamente
+                    </button>
+                </div>
+
+                {showKey && (
+                    <div
+                        id="answers-key-box"
+                        className={styles["page37__answersKey--box"]}
+                        role="region"
+                        aria-label="Gabarito completo"
+                    >
+                        {respostasCorretas.map((texto, i) => (
+                            <div key={i} className={styles["page37__answersKey--item"]}>
+                                <span className={styles["page37__answersKey--num"]}>{i + 1}.</span>
+                                <span className={styles["page37__answersKey--text"]}>{texto}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );

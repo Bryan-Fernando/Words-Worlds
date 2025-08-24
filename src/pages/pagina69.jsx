@@ -40,6 +40,7 @@ const pagina69 = () => {
     const [palavrasClicadas, setPalavrasClicadas] = useState({});
     const [resultados, setResultados] = useState([]);
     const [velocidadeAudio, setVelocidadeAudio] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const respostasCorretas = [
         ['Is', 'he', 'at home'],
@@ -68,8 +69,6 @@ const pagina69 = () => {
         pg69_audio9e, pg69_audio9p,
         pg69_audio10e, pg69_audio10p,
     };
-
-
 
     const shuffleArray = (array) => {
         const shuffled = [...array];
@@ -129,17 +128,26 @@ const pagina69 = () => {
     const verificarRespostas = () => {
         const novosResultados = respostasCorretas.map((resposta, index) => {
             const respostaUsuario = respostas[index] || [];
-
             const respostaUsuarioNormalizada = respostaUsuario.map(word => word.trim().toLowerCase());
             const respostaCorretaNormalizada = resposta.map(word => word.trim().toLowerCase());
-
             return JSON.stringify(respostaCorretaNormalizada) === JSON.stringify(respostaUsuarioNormalizada);
         });
-
         setResultados(novosResultados);
     };
 
-const playAudio = (audioKey, speed = 1.0) => {
+    const handleReset = () => {
+        setRespostas({});
+        setPalavrasClicadas({});
+        setResultados([]);
+        const novasFrasesEmbaralhadas = {};
+        respostasCorretas.forEach((frase, fraseIndex) => {
+            novasFrasesEmbaralhadas[fraseIndex] = shuffleArray(frase);
+        });
+        setFrasesEmbaralhadas(novasFrasesEmbaralhadas);
+        setShowAnswersKey(false);
+    };
+
+    const playAudio = (audioKey, speed = 1.0) => {
         const audioSrc = audioMap[audioKey];
         if (audioSrc) {
             const audio = new Audio(audioSrc);
@@ -149,7 +157,6 @@ const playAudio = (audioKey, speed = 1.0) => {
             console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
         }
     };
-
 
     return (
         <div className={styles["page69__container"]}>
@@ -174,7 +181,7 @@ const playAudio = (audioKey, speed = 1.0) => {
                 <p><span className={styles["page69__text--red"]}>Click</span> on the words to form the correct sentence.</p>
                 <p><span className={styles["page69__text--red"]}>Clique</span> nas palavras para formar a frase correta.</p>
             </header>
-    
+
             <div className={styles["page69__table-interrogative-container"]}>
                 <div className={styles["page69__table-header-interrogative"]}>INTERROGATIVA</div>
                 <table className={styles["page69__styled-table-interrogative"]}>
@@ -190,7 +197,7 @@ const playAudio = (audioKey, speed = 1.0) => {
                     </thead>
                 </table>
             </div>
-    
+
             <div className={styles["page69__main-aside-container"]}>
                 <main className={styles["page69__main-container"]}>
                     <div className={styles["page69__phrases"]}>
@@ -208,7 +215,7 @@ const playAudio = (audioKey, speed = 1.0) => {
                                             </div>
                                         ))}
                                 </div>
-    
+
                                 <div className={styles["page69__input-phrase"]}>
                                     {respostas[fraseIndex] &&
                                         respostas[fraseIndex].map((palavra, index) => (
@@ -222,54 +229,64 @@ const playAudio = (audioKey, speed = 1.0) => {
                                                     : palavra}
                                             </div>
                                         ))}
-    
+
                                     {resultados.length > 0 && (
-                                        <>
-                                            {resultados[fraseIndex] ? (
-                                                <>
-                                                    {/* Ícone de Correto */}
-                                                    <img
-                                                        src={correct_icon}
-                                                        alt="Correto"
-                                                        className={styles["page69__icon--correct"]}
-                                                    />
-    
-                                                    {/* Ícone de Áudio Inglês */}
-                                                    <img
-                                                        src={eng_audio_icon}
-                                                        alt="Play English Audio"
-                                                        className={styles["icon--english"]}
-                                                        onClick={() => playAudio(`pg69_audio${fraseIndex + 1}e`)}
-                                                        style={{ cursor: "pointer" }}
-                                                    />
-    
-                                                    {/* Ícone de Áudio Português */}
-                                                    <img
-                                                        src={ptbr_audio_icon}
-                                                        alt="Play Portuguese Audio"
-                                                        className={styles["icon--portuguese"]}
-                                                        onClick={() => playAudio(`pg69_audio${fraseIndex + 1}p`)}
-                                                        style={{ cursor: "pointer" }}
-                                                    />
-                                                </>
-                                            ) : (
-                                                <img
-                                                    src={wrong_icon}
-                                                    alt="Errado"
-                                                    className={styles["page69__icon--wrong"]}
-                                                />
-                                            )}
-                                        </>
+                                        resultados[fraseIndex] ? (
+                                            <img
+                                                src={correct_icon}
+                                                alt="Correto"
+                                                className={styles["page69__icon--correct"]}
+                                            />
+                                        ) : (
+                                            <img
+                                                src={wrong_icon}
+                                                alt="Errado"
+                                                className={styles["page69__icon--wrong"]}
+                                            />
+                                        )
                                     )}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <button className={styles["page69__check-button"]} onClick={verificarRespostas}>
-                        Check
-                    </button>
+
+                    <div className={styles["page69__buttons-container"]}>
+                        <button className={styles["page69__check-button"]} onClick={verificarRespostas}>
+                            Check
+                        </button>
+                        <button className={styles["page69__reset-button"]} onClick={handleReset}>
+                            Reset
+                        </button>
+                        <button
+                            className={styles["page69__answersKey-button"]}
+                            onClick={() => setShowAnswersKey(v => !v)}
+                            aria-expanded={showAnswersKey}
+                            aria-controls="answers-key-box"
+                        >
+                            Answers Key
+                        </button>
+                    </div>
+
+                    {showAnswersKey && (
+                        <div
+                            id="answers-key-box"
+                            className={styles["page69__answersKey-box"]}
+                            role="region"
+                            aria-label="Gabarito completo"
+                        >
+                            {respostasCorretas.map((arr, i) => {
+                                const texto = `${arr.join(' ')}?`;
+                                return (
+                                    <div key={i} className={styles["page69__answersKey-item"]}>
+                                        <span className={styles["page69__answersKey-num"]}>{i + 1}.</span>
+                                        <span className={styles["page69__answersKey-text"]}>{texto}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </main>
-    
+
                 <aside className={styles["page69__aside-container"]}>
                     <div className={styles["page69__images-container"]}>
                         <img src={pagina69_imagem1} alt="Imagem 1" className={styles["page69__image"]} />
@@ -279,7 +296,7 @@ const playAudio = (audioKey, speed = 1.0) => {
             </div>
         </div>
     );
-    
 };
 
 export default pagina69;
+

@@ -38,6 +38,7 @@ const Pagina40 = () => {
     const [pulsingAudioPortugueseIndex, setPulsingAudioPortugueseIndex] = useState(null);
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]);
     const [audioPlaying, setAudioPlaying] = useState(null);
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctSentences = [
         "I am studying for my exam",
@@ -76,11 +77,9 @@ const Pagina40 = () => {
             audioPlaying.pause();
             audioPlaying.currentTime = 0;
         }
-
         const newAudio = new Audio(audioFile);
         setAudioPlaying(newAudio);
         newAudio.play();
-
         newAudio.onended = () => {
             setAudioPlaying(null);
         };
@@ -91,13 +90,11 @@ const Pagina40 = () => {
         const audioFile = isPortuguese ? portugueseAudioFiles[index] : audioFiles[index];
         const audio = new Audio(audioFile);
         audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1;
-
         if (isPortuguese) {
             setPulsingAudioPortugueseIndex(index);
         } else {
             setPulsingAudioEnglishIndex(index);
         }
-
         audio.play();
         audio.onended = () => {
             if (isPortuguese) {
@@ -124,7 +121,6 @@ const Pagina40 = () => {
 
     const handleSentenceClick = (sentence) => {
         const indexInInputs = inputValues.indexOf(sentence);
-
         if (indexInInputs !== -1) {
             const newValues = [...inputValues];
             newValues[indexInInputs] = '';
@@ -136,6 +132,20 @@ const Pagina40 = () => {
                 newValues[emptyIndex] = sentence;
                 setInputValues(newValues);
             }
+        }
+    };
+
+    const handleReset = () => {
+        setInputValues(['', '', '', '', '']);
+        setResults([null, null, null, null, null]);
+        setPulsingAudioEnglishIndex(null);
+        setPulsingAudioPortugueseIndex(null);
+        setIsSpeedReduced([false, false, false, false, false]);
+        setShowAnswersKey(false);
+        if (audioPlaying) {
+            audioPlaying.pause();
+            audioPlaying.currentTime = 0;
+            setAudioPlaying(null);
         }
     };
 
@@ -189,6 +199,7 @@ const Pagina40 = () => {
                 </p>
                 <p className={styles["page40__paragraph"]}>Clique ou digite</p>
             </header>
+
             <main className={styles["page40__main"]}>
                 <div className={styles["page40__images--container"]}>
                     {[pagina40_imagem1, pagina40_imagem2, pagina40_imagem3, pagina40_imagem4, pagina40_imagem5].map((image, index) => (
@@ -217,6 +228,7 @@ const Pagina40 = () => {
                         </div>
                     ))}
                 </div>
+
                 <div className={styles["page40__sentences--container"]}>
                     <p><strong>Sentences:</strong></p>
                     {displayedSentences.map((sentence, index) => (
@@ -245,12 +257,41 @@ const Pagina40 = () => {
                         </div>
                     ))}
                 </div>
-                <button className={styles["page40__check--button"]} onClick={handleCheckClick}>
-                    Check
-                </button>
+
+                <div className={styles["page40__buttons--container"]}>
+                    <button className={styles["page40__check--button"]} onClick={handleCheckClick}>
+                        Check
+                    </button>
+                    <button className={styles["page40__reset--button"]} onClick={handleReset}>
+                        Reset
+                    </button>
+                    <button
+                        className={styles["page40__answersKey--button"]}
+                        onClick={() => setShowAnswersKey((prev) => !prev)}
+                        aria-expanded={showAnswersKey}
+                        aria-controls="answers-key-box"
+                    >
+                        Answers Key
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div
+                        id="answers-key-box"
+                        className={styles["page40__answersKey--box"]}
+                        role="region"
+                        aria-label="Gabarito completo"
+                    >
+                        {correctSentences.map((answer, i) => (
+                            <div key={i} className={styles["page40__answersKey--item"]}>
+                                <span className={styles["page40__answersKey--num"]}>{i + 1}.</span>
+                                <span className={styles["page40__answersKey--text"]}>{answer}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
-
     );
 };
 

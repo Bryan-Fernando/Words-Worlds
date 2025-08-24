@@ -101,14 +101,12 @@ const pagina72 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'am', 'is', 'is', 'are', 'is',
         'is not', 'are not', 'is not', 'am not', 'are not'
     ];
-
-    const [showCorrectAnswers, setShowCorrectAnswers] = useState(Array(10).fill(null));
-
 
     const questions = [
         { text: "I ____ creative.", fullAnswer: "I am creative." },
@@ -127,16 +125,15 @@ const pagina72 = () => {
         const newResults = inputValues.map((value, index) =>
             value.toLowerCase() === correctAnswers[index]
         );
-
-        const newShowCorrectAnswers = newResults.map((isCorrect, index) =>
-            isCorrect ? null : questions[index].fullAnswer
-        );
-
         setResults(newResults);
-        setShowCorrectAnswers(newShowCorrectAnswers);
     };
 
-
+    const handleReset = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setIsSpeedReduced({});
+        setShowAnswersKey(false);
+    };
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -147,17 +144,11 @@ const pagina72 = () => {
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
+            audio.play().catch(() => {});
         }
     };
-
-
 
     const toggleSpeedReduction = (audioKey) => {
         setIsSpeedReduced((prevState) => ({
@@ -199,14 +190,14 @@ const pagina72 = () => {
                         onClick={() => playAudio("global_exercise_fill_blankp")}
                     />
                 </p>
-                <p className={styles["page72__p"]}>Use as formas completas do verbo.
-                    E as tabelas para formar as frases corretas.</p>
             </header>
 
             <main className={styles["page72__main"]}>
                 <div className={styles["page72__container-questoes"]}>
                     <div className={styles["page72__questions1"]}>
                         <p className={styles["pg84__a-titulo-question"]}>
+                            <p className={styles["page72__p"]}>Use as formas completas do verbo.
+                                E as tabelas caso seja necessário, para formar as frases corretas.</p>
                             Affirmative form:
                             <img
                                 src={eng_audio_icon}
@@ -231,7 +222,6 @@ const pagina72 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg72_audio${index + 2}`;
-
                             return (
                                 <div key={index} className={styles["page72__question"]}>
                                     <span>
@@ -274,15 +264,6 @@ const pagina72 = () => {
                                             className={`${styles["page72__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page72__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
-                                        <div className={styles["page72__correct-answer-container"]}>
-                                            {showCorrectAnswers[index] && (
-                                                <div className={styles["page72__correct-answer-wrapper"]}>
-                                                    <span className={styles["page72__correct-answer"]}>
-                                                        <strong>Answer:</strong> {showCorrectAnswers[index]}
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
                                     </div>
                                 </div>
                             );
@@ -290,7 +271,6 @@ const pagina72 = () => {
                     </div>
 
                     <div className={styles["page72__notes-container"]}>
-
                         <div className={styles["page72__word-bank-header-1"]}>
                             <p>Use as tabelas para formar as frases corretas.</p>
                         </div>
@@ -312,9 +292,10 @@ const pagina72 = () => {
                 </div>
 
                 <div className={styles["page72__container-questoes"]}>
-
                     <div className={styles["page72__questions2"]}>
                         <p className={styles["pg84__a-titulo-question"]}>
+                            <p className={styles["page72__p"]}>Use as formas completas do verbo.
+                                E as tabelas caso seja necessário, para formar as frases corretas.</p>
                             Negative form:
                             <img
                                 src={eng_audio_icon}
@@ -339,7 +320,6 @@ const pagina72 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg72_audio${index + 8}`;
-
                             return (
                                 <div key={index + 5} className={styles["page72__question"]}>
                                     <span>
@@ -355,11 +335,7 @@ const pagina72 = () => {
                                             className={styles["page72__input-box"]}
                                         />
                                     </div>
-                                    <span>
-                                        <em>
-                                            {parts[1]}
-                                        </em>
-                                    </span>
+                                    <span><em>{parts[1]}</em></span>
                                     <div className={styles["page72__icons-container"]}>
                                         {results[index + 5] !== null && (
                                             <img
@@ -386,18 +362,12 @@ const pagina72 = () => {
                                             className={`${styles["page72__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page72__pulsing"] : ''}`}
                                             onClick={() => toggleSpeedReduction(audioKey)}
                                         />
-                                        <div className={styles["page72__correct-answer-container"]} >
-                                            {showCorrectAnswers[index] && (
-                                                <span className={styles["page72__correct-answer"]} style={{ fontSize: '1.5rem' }}>
-                                                    <strong style={{ fontSize: '1.5rem' }}>Answer:</strong> {showCorrectAnswers[index]}
-                                                </span>
-                                            )}
-                                        </div>
                                     </div>
                                 </div>
                             );
                         })}
                     </div>
+
                     <div className={styles["page72__tabela-negativa-container"]}>
                         <div className={styles["page72__table-header-negativa"]}>NEGATIVA</div>
                         <table className={styles["page72__styled-table-negativa"]}>
@@ -406,7 +376,7 @@ const pagina72 = () => {
                                     <th>Introdução</th>
                                     <th>Sujeito</th>
                                     <th>Verbo <br /> Auxiliar</th>
-                                    <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                                    <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
                                     <th>Verbo(s)</th>
                                     <th>Objeto <br /> Complemento</th>
                                 </tr>
@@ -416,10 +386,38 @@ const pagina72 = () => {
                 </div>
             </main>
 
-            <button className={styles["page72__check-button"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
+            <div className={styles["page72__buttons-container"]}>
+                <button className={styles["page72__check-button"]} onClick={handleCheckClick}>
+                    <em>Check</em>
+                </button>
+                <button className={styles["page72__reset--button"]} onClick={handleReset}>
+                    Reset
+                </button>
+                <button
+                    className={styles["page72__answersKey--button"]}
+                    onClick={() => setShowAnswersKey(v => !v)}
+                    aria-expanded={showAnswersKey}
+                    aria-controls="answers-key-box-72"
+                >
+                    Answers Key
+                </button>
+            </div>
 
+            {showAnswersKey && (
+                <div
+                    id="answers-key-box-72"
+                    className={styles["page72__answersKey-box"]}
+                    role="region"
+                    aria-label="Gabarito completo"
+                >
+                    {questions.map((q, i) => (
+                        <div key={i} className={styles["page72__answersKey-item"]}>
+                            <span className={styles["page72__answersKey-num"]}>{i + 1}.</span>
+                            <span className={styles["page72__answersKey-text"]}>{q.fullAnswer}</span>
+                        </div>
+                    ))}
+                </div>
+            )}
 
             <aside className={styles["page72__word-bank"]}>
                 <div className={styles["page72__word-bank-container"]}>
@@ -428,156 +426,155 @@ const pagina72 = () => {
                     </div>
                     <div className={styles["page72__word-bank-content"]}>
                         <div className={styles["page72__word-row"]}>
-    <div className={styles["page72__word-column"]}>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Friendly
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio13e')}
-                />
-            </strong> <span>(amigável)</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Happy
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio14e')}
-                />
-            </strong> <span>(feliz)</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Hardworking
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio15e')}
-                />
-            </strong> <span>(trabalhador(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Outgoing
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio16e')}
-                />
-            </strong> <span>(extrovertido(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Creative
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio17e')}
-                />
-            </strong> <span>(criativo(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Intelligent
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio18e')}
-                />
-            </strong> <span>(inteligente)</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Ambitious
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio19e')}
-                />
-            </strong> <span>(ambicioso(a))</span>
-        </p>
-    </div>
+                            <div className={styles["page72__word-column"]}>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Friendly
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio13e')}
+                                        />
+                                    </strong> <span>(amigável)</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Happy
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio14e')}
+                                        />
+                                    </strong> <span>(feliz)</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Hardworking
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio15e')}
+                                        />
+                                    </strong> <span>(trabalhador(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Outgoing
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio16e')}
+                                        />
+                                    </strong> <span>(extrovertido(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Creative
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio17e')}
+                                        />
+                                    </strong> <span>(criativo(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Intelligent
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio18e')}
+                                        />
+                                    </strong> <span>(inteligente)</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Ambitious
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio19e')}
+                                        />
+                                    </strong> <span>(ambicioso(a))</span>
+                                </p>
+                            </div>
 
-    <div className={styles["page72__word-column"]}>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Helpful
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio20e')}
-                />
-            </strong> <span>(prestativo(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Talkative
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio21e')}
-                />
-            </strong> <span>(pessoa que fala muito)</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Organized
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio22e')}
-                />
-            </strong> <span>(organizado(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Shy
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio23e')}
-                />
-            </strong> <span>(tímido(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Lazy
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio24e')}
-                />
-            </strong> <span>(preguiçoso(a))</span>
-        </p>
-        <p>
-            <strong className={styles["page72__red-text"]}>
-                Disrespectful
-                <img
-                    src={eng_audio_icon}
-                    alt="English Audio"
-                    className={styles["page72__icon"]}
-                    onClick={() => playAudio('pg72_audio25e')}
-                />
-            </strong> <span>(desrespeitoso(a))</span>
-        </p>
-    </div>
-</div>
-
+                            <div className={styles["page72__word-column"]}>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Helpful
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio20e')}
+                                        />
+                                    </strong> <span>(prestativo(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Talkative
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio21e')}
+                                        />
+                                    </strong> <span>(pessoa que fala muito)</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Organized
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio22e')}
+                                        />
+                                    </strong> <span>(organizado(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Shy
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio23e')}
+                                        />
+                                    </strong> <span>(tímido(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Lazy
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio24e')}
+                                        />
+                                    </strong> <span>(preguiçoso(a))</span>
+                                </p>
+                                <p>
+                                    <strong className={styles["page72__red-text"]}>
+                                        Disrespectful
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page72__icon"]}
+                                            onClick={() => playAudio('pg72_audio25e')}
+                                        />
+                                    </strong> <span>(desrespeitoso(a))</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -585,11 +582,9 @@ const pagina72 = () => {
             <div className={styles["page72__container-imagem"]}>
                 <img className={styles["page72__imagem"]} src={pagina72_imagem1} alt="" />
             </div>
-
-
-
         </div>
     );
 };
 
 export default pagina72;
+

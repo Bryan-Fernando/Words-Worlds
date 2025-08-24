@@ -276,19 +276,27 @@ const Pagina47 = () => {
             <p className={styles['page47__titulo']}>Exemplo:</p>
             <div className={styles['page47__exemplo-img']}>
               <img className={styles['page47__aside-img-1']} src={pagina47_imagem1} alt="" />
+
               <div className={styles['page47__aside-texto-1']}>
+                <span className={styles['page47__badge']}>3</span>
                 <p>Nice to meet you, Daniel.</p>
                 <img src={iconeE} alt="English audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio11e')} />
               </div>
+
               <div className={styles['page47__aside-texto-2']}>
+                <span className={styles['page47__badge']}>2</span>
                 <p>Hi, Daniel!</p>
                 <img src={iconeE} alt="English audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio13e')} />
               </div>
+
               <div className={styles['page47__aside-texto-3']}>
+                <span className={styles['page47__badge']}>4</span>
                 <p>Welcome guys!</p>
                 <img src={iconeE} alt="English audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio12e')} />
               </div>
+
               <div className={styles['page47__aside-texto-4']}>
+                <span className={styles['page47__badge']}>1</span>
                 <p>
                   This is <strong>my</strong> friend Daniel.
                   <img src={iconeE} alt="English audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio14_1e')} />
@@ -297,6 +305,7 @@ const Pagina47 = () => {
                   <img src={iconeE} alt="English audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio14_2e')} />
                 </p>
               </div>
+
               <div className={styles['page47__aside-texto-5']}>
                 <p>
                   Daniel, this is <strong>my</strong> childhood friend Karen
@@ -316,19 +325,23 @@ const Pagina47 = () => {
             <p className={styles['page47__titulo']}>Tradução:</p>
             <div className={styles['page47__traducao-top']}>
               <div className={styles['page47__aside-traducao-2']}>
+                <span className={`${styles['page47__badge']} ${styles['page47__badge--sm']}`}>1</span>
                 <p>Oi, Daniel!</p>
                 <img src={iconeP} alt="Portuguese audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio11p')} />
               </div>
               <div className={styles['page47__aside-traducao-3']}>
+                <span className={`${styles['page47__badge']} ${styles['page47__badge--sm']}`}>2</span>
                 <p>Sejam bem-vindos, pessoal!</p>
                 <img src={iconeP} alt="Portuguese audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio12p')} />
               </div>
               <div className={styles['page47__aside-traducao-1']}>
+                <span className={`${styles['page47__badge']} ${styles['page47__badge--sm']}`}>3</span>
                 <p>Prazer em conhecê-lo, Daniel.</p>
                 <img src={iconeP} alt="Portuguese audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio13p')} />
               </div>
             </div>
             <div className={styles['page47__aside-traducao-4']}>
+              <span className={`${styles['page47__badge']} ${styles['page47__badge--sm']}`}>4</span>
               <p>
                 Este é meu amigo Daniel. Ele é nosso web designer. Daniel, esta é minha amiga de infância Karen e este é seu irmão Ethan.
                 <img src={iconeP} alt="Portuguese audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio14p')} />

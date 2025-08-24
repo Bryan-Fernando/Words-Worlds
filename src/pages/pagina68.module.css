@@ -109,6 +109,7 @@
 }
 
 .page68__check-button {
+    font-size: 2rem;
     background-color: #A61C28;
     color: white;
     border: none;
@@ -236,13 +237,11 @@
 
 .page68__aside-note--first {
     width: 100%;
-    height: 4.5rem;
-    border: 0.4rem solid #0A3282;
+    height: 7rem;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 1.5rem;
     border-bottom-right-radius: 1.5rem;
-
     background-color: #0A3282;
     color: white;
     display: flex;
@@ -273,4 +272,26 @@
 
 .page68__aside-note--second p {
     padding: 1vw;
+}
+
+.page68__reset-button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 2rem;
+}
+.page68__reset-button:hover { background: #821a22; }
+.page68__reset-button:active { transform: translateY(1px); }
+.page68__reset-button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
 }

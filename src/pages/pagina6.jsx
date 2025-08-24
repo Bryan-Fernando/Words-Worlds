@@ -2,11 +2,13 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina6.module.css';
 
+import campainha from '../assets/icons/campainha.png';
 import pg6IconNotes from '../assets/icons/notes_icon.webp';
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 import white_play_icon from '../assets/icons/white_play_icon.png';
 
+import bell from '../assets/audios/bell.mp3';
 import globalVerboToBe from '../assets/audios/global_verbo_to_be.mp3';
 import globalGrammar from '../assets/audios/global_grammar.mp3';
 import globalSimplePresent from '../assets/audios/global_simple_present.mp3';
@@ -205,7 +207,7 @@ const Pagina6 = () => {
                                     </td>
                                     <td className={styles["page6__table-verb"]}></td>
                                     <td className={styles["page6__table-complement"]}>
-                                        (Sixteen) years old{" "}
+                                        sixteen years old{" "}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Play English sentence"
@@ -257,7 +259,12 @@ const Pagina6 = () => {
 
                         <aside className={styles["page6__aside"]}>
                             <div className={styles["page6__new-aside-notes1"]}>
-                                <img className={styles["page6__aside-img"]} src={pg6IconNotes} alt="" />
+                                <img
+                                    className={styles["page6__aside-img"]}
+                                    onClick={() => playAudio(bell)}
+                                    src={campainha}
+                                    alt=""
+                                />
                                 <p>NOTE:</p>
                             </div>
                             <div className={styles["page6__new-aside-notes2"]}>
@@ -327,7 +334,12 @@ const Pagina6 = () => {
 
                 <aside className={styles["page6__aside"]}>
                     <div className={styles["page6__aside-notes1"]}>
-                        <img className={styles["page6__aside-img"]} src={pg6IconNotes} alt="" />
+                        <img
+                            className={styles["page6__aside-img"]}
+                            onClick={() => playAudio(bell)}
+                            src={campainha}
+                            alt=""
+                        />
                         <p>NOTE: Forma simples / Coloquial</p>
                     </div>
                     <div className={styles["page6__aside-notes2"]}>
@@ -346,7 +358,12 @@ const Pagina6 = () => {
 
                 <aside className={styles["page6__aside"]}>
                     <div className={styles["page6__aside-notes1"]}>
-                        <img className={styles["page6__aside-img"]} src={pg6IconNotes} alt="" />
+                        <img
+                            className={styles["page6__aside-img"]}
+                            onClick={() => playAudio(bell)}
+                            src={campainha}
+                            alt=""
+                        />
                         <p>NOTE: Uso do 'Not'</p>
                     </div>
                     <div className={styles["page6__aside-notes2"]}>

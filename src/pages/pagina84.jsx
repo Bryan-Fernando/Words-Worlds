@@ -75,16 +75,49 @@ const Pagina84 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'is', 'am', 'are', 'is', 'is',
         'is not', 'are not', 'is not', 'are not', 'is not'
     ];
 
+    const affirmativeQuestions = [
+        "The sky ____ blue.",
+        "I ____ an artist.",
+        "The children ____ excited about the field trip.",
+        "That restaurant ____ famous for its pizza.",
+        "My sister ____ kind-hearted."
+    ];
+
+    const negativeQuestions = [
+        "It ____ easy to learn a new language.",
+        "They ____ interested in sports.",
+        "The soup ____ hot enough.",
+        "My keys ____ on the table.",
+        "She ____ a fan of horror movies."
+    ];
+
+    const allQuestions = [...affirmativeQuestions, ...negativeQuestions];
+
+    const makeFullAnswer = (q, be) => {
+        const [left, right = ""] = q.split("____");
+        const L = left.trim();
+        const R = right.trim();
+        return R ? `${L} ${be} ${R}` : `${L} ${be}`;
+    };
+
     const handleCheckClick = () => {
         setResults(inputValues.map((value, index) =>
             value.trim() === correctAnswers[index]
         ));
+    };
+
+    const handleReset = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setIsSpeedReduced({});
+        setShowAnswersKey(false);
     };
 
     const handleInputChange = (value, index) => {
@@ -98,9 +131,7 @@ const Pagina84 = () => {
             const audio = new Audio(audioMap[audioKey]);
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
+            audio.play().catch(() => {});
         }
     };
 
@@ -130,7 +161,7 @@ const Pagina84 = () => {
                     />
                 </h1>
                 <h2 className={styles["page84__header--h2"]}>
-                Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
+                    Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
                 </h2>
             </header>
             <main className={styles["page84__main"]}>
@@ -170,19 +201,14 @@ const Pagina84 = () => {
                                 onClick={() => playAudio("global_affirmativep")}
                             />
                         </p>
-                        {[
-                            "The sky ____ blue.",
-                            "I ____ an artist.",
-                            "The children ____ excited about the field trip.",
-                            "That restaurant ____ famous for its pizza.",
-                            "My sister ____ kind-hearted."
-                        ].map((question, index) => {
+                        {affirmativeQuestions.map((question, index) => {
                             const audioKey = `pg84_audio${index + 1}`;
+                            const [left, right = ""] = question.split('____');
                             return (
                                 <div key={index} className={styles["page84__question"]}>
                                     <span>
                                         <em className={styles["page84__question--text"]}>
-                                            <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
+                                            <strong>{String.fromCharCode(97 + index)}.</strong> {left.trim()}
                                         </em>
                                     </span>
                                     <div className={styles["page84__input--container"]}>
@@ -193,7 +219,7 @@ const Pagina84 = () => {
                                             className={styles["page84__input--box"]}
                                         />
                                     </div>
-                                    <span><em className={styles["page84__question--text"]}>{question.split('____')[1]}</em></span>
+                                    <span><em className={styles["page84__question--text"]}>{right.trim()}</em></span>
                                     <div className={styles["page84__icons--container"]}>
                                         {results[index] !== null && (
                                             <img
@@ -202,21 +228,18 @@ const Pagina84 = () => {
                                                 className={styles["page84__checkmark--image"]}
                                             />
                                         )}
-
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page84__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
-
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
                                             className={styles["page84__additional--icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
-
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
@@ -250,7 +273,6 @@ const Pagina84 = () => {
                 </div>
 
                 <div className={styles["page84__container--questoes"]}>
-
                     <div className={styles["page84__questions--2"]}>
                         <div className={styles["page84__word-bank-header-1"]}>
                             <p>Use as formas completas do verbo. <br /> 
@@ -271,55 +293,46 @@ const Pagina84 = () => {
                                 onClick={() => playAudio("global_negativep")}
                             />
                         </p>
-
-                        {[
-                            "It ____ easy to learn a new language.",
-                            "They ____ interested in sports.",
-                            "The soup ____ hot enough.",
-                            "My keys ____ on the table.",
-                            "She ____ a fan of horror movies."
-                        ].map((question, index) => {
-                            const audioKey = `pg84_audio${index + 6}`;
-
+                        {negativeQuestions.map((question, i) => {
+                            const index = i + 5;
+                            const audioKey = `pg84_audio${i + 6}`;
+                            const [left, right = ""] = question.split('____');
                             return (
-                                <div key={index + 5} className={styles["page84__question"]}>
+                                <div key={index} className={styles["page84__question"]}>
                                     <span>
                                         <em className={styles["page84__question--text"]}> 
-                                            <strong>{String.fromCharCode(102 + index)}.</strong> {question.split('____')[0]}
+                                            <strong>{String.fromCharCode(102 + i)}.</strong> {left.trim()}
                                         </em>
                                     </span>
                                     <div className={styles["page84__input--container"]}>
                                         <input
                                             type="text"
-                                            value={inputValues[index + 5]}
-                                            onChange={(e) => handleInputChange(e.target.value, index + 5)}
+                                            value={inputValues[index]}
+                                            onChange={(e) => handleInputChange(e.target.value, index)}
                                             className={styles["page84__input--box"]}
                                         />
                                     </div>
-                                    <span><em className={styles["page84__question--text"]}>{question.split('____')[1]}</em></span>
+                                    <span><em className={styles["page84__question--text"]}>{right.trim()}</em></span>
                                     <div className={styles["page84__icons--container"]}>
-                                        {results[index + 5] !== null && (
+                                        {results[index] !== null && (
                                             <img
-                                                src={results[index + 5] ? correct_icon : wrong_icon}
-                                                alt={results[index + 5] ? "Correct" : "Incorrect"}
+                                                src={results[index] ? correct_icon : wrong_icon}
+                                                alt={results[index] ? "Correct" : "Incorrect"}
                                                 className={styles["page84__checkmark--image"]}
                                             />
                                         )}
-
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
                                             className={styles["page84__additional--icon"]}
                                             onClick={() => playAudio(audioKey)}
                                         />
-
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Portuguese Audio"
                                             className={styles["page84__additional--icon"]}
                                             onClick={() => playAudio(`${audioKey}p`)}
                                         />
-
                                         <img
                                             src={slow_audio_icon}
                                             alt="Volume Reduced Icon"
@@ -330,17 +343,40 @@ const Pagina84 = () => {
                                 </div>
                             );
                         })}
-
                     </div>
                     <div className={styles["page84__container--imagem"]}>
                         <img className={styles["page84__image"]} src={pagina84_imagem2} alt="" />
                     </div>
                 </div>
-            
-                <button className={styles["page84__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+
+                <div className={styles["page84__actions"]}>
+                    <button className={styles["page84__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
+                    <button className={styles["page84__reset--button"]} onClick={handleReset}>Reset</button>
+                    <button
+                        className={styles["page84__answersKey--button"]}
+                        onClick={() => setShowAnswersKey((v) => !v)}
+                        aria-pressed={showAnswersKey ? "true" : "false"}
+                    >
+                        Answers Key
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div className={styles["page84__answersKey-box"]}>
+                        {allQuestions.map((q, i) => (
+                            <div key={i} className={styles["page84__answersKey-item"]}>
+                                <div className={styles["page84__answersKey-num"]}>{i + 1}.</div>
+                                <div className={styles["page84__answersKey-text"]}>
+                                    {makeFullAnswer(q, correctAnswers[i])}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );
 };
 
 export default Pagina84;
+

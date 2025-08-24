@@ -55,6 +55,7 @@ const Pagina41 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState(Array(10).fill(false));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
     const currentAudioRef = useRef(null);
 
     const correctAnswers = [
@@ -73,14 +74,27 @@ const Pagina41 = () => {
         setInputValues(newValues);
     };
 
+    const handleReset = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setIsSpeedReduced(Array(10).fill(false));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+    };
+
     const playHeaderAudio = (audioFile) => {
         const audio = new Audio(audioFile);
+        currentAudioRef.current = audio;
         audio.play();
     };
 
     const playAudio = (index, language) => {
         const audio = new Audio(audioFiles[index][language]);
         audio.playbackRate = isSpeedReduced[index] ? 0.60 : 1;
+        currentAudioRef.current = audio;
         audio.play();
     };
 
@@ -190,13 +204,40 @@ const Pagina41 = () => {
                 })}
             </div>
 
-            <button className={styles["page41__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
+            <div className={styles["page41__buttons-container"]}>
+                <button className={styles["page41__check-button"]} onClick={handleCheckClick}>Check</button>
+                <button className={styles["page41__reset-button"]} onClick={handleReset}>Reset</button>
+                <button
+                    className={styles["page41__answersKey-button"]}
+                    onClick={() => setShowAnswersKey((prev) => !prev)}
+                    aria-expanded={showAnswersKey}
+                    aria-controls="answers-key-box"
+                >
+                    Answers Key
+                </button>
+            </div>
+
+            {showAnswersKey && (
+                <div
+                    id="answers-key-box"
+                    className={styles["page41__answersKey-box"]}
+                    role="region"
+                    aria-label="Gabarito completo"
+                >
+                    {correctAnswers.map((answer, i) => (
+                        <div key={i} className={styles["page41__answersKey-item"]}>
+                            <span className={styles["page41__answersKey-num"]}>{i + 1}.</span>
+                            <span className={styles["page41__answersKey-text"]}>{answer}</span>
+                        </div>
+                    ))}
+                </div>
+            )}
+
             <div className={styles["page41__images-container"]}>
                 <img src={pagina41_imagem1} alt="Basketball" className={styles["page41__image--basketball"]} />
                 <img src={pagina41_imagem2} alt="Choir" className={styles["page41__image--choir"]} />
             </div>
         </div>
-
     );
 };
 

@@ -59,6 +59,7 @@ const pagina95 = () => {
         shortAnswers3: Array(10).fill(null),
     });
 
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const audioMap = {
         pg95_audio1e,
@@ -95,7 +96,6 @@ const pagina95 = () => {
         pg95_audio16p
     };
 
-
     const correctAnswers = {
         questions1: [
             ["Does", "like"],
@@ -119,89 +119,100 @@ const pagina95 = () => {
             ["Do", "love"]
         ],
         shortAnswers1: [
-            ["Yes, she does.", "No, she doesn't."],
-            ["Yes, they do.", "No, they don't."],
-            ["Yes, he does.", "No, he doesn't."],
-            ["Yes, they do.", "No, they don't."],
-            ["Yes, I do.", "No, I don't."]
+            ["Yes, she does", "No, she doesn't"],
+            ["Yes, they do", "No, they don't"],
+            ["Yes, he does", "No, he doesn't"],
+            ["Yes, they do", "No, they don't"],
+            ["Yes, I do", "No, I don't"]
         ],
         shortAnswers2: [
-            ["Yes, she does.", "No, she doesn't."],
-            ["Yes, they do.", "No, they don't."],
-            ["Yes, he does.", "No, he doesn't."],
-            ["Yes, it does.", "No, it doesn't."],
-            ["Yes, I do.", "No, I don't."]
+            ["Yes, she does", "No, she doesn't"],
+            ["Yes, they do", "No, they don't"],
+            ["Yes, he does", "No, he doesn't"],
+            ["Yes, it does", "No, it doesn't"],
+            ["Yes, I do", "No, I don't"]
         ],
         shortAnswers3: [
-            ["Yes, she does.", "No, she doesn't."],
-            ["Yes, they do.", "No, they don't."],
-            ["Yes, he does.", "No, he doesn't."],
-            ["Yes, they do.", "No, they don't."],
-            ["Yes, I do.", "No, I don't."]
+            ["Yes, she does", "No, she doesn't"],
+            ["Yes, they do", "No, they don't"],
+            ["Yes, he does", "No, he doesn't"],
+            ["Yes, they do", "No, they don't"],
+            ["Yes, I do", "No, I don't"]
         ]
     };
 
-
     const handleInputChange = (value, index, questionGroup) => {
-        setInputValues((prevState) => {
-            const updatedValues = [...prevState[questionGroup]];
-            updatedValues[index] = value;  // Atualiza o valor na posição correta
-            return {
-                ...prevState,
-                [questionGroup]: updatedValues,
-            };
+        setInputValues(prev => {
+            const updated = [...prev[questionGroup]];
+            updated[index] = value;
+            return { ...prev, [questionGroup]: updated };
         });
     };
-
-
-
 
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
+            audio.play().catch(err => console.error("Erro ao reproduzir o áudio:", err));
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
 
+    // CHECK: comparação case-insensitive para tudo
     const handleCheckClick = () => {
-        setResults((prevResults) => ({
+        setResults({
             questions1: inputValues.questions1.map((input, idx) => {
-                const answerIndex = Math.floor(idx / 2);
-                const expectedAnswer = correctAnswers.questions1[answerIndex] || [];
-                return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
+                const pairIdx = Math.floor(idx / 2);
+                const expected = correctAnswers.questions1[pairIdx] || [];
+                return input.trim().toLowerCase() === (expected[idx % 2] || "").toLowerCase();
             }),
-
             questions2: inputValues.questions2.map((input, idx) => {
-                const answerIndex = Math.floor(idx / 2);
-                const expectedAnswer = correctAnswers.questions2[answerIndex] || [];
-                return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
+                const pairIdx = Math.floor(idx / 2);
+                const expected = correctAnswers.questions2[pairIdx] || [];
+                return input.trim().toLowerCase() === (expected[idx % 2] || "").toLowerCase();
             }),
-
             questions3: inputValues.questions3.map((input, idx) => {
-                const answerIndex = Math.floor(idx / 2);
-                const expectedAnswer = correctAnswers.questions3[answerIndex] || [];
-                return input.trim().toLowerCase() === (expectedAnswer[idx % 2] || "").toLowerCase();
+                const pairIdx = Math.floor(idx / 2);
+                const expected = correctAnswers.questions3[pairIdx] || [];
+                return input.trim().toLowerCase() === (expected[idx % 2] || "").toLowerCase();
             }),
-
             shortAnswers1: inputValues.shortAnswers1.map((input, idx) => {
-                // Acessando as respostas afirmativa e negativa diretamente
-                const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[Math.floor(idx / 2)] || [];
-                return input.trim().toLowerCase() === affirmativeAnswer.toLowerCase() || input.trim().toLowerCase() === negativeAnswer.toLowerCase();
+                const [yesAns, noAns] = correctAnswers.shortAnswers1[Math.floor(idx / 2)] || [];
+                const v = input.trim().toLowerCase();
+                return v === (yesAns || "").toLowerCase() || v === (noAns || "").toLowerCase();
             }),
-
+            // antes tava case-sensitive aqui — agora padronizei:
             shortAnswers2: inputValues.shortAnswers2.map((input, idx) => {
-                const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers2[Math.floor(idx / 2)] || [];
-                return input.trim() === affirmativeAnswer || input.trim() === negativeAnswer;
+                const [yesAns, noAns] = correctAnswers.shortAnswers2[Math.floor(idx / 2)] || [];
+                const v = input.trim().toLowerCase();
+                return v === (yesAns || "").toLowerCase() || v === (noAns || "").toLowerCase();
             }),
-
             shortAnswers3: inputValues.shortAnswers3.map((input, idx) => {
-
-                const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers3[Math.floor(idx / 2)] || [];
-                return input.trim() === affirmativeAnswer || input.trim() === negativeAnswer;
+                const [yesAns, noAns] = correctAnswers.shortAnswers3[Math.floor(idx / 2)] || [];
+                const v = input.trim().toLowerCase();
+                return v === (yesAns || "").toLowerCase() || v === (noAns || "").toLowerCase();
             }),
-        }));
+        });
+    };
+
+    // RESET: limpa tudo
+    const handleResetClick = () => {
+        setInputValues({
+            questions1: Array(10).fill(''),
+            questions2: Array(10).fill(''),
+            questions3: Array(10).fill(''),
+            shortAnswers1: Array(10).fill(''),
+            shortAnswers2: Array(10).fill(''),
+            shortAnswers3: Array(10).fill(''),
+        });
+        setResults({
+            questions1: Array(10).fill(null),
+            questions2: Array(10).fill(null),
+            questions3: Array(10).fill(null),
+            shortAnswers1: Array(10).fill(null),
+            shortAnswers2: Array(10).fill(null),
+            shortAnswers3: Array(10).fill(null),
+        });
     };
 
     return (
@@ -228,26 +239,27 @@ const pagina95 = () => {
                     <div className={styles["page95__questions--1"]}>
                         <div className={styles["page95__question"]}>
                             <span>
-                                <p style={{ color: '#A61C28', fontWeight: 'bold'}}> 2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do / does' or 'don't / doesn't'.
-                        
+                                <p style={{ color: '#A61C28', fontWeight: 'bold' }}>
+                                    2. Form questions using an auxiliary verb (do or does) in the present simple, followed by the main verb in its base form. Then, provide short answers using 'do / does' or 'don't / doesn't'.
                                     <img
                                         src={eng_audio_icon}
                                         alt="English audio"
                                         className={styles["page95__header--icon"]}
                                         onClick={() => playAudio("pg95_audio1e")}
                                     />
-                                    <br /> <br />
-                                    <p style={{ color: 'black', fontWeight: 'bold'}}>Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do / does" ou "don't / doesn't". 
-                                        <br />
-       
+                                    <br /><br />
+                                    <p style={{ color: 'black', fontWeight: 'bold' }}>
+                                        Forme perguntas usando um verbo auxiliar (do ou does) no presente simples, seguido pelo verbo principal em sua forma base. Em seguida, forneça respostas curtas usando "do / does" ou "don't / doesn't".
                                     </p>
-                                    
-                                    <span style={{color: '#0A3282'}}>Exemplo de respostas curtas: Yes<span style={{color: 'red'}}>,</span> she does<span style={{color: 'red'}}>.</span> No<span style={{color: 'red'}}>,</span> she doesn't<span style={{color: 'red'}}>.</span></span> <br /> <br />
-
-                                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>1.</span>
+                                    <span style={{ color: '#0A3282' }}>
+                                        Exemplo de respostas curtas: Yes<span style={{ color: 'red' }}>,</span> she does<span style={{ color: 'red' }}>.</span> No<span style={{ color: 'red' }}>,</span> she doesn't<span style={{ color: 'red' }}>.</span>
+                                    </span>
+                                    <br /><br />
+                                    <span style={{ fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28' }}>1.</span>
                                 </p>
-                                
-                                <em className={styles["page95__question--text"]}><strong>a.</strong>
+
+                                <em className={styles["page95__question--text"]}>
+                                    <strong>a.</strong>
                                     <input
                                         type="text"
                                         value={inputValues.questions1[0]}
@@ -262,8 +274,6 @@ const pagina95 = () => {
                                         className={styles["page95__input--box--small"]}
                                     />
                                     ice cream? (like)
-
-                                    {/* Ícone Único para Validar Ambos os Inputs */}
                                     {results.questions1[0] !== null && results.questions1[1] !== null && (
                                         <img
                                             src={results.questions1[0] && results.questions1[1] ? correct_icon : wrong_icon}
@@ -271,7 +281,6 @@ const pagina95 = () => {
                                             className={styles["page95__checkmark--image"]}
                                         />
                                     )}
-
                                     <img
                                         src={eng_audio_icon}
                                         alt="Audio Icon"
@@ -288,7 +297,6 @@ const pagina95 = () => {
                             </span>
                         </div>
 
-                        {/* Repete para as demais perguntas */}
                         {[1, 2, 3, 4].map((index) => (
                             <div key={index} className={styles["page95__question"]}>
                                 <span className={styles["page95__question--text"]}>
@@ -306,9 +314,10 @@ const pagina95 = () => {
                                             onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions1')}
                                             className={styles["page95__input--box--small"]}
                                         />
-                                        {index === 0 ? "ice cream?" : index === 1 ? "basketball on Saturdays? (play)" : index === 2 ? "on Sundays? (work)" : index === 3 ? "TV in the evening? (watch)" : "Spanish? (speak)"}
-
-                                        {/* Ícone Único de Verificação */}
+                                        {index === 1 ? "basketball on Saturdays? (play)" :
+                                            index === 2 ? "on Sundays? (work)" :
+                                                index === 3 ? "TV in the evening? (watch)" :
+                                                    index === 4 ? "Spanish? (speak)" : "ice cream?"}
                                         {results.questions1[index * 2] !== null && results.questions1[index * 2 + 1] !== null && (
                                             <img
                                                 src={results.questions1[index * 2] && results.questions1[index * 2 + 1] ? correct_icon : wrong_icon}
@@ -316,7 +325,6 @@ const pagina95 = () => {
                                                 className={styles["page95__checkmark--image"]}
                                             />
                                         )}
-
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
@@ -333,10 +341,9 @@ const pagina95 = () => {
                                 </span>
                             </div>
                         ))}
-
                     </div>
 
-                    {/* Short Answers (right side) */}
+                    {/* Short Answers (lado direito) */}
                     <div className={styles["page95__short-answers--header"]}>
                         <h2>Short Answers</h2>
                         <table className={styles["page95__styled--table--short-answers"]}>
@@ -347,56 +354,49 @@ const pagina95 = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {Array.from({ length: 5 }).map((_, index) => {
-                                    // Acessando diretamente as respostas afirmativa e negativa
-                                    const [affirmativeAnswer, negativeAnswer] = correctAnswers.shortAnswers1[index] || [];
-
-                                    return (
-                                        <tr key={index} >
-                                            <td >
-                                                <input
-                                                    type="text"
-                                                    value={inputValues.shortAnswers1[index * 2]} // Acessa a resposta afirmativa
-                                                    onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers1')}
-                                                    className={styles["page95__input--box--column"]}
+                                {Array.from({ length: 5 }).map((_, index) => (
+                                    <tr key={index}>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                value={inputValues.shortAnswers1[index * 2]}
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2, 'shortAnswers1')}
+                                                className={styles["page95__input--box--column"]}
+                                            />
+                                            {results.shortAnswers1[index * 2] !== null && (
+                                                <img
+                                                    src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
+                                                    alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
-                                                {results.shortAnswers1[index * 2] !== null && (
-                                                    <img
-                                                        src={results.shortAnswers1[index * 2] ? correct_icon : wrong_icon}
-                                                        alt={results.shortAnswers1[index * 2] ? "Correct" : "Incorrect"}
-                                                        className={styles["page95__checkmark--image"]}
-                                                    />
-                                                )}
-                                            </td>
-                                            <td>
-                                                <input
-                                                    type="text"
-                                                    value={inputValues.shortAnswers1[index * 2 + 1]} // Acessa a resposta negativa
-                                                    onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers1')}
-                                                    className={styles["page95__input--box--column"]}
+                                            )}
+                                        </td>
+                                        <td>
+                                            <input
+                                                type="text"
+                                                value={inputValues.shortAnswers1[index * 2 + 1]}
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'shortAnswers1')}
+                                                className={styles["page95__input--box--column"]}
+                                            />
+                                            {results.shortAnswers1[index * 2 + 1] !== null && (
+                                                <img
+                                                    src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
+                                                    alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
+                                                    className={styles["page95__checkmark--image"]}
                                                 />
-                                                {results.shortAnswers1[index * 2 + 1] !== null && (
-                                                    <img
-                                                        src={results.shortAnswers1[index * 2 + 1] ? correct_icon : wrong_icon}
-                                                        alt={results.shortAnswers1[index * 2 + 1] ? "Correct" : "Incorrect"}
-                                                        className={styles["page95__checkmark--image"]}
-                                                    />
-                                                )}
-                                            </td>
-                                        </tr>
-                                    );
-                                })}
+                                            )}
+                                        </td>
+                                    </tr>
+                                ))}
                             </tbody>
                         </table>
                     </div>
                 </div>
 
                 {/* Questões 2 */}
-                
                 <div className={styles["page95__container--questoes"]}>
-                
                     <div className={styles["page95__questions--2"]}>
-                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>2.</span>
+                        <span style={{ fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28' }}>2.</span>
                         {[
                             "she __ before going to bed? (read)",
                             "they __ every morning? (exercice)",
@@ -406,7 +406,7 @@ const pagina95 = () => {
                         ].map((question, index) => {
                             const audioKey = `pg95_audio${index + 7}`;
                             const audioKeyP = `pg95_audio${index + 7}p`;
-                            const isCorrect =
+                            const ok =
                                 results.questions2[index * 2] === true &&
                                 results.questions2[index * 2 + 1] === true;
 
@@ -418,34 +418,28 @@ const pagina95 = () => {
                                             <input
                                                 type="text"
                                                 value={inputValues.questions2[index * 2]}
-                                                onChange={(e) =>
-                                                    handleInputChange(e.target.value, index * 2, 'questions2')
-                                                }
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2, 'questions2')}
                                                 className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[0]}
                                             <input
                                                 type="text"
                                                 value={inputValues.questions2[index * 2 + 1]}
-                                                onChange={(e) =>
-                                                    handleInputChange(e.target.value, index * 2 + 1, 'questions2')
-                                                }
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions2')}
                                                 className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[1]}
                                         </em>
 
-                                        {/* Ícone de validação único para ambos os inputs */}
                                         {results.questions2[index * 2] !== null &&
                                             results.questions2[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={isCorrect ? correct_icon : wrong_icon}
-                                                    alt={isCorrect ? "Correct" : "Incorrect"}
+                                                    src={ok ? correct_icon : wrong_icon}
+                                                    alt={ok ? "Correct" : "Incorrect"}
                                                     className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
 
-                                        {/* Ícone de áudio */}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
@@ -464,7 +458,7 @@ const pagina95 = () => {
                         })}
                     </div>
 
-                    {/* Short Answers (right side) */}
+                    {/* Short Answers (lado direito) */}
                     <div className={styles["page95__short-answers"]}>
                         <table className={styles["page95__styled--table--short-answers"]}>
                             <thead></thead>
@@ -511,7 +505,7 @@ const pagina95 = () => {
                 {/* Questões 3 */}
                 <div className={styles["page95__container--questoes"]}>
                     <div className={styles["page95__questions--3"]}>
-                    <span style={{fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28'}}>3.</span>
+                        <span style={{ fontSize: '2rem', textAlign: 'left', fontWeight: 'bold', color: '#A61C28' }}>3.</span>
                         {[
                             "she __ tea? (drink)",
                             "they __ to watch movies on weekends? (like)",
@@ -521,7 +515,7 @@ const pagina95 = () => {
                         ].map((question, index) => {
                             const audioKey = `pg95_audio${index + 12}`;
                             const audioKeyP = `pg95_audio${index + 12}p`;
-                            const isCorrect =
+                            const ok =
                                 results.questions3[index * 2] === true &&
                                 results.questions3[index * 2 + 1] === true;
 
@@ -533,34 +527,28 @@ const pagina95 = () => {
                                             <input
                                                 type="text"
                                                 value={inputValues.questions3[index * 2]}
-                                                onChange={(e) =>
-                                                    handleInputChange(e.target.value, index * 2, 'questions3')
-                                                }
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2, 'questions3')}
                                                 className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[0]}
                                             <input
                                                 type="text"
                                                 value={inputValues.questions3[index * 2 + 1]}
-                                                onChange={(e) =>
-                                                    handleInputChange(e.target.value, index * 2 + 1, 'questions3')
-                                                }
+                                                onChange={(e) => handleInputChange(e.target.value, index * 2 + 1, 'questions3')}
                                                 className={styles["page95__input--box--small"]}
                                             />
                                             {question.split('__')[1]}
                                         </em>
 
-                                        {/* Ícone de validação único para ambos os inputs */}
                                         {results.questions3[index * 2] !== null &&
                                             results.questions3[index * 2 + 1] !== null && (
                                                 <img
-                                                    src={isCorrect ? correct_icon : wrong_icon}
-                                                    alt={isCorrect ? "Correct" : "Incorrect"}
+                                                    src={ok ? correct_icon : wrong_icon}
+                                                    alt={ok ? "Correct" : "Incorrect"}
                                                     className={styles["page95__checkmark--image"]}
                                                 />
                                             )}
 
-                                        {/* Ícone de áudio */}
                                         <img
                                             src={eng_audio_icon}
                                             alt="Audio Icon"
@@ -579,7 +567,7 @@ const pagina95 = () => {
                         })}
                     </div>
 
-                    {/* Short Answers (right side) */}
+                    {/* Short Answers (lado direito) */}
                     <div className={styles["page95__short-answers"]}>
                         <table className={styles["page95__styled--table--short-answers"]}>
                             <thead></thead>
@@ -622,10 +610,137 @@ const pagina95 = () => {
                         </table>
                     </div>
                 </div>
+
+                {/* Ações: Check → Reset → Answers Key */}
+                <div className={styles["page95__actions"]}>
+                    <button className={styles["page95__button--check"]} onClick={handleCheckClick}>
+                        <em>Check</em>
+                    </button>
+                    <button className={styles["page95__reset--button"]} onClick={handleResetClick}>
+                        <em>Reset</em>
+                    </button>
+                    <button
+                        className={styles["page95__answersKey--button"]}
+                        aria-pressed={showAnswersKey}
+                        onClick={() => setShowAnswersKey(v => !v)}
+                    >
+                        <em>Answers Key</em>
+                    </button>
+                </div>
+
+                {/* Answers Key (lista) */}
+                {showAnswersKey && (
+                    <div className={styles["page95__answersKey-box"]}>
+                        {/* Bloco 1 */}
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>1a.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does she like ice cream?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>1b.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do they play basketball on Saturdays?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>1c.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do they work on Sundays?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>1d.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do the children watch TV in the evening?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>1e.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do you speak Spanish?</span>
+                        </div>
+
+                        {/* Short Answers 1 */}
+                        {[
+                            "Yes, she does / No, she doesn't",
+                            "Yes, they do / No, they don't",
+                            "Yes, he does / No, he doesn't",
+                            "Yes, they do / No, they don't",
+                            "Yes, I do / No, I don't",
+                        ].map((t, i) => (
+                            <div key={`sa1-${i}`} className={styles["page95__answersKey-item"]}>
+                                <span className={styles["page95__answersKey-num"]}>{`1SA${i + 1}.`}</span>
+                                <span className={styles["page95__answersKey-text"]}>{t}</span>
+                            </div>
+                        ))}
+
+                        {/* Bloco 2 */}
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>2a.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does she read before going to bed?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>2b.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do they exercise every morning?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>2c.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does he drink coffee in the morning?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>2d.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does the bus arrive on time?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>2e.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do you listen to music while working?</span>
+                        </div>
+
+                        {/* Short Answers 2 */}
+                        {[
+                            "Yes, she does / No, she doesn't",
+                            "Yes, they do / No, they don't",
+                            "Yes, he does / No, he doesn't",
+                            "Yes, it does / No, it doesn't",
+                            "Yes, I do / No, I don't",
+                        ].map((t, i) => (
+                            <div key={`sa2-${i}`} className={styles["page95__answersKey-item"]}>
+                                <span className={styles["page95__answersKey-num"]}>{`2SA${i + 1}.`}</span>
+                                <span className={styles["page95__answersKey-text"]}>{t}</span>
+                            </div>
+                        ))}
+
+                        {/* Bloco 3 */}
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>3a.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does she drink tea?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>3b.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do they like to watch movies on weekends?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>3c.</span>
+                            <span className={styles["page95__answersKey-text"]}>Does he enjoy playing video games?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>3d.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do the children want pizza for dinner?</span>
+                        </div>
+                        <div className={styles["page95__answersKey-item"]}>
+                            <span className={styles["page95__answersKey-num"]}>3e.</span>
+                            <span className={styles["page95__answersKey-text"]}>Do you love going to the beach?</span>
+                        </div>
+
+                        {/* Short Answers 3 */}
+                        {[
+                            "Yes, she does / No, she doesn't",
+                            "Yes, they do / No, they don't",
+                            "Yes, he does / No, he doesn't",
+                            "Yes, they do / No, they don't",
+                            "Yes, I do / No, I don't",
+                        ].map((t, i) => (
+                            <div key={`sa3-${i}`} className={styles["page95__answersKey-item"]}>
+                                <span className={styles["page95__answersKey-num"]}>{`3SA${i + 1}.`}</span>
+                                <span className={styles["page95__answersKey-text"]}>{t}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
-            <button className={styles["page95__button--check"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
         </div>
     );
 };

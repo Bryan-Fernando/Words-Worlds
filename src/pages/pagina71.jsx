@@ -212,9 +212,9 @@ const Pagina71 = () => {
         pg71_audio40e,
     };
 
-
     const [userAnswers, setUserAnswers] = useState(Array(13).fill(''));
     const [results, setResults] = useState(Array(13).fill(null));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const handleInputChange = (value, index) => {
         const newAnswers = [...userAnswers];
@@ -231,6 +231,12 @@ const Pagina71 = () => {
         setResults(newResults);
     };
 
+    const handleReset = () => {
+        setUserAnswers(Array(13).fill(''));
+        setResults(Array(13).fill(null));
+        setShowAnswersKey(false);
+    };
+
     const playAudio = (audioKey) => {
         const audioSrc = audioMap[audioKey];
         if (audioSrc) {
@@ -240,7 +246,6 @@ const Pagina71 = () => {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
     };
-
 
     return (
         <div className={styles["page71__container"]}>
@@ -284,9 +289,7 @@ const Pagina71 = () => {
                         <div className={styles["page71__person-info"]}>
                             <img src={pagina71_imagem1} alt="Karen Brandon" className={styles["page71__image"]} />
                             <div>
-                                <p
-                                    className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}
-                                >
+                                <p className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}>
                                     <span onClick={() => playAudio('pg71_audio1_1')}>I’m Karen Brandon. </span>
                                     <span onClick={() => playAudio('pg71_audio1_2')}>I’m from Portugal. </span>
                                     <span onClick={() => playAudio('pg71_audio1_3')}>Lisbon is my home.</span>
@@ -303,10 +306,7 @@ const Pagina71 = () => {
                         <div className={styles["page71__person-info"]}>
                             <img src={pagina71_imagem2} alt="Leo Santander" className={styles["page71__image"]} />
                             <div>
-                                <p
-                                    className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}
-                                    onClick={() => playAudio('pg71_audio2')}
-                                >
+                                <p className={`${styles["page71__person-text--english"]} ${styles["page71__clickable-text"]}`}>
                                     <span onClick={() => playAudio('pg71_audio2_1')}>Hi there. I’m Leo Santander. </span>
                                     <span onClick={() => playAudio('pg71_audio2_2')}>I’m Brazilian. </span>
                                     <span onClick={() => playAudio('pg71_audio2_3')}>I’m from Paraty, but I’m now in Rio. </span>
@@ -317,7 +317,6 @@ const Pagina71 = () => {
                                     <span onClick={() => playAudio('pg71_audio2_8')}>My email is leo@mail.com, </span>
                                     <span onClick={() => playAudio('pg71_audio2_9')}>and my cell phone number is 99 12 1234 - 1265</span>
                                 </p>
-
                                 <p className={styles["page71__person-text--portuguese"]}>Olá, eu sou Leo Santander. Sou brasileiro. Sou de Paraty, mas estou agora no Rio. Sou empreendedor. Tenho uma pequena empresa. Sou casado. Tenho 27 anos. Meu e-mail é leo@mail.com e meu número de celular é 55 12 1234-1265.</p>
                             </div>
                         </div>
@@ -479,7 +478,35 @@ const Pagina71 = () => {
                             </div>
                         ))}
                     </div>
-                    <button className={styles["page71__check-button"]} onClick={handleCheckClick}>Check</button>
+
+                    <div className={styles["page71__buttons-container"]}>
+                        <button className={styles["page71__check-button"]} onClick={handleCheckClick}>Check</button>
+                        <button className={styles["page71__reset-button"]} onClick={handleReset}>Reset</button>
+                        <button
+                            className={styles["page71__answersKey-button"]}
+                            onClick={() => setShowAnswersKey(v => !v)}
+                            aria-expanded={showAnswersKey}
+                            aria-controls="answers-key-box"
+                        >
+                            Answers Key
+                        </button>
+                    </div>
+
+                    {showAnswersKey && (
+                        <div
+                            id="answers-key-box"
+                            className={styles["page71__answersKey-box"]}
+                            role="region"
+                            aria-label="Gabarito completo"
+                        >
+                            {correctAnswers.map((texto, i) => (
+                                <div key={i} className={styles["page71__answersKey-item"]}>
+                                    <span className={styles["page71__answersKey-num"]}>{i + 1}.</span>
+                                    <span className={styles["page71__answersKey-text"]}>{texto}</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </main>
 
@@ -491,124 +518,123 @@ const Pagina71 = () => {
                     </div>
                     <div className={styles["page71__word-bank-content"]}>
                         <div className={styles["page71__word-row"]}>
-  <div className={styles["page71__word-column"]}>
-    <p>
-      <strong>
-        Hello/Hi
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio32e')}
-        />
-      </strong>
-      <span>Olá/Oi</span>
-    </p>
-    <p>
-      <strong>
-        Good morning
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio33e')}
-        />
-      </strong>
-      <span>Bom dia</span>
-    </p>
-  </div>
-  <div className={styles["page71__word-column"]}>
-    <p>
-      <strong>
-        Good afternoon
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio34e')}
-        />
-      </strong>
-      <span>Boa tarde</span>
-    </p>
-    <p>
-      <strong>
-        Good evening
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio35e')}
-        />
-      </strong>
-      <span>Boa noite</span>
-    </p>
-  </div>
-  <div className={styles["page71__word-column"]}>
-    <p>
-      <strong>
-        Bye
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio36e')}
-        />
-      </strong>
-      <span>Tchau</span>
-    </p>
-    <p>
-      <strong>
-        Goodbye
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio37e')}
-        />
-      </strong>
-      <span>Adeus</span>
-    </p>
-    <p>
-      <strong>
-        See you (see ya)
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio38e')}
-        />
-      </strong>
-      <span>Até logo</span>
-    </p>
-  </div>
-  <div className={styles["page71__word-column"]}>
-    <p>
-      <strong>
-        See you later
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio39e')}
-        />
-      </strong>
-      <span>Até mais tarde</span>
-    </p>
-    <p>
-      <strong>
-        Good night
-        <img
-          src={eng_audio_icon}
-          alt="English Audio"
-          className={styles["page71__icon"]}
-          onClick={() => playAudio('pg71_audio40e')}
-        />
-      </strong>
-      <span>Boa noite</span>
-    </p>
-  </div>
-</div>
-
+                            <div className={styles["page71__word-column"]}>
+                                <p>
+                                    <strong>
+                                        Hello/Hi
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio32e')}
+                                        />
+                                    </strong>
+                                    <span>Olá/Oi</span>
+                                </p>
+                                <p>
+                                    <strong>
+                                        Good morning
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio33e')}
+                                        />
+                                    </strong>
+                                    <span>Bom dia</span>
+                                </p>
+                            </div>
+                            <div className={styles["page71__word-column"]}>
+                                <p>
+                                    <strong>
+                                        Good afternoon
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio34e')}
+                                        />
+                                    </strong>
+                                    <span>Boa tarde</span>
+                                </p>
+                                <p>
+                                    <strong>
+                                        Good evening
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio35e')}
+                                        />
+                                    </strong>
+                                    <span>Boa noite</span>
+                                </p>
+                            </div>
+                            <div className={styles["page71__word-column"]}>
+                                <p>
+                                    <strong>
+                                        Bye
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio36e')}
+                                        />
+                                    </strong>
+                                    <span>Tchau</span>
+                                </p>
+                                <p>
+                                    <strong>
+                                        Goodbye
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio37e')}
+                                        />
+                                    </strong>
+                                    <span>Adeus</span>
+                                </p>
+                                <p>
+                                    <strong>
+                                        See you (see ya)
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio38e')}
+                                        />
+                                    </strong>
+                                    <span>Até logo</span>
+                                </p>
+                            </div>
+                            <div className={styles["page71__word-column"]}>
+                                <p>
+                                    <strong>
+                                        See you later
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio39e')}
+                                        />
+                                    </strong>
+                                    <span>Até mais tarde</span>
+                                </p>
+                                <p>
+                                    <strong>
+                                        Good night
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page71__icon"]}
+                                            onClick={() => playAudio('pg71_audio40e')}
+                                        />
+                                    </strong>
+                                    <span>Boa noite</span>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </aside>
@@ -617,3 +643,4 @@ const Pagina71 = () => {
 };
 
 export default Pagina71;
+

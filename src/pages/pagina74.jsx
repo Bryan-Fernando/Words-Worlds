@@ -74,12 +74,31 @@ const pagina74 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'is', 'is', 'is', 'is', 'are',
         'is not', 'are not', 'is not', 'is not', 'is not'
     ];
 
+    const affirmativeQuestions = [
+        "The weather ____ beautiful today.",
+        "My cat ____ playful in the morning.",
+        "Mary ____ my best friend.",
+        "This book ____ interesting.",
+        "The flowers ____ blooming in the garden."
+    ];
+
+    const negativeQuestions = [
+        "My dog ____ aggressive.",
+        "The children ____ quiet during class.",
+        "The sky ____ clear at night.",
+        "This restaurant ____ expensive.",
+        "The movie ____ boring."
+    ];
+
+    const allQuestions = [...affirmativeQuestions, ...negativeQuestions];
+    const fullAnswers = allQuestions.map((q, i) => q.replace('____', correctAnswers[i]));
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) =>
@@ -88,6 +107,16 @@ const pagina74 = () => {
         setResults(newResults);
     };
 
+    const handleReset = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setIsSpeedReduced({});
+        setShowAnswersKey(false);
+    };
+
+    const handleToggleAnswersKey = () => {
+        setShowAnswersKey(v => !v);
+    };
 
     const handleInputChange = (value, index) => {
         setInputValues((prevValues) => {
@@ -100,13 +129,9 @@ const pagina74 = () => {
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
+            audio.play().catch(() => { });
         }
     };
 
@@ -116,7 +141,6 @@ const pagina74 = () => {
             [audioKey]: !prevState[audioKey]
         }));
     };
-
 
     return (
         <div className={styles["page74__container"]}>
@@ -159,8 +183,8 @@ const pagina74 = () => {
                 <div className={styles["page74__container-questoes"]}>
                     <div className={styles["page74__questions1"]}>
                         <div className={styles["page74__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
+                            <p>Use as formas completas do verbo. <br />
+                                E as tabelas para formar as frases corretas.</p>
                         </div>
                         <p className={styles["page74__a-titulo-question"]}>
                             Affirmative:
@@ -177,21 +201,15 @@ const pagina74 = () => {
                                 onClick={() => playAudio("global_affirmativep")}
                             />
                         </p>
-                        
-                        {[
-                            "The weather ____ beautiful today.",
-                            "My cat ____ playful in the morning.",
-                            "Mary ____ my best friend.",
-                            "This book ____ interesting.",
-                            "The flowers ____ blooming in the garden."
-                        ].map((question, index) => {
-                            const audioKey = `pg74_audio${index + 1}`;
 
+                        {affirmativeQuestions.map((question, index) => {
+                            const audioKey = `pg74_audio${index + 1}`;
+                            const parts = question.split('____');
                             return (
                                 <div key={index} className={styles["page74__question"]}>
                                     <span>
                                         <em>
-                                            <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
+                                            <strong>{String.fromCharCode(97 + index)}.</strong> {parts[0]}
                                         </em>
                                     </span>
                                     <div className={styles["page74__input-container"]}>
@@ -202,7 +220,7 @@ const pagina74 = () => {
                                             className={styles["page74__input-box"]}
                                         />
                                     </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
+                                    <span><em>{parts[1]}</em></span>
                                     <div className={styles["page74__icons-container"]}>
                                         {results[index] !== null && (
                                             <img
@@ -238,7 +256,7 @@ const pagina74 = () => {
                         <img className={styles["page74__imagem"]} src={pagina74_imagem1} alt="" />
                     </div>
                 </div>
-                
+
                 <div className={styles["page74__tabela-negativa-container"]}>
                     <div className={styles["page74__table-header-negativa"]}>NEGATIVA</div>
                     <table className={styles["page74__styled-table-negativa"]}>
@@ -255,13 +273,11 @@ const pagina74 = () => {
                     </table>
                 </div>
 
-
                 <div className={styles["page74__container-questoes"]}>
-
                     <div className={styles["page74__questions2"]}>
                         <div className={styles["page74__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
+                            <p>Use as formas completas do verbo. <br />
+                                E as tabelas para formar as frases corretas.</p>
                         </div>
                         <p className={styles["page74__a-titulo-question"]}>
                             Negative:
@@ -279,36 +295,31 @@ const pagina74 = () => {
                             />
                         </p>
 
-                        {[
-                            "My dog ____ aggressive.",
-                            "The children ____ quiet during class.",
-                            "The sky ____ clear at night.",
-                            "This restaurant ____ expensive.",
-                            "The movie ____ boring."
-                        ].map((question, index) => {
+                        {negativeQuestions.map((question, index) => {
                             const audioKey = `pg74_audio${index + 6}`;
-
+                            const parts = question.split('____');
+                            const i = index + 5;
                             return (
-                                <div key={index + 5} className={styles["page74__question"]}>
+                                <div key={i} className={styles["page74__question"]}>
                                     <span>
                                         <em>
-                                            <strong>{String.fromCharCode(102 + index)}.</strong> {question.split('____')[0]}
+                                            <strong>{String.fromCharCode(102 + index)}.</strong> {parts[0]}
                                         </em>
                                     </span>
                                     <div className={styles["page74__input-container"]}>
                                         <input
                                             type="text"
-                                            value={inputValues[index + 5]}
-                                            onChange={(e) => handleInputChange(e.target.value, index + 5)}
+                                            value={inputValues[i]}
+                                            onChange={(e) => handleInputChange(e.target.value, i)}
                                             className={styles["page74__input-box"]}
                                         />
                                     </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
+                                    <span><em>{parts[1]}</em></span>
                                     <div className={styles["page74__icons-container"]}>
-                                        {results[index + 5] !== null && (
+                                        {results[i] !== null && (
                                             <img
-                                                src={results[index + 5] ? correct_icon : wrong_icon}
-                                                alt={results[index + 5] ? "Correct" : "Incorrect"}
+                                                src={results[i] ? correct_icon : wrong_icon}
+                                                alt={results[i] ? "Correct" : "Incorrect"}
                                                 className={styles["page74__checkmark-image"]}
                                             />
                                         )}
@@ -334,15 +345,30 @@ const pagina74 = () => {
                                 </div>
                             );
                         })}
-
                     </div>
                     <div className={styles["page74__container-imagem"]}>
                         <img className={styles["page74__imagem"]} src={pagina74_imagem2} alt="" />
                     </div>
                 </div>
-                
-                <button className={styles["page74__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
 
+                <div className={styles["page74__actions"]}>
+                    <button className={styles["page74__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
+                    <button className={styles["page74__reset--button"]} onClick={handleReset}>Reset</button>
+                    <button className={styles["page74__answersKey--button"]} onClick={handleToggleAnswersKey}>Answers Key</button>
+                </div>
+
+                {showAnswersKey && (
+                    <div className={styles["page74__answersKey-box"]}>
+                        {fullAnswers.map((ans, idx) => (
+                            <div key={idx} className={styles["page74__answersKey-item"]}>
+                                <span className={styles["page74__answersKey-num"]}>
+                                    {String.fromCharCode(97 + idx)}.
+                                </span>
+                                <span className={styles["page74__answersKey-text"]}>{ans}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );

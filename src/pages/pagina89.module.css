@@ -11,9 +11,9 @@
 .page89__main {
     justify-self: start;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: space-between;
-    width: 80%;
+    width: 100%;
     gap: 5rem;
 }
 
@@ -32,8 +32,8 @@
 .page89__questions-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    
+  gap: 6rem;
+
 }
 
 .page89__column {
@@ -80,8 +80,8 @@
 }
 
 .page89__icon-check {
-    width: 30px;
-    height: 30px;
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .page89__check-button {
@@ -94,13 +94,17 @@
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s;
-    margin: 3rem 0;
+    height: 4.7rem;
+    display: inline-flex;
+    align-items: center; padding: 0 2rem;
+    justify-content: center;
     text-align: left;
     display: block;
     font-size: 2rem;
-    width: fit-content;
+    width: 12rem;
     justify-self: start;
     align-self: start;
+    text-align: center;
 }
 
 .page89__check-button:hover {
@@ -132,4 +136,115 @@
 
 .page89__audio-icon:hover {
     transform: scale(1.2);
+}
+
+/* Ações: Check → Reset → Answers Key */
+.page89__actions {
+    display: flex;
+    gap: 1rem;
+    align-items: left;
+}
+
+/* Reset */
+.page89__reset--button {
+    height: 4.7rem;
+    background-color: #A61C28;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+    transition: background-color .3s, transform .05s;
+    width: 12rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.page89__reset--button:hover {
+    background: #821a22;
+}
+
+.page89__reset--button:active {
+    transform: translateY(1px);
+}
+
+.page89__reset--button:focus-visible {
+    outline: 3px solid #ffd2d6;
+    outline-offset: 3px;
+}
+
+/* Answers Key (botão) */
+.page89__answersKey--button {
+    background: #0A3282;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: .5rem;
+    font-weight: bold;
+    box-shadow: .2rem .2rem .5rem rgba(0, 0, 0, 0.3);
+    transition: background-color .3s, transform .05s;
+    width: 16rem;
+    text-align: center;
+    font-size: 1.8rem;
+    /* conforme pedido */
+    height: 4.7rem;
+}
+
+.page89__answersKey--button:hover {
+    background: #072861;
+}
+
+.page89__answersKey--button:active {
+    transform: translateY(1px);
+}
+
+.page89__answersKey--button:focus-visible {
+    outline: 3px solid #cfe0ff;
+    outline-offset: 3px;
+}
+
+.page89__answersKey--button[aria-pressed="true"] {
+    filter: brightness(0.95);
+}
+
+/* Answers Key (lista) */
+.page89__answersKey-box {
+    margin-top: 2rem;
+    border: 2px dotted #A61C28;
+    border-radius: 12px;
+    padding: 2rem;
+    background: #fffaf9;
+    max-width: 100%;
+    font-size: 2rem;
+    text-align: left;
+}
+
+.page89__answersKey-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px dashed #f0c6c9;
+    text-align: left;
+}
+
+.page89__answersKey-item:last-child {
+    border-bottom: none;
+}
+
+.page89__answersKey-num {
+    color: #A61C28;
+    font-weight: 800;
+    min-width: 3rem;
+    text-align: right;
+}
+
+.page89__answersKey-text {
+    color: #103275;
+    font-weight: 600;
+    line-height: 1.5;
+    flex: 1;
+    text-align: left;
+    word-break: break-word;
 }

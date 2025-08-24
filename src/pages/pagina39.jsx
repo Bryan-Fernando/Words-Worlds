@@ -40,6 +40,7 @@ const Pagina39 = () => {
     const [pulsingAudioPortugueseIndex, setPulsingAudioPortugueseIndex] = useState(null);
     const [isSpeedReduced, setIsSpeedReduced] = useState([false, false, false, false, false]);
     const [audioPlaying, setAudioPlaying] = useState(null);
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctSentences = [
         "The dog is sleeping on the floor",
@@ -57,35 +58,18 @@ const Pagina39 = () => {
         "We are cooking dinner"
     ];
 
-    const audioFiles = [
-        pg39_audioA,
-        pg39_audioB,
-        pg39_audioC,
-        pg39_audioD,
-        pg39_audioE
-    ];
-
-    const portugueseAudioFiles = [
-        pg39_audio1,
-        pg39_audio2,
-        pg39_audio3,
-        pg39_audio4,
-        pg39_audio5
-    ];
+    const audioFiles = [pg39_audioA, pg39_audioB, pg39_audioC, pg39_audioD, pg39_audioE];
+    const portugueseAudioFiles = [pg39_audio1, pg39_audio2, pg39_audio3, pg39_audio4, pg39_audio5];
 
     const tocarAudio = (audioFile) => {
         if (audioPlaying) {
             audioPlaying.pause();
             audioPlaying.currentTime = 0;
         }
-
         const newAudio = new Audio(audioFile);
         setAudioPlaying(newAudio);
         newAudio.play();
-
-        newAudio.onended = () => {
-            setAudioPlaying(null);
-        };
+        newAudio.onended = () => setAudioPlaying(null);
     };
 
     const handleAudioClick = (index, isPortuguese = false, event) => {
@@ -94,28 +78,22 @@ const Pagina39 = () => {
         const audio = new Audio(audioFile);
         audio.playbackRate = isSpeedReduced[index] ? 0.75 : 1;
 
-        if (isPortuguese) {
-            setPulsingAudioPortugueseIndex(index);
-        } else {
-            setPulsingAudioEnglishIndex(index);
-        }
+        if (isPortuguese) setPulsingAudioPortugueseIndex(index);
+        else setPulsingAudioEnglishIndex(index);
 
         audio.play();
         audio.onended = () => {
-            if (isPortuguese) {
-                setPulsingAudioPortugueseIndex(null);
-            } else {
-                setPulsingAudioEnglishIndex(null);
-            }
+            if (isPortuguese) setPulsingAudioPortugueseIndex(null);
+            else setPulsingAudioEnglishIndex(null);
         };
     };
 
     const reduzirVelocidade = (index, event) => {
         event.stopPropagation();
         setIsSpeedReduced((prev) => {
-            const newSpeeds = [...prev];
-            newSpeeds[index] = !newSpeeds[index];
-            return newSpeeds;
+            const next = [...prev];
+            next[index] = !next[index];
+            return next;
         });
     };
 
@@ -126,13 +104,12 @@ const Pagina39 = () => {
 
     const handleSentenceClick = (sentence) => {
         const indexInInputs = inputValues.indexOf(sentence);
-
         if (indexInInputs !== -1) {
             const newValues = [...inputValues];
             newValues[indexInInputs] = '';
             setInputValues(newValues);
         } else {
-            const emptyIndex = inputValues.findIndex((value) => value === '');
+            const emptyIndex = inputValues.findIndex((v) => v === '');
             if (emptyIndex !== -1) {
                 const newValues = [...inputValues];
                 newValues[emptyIndex] = sentence;
@@ -141,8 +118,24 @@ const Pagina39 = () => {
         }
     };
 
+    const handleReset = () => {
+        // limpa tudo sem sair da página
+        setInputValues(['', '', '', '', '']);
+        setResults([null, null, null, null, null]);
+        setPulsingAudioEnglishIndex(null);
+        setPulsingAudioPortugueseIndex(null);
+        setIsSpeedReduced([false, false, false, false, false]);
+        setShowAnswersKey(false);
+        if (audioPlaying) {
+            audioPlaying.pause();
+            audioPlaying.currentTime = 0;
+            setAudioPlaying(null);
+        }
+    };
+
     return (
         <div className={styles["page39__container"]}>
+            {/* HEADER */}
             <header className={styles["page39__header"]}>
                 <h1 className={styles["page39__audio--text"]} style={{ color: '#A61C28' }}>
                     Exercise:
@@ -159,6 +152,7 @@ const Pagina39 = () => {
                         onClick={() => tocarAudio(pg39_audio1p)}
                     />
                 </h1>
+
                 <h2 className={styles["page39__audio--text2"]}>
                     2. Matching Exercises (Match the sentence with the correct image/description)
                     <img
@@ -174,6 +168,7 @@ const Pagina39 = () => {
                         onClick={() => tocarAudio(pg39_audio2p)}
                     />
                 </h2>
+
                 <p className={styles["page39__audio--text"]}>
                     Match the sentence (A-E) with the correct picture or description (1-5):
                     <img
@@ -189,21 +184,29 @@ const Pagina39 = () => {
                         onClick={() => tocarAudio(pg39_audio3p)}
                     />
                 </p>
-                <p className={styles["page39__paragraph"]}>Clique ou digite</p>
-                
-            </header>
-            <aside className={styles["page39__new-aside"]}>
-                    <div className={styles["page39__new-aside-notes1"]}>
-                        <img className={styles["page39__aside-img"]} onClick={() => playAudio(bell)} src={campainha} alt="" />
-                        <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
-                    </div>
-                    <div className={styles["page39__new-aside-notes2"]}>
-                        <p style={{ fontSize: "2rem" }}>
-                            Para uma melhor visão da página em caso de <span style={{fontWeight: "bold"}}>telas menores</span>, utilize o <span style={{fontWeight: "bold"}}>zoom reverso.</span>
-                        </p>
-                    </div>
-                </aside>
 
+                <p className={styles["page39__paragraph"]}>Clique ou digite</p>
+            </header>
+
+            {/* ASIDE (NOTES) */}
+            <aside className={styles["page39__new-aside"]}>
+                <div className={styles["page39__new-aside-notes1"]}>
+                    <img
+                        className={styles["page39__aside-img"]}
+                        onClick={() => tocarAudio(bell)}
+                        src={campainha}
+                        alt=""
+                    />
+                    <p>NOTE: RING THE BELL AND READ CAREFULLY - PLEASE!</p>
+                </div>
+                <div className={styles["page39__new-aside-notes2"]}>
+                    <p style={{ fontSize: "2rem" }}>
+                        Para uma melhor visão da página em caso de <span style={{ fontWeight: "bold" }}>telas menores</span>, utilize o <span style={{ fontWeight: "bold" }}>zoom reverso.</span>
+                    </p>
+                </div>
+            </aside>
+
+            {/* MAIN */}
             <main className={styles["page39__main"]}>
                 <div className={styles["page39__images--container"]}>
                     {[pagina39_imagem1, pagina39_imagem2, pagina39_imagem3, pagina39_imagem4, pagina39_imagem5].map((image, index) => (
@@ -232,6 +235,7 @@ const Pagina39 = () => {
                         </div>
                     ))}
                 </div>
+
                 <div className={styles["page39__sentences--container"]}>
                     <p><strong>Sentences:</strong></p>
                     {displayedSentences.map((sentence, index) => (
@@ -260,9 +264,39 @@ const Pagina39 = () => {
                         </div>
                     ))}
                 </div>
-                <button className={styles["page39__check--button"]} onClick={handleCheckClick}>
-                    Check
-                </button>
+
+                <div className={styles["page39__buttons--container"]}>
+                    <button className={styles["page39__check--button"]} onClick={handleCheckClick}>
+                        Check
+                    </button>
+                    <button className={styles["page39__reset--button"]} onClick={handleReset}>
+                        Reset
+                    </button>
+                    <button
+                        className={styles["page39__answersKey--button"]}
+                        onClick={() => setShowAnswersKey((prev) => !prev)}
+                        aria-expanded={showAnswersKey}
+                        aria-controls="answers-key-box"
+                    >
+                        Answers Key
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div
+                        id="answers-key-box"
+                        className={styles["page39__answersKey--box"]}
+                        role="region"
+                        aria-label="Gabarito completo"
+                    >
+                        {correctSentences.map((answer, i) => (
+                            <div key={i} className={styles["page39__answersKey--item"]}>
+                                <span className={styles["page39__answersKey--num"]}>{i + 1}.</span>
+                                <span className={styles["page39__answersKey--text"]}>{answer}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
         </div>
     );

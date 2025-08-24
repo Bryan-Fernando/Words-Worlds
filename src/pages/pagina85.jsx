@@ -69,281 +69,334 @@ const audioMap = {
 };
 
 const Pagina85 = () => {
-    const [inputValues, setInputValues] = useState(Array(10).fill(''));
-    const [results, setResults] = useState(Array(10).fill(null));
-    const [isSpeedReduced, setIsSpeedReduced] = useState({});
+  const [inputValues, setInputValues] = useState(Array(10).fill(''));
+  const [results, setResults] = useState(Array(10).fill(null));
+  const [isSpeedReduced, setIsSpeedReduced] = useState({});
+  const [showAnswersKey, setShowAnswersKey] = useState(false);
 
-    const correctAnswers = [
-        'is', 'is', 'is', 'are', 'are',
-        'is not', 'are not', 'am not', 'is not', 'are not'
-    ];
+  const correctAnswers = [
+    'is', 'is', 'is', 'are', 'are',
+    'is not', 'are not', 'am not', 'is not', 'are not'
+  ];
 
-    const handleCheckClick = () => {
-        setResults(inputValues.map((value, index) =>
-            value.trim() === correctAnswers[index]
-        ));
-    };
+  const answersKeyItems = [
+    'Mathematics is my favorite subject.',
+    'The park is quiet in the morning.',
+    'He is a good dancer.',
+    'These shoes are comfortable.',
+    'The birds are singing happily.',
+    'Her cat is not black.',
+    'The flowers are not wilted.',
+    'I am not a morning person.',
+    'The test is not difficult.',
+    'Our neighbors are not noisy.'
+  ];
 
-    const handleInputChange = (value, index) => {
-        const newValues = [...inputValues];
-        newValues[index] = value;
-        setInputValues(newValues);
-    };
+  const handleCheckClick = () => {
+    setResults(inputValues.map((value, index) => value.trim() === correctAnswers[index]));
+  };
 
-    const playAudio = (audioKey) => {
-        if (audioMap[audioKey]) {
-            const audio = new Audio(audioMap[audioKey]);
-            const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
-            audio.playbackRate = speed;
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
-        }
-    };
+  const handleInputChange = (value, index) => {
+    const newValues = [...inputValues];
+    newValues[index] = value;
+    setInputValues(newValues);
+  };
 
-    const toggleSpeedReduction = (audioKey) => {
-        setIsSpeedReduced((prevState) => ({
-            ...prevState,
-            [audioKey]: !prevState[audioKey]
-        }));
-    };
+  const handleReset = () => {
+    setInputValues(Array(10).fill(''));
+    setResults(Array(10).fill(null));
+    setIsSpeedReduced({});
+  };
 
-    return (
-        <div className={styles["page85__container"]}>
-            <header className={styles["page85__header"]}>
-                <h1 className={styles["page85__header--h1"]}>
-                    Learning Language Exercises
-                    <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles["page85__header--icon"]}
-                        onClick={() => playAudio("global_learning_le_e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles["page85__header--icon"]}
-                        onClick={() => playAudio("global_learning_le_p")}
-                    />
-                </h1>
-                <h2 className={styles["page85__header--h2"]}>
-                Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
-                </h2>
-            </header>
+  const handleToggleAnswersKey = () => {
+    setShowAnswersKey((v) => !v);
+  };
 
-            <main className={styles["page85__main"]}>
-                <div className={styles["page85__table--afirmativa--container"]}>
-                    <div className={styles["page85__table--header--afirmativa"]}>AFIRMATIVA</div>
-                    <table className={styles["page85__styled--table--afirmativa"]}>
-                        <thead className={styles["page85__thead"]}>
-                            <tr className={styles["page85__cell--table"]}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th>Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
+  const playAudio = (audioKey) => {
+    if (audioMap[audioKey]) {
+      const audio = new Audio(audioMap[audioKey]);
+      const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
+      audio.playbackRate = speed;
+      audio.play().catch((error) => console.error('Erro ao reproduzir o áudio:', error));
+    } else {
+      console.warn(`Áudio não encontrado para: ${audioKey}`);
+    }
+  };
 
-                <div className={styles["page85__container--questoes"]}>
-                    <div className={styles["page85__questions--1"]}>
-                        <div className={styles["page85__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
-                        </div>
-                        <p className={styles["page85__question--titulo"]}>
-                            Affirmative:
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles["page85__header--icon"]}
-                                onClick={() => playAudio("global_affirmativee")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles["page85__header--icon"]}
-                                onClick={() => playAudio("global_affirmativep")}
-                            />
-                        </p>
+  const toggleSpeedReduction = (audioKey) => {
+    setIsSpeedReduced((prevState) => ({
+      ...prevState,
+      [audioKey]: !prevState[audioKey]
+    }));
+  };
 
-                        {[
-                            "Mathematics ____ my favorite subject.",
-                            "The park ____ quiet in the morning.",
-                            "He ____ a good dancer.",
-                            "These shoes ____ comfortable.",
-                            "The birds ____ singing happily."
-                        ].map((question, index) => {
-                            const audioKey = `pg85_audio${index + 1}`;
+  return (
+    <div className={styles['page85__container']}>
+      <header className={styles['page85__header']}>
+        <h1 className={styles['page85__header--h1']}>
+          Learning Language Exercises
+          <img
+            src={eng_audio_icon}
+            alt="English audio"
+            className={styles['page85__header--icon']}
+            onClick={() => playAudio('global_learning_le_e')}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Portuguese audio"
+            className={styles['page85__header--icon']}
+            onClick={() => playAudio('global_learning_le_p')}
+          />
+        </h1>
+        <h2 className={styles['page85__header--h2']}>
+          Complete the sentences in the Simple Present Form of Verb Be after listening to the audio <br /> Complete as frases no Presente
+          Simples do verbo "To Be" (ser/estar) após ouvir o áudio.
+        </h2>
+      </header>
 
-                            return (
-                                <div key={index} className={styles["page85__question"]}>
-                                    <span className={styles["page85__question--text"]}>
-                                        <em >
-                                            <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
-                                        </em>
-                                    </span>
-                                    <div className={styles["page85__input--container"]}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index]}
-                                            onChange={(e) => handleInputChange(e.target.value, index)}
-                                            className={styles["page85__input--box"]}
-                                        />
-                                    </div>
-                                    <span className={styles["page85__question--text"]}><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles["page85__icons--container"]}>
-                                        {results[index] !== null && (
-                                            <img
-                                                src={results[index] ? correct_icon : wrong_icon}
-                                                alt={results[index] ? "Correct" : "Incorrect"}
-                                                className={styles["page85__checkmark--image"]}
-                                            />
-                                        )}
-
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page85__additional--icon"]}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Portuguese Audio"
-                                            className={styles["page85__additional--icon"]}
-                                            onClick={() => playAudio(`${audioKey}p`)}
-                                        />
-
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles["page85__additional--icon"]} ${isSpeedReduced[audioKey] ? styles["page85__additional--icon--pulsing"] : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                    <div className={styles["page85__container--imagem"]}>
-                        <img className={styles["page85__image"]} src={pagina85_imagem1} alt="" />
-                    </div>
-                </div>
-
-                <div className={styles["page85__table--negativa--container"]}>
-                    <div className={styles["page85__table--header--negativa"]}>NEGATIVA</div>
-                    <table className={styles["page85__styled--table--negativa"]}>
-                        <thead className={styles["page85__thead"]}>
-                            <tr className={styles["page85__cell--table"]}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-
-
-                <div className={styles["page85__container--questoes"]}>
-                    <div className={styles["page85__questions--2"]}>
-                        <div className={styles["page85__word-bank-header-1"]}>
-                            <p>Use as formas completas do verbo. <br /> 
-                            E as tabelas para formar as frases corretas.</p>
-                        </div>
-                        <p className={styles["page85__question--titulo"]}>
-                            Negative:
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles["page85__header--icon"]}
-                                onClick={() => playAudio("global_negativee")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles["page85__header--icon"]}
-                                onClick={() => playAudio("global_negativep")}
-                            />
-                        </p>
-
-                        {[
-                            "Her cat ____ black.",
-                            "The flowers ____ wilted.",
-                            "I ____ a morning person.",
-                            "The test ____ difficult.",
-                            "Our neighbors ____ noisy."
-                        ].map((question, index) => {
-                            const audioKey = `pg85_audio${index + 6}`;
-
-                            return (
-                                <div key={index + 5} className={styles["page85__question"]}>
-                                    <span className={styles["page85__question--text"]}>
-                                        <em>
-                                            <strong>{String.fromCharCode(102 + index)}.</strong> {question.split('____')[0]}
-                                        </em>
-                                    </span>
-                                    <div className={styles["page85__input--container"]}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index + 5]}
-                                            onChange={(e) => handleInputChange(e.target.value, index + 5)}
-                                            className={styles["page85__input--box"]}
-                                        />
-                                    </div>
-                                    <span className={styles["page85__question--text"]}><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles["page85__icons--container"]}>
-
-                                        {results[index + 5] !== null && (
-                                            <img
-                                                src={results[index + 5] ? correct_icon : wrong_icon}
-                                                alt={results[index + 5] ? "Correct" : "Incorrect"}
-                                                className={styles["page85__checkmark--image"]}
-                                            />
-                                        )}
-
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page85__additional--icon"]}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Portuguese Audio"
-                                            className={styles["page85__additional--icon"]}
-                                            onClick={() => playAudio(`${audioKey}p`)}
-                                        />
-
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles["page85__additional--icon"]} ${isSpeedReduced[audioKey] ? styles["page85__additional--icon--pulsing"] : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-
-                    </div>
-                    <div className={styles["page85__container--imagem"]}>
-                        <img className={styles["page85__image"]} src={pagina85_imagem2} alt="" />
-                    </div>
-                </div>
-                
-                <button className={styles["page85__check--button"]} onClick={handleCheckClick}><em>Check</em></button>
-
-            </main>
+      <main className={styles['page85__main']}>
+        <div className={styles['page85__table--afirmativa--container']}>
+          <div className={styles['page85__table--header--afirmativa']}>AFIRMATIVA</div>
+          <table className={styles['page85__styled--table--afirmativa']}>
+            <thead className={styles['page85__thead']}>
+              <tr className={styles['page85__cell--table']}>
+                <th>Introdução</th>
+                <th>Sujeito</th>
+                <th>Verbo <br /> Auxiliar</th>
+                <th>Advérbio</th>
+                <th>Verbo(s)</th>
+                <th>Objeto <br /> Complemento</th>
+              </tr>
+            </thead>
+          </table>
         </div>
-    );
+
+        <div className={styles['page85__container--questoes']}>
+          <div className={styles['page85__questions--1']}>
+            <div className={styles['page85__word-bank-header-1']}>
+              <p>
+                Use as formas completas do verbo. <br />
+                E as tabelas para formar as frases corretas.
+              </p>
+            </div>
+            <p className={styles['page85__question--titulo']}>
+              Affirmative:
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles['page85__header--icon']}
+                onClick={() => playAudio('global_affirmativee')}
+              />
+              <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles['page85__header--icon']}
+                onClick={() => playAudio('global_affirmativep')}
+              />
+            </p>
+
+            {[
+              'Mathematics ____ my favorite subject.',
+              'The park ____ quiet in the morning.',
+              'He ____ a good dancer.',
+              'These shoes ____ comfortable.',
+              'The birds ____ singing happily.'
+            ].map((question, index) => {
+              const audioKey = `pg85_audio${index + 1}`;
+              return (
+                <div key={index} className={styles['page85__question']}>
+                  <span className={styles['page85__question--text']}>
+                    <em>
+                      <strong>{String.fromCharCode(97 + index)}.</strong> {question.split('____')[0]}
+                    </em>
+                  </span>
+                  <div className={styles['page85__input--container']}>
+                    <input
+                      type="text"
+                      value={inputValues[index]}
+                      onChange={(e) => handleInputChange(e.target.value, index)}
+                      className={styles['page85__input--box']}
+                    />
+                  </div>
+                  <span className={styles['page85__question--text']}>
+                    <em>{question.split('____')[1]}</em>
+                  </span>
+                  <div className={styles['page85__icons--container']}>
+                    {results[index] !== null && (
+                      <img
+                        src={results[index] ? correct_icon : wrong_icon}
+                        alt={results[index] ? 'Correct' : 'Incorrect'}
+                        className={styles['page85__checkmark--image']}
+                      />
+                    )}
+                    <img
+                      src={eng_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page85__additional--icon']}
+                      onClick={() => playAudio(audioKey)}
+                    />
+                    <img
+                      src={ptbr_audio_icon}
+                      alt="Portuguese Audio"
+                      className={styles['page85__additional--icon']}
+                      onClick={() => playAudio(`${audioKey}p`)}
+                    />
+                    <img
+                      src={slow_audio_icon}
+                      alt="Volume Reduced Icon"
+                      className={`${styles['page85__additional--icon']} ${
+                        isSpeedReduced[audioKey] ? styles['page85__additional--icon--pulsing'] : ''
+                      }`}
+                      onClick={() => toggleSpeedReduction(audioKey)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles['page85__container--imagem']}>
+            <img className={styles['page85__image']} src={pagina85_imagem1} alt="" />
+          </div>
+        </div>
+
+        <div className={styles['page85__table--negativa--container']}>
+          <div className={styles['page85__table--header--negativa']}>NEGATIVA</div>
+          <table className={styles['page85__styled--table--negativa']}>
+            <thead className={styles['page85__thead']}>
+              <tr className={styles['page85__cell--table']}>
+                <th>Introdução</th>
+                <th>Sujeito</th>
+                <th>Verbo <br /> Auxiliar</th>
+                <th>
+                  <span style={{ color: 'red' }}>Not</span> <br />
+                  Advérbio
+                </th>
+                <th>Verbo(s)</th>
+                <th>Objeto <br /> Complemento</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div className={styles['page85__container--questoes']}>
+          <div className={styles['page85__questions--2']}>
+            <div className={styles['page85__word-bank-header-1']}>
+              <p>
+                Use as formas completas do verbo. <br />
+                E as tabelas para formar as frases corretas.
+              </p>
+            </div>
+            <p className={styles['page85__question--titulo']}>
+              Negative:
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles['page85__header--icon']}
+                onClick={() => playAudio('global_negativee')}
+              />
+              <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles['page85__header--icon']}
+                onClick={() => playAudio('global_negativep')}
+              />
+            </p>
+
+            {[
+              'Her cat ____ black.',
+              'The flowers ____ wilted.',
+              'I ____ a morning person.',
+              'The test ____ difficult.',
+              'Our neighbors ____ noisy.'
+            ].map((question, index) => {
+              const audioKey = `pg85_audio${index + 6}`;
+              return (
+                <div key={index + 5} className={styles['page85__question']}>
+                  <span className={styles['page85__question--text']}>
+                    <em>
+                      <strong>{String.fromCharCode(102 + index)}.</strong> {question.split('____')[0]}
+                    </em>
+                  </span>
+                  <div className={styles['page85__input--container']}>
+                    <input
+                      type="text"
+                      value={inputValues[index + 5]}
+                      onChange={(e) => handleInputChange(e.target.value, index + 5)}
+                      className={styles['page85__input--box']}
+                    />
+                  </div>
+                  <span className={styles['page85__question--text']}>
+                    <em>{question.split('____')[1]}</em>
+                  </span>
+                  <div className={styles['page85__icons--container']}>
+                    {results[index + 5] !== null && (
+                      <img
+                        src={results[index + 5] ? correct_icon : wrong_icon}
+                        alt={results[index + 5] ? 'Correct' : 'Incorrect'}
+                        className={styles['page85__checkmark--image']}
+                      />
+                    )}
+                    <img
+                      src={eng_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page85__additional--icon']}
+                      onClick={() => playAudio(audioKey)}
+                    />
+                    <img
+                      src={ptbr_audio_icon}
+                      alt="Portuguese Audio"
+                      className={styles['page85__additional--icon']}
+                      onClick={() => playAudio(`${audioKey}p`)}
+                    />
+                    <img
+                      src={slow_audio_icon}
+                      alt="Volume Reduced Icon"
+                      className={`${styles['page85__additional--icon']} ${
+                        isSpeedReduced[audioKey] ? styles['page85__additional--icon--pulsing'] : ''
+                      }`}
+                      onClick={() => toggleSpeedReduction(audioKey)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div className={styles['page85__container--imagem']}>
+            <img className={styles['page85__image']} src={pagina85_imagem2} alt="" />
+          </div>
+        </div>
+
+        <div className={styles['page85__actions']}>
+          <button type="button" className={styles['page85__check--button']} onClick={handleCheckClick}>
+            <em>Check</em>
+          </button>
+          <button type="button" className={styles['page85__reset--button']} onClick={handleReset}>
+            Reset
+          </button>
+          <button
+            type="button"
+            className={styles['page85__answersKey--button']}
+            onClick={handleToggleAnswersKey}
+            aria-pressed={showAnswersKey ? 'true' : 'false'}
+          >
+            Answers Key
+          </button>
+        </div>
+
+        {showAnswersKey && (
+          <div className={styles['page85__answersKey-box']}>
+            {answersKeyItems.map((text, i) => (
+              <div key={i} className={styles['page85__answersKey-item']}>
+                <span className={styles['page85__answersKey-num']}>{i + 1}.</span>
+                <span className={styles['page85__answersKey-text']}>{text}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
+  );
 };
 
 export default Pagina85;
+

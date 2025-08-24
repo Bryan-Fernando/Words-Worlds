@@ -177,7 +177,9 @@ const Pagina10 = () => {
                                         />
                                     </td>
                                     <td className={styles["page10__table-translation"]}>
-                                        Você <span style={{ color: "red" }}>não</span> está na sala de aula (turma/classe) 2-B.{" "}
+                                        Você <span style={{ color: "red" }}>não</span> está na turma (sala de aula/classe) 2-B.{" "}
+                                        <br />                                        
+                                        Você <span style={{ color: "red" }}>não</span> é da turma (sala de aula/classe) 2-B.{" "} <br />
                                         <img
                                             src={ptbr_audio_icon}
                                             alt="Reproduzir tradução em português"

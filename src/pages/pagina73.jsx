@@ -78,16 +78,39 @@ const pagina73 = () => {
     const [inputValues, setInputValues] = useState(Array(10).fill(''));
     const [results, setResults] = useState(Array(10).fill(null));
     const [isSpeedReduced, setIsSpeedReduced] = useState({});
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'am', 'is', 'are', 'are', 'is',
         'am not', 'is not', 'are not', 'are not', 'is not'
     ];
 
+    const answersKeyItems = [
+        'I am a student.',
+        'She is my sister.',
+        'We are friends.',
+        'They are at home.',
+        'It is a beautiful day.',
+        'I am not a teacher.',
+        'She is not my mother.',
+        'We are not late.',
+        'They are not happy.',
+        'It is not cold today.'
+    ];
+
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => value.toLowerCase() === correctAnswers[index]);
         setResults(newResults);
     };
+
+    const handleResetClick = () => {
+        setInputValues(Array(10).fill(''));
+        setResults(Array(10).fill(null));
+        setIsSpeedReduced({});
+        setShowAnswersKey(false);
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey((v) => !v);
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -98,16 +121,11 @@ const pagina73 = () => {
     const playAudio = (audioKey) => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
-
             const speed = isSpeedReduced[audioKey] ? 0.6 : 1;
             audio.playbackRate = speed;
-
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
+            audio.play().catch(() => {});
         }
     };
-
 
     const toggleSpeedReduction = (audioKey) => {
         setIsSpeedReduced((prevState) => ({
@@ -115,7 +133,6 @@ const pagina73 = () => {
             [audioKey]: !prevState[audioKey]
         }));
     };
-
 
     return (
         <div className={styles["page73__container"]}>
@@ -185,7 +202,6 @@ const pagina73 = () => {
                     </table>
                 </div>
 
-
                 <div className={styles["page73__container-questoes"]}>
                     <div className={styles["page73__questions1"]}>
                         <div className={styles["page73__word-bank-header-1"]}>
@@ -216,7 +232,6 @@ const pagina73 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg73_audio${index + 1}`;
-
                             return (
                                 <div key={index} className={styles["page73__question"]}>
                                     <span>
@@ -269,10 +284,7 @@ const pagina73 = () => {
                     </div>
                 </div>
 
-
-
                 <div className={styles["page73__container-questoes"]}>
-
                     <div className={styles["page73__questions2"]}>
                         <div className={styles["page73__word-bank-header-1"]}>
                             <p>Use as formas completas do verbo. <br /> 
@@ -303,7 +315,6 @@ const pagina73 = () => {
                         ].map((question, index) => {
                             const parts = question.split('____');
                             const audioKey = `pg73_audio${index + 6}`;
-
                             return (
                                 <div key={index + 5} className={styles["page73__question"]}>
                                     <span>
@@ -355,16 +366,35 @@ const pagina73 = () => {
                                 </div>
                             );
                         })}
-
                     </div>
                     <div className={styles["page73__container-imagem"]}>
                         <img className={styles["page73__imagem2"]} src={pagina73_imagem2} alt="" />
                     </div>
                 </div>
+
+                <div className={styles["page73__actions"]}>
+                    <button className={styles["page73__check-button"]} onClick={handleCheckClick}>
+                        <em>Check</em>
+                    </button>
+                    <button className={styles["page73__reset--button"]} onClick={handleResetClick}>
+                        Reset
+                    </button>
+                    <button className={styles["page73__answersKey--button"]} onClick={toggleAnswersKey}>
+                        Answers Key
+                    </button>
+                </div>
+
+                {showAnswersKey && (
+                    <div className={styles["page73__answersKey-box"]}>
+                        {answersKeyItems.map((txt, i) => (
+                            <div key={i} className={styles["page73__answersKey-item"]}>
+                                <span className={styles["page73__answersKey-num"]}>{i + 1}.</span>
+                                <span className={styles["page73__answersKey-text"]}>{txt}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
             </main>
-            <button className={styles["page73__check-button"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
         </div>
     );
 };

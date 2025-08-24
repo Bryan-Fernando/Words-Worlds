@@ -41,11 +41,21 @@ const audioMap = {
 const Pagina89 = () => {
   const [inputValues, setInputValues] = useState(Array(6).fill(''));
   const [results, setResults] = useState(Array(6).fill(null));
+  const [showAnswersKey, setShowAnswersKey] = useState(false);
 
   const correctAnswers = ['An', 'A', 'A', 'An', 'A', 'An'];
 
   const handleCheckClick = () => {
-    setResults(inputValues.map((value, index) => value.trim() === correctAnswers[index]));
+    setResults(
+      inputValues.map((value, index) =>
+        (value || '').trim().toLowerCase() === (correctAnswers[index] || '').trim().toLowerCase()
+      )
+    );
+  };
+
+  const handleResetClick = () => {
+    setInputValues(Array(6).fill(''));
+    setResults(Array(6).fill(null));
   };
 
   const handleInputChange = (value, index) => {
@@ -176,9 +186,45 @@ const Pagina89 = () => {
           </div>
         </div>
 
-        <button className={styles['page89__check-button']} onClick={handleCheckClick}>
-          <em>Check</em>
-        </button>
+        {/* Ações: Check → Reset → Answers Key */}
+        <div className={styles['page89__actions']}>
+          <button className={styles['page89__check-button']} onClick={handleCheckClick}>
+            Check
+          </button>
+
+          <button className={styles['page89__reset--button']} onClick={handleResetClick}>
+            Reset
+          </button>
+
+          <button
+            className={styles['page89__answersKey--button']}
+            onClick={() => setShowAnswersKey((v) => !v)}
+            aria-pressed={showAnswersKey}
+          >
+            Answers Key
+          </button>
+        </div>
+
+        {/* Answers Key */}
+        {showAnswersKey && (
+          <div className={styles['page89__answersKey-box']}>
+            {[
+              'An animal.',
+              'A man.',
+              'A river.',
+              'An elephant.',
+              'A lion.',
+              'An ocean.',
+            ].map((text, idx) => (
+              <div key={idx} className={styles['page89__answersKey-item']}>
+                <div className={styles['page89__answersKey-num']}>
+                  {String.fromCharCode(97 + idx)}.
+                </div>
+                <div className={styles['page89__answersKey-text']}>{text}</div>
+              </div>
+            ))}
+          </div>
+        )}
       </main>
     </div>
   );

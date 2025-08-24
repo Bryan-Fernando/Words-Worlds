@@ -45,20 +45,8 @@ import pg68_audio15p from "../assets/audios/pg68_audio15p.mp3";
 const allowedAnswers = [
 
     [
-        'Hey, John. What is your phone number?',
-        'Hey, John. What’s your phone number?',
-        'Hey John. What is your phone number?',
-        'Hey John. What’s your phone number',
-        'John what is your phone number?',
-        'John what’s your phone number?',
-        'John. What is your phone number?',
-        'John. What’s your phone number?',
-        'What’s your phone number?',
-        'What is your phone number?',
-        'What’s your phone number?',
-        'What’s your phone number',
-        'What’s your number?',
-        'What is your number?'
+        "Hey, John. What is your phone number?",
+        "Hey, John. What's your phone number?",
     ],
 
     [
@@ -67,10 +55,10 @@ const allowedAnswers = [
     ],
 
     [
-        'Ok. What’s your email address?',
-        'Ok. What is your email address?',
-        'What is your email address?',
-        'What’s your email address?',
+        "Ok. What's your email address?",
+        "Ok. What is your email address?",
+        "What is your email address?",
+        "What's your email address?",
     ],
 
     [
@@ -119,8 +107,6 @@ const Pagina68 = () => {
 
     };
 
-
-
     const [inputValues, setInputValues] = useState(Array(7).fill(''));
     const [results, setResults] = useState(Array(7).fill(null));
 
@@ -134,6 +120,12 @@ const Pagina68 = () => {
         });
         setResults(newResults);
     };
+
+    const handleReset = () => {
+        setInputValues(Array(7).fill(''));
+        setResults(Array(7).fill(null));
+    };
+
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
@@ -150,8 +142,6 @@ const Pagina68 = () => {
             console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
         }
     };
-
-
 
     return (
         <div className={styles["page68__container"]}>
@@ -304,6 +294,7 @@ const Pagina68 = () => {
                         </div>
 
                         <button className={styles["page68__check-button"]} onClick={handleCheckClick}>Check</button>
+                        <button className={styles["page68__reset-button"]} onClick={handleReset}>Reset</button>
                     </div>
                 </div>
 
@@ -317,7 +308,7 @@ const Pagina68 = () => {
                             <strong>RESPOSTAS: (DEVEM SER VISÍVEIS APÓS CLICAR EM <span>‘CHECK’</span>)</strong>
                         </p>
                         <p>
-                            <strong>A:</strong> Hey, John. What’s your phone number?
+                            <strong>A:</strong> Hey, John. What's your phone number?
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"
@@ -381,7 +372,7 @@ const Pagina68 = () => {
                         </p>
 
                         <p>
-                            <strong>A:</strong> Ok. What’s your email address?
+                            <strong>A:</strong> Ok. What's your email address?
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"
@@ -397,7 +388,7 @@ const Pagina68 = () => {
                         </p>
 
                         <p>
-                            B: It’s john2023@gmail.com
+                            B: It's john2023@gmail.com
                             <img
                                 src={eng_audio_icon}
                                 alt="Play English Audio"

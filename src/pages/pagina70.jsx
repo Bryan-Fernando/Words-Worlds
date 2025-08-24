@@ -38,6 +38,7 @@ const pagina70 = () => {
     const [frasesEmbaralhadas, setFrasesEmbaralhadas] = useState({});
     const [palavrasClicadas, setPalavrasClicadas] = useState({});
     const [resultados, setResultados] = useState([]);
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const audioMap = {
         global_learning_le_e, global_learning_le_p,
@@ -52,7 +53,6 @@ const pagina70 = () => {
         pg70_audio9e, pg70_audio9p,
         pg70_audio10e, pg70_audio10p,
     };
-
 
     const respostasCorretas = [
         ['She', 'is', 'a teacher'],
@@ -125,18 +125,23 @@ const pagina70 = () => {
     const verificarRespostas = () => {
         const novosResultados = respostasCorretas.map((resposta, index) => {
             const respostaUsuario = respostas[index] || [];
-
-            const respostaUsuarioNormalizada = respostaUsuario.map((word) =>
-                word.trim().toLowerCase()
-            );
-            const respostaCorretaNormalizada = resposta.map((word) =>
-                word.trim().toLowerCase()
-            );
-
+            const respostaUsuarioNormalizada = respostaUsuario.map((word) => word.trim().toLowerCase());
+            const respostaCorretaNormalizada = resposta.map((word) => word.trim().toLowerCase());
             return JSON.stringify(respostaCorretaNormalizada) === JSON.stringify(respostaUsuarioNormalizada);
         });
-
         setResultados(novosResultados);
+    };
+
+    const handleReset = () => {
+        setRespostas({});
+        setPalavrasClicadas({});
+        setResultados([]);
+        const novasFrasesEmbaralhadas = {};
+        respostasCorretas.forEach((frase, fraseIndex) => {
+            novasFrasesEmbaralhadas[fraseIndex] = shuffleArray(frase);
+        });
+        setFrasesEmbaralhadas(novasFrasesEmbaralhadas);
+        setShowAnswersKey(false);
     };
 
     const playAudio = (audioKey) => {
@@ -148,7 +153,6 @@ const pagina70 = () => {
             console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
         }
     };
-
 
     return (
         <div className={styles["page70__container"]}>
@@ -168,8 +172,6 @@ const pagina70 = () => {
                         onClick={() => playAudio("global_learning_le_p")}
                     />
                 </h1>
-                <p><span className={styles["page70__red-text"]}>Word Order:</span> Unscramble the words to form questions.</p>
-                <p><span className={styles["page70__red-text"]}>Ordem das Palavras:</span> Reorganize as palavras para formar perguntas.</p>
                 <p><span className={styles["page70__red-text"]}>Click</span> the words to form the correct sentence.</p>
                 <p><span className={styles["page70__red-text"]}>Clique</span> nas palavras para formar a frase correta.</p>
             </header>
@@ -223,37 +225,52 @@ const pagina70 = () => {
                                         ))}
 
                                     {resultados.length > 0 && (
-                                        <>
-                                            {resultados[fraseIndex] ? (
-                                                <>
-                                                    <img src={correct_icon} alt="Correto" className={styles["page70__check-icon"]} />
-                                                    <img
-                                                        src={eng_audio_icon}
-                                                        alt="Play English Audio"
-                                                        className={styles["page70__eng-audio-icon"]}
-                                                        onClick={() => playAudio(`pg70_audio${fraseIndex + 1}e`)}
-                                                        style={{ cursor: "pointer" }}
-                                                    />
-                                                    <img
-                                                        src={ptbr_audio_icon}
-                                                        alt="Play Portuguese Audio"
-                                                        className={styles["page70__ptbr-audio-icon"]}
-                                                        onClick={() => playAudio(`pg70_audio${fraseIndex + 1}p`)}
-                                                        style={{ cursor: "pointer" }}
-                                                    />
-                                                </>
-                                            ) : (
-                                                <img src={wrong_icon} alt="Errado" className={styles["page70__check-icon"]} />
-                                            )}
-                                        </>
+                                        resultados[fraseIndex] ? (
+                                            <img src={correct_icon} alt="Correto" className={styles["page70__check-icon"]} />
+                                        ) : (
+                                            <img src={wrong_icon} alt="Errado" className={styles["page70__check-icon"]} />
+                                        )
                                     )}
                                 </div>
                             </div>
                         ))}
                     </div>
-                    <button className={styles["page70__check-button"]} onClick={verificarRespostas}>
-                        Check
-                    </button>
+
+                    <div className={styles["page70__buttons-container"]}>
+                        <button className={styles["page70__check-button"]} onClick={verificarRespostas}>
+                            Check
+                        </button>
+                        <button className={styles["page70__reset-button"]} onClick={handleReset}>
+                            Reset
+                        </button>
+                        <button
+                            className={styles["page70__answersKey-button"]}
+                            onClick={() => setShowAnswersKey(v => !v)}
+                            aria-expanded={showAnswersKey}
+                            aria-controls="answers-key-box"
+                        >
+                            Answers Key
+                        </button>
+                    </div>
+
+                    {showAnswersKey && (
+                        <div
+                            id="answers-key-box"
+                            className={styles["page70__answersKey-box"]}
+                            role="region"
+                            aria-label="Gabarito completo"
+                        >
+                            {respostasCorretas.map((arr, i) => {
+                                const texto = `${arr.join(' ')}.`;
+                                return (
+                                    <div key={i} className={styles["page70__answersKey-item"]}>
+                                        <span className={styles["page70__answersKey-num"]}>{i + 1}.</span>
+                                        <span className={styles["page70__answersKey-text"]}>{texto}</span>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    )}
                 </main>
 
                 <aside className={styles["page70__aside-container"]}>
@@ -264,8 +281,8 @@ const pagina70 = () => {
                 </aside>
             </div>
         </div>
-
     );
 };
 
 export default pagina70;
+
