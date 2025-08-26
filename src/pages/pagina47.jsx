@@ -343,7 +343,8 @@ const Pagina47 = () => {
             <div className={styles['page47__aside-traducao-4']}>
               <span className={`${styles['page47__badge']} ${styles['page47__badge--sm']}`}>4</span>
               <p>
-                Este é meu amigo Daniel. Ele é nosso web designer. Daniel, esta é minha amiga de infância Karen e este é seu irmão Ethan.
+                Este é meu amigo Daniel. Ele é nosso web designer. Daniel, esta é minha amiga de infância Karen e este é seu irmão Ethan. <br />
+                Eles estarão trabalhando no departamento de TI (Tecnologia da Informação).
                 <img src={iconeP} alt="Portuguese audio" className={styles['page47__audio-icon']} onClick={() => playAudio('pg47_audio14p')} />
               </p>
             </div>

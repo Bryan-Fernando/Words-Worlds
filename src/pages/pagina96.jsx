@@ -245,7 +245,7 @@ const Pagina96 = () => {
         <div className={styles["page95__questions1"]}>
           <div className={styles["page95__question"]}>
             <span>
-              <p>4. Make questions with the verbs in parentheses.
+              <p>4. Make questions with the verbs in parentheses in the Simple Present Form.
                 <img
                   src={eng_audio_icon}
                   alt="Audio English"
@@ -373,7 +373,7 @@ const Pagina96 = () => {
         <div className={styles["page95__questions2"]}>
           <div className={styles["page95__question"]}>
             <span>
-              <p>5. Make questions with the verbs in parentheses.
+              <p>5. Make questions with the verbs in parentheses in the Simple Present Form.
                 <img
                   src={eng_audio_icon}
                   alt="Audio English"

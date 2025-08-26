@@ -104,19 +104,19 @@ import pg71_audio40e from "../assets/audios/pg71_audio40e.mp3";
 
 const Pagina71 = () => {
     const correctAnswers = [
-        "She is Karen Brandon.",
-        "She is from Portugal.",
-        "Lisbon is her home city.",
-        "She is 19.",
+        "She is Karen Brandon",
+        "She is from Portugal",
+        "Lisbon is her home city",
+        "She is 19",
         "Her email address is karen@mail.com",
-        "Her phone number is 403728930.",
-        "He is Leo Santander.",
-        "He's Brazilian.",
-        "He's from Paraty.",
-        "He's married.",
-        "He's 27.",
-        "His email is leo@mail.com.",
-        "His cell phone number is 991212341265."
+        "Her phone number is 403728930",
+        "He is Leo Santander",
+        "He's Brazilian",
+        "He's from Paraty",
+        "He's married",
+        "He's 27",
+        "His email is leo@mail.com",
+        "His cell phone number is 991212341265"
     ];
 
     const audioMap = {

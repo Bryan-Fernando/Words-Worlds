@@ -17,16 +17,6 @@ import audio6e from '../assets/audios/pg286_audio6e.mp3';
 const Pagina286 = () => {
   const currentAudio = useRef(null);
 
-  const playAudio = (id) => {
-    if (currentAudio.current) {
-      currentAudio.current.pause();
-      currentAudio.current.currentTime = 0;
-    }
-    const audio = new Audio(audioMap[id]);
-    currentAudio.current = audio;
-    audio.play();
-  };
-
   const audioMap = {
     pg286_audio1e: audio1e,
     pg286_audio1p: audio1p,
@@ -35,6 +25,16 @@ const Pagina286 = () => {
     pg286_audio4e: audio4e,
     pg286_audio5e: audio5e,
     pg286_audio6e: audio6e,
+  };
+
+  const playAudio = (id) => {
+    if (currentAudio.current) {
+      currentAudio.current.pause();
+      currentAudio.current.currentTime = 0;
+    }
+    const audio = new Audio(audioMap[id]);
+    currentAudio.current = audio;
+    audio.play();
   };
 
   const times = ["3:00", "6:00", "8:00", "7:00", "9:00"];
@@ -49,14 +49,17 @@ const Pagina286 = () => {
 
   const [selectedOptions, setSelectedOptions] = useState(Array(5).fill(''));
   const [results, setResults] = useState(Array(5).fill(null));
-  const [shuffledAnswers, setShuffledAnswers] = useState([]);
+
+  // Inicializa já com opções para evitar undefined na 1ª render
+  const [shuffledAnswers, setShuffledAnswers] = useState(answerOptions);
 
   useEffect(() => {
-    const shuffled = [...answerOptions].sort(() => Math.random() - 0.5);
-    setShuffledAnswers(shuffled);
+    // Embaralha após montar
+    setShuffledAnswers([...answerOptions].sort(() => Math.random() - 0.5));
   }, []);
 
-  const getLetter = (text) => text.charAt(0);
+  // Versão segura: aceita undefined/null e sempre retorna uma string
+  const getLetter = (text = '') => String(text).charAt(0);
 
   const handleSelect = (letter) => {
     const indexInInputs = selectedOptions.indexOf(letter);
@@ -100,35 +103,46 @@ const Pagina286 = () => {
       </h2>
 
       <div className={styles.page286__rows}>
-        {times.map((time, i) => (
-          <div key={i} className={styles.page286__row}>
-            <span className={styles.page286__time}>{time}</span>
-            <div className={styles.page286__inputWrapper}>
-              <div className={styles.page286__inputBox}>
-                {selectedOptions[i]}
-              </div>
-              <img
-                src={eng_audio_icon}
-                alt=""
-                className={styles.page286__audioIcon}
-                onClick={() => playAudio(`pg286_audio${i + 2}e`)}
-              />
-              {results[i] !== null && (
+        {times.map((time, i) => {
+          const optionText = shuffledAnswers[i] ?? '';      // garante string
+          const optionLetter = getLetter(optionText);        // pega a letra inicial
+
+          return (
+            <div key={i} className={styles.page286__row}>
+              <span className={styles.page286__time}>{time}</span>
+
+              <div className={styles.page286__inputWrapper}>
+                <div className={styles.page286__inputBox}>
+                  {selectedOptions[i]}
+                </div>
+
                 <img
-                  src={results[i] ? correct_icon : wrong_icon}
-                  alt={results[i] ? "Correct" : "Incorrect"}
-                  className={styles.page286__resultIcon}
+                  src={eng_audio_icon}
+                  alt=""
+                  className={styles.page286__audioIcon}
+                  onClick={() => playAudio(`pg286_audio${i + 2}e`)}
                 />
-              )}
+
+                {results[i] !== null && (
+                  <img
+                    src={results[i] ? correct_icon : wrong_icon}
+                    alt={results[i] ? "Correct" : "Incorrect"}
+                    className={styles.page286__resultIcon}
+                  />
+                )}
+              </div>
+
+              <div
+                className={`${styles.page286__option} ${
+                  selectedOptions.includes(optionLetter) ? styles.selected : ''
+                }`}
+                onClick={() => handleSelect(optionLetter)}
+              >
+                {optionText}
+              </div>
             </div>
-            <div
-              className={`${styles.page286__option} ${selectedOptions.includes(getLetter(shuffledAnswers[i])) ? styles.selected : ''}`}
-              onClick={() => handleSelect(getLetter(shuffledAnswers[i]))}
-            >
-              {shuffledAnswers[i]}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <button className={styles.page286__checkButton} onClick={handleCheckClick}>

@@ -212,7 +212,7 @@ const Pagina97 = () => {
           <div className={styles["page97__container-questoes"]}>
             <div className={styles["page97__questions-1"]}>
               <p className={styles["page97__a-titulo-question"]}>
-                Complete the sentences with the correct form of the verbs in parentheses:
+                Complete the sentences with the correct form of the verbs in parentheses in the Simple Present Form:
                 <img
                   src={eng_audio_icon}
                   alt="English audio"
