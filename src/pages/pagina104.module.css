@@ -86,10 +86,12 @@
 }
 
 .page104__header-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.2s;
+    position: relative;
+    top: 1rem;
 }
 
 .page104__header-icon:hover {
@@ -97,12 +99,12 @@
 }
 
 .page104__additional--icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     cursor: pointer;
     transition: transform 0.2s;
     position: relative;
-    top: 0.4rem;
+    top: 1rem;
     margin-left: 1rem;
 }
 

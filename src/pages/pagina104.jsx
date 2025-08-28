@@ -75,7 +75,7 @@ const Pagina104 = () => {
                     <div className={styles["page104__questions"]}>
                         {[
                             ["How do you say", "in English?", "(Como se diz", "em inglês?)"],
-                            ["How do you spell", "?", "(Como se soletra", "?)"],
+                            ["How do you spell", "?", "(Como se soletra/escreve", "?)"],
                             ["What is the meaning of", "?", "(Qual é o significado de", "?)"],
                             ["What does", "mean?", "(O que", "significa?)"]
                         ].map((question, index) => {

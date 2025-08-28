@@ -91,285 +91,343 @@ const audioMap = {
 };
 
 const Pagina100 = () => {
-    const [inputValues, setInputValues] = useState(Array(16).fill(''));
-    const [results, setResults] = useState(Array(16).fill(null));
-    const [isSpeedReduced, setIsSpeedReduced] = useState({});
+  const [inputValues, setInputValues] = useState(Array(16).fill(''));
+  const [results, setResults] = useState(Array(16).fill(null));
+  const [isSpeedReduced, setIsSpeedReduced] = useState({});
+  const [showAnswersKey, setShowAnswersKey] = useState(false);
 
-    const correctAnswers = [
-        "'m not", "aren't", "aren't", "isn't", "aren't",
-        "isn't", "isn't", "aren't", "am not", "is not",
-        "is not", "is not", "are not", "is not", "is not", "are not"
-    ];
+  // A) (0–7): contracted — "I'm not / isn't / aren't"
+  // B) (8–15): full form — "am not / is not / are not"
+  const correctAnswers = [
+    "'m not", "aren't", "aren't", "isn't", "aren't",
+    "isn't", "isn't", "aren't", "am not", "is not",
+    "is not", "is not", "are not", "is not", "is not", "are not"
+  ];
 
-    const handleCheckClick = () => {
-        const newResults = inputValues.map((value, index) => {
-            if (!value) return false;
+  const normalize = (s) =>
+    (s || '').trim().toLowerCase().replace(/'/g, '').replace(/\s+/g, ' ');
 
-            const userAnswer = value.trim().toLowerCase().replace(/'/g, "").replace(/\s+/g, " ");
-            const correctAnswer = correctAnswers[index].toLowerCase().replace(/'/g, "").replace(/\s+/g, " ");
+  const handleCheckClick = () => {
+    const newResults = inputValues.map((value, index) => {
+      if (!value) return false;
+      const userAnswer = normalize(value);
+      const correctAnswer = normalize(correctAnswers[index]);
+      return userAnswer === correctAnswer;
+    });
+    setResults(newResults);
+  };
 
-            return userAnswer === correctAnswer;
-        });
+  const handleReset = () => {
+    setInputValues(Array(16).fill(''));
+    setResults(Array(16).fill(null));
+    setShowAnswersKey(false);
+  };
 
-        setResults(newResults);
-    };
+  const toggleAnswersKey = () => setShowAnswersKey((v) => !v);
 
+  const handleInputChange = (value, index) => {
+    const newValues = [...inputValues];
+    newValues[index] = value.toString();
+    setInputValues(newValues);
+  };
 
+  const playAudio = (audioKey) => {
+    if (audioMap[audioKey]) {
+      const audio = new Audio(audioMap[audioKey]);
+      audio.playbackRate = isSpeedReduced[audioKey] ? 0.6 : 1;
+      audio.play().catch((error) => console.error('Erro ao reproduzir o áudio:', error));
+    } else {
+      console.warn(`Áudio não encontrado para: ${audioKey}`);
+    }
+  };
 
-    const handleInputChange = (value, index) => {
-        const newValues = [...inputValues];
-        newValues[index] = value.toString();
-        setInputValues(newValues);
-    };
+  const toggleSpeedReduction = (audioKey) => {
+    setIsSpeedReduced((prevState) => ({
+      ...prevState,
+      [audioKey]: !prevState[audioKey],
+    }));
+  };
 
+  // Answers Key (rotulado A.1–A.8 e B.1–B.8)
+  const answersKeyItems = [
+    // A) contracted
+    { label: 'A.1', text: "I'm not" },
+    { label: 'A.2', text: "aren't" },
+    { label: 'A.3', text: "aren't" },
+    { label: 'A.4', text: "isn't" },
+    { label: 'A.5', text: "aren't" },
+    { label: 'A.6', text: "isn't" },
+    { label: 'A.7', text: "isn't" },
+    { label: 'A.8', text: "aren't" },
+    // B) full form
+    { label: 'B.1', text: 'am not' },
+    { label: 'B.2', text: 'is not' },
+    { label: 'B.3', text: 'is not' },
+    { label: 'B.4', text: 'is not' },
+    { label: 'B.5', text: 'are not' },
+    { label: 'B.6', text: 'is not' },
+    { label: 'B.7', text: 'is not' },
+    { label: 'B.8', text: 'are not' },
+  ];
 
+  return (
+    <div className={styles['page100__container']}>
+      <header className={styles['page100__header']}>
+        <h1 className={styles['page100__h1']}>
+          Learning Language Exercises
+          <img
+            src={eng_audio_icon}
+            alt="English audio"
+            className={styles['page100__header-icon']}
+            onClick={() => playAudio('global_learning_le_e')}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Portuguese audio"
+            className={styles['page100__header-icon']}
+            onClick={() => playAudio('global_learning_le_p')}
+          />
+        </h1>
+      </header>
 
-    const playAudio = (audioKey) => {
-        if (audioMap[audioKey]) {
-            const audio = new Audio(audioMap[audioKey]);
-            audio.playbackRate = isSpeedReduced[audioKey] ? 0.6 : 1;
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
-        } else {
-            console.warn(`Áudio não encontrado para: ${audioKey}`);
-        }
-    };
-
-    const toggleSpeedReduction = (audioKey) => {
-        setIsSpeedReduced((prevState) => ({
-            ...prevState,
-            [audioKey]: !prevState[audioKey]
-        }));
-    };
-
-
-    return (
-        <div className={styles["page100__container"]}>
-            <header className={styles["page100__header"]}>
-                <h1 className={styles["page100__h1"]}>
-                    Learning Language Exercises
-                    <img
-                        src={eng_audio_icon}
-                        alt="English audio"
-                        className={styles["page100__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_e")}
-                    />
-                    <img
-                        src={ptbr_audio_icon}
-                        alt="Portuguese audio"
-                        className={styles["page100__header-icon"]}
-                        onClick={() => playAudio("global_learning_le_p")}
-                    />
-                </h1>
-            </header>
-
-            <main className={styles["page100__main"]}>
-                <div className={styles["page100__tabela-negativa-container"]}>
-                    <div className={styles["page100__table-header-negativa"]}>NEGATIVA</div>
-                    <table className={styles["page100__styled-table-negativa"]}>
-                        <thead className={styles["page100__thead"]}>
-                            <tr className={styles["page100__table-row"]}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-
-                <div className={styles["page100__container-questoes"]}>
-                    <div className={styles["page100__questions-1"]}>
-                        <p className={styles["page100__a-titulo-question"]}>
-                            A) Fill in the blanks with the negative form, using the contracted forms: (I'm not, isn't, or aren't).
-                            <span className={styles["page100__icons-container"]}>
-                                <img
-                                    src={eng_audio_icon}
-                                    alt="English audio"
-                                    className={styles["page100__header-icon"]}
-                                    onClick={() => playAudio("pg100_audio1e")}
-                                />
-                                <img
-                                    src={ptbr_audio_icon}
-                                    alt="Portuguese audio"
-                                    className={styles["page100__header-icon"]}
-                                    onClick={() => playAudio("pg100_audio1p")}
-                                />
-                            </span>
-                        </p>
-                        <div className={styles["page100__questions-1"]}>
-                            {[
-                                "I ____ married.",
-                                "We ____ at the club.",
-                                "You ____ Portuguese.",
-                                "It ____ hot.",
-                                "They ____ available.",
-                                "She ____ hungry.",
-                                "He ____ a musician.",
-                                "We ____ in London."
-                            ].map((question, index) => {
-                                const audioKey = `pg100_audio${index + 2}`;
-                                const audioKeyP = `pg100_audio${index + 2}p`;
-                                return (
-                                    <div key={index} className={styles["page100__question"]}>
-                                        <span><em>{question.split('____')[0]}</em></span>
-                                        <div className={styles["page100__input-container"]}>
-                                            <input
-                                                type="text"
-                                                value={inputValues[index]}
-                                                onChange={(e) => handleInputChange(e.target.value, index)}
-                                                className={styles["page100__input-box"]}
-                                            />
-                                        </div>
-                                        <span><em>{question.split('____')[1]}</em></span>
-                                        <div className={styles["page100__icons-container"]}>
-                                            {results[index] !== null && (
-                                                <img
-                                                    src={results[index] ? correct_icon : wrong_icon}
-                                                    alt={results[index] ? "Correct" : "Incorrect"}
-                                                    className={styles["page100__checkmark-image"]}
-                                                />
-                                            )}
-                                            <img
-                                                src={eng_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles["page100__additional-icon"]}
-                                                onClick={() => playAudio(audioKey)}
-                                            />
-                                            <img
-                                                src={ptbr_audio_icon}
-                                                alt="Audio Icon"
-                                                className={styles["page100__additional-icon"]}
-                                                onClick={() => playAudio(audioKeyP)}
-                                            />
-                                            <img
-                                                src={slow_audio_icon}
-                                                alt="Volume Reduced Icon"
-                                                className={`${styles["page100__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page100__pulsing"] : ''}`}
-                                                onClick={() => toggleSpeedReduction(audioKey)}
-                                            />
-                                        </div>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
-                </div>
-
-                {/* Tabela NEGATIVA */}
-                <div className={styles["page100__tabela-negativa-container"]}>
-                    <div className={styles["page100__table-header-negativa"]}>NEGATIVA</div>
-                    <table className={styles["page100__styled-table-negativa"]}>
-                        <thead className={styles["page100__thead"]}>
-                            <tr className={styles["page100__table-row"]}>
-                                <th>Introdução</th>
-                                <th>Sujeito</th>
-                                <th>Verbo <br /> Auxiliar</th>
-                                <th> <span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
-                                <th>Verbo(s)</th>
-                                <th>Objeto <br /> Complemento</th>
-                            </tr>
-                        </thead>
-                    </table>
-                </div>
-
-                <div className={styles["page100__container-questoes"]}>
-                    <div className={styles["page100__questions-1"]}>
-                        <p className={styles["page100__a-titulo-question"]}>
-                            B) Change into the <span style={{color: 'blue'}}>Negative Full Form,</span> using (not).
-                            <img
-                                src={eng_audio_icon}
-                                alt="English audio"
-                                className={styles["page100__header-icon"]}
-                                onClick={() => playAudio("pg100_audio10e")}
-                            />
-                            <img
-                                src={ptbr_audio_icon}
-                                alt="Portuguese audio"
-                                className={styles["page100__header-icon"]}
-                                onClick={() => playAudio("pg100_audio10p")}
-                            />
-                        </p>
-
-                        {[
-                            "We are in Rio de Janeiro.",
-                            "She is my cousin.",
-                            "He is a nurse.",
-                            "We are early.",
-                            "It is hot.",
-                            "She is at school.",
-                            "He is sad.",
-                            "I am sleepy"
-                        ].map((sentence, index) => (
-                            <div key={index + 8} className={styles["page100__question"]}>
-                                <span><em><strong>{index + 1}.</strong> {sentence}</em></span>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className={styles["page100__questions-1"]}>
-                        {[
-                            "I ____ sleepy.",
-                            "He ____ sad.",
-                            "She ____ at school.",
-                            "It ____ hot.",
-                            "We ____ early.",
-                            "He ____ a nurse.",
-                            "She ____ my cousin.",
-                            "We ____ in Rio de Janeiro."
-                        ].map((question, index) => {
-                            const audioKey = `pg100_audio${index + 11}`;
-                            const audioKeyP = `pg100_audio${index + 11}p`;
-                            return (
-                                <div key={index + 8} className={styles["page100__question"]}>
-                                    <span><em>{question.split('____')[0]}</em></span>
-                                    <div className={styles["page100__input-container"]}>
-                                        <input
-                                            type="text"
-                                            value={inputValues[index + 8]}
-                                            onChange={(e) => handleInputChange(e.target.value, index + 8)}
-                                            className={styles["page100__input-box"]}
-                                        />
-                                    </div>
-                                    <span><em>{question.split('____')[1]}</em></span>
-                                    <div className={styles["page100__icons-container"]}>
-                                        {results[index + 8] !== null && (
-                                            <img
-                                                src={results[index + 8] ? correct_icon : wrong_icon}
-                                                alt={results[index + 8] ? "Correct" : "Incorrect"}
-                                                className={styles["page100__checkmark-image"]}
-                                            />
-                                        )}
-                                        <img
-                                            src={eng_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page100__additional-icon"]}
-                                            onClick={() => playAudio(audioKey)}
-                                        />
-                                        <img
-                                            src={ptbr_audio_icon}
-                                            alt="Audio Icon"
-                                            className={styles["page100__additional-icon"]}
-                                            onClick={() => playAudio(audioKeyP)}
-                                        />
-                                        <img
-                                            src={slow_audio_icon}
-                                            alt="Volume Reduced Icon"
-                                            className={`${styles["page100__additional-icon"]} ${isSpeedReduced[audioKey] ? styles["page100__pulsing"] : ''}`}
-                                            onClick={() => toggleSpeedReduction(audioKey)}
-                                        />
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
-                </div>
-
-            </main>
-            <button className={styles["page100__check-button"]} onClick={handleCheckClick}><em>Check</em></button>
+      <main className={styles['page100__main']}>
+        <div className={styles['page100__tabela-negativa-container']}>
+          <div className={styles['page100__table-header-negativa']}>NEGATIVA</div>
+          <table className={styles['page100__styled-table-negativa']}>
+            <thead className={styles['page100__thead']}>
+              <tr className={styles['page100__table-row']}>
+                <th>Introdução</th>
+                <th>Sujeito</th>
+                <th>Verbo <br /> Auxiliar</th>
+                <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                <th>Verbo(s)</th>
+                <th>Objeto <br /> Complemento</th>
+              </tr>
+            </thead>
+          </table>
         </div>
-    );
+
+        <div className={styles['page100__container-questoes']}>
+          <div className={styles['page100__questions-1']}>
+            <p className={styles['page100__a-titulo-question']}>
+              A) Fill in the blanks with the negative form, using the{' '}
+              <span style={{ color: 'blue' }}>contracted forms: (I'm not, isn't, or aren't).</span>
+              <span className={styles['page100__icons-container']}>
+                <img
+                  src={eng_audio_icon}
+                  alt="English audio"
+                  className={styles['page100__header-icon']}
+                  onClick={() => playAudio('pg100_audio1e')}
+                />
+                <img
+                  src={ptbr_audio_icon}
+                  alt="Portuguese audio"
+                  className={styles['page100__header-icon']}
+                  onClick={() => playAudio('pg100_audio1p')}
+                />
+              </span>
+            </p>
+
+            {[
+              'I ____ married.',
+              'We ____ at the club.',
+              'You ____ Portuguese.',
+              'It ____ hot.',
+              'They ____ available.',
+              'She ____ hungry.',
+              'He ____ a musician.',
+              'We ____ in London.',
+            ].map((question, index) => {
+              const audioKey = `pg100_audio${index + 2}`;
+              const audioKeyP = `pg100_audio${index + 2}p`;
+              const [before, after] = question.split('____');
+              return (
+                <div key={index} className={styles['page100__question']}>
+                  <span><em>{before}</em></span>
+                  <div className={styles['page100__input-container']}>
+                    <input
+                      type="text"
+                      value={inputValues[index]}
+                      onChange={(e) => handleInputChange(e.target.value, index)}
+                      className={styles['page100__input-box']}
+                    />
+                  </div>
+                  <span><em>{after}</em></span>
+                  <div className={styles['page100__icons-container']}>
+                    {results[index] !== null && (
+                      <img
+                        src={results[index] ? correct_icon : wrong_icon}
+                        alt={results[index] ? 'Correct' : 'Incorrect'}
+                        className={styles['page100__checkmark-image']}
+                      />
+                    )}
+                    <img
+                      src={eng_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page100__additional-icon']}
+                      onClick={() => playAudio(audioKey)}
+                    />
+                    <img
+                      src={ptbr_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page100__additional-icon']}
+                      onClick={() => playAudio(audioKeyP)}
+                    />
+                    <img
+                      src={slow_audio_icon}
+                      alt="Volume Reduced Icon"
+                      className={`${styles['page100__additional-icon']} ${isSpeedReduced[audioKey] ? styles['page100__pulsing'] : ''}`}
+                      onClick={() => toggleSpeedReduction(audioKey)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Tabela NEGATIVA */}
+        <div className={styles['page100__tabela-negativa-container']}>
+          <div className={styles['page100__table-header-negativa']}>NEGATIVA</div>
+          <table className={styles['page100__styled-table-negativa']}>
+            <thead className={styles['page100__thead']}>
+              <tr className={styles['page100__table-row']}>
+                <th>Introdução</th>
+                <th>Sujeito</th>
+                <th>Verbo <br /> Auxiliar</th>
+                <th><span style={{ color: 'red' }}>Not</span> <br />Advérbio</th>
+                <th>Verbo(s)</th>
+                <th>Objeto <br /> Complemento</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+        <div className={styles['page100__container-questoes']}>
+          <div className={styles['page100__questions-1']}>
+            <p className={styles['page100__a-titulo-question']}>
+              B) Change into the <span style={{ color: 'blue' }}>Negative Full Form,</span> using (not).
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles['page100__header-icon']}
+                onClick={() => playAudio('pg100_audio10e')}
+              />
+              <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles['page100__header-icon']}
+                onClick={() => playAudio('pg100_audio10p')}
+              />
+            </p>
+
+            {[
+              'We are in Rio de Janeiro.',
+              'She is my cousin.',
+              'He is a nurse.',
+              'We are early.',
+              'It is hot.',
+              'She is at school.',
+              'He is sad.',
+              'I am sleepy',
+            ].map((sentence, index) => (
+              <div key={index + 8} className={styles['page100__question']}>
+                <span><em><strong>{index + 1}.</strong> {sentence}</em></span>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles['page100__questions-1']}>
+            {[
+              'I ____ sleepy.',
+              'He ____ sad.',
+              'She ____ at school.',
+              'It ____ hot.',
+              'We ____ early.',
+              'He ____ a nurse.',
+              'She ____ my cousin.',
+              'We ____ in Rio de Janeiro.',
+            ].map((question, index) => {
+              const audioKey = `pg100_audio${index + 11}`;
+              const audioKeyP = `pg100_audio${index + 11}p`;
+              const [before, after] = question.split('____');
+              return (
+                <div key={index + 8} className={styles['page100__question']}>
+                  <span><em>{before}</em></span>
+                  <div className={styles['page100__input-container']}>
+                    <input
+                      type="text"
+                      value={inputValues[index + 8]}
+                      onChange={(e) => handleInputChange(e.target.value, index + 8)}
+                      className={styles['page100__input-box']}
+                    />
+                  </div>
+                  <span><em>{after}</em></span>
+                  <div className={styles['page100__icons-container']}>
+                    {results[index + 8] !== null && (
+                      <img
+                        src={results[index + 8] ? correct_icon : wrong_icon}
+                        alt={results[index + 8] ? 'Correct' : 'Incorrect'}
+                        className={styles['page100__checkmark-image']}
+                      />
+                    )}
+                    <img
+                      src={eng_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page100__additional-icon']}
+                      onClick={() => playAudio(audioKey)}
+                    />
+                    <img
+                      src={ptbr_audio_icon}
+                      alt="Audio Icon"
+                      className={styles['page100__additional-icon']}
+                      onClick={() => playAudio(audioKeyP)}
+                    />
+                    <img
+                      src={slow_audio_icon}
+                      alt="Volume Reduced Icon"
+                      className={`${styles['page100__additional-icon']} ${isSpeedReduced[audioKey] ? styles['page100__pulsing'] : ''}`}
+                      onClick={() => toggleSpeedReduction(audioKey)}
+                    />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* AÇÕES (ordem: Check → Reset → Answers Key) */}
+        <div className={styles['page100__actions']}>
+          <button className={styles['page100__check-button']} onClick={handleCheckClick}>
+            <em>Check</em>
+          </button>
+
+          <button className={styles['page100__reset--button']} onClick={handleReset}>
+            <em>Reset</em>
+          </button>
+
+          <button
+            className={styles['page100__answersKey--button']}
+            onClick={toggleAnswersKey}
+            aria-pressed={showAnswersKey ? 'true' : 'false'}
+          >
+            <em>Answers Key</em>
+          </button>
+        </div>
+
+        {showAnswersKey && (
+          <div className={styles['page100__answersKey-box']}>
+            {answersKeyItems.map((item, idx) => (
+              <div key={idx} className={styles['page100__answersKey-item']}>
+                <div className={styles['page100__answersKey-num']}>{item.label}</div>
+                <div className={styles['page100__answersKey-text']}>{item.text}</div>
+              </div>
+            ))}
+          </div>
+        )}
+      </main>
+    </div>
+  );
 };
 
 export default Pagina100;

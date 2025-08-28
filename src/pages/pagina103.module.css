@@ -27,7 +27,6 @@
 .page103__main {
     display: flex;
     flex-direction: column;
-    height: 50rem;
     gap: 7rem;
 }
 
@@ -109,7 +108,9 @@
     text-align: center;
     display: block;
     font-size: 2rem;
-    width: fit-content;
+    width: 12rem;
+    position: relative;
+    bottom: 5rem;
 }
 
 .page103__check--button:hover {
@@ -192,13 +193,114 @@
 }
 
 .page103__header--icon {
-    width: 2rem; /* Tamanho do ícone */
-    height: 2rem;
+    width: 3rem; 
+    height: 3rem;
     margin-left: 8px;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
+    position: relative;
+    top: 1rem;
 }
 
 .page103__header--icon:hover {
-    transform: scale(1.2); /* Aumenta o ícone ao passar o mouse */
+    transform: scale(1.2);
+}
+
+.page103__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Reset */
+.page103__reset--button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  bottom: 5rem;
+}
+.page103__reset--button:hover { background: #821a22; }
+.page103__reset--button:active { transform: translateY(1px); }
+.page103__reset--button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+/* Answers Key (botão) */
+.page103__answersKey--button {
+  background: #0A3282;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 4.7rem;
+  position: relative;
+  bottom: 5rem;
+}
+
+.page103__answersKey--button:hover { background: #072861; }
+.page103__answersKey--button:active { transform: translateY(1px); }
+.page103__answersKey--button:focus-visible {
+  outline: 3px solid #cfe0ff;
+  outline-offset: 3px;
+}
+.page103__answersKey--button[aria-pressed="true"] {
+  filter: brightness(0.95);
+}
+
+/* Answers Key (lista) */
+.page103__answersKey--box {
+  margin-top: 2rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 2rem;
+  background: #fffaf9;
+  max-width: 100%;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page103__answersKey--item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+  text-align: left;
+}
+.page103__answersKey--item:last-child { border-bottom: none; }
+
+.page103__answersKey--num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.page103__answersKey--text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
+  text-align: left;
+  word-break: break-word;
 }

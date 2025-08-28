@@ -2,8 +2,13 @@ import React, { useState, useRef } from 'react';
 
 import styles from './pagina108.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import white_play_icon from '../assets/icons/white_play_icon.png';
+
 import global_grammar from '../assets/audios/global_grammar.mp3';
 import global_simple_present from '../assets/audios/global_simple_present.mp3';
+import global_simple_present_main from '../assets/audios/global_simple_present_main.mp3';
 import afirmativaAudio from '../assets/audios/interrogativa_a.mp3';
 import sujeitoAudio from '../assets/audios/sujeito.mp3';
 import verbo_auxiliarAudio from '../assets/audios/verbo_auxiliar.mp3';
@@ -31,7 +36,6 @@ const Pagina138 = () => {
         }
     };
 
-
     const handleInputChange = (rowIndex, colIndex, e) => {
         const newValue = e.target.value;
         const updatedValues = inputValues.map((row, i) =>
@@ -44,19 +48,35 @@ const Pagina138 = () => {
         <div>
             <div className={styles["page108__container"]}>
                 <header className={styles["page108__header"]}>
-                    <h1
-                        className={styles["page108__audio-text"]}
-                        onClick={() => playAudio(global_grammar)}
-                        style={{ cursor: 'pointer' }}
-                    >
+                    <h1 className={styles["page108__audio-text"]}>
                         Grammar
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page108__icon"]}
+                            onClick={() => playAudio(global_grammar)}
+                        />
                     </h1>
+                    <h2 className={styles['page108__audio-text']}>
+                        Simple Present - Main verbs
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles['page108__icon']}
+                            onClick={() => playAudio(global_simple_present_main)}
+                        />
+                    </h2>
                     <h2
                         className={styles["page108__audio-text"]}
-                        onClick={() => playAudio(global_simple_present)}
-                        style={{ color: 'black', cursor: 'pointer' }}
+                        style={{ color: 'black' }}
                     >
                         Simple Present (Presente Simples)
+                        <img
+                            src={eng_audio_icon}
+                            alt="English Audio"
+                            className={styles["page108__icon"]}
+                            onClick={() => playAudio(global_simple_present)}
+                        />
                     </h2>
                 </header>
                 <main className={styles["page108__main"]}>
@@ -66,6 +86,11 @@ const Pagina138 = () => {
                             onClick={() => playAudio(afirmativaAudio)}
                             style={{ cursor: 'pointer' }}
                         >
+                            <img
+                                src={white_play_icon}
+                                alt="White Icon"
+                                className={styles["page108__icon-left"]}
+                            />
                             AFFIRMATIVE INTERROGATIVE
                         </div>
                         <table className={styles["page108__styled--table"]}>
@@ -121,17 +146,30 @@ const Pagina138 = () => {
                                 {[
                                     { sujeito: "Does", verboAux: "it", adverbio: "", verbo: "work", complemento: "now?", audio: pg108_audio4, tradAudio: pg108_trad4, traducao: "Funciona agora?" },
                                 ].map((linha, index) => (
-                                    <tr key={index} onClick={() => playAudio(linha.audio)} style={{ cursor: 'pointer' }}>
+                                    <tr key={index}>
                                         <td className={styles["page108__subject"]}>{linha.sujeito}</td>
                                         <td className={styles["page108__auxiliary--verb"]}>{linha.verboAux}</td>
                                         <td className={styles["page108__adverb"]}>{linha.adverbio}</td>
                                         <td className={styles["page108__verb"]}>{linha.verbo}</td>
-                                        <td className={styles["page108__object--complement"]}>{linha.complemento}</td>
-                                        <td
-                                            className={styles["page108__translation"]}
-                                            onClick={(e) => { e.stopPropagation(); playAudio(linha.tradAudio); }}
-                                        >
+                                        <td className={styles["page108__object--complement"]}>
+                                            {linha.complemento}
+                                            <img
+                                                src={eng_audio_icon}
+                                                alt="Play English sentence"
+                                                className={styles["page108__icon"]}
+                                                onClick={() => playAudio(linha.audio)}
+                                            />
+                                        </td>
+                                        <td className={styles["page108__translation"]}>
                                             {linha.traducao}
+                                            {linha.tradAudio && (
+                                                <img
+                                                    src={ptbr_audio_icon}
+                                                    alt="Reproduzir tradução em português"
+                                                    className={styles["page108__icon"]}
+                                                    onClick={() => playAudio(linha.tradAudio)}
+                                                />
+                                            )}
                                         </td>
                                     </tr>
                                 ))}

@@ -153,9 +153,10 @@
 }
 
 .page106__aside--img--notes--b {
-    height: calc(10px + 0.8vw);
-    width: 2rem;
+    height: calc(1rem + 0.8vw);
+    width: 3rem;
     padding-right: .5rem;
+    cursor: pointer;
 }
 
 .page106__aside--notes2--a {
@@ -193,6 +194,35 @@
     font-size: 1.5rem;
     padding: 1rem;
 }
+
+.page106__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page106__icon:hover {
+  transform: scale(1.2);
+}
+
+.page106__icon-left {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  position: relative;
+  right: 42%;
+  top: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page106__icon-left:hover {
+  transform: scale(1.2);
+}
+
 
 @media (max-width: 1024px) {
     .page106__styled--table {
