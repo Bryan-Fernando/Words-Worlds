@@ -233,7 +233,7 @@ const Pagina100 = () => {
               'We ____ at the club.',
               'You ____ Portuguese.',
               'It ____ hot.',
-              'They ____ available.',
+              'They ____ free / available.',
               'She ____ hungry.',
               'He ____ a musician.',
               'We ____ in London.',
