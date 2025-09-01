@@ -1,1 +1,83 @@
  
+/* Texto à esquerda por padrão */
+.page__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+.page__header { width: 100%; }
+
+.page__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.page__subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-top: .4rem;
+}
+
+/* Grid 2 colunas */
+.page__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.4rem;
+}
+
+/* Card com borda vermelha */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: .25rem solid #A61C28;
+  border-radius: .6rem;
+  padding: 1.2rem;
+  background: #fff;
+}
+
+.card__image {
+  width: 100%;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: .4rem;
+  background: #f1f1f1; /* placeholder */
+}
+
+.card__title {
+  font-size: 1.9rem;
+  font-weight: 800;
+  font-style: italic;
+  margin-top: .2rem;
+}
+
+/* Diálogo */
+.dialogue p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin: .4rem 0;
+}
+
+.nameA { color: #111; font-weight: 800; }
+.nameB { color: #A61C28; font-weight: 800; }
+
+/* falas do segundo interlocutor em vermelho + itálico */
+.textB { color: #A61C28; font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1100px) {
+  .page__title { font-size: 4rem; }
+}
+
+@media (max-width: 820px) {
+  .page__grid { grid-template-columns: 1fr; }
+  .card__image { height: 20rem; }
+  .page__title { font-size: 3.4rem; }
+  .page__subtitle { font-size: 1.8rem; }
+}

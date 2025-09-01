@@ -1,1 +1,97 @@
- 
+/* Base — texto à esquerda */
+.page__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2rem;
+  text-align: left;
+}
+.page__header {
+  width: 100%;
+}
+.page__title {
+  font-size: 5rem;
+  color: #a61c28;
+  font-weight: 800;
+  line-height: 1.1;
+}
+.page__subtitle {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-top: 0.4rem;
+}
+
+/* Faixas horizontais */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 34rem 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+.rowReverse {
+  grid-template-columns: 1fr 34rem;
+}
+
+.row__image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  background: #f1f1f1;
+}
+
+/* Box cinza e título */
+.box {
+  background: #e9e9e9;
+  border-radius: 0.8rem;
+  padding: 1.4rem 1.6rem;
+}
+.rowTitle {
+  font-weight: 800;
+  font-style: italic;
+  margin: 0.2rem 0 1rem 0;
+  font-size: 1.7rem;
+}
+
+/* Falas */
+.lineA,
+.lineB {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  margin: 0.4rem 0;
+}
+.nameA {
+  color: #111;
+  font-weight: 800;
+}
+.nameB {
+  color: #a61c28;
+  font-weight: 800;
+}
+.lineB {
+  color: #a61c28;
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 920px) {
+  .row,
+  .rowReverse {
+    grid-template-columns: 1fr;
+  }
+  .row__image {
+    height: 18rem;
+  }
+  .page__title {
+    font-size: 3.6rem;
+  }
+  .page__subtitle {
+    font-size: 1.8rem;
+  }
+}

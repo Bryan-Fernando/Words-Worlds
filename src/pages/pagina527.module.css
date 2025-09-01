@@ -1,1 +1,58 @@
  
+/* Texto à esquerda por padrão */
+.page__container{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  padding:2rem;
+  text-align:left;
+}
+
+.page__header{ width:100%; }
+
+.page__title{
+  font-size:4.4rem;
+  color:#A61C28;
+  font-weight:800;
+  line-height:1.1;
+}
+
+/* Grid 2 colunas com cards imagem + legenda */
+.grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:2.4rem;
+}
+
+.item{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+}
+
+.item__image{
+  width:100%;
+  object-fit:cover;
+  border-radius:.8rem;
+  background:#f1f1f1; /* placeholder */
+}
+
+/* box cinza sob a imagem */
+.caption{
+  background:#E9E9E9;
+  border-radius:.6rem;
+  padding:1rem 1.2rem;
+  font-size:1.55rem;
+  line-height:1.65;
+}
+
+.nameA{ color:#111; font-weight:800; }
+.nameB{ color:#A61C28; font-weight:800; }
+.textB{ color:#A61C28; font-style:italic; }
+
+/* Responsivo */
+@media (max-width: 960px){
+  .grid{ grid-template-columns:1fr; }
+  .item__image{ height:18rem; }
+  .page__title{ font-size:3.6rem; }
+}

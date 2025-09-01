@@ -1,1 +1,64 @@
+/* Base — texto à esquerda */
+.page__container{
+  display:flex;
+  flex-direction:column;
+  gap:2.0rem;
+  padding:2rem;
+  text-align:left;
+}
+
+.page__header{ width:100%; }
+.page__title{ font-size:4.4rem; color:#A61C28; font-weight:800; }
+
+/* Faixas horizontais */
+.rows{ display:flex; flex-direction:column; gap:2.2rem; }
+
+.row{
+  display:grid;
+  grid-template-columns:34rem 1fr; /* imagem | texto */
+  gap:2rem;
+  align-items:stretch;
+}
+
+.rowReverse{ grid-template-columns:1fr 34rem; } /* texto | imagem */
+
+.row__image{
+  width:100%;
+  object-fit:cover;
+  border-radius:1rem;
+  background:#f1f1f1; /* placeholder */
+}
+
+/* Box cinza com cantos arredondados */
+.box{
+  background:#EFEFEF;
+  border-radius:1rem;
+  padding:1.6rem 1.8rem;
+}
+
+/* Título do diálogo */
+.rowTitle{
+  font-weight:800;
+  font-style:italic;
+  margin:.2rem 0 1rem 0;
+  font-size:1.7rem;
+}
+
+/* Falas */
+.lineA,.lineB{
+  font-size:1.6rem;
+  line-height:1.75;
+  margin:.35rem 0;
+}
+
+.nameA{ color:#111; font-weight:800; }
+.nameB{ color:#A61C28; font-weight:800; }
+.lineB{ color:#A61C28; font-style:italic; }
+
+/* Responsivo */
+@media (max-width: 920px){
+  .row,.rowReverse{ grid-template-columns:1fr; }
+  .row__image{ height:18rem; }
+  .page__title{ font-size:3.6rem; }
+}
  
