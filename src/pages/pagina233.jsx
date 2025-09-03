@@ -1,7 +1,26 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina233.module.css';
 
+import audio1 from '../assets/audios/pg233_audio1e.mp3';
+import audio2 from '../assets/audios/pg233_audio2e.mp3';
+import audio3 from '../assets/audios/pg233_audio3e.mp3';
+import audio4 from '../assets/audios/pg233_audio4e.mp3';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 const Pagina233 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const newAudio = new Audio(audioFile);
+    audioRef.current = newAudio;
+    newAudio.play();
+  };
+
   return (
     <div className={styles.page233__container}>
       <header className={styles.page233__header}>
@@ -26,10 +45,20 @@ const Pagina233 = () => {
               </tr>
             </thead>
             <tbody>
-              {/* We */}
               <tr>
-                <td><spam className={styles.page233__red}>Are</spam><br /><span>Nós</span></td>
-                <td className={styles.page233__red}>we</td>
+                <td>
+                  <span className={styles.page233__red}>Are</span><br />
+                  <span>Nós</span>
+                </td>
+                <td className={styles.page233__red}>
+                  <span className={styles.page233__red}>we</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are we"
+                    className={styles.page233__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -39,7 +68,7 @@ const Pagina233 = () => {
                 <td>—</td>
                 <td>...?</td>
               </tr>
-               <tr>
+              <tr>
                 <td>Nós</td>
                 <td>estamos</td>
                 <td>—</td>
@@ -52,10 +81,20 @@ const Pagina233 = () => {
                 <td>(somente para idade) ...?</td>
               </tr>
 
-              {/* You (sg) */}
               <tr>
-                <td><span className={styles.page233__red}>Are</span><br /><span>Você</span></td>
-                <td className={styles.page233__red}>You (sg)</td>
+                <td>
+                  <span className={styles.page233__red}>Are</span><br />
+                  <span>Você</span>
+                </td>
+                <td className={styles.page233__red}>
+                  <span className={styles.page233__red}>You (sg)</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are you (sg)"
+                    className={styles.page233__icon}
+                    onClick={() => playAudio(audio2)}
+                  />
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -78,16 +117,26 @@ const Pagina233 = () => {
                 <td>(somente para idade) ...?</td>
               </tr>
 
-              {/* You all (pl) */}
               <tr>
-                <td><spam className={styles.page233__red}>Are</spam><br /><span>Vocês</span></td>
-                <td className={styles.page233__red}>You all (pl)</td>
+                <td>
+                  <span className={styles.page233__red}>Are</span><br />
+                  <span>Vocês</span>
+                </td>
+                <td className={styles.page233__red}>
+                  <span className={styles.page233__red}>You all (pl)</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are you all (pl)"
+                    className={styles.page233__icon}
+                    onClick={() => playAudio(audio3)}
+                  />
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
               <tr>
                 <td>Vocês</td>
-                <td>sáo</td>
+                <td>são</td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -104,10 +153,20 @@ const Pagina233 = () => {
                 <td>(somente para idade) ...?</td>
               </tr>
 
-              {/* They */}
               <tr>
-                <td><spam className={styles.page233__red}>Are</spam><br /><span>Eles / Elas</span></td>
-                <td className={styles.page233__red}>They</td>
+                <td>
+                  <span className={styles.page233__red}>Are</span><br />
+                  <span>Eles / Elas</span>
+                </td>
+                <td className={styles.page233__red}>
+                  <span className={styles.page233__red}>They</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are they"
+                    className={styles.page233__icon}
+                    onClick={() => playAudio(audio4)}
+                  />
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -117,7 +176,7 @@ const Pagina233 = () => {
                 <td>—</td>
                 <td>...?</td>
               </tr>
-               <tr>
+              <tr>
                 <td>Eles / Elas</td>
                 <td>estão</td>
                 <td>—</td>

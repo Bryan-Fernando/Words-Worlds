@@ -1,1 +1,64 @@
+/* Base — texto à esquerda */
+.page__container{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  padding:2rem;
+  text-align:left;
+}
+
+.page__header{ width:100%; }
+.page__title{
+  font-size:4.4rem;
+  color:#A61C28;
+  font-weight:800;
+  line-height:1.1;
+}
+
+/* Grade de duas colunas */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:2.4rem;
+}
+
+.card{
+  display:flex;
+  flex-direction:column;
+  gap:.8rem;
+}
+
+.cardImage{
+  width:100%;
+  height:20rem;
+  object-fit:cover;
+  border-radius:1rem;
+  background:#f1f1f1; /* placeholder */
+}
+
+.cardBody{ display:flex; flex-direction:column; gap:.35rem; }
+
+.cardTitle{
+  font-weight:800;
+  font-size:1.8rem;
+  margin:.2rem 0 .4rem 0;
+}
+
+/* Linhas do diálogo */
+.lineA,.lineB{
+  font-size:1.6rem;
+  line-height:1.75;
+}
+
+.nameA{ color:#111; font-weight:800; }
+.nameB{ color:#A61C28; font-weight:800; }
+
+.lineB{ color:#A61C28; font-style:italic; }
+
+/* Responsivo */
+@media (max-width: 960px){
+  .grid{ grid-template-columns:1fr; }
+  .page__title{ font-size:3.6rem; }
+  .cardImage{ height:18rem; }
+}
  

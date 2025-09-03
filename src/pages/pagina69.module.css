@@ -116,14 +116,14 @@
 
 .page69__input-phrase .icon--english {
     position: absolute;
-    right: 15%;
+    right: 10%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .page69__input-phrase .icon--portuguese {
     position: absolute;
-    right: 10%;
+    right: 4%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -261,7 +261,7 @@
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    right: 5%;
+    right: 16%;
     top: 50%;
     transform: translateY(-50%);
 }
@@ -270,16 +270,16 @@
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    right: 5%;
+    right: 16%;
     top: 50%;
     transform: translateY(-50%);
 }
 
 .page69__icons-container {
     display: flex;
-    flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+    flex-direction: row-reverse;
     align-items: center;
-    gap: 8px; /* Ajusta o espaçamento entre os ícones */
+    gap: 8px;
     background-color: #4E4E4E;
 }
 

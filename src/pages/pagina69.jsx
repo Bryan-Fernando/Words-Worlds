@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import styles from './pagina69.module.css';
 
@@ -34,13 +34,14 @@ import pg69_audio10e from "../assets/audios/pg69_audio10e.mp3";
 import pg69_audio10p from "../assets/audios/pg69_audio10p.mp3";
 
 
-const pagina69 = () => {
+const Pagina69 = () => {
     const [respostas, setRespostas] = useState({});
     const [frasesEmbaralhadas, setFrasesEmbaralhadas] = useState({});
     const [palavrasClicadas, setPalavrasClicadas] = useState({});
     const [resultados, setResultados] = useState([]);
-    const [velocidadeAudio, setVelocidadeAudio] = useState({});
     const [showAnswersKey, setShowAnswersKey] = useState(false);
+
+    const currentAudioRef = useRef(null);
 
     const respostasCorretas = [
         ['Is', 'he', 'at home'],
@@ -52,12 +53,12 @@ const pagina69 = () => {
         ['Are', 'they', 'in the park'],
         ['Is', 'the computer', 'on the desk'],
         ['Are', 'we', 'late', 'for the meeting'],
-        ['Are', 'they', 'happy', 'with the results']
+        ['Are', 'they', 'happy', 'with the results'],
     ];
 
     const audioMap = {
-        global_learning_le_e: global_learning_le_e,
-        global_learning_le_p: global_learning_le_p,
+        global_learning_le_e,
+        global_learning_le_p,
         pg69_audio1e, pg69_audio1p,
         pg69_audio2e, pg69_audio2p,
         pg69_audio3e, pg69_audio3p,
@@ -87,6 +88,22 @@ const pagina69 = () => {
         setFrasesEmbaralhadas(novasFrasesEmbaralhadas);
     }, []);
 
+    const playAudio = (audioKey, speed = 1.0) => {
+        const src = audioMap[audioKey];
+        if (!src) {
+            console.warn(`Áudio não encontrado: ${audioKey}`);
+            return;
+        }
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+        }
+        const audio = new Audio(src);
+        audio.playbackRate = speed;
+        currentAudioRef.current = audio;
+        audio.play();
+    };
+
     const handleWordClick = (fraseIndex, word) => {
         setRespostas((prev) => {
             const palavrasAtuais = prev[fraseIndex] || [];
@@ -114,7 +131,7 @@ const pagina69 = () => {
             const palavrasAtuais = prev[fraseIndex] || [];
             return {
                 ...prev,
-                [fraseIndex]: palavrasAtuais.filter((palavra) => palavra !== word),
+                [fraseIndex]: palavrasAtuais.filter((p) => p !== word),
             };
         });
 
@@ -128,8 +145,8 @@ const pagina69 = () => {
     const verificarRespostas = () => {
         const novosResultados = respostasCorretas.map((resposta, index) => {
             const respostaUsuario = respostas[index] || [];
-            const respostaUsuarioNormalizada = respostaUsuario.map(word => word.trim().toLowerCase());
-            const respostaCorretaNormalizada = resposta.map(word => word.trim().toLowerCase());
+            const respostaUsuarioNormalizada = respostaUsuario.map((w) => w.trim().toLowerCase());
+            const respostaCorretaNormalizada = resposta.map((w) => w.trim().toLowerCase());
             return JSON.stringify(respostaCorretaNormalizada) === JSON.stringify(respostaUsuarioNormalizada);
         });
         setResultados(novosResultados);
@@ -147,50 +164,48 @@ const pagina69 = () => {
         setShowAnswersKey(false);
     };
 
-    const playAudio = (audioKey, speed = 1.0) => {
-        const audioSrc = audioMap[audioKey];
-        if (audioSrc) {
-            const audio = new Audio(audioSrc);
-            audio.playbackRate = speed;
-            audio.play();
-        } else {
-            console.warn(`Áudio não encontrado para a chave: ${audioKey}`);
-        }
-    };
-
     return (
-        <div className={styles["page69__container"]}>
-            <header className={styles["page69__header"]}>
-                <h1 className={styles["page69__header-title"]}>
+        <div className={styles['page69__container']}>
+            <header className={styles['page69__header']}>
+                <h1 className={styles['page69__header-title']}>
                     Learning Language Exercises
                     <img
                         src={eng_audio_icon}
                         alt="English audio"
-                        className={styles["page69__audio-icon"]}
+                        className={styles['page69__audio-icon']}
                         onClick={() => playAudio('global_learning_le_e')}
                     />
                     <img
                         src={ptbr_audio_icon}
                         alt="Portuguese audio"
-                        className={styles["page69__audio-icon"]}
+                        className={styles['page69__audio-icon']}
                         onClick={() => playAudio('global_learning_le_p')}
                     />
                 </h1>
-                <p><span className={styles["page69__text--red"]}>Word Order:</span> Unscramble the words to form questions.</p>
-                <p><span className={styles["page69__text--red"]}>Ordem das Palavras:</span> Reorganize as palavras para formar perguntas.</p>
-                <p><span className={styles["page69__text--red"]}>Click</span> on the words to form the correct sentence.</p>
-                <p><span className={styles["page69__text--red"]}>Clique</span> nas palavras para formar a frase correta.</p>
+                <p>
+                    <span className={styles['page69__text--red']}>Word Order:</span> Unscramble the words to form questions.
+                </p>
+                <p>
+                    <span className={styles['page69__text--red']}>Ordem das Palavras:</span> Reorganize as palavras para formar
+                    perguntas.
+                </p>
+                <p>
+                    <span className={styles['page69__text--red']}>Click</span> on the words to form the correct sentence.
+                </p>
+                <p>
+                    <span className={styles['page69__text--red']}>Clique</span> nas palavras para formar a frase correta.
+                </p>
             </header>
 
-            <div className={styles["page69__table-interrogative-container"]}>
-                <div className={styles["page69__table-header-interrogative"]}>INTERROGATIVA</div>
-                <table className={styles["page69__styled-table-interrogative"]}>
-                    <thead className={styles["page69__thead"]}>
-                        <tr className={styles["page69__table-row"]}>
+            <div className={styles['page69__table-interrogative-container']}>
+                <div className={styles['page69__table-header-interrogative']}>INTERROGATIVA</div>
+                <table className={styles['page69__styled-table-interrogative']}>
+                    <thead className={styles['page69__thead']}>
+                        <tr className={styles['page69__table-row']}>
                             <th>Palavras <br /> Interrogativas</th>
                             <th>Verbo <br /> Auxiliar</th>
                             <th>Sujeito</th>
-                            <th><span className={styles["highlight"]}>Not</span> <br />Advérbio</th>
+                            <th><span className={styles['highlight']}>Not</span> <br />Advérbio</th>
                             <th>Verbo(s)</th>
                             <th>Objeto <br /> Complemento</th>
                         </tr>
@@ -198,68 +213,93 @@ const pagina69 = () => {
                 </table>
             </div>
 
-            <div className={styles["page69__main-aside-container"]}>
-                <main className={styles["page69__main-container"]}>
-                    <div className={styles["page69__phrases"]}>
-                        {respostasCorretas.map((_, fraseIndex) => (
-                            <div key={fraseIndex} className={styles["page69__phrase-container"]}>
-                                <div className={styles["page69__phrase"]}>
-                                    {frasesEmbaralhadas[fraseIndex] &&
-                                        frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
-                                            <div
-                                                key={wordIndex}
-                                                className={`${styles["page69__word"]} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`] ? styles["page69__word--disabled"] : ""}`}
-                                                onClick={() => handleWordClick(fraseIndex, word)}
-                                            >
-                                                {word}
-                                            </div>
-                                        ))}
-                                </div>
+            <div className={styles['page69__main-aside-container']}>
+                <main className={styles['page69__main-container']}>
+                    <div className={styles['page69__phrases']}>
+                        {respostasCorretas.map((_, fraseIndex) => {
+                            const enKey = `pg69_audio${fraseIndex + 1}e`;
+                            const ptKey = `pg69_audio${fraseIndex + 1}p`;
 
-                                <div className={styles["page69__input-phrase"]}>
-                                    {respostas[fraseIndex] &&
-                                        respostas[fraseIndex].map((palavra, index) => (
-                                            <div
-                                                key={index}
-                                                className={styles["page69__chip"]}
-                                                onClick={() => handleChipClick(fraseIndex, palavra)}
-                                            >
-                                                {index === 0
-                                                    ? palavra.charAt(0).toUpperCase() + palavra.slice(1)
-                                                    : palavra}
-                                            </div>
-                                        ))}
+                            return (
+                                <div key={fraseIndex} className={styles['page69__phrase-container']}>
+                                    {/* Palavras embaralhadas para clicar */}
+                                    <div className={styles['page69__phrase']}>
+                                        {frasesEmbaralhadas[fraseIndex] &&
+                                            frasesEmbaralhadas[fraseIndex].map((word, wordIndex) => (
+                                                <div
+                                                    key={wordIndex}
+                                                    className={`${styles['page69__word']} ${palavrasClicadas[`${fraseIndex}-${word.toLowerCase()}`]
+                                                            ? styles['page69__word--disabled']
+                                                            : ''
+                                                        }`}
+                                                    onClick={() => handleWordClick(fraseIndex, word)}
+                                                >
+                                                    {word}
+                                                </div>
+                                            ))}
+                                    </div>
 
-                                    {resultados.length > 0 && (
-                                        resultados[fraseIndex] ? (
-                                            <img
-                                                src={correct_icon}
-                                                alt="Correto"
-                                                className={styles["page69__icon--correct"]}
-                                            />
-                                        ) : (
-                                            <img
-                                                src={wrong_icon}
-                                                alt="Errado"
-                                                className={styles["page69__icon--wrong"]}
-                                            />
-                                        )
-                                    )}
+                                    {/* Frase montada + ÁUDIO (sempre visível) + certo/errado (após Check) */}
+                                    <div className={styles['page69__input-phrase']}>
+                                        {/* Chips clicados */}
+                                        {respostas[fraseIndex] &&
+                                            respostas[fraseIndex].map((palavra, index) => (
+                                                <div
+                                                    key={index}
+                                                    className={styles['page69__chip']}
+                                                    onClick={() => handleChipClick(fraseIndex, palavra)}
+                                                >
+                                                    {index === 0 ? palavra.charAt(0).toUpperCase() + palavra.slice(1) : palavra}
+                                                </div>
+                                            ))}
+
+                                        {/* Ícones de áudio posicionados pela sua folha de estilos */}
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt={`Play question ${fraseIndex + 1} in English`}
+                                            className={styles['icon--english']}
+                                            onClick={() => playAudio(enKey)}
+                                            title="Play (EN)"
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt={`Play question ${fraseIndex + 1} in Portuguese`}
+                                            className={styles['icon--portuguese']}
+                                            onClick={() => playAudio(ptKey)}
+                                            title="Play (PT-BR)"
+                                        />
+
+                                        {/* Ícones certo/errado (aparecem após Check) */}
+                                        {resultados.length > 0 &&
+                                            (resultados[fraseIndex] ? (
+                                                <img
+                                                    src={correct_icon}
+                                                    alt="Correto"
+                                                    className={styles['page69__icon--correct']}
+                                                />
+                                            ) : (
+                                                <img
+                                                    src={wrong_icon}
+                                                    alt="Errado"
+                                                    className={styles['page69__icon--wrong']}
+                                                />
+                                            ))}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
 
-                    <div className={styles["page69__buttons-container"]}>
-                        <button className={styles["page69__check-button"]} onClick={verificarRespostas}>
+                    <div className={styles['page69__buttons-container']}>
+                        <button className={styles['page69__check-button']} onClick={verificarRespostas}>
                             Check
                         </button>
-                        <button className={styles["page69__reset-button"]} onClick={handleReset}>
+                        <button className={styles['page69__reset-button']} onClick={handleReset}>
                             Reset
                         </button>
                         <button
-                            className={styles["page69__answersKey-button"]}
-                            onClick={() => setShowAnswersKey(v => !v)}
+                            className={styles['page69__answersKey-button']}
+                            onClick={() => setShowAnswersKey((v) => !v)}
                             aria-expanded={showAnswersKey}
                             aria-controls="answers-key-box"
                         >
@@ -270,16 +310,16 @@ const pagina69 = () => {
                     {showAnswersKey && (
                         <div
                             id="answers-key-box"
-                            className={styles["page69__answersKey-box"]}
+                            className={styles['page69__answersKey-box']}
                             role="region"
                             aria-label="Gabarito completo"
                         >
                             {respostasCorretas.map((arr, i) => {
                                 const texto = `${arr.join(' ')}?`;
                                 return (
-                                    <div key={i} className={styles["page69__answersKey-item"]}>
-                                        <span className={styles["page69__answersKey-num"]}>{i + 1}.</span>
-                                        <span className={styles["page69__answersKey-text"]}>{texto}</span>
+                                    <div key={i} className={styles['page69__answersKey-item']}>
+                                        <span className={styles['page69__answersKey-num']}>{i + 1}.</span>
+                                        <span className={styles['page69__answersKey-text']}>{texto}</span>
                                     </div>
                                 );
                             })}
@@ -287,10 +327,10 @@ const pagina69 = () => {
                     )}
                 </main>
 
-                <aside className={styles["page69__aside-container"]}>
-                    <div className={styles["page69__images-container"]}>
-                        <img src={pagina69_imagem1} alt="Imagem 1" className={styles["page69__image"]} />
-                        <img src={pagina69_imagem2} alt="Imagem 2" className={styles["page69__image"]} />
+                <aside className={styles['page69__aside-container']}>
+                    <div className={styles['page69__images-container']}>
+                        <img src={pagina69_imagem1} alt="Imagem 1" className={styles['page69__image']} />
+                        <img src={pagina69_imagem2} alt="Imagem 2" className={styles['page69__image']} />
                     </div>
                 </aside>
             </div>
@@ -298,5 +338,5 @@ const pagina69 = () => {
     );
 };
 
-export default pagina69;
+export default Pagina69;
 

@@ -1,137 +1,151 @@
 .page231__container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .page231__header {
-    width: 100%;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page231__header {
+  width: 100%;
+}
+
+.page231__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: bold;
+  text-align: left;
+}
+
+.page231__title_black {
+  color: black;
+}
+
+.page231__subtitle {
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.page231__highlight {
+  border: 0.2rem solid #A61C28;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page231__main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page231__tableSection {
+  width: 100%;
+}
+
+.page231__tableTitle {
+  background-color: #A61C28;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 2rem;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.page231__table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.page231__table th,
+.page231__table td {
+  border: 0.1rem solid #A61C28;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.page231__table th {
+  background-color: #888A8C;
+  color: white;
+  font-weight: bold;
+}
+
+.page231__red {
+  color: #A61C28;
+  font-weight: bold;
+}
+
+.page231__note {
+  margin-top: 1.5rem;
+  background-color: #E6F0FF;
+  padding: 1rem;
+  border-left: 0.5rem solid #1F3C8C;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.page231__noteLabel {
+  font-weight: bold;
+  color: #1F3C8C;
+}
+
+.page231__noteInfo {
+  margin-top: 2rem;
+  background-color: #F6F6F6;
+  padding: 1.5rem;
+  border-left: 0.5rem solid #A61C28;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.page231__highlightRed {
+  font-weight: bold;
+  color: #A61C28;
+}
+
+.page231__italic {
+  font-style: italic;
+  color: #A61C28;
+}
+
+.page231__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page231__icon:hover {
+  transform: scale(1.2);
+}
+
+
+@media (max-width: 1024px) {
   .page231__title {
-    font-size: 5rem;
-    color: #A61C28;
-    font-weight: bold;
-    text-align: left;
+    font-size: 3.5rem;
   }
-  
-  .page231__title_black {
-    color: black;
-  }
-  
+
   .page231__subtitle {
-    font-size: 2rem;
-    margin-top: 1rem;
-    text-align: left;
-  }
-  
-  .page231__highlight {
-    border: 0.2rem solid #A61C28;
-    padding: 0.3rem 0.8rem;
-    border-radius: 0.5rem;
-    color: #A61C28;
-    font-weight: bold;
-  }
-  
-  .page231__main {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  
-  .page231__tableSection {
-    width: 100%;
-  }
-  
-  .page231__tableTitle {
-    background-color: #A61C28;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    font-weight: bold;
-    font-size: 2rem;
-    border-radius: 0.4rem 0.4rem 0 0;
-  }
-  
-  .page231__table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5rem;
-  }
-  
-  .page231__table th,
-  .page231__table td {
-    border: 0.1rem solid #A61C28;
-    padding: 1rem;
-    text-align: center;
     font-size: 1.6rem;
   }
-  
-  .page231__table th {
-    background-color: #888A8C;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .page231__red {
-    color: #A61C28;
-    font-weight: bold;
-  }
-  
-  .page231__note {
-    margin-top: 1.5rem;
-    background-color: #E6F0FF;
-    padding: 1rem;
-    border-left: 0.5rem solid #1F3C8C;
+
+  .page231__table th,
+  .page231__table td {
     font-size: 1.4rem;
-    font-style: italic;
-    text-align: left;
+    padding: 0.8rem;
   }
-  
-  .page231__noteLabel {
-    font-weight: bold;
-    color: #1F3C8C;
-  }
-  
+
+  .page231__note,
   .page231__noteInfo {
-    margin-top: 2rem;
-    background-color: #F6F6F6;
-    padding: 1.5rem;
-    border-left: 0.5rem solid #A61C28;
-    font-size: 1.4rem;
-    font-style: italic;
-    text-align: left;
+    font-size: 1.2rem;
   }
-  
-  .page231__highlightRed {
-    font-weight: bold;
-    color: #A61C28;
-  }
-  
-  .page231__italic {
-    font-style: italic;
-    color: #A61C28;
-  }
-  
-  @media (max-width: 1024px) {
-    .page231__title {
-      font-size: 3.5rem;
-    }
-  
-    .page231__subtitle {
-      font-size: 1.6rem;
-    }
-  
-    .page231__table th,
-    .page231__table td {
-      font-size: 1.4rem;
-      padding: 0.8rem;
-    }
-  
-    .page231__note,
-    .page231__noteInfo {
-      font-size: 1.2rem;
-    }
-  }
-  
+}

@@ -1,14 +1,16 @@
 import React, { useRef } from 'react';
 import styles from './pagina229.module.css';
 
-import audio1 from '../assets/audios/pg229_audio1e.mp3'; 
-import audio2 from '../assets/audios/pg229_audio2e.mp3'; 
-import audio3 from '../assets/audios/pg229_audio3e.mp3'; 
-import audio4 from '../assets/audios/pg229_audio4e.mp3';   
-import audio5 from '../assets/audios/pg229_audio5e.mp3';   
-import audio6 from '../assets/audios/pg229_audio6e.mp3';  
-import audio7 from '../assets/audios/pg229_audio7e.mp3';  
-import audio8 from '../assets/audios/pg229_audio8e.mp3';  
+import audio1 from '../assets/audios/pg229_audio1e.mp3';
+import audio2 from '../assets/audios/pg229_audio2e.mp3';
+import audio3 from '../assets/audios/pg229_audio3e.mp3';
+import audio4 from '../assets/audios/pg229_audio4e.mp3';
+import audio5 from '../assets/audios/pg229_audio5e.mp3';
+import audio6 from '../assets/audios/pg229_audio6e.mp3';
+import audio7 from '../assets/audios/pg229_audio7e.mp3';
+import audio8 from '../assets/audios/pg229_audio8e.mp3';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
 const Pagina229 = () => {
   const audioRef = useRef(null);
@@ -18,7 +20,6 @@ const Pagina229 = () => {
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
     }
-
     const newAudio = new Audio(audioFile);
     audioRef.current = newAudio;
     newAudio.play();
@@ -49,77 +50,125 @@ const Pagina229 = () => {
               </tr>
             </thead>
             <tbody>
-              {/* I */}
               <tr>
                 <td>
-                  <span onClick={() => playAudio(audio1)} className={styles.page229__red} style={{ cursor: 'pointer' }}>I</span> <br />
-                  <span onClick={() => playAudio(audio2)} className={styles.page229__red} style={{ cursor: 'pointer' }}>I</span><br />
+                  <span className={styles.page229__red}>I</span> <br />
+                  <span className={styles.page229__red}>I</span><br />
                   <span>Eu <br /> Eu <br /> Eu</span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio1)} className={styles.page229__red} style={{ cursor: 'pointer' }}>am</span> <br />
-                  <span onClick={() => playAudio(audio2)} className={styles.page229__red} style={{ cursor: 'pointer' }}>ain’t</span><br />
-                  não <br /> não <br /> não
+                  <span className={styles.page229__red}>am</span> <br />
+                  <span className={styles.page229__red}>ain’t</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play ain’t (I)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio2)}
+                  />
+                  <br />não <br /> não <br /> não
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio1)} className={styles.page229__red} style={{ cursor: 'pointer' }}>not</span> <br /> <br />
+                  <span className={styles.page229__red}>not</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play not (I)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
+                  <br /> <br />
                   sou <br /> estou <br /> tenho
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* He */}
               <tr>
                 <td>
-                  <span onClick={() => playAudio(audio3)} className={styles.page229__red} style={{ cursor: 'pointer' }}>He</span> <br />
-                  <span onClick={() => playAudio(audio4)} className={styles.page229__red} style={{ cursor: 'pointer' }}>He</span><br />
+                  <span className={styles.page229__red}>He</span> <br />
+                  <span className={styles.page229__red}>He</span><br />
                   <span>Ele <br /> Ele <br /> Ele</span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio3)} className={styles.page229__red} style={{ cursor: 'pointer' }}>is</span><br />
-                  <span onClick={() => playAudio(audio4)} className={styles.page229__red} style={{ cursor: 'pointer' }}>isn’t</span><br />
-                  não <br /> não <br /> não
+                  <span className={styles.page229__red}>is</span><br />
+                  <span className={styles.page229__red}>isn’t</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play isn’t (He)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio4)}
+                  />
+                  <br />não <br /> não <br /> não
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio3)} className={styles.page229__red} style={{ cursor: 'pointer' }}>not</span><br /> <br />
+                  <span className={styles.page229__red}>not</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play not (He)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio3)}
+                  />
+                  <br /> <br />
                   é <br /> está <br /> tem
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* She */}
               <tr>
                 <td>
-                  <span onClick={() => playAudio(audio5)} className={styles.page229__red} style={{ cursor: 'pointer' }}>She</span><br />
+                  <span className={styles.page229__red}>She</span><br />
                   <span>Ela <br /> Ela <br /> Ela</span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio5)} className={styles.page229__red} style={{ cursor: 'pointer' }}>is</span><br />
-                  <span onClick={() => playAudio(audio6)} className={styles.page229__red} style={{ cursor: 'pointer' }}>isn’t</span><br />
-                  não <br /> não <br /> não
+                  <span className={styles.page229__red}>is</span><br />
+                  <span className={styles.page229__red}>isn’t</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play isn’t (She)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio6)}
+                  />
+                  <br />não <br /> não <br /> não
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio5)} className={styles.page229__red} style={{ cursor: 'pointer' }}>not</span><br /> <br />
+                  <span className={styles.page229__red}>not</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play not (She)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio5)}
+                  />
+                  <br /> <br />
                   é <br /> está <br /> tem
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* It */}
               <tr>
                 <td>
-                  <span onClick={() => playAudio(audio7)} className={styles.page229__red} style={{ cursor: 'pointer' }}>It</span>
+                  <span className={styles.page229__red}>It</span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio7)} className={styles.page229__red} style={{ cursor: 'pointer' }}>is</span><br />
-                  <span onClick={() => playAudio(audio8)} className={styles.page229__red} style={{ cursor: 'pointer' }}>isn’t</span><br />
-                  não <br /> não <br /> não
+                  <span className={styles.page229__red}>is</span><br />
+                  <span className={styles.page229__red}>isn’t</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play isn’t (It)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio8)}
+                  />
+                  <br />não <br /> não <br /> não
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio7)} className={styles.page229__red} style={{ cursor: 'pointer' }}>not</span><br /> <br />
+                  <span className={styles.page229__red}>not</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play not (It)"
+                    className={styles.page229__icon}
+                    onClick={() => playAudio(audio7)}
+                  />
+                  <br /> <br />
                   é <br /> está <br /> tem
                 </td>
                 <td>—</td>

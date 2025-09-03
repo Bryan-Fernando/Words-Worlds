@@ -10,6 +10,8 @@ import audio6 from '../assets/audios/pg227_audio6e.mp3';
 import audio7 from '../assets/audios/pg227_audio7e.mp3';
 import audio8 from '../assets/audios/pg227_audio8e.mp3';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 const Pagina227 = () => {
   const currentAudio = useRef(null);
 
@@ -48,81 +50,117 @@ const Pagina227 = () => {
               </tr>
             </thead>
             <tbody>
-              {/* I */}
               <tr>
                 <td>
-                  <strong>
-                    <span onClick={() => playAudio(audio1)} style={{ cursor: 'pointer' }}>I</span>
-                  </strong>
+                  <strong>I</strong>
                   <br />
                   <span>
                     Eu <br />Eu <br /> Eu
                   </span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio1)} style={{ cursor: 'pointer' }}>am</span>
+                  am
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play am"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
                   <br />sou <br />estou <br />tenho
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio5)} style={{ cursor: 'pointer' }}>I'm</span>
+                  I&apos;m
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play I'm"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio5)}
+                  />
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* He */}
               <tr>
                 <td>
-                  <span className={styles.page227__red}>
-                    <span onClick={() => playAudio(audio2)} style={{ cursor: 'pointer' }}>He</span>
-                  </span>
+                  <span className={styles.page227__red}>He</span>
                   <br />
                   Ele <br />Ele <br />Ele
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio2)} style={{ cursor: 'pointer' }}>is</span>
+                  is
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play is (He)"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio2)}
+                  />
                   <br />é <br />está <br />tem
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio6)} style={{ cursor: 'pointer' }}>He's</span>
+                  He&apos;s
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play He's"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio6)}
+                  />
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* She */}
               <tr>
                 <td>
-                  <span className={styles.page227__red}>
-                    <span onClick={() => playAudio(audio3)} style={{ cursor: 'pointer' }}>She</span>
-                  </span>
+                  <span className={styles.page227__red}>She</span>
                   <br />
                   Ela <br />Ela <br />Ela
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio3)} style={{ cursor: 'pointer' }}>is</span>
+                  is
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play is (She)"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio3)}
+                  />
                   <br />é <br />está <br />tem
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio7)} style={{ cursor: 'pointer' }}>She's</span>
+                  She&apos;s
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play She's"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio7)}
+                  />
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>
               </tr>
 
-              {/* It */}
               <tr>
                 <td>
-                  <span className={styles.page227__red}>
-                    <span onClick={() => playAudio(audio4)} style={{ cursor: 'pointer' }}>It</span>
-                  </span>
+                  <span className={styles.page227__red}>It</span>
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio4)} style={{ cursor: 'pointer' }}>is</span>
+                  is
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play is (It)"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio4)}
+                  />
                   <br />é <br />está <br />tem
                 </td>
                 <td>
-                  <span onClick={() => playAudio(audio8)} style={{ cursor: 'pointer' }}>It's</span>
+                  It&apos;s
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play It's"
+                    className={styles.page227__icon}
+                    onClick={() => playAudio(audio8)}
+                  />
                 </td>
                 <td>—</td>
                 <td>(somente para idade)</td>

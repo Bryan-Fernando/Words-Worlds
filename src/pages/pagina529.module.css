@@ -1,1 +1,44 @@
+/* base – texto à esquerda */
+.page__container{
+  display:flex;
+  flex-direction:column;
+  gap:2rem;
+  padding:2rem;
+  text-align:left;
+}
+
+.page__header{ width:100%; }
+.page__title{ font-size:4.4rem; color:#A61C28; font-weight:800; line-height:1.1; }
+
+/* painel cinza com a imagem e o diálogo */
+.panel{
+  background:#E9E9E9;
+  border-radius:.9rem;
+  padding:1.2rem;
+}
+
+/* hero image */
+.hero{
+  width:100%;
+  height:28rem;
+  object-fit:cover;
+  border-radius:.6rem;
+  background:#f1f1f1; /* placeholder */
+  display:block;
+  margin-bottom:1rem;
+}
+
+/* diálogo */
+.dialogue{ display:flex; flex-direction:column; gap:.35rem; }
+.lineA, .lineB{ font-size:1.6rem; line-height:1.75; }
+
+.nameA{ color:#111; font-weight:800; }
+.nameB{ color:#A61C28; font-weight:800; }
+.lineB{ color:#A61C28; font-style:italic; }
+
+/* responsivo */
+@media (max-width: 880px){
+  .page__title{ font-size:3.6rem; }
+  .hero{ height:22rem; }
+}
  

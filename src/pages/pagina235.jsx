@@ -1,7 +1,30 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina235.module.css';
 
+import audio1 from '../assets/audios/pg235_audio1e.mp3';
+import audio2 from '../assets/audios/pg235_audio2e.mp3';
+import audio3 from '../assets/audios/pg235_audio3e.mp3';
+import audio4 from '../assets/audios/pg235_audio4e.mp3';
+import audio5 from '../assets/audios/pg235_audio5e.mp3';
+import audio6 from '../assets/audios/pg235_audio6e.mp3';
+import audio7 from '../assets/audios/pg235_audio7e.mp3';
+import audio8 from '../assets/audios/pg235_audio8e.mp3';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 const Pagina235 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (audioFile) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const newAudio = new Audio(audioFile);
+    audioRef.current = newAudio;
+    newAudio.play();
+  };
+
   return (
     <div className={styles.page235__container}>
       <header className={styles.page235__header}>
@@ -27,11 +50,28 @@ const Pagina235 = () => {
               </tr>
             </thead>
             <tbody>
-              {/* We */}
               <tr>
                 <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
-                <td className={styles.page235__red}>we<br /><span>we</span></td>
-                <td>not<br />—</td>
+                <td className={styles.page235__red}>
+                  we<br />
+                  <span>we</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Aren’t we"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio2)}
+                  />
+                </td>
+                <td>
+                  not
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are we not"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
+                  <br />—
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -39,11 +79,28 @@ const Pagina235 = () => {
               <tr><td>Nós</td><td>não</td><td>estamos</td><td>—</td><td>...?</td></tr>
               <tr><td>Nós</td><td>não</td><td>temos</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
-              {/* You (sg) */}
               <tr>
                 <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
-                <td className={styles.page235__red}>you <span>(sg)</span><br /><span>you</span></td>
-                <td>not<br />—</td>
+                <td className={styles.page235__red}>
+                  you <span>(sg)</span><br />
+                  <span>you</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Aren’t you (sg)"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio4)}
+                  />
+                </td>
+                <td>
+                  not
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are you (sg) not"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio3)}
+                  />
+                  <br />—
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -51,11 +108,28 @@ const Pagina235 = () => {
               <tr><td>Você</td><td>não</td><td>está</td><td>—</td><td>...?</td></tr>
               <tr><td>você</td><td>não</td><td>tem</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
-              {/* You all (pl) */}
               <tr>
                 <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
-                <td className={styles.page235__red}>you all <span>(pl)</span><br /><span>you all</span></td>
-                <td>not<br />—</td>
+                <td className={styles.page235__red}>
+                  you all <span>(pl)</span><br />
+                  <span>you all</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Aren’t you all (pl)"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio6)}
+                  />
+                </td>
+                <td>
+                  not
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are you all (pl) not"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio5)}
+                  />
+                  <br />—
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
@@ -63,11 +137,28 @@ const Pagina235 = () => {
               <tr><td>Vocês</td><td>não</td><td>stão</td><td>—</td><td>...?</td></tr>
               <tr><td>Vocês</td><td>não</td><td>têm</td><td>—</td><td>(somente para idade) ...?</td></tr>
 
-              {/* They */}
               <tr>
                 <td><spam className={styles.page235__red}>Are</spam><br /><spam className={styles.page235__red}>Aren’t</spam></td>
-                <td className={styles.page235__red}>they<br /><span>they</span></td>
-                <td>not<br />—</td>
+                <td className={styles.page235__red}>
+                  they<br />
+                  <span>they</span>
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Aren’t they"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio8)}
+                  />
+                </td>
+                <td>
+                  not
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Are they not"
+                    className={styles.page235__icon}
+                    onClick={() => playAudio(audio7)}
+                  />
+                  <br />—
+                </td>
                 <td>—</td>
                 <td>...?</td>
               </tr>
