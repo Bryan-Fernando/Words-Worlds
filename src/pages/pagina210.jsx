@@ -147,7 +147,7 @@ const Pagina210 = () => {
                                     <span className={styles.page210__pg213Black}>consegue entender</span>
                                 </div>
                                 <div className={styles.page210__pg213Cell}>
-                                    <span className={styles.page210__pg213Red}>Spanihs?</span>
+                                    <span className={styles.page210__pg213Red}>Spanish?</span>
                                     <span className={styles.page210__pg213Black}>espanhol?</span>
                                    
                                 </div>

@@ -1,29 +1,37 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import styles from './pagina273.module.css';
-import correctIcon from '../assets/icons/correct_icon.webp';
-import wrongIcon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+
+import eng1 from '../assets/audios/pg273_audio1e.mp3';
+import eng2 from '../assets/audios/pg273_audio2e.mp3';
+import eng3 from '../assets/audios/pg273_audio3e.mp3';
+import eng4 from '../assets/audios/pg273_audio4e.mp3';
+
+import pt1 from '../assets/audios/pg273_audio1p.mp3';
+import pt2 from '../assets/audios/pg273_audio2p.mp3';
+import pt3 from '../assets/audios/pg273_audio3p.mp3';
+import pt4 from '../assets/audios/pg273_audio4p.mp3';
 
 const questions = [
-  {
-    prompt: "a) Beautiful (superlativo de superioridade)",
-    answer: "she is the most beautiful girl in the school"
-  },
-  {
-    prompt: "b) Fast (comparativo de igualdade)",
-    answer: "my car is as fast as yours"
-  },
-  {
-    prompt: "c) Boring (comparativo de inferioridade)",
-    answer: "this movie is less boring than the other one"
-  }
+  { prompt: 'a) Beautiful (superlativo de superioridade)' },
+  { prompt: 'b) Fast (comparativo de igualdade)' },
+  { prompt: 'c) Boring (comparativo de inferioridade)' }
 ];
-
-const normalize = (str) =>
-  str.trim().replace(/\s+/g, ' ').toLowerCase();
 
 const Pagina273 = () => {
   const [inputs, setInputs] = useState(Array(questions.length).fill(''));
-  const [results, setResults] = useState(Array(questions.length).fill(null));
+  const audioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const a = new Audio(file);
+    audioRef.current = a;
+    a.play();
+  };
 
   const handleInputChange = (value, index) => {
     const updated = [...inputs];
@@ -31,12 +39,8 @@ const Pagina273 = () => {
     setInputs(updated);
   };
 
-  const handleCheckClick = () => {
-    const evaluated = inputs.map((input, i) =>
-      normalize(input) === normalize(questions[i].answer)
-    );
-    setResults(evaluated);
-  };
+  const engAudios = [eng1, eng2, eng3, eng4];
+  const ptAudios = [pt1, pt2, pt3, pt4];
 
   return (
     <div className={styles.page273__container}>
@@ -49,37 +53,52 @@ const Pagina273 = () => {
 
       <p className={styles.page273__instruction}>
         <strong>6.</strong> Make a sentence using the given adjective:
+        <img
+          src={eng_audio_icon}
+          alt="Play instruction (EN)"
+          className={styles.page273__icon}
+          onClick={() => playAudio(engAudios[0])}
+        />
+        <img
+          src={ptbr_audio_icon}
+          alt="Ouvir instrução (PT)"
+          className={styles.page273__icon}
+          onClick={() => playAudio(ptAudios[0])}
+        />
       </p>
 
       <div className={styles.page273__questionBox}>
         <main className={styles.page273__main}>
           {questions.map((q, index) => (
             <div key={index} className={styles.page273__question}>
-              <span className={styles.page273__prompt}>{q.prompt}</span>
+              <span className={styles.page273__prompt}>
+                {q.prompt}
+                <img
+                  src={eng_audio_icon}
+                  alt={`Play prompt ${index + 1} (EN)`}
+                  className={styles.page273__icon}
+                  onClick={() => playAudio(engAudios[index + 1])}
+                />
+                <img
+                  src={ptbr_audio_icon}
+                  alt={`Ouvir enunciado ${index + 1} (PT)`}
+                  className={styles.page273__icon}
+                  onClick={() => playAudio(ptAudios[index + 1])}
+                />
+              </span>
+
               <div className={styles.page273__inputWrapper}>
                 <input
                   type="text"
                   value={inputs[index]}
                   onChange={(e) => handleInputChange(e.target.value, index)}
                   className={styles.page273__input}
+                  placeholder="Digite sua frase aqui"
                 />
-                {results[index] !== null && (
-                  <img
-                    src={results[index] ? correctIcon : wrongIcon}
-                    alt={results[index] ? 'Correct' : 'Incorrect'}
-                    className={styles.page273__resultIcon}
-                  />
-                )}
               </div>
             </div>
           ))}
         </main>
-      </div>
-
-      <div className={styles.page273__checkContainer}>
-        <button className={styles.page273__checkButton} onClick={handleCheckClick}>
-          Check
-        </button>
       </div>
     </div>
   );

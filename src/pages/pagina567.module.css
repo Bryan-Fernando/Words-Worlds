@@ -1,1 +1,133 @@
+.page{
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.8rem;
+  text-align:left; /* padrão: tudo à esquerda */
+}
+
+/* Título */
+.title{
+  font-size:4.2rem;
+  font-weight:800;
+  color:#A61C28;
+  margin:0 .2rem .8rem 0;
+}
+
+/* Semana */
+.weekRow{
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem;
+}
+.dayPill{
+  min-width:140px;
+  background:#eee;
+  border:1px solid #d9d9d9;
+  border-radius:.8rem;
+  padding:.7rem 1rem;
+  line-height:1.25;
+  box-shadow:0 1px 0 #fff inset;
+}
+.dayEn{
+  font-weight:800;
+  color:#A61C28;
+  border-bottom:2px solid #A61C28;
+  width:fit-content;
+  margin-bottom:.3rem;
+}
+.dayPt{ font-size:1.45rem; }
+.dayAbbr{
+  font-style:italic;
+  color:#666;
+  font-size:1.3rem;
+}
+
+/* Períodos do dia */
+.timesRow{
+  display:flex;
+  gap:2rem;
+  flex-wrap:wrap;
+  justify-content:flex-start;
+}
+.timeItem{
+  min-width:180px;
+}
+.timeEn{
+  font-weight:800;
+  color:#A61C28;
+  display:block;
+}
+.timePt{
+  display:block;
+  margin-top:.1rem;
+  color:#555;
+}
+
+/* Imagem */
+.hero{
+  margin:0;
+  border-radius:.6rem;
+  overflow:hidden;
+  border:1px solid #e5e5e5;
+  background:#fafafa;
+}
+.hero img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}
+
+/* Diálogo */
+.dialogue{ 
+  background:#f1f1f1; 
+  border:1px solid #e1e1e1; 
+  border-radius:.6rem; 
+  padding:1.2rem 1.4rem; 
+  display:flex; 
+  flex-direction:column; 
+  gap:.5rem; 
+}
+.joe{ font-weight:800; color:#111; }
+.sue{ font-weight:800; color:#A61C28; }
+.hl{ color:#A61C28; font-style:italic; font-weight:700; }
+.sceneNote{ font-style:italic; color:#444; margin:.6rem 0; }
+
+/* Word Bank */
+.wordBank{
+  margin-top:.4rem;
+}
+.bankTitle{
+  background:#A61C28;
+  color:#fff;
+  font-weight:800;
+  padding:.8rem 1rem;
+  border-radius:.8rem .8rem 0 0;
+  width:fit-content;
+}
+.bankGrid{
+  border:1px solid #A61C28;
+  border-top:none;
+  padding:1rem;
+  border-radius:0 .8rem .8rem .8rem;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(220px, 1fr));
+  gap:1rem 1.2rem;
+  background:#fff;
+}
+.bankItem{
+  background:#f7f7f7;
+  border:1px solid #e8e8e8;
+  border-radius:.6rem;
+  padding:.8rem 1rem;
+}
+.en{ font-weight:800; }
+.pt{ color:#666; font-size:1.45rem; margin-top:.2rem; }
+
+/* Responsivo */
+@media (max-width: 900px){
+  .title{ font-size:3.6rem; }
+  .bankGrid{ grid-template-columns:1fr; }
+}
  

@@ -1,23 +1,38 @@
-import React from 'react';
-import styles from './pagina601.module.css';
+import React, { useEffect } from "react";
+import styles from "./pagina601.module.css";
 
-const pagina601 = () => {
-    return (
-        <div>
-            <div className={styles.pg91Container}>
-                <header className={styles.pg91Header}>
-                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                    <div>
-                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                        <p>Dizendo as horas</p>
-                    </div>
-                </header>
-                <main className={styles.pg91Main}>
-                    <div></div>
-                </main>
-            </div>
-        </div>
-    );
+const Pagina601 = ({ onValidar }) => {
+  useEffect(() => { onValidar?.(true); }, [onValidar]);
+
+  return (
+    <div className={styles.page601__container}>
+      <header className={styles.page601__header}>
+        <h1 className={styles.page601__title}>Study Note</h1>
+      </header>
+
+      <main className={styles.page601__main}>
+        <section className={styles.page601__card}>
+          <p className={styles.page601__label}>Example:</p>
+
+          <p className={styles.page601__eq}>C = (5/9) × (F − 32)</p>
+
+          <p className={styles.page601__text}>
+            Given that <strong>F = 86°F</strong>, we can substitute it into the formula:
+          </p>
+          <p className={styles.page601__eq}>C = (5/9) × (86 − 32)</p>
+
+          <p className={styles.page601__text}>Now, let&apos;s compute:</p>
+          <p className={styles.page601__eq}>C = (5/9) × (54)</p>
+          <p className={styles.page601__eq}>C ≈ (5/9) × 54</p>
+          <p className={styles.page601__eq}>C ≈ 30</p>
+
+          <p className={styles.page601__result}>
+            So, 86°F is approximately equal to 30°C.
+          </p>
+        </section>
+      </main>
+    </div>
+  );
 };
 
-export default pagina601;
+export default Pagina601;

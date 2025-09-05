@@ -1,22 +1,42 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import styles from './pagina342.module.css';
 import correctIcon from '../assets/icons/correct_icon.webp';
 import wrongIcon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-// Dados para o exercício 1: Fill in the blanks
+import audio1e from '../assets/audios/pg342_audio1e.mp3';
+import audio2e from '../assets/audios/pg342_audio2e.mp3';
+import audio3e from '../assets/audios/pg342_audio3e.mp3';
+import audio4e from '../assets/audios/pg342_audio4e.mp3';
+import audio5e from '../assets/audios/pg342_audio5e.mp3';
+import audio6e from '../assets/audios/pg342_audio6e.mp3';
+import audio7e from '../assets/audios/pg342_audio7e.mp3';
+import audio8e from '../assets/audios/pg342_audio8e.mp3';
+import audio9e from '../assets/audios/pg342_audio9e.mp3';
+
+import audio1p from '../assets/audios/pg342_audio1p.mp3';
+import audio2p from '../assets/audios/pg342_audio2p.mp3';
+import audio3p from '../assets/audios/pg342_audio3p.mp3';
+import audio4p from '../assets/audios/pg342_audio4p.mp3';
+import audio5p from '../assets/audios/pg342_audio5p.mp3';
+import audio6p from '../assets/audios/pg342_audio6p.mp3';
+import audio7p from '../assets/audios/pg342_audio7p.mp3';
+import audio8p from '../assets/audios/pg342_audio8p.mp3';
+import audio9p from '../assets/audios/pg342_audio9p.mp3';
+
 const fillInBlanksQuestions = [
-  { sentence: "1. I think it __________ rain tomorrow.", answer: "will" },
-  { sentence: "2. He __________ be back by 9 p.m.", answer: "will" },
-  { sentence: "3. She __________ call you later.", answer: "will" },
-  { sentence: "4. We __________ help you with this homework.", answer: "will" },
-  { sentence: "5. They __________ come to the party.", answer: "will" }
+  { sentence: '1. I think it __________ rain tomorrow.', answer: 'will' },
+  { sentence: '2. He __________ be back by 9 p.m.', answer: 'will' },
+  { sentence: '3. She __________ call you later.', answer: 'will' },
+  { sentence: '4. We __________ help you with this homework.', answer: 'will' },
+  { sentence: '5. They __________ come to the party.', answer: 'will' }
 ];
 
-// Dados para o exercício 2: Multiple Choice
 const multipleChoiceQuestions = [
   {
     id: 1,
-    question: "1. I __________ go to the cinema tonight.",
+    question: '1. I __________ go to the cinema tonight.',
     options: [
       { id: 'a', text: 'will', isCorrect: true },
       { id: 'b', text: 'would', isCorrect: false },
@@ -26,7 +46,7 @@ const multipleChoiceQuestions = [
   },
   {
     id: 2,
-    question: "2. They __________ finish the project next week.",
+    question: '2. They __________ finish the project next week.',
     options: [
       { id: 'a', text: 'will', isCorrect: true },
       { id: 'b', text: 'have', isCorrect: false },
@@ -39,17 +59,27 @@ const multipleChoiceQuestions = [
 const normalize = (str) => str.trim().replace(/\s+/g, ' ').toLowerCase();
 
 const Pagina342 = () => {
-  // Estados para o exercício 1: Fill in the blanks
   const [inputValuesEx1, setInputValuesEx1] = useState(Array(fillInBlanksQuestions.length).fill(''));
   const [resultsEx1, setResultsEx1] = useState(Array(fillInBlanksQuestions.length).fill(null));
-
-  // Estados para o exercício 2: Multiple Choice
   const [selectedOptionsEx2, setSelectedOptionsEx2] = useState({});
   const [resultsEx2, setResultsEx2] = useState({});
-  // Novo estado para armazenar as respostas exibidas no exercício 2
   const [displayedAnswersEx2, setDisplayedAnswersEx2] = useState({});
 
-  // Handlers para o exercício 1
+  const currentAudioRef = useRef(null);
+
+  const eng = [audio1e, audio2e, audio3e, audio4e, audio5e, audio6e, audio7e, audio8e, audio9e];
+  const pt = [audio1p, audio2p, audio3p, audio4p, audio5p, audio6p, audio7p, audio8p, audio9p];
+
+  const playAudio = (file) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(file);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   const handleInputChangeEx1 = (value, index) => {
     const updatedValues = [...inputValuesEx1];
     updatedValues[index] = value;
@@ -57,43 +87,23 @@ const Pagina342 = () => {
   };
 
   const handleCheckClickEx1 = () => {
-    const evaluatedResults = inputValuesEx1.map((input, i) => {
-      const userInput = normalize(input);
-      const correctAnswer = normalize(fillInBlanksQuestions[i].answer);
-      // Para depuração, se necessário
-      // console.log(`Questão ${i+1}: userInput='${userInput}', correctAnswer='${correctAnswer}', match=${userInput === correctAnswer}`);
-      return userInput === correctAnswer;
-    });
+    const evaluatedResults = inputValuesEx1.map((input, i) => normalize(input) === normalize(fillInBlanksQuestions[i].answer));
     setResultsEx1(evaluatedResults);
   };
 
-  // Handlers para o exercício 2
   const handleOptionChangeEx2 = (questionId, optionId) => {
-    setSelectedOptionsEx2({
-      ...selectedOptionsEx2,
-      [questionId]: optionId
-    });
+    setSelectedOptionsEx2({ ...selectedOptionsEx2, [questionId]: optionId });
   };
 
   const handleCheckClickEx2 = () => {
     const newResults = {};
     const newDisplayedAnswers = {};
-    
-    multipleChoiceQuestions.forEach(question => {
-      const selectedOption = selectedOptionsEx2[question.id];
-      if (selectedOption) {
-        const selectedOptionObj = question.options.find(opt => opt.id === selectedOption);
-        newResults[question.id] = selectedOptionObj ? selectedOptionObj.isCorrect : false;
-        
-        // Armazena o texto da opção selecionada para exibição
-        if (selectedOptionObj) {
-          newDisplayedAnswers[question.id] = selectedOptionObj.text;
-        }
-      } else {
-        newResults[question.id] = false;
-      }
+    multipleChoiceQuestions.forEach((q) => {
+      const sel = selectedOptionsEx2[q.id];
+      const opt = q.options.find((o) => o.id === sel);
+      newResults[q.id] = !!opt && opt.isCorrect;
+      if (opt) newDisplayedAnswers[q.id] = opt.text;
     });
-    
     setResultsEx2(newResults);
     setDisplayedAnswersEx2(newDisplayedAnswers);
   };
@@ -104,16 +114,29 @@ const Pagina342 = () => {
         <h1><span className={styles.page342__exercisesRed}>Exercises</span></h1>
       </header>
 
-      {/* Exercício 1: Fill in the blanks */}
       <p className={styles.page342__instructionRed}>
-        <strong>1. Fill in the blanks using "will" ( Full Form )</strong>
+        <strong>
+          1. Fill in the blanks using "will" ( Full Form )
+          <img
+            src={eng_audio_icon}
+            alt="Play English Audio"
+            className={styles.page342__icon}
+            onClick={() => playAudio(eng[0])}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Play Portuguese Audio"
+            className={styles.page342__icon}
+            onClick={() => playAudio(pt[0])}
+          />
+        </strong>
       </p>
 
       <div className={styles.page342__questionBox}>
         <main className={styles.page342__main}>
           {fillInBlanksQuestions.map((q, index) => {
             const [beforeBlank, afterBlank] = q.sentence.split('__________');
-
+            const audioIdx = index + 1;
             return (
               <div key={index} className={styles.page342__question}>
                 <span>{beforeBlank}</span>
@@ -123,12 +146,26 @@ const Pagina342 = () => {
                   onChange={(e) => handleInputChangeEx1(e.target.value, index)}
                   className={styles.page342__input}
                 />
-                <span>{afterBlank}</span>
+                <span>
+                  {afterBlank}
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play English Audio"
+                    className={styles.page342__icon}
+                    onClick={() => playAudio(eng[audioIdx])}
+                  />
+                  <img
+                    src={ptbr_audio_icon}
+                    alt="Play Portuguese Audio"
+                    className={styles.page342__icon}
+                    onClick={() => playAudio(pt[audioIdx])}
+                  />
+                </span>
 
                 {resultsEx1[index] !== null && (
                   <img
                     src={resultsEx1[index] ? correctIcon : wrongIcon}
-                    alt={resultsEx1[index] ? "Correct" : "Incorrect"}
+                    alt={resultsEx1[index] ? 'Correct' : 'Incorrect'}
                     className={styles.page342__resultIcon}
                   />
                 )}
@@ -146,17 +183,30 @@ const Pagina342 = () => {
 
       <hr className={styles.page342__divider} />
 
-      {/* Exercício 2: Multiple Choice */}
       <p className={styles.page342__instructionRed}>
-        <strong>2. Multiple Choice</strong>
+        <strong>
+          2. Multiple Choice
+          <img
+            src={eng_audio_icon}
+            alt="Play English Audio"
+            className={styles.page342__icon}
+            onClick={() => playAudio(eng[6])}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Play Portuguese Audio"
+            className={styles.page342__icon}
+            onClick={() => playAudio(pt[6])}
+          />
+        </strong>
       </p>
 
       <div className={styles.page342__questionBox}>
         <main className={styles.page342__main}>
-          {multipleChoiceQuestions.map((question) => {
+          {multipleChoiceQuestions.map((question, idx) => {
             const [beforeBlank, afterBlank] = question.question.split('__________');
             const displayedAnswer = displayedAnswersEx2[question.id];
-            
+            const audioIdx = 7 + idx;
             return (
               <div key={question.id} className={styles.page342__multipleChoiceQuestion}>
                 <div className={styles.page342__questionText}>
@@ -166,11 +216,25 @@ const Pagina342 = () => {
                   ) : (
                     <span className={styles.page342__blankPlaceholder}>__________</span>
                   )}
-                  <span>{afterBlank}</span>
+                  <span>
+                    {afterBlank}
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page342__icon}
+                      onClick={() => playAudio(eng[audioIdx])}
+                    />
+                    <img
+                      src={ptbr_audio_icon}
+                      alt="Play Portuguese Audio"
+                      className={styles.page342__icon}
+                      onClick={() => playAudio(pt[audioIdx])}
+                    />
+                  </span>
                   {resultsEx2[question.id] !== undefined && (
                     <img
                       src={resultsEx2[question.id] ? correctIcon : wrongIcon}
-                      alt={resultsEx2[question.id] ? "Correct" : "Incorrect"}
+                      alt={resultsEx2[question.id] ? 'Correct' : 'Incorrect'}
                       className={styles.page342__resultIcon}
                     />
                   )}

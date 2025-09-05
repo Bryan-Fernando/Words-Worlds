@@ -59,10 +59,10 @@
 }
 
 .page143__icons-container img {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
     position: relative;
-    top: 0.3rem;
+    top: 1rem;
     margin-left: 0.5rem;
     cursor: pointer;
     transition: transform 0.2s ease;

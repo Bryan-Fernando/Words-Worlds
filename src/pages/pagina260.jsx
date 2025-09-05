@@ -1,6 +1,26 @@
+import React, { useRef } from "react";
 import styles from "./pagina260.module.css";
 
+import audio1 from "../assets/audios/pg260_audio1e.mp3";
+import audio2 from "../assets/audios/pg260_audio2e.mp3";
+import audio3 from "../assets/audios/pg260_audio3e.mp3";
+import audio4 from "../assets/audios/pg260_audio4e.mp3";
+
+import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
+
 const Pagina260 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const a = new Audio(file);
+    audioRef.current = a;
+    a.play();
+  };
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentArea}>
@@ -30,6 +50,12 @@ const Pagina260 = () => {
                   <span className={styles.redText}>the most</span>{" "}
                   <span className={styles.underlinedText}>intelligent</span>{" "}
                   <span className={styles.normalText}>student in the classroom</span>.
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Joshua is the most intelligent student in the classroom."
+                    className={styles.page260__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
                 </p>
                 <p className={styles.translation}>
                   <span className={styles.normalText}>Joshua é o aluno</span>{" "}
@@ -44,6 +70,12 @@ const Pagina260 = () => {
                   <span className={styles.redText}>the most</span>{" "}
                   <span className={styles.underlinedText}>creative</span>{" "}
                   <span className={styles.normalText}>teacher in school</span>.
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Marian is the most creative teacher in school."
+                    className={styles.page260__icon}
+                    onClick={() => playAudio(audio2)}
+                  />
                 </p>
                 <p className={styles.translation}>
                   <span className={styles.normalText}>Marian é a professora</span>{" "}
@@ -74,6 +106,12 @@ const Pagina260 = () => {
                   <span className={styles.underlinedText}>friendly</span>{" "}
                   <span className={styles.redText}>than</span>{" "}
                   <span className={styles.normalText}>the other co-workers</span>.
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Antony is less friendly than the other co-workers."
+                    className={styles.page260__icon}
+                    onClick={() => playAudio(audio3)}
+                  />
                 </p>
                 <p className={styles.translation}>
                   <span className={styles.normalText}>Antony é</span>{" "}
@@ -90,6 +128,12 @@ const Pagina260 = () => {
                   <span className={styles.underlinedText}>creative</span>{" "}
                   <span className={styles.redText}>than</span>{" "}
                   <span className={styles.normalText}>the other teachers</span>.
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play Daniel is less creative than the other teachers."
+                    className={styles.page260__icon}
+                    onClick={() => playAudio(audio4)}
+                  />
                 </p>
                 <p className={styles.translation}>
                   <span className={styles.normalText}>Daniel é</span>{" "}

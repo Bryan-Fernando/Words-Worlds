@@ -133,6 +133,34 @@
     transform: scale(1.2);
 }
 
+/* Botão “invisível” da campainha no Word Bank */
+.page105__bell-btn {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin-left: .8rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.page105__bell-btn:focus-visible {
+  outline: 3px solid #cfe0ff;
+  outline-offset: 3px;
+  border-radius: .4rem;
+}
+
+/* Imagem da campainha */
+.page105__bell-img {
+  width: 2.8rem;
+  height: 2.8rem;
+  transition: transform .2s ease-in-out;
+}
+.page105__bell-btn:hover .page105__bell-img {
+  transform: scale(1.08);
+}
+
+
 @media (max-width: 1024px) {
     .page105__container--questoes {
         align-items: center;

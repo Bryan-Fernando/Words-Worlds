@@ -1,1 +1,79 @@
+.page586__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Header */
+.page586__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;   /* sempre à esquerda */
+}
+
+/* Main */
+.page586__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Hero image placeholder */
+.page586__heroImage {
+  width: 100%;
+  height: 280px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Card do diálogo */
+.page586__dialogueCard {
+  background: #f7f7f7;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.8rem;
+  padding: 1.6rem;
+}
+
+.page586__dialogue { text-align: left; }
+
+.page586__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+  text-align: left;
+}
+
+.page586__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.page586__line {
+  font-size: 1.7rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+.is-mark { color: #A61C28; font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page586__title { font-size: 3.8rem; }
+  .page586__heroImage { height: 240px; }
+  .page586__line { font-size: 1.55rem; }
+}
+
+@media (max-width: 560px) {
+  .page586__title { font-size: 3rem; }
+  .page586__heroImage { height: 200px; }
+  .page586__line { font-size: 1.45rem; }
+}
  

@@ -109,15 +109,15 @@ const Pagina203 = () => {
                                 <span>You</span>
                                 <span className={styles.page203__highlight}>can't</span>
                                 <span className={styles.page203__highlight}>always</span>
-                                <span className={styles.page203__verbCell}>get want</span>
-                                <span className={styles.page203__objectCell}>what you</span>
+                                <span className={styles.page203__verbCell}>get</span>
+                                <span className={styles.page203__objectCell}>what you want</span>
                             </div>
                             <div className={styles.page203__exampleRow}>
                                 <span>Você</span>
                                 <span className={styles.page203__highlight}>nem</span>
                                 <span className={styles.page203__highlight}>sempre</span>
-                                <span className={styles.page203__verbCell}>pode conseguir quer</span>
-                                <span className={styles.page203__objectCell}>o que você</span>
+                                <span className={styles.page203__verbCell}>pode conseguir</span>
+                                <span className={styles.page203__objectCell}>o que você quer</span>
                             </div>
                         </div>
                     </section>

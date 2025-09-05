@@ -1,1 +1,111 @@
+.page570__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page570__header { width: 100%; }
+
+.page570__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: left;
+}
+
+.page570__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card com imagem e diálogo */
+.page570__card {
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Imagem (placeholder) */
+.page570__imageWrapper { width: 100%; }
+
+.page570__imagePlaceholder {
+  width: 100%;
+  height: 420px;
+  border-radius: 0.6rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Diálogo */
+.page570__dialogue { text-align: left; }
+
+.page570__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1.2rem;
+  margin: 0 0 1.2rem 0;
+  text-align: left;
+}
+
+.page570__speaker {
+  font-weight: 800;
+  min-width: max-content;
+}
+
+.page570__line {
+  font-size: 1.8rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+.is-bia { color: #222; }
+.is-talita { color: #A61C28; font-style: italic; }
+
+/* Nota */
+.page570__note {
+  border: 0.2rem solid #1034A6;
+  border-radius: 0.6rem;
+  background: #F5F8FF;
+  padding: 1.2rem 1.6rem;
+  font-size: 1.6rem;
+  text-align: left;
+  max-width: 700px;
+}
+
+.page570__note strong {
+  background: #1034A6;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.4rem;
+}
+
+.page570__highlight {
+  color: #A61C28;
+  font-weight: 700;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page570__card { grid-template-columns: 1fr; }
+  .page570__title { font-size: 3.4rem; }
+  .page570__line { font-size: 1.6rem; }
+  .page570__imagePlaceholder { height: 320px; }
+}
+
+@media (max-width: 600px) {
+  .page570__title { font-size: 3rem; }
+  .page570__line { font-size: 1.4rem; }
+}
  

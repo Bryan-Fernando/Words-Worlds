@@ -1,1 +1,126 @@
+.page593__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Header */
+.page593__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;          /* tudo à esquerda */
+}
+
+/* Main wrapper */
+.page593__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* ===== Grid 3x2 ===== */
+.page593__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 2rem 2rem;
+}
+
+/* Card */
+.page593__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.page593__img {
+  width: 100%;
+  height: 160px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;             /* placeholder sem import */
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+.page593__dialogue {
+  background: #fff;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.8rem;
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+}
+
+.page593__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.6rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.page593__dialogue p:last-child { margin-bottom: 0; }
+
+.page593__tag {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.isB { color: #A61C28; font-style: italic; }
+
+.page593__dialogue span {
+  font-size: 1.5rem;
+  line-height: 1.55;
+  color: #222;
+}
+
+/* ===== Word Bank ===== */
+.page593__wordbank {
+  border: 0.12rem solid #e6e6e6;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  background: #fff;
+}
+
+.page593__wbHeader {
+  background: #A61C28;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.6rem;
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+}
+
+.page593__wbGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 2rem;
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+.page593__wbCol p {
+  margin: 0 0 0.6rem 0;
+  font-size: 1.5rem;
+}
+
+.page593__wbCol strong { font-weight: 800; }
+
+/* ===== Responsivo ===== */
+@media (max-width: 1100px) {
+  .page593__title { font-size: 3.8rem; }
+  .page593__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+  .page593__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 560px) {
+  .page593__title { font-size: 3rem; }
+  .page593__img { height: 150px; }
+  .page593__dialogue span,
+  .page593__wbCol p { font-size: 1.4rem; }
+}
  

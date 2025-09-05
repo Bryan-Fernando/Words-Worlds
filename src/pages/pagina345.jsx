@@ -1,37 +1,55 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import styles from './pagina345.module.css';
 import correctIcon from '../assets/icons/correct_icon.webp';
 import wrongIcon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-// Dados para o exercício 6: Word Order
+import audio1e from '../assets/audios/pg345_audio1e.mp3';
+import audio2e from '../assets/audios/pg345_audio2e.mp3';
+import audio3e from '../assets/audios/pg345_audio3e.mp3';
+import audio4e from '../assets/audios/pg345_audio4e.mp3';
+import audio5e from '../assets/audios/pg345_audio5e.mp3';
+import audio6e from '../assets/audios/pg345_audio6e.mp3';
+
+import audio1p from '../assets/audios/pg345_audio1p.mp3';
+import audio2p from '../assets/audios/pg345_audio2p.mp3';
+import audio3p from '../assets/audios/pg345_audio3p.mp3';
+import audio4p from '../assets/audios/pg345_audio4p.mp3';
+import audio5p from '../assets/audios/pg345_audio5p.mp3';
+import audio6p from '../assets/audios/pg345_audio6p.mp3';
+
 const wordOrderQuestionsEx6 = [
-  { id: 1, words: "help / I / you / will", answer: "I will help you" },
-  { id: 2, words: "call / later / I / you / will", answer: "I will call you later" },
-  { id: 3, words: "Will / it / tomorrow ? / rain", answer: "Will it rain tomorrow?" },
-  { id: 4, words: "you / send / me / the / link ? / Will", answer: "Will you send me the link?" },
-  { id: 5, words: "come / Will / she / party ? / the / to", answer: "Will she come to the party?" }
+  { id: 1, words: 'help / I / you / will', answer: 'I will help you' },
+  { id: 2, words: 'call / later / I / you / will', answer: 'I will call you later' },
+  { id: 3, words: 'Will / it / tomorrow ? / rain', answer: 'Will it rain tomorrow?' },
+  { id: 4, words: 'you / send / me / the / link ? / Will', answer: 'Will you send me the link?' },
+  { id: 5, words: 'come / Will / she / party ? / the / to', answer: 'Will she come to the party?' }
 ];
 
-// Função para normalizar strings (remover espaços extras e converter para minúsculas)
-const normalize = (str) => {
-  if (str === null || str === undefined) return '';
-  // Remove espaços extras, mantém pontuação e converte para minúsculas
-  return str.trim().replace(/\s+/g, ' ').toLowerCase();
-};
+const normalize = (str) => (str ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
 
 const Pagina345 = () => {
-  // Estados para o exercício 6: Word Order
   const [inputValuesEx6, setInputValuesEx6] = useState(Array(wordOrderQuestionsEx6.length).fill(''));
   const [resultsEx6, setResultsEx6] = useState(Array(wordOrderQuestionsEx6.length).fill(null));
+  const currentAudioRef = useRef(null);
 
-  // Handler para mudança de input
+  const playAudio = (file) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(file);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   const handleInputChangeEx6 = (value, index) => {
     const updatedValues = [...inputValuesEx6];
     updatedValues[index] = value;
     setInputValuesEx6(updatedValues);
   };
 
-  // Handler para o botão Check
   const handleCheckClickEx6 = () => {
     const evaluatedResults = inputValuesEx6.map((input, i) => {
       const userInput = normalize(input);
@@ -47,9 +65,22 @@ const Pagina345 = () => {
         <h1><span className={styles.page345__exercisesRed}>Exercises</span></h1>
       </header>
 
-      {/* Exercício 6: Word Order */}
       <p className={styles.page345__instructionRed}>
-        <strong>6. Word Order</strong>
+        <strong>
+          6. Word Order
+          <img
+            src={eng_audio_icon}
+            alt="Play English Audio"
+            className={styles.page345__icon}
+            onClick={() => playAudio(audio1e)}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Play Portuguese Audio"
+            className={styles.page345__icon}
+            onClick={() => playAudio(audio1p)}
+          />
+        </strong>
       </p>
 
       <div className={styles.page345__questionBox}>
@@ -63,15 +94,29 @@ const Pagina345 = () => {
                   value={inputValuesEx6[index]}
                   onChange={(e) => handleInputChangeEx6(e.target.value, index)}
                   className={styles.page345__input}
-                  placeholder={inputValuesEx6[index] === '' ? "Type the correct order" : ""}
+                  placeholder={inputValuesEx6[index] === '' ? 'Type the correct order' : ''}
                 />
-                {resultsEx6[index] !== null && (
+                <div className={styles.page345__iconsRow}>
+                  {resultsEx6[index] !== null && (
+                    <img
+                      src={resultsEx6[index] ? correctIcon : wrongIcon}
+                      alt={resultsEx6[index] ? 'Correct' : 'Incorrect'}
+                      className={styles.page345__resultIcon}
+                    />
+                  )}
                   <img
-                    src={resultsEx6[index] ? correctIcon : wrongIcon}
-                    alt={resultsEx6[index] ? "Correct" : "Incorrect"}
-                    className={styles.page345__resultIcon}
+                    src={eng_audio_icon}
+                    alt="Play English Audio"
+                    className={styles.page345__icon}
+                    onClick={() => playAudio([audio2e, audio3e, audio4e, audio5e, audio6e][index])}
                   />
-                )}
+                  <img
+                    src={ptbr_audio_icon}
+                    alt="Play Portuguese Audio"
+                    className={styles.page345__icon}
+                    onClick={() => playAudio([audio2p, audio3p, audio4p, audio5p, audio6p][index])}
+                  />
+                </div>
               </div>
             </div>
           ))}

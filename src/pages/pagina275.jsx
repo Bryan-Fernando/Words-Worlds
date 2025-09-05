@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./pagina275.module.css";
 
+import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
+
+import audio1 from "../assets/audios/pg275_audio1e.mp3";
+import audio2 from "../assets/audios/pg275_audio2e.mp3";
+import audio3 from "../assets/audios/pg275_audio3e.mp3";
+import audio4 from "../assets/audios/pg275_audio4e.mp3";
+import audio5 from "../assets/audios/pg275_audio5e.mp3";
+import audio6 from "../assets/audios/pg275_audio6e.mp3";
+import audio7 from "../assets/audios/pg275_audio7e.mp3";
+import audio8 from "../assets/audios/pg275_audio8e.mp3";
+import audio9 from "../assets/audios/pg275_audio9e.mp3";
+
 const Pagina275 = () => {
+  const currentAudioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(file);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.pageContainer}>
@@ -19,19 +43,22 @@ const Pagina275 = () => {
                   Should is a <strong>modal verb</strong> used to give advice,
                   make recommendations, express expectations, or talk about
                   obligations in a polite or softer way.
+                  <img
+                    src={eng_audio_icon}
+                    alt="Play English Audio"
+                    className={styles.page275__icon}
+                    onClick={() => playAudio(audio1)}
+                  />
                 </span>
               </p>
             </div>
-            <div
-              className={`${styles.explanationBox} ${styles.blueExplanation}`}
-            >
+            <div className={`${styles.explanationBox} ${styles.blueExplanation}`}>
               <p>
-                <strong>Should</strong> é um{" "}
-                <strong>verbo auxiliar/modal</strong>. É usado para dar
+                <strong>Should</strong> é um <strong>verbo auxiliar/modal</strong>. É usado para dar
                 conselhos, fazer recomendações, expressar expectativas ou falar
-                sobre obrigações de uma maneira educada, cuja tradução pode ser{" "}
-                <strong>deve, devia</strong> ( <strong>mais informal</strong> ) ou{" "}
-                <strong>deveria</strong> ( <strong>mais educado</strong> ).
+                sobre obrigações de uma maneira educada, cuja tradução pode ser
+                <strong> deve, devia</strong> ( <strong>mais informal</strong> ) ou
+                <strong> deveria</strong> ( <strong>mais educado</strong> ).
               </p>
             </div>
           </section>
@@ -51,7 +78,6 @@ const Pagina275 = () => {
             </div>
           </section>
 
-          {/* Primeira linha: I */}
           <section className={styles.tableContent}>
             <div className={styles.tableGroup}>
               <div className={styles.tableRow}>
@@ -69,12 +95,20 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>beber</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>less coffee</span>
+                  <span className={styles.pg413Red}>
+                    less coffee
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio2)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>menos café</span>
                 </div>
               </div>
             </div>
-            {/* He, She, It */}
+
             <div className={styles.tableGroup}>
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
@@ -91,10 +125,19 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>se exercitar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>regularly</span>
+                  <span className={styles.pg413Red}>
+                    regularly
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio3)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>regularmente</span>
                 </div>
               </div>
+
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>She</span>
@@ -112,12 +155,17 @@ const Pagina275 = () => {
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>
                     her homework before dinner
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio4)}
+                    />
                   </span>
-                  <span className={styles.pg413Black}>
-                    a lição de casa antes do jantar
-                  </span>
+                  <span className={styles.pg413Black}>a lição de casa antes do jantar</span>
                 </div>
               </div>
+
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>It</span>
@@ -132,12 +180,20 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>funcionar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>fine now</span>
+                  <span className={styles.pg413Red}>
+                    fine now
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio5)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>bem agora</span>
                 </div>
               </div>
             </div>
-            {/* We, You, They */}
+
             <div className={styles.tableGroup}>
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
@@ -146,9 +202,7 @@ const Pagina275 = () => {
                 </div>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>should</span>
-                  <span className={styles.pg413Black}>
-                    deveríamos / devemos
-                  </span>
+                  <span className={styles.pg413Black}>deveríamos / devemos</span>
                 </div>
                 <div className={styles.pg413Cell}></div>
                 <div className={styles.pg413Cell}>
@@ -156,10 +210,19 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>limpar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>the house today</span>
+                  <span className={styles.pg413Red}>
+                    the house today
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio6)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>a casa hoje</span>
                 </div>
               </div>
+
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>You</span>
@@ -177,10 +240,19 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>ligar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>your mom</span>
+                  <span className={styles.pg413Red}>
+                    your mom
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio7)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>para sua mãe</span>
                 </div>
               </div>
+
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>You guys</span>
@@ -198,10 +270,19 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>nos visitar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>us more often</span>
+                  <span className={styles.pg413Red}>
+                    us more often
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio8)}
+                    />
+                  </span>
                   <span className={styles.pg413Black}>com mais frequência</span>
                 </div>
               </div>
+
               <div className={styles.tableRow}>
                 <div className={styles.pg413Cell}>
                   <span className={styles.pg413Red}>They</span>
@@ -217,10 +298,16 @@ const Pagina275 = () => {
                   <span className={styles.pg413Black}>começar</span>
                 </div>
                 <div className={styles.pg413Cell}>
-                  <span className={styles.pg413Red}>the project on Monday</span>
-                  <span className={styles.pg413Black}>
-                    o projeto na Segunda
+                  <span className={styles.pg413Red}>
+                    the project on Monday
+                    <img
+                      src={eng_audio_icon}
+                      alt="Play English Audio"
+                      className={styles.page275__icon}
+                      onClick={() => playAudio(audio9)}
+                    />
                   </span>
+                  <span className={styles.pg413Black}>o projeto na Segunda</span>
                 </div>
               </div>
             </div>

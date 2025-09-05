@@ -89,3 +89,17 @@
 .page345__checkButton:hover {
   background-color: #8a1720;
 }
+
+.page345__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 0.5rem; 
+  transition: transform 0.2s ease-in-out;
+}
+
+.page345__icon:hover {
+  transform: scale(1.2);
+}

@@ -1,7 +1,29 @@
-import React from "react";
+import React, { useRef } from "react";
 import styles from "./pagina262.module.css";
 
-const pagina262 = () => {
+import audio1 from "../assets/audios/pg262_audio1e.mp3";
+import audio2 from "../assets/audios/pg262_audio2e.mp3";
+import audio3 from "../assets/audios/pg262_audio3e.mp3";
+import audio4 from "../assets/audios/pg262_audio4e.mp3";
+import audio5 from "../assets/audios/pg262_audio5e.mp3";
+import audio6 from "../assets/audios/pg262_audio6e.mp3";
+import audio7 from "../assets/audios/pg262_audio7e.mp3";
+
+import eng_audio_icon from "../assets/icons/eng_audio_icon.webp";
+
+const Pagina262 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const a = new Audio(file);
+    audioRef.current = a;
+    a.play();
+  };
+
   return (
     <div className={styles.pageContainer}>
       <div className={styles.titleContainer}>
@@ -21,6 +43,12 @@ const pagina262 = () => {
           <div className={styles.exampleItem}>
             <p className={styles.englishSentence}>
               James is as <span className={styles.redText}>tall</span> as Mary.
+              <img
+                src={eng_audio_icon}
+                alt="Play James is as tall as Mary."
+                className={styles.page262__icon}
+                onClick={() => playAudio(audio1)}
+              />
             </p>
             <p className={styles.translationText}>
               James é tão alto quanto Mary.
@@ -33,6 +61,12 @@ const pagina262 = () => {
           <div className={styles.exampleItem}>
             <p className={styles.englishSentence}>
               Sarah is taller <span className={styles.redText}>than</span> Ana.
+              <img
+                src={eng_audio_icon}
+                alt="Play Sarah is taller than Ana."
+                className={styles.page262__icon}
+                onClick={() => playAudio(audio2)}
+              />
             </p>
             <p className={styles.translationText}>
               Sarah é mais alta do que Ana.
@@ -44,8 +78,13 @@ const pagina262 = () => {
           <h3 className={styles.sectionTitle}>Comparativo de inferioridade</h3>
           <div className={styles.exampleItem}>
             <p className={styles.englishSentence}>
-              Ana is less tall <span className={styles.redText}>than</span>{" "}
-              Sarah.
+              Ana is less tall <span className={styles.redText}>than</span> Sarah.
+              <img
+                src={eng_audio_icon}
+                alt="Play Ana is less tall than Sarah."
+                className={styles.page262__icon}
+                onClick={() => playAudio(audio3)}
+              />
             </p>
             <p className={styles.translationText}>
               Ana é menos alta do que Sarah.
@@ -65,6 +104,12 @@ const pagina262 = () => {
           <br />
           <span className={styles.translationText1}>
             Diana is shorter than Angelina.
+            <img
+              src={eng_audio_icon}
+              alt="Play Diana is shorter than Angelina."
+              className={styles.page262__icon}
+              onClick={() => playAudio(audio4)}
+            />
           </span>
           <br />
           <span className={styles.translationText}>
@@ -78,8 +123,14 @@ const pagina262 = () => {
           <h3 className={styles.sectionTitle}>Superlativo de Superioridade</h3>
           <div className={styles.exampleItem}>
             <p className={styles.englishSentence}>
-              Deborah is <span className={styles.redText}>the</span>{" "} tallest
+              Deborah is <span className={styles.redText}>the</span> tallest
               girl in the volleyball team.
+              <img
+                src={eng_audio_icon}
+                alt="Play Deborah is the tallest girl in the volleyball team."
+                className={styles.page262__icon}
+                onClick={() => playAudio(audio5)}
+              />
             </p>
             <p className={styles.translationText}>
               Deborah é a garota mais alta do time de vôlei.
@@ -93,10 +144,15 @@ const pagina262 = () => {
             <p className={styles.englishSentence}>
               Bia is <span className={styles.redText}>the</span> least tall girl
               in the volleyball team.
+              <img
+                src={eng_audio_icon}
+                alt="Play Bia is the least tall girl in the volleyball team."
+                className={styles.page262__icon}
+                onClick={() => playAudio(audio6)}
+              />
             </p>
             <p className={styles.translationText}>
-              Bia é a garota menos alta{" "}
-              do time de vôlei.
+              Bia é a garota menos alta do time de vôlei.
             </p>
           </div>
         </div>
@@ -113,10 +169,15 @@ const pagina262 = () => {
           <br />
           Diana is <span className={styles.redText}>the</span> shortest player
           of the team.
+          <img
+            src={eng_audio_icon}
+            alt="Play Diana is the shortest player of the team."
+            className={styles.page262__icon}
+            onClick={() => playAudio(audio7)}
+          />
           <br />
           <span className={styles.translationText}>
-            Diana é a jogadora mais baixa do
-            time.
+            Diana é a jogadora mais baixa do time.
           </span>
         </div>
       </div>
@@ -124,4 +185,4 @@ const pagina262 = () => {
   );
 };
 
-export default pagina262;
+export default Pagina262;

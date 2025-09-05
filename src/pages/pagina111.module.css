@@ -57,8 +57,10 @@
 }
 
 .page111__audio-icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
 }

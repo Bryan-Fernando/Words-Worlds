@@ -1,46 +1,57 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import styles from './pagina344.module.css';
 import correctIcon from '../assets/icons/correct_icon.webp';
 import wrongIcon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-// Dados para o exercício 5: Matching
+import audio1e from '../assets/audios/pg344_audio1e.mp3';
+import audio2e from '../assets/audios/pg344_audio2e.mp3';
+import audio3e from '../assets/audios/pg344_audio3e.mp3';
+import audio4e from '../assets/audios/pg344_audio4e.mp3';
+
+import audio1p from '../assets/audios/pg344_audio1p.mp3';
+import audio2p from '../assets/audios/pg344_audio2p.mp3';
+import audio3p from '../assets/audios/pg344_audio3p.mp3';
+import audio4p from '../assets/audios/pg344_audio4p.mp3';
+
 const leftItems = [
-  { id: 1, text: "I will call you", answer: "a" },
-  { id: 2, text: "He will travel", answer: "c" },
-  { id: 3, text: "They won't", answer: "b" },
+  { id: 1, text: 'I will call you', answer: 'a' },
+  { id: 2, text: 'He will travel', answer: 'c' },
+  { id: 3, text: "They won't", answer: 'b' },
 ];
 
 const rightItems = [
-  { letter: "a", meaning: "after dinner" },
-  { letter: "b", meaning: "be here on time" },
-  { letter: "c", meaning: "to France" },
+  { letter: 'a', meaning: 'after dinner' },
+  { letter: 'b', meaning: 'be here on time' },
+  { letter: 'c', meaning: 'to France' },
 ];
 
-// Função para normalizar strings (remover espaços extras e converter para minúsculas)
-const normalize = (str) => {
-  if (str === null || str === undefined) return '';
-  return str.trim().toLowerCase();
-};
+const normalize = (str) => (str ?? '').trim().toLowerCase();
 
 const Pagina344 = () => {
-  // Estados para o exercício 5: Matching
   const [inputs, setInputs] = useState(Array(leftItems.length).fill(''));
   const [results, setResults] = useState(Array(leftItems.length).fill(null));
+  const currentAudioRef = useRef(null);
 
-  // Handler para mudança de input
+  const playAudio = (file) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(file);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   const handleInputChange = (value, index) => {
     const updated = [...inputs];
     updated[index] = value;
     setInputs(updated);
   };
 
-  // Handler para o botão Check
   const handleCheckClick = () => {
-    const newResults = inputs.map((input, i) => {
-      const userInput = normalize(input);
-      const correctAnswer = normalize(leftItems[i].answer);
-      return userInput === correctAnswer;
-    });
+    const newResults = inputs.map((input, i) => normalize(input) === normalize(leftItems[i].answer));
     setResults(newResults);
   };
 
@@ -50,9 +61,22 @@ const Pagina344 = () => {
         <h1><span className={styles.page344__exercisesRed}>Exercises</span></h1>
       </header>
 
-      {/* Exercício 5: Matching */}
       <p className={styles.page344__instructionRed}>
-        <strong>5. Matching</strong>
+        <strong>
+          5. Matching
+          <img
+            src={eng_audio_icon}
+            alt="Play English Audio"
+            className={styles.page344__icon}
+            onClick={() => playAudio(audio1e)}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Play Portuguese Audio"
+            className={styles.page344__icon}
+            onClick={() => playAudio(audio1p)}
+          />
+        </strong>
       </p>
 
       <div className={styles.page344__matchBox}>
@@ -68,13 +92,27 @@ const Pagina344 = () => {
                 className={styles.page344__input}
               />
               <span>{item.text}</span>
-              {results[index] !== null && (
+              <div className={styles.page344__iconsRow}>
+                {results[index] !== null && (
+                  <img
+                    src={results[index] ? correctIcon : wrongIcon}
+                    alt={results[index] ? 'Correct' : 'Incorrect'}
+                    className={styles.page344__resultIcon}
+                  />
+                )}
                 <img
-                  src={results[index] ? correctIcon : wrongIcon}
-                  alt={results[index] ? "Correct" : "Incorrect"}
-                  className={styles.page344__resultIcon}
+                  src={eng_audio_icon}
+                  alt="Play English Audio"
+                  className={styles.page344__icon}
+                  onClick={() => playAudio([audio2e, audio3e, audio4e][index])}
                 />
-              )}
+                <img
+                  src={ptbr_audio_icon}
+                  alt="Play Portuguese Audio"
+                  className={styles.page344__icon}
+                  onClick={() => playAudio([audio2p, audio3p, audio4p][index])}
+                />
+              </div>
             </div>
           ))}
         </div>

@@ -1,1 +1,71 @@
- 
+.page603__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Título */
+.page603__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left; /* tudo à esquerda */
+}
+
+/* Main */
+.page603__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Cartão do exemplo */
+.page603__card {
+  border: 0.12rem solid #e6e6e6;
+  border-radius: 0.9rem;
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+  padding: 1.4rem;
+  text-align: left;
+}
+
+/* Rótulo "Exemplo:" */
+.page603__label {
+  margin: 0 0 0.6rem 0;
+  color: #A61C28;
+  font-weight: 800;
+}
+
+/* Texto explicativo */
+.page603__text {
+  margin: 0.6rem 0;
+  font-size: 1.6rem;
+  color: #222;
+}
+
+/* Equações (monoespaçada) */
+.page603__eq {
+  margin: 0.4rem 0 0.6rem 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Courier New", monospace;
+  font-size: 1.7rem;
+  color: #222;
+}
+
+/* Resultado final em vermelho e negrito */
+.page603__result {
+  margin-top: 0.8rem;
+  color: #A61C28;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page603__title { font-size: 3.8rem; }
+}
+@media (max-width: 560px) {
+  .page603__title { font-size: 3rem; }
+  .page603__eq { font-size: 1.55rem; }
+  .page603__text, .page603__result { font-size: 1.45rem; }
+}

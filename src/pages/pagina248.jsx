@@ -1,7 +1,34 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina248.module.css';
 
+import audio1 from '../assets/audios/pg248_audio1e.mp3';
+import audio2 from '../assets/audios/pg248_audio2e.mp3';
+import audio3 from '../assets/audios/pg248_audio3e.mp3';
+import audio4 from '../assets/audios/pg248_audio4e.mp3';
+import audio5 from '../assets/audios/pg248_audio5e.mp3';
+import audio6 from '../assets/audios/pg248_audio6e.mp3';
+import audio7 from '../assets/audios/pg248_audio7e.mp3';
+import audio8 from '../assets/audios/pg248_audio8e.mp3';
+import audio9 from '../assets/audios/pg248_audio9e.mp3';
+import audio10 from '../assets/audios/pg248_audio10e.mp3';
+import audio11 from '../assets/audios/pg248_audio11e.mp3';
+import audio12 from '../assets/audios/pg248_audio12e.mp3';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 const Pagina248 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const a = new Audio(file);
+    audioRef.current = a;
+    a.play();
+  };
+
   return (
     <div className={styles.page248__container}>
       <header className={styles.header}>
@@ -14,10 +41,50 @@ const Pagina248 = () => {
       </header>
 
       <section className={styles.vocabulary}>
-        <div className={styles.vocabBox}>How<br /><span>Como - Quão<br />(adjetivo / advérbio)</span></div>
-        <div className={styles.vocabBox}>How far<br /><span>Quão longe<br />Que distância</span></div>
-        <div className={styles.vocabBox}>How old<br /><span>Quantos anos<br />Quão velho<br />(<i>somente para idade</i>)</span></div>
-        <div className={styles.vocabBox}>How often<br /><span>Com que frequência<br />Quão frequente</span></div>
+        <div className={styles.vocabBox}>
+          How
+          <img
+            src={eng_audio_icon}
+            alt="Play How"
+            className={styles.page248__icon}
+            onClick={() => playAudio(audio1)}
+          />
+          <br />
+          <span>Como - Quão<br />(adjetivo / advérbio)</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How far
+          <img
+            src={eng_audio_icon}
+            alt="Play How far"
+            className={styles.page248__icon}
+            onClick={() => playAudio(audio2)}
+          />
+          <br />
+          <span>Quão longe<br />Que distância</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How old
+          <img
+            src={eng_audio_icon}
+            alt="Play How old"
+            className={styles.page248__icon}
+            onClick={() => playAudio(audio3)}
+          />
+          <br />
+          <span>Quantos anos<br />Quão velho<br />(<i>somente para idade</i>)</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How often
+          <img
+            src={eng_audio_icon}
+            alt="Play How often"
+            className={styles.page248__icon}
+            onClick={() => playAudio(audio4)}
+          />
+          <br />
+          <span>Com que frequência<br />Quão frequente</span>
+        </div>
       </section>
 
       <section className={styles.section}>
@@ -38,7 +105,15 @@ const Pagina248 = () => {
             <tr>
               <td>How old</td>
               <td>is</td>
-              <td>your brother?</td>
+              <td>
+                your brother?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How old is your brother?"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio5)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
               <td>—</td>
@@ -46,15 +121,30 @@ const Pagina248 = () => {
             <tr>
               <td>How old</td>
               <td>are</td>
-              <td>you?</td>
+              <td>you?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How old are you? from the station?"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio6)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
-              <td>from the station?</td>
+              <td>—</td>
             </tr>
             <tr>
               <td>How old</td>
               <td>is</td>
-              <td>the building?</td>
+              <td>
+                the building?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How old is the building?"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio7)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
               <td>—</td>
@@ -62,7 +152,15 @@ const Pagina248 = () => {
             <tr>
               <td>How old</td>
               <td>is</td>
-              <td>your dog?</td>
+              <td>
+                your dog?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How old is your dog?"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio8)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
               <td>—</td>
@@ -89,28 +187,60 @@ const Pagina248 = () => {
               <td>is</td>
               <td>—</td>
               <td>—</td>
-              <td>12 years old</td>
+              <td>
+                12 years old
+                <img
+                  src={eng_audio_icon}
+                  alt="Play He is 12 years old"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio9)}
+                />
+              </td>
             </tr>
             <tr>
               <td>I</td>
               <td>am</td>
               <td>—</td>
               <td>—</td>
-              <td>25 years old</td>
+              <td>
+                25 years old
+                <img
+                  src={eng_audio_icon}
+                  alt="Play I am 25 years old"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio10)}
+                />
+              </td>
             </tr>
             <tr>
               <td>It</td>
               <td>is</td>
               <td>—</td>
               <td>—</td>
-              <td>100 years old</td>
+              <td>
+                100 years old
+                <img
+                  src={eng_audio_icon}
+                  alt="Play It is 100 years old"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio11)}
+                />
+              </td>
             </tr>
             <tr>
               <td>It</td>
               <td>is</td>
               <td>—</td>
               <td>—</td>
-              <td>5 years old</td>
+              <td>
+                5 years old
+                <img
+                  src={eng_audio_icon}
+                  alt="Play It is 5 years old"
+                  className={styles.page248__icon}
+                  onClick={() => playAudio(audio12)}
+                />
+              </td>
             </tr>
           </tbody>
         </table>

@@ -1,1 +1,69 @@
+.page604__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Título */
+.page604__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left; /* tudo à esquerda */
+}
+
+/* Main */
+
+/* Tabela */
+.page604__tableWrap { overflow: auto; }
+
+.page604__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0.12rem solid #A61C28;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  text-align: left;
+}
+
+.page604__table thead th {
+  background: #A61C28;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 0.9rem 1.1rem;
+  border-bottom: 0.12rem solid #A61C28;
+  color: #222;
+}
+
+.page604__thLeft { color: #A61C28; } /* título da 1ª coluna em vermelho */
+
+.page604__table tbody td {
+  padding: 0.85rem 1.1rem;
+  font-size: 1.5rem;
+  color: #222;
+  border-top: 0.12rem solid #e6e6e6;
+  border-right: 0.12rem solid #e6e6e6;
+}
+.page604__table tbody tr td:last-child { border-right: none; }
+.page604__table tbody tr:first-child td { border-top: none; }
+
+/* Inglês destacado em vermelho/itálico */
+.page604__en {
+  color: #A61C28;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page604__title { font-size: 3.8rem; }
+  .page604__table thead th, .page604__table tbody td { font-size: 1.4rem; }
+}
+
+@media (max-width: 560px) {
+  .page604__title { font-size: 3rem; }
+  .page604__table thead th, .page604__table tbody td { font-size: 1.32rem; }
+}
  

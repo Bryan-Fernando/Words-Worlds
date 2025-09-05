@@ -1,97 +1,110 @@
 .page273__container {
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .page273__header h1 {
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .page273__grammarRed {
-    color: #a61c28;
-    font-weight: bold;
-  }
-  
-  .page273__grammarBold {
-    font-weight: bold;
-    font-style: italic;
-  }
-  
-  .page273__instruction {
-    color: #1c4c9c;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-align: left;
-  }
-  
-  .page273__questionBox {
-    border: 3px solid #1c4c9c;
-    border-radius: 12px;
-    padding: 1.2rem 1rem;
-    background-color: #ffffff;
-    text-align: left;
-    margin-bottom: 1.5rem;
-    max-width: 450px;
-  }
-  
-  .page273__main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
-  .page273__question {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.4rem;
-    font-weight: 500;
-  }
-  
-  .page273__prompt {
-    margin-bottom: 0.4rem;
-  }
-  
-  .page273__inputWrapper {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .page273__input {
-    width: 400px;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-    font-weight: bold;
-  }
-  
-  .page273__resultIcon {
-    width: 24px;
-    height: 24px;
-  }
-  
-  .page273__checkContainer {
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .page273__checkButton {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.3rem;
-    background-color: #a61c28;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    width: fit-content;
-  }
-  
-  .page273__checkButton:hover {
-    background-color: #8a1720;
-  }
-  
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.page273__header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.page273__grammarRed {
+  color: #a61c28;
+  font-weight: bold;
+}
+
+.page273__grammarBold {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.page273__instruction {
+  color: #1c4c9c;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.page273__questionBox {
+  border: 3px solid #1c4c9c;
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  background-color: #ffffff;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  max-width: 450px;
+}
+
+.page273__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page273__question {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.page273__prompt {
+  margin-bottom: 0.4rem;
+}
+
+.page273__inputWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.page273__input {
+  width: 400px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-weight: bold;
+}
+
+.page273__resultIcon {
+  width: 24px;
+  height: 24px;
+}
+
+.page273__checkContainer {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.page273__checkButton {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.3rem;
+  background-color: #a61c28;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.page273__checkButton:hover {
+  background-color: #8a1720;
+}
+
+.page273__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page273__icon:hover {
+  transform: scale(1.2);
+}

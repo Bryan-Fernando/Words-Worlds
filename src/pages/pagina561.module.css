@@ -1,1 +1,59 @@
+/* layout base – tudo à esquerda */
+.page{
+  padding:2rem;
+  display:flex;
+  flex-direction:column;
+  gap:1.6rem;
+  text-align:left;
+}
+
+.title{
+  font-size:4.4rem;
+  color:#A61C28;
+  font-weight:800;
+  line-height:1.1;
+  margin:0;
+}
+
+.subtitle{
+  font-size:2.4rem;
+  font-weight:800;
+  color:#111;
+  margin-top:.2rem;
+}
+
+/* imagem */
+.heroWrap{
+  width:100%;
+  border-radius:1.2rem;
+  overflow:hidden;
+  box-shadow:0 10px 28px rgba(0,0,0,.12);
+}
+.hero{
+  width:100%;
+  height:34rem;
+  object-fit:cover;
+  display:block;
+}
+
+/* diálogo */
+.dialog{ display:flex; flex-direction:column; gap:.5rem; }
+
+.lineA, .lineB{
+  font-size:1.6rem;
+  line-height:1.75;
+}
+
+.nameA{ color:#111; font-weight:800; }
+.nameB{ color:#A61C28; font-weight:800; }
+
+/* falas da Maya (B) */
+.lineB{ color:#A61C28; font-style:italic; }
+
+/* responsivo */
+@media (max-width: 880px){
+  .title{ font-size:3.6rem; }
+  .subtitle{ font-size:2rem; }
+  .hero{ height:26rem; }
+}
  

@@ -1,98 +1,111 @@
 .page244__container {
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .header {
-    margin-bottom: 2rem;
-  }
-  
-  .title {
-    font-size: 4.5rem;
-    color: #A61C28;
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  .subtitle {
-    font-size: 2.2rem;
-    font-style: italic;
-    text-align: left;
-  }
-  
-  .black {
-    color: black;
-  }
-  
-  .red {
-    color: #A61C28;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
-  .vocabulary {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .vocabBox {
-    border: 2px solid #A61C28;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    font-size: 1.8rem;
-    color: #A61C28;
-    text-align: center;
-    min-width: 180px;
-  }
-  
-  .vocabBox span {
-    display: block;
-    font-size: 1.4rem;
-    color: black;
-    margin-top: 0.5rem;
-  }
-  
-  .section {
-    margin-bottom: 2.5rem;
-  }
-  
-  .sectionTitle {
-    background-color: #A61C28;
-    color: white;
-    font-size: 2rem;
-    padding: 0.8rem;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 0.5rem;
-  }
-  
-  .formTitle {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.5rem;
-  }
-  
-  .table th,
-  .table td {
-    border: 1px solid #A61C28;
-    padding: 1rem;
-    text-align: left;
-  }
-  
-  .table th {
-    background-color: #888A8C;
-    color: white;
-    text-align: center;
-  }
-  
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: #A61C28;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: #A61C28;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.vocabulary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.vocabBox {
+  border: 2px solid #A61C28;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.8rem;
+  color: #A61C28;
+  text-align: center;
+  min-width: 180px;
+}
+
+.vocabBox span {
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  margin-top: 0.5rem;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  background-color: #A61C28;
+  color: white;
+  font-size: 2rem;
+  padding: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #A61C28;
+  padding: 1rem;
+  text-align: left;
+}
+
+.table th {
+  background-color: #888A8C;
+  color: white;
+  text-align: center;
+}
+
+.page244__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page244__icon:hover {
+  transform: scale(1.2);
+}

@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styles from './pagina246.module.css';
 
+import audio1 from '../assets/audios/pg246_audio1e.mp3';
+import audio2 from '../assets/audios/pg246_audio2e.mp3';
+import audio3 from '../assets/audios/pg246_audio3e.mp3';
+import audio4 from '../assets/audios/pg246_audio4e.mp3';
+import audio5 from '../assets/audios/pg246_audio5e.mp3';
+import audio6 from '../assets/audios/pg246_audio6e.mp3';
+import audio7 from '../assets/audios/pg246_audio7e.mp3';
+import audio8 from '../assets/audios/pg246_audio8e.mp3';
+import audio9 from '../assets/audios/pg246_audio9e.mp3';
+import audio10 from '../assets/audios/pg246_audio10e.mp3';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 const Pagina246 = () => {
+  const audioRef = useRef(null);
+
+  const playAudio = (file) => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    const a = new Audio(file);
+    audioRef.current = a;
+    a.play();
+  };
+
   return (
     <div className={styles.page246__container}>
       <header className={styles.header}>
@@ -14,10 +39,50 @@ const Pagina246 = () => {
       </header>
 
       <section className={styles.vocabulary}>
-        <div className={styles.vocabBox}>How<br /><span>Como - Quão (adjetivo / advérbio)</span></div>
-        <div className={styles.vocabBox}>How far<br /><span>Quão longe / Que distância</span></div>
-        <div className={styles.vocabBox}>How old<br /><span>Quantos anos / Quão velho<br />(<i>somente para idade</i>)</span></div>
-        <div className={styles.vocabBox}>How often<br /><span>Com que frequência / Quão frequente</span></div>
+        <div className={styles.vocabBox}>
+          How
+          <img
+            src={eng_audio_icon}
+            alt="Play How"
+            className={styles.page246__icon}
+            onClick={() => playAudio(audio1)}
+          />
+          <br />
+          <span>Como - Quão (adjetivo / advérbio)</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How far
+          <img
+            src={eng_audio_icon}
+            alt="Play How far"
+            className={styles.page246__icon}
+            onClick={() => playAudio(audio2)}
+          />
+          <br />
+          <span>Quão longe / Que distância</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How old
+          <img
+            src={eng_audio_icon}
+            alt="Play How old"
+            className={styles.page246__icon}
+            onClick={() => playAudio(audio3)}
+          />
+          <br />
+          <span>Quantos anos / Quão velho<br />(<i>somente para idade</i>)</span>
+        </div>
+        <div className={styles.vocabBox}>
+          How often
+          <img
+            src={eng_audio_icon}
+            alt="Play How often"
+            className={styles.page246__icon}
+            onClick={() => playAudio(audio4)}
+          />
+          <br />
+          <span>Com que frequência / Quão frequente</span>
+        </div>
       </section>
 
       <section className={styles.section}>
@@ -41,12 +106,28 @@ const Pagina246 = () => {
               <td>you</td>
               <td>—</td>
               <td>—</td>
-              <td>today?</td>
+              <td>
+                today?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How are you today?"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio5)}
+                />
+              </td>
             </tr>
             <tr>
               <td>How</td>
               <td>is</td>
-              <td>your brother?</td>
+              <td>
+                your brother?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How is your brother?"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio6)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
               <td>—</td>
@@ -54,7 +135,15 @@ const Pagina246 = () => {
             <tr>
               <td>How</td>
               <td>is</td>
-              <td>school?</td>
+              <td>
+                school?
+                <img
+                  src={eng_audio_icon}
+                  alt="Play How is school?"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio7)}
+                />
+              </td>
               <td>—</td>
               <td>—</td>
               <td>—</td>
@@ -81,21 +170,45 @@ const Pagina246 = () => {
               <td>am</td>
               <td>—</td>
               <td>—</td>
-              <td>good, thanks</td>
+              <td>
+                good, thanks
+                <img
+                  src={eng_audio_icon}
+                  alt="Play I am good, thanks"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio8)}
+                />
+              </td>
             </tr>
             <tr>
               <td>He</td>
               <td>is</td>
               <td>—</td>
               <td>—</td>
-              <td>okay now</td>
+              <td>
+                okay now
+                <img
+                  src={eng_audio_icon}
+                  alt="Play He is okay now"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio9)}
+                />
+              </td>
             </tr>
             <tr>
               <td>It</td>
               <td>is</td>
               <td>—</td>
               <td>—</td>
-              <td>interesting this year</td>
+              <td>
+                interesting this year
+                <img
+                  src={eng_audio_icon}
+                  alt="Play It is interesting this year"
+                  className={styles.page246__icon}
+                  onClick={() => playAudio(audio10)}
+                />
+              </td>
             </tr>
           </tbody>
         </table>

@@ -52,7 +52,7 @@ const Pagina146 = () => {
 
     const correctAnswers = [
         'is running',
-        'are having',
+        'are having dinner',
         'am not watching',
         'are you crying?',
         'are traveling',
@@ -126,7 +126,7 @@ const Pagina146 = () => {
                 <div className={styles["page146__questions-container"]}>
                     {[
                         "1. Look! She ________ (run) in the park.",
-                        "2. We ________ (have) dinner right now.",
+                        "2. We ________ (have dinner) right now.",
                         "3. I ________ (not watch) TV at the moment.",
                         "4. Why ________ (you / cry)?",
                         "5. My parents ________ (travel) to Spain next month.",

@@ -70,6 +70,20 @@
 /* falas do segundo interlocutor em vermelho + itálico */
 .textB { color: #A61C28; font-style: italic; }
 
+.page509__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page509__icon:hover {
+  transform: scale(1.2);
+}
+
 /* Responsivo */
 @media (max-width: 1100px) {
   .page__title { font-size: 4rem; }

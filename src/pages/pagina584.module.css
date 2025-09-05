@@ -1,1 +1,80 @@
+.page584__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Header */
+.page584__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;         /* sempre à esquerda */
+}
+
+/* Grid principal: duas colunas */
+.page584__main {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card */
+.page584__card {
+  background: #fff;
+  border-radius: 0.9rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.6rem;
+}
+
+/* Imagem (placeholder — sem import) */
+.page584__imageWrapper { width: 100%; margin-bottom: 1rem; }
+.page584__imagePlaceholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Diálogo */
+.page584__dialogue { text-align: left; }
+.page584__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+  text-align: left;
+}
+.page584__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+.page584__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+/* Segundo interlocutor (Amelia/Ramon) em vermelho itálico */
+.is-second { color: #A61C28; font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1100px) {
+  .page584__title { font-size: 3.8rem; }
+}
+@media (max-width: 900px) {
+  .page584__main { grid-template-columns: 1fr; }
+  .page584__imagePlaceholder { height: 200px; }
+}
+@media (max-width: 560px) {
+  .page584__title { font-size: 3rem; }
+  .page584__line { font-size: 1.4rem; }
+}
  

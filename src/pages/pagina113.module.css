@@ -78,7 +78,7 @@
 }
 
 .page113__text-container {
-    width: 9rem;
+    width: 10rem;
     height: 7rem;
     background-color: #E6E7E8;
     display: flex;
@@ -86,7 +86,22 @@
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
+    min-width: 12rem;
 }
+
+.page113__icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 0.6rem;
+  transition: transform 0.2s ease-in-out;
+}
+.page113__icon:hover {
+  transform: scale(1.2);
+}
+
 
 @media (max-width: 1024px) {
     .page112__main {

@@ -1,1 +1,113 @@
+.page578__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page578__header { width: 100%; }
+
+.page578__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Main */
+.page578__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Card (cada diálogo) */
+.page578__card {
+  background: #fff;
+  border-radius: 0.9rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.page578__card.is-reversed {
+  grid-template-columns: 1.6fr 0.9fr;
+}
+
+/* Imagem (placeholder — sem import) */
+.page578__imageWrapper { width: 100%; }
+
+.page578__imagePlaceholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Caixa de diálogo */
+.page578__dialogueBox {
+  background: #fafafa;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.4rem;
+  text-align: left;
+}
+
+.page578__topic {
+  margin: 0 0 0.6rem 0;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* Diálogo */
+.page578__dialogue { text-align: left; }
+
+.page578__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+}
+
+.page578__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.page578__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+/* Cores por personagem */
+.is-lizzie, .is-nanda { color: #222; }
+.is-leo, .is-carol { color: #A61C28; font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page578__title { font-size: 3.6rem; }
+  .page578__card,
+  .page578__card.is-reversed {
+    grid-template-columns: 1fr;
+  }
+  .page578__imagePlaceholder { height: 200px; }
+  .page578__line { font-size: 1.5rem; }
+}
+
+@media (max-width: 560px) {
+  .page578__imagePlaceholder { height: 180px; }
+  .page578__title { font-size: 3rem; }
+  .page578__line { font-size: 1.4rem; }
+}
  

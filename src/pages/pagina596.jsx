@@ -1,23 +1,65 @@
-import React from 'react';
-import styles from './pagina596.module.css';
+import React, { useEffect } from "react";
+import styles from "./pagina596.module.css";
 
-const pagina596 = () => {
-    return (
-        <div>
-            <div className={styles.pg91Container}>
-                <header className={styles.pg91Header}>
-                    <h1 className={styles.pg91HeaderH1}>Grammar</h1>
-                    <div>
-                        <h2 className={styles.pg91HeaderH2}>Telling the time</h2>
-                        <p>Dizendo as horas</p>
-                    </div>
-                </header>
-                <main className={styles.pg91Main}>
-                    <div></div>
-                </main>
-            </div>
-        </div>
-    );
+const items = [
+  { en: "Bed", pt: "Cama" },
+  { en: "Mattress", pt: "Colchão" },
+  { en: "Wardrobe", pt: "Guarda-roupa" },
+  { en: "Table", pt: "Mesa" },
+
+  { en: "Chair", pt: "Cadeira" },
+  { en: "Lamp", pt: "Luminária" },
+  { en: "Rug", pt: "Tapete" },
+  { en: "Mirror", pt: "Espelho" },
+
+  { en: "Bookshelf", pt: "Estante de livros" },
+  { en: "Television Set", pt: "Televisão" },
+  { en: "Sofa", pt: "Sofá" },
+  { en: "Coffee table", pt: "Mesa de centro" },
+
+  { en: "Curtains", pt: "Cortinas" },
+  { en: "Fan", pt: "Ventilador" },
+  { en: "Armchair", pt: "Poltrona" },
+  { en: "Heater", pt: "Aquecedor" },
+];
+
+const Pagina596 = ({ onValidar }) => {
+  useEffect(() => { onValidar?.(true); }, [onValidar]);
+
+  return (
+    <div className={styles.page596__container}>
+      <header className={styles.page596__header}>
+        <h1 className={styles.page596__title}>Home appliances</h1>
+      </header>
+
+      <main className={styles.page596__main}>
+        <section className={styles.page596__grid}>
+          {items.slice(0, 12).map(({ en, pt }, i) => (
+            <article className={styles.page596__card} key={`top-${i}`}>
+              <div className={styles.page596__img} />
+              <div className={styles.page596__text}>
+                <h4 className={styles.page596__en}>{en}</h4>
+                <span className={styles.page596__pt}>{pt}</span>
+              </div>
+            </article>
+          ))}
+
+          {/* Badge "UNIT 1" ocupando a linha inteira */}
+          <div className={styles.page596__badge}>UNIT 1</div>
+
+          {items.slice(12).map(({ en, pt }, i) => (
+            <article className={styles.page596__card} key={`bottom-${i}`}>
+              <div className={styles.page596__img} />
+              <div className={styles.page596__text}>
+                <h4 className={styles.page596__en}>{en}</h4>
+                <span className={styles.page596__pt}>{pt}</span>
+              </div>
+            </article>
+          ))}
+        </section>
+      </main>
+    </div>
+  );
 };
 
-export default pagina596;
+export default Pagina596;

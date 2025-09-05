@@ -4,6 +4,7 @@ import styles from './pagina105.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
+import campainha from '../assets/icons/campainha.png';
 
 import pagina105_imagem1 from '../assets/images/pagina105_imagem1.webp';
 
@@ -15,14 +16,32 @@ import pg105_audio3 from '../assets/audios/pg105_audio3.mp3';
 import pg105_audio4 from '../assets/audios/pg105_audio4.mp3';
 import pg105_audio5 from '../assets/audios/pg105_audio5.mp3';
 
+import pg105_audio6 from '../assets/audios/pg105_audio6.mp3';
+import pg105_audio7 from '../assets/audios/pg105_audio7.mp3';
+import pg105_audio8 from '../assets/audios/pg105_audio8.mp3';
+import pg105_audio9 from '../assets/audios/pg105_audio9.mp3';
+import pg105_audio10 from '../assets/audios/pg105_audio10.mp3';
+import pg105_audio11 from '../assets/audios/pg105_audio11.mp3';
+import pg105_audio12 from '../assets/audios/pg105_audio12.mp3';
+
+import bell from '../assets/audios/bell.mp3';
+
 const audioMap = {
-    pg105_audio1,
     pg104_audio1e,
     pg104_audio1p,
+    pg105_audio1,
     pg105_audio2,
     pg105_audio3,
     pg105_audio4,
-    pg105_audio5
+    pg105_audio5,
+    pg105_audio6,
+    pg105_audio7,
+    pg105_audio8,
+    pg105_audio9,
+    pg105_audio10,
+    pg105_audio11,
+    pg105_audio12,
+    bell,
 };
 
 const playAudio = (audioKey) => {
@@ -35,6 +54,20 @@ const playAudio = (audioKey) => {
 };
 
 const Pagina105 = () => {
+    const wordBankColA = [
+        ["Nice to meet you", "(Prazer em conhecê-lo/la)"],
+        ["Nice meeting you too", "(Foi um prazer conhecê-lo/la também)"],
+        ["It’s a pleasure to meet you", "(É um prazer conhecê-lo/la)"],
+        ["Glad to meet you", "(Contente em conhecê-lo/la)"],
+    ];
+    const wordBankColB = [
+        ["I’m happy to meet you", "(Estou feliz por conhecê-lo/la)"],
+        ["Pleased to meet you", "(Satisfação em conhecê-lo/la)"],
+        ["My pleasure", "(O prazer é meu.)"],
+        ["Very pleased", "(Muito prazer.)"],
+    ];
+    const wordBankAll = [...wordBankColA, ...wordBankColB]; // 8 itens
+
     return (
         <div className={styles["page105__container"]}>
             <main className={styles["page105__main"]}>
@@ -89,42 +122,75 @@ const Pagina105 = () => {
 
             <aside className={styles["page105__aside"]}>
                 <div className={styles["page105__aside--container"]}>
+
                     <div className={styles["page105__aside--notes1"]}>
+                        <button
+                            type="button"
+                            className={styles["page105__bell-btn"]}
+                            onClick={() => playAudio("bell")}
+                            aria-label="Tocar campainha"
+                            title="Tocar campainha"
+                        >
+                            <img src={campainha} alt="" aria-hidden="true" className={styles["page105__bell-img"]} />
+                        </button>
                         <p><strong>Word Bank</strong></p>
+
+
+
                     </div>
+
+                    {/* Bloco com os itens do Word Bank + áudios 6..12 */}
                     <div className={styles["page105__aside--notes2"]}>
                         <div className={styles["page105__aside--notes3"]}>
-                            {[
-                                ["Nice to meet you", "(Prazer em conhecê-lo/la)"],
-                                ["Nice meeting you too", "(Foi um prazer conhecê-lo/la também)"],
-                                ["It’s a pleasure to meet you", "(É um prazer conhecê-lo/la)"],
-                                ["Glad to meet you", "(Contente em conhecê-lo/la)"]
-                            ].map((text, index) => (
-                                <div key={index}>
-                                    <p className={styles["page105__aside--notes2--vermelho"]}>{text[0]}</p>
-                                    <p className={styles["page105__aside--notes2--preto"]}>{text[1]}</p>
-                                </div>
-                            ))}
+                            {wordBankColA.map((text, index) => {
+                                const audioIndex = 6 + index; // 6,7,8,9
+                                const audioKey = `pg105_audio${audioIndex}`;
+                                return (
+                                    <div key={`wb-a-${index}`}>
+                                        <p className={styles["page105__aside--notes2--vermelho"]}>
+                                            {text[0]}
+                                            {audioIndex <= 12 && (
+                                                <img
+                                                    src={eng_audio_icon}
+                                                    alt="Audio Icon"
+                                                    className={styles["page105__header--icon"]}
+                                                    onClick={() => playAudio(audioKey)}
+                                                />
+                                            )}
+                                        </p>
+                                        <p className={styles["page105__aside--notes2--preto"]}>{text[1]}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
 
                         <div>
-                            {[
-                                ["I’m happy to meet you", "(Estou feliz por conhecê-lo/la)"],
-                                ["Pleased to meet you", "(Satisfação em conhecê-lo/la)"],
-                                ["My pleasure", "(O prazer é meu.)"],
-                                ["Very pleased", "(Muito prazer.)"]
-                            ].map((text, index) => (
-                                <div key={index + 4}>
-                                    <p className={styles["page105__aside--notes2--vermelho"]}>{text[0]}</p>
-                                    <p className={styles["page105__aside--notes2--preto"]}>{text[1]}</p>
-                                </div>
-                            ))}
+                            {wordBankColB.map((text, index) => {
+                                const audioIndex = 10 + index;
+                                const audioKey = `pg105_audio${audioIndex}`;
+                                const showAudio = audioIndex <= 12;
+                                return (
+                                    <div key={`wb-b-${index}`}>
+                                        <p className={styles["page105__aside--notes2--vermelho"]}>
+                                            {text[0]}
+                                            {showAudio && (
+                                                <img
+                                                    src={eng_audio_icon}
+                                                    alt="Audio Icon"
+                                                    className={styles["page105__header--icon"]}
+                                                    onClick={() => playAudio(audioKey)}
+                                                />
+                                            )}
+                                        </p>
+                                        <p className={styles["page105__aside--notes2--preto"]}>{text[1]}</p>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
             </aside>
         </div>
-
     );
 };
 

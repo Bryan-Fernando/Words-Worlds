@@ -215,3 +215,17 @@
     margin-bottom: 16px;
   }
 }
+
+.page257__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page257__icon:hover {
+  transform: scale(1.2);
+}

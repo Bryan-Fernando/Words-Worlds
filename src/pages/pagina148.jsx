@@ -40,9 +40,9 @@ const Pagina148 = () => {
   const currentAudioRef = useRef(null);
 
   const correctAnswers = [
-    "He isn't working in the office.",
+    "He isn't working in the office",
     "They aren't playing soccer now",
-    "I’m not studying for my test."
+    "I'm not studying for my test"
   ];
 
   const handleInputChange = (value, index) => {
@@ -90,7 +90,8 @@ const Pagina148 = () => {
       </h1>
 
       <h2 className={styles["page148__subtitle"]}>
-        3. Rewrite these sentences in their negative form.
+        3. Rewrite the sentences in their Negative Contracted
+Form.
         <span className={styles["page148__icons-container"]}>
           <img
             src={eng_audio_icon}

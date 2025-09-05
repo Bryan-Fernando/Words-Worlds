@@ -1,1 +1,104 @@
+.page589__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page589__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Main */
+.page589__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Cards */
+.page589__card {
+  background: #fff;
+  border-radius: 0.9rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.4rem;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 1.4rem;
+  align-items: start;
+}
+.page589__card.is-reversed {
+  grid-template-columns: 1.6fr 0.9fr;
+}
+
+/* Imagem (placeholder — sem import) */
+.page589__imageWrapper { width: 100%; }
+.page589__imagePlaceholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Caixa diálogo */
+.page589__dialogueBox {
+  background: #fafafa;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.8rem;
+  padding: 1.1rem 1.3rem;
+  text-align: left;
+}
+
+.page589__topic {
+  margin: 0 0 0.6rem 0;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* Diálogo */
+.page589__dialogue { text-align: left; }
+.page589__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+}
+
+.page589__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.page589__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+/* Segundo interlocutor em vermelho/itálico */
+.is-second { color: #A61C28; font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page589__title { font-size: 3.6rem; }
+  .page589__card,
+  .page589__card.is-reversed { grid-template-columns: 1fr; }
+  .page589__imagePlaceholder { height: 200px; }
+}
+
+@media (max-width: 560px) {
+  .page589__line { font-size: 1.45rem; }
+  .page589__title { font-size: 3rem; }
+  .page589__imagePlaceholder { height: 180px; }
+}
  

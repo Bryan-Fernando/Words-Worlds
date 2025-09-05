@@ -1,1 +1,178 @@
  
+.page581__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Header */
+.page581__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Main wrapper */
+.page581__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* ===== Mini grid (2 cartões) ===== */
+.page581__miniGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.page581__miniCard {
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 1.2rem;
+  align-items: start;
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.2rem;
+}
+
+.page581__miniImageWrapper { width: 100%; }
+.page581__miniImage {
+  width: 100%;
+  height: 140px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+.page581__miniContent { text-align: left; }
+.page581__miniTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 0.6rem 0;
+  text-align: left;
+}
+
+.page581__dialogue { text-align: left; }
+.page581__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.8rem;
+  margin: 0 0 0.6rem 0;
+}
+
+.page581__label {
+  font-weight: 800;
+  text-transform: lowercase;
+  min-width: 1.2rem;
+}
+
+.page581__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+.is-b { color: #A61C28; font-style: italic; }
+
+/* ===== Divider ===== */
+.page581__divider {
+  height: 6px;
+  width: 100%;
+  background: #222;
+  border-radius: 999px;
+  margin: 0.6rem 0 0.2rem;
+}
+
+/* ===== Card grande ===== */
+.page581__bigCard {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.6rem;
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.6rem;
+}
+
+.page581__bigDialogue { text-align: left; }
+.page581__row {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+.page581__name {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+.page581__speech { display: flex; flex-direction: column; gap: 0.2rem; }
+.page581__pt { color: #A61C28; font-style: italic; font-size: 1.5rem; }
+
+.page581__bigImageWrapper { width: 100%; }
+.page581__bigImage {
+  width: 100%;
+  height: 220px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* ===== Word Bank ===== */
+.page581__wordbank {
+  background: #fff;
+  border-radius: 0.8rem;
+  border: 0.12rem solid #e6e6e6;
+  overflow: hidden;
+}
+
+.page581__wbHeader {
+  background: #A61C28;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+.page581__wbGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8rem 1.2rem;
+  padding: 1.2rem;
+}
+
+.page581__wbItem { text-align: left; }
+.page581__wbEn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+.page581__wbPt {
+  font-size: 1.4rem;
+  color: #A61C28;
+  font-style: italic;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 1024px) {
+  .page581__title { font-size: 3.6rem; }
+  .page581__miniGrid { grid-template-columns: 1fr; }
+  .page581__bigCard { grid-template-columns: 1fr; }
+  .page581__bigImage { height: 240px; }
+}
+
+@media (max-width: 560px) {
+  .page581__line { font-size: 1.5rem; }
+  .page581__wbGrid { grid-template-columns: 1fr; }
+}

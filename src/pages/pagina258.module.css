@@ -231,6 +231,21 @@
   font-size: 1.5rem; /* Aplicando tamanho da página 256 */
 }
 
+.page258__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page258__icon:hover {
+  transform: scale(1.2);
+}
+
+
 @media (max-width: 768px) {
   .titleContainer {
     font-size: 4rem; /* Responsivo para mobile */

@@ -6,7 +6,6 @@ import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
 import pagina118_imagem1 from '../assets/images/pagina119_imagem1.gif';
 
-// Áudios inglês
 import pg119_audio1 from '../assets/audios/pg119_audio1.mp3';
 import pg119_audio2 from '../assets/audios/pg119_audio2.mp3';
 import pg119_audio3 from '../assets/audios/pg119_audio3.mp3';
@@ -30,7 +29,6 @@ import pg119_audio20 from '../assets/audios/pg119_audio20.mp3';
 import pg119_audio21 from '../assets/audios/pg119_audio21.mp3';
 import pg119_audio22 from '../assets/audios/pg119_audio22.mp3';
 
-// Áudios português
 import pg119_audio1p from '../assets/audios/pg119_audio1p.mp3';
 import pg119_audio2p from '../assets/audios/pg119_audio2p.mp3';
 import pg119_audio3p from '../assets/audios/pg119_audio3p.mp3';

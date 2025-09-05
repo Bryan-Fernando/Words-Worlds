@@ -1,1 +1,119 @@
- 
+/* Container & header */
+.page569__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page569__header {
+  width: 100%;
+}
+
+.page569__title {
+  font-size: 5rem;
+  color: #A61C28;            /* vermelho padrão do curso */
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+/* Main */
+.page569__main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card (caixa branca com borda suave) */
+.page569__card {
+  background: #ffffff;
+  border-radius: 0.8rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Dialogue */
+.page569__dialogue {
+  padding: 1rem 1rem 1rem 0.5rem;
+}
+
+.page569__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1.2rem;
+  align-items: start;
+  margin: 0 0 1.2rem 0;
+}
+
+.page569__speaker {
+  font-weight: 800;
+  font-style: normal;
+  min-width: max-content;
+}
+
+.page569__line {
+  font-size: 1.8rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+.is-rita {
+  color: #222;               /* Rita em preto */
+}
+
+.is-neto {
+  color: #A61C28;            /* Neto em vermelho */
+}
+
+.page569__line.is-neto {
+  font-style: italic;        /* fal falas do Neto em itálico */
+}
+
+/* Image */
+.page569__imageWrapper {
+  width: 100%;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.page569__image {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .page569__title { font-size: 4rem; }
+}
+
+@media (max-width: 1024px) {
+  .page569__card {
+    grid-template-columns: 1fr;
+  }
+
+  .page569__title { font-size: 3.4rem; }
+
+  .page569__line {
+    font-size: 1.6rem;
+  }
+
+  .page569__image {
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 600px) {
+  .page569__title { font-size: 3rem; }
+  .page569__dialogue p { gap: 0.8rem; }
+  .page569__line { font-size: 1.5rem; }
+}

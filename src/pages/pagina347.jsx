@@ -1,9 +1,24 @@
-﻿import React, { useState } from 'react';
+﻿import React, { useRef, useState } from 'react';
 import styles from './pagina347.module.css';
 import correctIcon from '../assets/icons/correct_icon.webp';
 import wrongIcon from '../assets/icons/wrong_icon.webp';
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+import ptbr_audio_icon from '../assets/icons/ptbr_audio_icon.webp';
 
-// Dados para o exercício 8: Respond to the questions
+import audio1e from '../assets/audios/pg347_audio1e.mp3';
+import audio2e from '../assets/audios/pg347_audio2e.mp3';
+import audio3e from '../assets/audios/pg347_audio3e.mp3';
+import audio4e from '../assets/audios/pg347_audio4e.mp3';
+import audio5e from '../assets/audios/pg347_audio5e.mp3';
+import audio6e from '../assets/audios/pg347_audio6e.mp3';
+
+import audio1p from '../assets/audios/pg347_audio1p.mp3';
+import audio2p from '../assets/audios/pg347_audio2p.mp3';
+import audio3p from '../assets/audios/pg347_audio3p.mp3';
+import audio4p from '../assets/audios/pg347_audio4p.mp3';
+import audio5p from '../assets/audios/pg347_audio5p.mp3';
+import audio6p from '../assets/audios/pg347_audio6p.mp3';
+
 const questionsEx8 = [
   {
     id: 1,
@@ -47,33 +62,33 @@ const questionsEx8 = [
   }
 ];
 
-// Função para normalizar strings (remover espaços extras e converter para minúsculas)
-const normalize = (str) => {
-  if (str === null || str === undefined) return '';
-  // Remove espaços extras, mantém pontuação e converte para minúsculas
-  return str.trim().replace(/\s+/g, ' ').toLowerCase();
-};
+const normalize = (str) => (str ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
 
 const Pagina347 = () => {
-  // Estados para o exercício 8: Respond to the questions
   const [inputValuesEx8, setInputValuesEx8] = useState(Array(questionsEx8.length).fill(''));
   const [resultsEx8, setResultsEx8] = useState(Array(questionsEx8.length).fill(null));
+  const currentAudioRef = useRef(null);
 
-  // Handler para mudança de input
+  const playAudio = (file) => {
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+    }
+    const audio = new Audio(file);
+    currentAudioRef.current = audio;
+    audio.play();
+  };
+
   const handleInputChangeEx8 = (value, index) => {
     const updatedValues = [...inputValuesEx8];
     updatedValues[index] = value;
     setInputValuesEx8(updatedValues);
   };
 
-  // Handler para o botão Check
   const handleCheckClickEx8 = () => {
     const evaluatedResults = inputValuesEx8.map((input, i) => {
       const userInput = normalize(input);
-      // Verifica se o input do usuário corresponde a qualquer uma das respostas corretas
-      return questionsEx8[i].correctAnswers.some(correctAns => 
-        normalize(correctAns) === userInput
-      );
+      return questionsEx8[i].correctAnswers.some(correctAns => normalize(correctAns) === userInput);
     });
     setResultsEx8(evaluatedResults);
   };
@@ -84,12 +99,37 @@ const Pagina347 = () => {
         <h1><span className={styles.page347__exercisesRed}>Exercises</span></h1>
       </header>
 
-      {/* Exercício 8: Respond to the questions */}
       <p className={styles.page347__instructionRed}>
-        <strong>8. Respond to the questions</strong>
+        <strong>
+          8. Respond to the questions
+          <img
+            src={eng_audio_icon}
+            alt="Play English Audio"
+            className={styles.page347__icon}
+            onClick={() => playAudio(audio1e)}
+          />
+          <img
+            src={ptbr_audio_icon}
+            alt="Play Portuguese Audio"
+            className={styles.page347__icon}
+            onClick={() => playAudio(audio1p)}
+          />
+        </strong>
       </p>
       <p className={styles.page347__instruction}>
         Answer the questions in the Affirmative or Negative forms.
+        <img
+          src={eng_audio_icon}
+          alt="Play English Audio"
+          className={styles.page347__icon}
+          onClick={() => playAudio(audio2e)}
+        />
+        <img
+          src={ptbr_audio_icon}
+          alt="Play Portuguese Audio"
+          className={styles.page347__icon}
+          onClick={() => playAudio(audio2p)}
+        />
       </p>
 
       <div className={styles.page347__questionBox}>
@@ -106,13 +146,27 @@ const Pagina347 = () => {
                   className={styles.page347__input}
                   placeholder={inputValuesEx8[index] === '' ? "Type your answer" : ""}
                 />
-                {resultsEx8[index] !== null && (
+                <div className={styles.page347__iconsRow}>
+                  {resultsEx8[index] !== null && (
+                    <img
+                      src={resultsEx8[index] ? correctIcon : wrongIcon}
+                      alt={resultsEx8[index] ? "Correct" : "Incorrect"}
+                      className={styles.page347__resultIcon}
+                    />
+                  )}
                   <img
-                    src={resultsEx8[index] ? correctIcon : wrongIcon}
-                    alt={resultsEx8[index] ? "Correct" : "Incorrect"}
-                    className={styles.page347__resultIcon}
+                    src={eng_audio_icon}
+                    alt="Play English Audio"
+                    className={styles.page347__icon}
+                    onClick={() => playAudio([audio3e, audio4e, audio5e, audio6e][index])}
                   />
-                )}
+                  <img
+                    src={ptbr_audio_icon}
+                    alt="Play Portuguese Audio"
+                    className={styles.page347__icon}
+                    onClick={() => playAudio([audio3p, audio4p, audio5p, audio6p][index])}
+                  />
+                </div>
               </div>
             </div>
           ))}

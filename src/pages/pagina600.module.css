@@ -1,1 +1,131 @@
+.page600__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Título */
+.page600__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Main */
+.page600__main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Seções */
+.page600__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Card de info (título + linhas) */
+.page600__infoCard {
+  border: 0.16rem solid #A61C28;
+  border-radius: 0.8rem;
+  padding: 0.9rem 1.1rem;
+  background: #fff;
+  text-align: left;
+}
+
+.page600__label {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #A61C28;
+}
+
+/* Tabelas */
+.page600__tableWrap { overflow: auto; }
+
+.page600__table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 0.12rem solid #A61C28;
+  border-radius: 0.6rem;
+  overflow: hidden;
+}
+
+.page600__table thead th {
+  background: #f0f0f0;
+  font-weight: 800;
+  text-align: left;
+  padding: 0.8rem 1rem;
+  border-bottom: 0.12rem solid #A61C28;
+  font-size: 1.45rem;
+}
+
+.page600__table tbody td {
+  border-top: 0.12rem solid #e6e6e6;
+  border-right: 0.12rem solid #e6e6e6;
+  padding: 0.8rem 1rem;
+  font-size: 1.45rem;
+  text-align: left;
+  color: #222;
+}
+.page600__table tbody tr td:last-child { border-right: none; }
+.page600__table tbody tr:first-child td { border-top: none; }
+
+/* Fórmulas */
+.page600__formulaRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.page600__infoDot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #A61C28;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.page600__formulaText {
+  font-size: 1.45rem;
+}
+
+.page600__pill {
+  border: 0.12rem solid #A61C28;
+  border-radius: 2rem;
+  padding: 0.2rem 0.8rem;
+  font-weight: 700;
+  color: #A61C28;
+  background: #fff;
+  font-size: 1.4rem;
+}
+
+.page600__bottomFormula {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  font-size: 1.45rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page600__title { font-size: 3.8rem; }
+}
+
+@media (max-width: 560px) {
+  .page600__title { font-size: 3rem; }
+  .page600__table thead th, .page600__table tbody td { font-size: 1.35rem; }
+  .page600__pill { font-size: 1.3rem; }
+}
  

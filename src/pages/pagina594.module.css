@@ -1,1 +1,82 @@
+.page594__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Título */
+.page594__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;  /* tudo à esquerda */
+}
+
+/* Main */
+.page594__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Hero placeholder (sem import) */
+.page594__heroImage {
+  width: 100%;
+  height: 300px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Card do diálogo */
+.page594__dialogueCard {
+  background: #fff;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.9rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.4rem;
+  text-align: left;
+}
+
+.page594__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+  text-align: left;
+}
+
+.page594__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.page594__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+/* Segunda interlocutora (Clara) */
+.isSecond {
+  color: #A61C28;
+  font-style: italic;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page594__title { font-size: 3.8rem; }
+  .page594__heroImage { height: 260px; }
+}
+
+@media (max-width: 560px) {
+  .page594__title { font-size: 3rem; }
+  .page594__heroImage { height: 210px; }
+  .page594__line { font-size: 1.45rem; }
+}
  

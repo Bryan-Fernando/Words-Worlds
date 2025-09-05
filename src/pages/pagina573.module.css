@@ -1,1 +1,131 @@
+.page573__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.page573__header { width: 100%; }
+
+.page573__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  text-align: left;
+}
+
+/* Main layout */
+.page573__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+/* Cards (cada diálogo) */
+.page573__card {
+  background: #fff;
+  border-radius: 0.9rem;
+  border: 0.12rem solid #e6e6e6;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  padding: 1.6rem;
+  display: grid;
+  grid-template-columns: 0.9fr 1.6fr;
+  gap: 1.6rem;
+  align-items: start;
+}
+
+.page573__card.is-reversed {
+  grid-template-columns: 1.6fr 0.9fr;
+}
+
+/* Imagem (placeholder — sem import) */
+.page573__imageWrapper { width: 100%; }
+
+.page573__imagePlaceholder {
+  width: 100%;
+  height: 180px;
+  border-radius: 0.8rem;
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  background-position: center;
+  background-size: cover;
+  /* Quando tiver as imagens:
+     background-image: url('../assets/images/pg573_img1.jpg');  // no 1º card
+     e no segundo card você pode sobrescrever com uma classe extra, se quiser */
+}
+
+/* Caixa de diálogo */
+.page573__dialogueBox {
+  background: #fafafa;
+  border: 0.12rem solid #ececec;
+  border-radius: 0.8rem;
+  padding: 1.2rem 1.4rem;
+}
+
+.page573__topic {
+  margin: 0 0 0.6rem 0;
+  font-weight: 800;
+  font-size: 1.6rem;
+  text-align: left;
+}
+
+/* Linhas do diálogo */
+.page573__dialogue { text-align: left; }
+
+.page573__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1rem;
+  margin: 0 0 0.9rem 0;
+  text-align: left;
+}
+
+.page573__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222;
+}
+
+.page573__line {
+  font-size: 1.6rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+/* Cores/estilos por personagem */
+.is-daniel, .is-manager { color: #222; }
+.is-milla, .is-employee { color: #A61C28; font-style: italic; }
+
+/* Nota */
+.page573__note {
+  background: #A61C28;
+  color: #fff;
+  border-radius: 0.6rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.page573__note strong {
+  display: block;
+  margin-bottom: 0.6rem;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .page573__title { font-size: 3.6rem; }
+  .page573__card,
+  .page573__card.is-reversed {
+    grid-template-columns: 1fr;
+  }
+  .page573__imagePlaceholder { height: 200px; }
+  .page573__line { font-size: 1.5rem; }
+}
+
+@media (max-width: 560px) {
+  .page573__imagePlaceholder { height: 180px; }
+  .page573__title { font-size: 3rem; }
+  .page573__line { font-size: 1.4rem; }
+}
  

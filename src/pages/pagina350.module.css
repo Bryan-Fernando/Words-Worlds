@@ -155,6 +155,30 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.page350__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 0.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page350__icon:hover {
+  transform: scale(1.2);
+}
+
+.page350__speakerRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+
+
 /* Media query para telas menores */
 @media (max-width: 768px) {
   .page350__imageGallery {

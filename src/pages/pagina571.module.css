@@ -1,1 +1,102 @@
+.page571__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Header */
+.page571__header { width: 100%; }
+
+.page571__title {
+  font-size: 5rem;
+  color: #A61C28;
+  font-weight: 800;
+  line-height: 1.05;
+  text-align: left;            /* alinhado à esquerda */
+  letter-spacing: -0.02em;
+}
+
+/* Hero com imagem rotacionada */
+.page571__hero {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* imagem começa à esquerda como no mock */
+}
+
+.page571__imagePlaceholder {
+  width: clamp(280px, 55vw, 640px);
+  height: clamp(180px, 32vw, 360px);
+  background: #f3f3f3;
+  border: 0.12rem solid #e6e6e6;
+  border-radius: 1.2rem;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  transform: rotate(-6deg);
+  transform-origin: center;
+  background-position: center;
+  background-size: cover;
+  /* Quando tiver a imagem real:
+     background-image: url('../assets/images/pg571_image.jpg'); */
+}
+
+/* Main / diálogo */
+.page571__main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.page571__subtitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #222;
+  margin: 0.5rem 0 0.5rem;
+  text-align: left;
+}
+
+.page571__dialogue { text-align: left; }
+
+.page571__dialogue p {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 1.2rem;
+  margin: 0 0 1.1rem 0;
+  text-align: left;
+}
+
+.page571__speaker {
+  font-weight: 800;
+  min-width: max-content;
+  color: #222; /* Susan padrão */
+}
+
+.page571__line {
+  font-size: 1.8rem;
+  line-height: 1.55;
+  color: #222;
+  text-align: left;
+}
+
+.is-jesica { color: #A61C28; }
+.page571__line.is-jesica { font-style: italic; }
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .page571__title { font-size: 4rem; }
+}
+
+@media (max-width: 900px) {
+  .page571__imagePlaceholder {
+    transform: rotate(-4deg);
+    width: 100%;
+    height: 300px;
+  }
+  .page571__title { font-size: 3.4rem; }
+  .page571__line { font-size: 1.6rem; }
+}
+
+@media (max-width: 560px) {
+  .page571__imagePlaceholder { height: 240px; }
+  .page571__line { font-size: 1.5rem; }
+}
  

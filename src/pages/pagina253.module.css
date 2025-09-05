@@ -1,94 +1,107 @@
 .container {
-    padding: 2rem;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .header {
-    margin-bottom: 2rem;
-  }
-  
-  .black {
-    color: black;
-  }
-  
-  .red {
-    color: #A61C28;
-  }
-  
-  .bold {
-    font-weight: bold;
-  }
-  
- .title {
-    font-size: 4.5rem;
-    color: #A61C28;
-    font-weight: bold;
-    text-align: left;
-  }
+  padding: 2rem;
+  font-family: 'Arial', sans-serif;
+}
 
-  .subtitle {
-    font-size: 2.2rem;
-    font-style: italic;
-    text-align: left;
-  }
-  
-  .vocabSection {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .vocabBox {
-    border: 2px solid #A61C28;
-    border-radius: 0.5rem;
-    padding: 1rem;
-    min-width: 220px;
-    font-size: 1.6rem;
-    color: #A61C28;
-    text-align: center;
-  }
-  
-  .vocabBox span {
-    display: block;
-    font-size: 1.4rem;
-    color: black;
-    margin-top: 0.5rem;
-  }
-  
-  .sectionTitle {
-    background-color: #A61C28;
-    color: white;
-    font-size: 2rem;
-    padding: 0.8rem;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .subSectionTitle {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin: 1rem 0;
-  }
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 1.5rem;
-  }
-  
-  .table th,
-  .table td {
-    border: 1px solid #A61C28;
-    padding: 1rem;
-    text-align: left;
-  }
-  
-  .table th {
-    background-color: #888A8C;
-    color: white;
-    text-align: center;
-  }
-  
+.header {
+  margin-bottom: 2rem;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: #A61C28;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.title {
+  font-size: 4.5rem;
+  color: #A61C28;
+  font-weight: bold;
+  text-align: left;
+}
+
+.subtitle {
+  font-size: 2.2rem;
+  font-style: italic;
+  text-align: left;
+}
+
+.vocabSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.vocabBox {
+  border: 2px solid #A61C28;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  min-width: 220px;
+  font-size: 1.6rem;
+  color: #A61C28;
+  text-align: center;
+}
+
+.vocabBox span {
+  display: block;
+  font-size: 1.4rem;
+  color: black;
+  margin-top: 0.5rem;
+}
+
+.sectionTitle {
+  background-color: #A61C28;
+  color: white;
+  font-size: 2rem;
+  padding: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.subSectionTitle {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.table th,
+.table td {
+  border: 1px solid #A61C28;
+  padding: 1rem;
+  text-align: left;
+}
+
+.table th {
+  background-color: #888A8C;
+  color: white;
+  text-align: center;
+}
+
+.page253__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page253__icon:hover {
+  transform: scale(1.2);
+}

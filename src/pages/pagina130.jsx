@@ -102,22 +102,52 @@ const Pagina130 = () => {
         </thead>
         <tbody>
           <tr>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}></td>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>Am</td>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>I</td>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer', color: 'red' }}>not</td>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>going</td>
-            <td onClick={() => playAudio('pg130_audio1e')} style={{ cursor: 'pointer' }}>to the movies with you?</td>
-            <td>Eu não vou ao cinema com vocês?</td>
+            <td>
+            </td>
+            <td>Am</td>
+            <td>I</td>
+            <td style={{ color: 'red' }}>not</td>
+            <td>going</td>
+            <td>to the movies with you? 
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page130__icon"]}
+                onClick={() => playAudio('pg130_audio1e')}
+              /></td>
+            <td>
+              Eu não vou ao cinema com vocês?
+              <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page130__icon"]}
+                onClick={() => playAudio('pg130_audio1p')}
+              />
+            </td>
           </tr>
           <tr>
-            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}></td>
-            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>Ain't</td>
-            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>I</td>
+            <td>
+            </td>
+            <td>Ain't</td>
+            <td>I</td>
             <td></td>
-            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>going</td>
-            <td onClick={() => playAudio('pg130_audio2e')} style={{ cursor: 'pointer' }}>to the movies with you?</td>
-            <td>Eu não vou ao cinema com vocês?</td>
+            <td>going</td>
+            <td>to the movies with you? 
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page130__icon"]}
+                onClick={() => playAudio('pg130_audio2e')}
+              /></td>
+            <td>
+              Eu não vou ao cinema com vocês?
+              <img
+                src={ptbr_audio_icon}
+                alt="Portuguese audio"
+                className={styles["page130__icon"]}
+                onClick={() => playAudio('pg130_audio2p')}
+              />
+            </td>
           </tr>
         </tbody>
       </table>

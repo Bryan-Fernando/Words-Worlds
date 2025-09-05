@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import styles from './pagina113.module.css';
+
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
 
 import pagina113_imagem1 from '../assets/images/pagina113_imagem1.webp';
 import pagina113_imagem2 from '../assets/images/pagina113_imagem2.webp';
@@ -17,109 +19,157 @@ import pg113_audio1 from '../assets/audios/pg113_audio1.mp3';
 import pg113_audio2 from '../assets/audios/pg113_audio2.mp3';
 import pg113_audio3 from '../assets/audios/pg113_audio3.mp3';
 import pg113_audio4 from '../assets/audios/pg113_audio4.mp3';
+import pg113_audio5 from '../assets/audios/pg113_audio5.mp3';
+import pg113_audio6 from '../assets/audios/pg113_audio6.mp3';
+import pg113_audio7 from '../assets/audios/pg113_audio7.mp3';
 
 const Pagina113 = () => {
+  const playAudio = (audioSrc) => {
+    const audio = new Audio(audioSrc);
+    audio.play();
+  };
 
-    const playAudio = (audioSrc) => {
-        const audio = new Audio(audioSrc);
-        audio.play();
-    };
-
-
-    return (
-        <div>
-            <div className={styles["page113__container"]}>
-    <header className={styles["page113__header"]}>
-        <h1 className={styles["page113__header-h1"]} onClick={() => playAudio(global_grammar)} style={{ cursor: 'pointer' }}>
+  return (
+    <div>
+      <div className={styles["page113__container"]}>
+        <header className={styles["page113__header"]}>
+          <h1 className={styles["page113__header-h1"]}>
             Grammar
-        </h1>
-        <div>
-            <h2 className={styles["page113__header-h2"]} onClick={() => playAudio(pg113_audio1)} style={{ cursor: 'pointer' }}>
-                Clothing Materials
+            <img
+              src={eng_audio_icon}
+              alt="English audio"
+              className={styles["page113__icon"]}
+              onClick={() => playAudio(global_grammar)}
+            />
+          </h1>
+          <div>
+            <h2 className={styles["page113__header-h2"]}>
+              Clothing Materials
+              <img
+                src={eng_audio_icon}
+                alt="English audio"
+                className={styles["page113__icon"]}
+                onClick={() => playAudio(pg113_audio1)}
+              />
             </h2>
             <p>Materiais de Roupas</p>
-        </div>
-    </header>
-    
-    <main className={styles["page113__main"]}>
-        <div className={styles["page113__container-images-1"]}>
-            <div className={styles["page113__flex"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-wide"]} src={pagina113_imagem1} alt="" /></div>
-                    <div><img className={styles["page113__image-normal"]} src={pagina113_imagem2} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio2)} style={{ cursor: 'pointer' }}>
-                        wool
-                    </p>
-                    <p>lã</p>
-                </div>
-            </div>
-            <div className={styles["page113__flex"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-wide"]} src={pagina113_imagem3} alt="" /></div>
-                    <div><img className={styles["page113__image-normal"]} src={pagina113_imagem4} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio3)} style={{ cursor: 'pointer' }}>
-                        cotton
-                    </p>
-                    <p>algodão</p>
-                </div>
-            </div>
-            <div className={styles["page113__flex"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-wide"]} src={pagina113_imagem5} alt="" /></div>
-                    <div><img className={styles["page113__image-normal"]} src={pagina113_imagem6} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio4)} style={{ cursor: 'pointer' }}>
-                        leather
-                    </p>
-                    <p>couro</p>
-                </div>
-            </div>
-        </div>
+          </div>
+        </header>
 
-        <div className={styles["page113__container-images-2"]}>
-            <div className={styles["page113__flex-b"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-large"]} src={pagina113_imagem7} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio2)} style={{ cursor: 'pointer' }}>
-                        denim
-                    </p>
-                    <p>jeans</p>
-                </div>
+        <main className={styles["page113__main"]}>
+          <div className={styles["page113__container-images-1"]}>
+            <div className={styles["page113__flex"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-wide"]} src={pagina113_imagem1} alt="" /></div>
+                <div><img className={styles["page113__image-normal"]} src={pagina113_imagem2} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  wool
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio2)}
+                  />
+                </p>
+                <p>lã</p>
+              </div>
             </div>
-            <div className={styles["page113__flex-b"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-large"]} src={pagina113_imagem8} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio3)} style={{ cursor: 'pointer' }}>
-                        fur
-                    </p>
-                    <p>pele</p>
-                </div>
+            <div className={styles["page113__flex"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-wide"]} src={pagina113_imagem3} alt="" /></div>
+                <div><img className={styles["page113__image-normal"]} src={pagina113_imagem4} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  cotton
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio3)}
+                  />
+                </p>
+                <p>algodão</p>
+              </div>
             </div>
-            <div className={styles["page113__flex-b"]}>
-                <div className={styles["page113__flex-images"]}>
-                    <div><img className={styles["page113__image-large"]} src={pagina113_imagem9} alt="" /></div>
-                </div>
-                <div className={styles["page113__text-container"]}>
-                    <p className={styles["page113__paragraph--red"]} onClick={() => playAudio(pg113_audio4)} style={{ cursor: 'pointer' }}>
-                        nylon
-                    </p>
-                    <p>nylon</p>
-                </div>
+            <div className={styles["page113__flex"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-wide"]} src={pagina113_imagem5} alt="" /></div>
+                <div><img className={styles["page113__image-normal"]} src={pagina113_imagem6} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  leather
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio4)}
+                  />
+                </p>
+                <p>couro</p>
+              </div>
             </div>
-        </div>
-    </main>
-</div>
+          </div>
 
-        </div>
-    );
+          <div className={styles["page113__container-images-2"]}>
+            <div className={styles["page113__flex-b"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-large"]} src={pagina113_imagem7} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  denim
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio5)}
+                  />
+                </p>
+                <p>jeans</p>
+              </div>
+            </div>
+            <div className={styles["page113__flex-b"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-large"]} src={pagina113_imagem8} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  fur
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio6)}
+                  />
+                </p>
+                <p>pele</p>
+              </div>
+            </div>
+            <div className={styles["page113__flex-b"]}>
+              <div className={styles["page113__flex-images"]}>
+                <div><img className={styles["page113__image-large"]} src={pagina113_imagem9} alt="" /></div>
+              </div>
+              <div className={styles["page113__text-container"]}>
+                <p className={styles["page113__paragraph--red"]}>
+                  nylon
+                  <img
+                    src={eng_audio_icon}
+                    alt="English audio"
+                    className={styles["page113__icon"]}
+                    onClick={() => playAudio(pg113_audio7)}
+                  />
+                </p>
+                <p>nylon</p>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  );
 };
 export default Pagina113;
