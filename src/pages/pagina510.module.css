@@ -70,6 +70,21 @@
 /* falas do segundo interlocutor em vermelho + itálico */
 .textB { color: #A61C28; font-style: italic; }
 
+.page510__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  position: relative;
+  top: 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page510__icon:hover {
+  transform: scale(1.2);
+}
+
+
 /* Responsivo */
 @media (max-width: 820px) {
   .page__grid { grid-template-columns: 1fr; }
