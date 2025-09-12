@@ -76,3 +76,17 @@
   border-radius: 0.5rem;
   object-fit: cover;
 }
+
+.page82__audio-icon {
+  position: relative;
+  top: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.page82__audio-icon:hover {
+  transform: scale(1.1);
+}

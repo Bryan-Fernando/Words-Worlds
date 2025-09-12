@@ -121,6 +121,7 @@
     width: fit-content;
     align-self: flex-start;
     margin-left: 0;
+    height: 4.7rem;
 }
 
 .page148__answers-section {
@@ -155,4 +156,96 @@
 .page148__answer-red {
     color: #A61C28;
     font-weight: bold;
+}
+
+/* Container dos botões (Check + Reset + Answers Key) */
+.page148__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RESET */
+.page148__reset-button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.page148__reset-button:hover { background: #821a22; }
+.page148__reset-button:active { transform: translateY(1px); }
+.page148__reset-button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+/* ANSWERS KEY – botão */
+.page148__answersKey-button {
+  background: #0A3282;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 4.7rem;
+}
+.page148__answersKey-button:hover { background: #072861; }
+.page148__answersKey-button:active { transform: translateY(1px); }
+.page148__answersKey-button:focus-visible {
+  outline: 3px solid #cfe0ff;
+  outline-offset: 3px;
+}
+.page148__answersKey-button[aria-pressed="true"] {
+  filter: brightness(0.95);
+}
+
+/* ANSWERS KEY – caixa e itens */
+.page148__answersKey-box {
+  margin-top: 1rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 1.6rem;
+  background: #fffaf9;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page148__answersKey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+}
+.page148__answersKey-item:last-child { border-bottom: none; }
+
+.page148__answersKey-num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.page148__answersKey-text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
 }

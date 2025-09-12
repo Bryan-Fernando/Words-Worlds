@@ -61,6 +61,16 @@
   border: 1px solid #ccc;
   background-color: #fff;
   font-weight: bold;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.page270__input:-webkit-autofill,
+.page270__input:-webkit-autofill:hover,
+.page270__input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .page270__resultIcon {

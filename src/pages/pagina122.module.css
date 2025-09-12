@@ -157,16 +157,16 @@
     background-color: #A61C28;
     color: white;
     border: none;
-    padding: 0.625rem 1.25rem;
+    padding: 1rem 2rem;
     cursor: pointer;
-    border-radius: 0.3125rem;
+    border-radius: 5px;
     font-weight: bold;
-    box-shadow: 0.125rem 0.125rem 0.3125rem rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s;
-    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     font-size: 2rem;
     width: fit-content;
-    margin-top: 2rem;
+    align-self: flex-start;
+    margin-left: 0;
+    height: 4.7rem;
 }
 
 .page122__button--check:hover {
@@ -191,4 +191,96 @@
     margin-top: 0.3rem;
     position: relative;
     bottom: 0.23em;
+}
+
+/* Container dos botões (Check + Reset + Answers Key) */
+.page122__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RESET */
+.page122__reset-button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.page122__reset-button:hover { background: #821a22; }
+.page122__reset-button:active { transform: translateY(1px); }
+.page122__reset-button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+/* ANSWERS KEY – botão */
+.page122__answersKey-button {
+  background: #0A3282;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 4.7rem;
+}
+.page122__answersKey-button:hover { background: #072861; }
+.page122__answersKey-button:active { transform: translateY(1px); }
+.page122__answersKey-button:focus-visible {
+  outline: 3px solid #cfe0ff;
+  outline-offset: 3px;
+}
+.page122__answersKey-button[aria-pressed="true"] {
+  filter: brightness(0.95);
+}
+
+/* ANSWERS KEY – caixa e itens */
+.page122__answersKey-box {
+  margin-top: 1rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 1.6rem;
+  background: #fffaf9;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page122__answersKey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+}
+.page122__answersKey-item:last-child { border-bottom: none; }
+
+.page122__answersKey-num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.page122__answersKey-text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
 }

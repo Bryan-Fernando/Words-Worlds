@@ -133,7 +133,7 @@ const Pagina508 = ({ onValidar }) => {
               <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles.page508__icon} onClick={() => playAudio(audio10p)} />
             </p>
             <p className={styles.textB}>
-              <strong className={styles.nameB}>Sarah:</strong> Absolutely, I'm going to travel to Thailand with my family. We're all excited!
+              <strong className={styles.nameB}>Sarah:</strong> Absolutely, I'm going to travel to Thailand with my family and go hiking. We're all excited!
               <img src={eng_audio_icon} alt="Play English Audio" className={styles.page508__icon} onClick={() => playAudio(audio11e)} />
               <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles.page508__icon} onClick={() => playAudio(audio11p)} />
             </p>

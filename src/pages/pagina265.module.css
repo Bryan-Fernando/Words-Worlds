@@ -8,7 +8,7 @@
 .page265__pageContainer {
     width: 100%;
     max-width: 1800px;
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
 }
 
@@ -40,7 +40,7 @@
 .page265__grammarHeader {
     background-color: #990000;
     padding: 1.5rem;
-    text-align: center;
+    text-align: left;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
 }
@@ -48,7 +48,7 @@
 .page265__grammarTitle {
     color: white;
     font-size: 2.4rem;
-    text-align: center;
+    text-align: left;
     font-weight: 500;
     font-style: italic;
     margin: 0;
@@ -65,7 +65,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-    text-align: center;
+    text-align: left;
     font-style: italic;
     font-size: 1.8rem;
     border-bottom: 1px solid #ddd;
@@ -143,7 +143,7 @@
 .page265__columnContainer {
     width: 100%;
     max-width: 1800px;
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
 }
 

@@ -120,61 +120,61 @@ const Pagina267 = () => {
             </div>
 
             {/* Coluna direita com imagens verticais */}
-            <div className={styles.imagesColumn}>
-              <div className={styles.imageContainer}>
-                <div className={styles.imagePlaceholder}>
+            <div className={styles.page267__imagesColumn}>
+              <div className={styles.page267__imageContainer}>
+                <div className={styles.page267__imagePlaceholder}>
                   <img
                     src="/src/assets/images/pagina267 imagen 1.webp"
                     alt="São Paulo"
-                    className={styles.responsiveImage}
+                    className={styles.page267__responsiveImage}
                   />
                 </div>
-                <p className={styles.caption}>São Paulo</p>
+                <p className={styles.page267__caption}>São Paulo</p>
               </div>
-              <div className={styles.imageContainer}>
-                <div className={styles.imagePlaceholder}>
+              <div className={styles.page267__imageContainer}>
+                <div className={styles.page267__imagePlaceholder}>
                   <img
                     src="/src/assets/images/pagina267 imagen 2.webp"
                     alt="Paris"
-                    className={styles.responsiveImage}
+                    className={styles.page267__responsiveImage}
                   />
                 </div>
-                <p className={styles.caption}>Paris</p>
+                <p className={styles.page267__caption}>Paris</p>
               </div>
             </div>
           </div>
 
           {/* Imagens horizontais abaixo */}
-          <div className={styles.imageRow}>
-            <div className={styles.imageContainer}>
-              <div className={styles.imagePlaceholder}>
+          <div className={styles.page267__imageRow}>
+            <div className={styles.page267__imageContainer}>
+              <div className={styles.page267__imagePlaceholder}>
                 <img
                   src="/src/assets/images/pagina267 imagen 3.webp"
                   alt="New York"
-                  className={styles.responsiveImage}
+                  className={styles.page267__responsiveImage}
                 />
               </div>
-              <p className={styles.caption}>New York</p>
+              <p className={styles.page267__caption}>New York</p>
             </div>
-            <div className={styles.imageContainer}>
-              <div className={styles.imagePlaceholder}>
+            <div className={styles.page267__imageContainer}>
+              <div className={styles.page267__imagePlaceholder}>
                 <img
                   src="/src/assets/images/pagina267 imagen 4.webp"
                   alt="Tokyo"
-                  className={styles.responsiveImage}
+                  className={styles.page267__responsiveImage}
                 />
               </div>
-              <p className={styles.caption}>Tokyo</p>
+              <p className={styles.page267__caption}>Tokyo</p>
             </div>
-            <div className={styles.imageContainer}>
-              <div className={styles.imagePlaceholder}>
+            <div className={styles.page267__imageContainer}>
+              <div className={styles.page267__imagePlaceholder}>
                 <img
                   src="/src/assets/images/pagina267 imagen 5.webp"
                   alt="Lima"
-                  className={styles.responsiveImage}
+                  className={styles.page267__responsiveImage}
                 />
               </div>
-              <p className={styles.caption}>Lima</p>
+              <p className={styles.page267__caption}>Lima</p>
             </div>
           </div>
         </main>

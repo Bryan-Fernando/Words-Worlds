@@ -31,11 +31,10 @@ const audioMap = {
   pg149_audio4e,
   pg149_audio4p,
 };
-
 const Pagina149 = () => {
   const [inputValues, setInputValues] = useState(Array(3).fill(''));
   const [results, setResults] = useState(Array(3).fill(null));
-  const [showAnswers, setShowAnswers] = useState(false);
+  const [showAnswersKey, setShowAnswersKey] = useState(false);
   const currentAudioRef = useRef(null);
 
   const correctAnswers = [
@@ -48,16 +47,36 @@ const Pagina149 = () => {
     const newValues = [...inputValues];
     newValues[index] = value;
     setInputValues(newValues);
+    // limpa o resultado daquela linha ao editar
+    setResults(prev => {
+      const next = [...prev];
+      next[index] = null;
+      return next;
+    });
   };
 
+  // Aceita com ou sem pontuação final (., !, ?), case-insensitive
   const handleCheckClick = () => {
-    const newResults = inputValues.map(
-      (value, index) =>
-        value.trim().toLowerCase() === correctAnswers[index].toLowerCase()
-    );
+    const newResults = inputValues.map((value, index) => {
+      const user = value.trim().replace(/[.!?]$/, '');     // remove 1 pontuação final, se tiver
+      const correct = correctAnswers[index].trim().replace(/[.!?]$/, '');
+      return user.toLowerCase() === correct.toLowerCase();
+    });
     setResults(newResults);
-    setShowAnswers(true);
   };
+
+  const handleReset = () => {
+    setInputValues(Array(3).fill(''));
+    setResults(Array(3).fill(null));
+    setShowAnswersKey(false);
+    if (currentAudioRef.current) {
+      currentAudioRef.current.pause();
+      currentAudioRef.current.currentTime = 0;
+      currentAudioRef.current = null;
+    }
+  };
+
+  const toggleAnswersKey = () => setShowAnswersKey(v => !v);
 
   const playAudio = (key) => {
     if (currentAudioRef.current) {
@@ -66,8 +85,14 @@ const Pagina149 = () => {
     }
     const audio = new Audio(audioMap[key]);
     currentAudioRef.current = audio;
-    audio.play();
+    audio.play().catch(() => {});
   };
+
+  const answersKeyItems = [
+    { label: '1', text: "Is she listening to music?" },
+    { label: '2', text: "Are you writing an email?" },
+    { label: '3', text: "Are they going to the park?" },
+  ];
 
   return (
     <div className={styles["page149__container"]}>
@@ -113,11 +138,9 @@ const Pagina149 = () => {
             "1. She is listening to music.",
             "2. You are writing an email.",
             "3. They are going to the park.",
-          ].map((question, index) => (
+          ].map((statement, index) => (
             <div key={index} className={styles["page149__question"]}>
-              <span>
-                {question}
-              </span>
+              <span>{statement}</span>
 
               <div className={styles["page149__input-container"]}>
                 <input
@@ -161,19 +184,34 @@ const Pagina149 = () => {
         </div>
       </div>
 
-      <button className={styles["page149__check-button"]} onClick={handleCheckClick}>
-        <em>Check</em>
-      </button>
+      {/* Ações: Check + Reset + Answers Key */}
+      <div className={styles["page149__actions"]}>
+        <button className={styles["page149__check-button"]} onClick={handleCheckClick}>
+          <em>Check</em>
+        </button>
 
-      {showAnswers && (
-        <div className={styles["page149__answers-section"]}>
-          <h2 className={styles["page149__answers-title"]}>Answers</h2>
-          <h3 className={styles["page149__answers-subtitle"]}>4. Make Questions</h3>
-          <ul className={styles["page149__answers-list"]}>
-            {correctAnswers.map((answer, index) => (
-              <li key={index}>{answer}</li>
-            ))}
-          </ul>
+        <button className={styles["page149__reset-button"]} onClick={handleReset}>
+          <em>Reset</em>
+        </button>
+
+        <button
+          className={styles["page149__answersKey-button"]}
+          onClick={toggleAnswersKey}
+          aria-pressed={showAnswersKey ? 'true' : 'false'}
+        >
+          <em>Answers Key</em>
+        </button>
+      </div>
+
+      {/* Answers Key (curto) */}
+      {showAnswersKey && (
+        <div className={styles["page149__answersKey-box"]}>
+          {answersKeyItems.map((item, idx) => (
+            <div key={idx} className={styles["page149__answersKey-item"]}>
+              <div className={styles["page149__answersKey-num"]}>{item.label}</div>
+              <div className={styles["page149__answersKey-text"]}>{item.text}</div>
+            </div>
+          ))}
         </div>
       )}
     </div>
@@ -181,3 +219,4 @@ const Pagina149 = () => {
 };
 
 export default Pagina149;
+

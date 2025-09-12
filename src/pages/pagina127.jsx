@@ -35,6 +35,7 @@ const correctAnswers = ['Would', 'would', 'Would', 'would', 'Would'];
 const Pagina127 = () => {
     const [inputValues, setInputValues] = useState(Array(5).fill(''));
     const [results, setResults] = useState(Array(5).fill(null));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
     const currentAudioRef = useRef(null);
 
     const playAudio = (audioFile) => {
@@ -44,7 +45,7 @@ const Pagina127 = () => {
         }
         const audio = new Audio(audioFile);
         currentAudioRef.current = audio;
-        audio.play();
+        audio.play().catch(() => {});
     };
 
     const playQuestionAudio = (index, language) => {
@@ -54,19 +55,46 @@ const Pagina127 = () => {
         }
         const audio = new Audio(audioFiles[index][language]);
         currentAudioRef.current = audio;
-        audio.play();
+        audio.play().catch(() => {});
     };
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
         newValues[index] = value;
         setInputValues(newValues);
+        // limpa o resultado daquela linha ao editar
+        setResults(prev => {
+            const next = [...prev];
+            next[index] = null;
+            return next;
+        });
     };
 
     const handleCheckClick = () => {
         const newResults = inputValues.map((val, i) => val.trim() === correctAnswers[i]);
         setResults(newResults);
     };
+
+    const handleReset = () => {
+        setInputValues(Array(5).fill(''));
+        setResults(Array(5).fill(null));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+            currentAudioRef.current = null;
+        }
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey(v => !v);
+
+    const answersKeyItems = [
+        { label: 'a', text: 'Would' },
+        { label: 'b', text: 'would' },
+        { label: 'c', text: 'Would' },
+        { label: 'd', text: 'would' },
+        { label: 'e', text: 'Would' },
+    ];
 
     return (
         <div className={styles["page127__container"]}>
@@ -89,7 +117,7 @@ const Pagina127 = () => {
             </h1>
 
             <h2 className={styles["page127__exercise-title"]}>
-                1: Fill in the Blanks (Would / Would Like)
+                1: Fill in the Blanks (Would)
                 <span>
                     <img
                         src={eng_audio_icon}
@@ -130,12 +158,12 @@ const Pagina127 = () => {
                             </div>
                             <span><em>{parts[1]}</em></span>
                             {results[index] !== null && (
-                                    <img
-                                        src={results[index] ? correct_icon : wrong_icon}
-                                        alt={results[index] ? "Correct" : "Incorrect"}
-                                        className={styles["page127__checkmark-image"]}
-                                    />
-                                )}
+                                <img
+                                    src={results[index] ? correct_icon : wrong_icon}
+                                    alt={results[index] ? "Correct" : "Incorrect"}
+                                    className={styles["page127__checkmark-image"]}
+                                />
+                            )}
                             <div className={styles["page127__icons-container"]}>
                                 <img
                                     src={eng_audio_icon}
@@ -155,9 +183,36 @@ const Pagina127 = () => {
                 })}
             </div>
 
-            <button className={styles["page127__check-button"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
+            {/* Ações: Check + Reset + Answers Key */}
+            <div className={styles["page127__actions"]}>
+                <button className={styles["page127__check-button"]} onClick={handleCheckClick}>
+                    <em>Check</em>
+                </button>
+
+                <button className={styles["page127__reset-button"]} onClick={handleReset}>
+                    <em>Reset</em>
+                </button>
+
+                <button
+                    className={styles["page127__answersKey-button"]}
+                    onClick={toggleAnswersKey}
+                    aria-pressed={showAnswersKey ? 'true' : 'false'}
+                >
+                    <em>Answers Key</em>
+                </button>
+            </div>
+
+            {/* Answers Key (curto) */}
+            {showAnswersKey && (
+                <div className={styles["page127__answersKey-box"]}>
+                    {answersKeyItems.map((item, idx) => (
+                        <div key={idx} className={styles["page127__answersKey-item"]}>
+                            <div className={styles["page127__answersKey-num"]}>{item.label}</div>
+                            <div className={styles["page127__answersKey-text"]}>{item.text}</div>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

@@ -68,7 +68,7 @@ const Pagina510 = ({ onValidar }) => {
               <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles.page510__icon} onClick={() => playAudio(audio3p)} />
             </p>
             <p>
-              <strong className={styles.nameA}>Emily:</strong> I can’t wait to taste it. I’m going to try out a new dessert recipe for dessert.
+              <strong className={styles.nameA}>Emily:</strong> I can’t wait to taste it. I’m going to try out a new dessert recipe.
               <img src={eng_audio_icon} alt="Play English Audio" className={styles.page510__icon} onClick={() => playAudio(audio4e)} />
               <img src={ptbr_audio_icon} alt="Play Portuguese Audio" className={styles.page510__icon} onClick={() => playAudio(audio4p)} />
             </p>

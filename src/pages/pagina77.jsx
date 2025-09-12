@@ -2,8 +2,6 @@ import React, { useRef } from 'react';
 import styles from './pagina77.module.css';
 
 import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
-
-// IMPORTS DE ÁUDIOS (exemplo; ajuste os caminhos conforme seus arquivos)
 import pg77_audio1e from '../assets/audios/pg77_audio1e.mp3';
 import pg77_audio2e from '../assets/audios/pg77_audio2e.mp3';
 import pg77_audio3e from '../assets/audios/pg77_audio3e.mp3';

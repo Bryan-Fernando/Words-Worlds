@@ -8,14 +8,14 @@
 .page266__pageContainer {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 2rem;
 }
 
 .page266__columnContainer {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     padding: 1rem 2rem;
     text-align: left;
 }
@@ -31,7 +31,7 @@
     font-weight: bold;
     font-style: italic;
     margin-bottom: 0.8rem;
-    text-align: center;
+    text-align: left;
 }
 
 .page266__subTitle {
@@ -145,7 +145,7 @@
     height: 400px;
     background-color: #f0f0f0;
     border-radius: 8px;
-    margin: 2rem auto;
+    margin: 2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;

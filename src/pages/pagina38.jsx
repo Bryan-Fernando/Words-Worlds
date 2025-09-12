@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import styles from './pagina38.module.css';
 
+import eng_audio_icon from '../assets/icons/eng_audio_icon.webp';
+
 import pagina38_imagem1 from '../assets/images/pagina38_imagem1.webp';
 
 import pg38_audio1e from '../assets/audios/pg38_audio1e.mp3';
@@ -27,8 +29,31 @@ const Pagina38 = () => {
     }
     const audio = new Audio(audioFile);
     currentAudioRef.current = audio;
-    audio.play();
+    audio.play().catch(() => {});
   };
+
+  // helper: linha com ícone apenas na coluna "Object Complement"
+  const renderRow = (cells, audio) => (
+    <tr>
+      {cells.map((cell, i) => {
+        // 0=Subject, 1=Aux, 2=Adv, 3=Verb(BF), 4=Object Complement, 5=Translation
+        if (i === 4) {
+          return (
+            <td key={i}>
+              {cell}
+              <img
+                src={eng_audio_icon}
+                alt="Play Audio"
+                className={styles['page38__audio-icon']}
+                onClick={() => playAudio(audio)}
+              />
+            </td>
+          );
+        }
+        return <td key={i}>{cell}</td>;
+      })}
+    </tr>
+  );
 
   return (
     <div className={styles["page38"]}>
@@ -39,6 +64,7 @@ const Pagina38 = () => {
         </span>
       </h1>
 
+      {/* Tabela 1 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -49,24 +75,19 @@ const Pagina38 = () => {
               <th>Adv</th>
               <th>Verb <span className={styles["page38__bf-label"]}>(BF)</span></th>
               <th>Object Complement</th>
+              <th>Translation</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              {["Lucas and I", "", "", "live", "in São Paulo"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio1e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
+            {renderRow(
+              ['Lucas and I', '', '', 'live', 'in São Paulo', 'Lucas e eu moramos em São Paulo'],
+              pg38_audio1e
+            )}
           </tbody>
         </table>
       </section>
 
+      {/* Tabela 2 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -77,79 +98,39 @@ const Pagina38 = () => {
               <th>Adv</th>
               <th>Verb <span className={styles["page38__bf-label"]}>(BF)</span></th>
               <th>Object Complement</th>
+              <th>Translation</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              {["Marcia and I", <span className={styles["page38__verb-cell"]}>are</span>, "", "", "happy"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio2e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["Lucas, Pam and I", "", "", <span className={styles["page38__verb-cell"]}>live</span>, "in Brazil"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio3e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["You", "", "", <span className={styles["page38__verb-cell"]}>make</span>, "delicious pancakes"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio4e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["You, Luca and Bia", "", "", <span className={styles["page38__verb-cell"]}>need</span>, "a new phone"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio5e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["Isa, Talita and Eric", "", "", <span className={styles["page38__verb-cell"]}>travel</span>, "by bus"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio6e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["Banks", "", "", <span className={styles["page38__verb-cell"]}>open</span>, "at 8:00 a.m."].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio7e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
+            {renderRow(
+              ['Marcia and I', <span className={styles["page38__verb-cell"]}>are</span>, '', '', 'happy', 'Márcia e eu estamos felizes'],
+              pg38_audio2e
+            )}
+            {renderRow(
+              ['Lucas, Pam and I', '', '', <span className={styles["page38__verb-cell"]}>live</span>, 'in Brazil', 'Lucas, Pam e eu moramos no Brasil'],
+              pg38_audio3e
+            )}
+            {renderRow(
+              ['You', '', '', <span className={styles["page38__verb-cell"]}>make</span>, 'delicious pancakes', 'Você faz panquecas deliciosas'],
+              pg38_audio4e
+            )}
+            {renderRow(
+              ['You, Luca and Bia', '', '', <span className={styles["page38__verb-cell"]}>need</span>, 'a new phone', 'Você, Luca e Bia precisam de um telefone novo'],
+              pg38_audio5e
+            )}
+            {renderRow(
+              ['Isa, Talita and Eric', '', '', <span className={styles["page38__verb-cell"]}>travel</span>, 'by bus', 'Isa, Talita e Eric viajam de ônibus'],
+              pg38_audio6e
+            )}
+            {renderRow(
+              ['Banks', '', '', <span className={styles["page38__verb-cell"]}>open</span>, 'at 8:00 a.m.', 'Os bancos abrem às 8h'],
+              pg38_audio7e
+            )}
           </tbody>
         </table>
       </section>
 
+      {/* Tabela 3 */}
       <section>
         <div className={styles["page38__table-header"]}>Affirmative Form</div>
         <table className={styles["page38__table"]}>
@@ -160,79 +141,39 @@ const Pagina38 = () => {
               <th>Adv</th>
               <th>Verb <span className={styles["page38__bf-label"]}>(BF)</span></th>
               <th>Object Complement</th>
+              <th>Translation</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              {["We", <span className={styles["page38__verb-cell"]}>are</span>, "", "", "happy"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio8e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["We", "", "", <span className={styles["page38__verb-cell"]}>live</span>, "in Brazil"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio9e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["You", "", "", <span className={styles["page38__verb-cell"]}>make</span>, "delicious pancakes"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio10e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["Y’all", "", "", <span className={styles["page38__verb-cell"]}>need</span>, "a new phone"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio11e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["They", "", "", <span className={styles["page38__verb-cell"]}>travel</span>, "by plane"].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio12e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
-            <tr>
-              {["They", "", "", <span className={styles["page38__verb-cell"]}>open</span>, "at 8:00 a.m."].map((cell, i) => (
-                <td
-                  key={i}
-                  onClick={() => playAudio(pg38_audio13e)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  {cell}
-                </td>
-              ))}
-            </tr>
+            {renderRow(
+              ['We', <span className={styles["page38__verb-cell"]}>are</span>, '', '', 'happy', 'Nós estamos felizes'],
+              pg38_audio8e
+            )}
+            {renderRow(
+              ['We', '', '', <span className={styles["page38__verb-cell"]}>live</span>, 'in Brazil', 'Nós moramos no Brasil'],
+              pg38_audio9e
+            )}
+            {renderRow(
+              ['You', '', '', <span className={styles["page38__verb-cell"]}>make</span>, 'delicious pancakes', 'Você faz panquecas deliciosas'],
+              pg38_audio10e
+            )}
+            {renderRow(
+              ['Y’all', '', '', <span className={styles["page38__verb-cell"]}>need</span>, 'a new phone', 'Vocês precisam de um telefone novo'],
+              pg38_audio11e
+            )}
+            {renderRow(
+              ['They', '', '', <span className={styles["page38__verb-cell"]}>travel</span>, 'by plane', 'Eles viajam de avião'],
+              pg38_audio12e
+            )}
+            {renderRow(
+              ['They', '', '', <span className={styles["page38__verb-cell"]}>open</span>, 'at 8:00 a.m.', 'Eles abrem às 8h'],
+              pg38_audio13e
+            )}
           </tbody>
         </table>
       </section>
 
+      {/* Imagem */}
       <section className={styles["page38__image-container"]}>
         <img src={pagina38_imagem1} alt="Grupo de amigos" className={styles["page38__image"]} />
       </section>

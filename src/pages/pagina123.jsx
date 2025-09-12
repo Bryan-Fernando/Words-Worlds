@@ -29,6 +29,7 @@ import pg123_audio6p from '../assets/audios/pg123_audio6p.mp3';
 const Pagina123 = () => {
     const [inputValues, setInputValues] = useState(Array(6).fill(''));
     const [results, setResults] = useState(Array(6).fill(null));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const correctAnswers = [
         'The children are playing in the park.',
@@ -71,27 +72,51 @@ const Pagina123 = () => {
         }
     };
 
-
+    // Aceita com ou sem pontuação final (., !, ?), case-insensitive
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
-
-            const isCorrect = value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
-
-            return isCorrect;
+            const user = value.trim().replace(/[.!?]$/, '');
+            const correct = correctAnswers[index].trim().replace(/[.!?]$/, '');
+            return user.toLowerCase() === correct.toLowerCase();
         });
         setResults(newResults);
     };
-
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
         newValues[index] = value;
         setInputValues(newValues);
+        setResults(prev => {
+            const next = [...prev];
+            next[index] = null;
+            return next;
+        });
     };
 
+    const handleReset = () => {
+        setInputValues(Array(6).fill(''));
+        setResults(Array(6).fill(null));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+            currentAudioRef.current = null;
+        }
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey(v => !v);
+
+    const answersKeyItems = [
+        { label: '1', text: 'The children are playing in the park.' },
+        { label: '2', text: 'Dogs are playing on the beach.' },
+        { label: '3', text: 'She is talking to her friend right now.' },
+        { label: '4', text: 'He is playing the guitar in his room.' },
+        { label: '5', text: 'They are walking to the library now.' }
+    ];
+
     return (
-        <div className={styles["page122__container"]}>
+        <div className={styles["page123__container"]}>
             <header className={styles["page123__header"]}>
                 <h1 className={styles["page123__title"]}>
                     Learning Language Exercises
@@ -141,9 +166,7 @@ const Pagina123 = () => {
 
                             return (
                                 <div key={index} className={styles["page123__question"]}>
-                                    <span
-                                        className={styles["page123__question-text"]}
-                                    >
+                                    <span className={styles["page123__question-text"]}>
                                         <em>{question}</em>
                                     </span>
                                     <div className={styles["page123__input-container"]}>
@@ -163,29 +186,56 @@ const Pagina123 = () => {
                                         ) : (
                                             <span className={styles["page123__placeholder"]}></span>
                                         )}
-                                            <img
-                                                src={eng_audio_icon}
-                                                alt="English Audio"
-                                                className={styles["page123__additional-icon"]}
-                                                onClick={() => playAudio(engKey)}
-                                            />
-                                            <img
-                                                src={ptbr_audio_icon}
-                                                alt="Portuguese Audio"
-                                                className={styles["page123__additional-icon"]}
-                                                onClick={() => playAudio(ptKey)}
-                                            />
+                                        <img
+                                            src={eng_audio_icon}
+                                            alt="English Audio"
+                                            className={styles["page123__additional-icon"]}
+                                            onClick={() => playAudio(engKey)}
+                                        />
+                                        <img
+                                            src={ptbr_audio_icon}
+                                            alt="Portuguese Audio"
+                                            className={styles["page123__additional-icon"]}
+                                            onClick={() => playAudio(ptKey)}
+                                        />
                                     </div>
                                 </div>
                             );
                         })}
 
+                        {/* Ações: Check + Reset + Answers Key */}
+                        <div className={styles["page123__actions"]}>
+                            <button className={styles["page123__button--check"]} onClick={handleCheckClick}>
+                                <em>Check</em>
+                            </button>
 
-                        <button className={styles["page123__button--check"]} onClick={handleCheckClick}>
-                            <em>Check</em>
-                        </button>
+                            <button className={styles["page123__reset-button"]} onClick={handleReset}>
+                                <em>Reset</em>
+                            </button>
+
+                            <button
+                                className={styles["page123__answersKey-button"]}
+                                onClick={toggleAnswersKey}
+                                aria-pressed={showAnswersKey ? 'true' : 'false'}
+                            >
+                                <em>Answers Key</em>
+                            </button>
+                        </div>
+
+                        {/* Answers Key (gabarito curto) */}
+                        {showAnswersKey && (
+                            <div className={styles["page123__answersKey-box"]}>
+                                {answersKeyItems.map((item, idx) => (
+                                    <div key={idx} className={styles["page123__answersKey-item"]}>
+                                        <div className={styles["page123__answersKey-num"]}>{item.label}</div>
+                                        <div className={styles["page123__answersKey-text"]}>{item.text}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
+
                 <div className={styles["page123__container-image"]}>
                     <div className={styles["page123__container-imagea"]}>
                         <img className={styles["page123__image"]} src={pagina233_imagem1} alt="" />

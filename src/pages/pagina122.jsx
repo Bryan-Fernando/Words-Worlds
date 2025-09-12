@@ -25,6 +25,7 @@ import pg122_audio6p from '../assets/audios/pg122_audio6p.mp3';
 const Pagina122 = () => {
     const [inputValues, setInputValues] = useState(Array(5).fill(''));
     const [results, setResults] = useState(Array(5).fill(null));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
     const currentAudioRef = useRef(null);
 
     const correctAnswers = [
@@ -60,7 +61,9 @@ const Pagina122 = () => {
         if (audioMap[audioKey]) {
             const audio = new Audio(audioMap[audioKey]);
             currentAudioRef.current = audio;
-            audio.play().catch((error) => console.error("Erro ao reproduzir o áudio:", error));
+            audio.play().catch((error) =>
+                console.error("Erro ao reproduzir o áudio:", error)
+            );
         } else {
             console.warn(`Áudio não encontrado para: ${audioKey}`);
         }
@@ -70,15 +73,45 @@ const Pagina122 = () => {
         const newValues = [...inputValues];
         newValues[index] = value;
         setInputValues(newValues);
+        // limpa o resultado daquela linha
+        setResults(prev => {
+            const next = [...prev];
+            next[index] = null;
+            return next;
+        });
     };
 
+    // Aceita com ou sem ponto final
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
-            return value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
+            const user = value.trim().replace(/\.$/, '');
+            const correct = correctAnswers[index].trim().replace(/\.$/, '');
+            return user.toLowerCase() === correct.toLowerCase();
         });
         setResults(newResults);
     };
+
+    const handleReset = () => {
+        setInputValues(Array(5).fill(''));
+        setResults(Array(5).fill(null));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+            currentAudioRef.current = null;
+        }
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey(v => !v);
+
+    const answersKeyItems = [
+        { label: '1', text: "She is writing an email now." },
+        { label: '2', text: "They aren't playing soccer now." },
+        { label: '3', text: "I'm listening to music." },
+        { label: '4', text: "The baby is crying." },
+        { label: '5', text: "We are going on vacation next week." }
+    ];
 
     return (
         <div className={styles["page122__container"]}>
@@ -166,9 +199,36 @@ const Pagina122 = () => {
                             );
                         })}
 
-                        <button className={styles["page122__button--check"]} onClick={handleCheckClick}>
-                            <em>Check</em>
-                        </button>
+                        {/* Ações */}
+                        <div className={styles["page122__actions"]}>
+                            <button className={styles["page122__button--check"]} onClick={handleCheckClick}>
+                                <em>Check</em>
+                            </button>
+
+                            <button className={styles["page122__reset-button"]} onClick={handleReset}>
+                                <em>Reset</em>
+                            </button>
+
+                            <button
+                                className={styles["page122__answersKey-button"]}
+                                onClick={toggleAnswersKey}
+                                aria-pressed={showAnswersKey ? 'true' : 'false'}
+                            >
+                                <em>Answers Key</em>
+                            </button>
+                        </div>
+
+                        {/* Answers Key */}
+                        {showAnswersKey && (
+                            <div className={styles["page122__answersKey-box"]}>
+                                {answersKeyItems.map((item, idx) => (
+                                    <div key={idx} className={styles["page122__answersKey-item"]}>
+                                        <div className={styles["page122__answersKey-num"]}>{item.label}</div>
+                                        <div className={styles["page122__answersKey-text"]}>{item.text}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </main>
@@ -177,3 +237,4 @@ const Pagina122 = () => {
 };
 
 export default Pagina122;
+

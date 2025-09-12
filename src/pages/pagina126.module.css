@@ -20,8 +20,10 @@
 }
 
 .page126__header-icon {
-    width: 2rem; 
-    height: 2rem;
+    width: 3.5rem; 
+    height: 3.5rem;
+    position: relative;
+    top: 1rem;
     cursor: pointer;
     margin-left: 0.8rem; 
     transition: transform 0.2s ease-in-out;
@@ -120,4 +122,19 @@
 .page126__celulacolor{
     background-color: white;
     color: black !important; 
+}
+
+.page126__audio-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
+    transition: transform 0.2s ease;
+    position: relative;
+    top: 1rem;
+}
+
+.page126__audio-icon:hover {
+    transform: scale(1.2);
 }

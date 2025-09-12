@@ -52,6 +52,7 @@
   font-style: italic;
   box-shadow: 0 2px 0 rgba(0,0,0,.15);
   width: fit-content;
+  font-size: 2rem;
 }
 
 .card__image {

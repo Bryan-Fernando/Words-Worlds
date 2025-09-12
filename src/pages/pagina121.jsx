@@ -22,15 +22,15 @@ import pg121_audio3p from '../assets/audios/pg121_audio3p.mp3';
 import pg121_audio4p from '../assets/audios/pg121_audio4p.mp3';
 import pg121_audio5p from '../assets/audios/pg121_audio5p.mp3';
 import pg121_audio6p from '../assets/audios/pg121_audio6p.mp3';
-
 const Pagina121 = () => {
     const [inputValues, setInputValues] = useState(Array(5).fill(''));
     const [results, setResults] = useState(Array(5).fill(null));
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
     const currentAudioRef = useRef(null);
 
     const correctAnswers = [
-        'She is cooking dinner in the kitchen.',
-        'We are waiting for the bus.',
+        'She is watching a movie now.',
+        'We are studying for the test.',
         'He is sleeping because he is tired.',
         'They are travelling for their honeymoon.',
         'The students are studying for the final exam.'
@@ -68,10 +68,13 @@ const Pagina121 = () => {
         }
     };
 
+    // Aceita com ou sem ponto final (.), case-insensitive
     const handleCheckClick = () => {
         const newResults = inputValues.map((value, index) => {
             if (!correctAnswers[index]) return false;
-            return value.trim().toLowerCase() === correctAnswers[index].toLowerCase();
+            const user = value.trim().replace(/\.$/, '');
+            const correct = correctAnswers[index].trim().replace(/\.$/, '');
+            return user.toLowerCase() === correct.toLowerCase();
         });
         setResults(newResults);
     };
@@ -80,7 +83,33 @@ const Pagina121 = () => {
         const newValues = [...inputValues];
         newValues[index] = value;
         setInputValues(newValues);
+        setResults(prev => {
+            const next = [...prev];
+            next[index] = null;
+            return next;
+        });
     };
+
+    const handleReset = () => {
+        setInputValues(Array(5).fill(''));
+        setResults(Array(5).fill(null));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+            currentAudioRef.current = null;
+        }
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey(v => !v);
+
+    const answersKeyItems = [
+        { label: '1', text: 'She is watching a movie now.' },
+        { label: '2', text: 'We are studying for the test.' },
+        { label: '3', text: 'He is sleeping because he is tired.' },
+        { label: '4', text: 'They are travelling for their honeymoon.' },
+        { label: '5', text: 'The students are studying for the final exam.' }
+    ];
 
     return (
         <div className={styles["page121__container"]}>
@@ -177,9 +206,36 @@ const Pagina121 = () => {
                             );
                         })}
 
-                        <button className={styles["page121__button--check"]} onClick={handleCheckClick}>
-                            <em>Check</em>
-                        </button>
+                        {/* Ações: Check + Reset + Answers Key */}
+                        <div className={styles["page121__actions"]}>
+                            <button className={styles["page121__button--check"]} onClick={handleCheckClick}>
+                                <em>Check</em>
+                            </button>
+
+                            <button className={styles["page121__reset-button"]} onClick={handleReset}>
+                                <em>Reset</em>
+                            </button>
+
+                            <button
+                                className={styles["page121__answersKey-button"]}
+                                onClick={toggleAnswersKey}
+                                aria-pressed={showAnswersKey ? 'true' : 'false'}
+                            >
+                                <em>Answers Key</em>
+                            </button>
+                        </div>
+
+                        {/* Answers Key (gabarito curto) */}
+                        {showAnswersKey && (
+                            <div className={styles["page121__answersKey-box"]}>
+                                {answersKeyItems.map((item, idx) => (
+                                    <div key={idx} className={styles["page121__answersKey-item"]}>
+                                        <div className={styles["page121__answersKey-num"]}>{item.label}</div>
+                                        <div className={styles["page121__answersKey-text"]}>{item.text}</div>
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             </main>
@@ -188,3 +244,4 @@ const Pagina121 = () => {
 };
 
 export default Pagina121;
+

@@ -99,6 +99,7 @@
 .page66__english {
   color: #A61C28;
   font-weight: bold;
+  display: inline-flex;
 }
 
 .page66__highlight--red {
@@ -181,9 +182,9 @@
 
 .page66__audio-icon {
   position: relative;
-  top: 0.3rem;
-  width: 2rem;
-  height: 2rem;
+  top: 0.1rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-left: 0.5rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;

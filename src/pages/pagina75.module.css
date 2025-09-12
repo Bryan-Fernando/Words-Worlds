@@ -87,6 +87,7 @@
 .page75__english {
   color: #A61C28;
   font-weight: bold;
+  display: inline-flex;
 }
 
 .page75__labels span {
@@ -137,7 +138,7 @@
 
 .page75__audio-icon {
   position: relative;
-  top: 1rem;
+  top: 0.1rem;
   width: 3rem;
   height: 3rem;
   margin-left: 0.5rem;

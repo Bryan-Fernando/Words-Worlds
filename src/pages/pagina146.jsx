@@ -46,7 +46,7 @@ const audioMap = {
 const Pagina146 = () => {
     const [inputValues, setInputValues] = useState(Array(8).fill(''));
     const [results, setResults] = useState(Array(8).fill(null));
-    const [showAnswers, setShowAnswers] = useState(false);
+    const [showAnswersKey, setShowAnswersKey] = useState(false);
 
     const currentAudioRef = useRef(null);
 
@@ -66,13 +66,30 @@ const Pagina146 = () => {
             value.trim().toLowerCase() === correctAnswers[index]
         );
         setResults(newResults);
-        setShowAnswers(true);
     };
+
+    const handleReset = () => {
+        setInputValues(Array(8).fill(''));
+        setResults(Array(8).fill(null));
+        setShowAnswersKey(false);
+        if (currentAudioRef.current) {
+            currentAudioRef.current.pause();
+            currentAudioRef.current.currentTime = 0;
+            currentAudioRef.current = null;
+        }
+    };
+
+    const toggleAnswersKey = () => setShowAnswersKey(v => !v);
 
     const handleInputChange = (value, index) => {
         const newValues = [...inputValues];
         newValues[index] = value;
         setInputValues(newValues);
+        setResults(prev => {
+            const next = [...prev];
+            next[index] = null;
+            return next;
+        });
     };
 
     const playAudio = (audioKey) => {
@@ -82,7 +99,7 @@ const Pagina146 = () => {
         }
         const audio = new Audio(audioMap[audioKey]);
         currentAudioRef.current = audio;
-        audio.play();
+        audio.play().catch(() => {});
     };
 
     const renderIcons = (engKey, ptKey) => (
@@ -105,6 +122,17 @@ const Pagina146 = () => {
             )}
         </span>
     );
+
+    const answersKeyItems = [
+        { label: '1', text: 'is running' },
+        { label: '2', text: 'are having dinner' },
+        { label: '3', text: 'am not watching' },
+        { label: '4', text: 'are you crying?' },
+        { label: '5', text: 'are traveling' },
+        { label: '6', text: 'is sleeping' },
+        { label: '7', text: 'are always forgetting' },
+        { label: '8', text: 'is changing' },
+    ];
 
     return (
         <div className={styles["page146__container"]}>
@@ -166,24 +194,32 @@ const Pagina146 = () => {
                 </div>
             </div>
 
-            <button className={styles["page146__check-button"]} onClick={handleCheckClick}>
-                <em>Check</em>
-            </button>
+            <div className={styles["page146__actions"]}>
+                <button className={styles["page146__check-button"]} onClick={handleCheckClick}>
+                    <em>Check</em>
+                </button>
 
-            {showAnswers && (
-                <div className={styles["page146__answers-section"]}>
-                    <h2 className={styles["page146__answers-title"]}>Answers</h2>
-                    <h3 className={styles["page146__answers-subtitle"]}>1. Fill in the blanks:</h3>
-                    <ul className={styles["page146__answers-list"]}>
-                        <li>Look! She is running in the park.</li>
-                        <li>We are having dinner right now.</li>
-                        <li>I am not watching TV at the moment.</li>
-                        <li>Why are you crying?</li>
-                        <li>My parents are traveling to Spain next month.</li>
-                        <li>The baby is sleeping now.</li>
-                        <li>You are always forgetting your keys!</li>
-                        <li>The world is changing fast.</li>
-                    </ul>
+                <button className={styles["page146__reset-button"]} onClick={handleReset}>
+                    <em>Reset</em>
+                </button>
+
+                <button
+                    className={styles["page146__answersKey-button"]}
+                    onClick={toggleAnswersKey}
+                    aria-pressed={showAnswersKey ? 'true' : 'false'}
+                >
+                    <em>Answers Key</em>
+                </button>
+            </div>
+
+            {showAnswersKey && (
+                <div className={styles["page146__answersKey-box"]}>
+                    {answersKeyItems.map((item, idx) => (
+                        <div key={idx} className={styles["page146__answersKey-item"]}>
+                            <div className={styles["page146__answersKey-num"]}>{item.label}</div>
+                            <div className={styles["page146__answersKey-text"]}>{item.text}</div>
+                        </div>
+                    ))}
                 </div>
             )}
         </div>
@@ -191,3 +227,4 @@ const Pagina146 = () => {
 };
 
 export default Pagina146;
+

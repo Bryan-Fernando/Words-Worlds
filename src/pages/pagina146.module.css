@@ -160,3 +160,95 @@
   margin-bottom: 0.8rem;
 }
 
+/* Container opcional dos três botões (mantém alinhado).
+   Se já tiver algo equivalente, pode remover. */
+.page146__actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RESET */
+.page146__reset-button {
+  height: 4.7rem;
+  background-color: #A61C28;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 12rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.page146__reset-button:hover { background: #821a22; }
+.page146__reset-button:active { transform: translateY(1px); }
+.page146__reset-button:focus-visible {
+  outline: 3px solid #ffd2d6;
+  outline-offset: 3px;
+}
+
+/* ANSWERS KEY – botão */
+.page146__answersKey-button {
+  background: #0A3282;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: .5rem;
+  font-weight: bold;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
+  transition: background-color .3s, transform .05s;
+  width: 16rem;
+  text-align: center;
+  font-size: 1.8rem;
+  height: 4.7rem;
+}
+.page146__answersKey-button:hover { background: #072861; }
+.page146__answersKey-button:active { transform: translateY(1px); }
+.page146__answersKey-button:focus-visible {
+  outline: 3px solid #cfe0ff;
+  outline-offset: 3px;
+}
+.page146__answersKey-button[aria-pressed="true"] {
+  filter: brightness(0.95);
+}
+
+/* ANSWERS KEY – caixa e itens */
+.page146__answersKey-box {
+  margin-top: 1rem;
+  border: 2px dotted #A61C28;
+  border-radius: 12px;
+  padding: 1.6rem;
+  background: #fffaf9;
+  font-size: 2rem;
+  text-align: left;
+}
+
+.page146__answersKey-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: .8rem 0;
+  border-bottom: 1px dashed #f0c6c9;
+}
+.page146__answersKey-item:last-child { border-bottom: none; }
+
+.page146__answersKey-num {
+  color: #A61C28;
+  font-weight: 800;
+  min-width: 3rem;
+  text-align: right;
+}
+
+.page146__answersKey-text {
+  color: #103275;
+  font-weight: 600;
+  line-height: 1.5;
+  flex: 1;
+  word-break: break-word;
+}
